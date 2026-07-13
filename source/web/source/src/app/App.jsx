@@ -1,3 +1,5 @@
+// Main application file
+
 const App = () => {
 
   return (
