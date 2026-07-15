@@ -9,7 +9,9 @@ const Background = ({children}) => {
 	return (
 
 		<div style = {{
-			background: 'transparent'
+			display: 'flex',
+			justifyContent: 'center',
+			width: '200%',
 		}}>
 
 			<img
@@ -17,18 +19,18 @@ const Background = ({children}) => {
 				alt = 'Задний фон'
 				style = {{
 					position: 'absolute',
+					width: '200%',
+					top: -200,
 					pointerEvents: 'none',
-					userSelect: 'none',
-					width: '100%',
-					top: -200
+					userSelect: 'none'
 			}}/>
 
 			<div style = {{
 				display: 'flex',
 				flexDirection: 'column',
 				position: 'absolute',
-				height: '100%',
-				width: '100%',
+				height: '200%',
+				width: '200%',
 				paddingTop: 119,
 				paddingBottom: 119,
 				gap: 200
