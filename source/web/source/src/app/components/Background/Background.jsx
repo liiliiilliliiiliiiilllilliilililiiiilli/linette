@@ -12,7 +12,7 @@ const Background = ({children}) => {
 			position: 'relative',
 			display: 'flex',
 			justifyContent: 'center',
-			width: '100%',
+			width: '200%',
 			minHeight: '100vh'
 		}}>
 
@@ -34,7 +34,7 @@ const Background = ({children}) => {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
-				width: '100%',
+				width: '200%',
 				paddingTop: 119,
 				gap: 200,
 				zIndex: 1
