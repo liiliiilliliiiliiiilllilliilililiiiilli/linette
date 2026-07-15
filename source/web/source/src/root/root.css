@@ -4,17 +4,18 @@ body {
 
   margin: 0;
   background-color: #080808;
+  overflow-x: hidden;
 
 }
 
 #root {
 
   transform: scale(0.5);
-  transform-origin: 0 0;
-  width: '200%';
-  height: '200%';
+  transform-origin: top left;
+  width: 200vw;
+  height: 200vh;
 
-  margin: 0 auto;
+  margin: 0;
   background-color: #080808;
 
 }

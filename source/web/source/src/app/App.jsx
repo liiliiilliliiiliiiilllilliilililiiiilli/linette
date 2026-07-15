@@ -124,11 +124,11 @@ const App = () => {
 		return (
 
 			<div style = {{
-				gap: 47,
 				display: 'flex',
 				flexDirection: 'column',
-				display: 'flex',
-				alignItems: 'center'
+				alignItems: 'center',
+				width: '100%',
+				gap: 47
 			}}>
 
 				<CircleTop/>
@@ -150,6 +150,7 @@ const App = () => {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				width: '100%',
 				gap: 83
 			}}>
 
@@ -177,6 +178,7 @@ const App = () => {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				width: '100%',
 				gap: 83
 			}}>
 
@@ -234,6 +236,7 @@ const App = () => {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				width: '100%',
 				gap: 83
 			}}>
 
@@ -266,6 +269,7 @@ const App = () => {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				width: '100%',
 				gap: 83
 			}}>
 

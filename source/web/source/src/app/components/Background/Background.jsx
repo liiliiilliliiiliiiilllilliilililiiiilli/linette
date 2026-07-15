@@ -9,9 +9,11 @@ const Background = ({children}) => {
 	return (
 
 		<div style = {{
+			position: 'relative',
 			display: 'flex',
 			justifyContent: 'center',
-			width: '200%',
+			width: '100%',
+			minHeight: '100vh'
 		}}>
 
 			<img
@@ -19,21 +21,23 @@ const Background = ({children}) => {
 				alt = 'Задний фон'
 				style = {{
 					position: 'absolute',
-					width: '200%',
+					width: '100%',
 					top: -200,
 					pointerEvents: 'none',
-					userSelect: 'none'
-			}}/>
+					userSelect: 'none',
+					zIndex: 0
+				}}
+			/>
 
 			<div style = {{
+				position: 'relative',
 				display: 'flex',
 				flexDirection: 'column',
-				position: 'absolute',
-				height: '200%',
-				width: '200%',
+				alignItems: 'center',
+				width: '100%',
 				paddingTop: 119,
-				paddingBottom: 119,
-				gap: 200
+				gap: 200,
+				zIndex: 1
 			}}>
 
 				{children}
@@ -43,7 +47,6 @@ const Background = ({children}) => {
 		</div>
 
 	)
-
 }
 
 
