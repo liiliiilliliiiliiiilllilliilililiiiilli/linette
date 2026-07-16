@@ -188,7 +188,10 @@ const App = () => {
 				<div style = {{
 					display: 'flex',
 					flexDirection: 'row',
-					gap: 10
+					// width: 1315,
+					maxWidth: 'calc(100% - 50px)',
+					gap: 10,
+					overflowX: 'scroll',
 				}}>
 
 					<TextBlock
@@ -225,6 +228,87 @@ const App = () => {
 		)
 
 	}
+
+
+
+	// const Section_2 = () => {
+
+	// 	return (
+
+	// 		<div style = {{
+	// 			display: 'flex',
+	// 			flexDirection: 'column',
+	// 			alignItems: 'center',
+	// 			width: '100%',
+	// 			gap: 41.5,
+	// 			boxSizing: 'border-box'
+	// 		}}>
+
+	// 			<LinerTitle
+	// 				text = {text_liner_2}
+	// 			/>
+
+	// 			<div style = {{
+	// 				display: 'flex',
+	// 				flexDirection: 'row',
+	// 				alignItems: 'center',       // Выравнивает стрелочки и блоки по вертикальному центру
+	// 				justifyContent: 'safe center', // Центрирует на десктопе, сохраняет начало при скролле
+	// 				width: '100%',
+	// 				maxWidth: 'calc(100% - 50px)',
+	// 				gap: 10,
+	// 				overflowX: 'auto',
+	// 				WebkitOverflowScrolling: 'touch',
+	// 			}}>
+
+	// 				{/* flexShrink: 0 не дает блокам сжиматься на мобильных */}
+	// 				<div style={{ flexShrink: 0 }}>
+	// 					<TextBlock
+	// 						text = {text_2_1_1}
+	// 						width = {500}
+	// 						isCentralized = {true}
+	// 					/>
+	// 				</div>
+
+	// 				{/* Обертка для стрелки центрирует её и не дает ей сжиматься */}
+	// 				<div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+	// 					<Arrow/>
+	// 				</div>
+
+	// 				<div style={{ flexShrink: 0 }}>
+	// 					<TextBlock
+	// 						text = {text_2_1_2}
+	// 						width = {500}
+	// 						isCentralized = {true}
+	// 					/>
+	// 				</div>
+
+	// 				{/* <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}> */}
+	// 					<Arrow/>
+	// 				{/* </div> */}
+
+	// 				<div style={{ flexShrink: 0 }}>
+	// 					<TextBlock
+	// 						text = {text_2_1_3}
+	// 						width = {500}
+	// 						isCentralized = {true}
+	// 					/>
+	// 				</div>
+
+	// 			</div>
+
+	// 			<div style={{ maxWidth: 1000, width: '100%' }}>
+	// 				<TextBlock
+	// 					text = {text_2_2}
+	// 					width = "100%"
+	// 				/>
+	// 			</div>
+
+	// 		</div>
+
+	// 	)
+
+	// }
+
 
 
 	const Section_3 = () => {

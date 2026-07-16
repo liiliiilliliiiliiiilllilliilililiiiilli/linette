@@ -191,6 +191,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 			display: 'flex',
 			flexDirection: 'column',
 			width: width,
+			maxWidth: 'calc(100% - 50px)',
 			height: 'fit-content',
 			gap: 2,
 			paddingTop: 19,
