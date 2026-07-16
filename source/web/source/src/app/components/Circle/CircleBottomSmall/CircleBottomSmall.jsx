@@ -10,22 +10,22 @@ const CircleBottomSmall = ({picture, link}) => {
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				height: 105,
-				width: 105,
-				paddingLeft: 1.5,
-				paddingTop: 1.5,
-				border: '4px solid #363636',
+				width: 52.5,
+				height: 52.5,
+				paddingTop: 0.75,
+				paddingLeft: 0.75,
+				border: '2px solid #363636',
 				borderRadius: '100%',
-				scale: 1.25,
-				background: '#090909'
+				background: '#090909',
+				scale: 1.25
 			}}>
 
 				<div style = {{
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
-					height: 105 - 10,
-					width: 105 - 10,
+					width: 52.5 - 5,
+					height: 52.5 - 5,
 					borderRadius: '100%'
 				}}>
 
@@ -33,8 +33,8 @@ const CircleBottomSmall = ({picture, link}) => {
 						src = {picture}
 						alt = 'User Profile'
 						style = {{
-							height: '100%',
 							width: '100%',
+							height: '100%',
 							borderRadius: '100%'
 					}}/>
 

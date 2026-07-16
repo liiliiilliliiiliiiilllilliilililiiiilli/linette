@@ -12,7 +12,7 @@ const Background = ({children}) => {
 			position: 'relative',
 			display: 'flex',
 			justifyContent: 'center',
-			width: '200%',
+			width: '100%',
 			minHeight: '100vh'
 		}}>
 
@@ -22,10 +22,10 @@ const Background = ({children}) => {
 				style = {{
 					position: 'absolute',
 					width: '100%',
-					top: -200,
+					top: -95,
+					zIndex: 0,
 					pointerEvents: 'none',
-					userSelect: 'none',
-					zIndex: 0
+					userSelect: 'none'
 				}}
 			/>
 
@@ -34,9 +34,9 @@ const Background = ({children}) => {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
-				width: '200%',
-				paddingTop: 119,
-				gap: 200,
+				width: '100%',
+				gap: 100,
+				paddingTop: 50,
 				zIndex: 1
 			}}>
 

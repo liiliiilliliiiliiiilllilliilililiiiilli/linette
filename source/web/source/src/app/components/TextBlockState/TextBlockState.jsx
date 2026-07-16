@@ -19,8 +19,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 						flexDirection: 'row',
 						alignItems: 'center',
 						justifyContent: 'center',
-						gap: 5,
-						paddingRight: 25,
+						gap: 2.5,
+						paddingRight: 12.5,
 						background: '#090909',
 						opacity: 0,  // Временно
 						pointerEvents: 'none'  // Временно
@@ -30,16 +30,16 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 							src = {pictureArrowBlue}
 							alt = 'стрелка'
 							style = {{
-								width: 59,
-								height: 59
+								width: 29.5,
+								height: 29.5
 						}}/>
 
 						<text style = {{
 							color: '#80879E',
+							textAlign: 'center',
 							fontFamily: 'system-ui',
 							fontWeight: 'bold',
-							fontSize: 32,
-							textAlign: 'center',
+							fontSize: 16,
 							whiteSpace: 'pre-line'
 						}}>
 
@@ -59,16 +59,15 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 				return (
 
 					<text style = {{
-						color: 'white',
+						paddingLeft: 12.5,
+						paddingRight: 12.5,
+						background: '#090909',
+						textAlign: 'center',
+						color: '#808080',
 						fontFamily: 'system-ui',
 						fontWeight: 'bold',
-						fontSize: 32,
-						textAlign: 'center',
-						whiteSpace: 'pre-line',
-						paddingLeft: 25,
-						paddingRight: 25,
-						background: '#090909',
-						color: '#808080'
+						fontSize: 16,
+						whiteSpace: 'pre-line'
 					}}>
 
 						{'Последнее обновление: 15 июля 2026'}
@@ -89,18 +88,19 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 						flexDirection: 'row',
 						alignItems: 'center',
 						justifyContent: 'center',
-						paddingLeft: 25,
+						gap: 2.5,
+						paddingLeft: 12.5,
 						background: '#090909',
 						opacity: 0,  // Временно
 						pointerEvents: 'none'  // Временно
 					}}>
 
 						<text style = {{
+							textAlign: 'center',
 							color: '#80879E',
 							fontFamily: 'system-ui',
 							fontWeight: 'bold',
-							fontSize: 32,
-							textAlign: 'center',
+							fontSize: 16,
 							whiteSpace: 'pre-line'
 						}}>
 
@@ -112,8 +112,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 							src = {pictureArrowBlue}
 							alt = 'стрелка'
 							style = {{
-								width: 59,
-								height: 59,
+								width: 29.5,
+								height: 29.5,
 								transform: 'rotate(180deg)'
 						}}/>
 
@@ -131,9 +131,9 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 					flexDirection: 'row',
 					alignItems: 'center',
 					justifyContent: 'space-between',
-					zIndex: 5,
-					paddingLeft: 44,
-					paddingRight: 44
+					paddingLeft: 22,
+					paddingRight: 22,
+					zIndex: 5
 				}}>
 
 					<Back/>
@@ -155,8 +155,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 					position: 'relative',
 					display: 'flex',
 					width: '100',
-					height: 4,
-					top: 36 - 4 - 2,
+					height: 2,
+					top: 15,
 					background: '#1c1c1c'
 				}}/>
 
@@ -172,7 +172,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 				display: 'flex',
 				flexDirection: 'column',
 				width: '100%',
-				paddingTop: 20,
+				paddingTop: 10
 			}}>
 
 				<Line/>
@@ -190,14 +190,14 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 		<div style = {{
 			display: 'flex',
 			flexDirection: 'column',
-			borderRadius: 32,
-			border: '4px solid #1C1C1C',
-			background: '#090909',
 			width: width,
 			height: 'fit-content',
-			paddingTop: 38,
-			paddingBottom: 35,
-			gap: 4
+			gap: 2,
+			paddingTop: 19,
+			paddingBottom: 17.5,
+			border: '2px solid #1C1C1C',
+			borderRadius: 16,
+			background: '#090909'
 		}}>
 
 			{text.map (paragraph => (
@@ -205,16 +205,16 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 				<>
 
 					<text style = {{
+						paddingTop: 6,
+						paddingLeft: 20.5 + 10.5,
+						paddingRight: 20.5 + 10.5,
+						paddingBottom: 7,
 						color: 'white',
 						fontFamily: 'system-ui',
 						fontWeight: 'bold',
-						fontSize: 44,
-						whiteSpace: 'pre-line',
-						paddingTop: 12,
-						paddingLeft: 41 + 21,
-						paddingRight: 41 + 21,
-						paddingBottom: 14,
-						textAlign: !isCentralized ? 'left' : 'center'
+						fontSize: 22,
+						textAlign: !isCentralized ? 'left' : 'center',
+						whiteSpace: 'pre-line'
 					}}>
 
 						{paragraph.title}
@@ -222,16 +222,16 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 					</text>
 
 					<text style = {{
+						paddingTop: 6,
+						paddingLeft: 20.5 + 10.5,
+						paddingRight: 20.5 + 10.5,
+						paddingBottom: 7,
 						color: 'white',
 						fontFamily: 'system-ui',
 						fontWeight: 'normal',
-						fontSize: 32,
-						whiteSpace: 'pre-line',
-						paddingTop: 12,
-						paddingLeft: 41 + 21,
-						paddingRight: 41 + 21,
-						paddingBottom: 14,
-						textAlign: !isCentralized ? 'left' : 'center'
+						fontSize: 16,
+						textAlign: !isCentralized ? 'left' : 'center',
+						whiteSpace: 'pre-line'
 					}}>
 
 						{paragraph.text}

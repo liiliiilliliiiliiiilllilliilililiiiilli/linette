@@ -9,14 +9,10 @@ const LinerTitle = ({text}) => {
 			<div style = {{
 				position: 'absolute',
 				width: '100%',
-				height: 6,
+				height: 3,
 				borderRadius: '100%',
 				background: '#363636'
-			}}>
-
-
-
-			</div>
+			}}/>
 
 		)
 
@@ -32,22 +28,22 @@ const LinerTitle = ({text}) => {
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				border: '5px solid #363636',
+				border: '3px solid #363636',
 				borderRadius: 1000,
 				background: '#090909'
 			}}>
 
 				<text style = {{
+					paddingTop: 6,
+					paddingLeft: 20.5,
+					paddingRight: 20.5,
+					paddingBottom: 7,
 					color: 'white',
 					fontFamily: 'system-ui',
 					fontWeight: 'bold',
-					fontSize: 65,
+					fontSize: 32,
 					textAlign: 'center',
-					whiteSpace: 'pre-line',
-					paddingTop: 12,
-					paddingLeft: 41,
-					paddingRight: 41,
-					paddingBottom: 14
+					whiteSpace: 'pre-line'
 				}}>
 
 					{`· ${text} ·`}
@@ -69,7 +65,7 @@ const LinerTitle = ({text}) => {
 			alignItems: 'center',
 			justifyContent: 'center',
 			width: '100%',
-			paddingBottom: 41
+			paddingBottom: 20.5
 		}}>
 
 			<Line/>

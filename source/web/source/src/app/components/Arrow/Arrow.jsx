@@ -9,17 +9,17 @@ const Arrow = () => {
 	return (
 
 		<div style = {{
-			scale: 0.85,
-			paddingTop: 29
+			paddingTop: 14.5,
+			scale: 0.85
 		}}>
 
 			<div style = {{
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				width: 80,
-				height: 80,
-				border: '7px solid #202020',
+				width: 40,
+				height: 40,
+				border: '3.5px solid #202020',
 				borderRadius: '100%',
 				background: '#000000',
 				overflow: 'hidden'
@@ -29,8 +29,8 @@ const Arrow = () => {
 					src = {pictureArrow}
 					alt = 'стрелка'
 					style = {{
-						width: 85,
-						height: 85
+						width: 42.5,
+						height: 42.5
 				}}/>
 
 			</div>

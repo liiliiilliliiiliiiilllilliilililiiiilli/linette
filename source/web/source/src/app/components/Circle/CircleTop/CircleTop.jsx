@@ -12,22 +12,19 @@ const CircleTop = () => {
 			display: 'flex',
 			alignItems: 'center',
 			justifyContent: 'center',
-			height: 250 + 6,
-			width: 250 + 6,
-			paddingLeft: 1.5,
-			paddingTop: 1.5,
-			border: '6px solid black',
-			borderRadius: '100%',
-			scale: 1.25
+			width: (125 + 3) * 1.25,
+			height: (125 + 3) * 1.25,
+			border: '4px solid black',
+			borderRadius: '100%'
 		}}>
 
 			<div style = {{
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				height: 250 + 6 - 24.45,
-				width: 250 + 6 - 24.45,
-				border: '8px solid black',
+				width: (125 + 3 - 12.225) * 1.25,
+				height: (125 + 3 - 12.225) * 1.25,
+				border: '4px solid black',
 				borderRadius: '100%'
 			}}>
 
@@ -35,8 +32,8 @@ const CircleTop = () => {
 				 	src = {pictureLinette}
 					alt = 'User Profile'
 					style = {{
-						height: '100%',
 						width: '100%',
+						height: '100%',
 						borderRadius: '100%'
 				}}/>
 

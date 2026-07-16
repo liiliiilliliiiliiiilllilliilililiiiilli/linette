@@ -18,7 +18,6 @@ const text_liner_2 = 'План'
 
 const text_liner_3 = 'Как вы можете помочь'
 
-
 const text_1 = [
 
 	{
@@ -128,7 +127,7 @@ const App = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				gap: 47
+				gap: 20
 			}}>
 
 				<CircleTop/>
@@ -151,7 +150,7 @@ const App = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				gap: 83
+				gap: 41.5
 			}}>
 
 				<LinerTitle
@@ -160,7 +159,7 @@ const App = () => {
 
 				<TextBlock
 					text = {text_1}
-					width = {2000}
+					width = {1000}
 				/>
 
 			</div>
@@ -179,7 +178,7 @@ const App = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				gap: 83
+				gap: 41.5
 			}}>
 
 				<LinerTitle
@@ -189,12 +188,12 @@ const App = () => {
 				<div style = {{
 					display: 'flex',
 					flexDirection: 'row',
-					gap: 20
+					gap: 10
 				}}>
 
 					<TextBlock
 						text = {text_2_1_1}
-						width = {1000}
+						width = {500}
 						isCentralized = {true}
 					/>
 
@@ -202,7 +201,7 @@ const App = () => {
 
 					<TextBlock
 						text = {text_2_1_2}
-						width = {1000}
+						width = {500}
 						isCentralized = {true}
 					/>
 
@@ -210,7 +209,7 @@ const App = () => {
 
 					<TextBlock
 						text = {text_2_1_3}
-						width = {1000}
+						width = {500}
 						isCentralized = {true}
 					/>
 
@@ -218,7 +217,7 @@ const App = () => {
 
 				<TextBlock
 					text = {text_2_2}
-					width = {2000}
+					width = {1000}
 				/>
 
 			</div>
@@ -237,7 +236,7 @@ const App = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				gap: 83
+				gap: 41.5
 			}}>
 
 				<LinerTitle
@@ -246,11 +245,11 @@ const App = () => {
 
 				<TextBlock
 					text = {text_3_1}
-					width = {2000}
+					width = {1000}
 				/>
 
 				<TextBlockState
-					width = {2000}
+					width = {1000}
 					text = {text_3_2}
 				/>
 
@@ -287,9 +286,11 @@ const App = () => {
 		<Background>
 
 			<Top/>
+
 			<Section_1/>
 			<Section_2/>
 			<Section_3/>
+
 			<Bottom/>
 
 		</Background>

@@ -21,10 +21,10 @@ const LinerCircles = () => {
 			<div style = {{
 				position: 'relative',
 				width: '100%',
-				height: 6,
+				height: 3,
+				top: '50%',
 				borderRadius: '100%',
-				background: '#363636',
-				top: '50%'
+				background: '#363636'
 			}}/>
 
 		)
@@ -38,12 +38,12 @@ const LinerCircles = () => {
 
 			<div style = {{
 				display: 'flex',
+				flexDirection: 'row',
 				alignItems: 'center',
 				justifyContent: 'center',
-				flexDirection: 'row',
-				gap: 80,
-				paddingLeft: 50,
-				paddingRight: 50
+				gap: 40,
+				paddingLeft: 25,
+				paddingRight: 25
 			}}>
 
 				<CircleBottomSmall
@@ -87,11 +87,11 @@ const LinerCircles = () => {
 
 		<div style = {{
 			display: 'flex',
+			flexDirection: 'column',
 			alignItems: 'center',
 			justifyContent: 'center',
 			width: '100%',
-			paddingBottom: 116,
-			flexDirection: 'column'
+			paddingBottom: 58
 		}}>
 
 			<Line/>

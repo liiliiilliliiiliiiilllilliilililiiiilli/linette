@@ -7,16 +7,14 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 		<div style = {{
 			display: 'flex',
 			flexDirection: 'column',
-			borderRadius: 32,
-			border: '4px solid #1C1C1C',
-			background: '#090909',
 			width: width,
 			height: 'fit-content',
-			paddingTop: 38,
-			// paddingLeft: 21,
-			// paddingRight: 21,
-			paddingBottom: 38,
-			gap: 4
+			gap: 2,
+			paddingTop: 19,
+			paddingBottom: 19,
+			border: '2px solid #1C1C1C',
+			borderRadius: 16,
+			background: '#090909'
 		}}>
 
 			{text.map (paragraph => (
@@ -24,16 +22,16 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 				<>
 
 					<text style = {{
+						paddingTop: 6,
+						paddingLeft: 20.5 + 10.5,
+						paddingRight: 20.5 + 10.5,
+						paddingBottom: 7,
 						color: 'white',
 						fontFamily: 'system-ui',
 						fontWeight: 'bold',
-						fontSize: 44,
-						whiteSpace: 'pre-line',
-						paddingTop: 12,
-						paddingLeft: 41 + 21,
-						paddingRight: 41 + 21,
-						paddingBottom: 14,
-						textAlign: !isCentralized ? 'left' : 'center'
+						fontSize: 22,
+						textAlign: !isCentralized ? 'left' : 'center',
+						whiteSpace: 'pre-line'
 					}}>
 
 						{paragraph.title}
@@ -41,16 +39,16 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 					</text>
 
 					<text style = {{
+						paddingTop: 6,
+						paddingLeft: 20.5 + 10.5,
+						paddingRight: 20.5 + 10.5,
+						paddingBottom: 7,
 						color: 'white',
 						fontFamily: 'system-ui',
 						fontWeight: 'normal',
-						fontSize: 32,
-						whiteSpace: 'pre-line',
-						paddingTop: 12,
-						paddingLeft: 41 + 21,
-						paddingRight: 41 + 21,
-						paddingBottom: 14,
-						textAlign: !isCentralized ? 'left' : 'center'
+						fontSize: 16,
+						textAlign: !isCentralized ? 'left' : 'center',
+						whiteSpace: 'pre-line'
 					}}>
 
 						{paragraph.text}

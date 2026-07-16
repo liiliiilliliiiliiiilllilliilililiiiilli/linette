@@ -8,7 +8,7 @@ const Description = () => {
 			color: 'white',
 			fontFamily: 'system-ui',
 			fontWeight: 'light',
-			fontSize: 61,
+			fontSize: 30,
 			textAlign: 'center',
 			whiteSpace: 'pre-line'
 		}}>

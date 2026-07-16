@@ -5,12 +5,11 @@ const Title = () => {
 	return (
 
 		<text style = {{
-			color: 'white',
+			textAlign: 'center',
 			fontFamily: 'Baskervville',
 			fontWeight: 'bold',
-			fontSize: 95,
-			textAlign: 'center',
-			marginTop: 29
+			fontSize: 47,
+			color: 'white'
 		}}>
 
 			{`Linette`}
