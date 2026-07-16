@@ -1,5 +1,9 @@
 // Components - Description
 
+import { rem } from '../../libraries/q.js'
+
+
+
 const Description = () => {
 
 	return (
@@ -8,7 +12,7 @@ const Description = () => {
 			color: 'white',
 			fontFamily: 'system-ui',
 			fontWeight: 'light',
-			fontSize: 30,
+			fontSize: rem (30),
 			textAlign: 'center',
 			whiteSpace: 'pre-line'
 		}}>

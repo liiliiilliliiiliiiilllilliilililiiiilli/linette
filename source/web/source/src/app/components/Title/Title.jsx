@@ -1,5 +1,9 @@
 // Components - Title
 
+import { rem } from '../../libraries/q.js'
+
+
+
 const Title = () => {
 
 	return (
@@ -8,7 +12,7 @@ const Title = () => {
 			textAlign: 'center',
 			fontFamily: 'Baskervville',
 			fontWeight: 'bold',
-			fontSize: 47,
+			fontSize: rem (47),
 			color: 'white'
 		}}>
 

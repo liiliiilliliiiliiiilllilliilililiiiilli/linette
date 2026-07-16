@@ -2,6 +2,8 @@
 
 import pictureLinette from '../../../pictures/circle_top.png'
 
+import { rem } from '../../../libraries/q'
+
 
 
 const CircleTop = () => {
@@ -12,9 +14,9 @@ const CircleTop = () => {
 			display: 'flex',
 			alignItems: 'center',
 			justifyContent: 'center',
-			width: (125 + 3) * 1.25,
-			height: (125 + 3) * 1.25,
-			border: '4px solid black',
+			width: rem ((125 + 3) * 1.25),
+			height: rem ((125 + 3) * 1.25),
+			border: `${rem(4)} solid black`,
 			borderRadius: '100%'
 		}}>
 
@@ -22,9 +24,9 @@ const CircleTop = () => {
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				width: (125 + 3 - 12.225) * 1.25,
-				height: (125 + 3 - 12.225) * 1.25,
-				border: '4px solid black',
+				width: rem ((125 + 3 - 12.225) * 1.25),
+				height: rem ((125 + 3 - 12.225) * 1.25),
+				border: `${rem(4)} solid black`,
 				borderRadius: '100%'
 			}}>
 
