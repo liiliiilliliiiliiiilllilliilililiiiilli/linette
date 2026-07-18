@@ -1,6 +1,6 @@
 // Components - Description
 
-import { rem } from '../../libraries/q.js'
+import style from './style/style.module.sass'
 
 
 
@@ -8,14 +8,7 @@ const Description = () => {
 
 	return (
 
-		<text style = {{
-			color: 'white',
-			fontFamily: 'system-ui',
-			fontWeight: 'light',
-			fontSize: rem (30),
-			textAlign: 'center',
-			whiteSpace: 'pre-line'
-		}}>
+		<text className = {style.Text}>
 
 			{`Боль передается из поколения в поколение. Мы не выбирали эту боль.
 			У меня появился план, как разорвать круг боли.

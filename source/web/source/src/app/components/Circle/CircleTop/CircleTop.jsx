@@ -1,8 +1,8 @@
 // Components - Circle top
 
-import pictureLinette from '../../../pictures/circle_top.png'
+import style from './style/style.module.sass'
 
-import { rem } from '../../../libraries/q'
+import pictureLinette from '../../../pictures/circle_top.png'
 
 
 
@@ -10,34 +10,15 @@ const CircleTop = () => {
 
 	return (
 
-		<div style = {{
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			width: rem ((125 + 3) * 1.25),
-			height: rem ((125 + 3) * 1.25),
-			border: `${rem(4)} solid black`,
-			borderRadius: '100%'
-		}}>
+		<div className = {style.RingOut}>
 
-			<div style = {{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				width: rem ((125 + 3 - 12.225) * 1.25),
-				height: rem ((125 + 3 - 12.225) * 1.25),
-				border: `${rem(4)} solid black`,
-				borderRadius: '100%'
-			}}>
+			<div className = {style.RingIn}>
 
 				<img
-				 	src = {pictureLinette}
+					src = {pictureLinette}
 					alt = 'User Profile'
-					style = {{
-						width: '100%',
-						height: '100%',
-						borderRadius: '100%'
-				}}/>
+					className = {style.Picture}
+				/>
 
 			</div>
 

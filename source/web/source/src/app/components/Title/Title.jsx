@@ -1,6 +1,6 @@
 // Components - Title
 
-import { rem } from '../../libraries/q.js'
+import style from './style/style.module.sass'
 
 
 
@@ -8,15 +8,9 @@ const Title = () => {
 
 	return (
 
-		<text style = {{
-			textAlign: 'center',
-			fontFamily: 'Baskervville',
-			fontWeight: 'bold',
-			fontSize: rem (47),
-			color: 'white'
-		}}>
+		<text className = {style.Title}>
 
-			{`Linette`}
+			{'Linette'}
 
 		</text>
 

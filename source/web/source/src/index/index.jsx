@@ -6,7 +6,7 @@ import { StrictMode } from 'react'
 
 import { App } from '../app/App.jsx'
 
-import './root.css'
+import './index.sass'
 
 
 

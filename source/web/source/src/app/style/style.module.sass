@@ -1,0 +1,72 @@
+// App - Style
+
+@use '@style/breakpoints' as b
+
+
+.Top
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	gap: 20px
+
+	@include b.media-up (m1)
+
+		gap: 20px * 0.66
+
+.Section_1
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	gap: 41.5px
+
+	@include b.media-up (m1)
+
+		gap: 41.5px * 0.7
+
+.Section_2
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	gap: 41.5px
+
+	@include b.media-up (m1)
+
+		gap: 41.5px * 0.7
+
+	.Scrolls
+
+		display: flex
+		flex-direction: row
+		max-width: calc(100% - 50px)
+		gap: 0.625rem
+		overflow-x: scroll
+
+		@include b.media-up (m1)
+
+			gap: 0.625rem * 0.5
+
+.Section_3
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	gap: 41.5px
+
+	@include b.media-up (m1)
+
+		gap: 41.5px * 0.7
+
+.Bottom
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	gap: 83px

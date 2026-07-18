@@ -1,0 +1,31 @@
+// Components - Arrow - Style
+
+@use '@style/breakpoints' as b
+
+
+.Container
+
+	scale: 0.85
+
+	.Arrow
+
+		display: flex
+		align-items: center
+		justify-content: enter
+		width: 2.5rem
+		height: 2.5rem
+		border: 0.2rem solid #202020
+		border-radius: 100%
+		background: #000000
+		overflow: hidden
+
+		@include b.media-up (m1)
+
+			margin-top: -5px
+			scale: 0.75
+
+		.Picture
+
+			width: 2.65rem
+			height: 2.65rem
+			margin-left: -0.05rem

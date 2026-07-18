@@ -10,6 +10,8 @@ import pictureAppstore from '../../../pictures/circle_bottom_small_appstore.png'
 import pictureGmail from '../../../pictures/circle_bottom_small_gmail.png'
 import pictureLi from '../../../pictures/circle_bottom_big.png'
 
+import style from './style/style.module.sass'
+
 
 
 const LinerCircles = () => {
@@ -18,14 +20,7 @@ const LinerCircles = () => {
 
 		return (
 
-			<div style = {{
-				position: 'relative',
-				width: '100%',
-				height: 3,
-				top: '50%',
-				borderRadius: '100%',
-				background: '#363636'
-			}}/>
+			<div className = {style.Line}/>
 
 		)
 
@@ -36,15 +31,7 @@ const LinerCircles = () => {
 
 		return (
 
-			<div style = {{
-				display: 'flex',
-				flexDirection: 'row',
-				alignItems: 'center',
-				justifyContent: 'center',
-				gap: 40,
-				paddingLeft: 25,
-				paddingRight: 25
-			}}>
+			<div className = {style.Circles}>
 
 				<CircleBottomSmall
 					picture = {pictureTelegram}
@@ -85,14 +72,7 @@ const LinerCircles = () => {
 
 	return (
 
-		<div style = {{
-			display: 'flex',
-			flexDirection: 'column',
-			alignItems: 'center',
-			justifyContent: 'center',
-			width: '100%',
-			paddingBottom: 58
-		}}>
+		<div className = {style.LinerCircles}>
 
 			<Line/>
 			<Circles/>

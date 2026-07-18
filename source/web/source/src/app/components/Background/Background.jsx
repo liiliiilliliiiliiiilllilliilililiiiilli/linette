@@ -2,43 +2,22 @@
 
 import pictureBackground from '../.././pictures/background.png'
 
+import style from './style/style.module.sass'
+
 
 
 const Background = ({children}) => {
 
 	return (
 
-		<div style = {{
-			position: 'relative',
-			display: 'flex',
-			justifyContent: 'center',
-			width: '100%',
-			minHeight: '100vh'
-		}}>
+		<div className = {style.Background}>
 
 			<img
 				src = {pictureBackground}
 				alt = 'Задний фон'
-				style = {{
-					position: 'absolute',
-					width: '100%',
-					top: -95,
-					zIndex: 0,
-					pointerEvents: 'none',
-					userSelect: 'none'
-				}}
-			/>
+				className = {style.Picture}/>
 
-			<div style = {{
-				position: 'relative',
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				width: '100%',
-				gap: 100,
-				paddingTop: 50,
-				zIndex: 1
-			}}>
+			<div className = {style.Content}>
 
 				{children}
 

@@ -1,18 +1,16 @@
 // Components - Liner text
 
+import style from './style/style.module.sass'
+
+
+
 const LinerTitle = ({text}) => {
 
 	const Line = () => {
 
 		return (
 
-			<div style = {{
-				position: 'absolute',
-				width: '100%',
-				height: 3,
-				borderRadius: '100%',
-				background: '#363636'
-			}}/>
+			<div className = {style.Line}/>
 
 		)
 
@@ -23,28 +21,9 @@ const LinerTitle = ({text}) => {
 
 		return (
 
-			<div style = {{
-				position: 'absolute',
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				border: '3px solid #363636',
-				borderRadius: 1000,
-				background: '#090909'
-			}}>
+			<div className = {style.Title}>
 
-				<text style = {{
-					paddingTop: 6,
-					paddingLeft: 20.5,
-					paddingRight: 20.5,
-					paddingBottom: 7,
-					color: 'white',
-					fontFamily: 'system-ui',
-					fontWeight: 'bold',
-					fontSize: 32,
-					textAlign: 'center',
-					whiteSpace: 'pre-line'
-				}}>
+				<text className = {style.Text}>
 
 					{`· ${text} ·`}
 
@@ -59,14 +38,7 @@ const LinerTitle = ({text}) => {
 
 	return (
 
-		<div style = {{
-			position: 'relative',
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			width: '100%',
-			paddingBottom: 20.5
-		}}>
+		<div className = {style.LinerTitle}>
 
 			<Line/>
 			<Title/>

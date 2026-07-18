@@ -1,57 +1,37 @@
 // Components - Text block
 
+import style from './style/style.module.sass'
+
+
+
 const TextBlock = ({text, width, isCentralized = false}) => {
 
 	return (
 
-		<div style = {{
-			display: 'flex',
-			flexDirection: 'column',
-			width: width,
-			minWidth: 400,
-			maxWidth: 'calc(100% - 50px)',
-			height: 'fit-content',
-			gap: 2,
-			paddingTop: 19,
-			paddingBottom: 19,
-			border: '2px solid #1C1C1C',
-			borderRadius: 16,
-			background: '#090909'
-		}}>
+		<div
+			className = {style.TextBlock}
+			style = {{
+				width: width}}>
 
 			{text.map (paragraph => (
 
 				<>
 
-					<text style = {{
-						paddingTop: 6,
-						paddingLeft: 20.5 + 10.5,
-						paddingRight: 20.5 + 10.5,
-						paddingBottom: 7,
-						color: 'white',
-						fontFamily: 'system-ui',
-						fontWeight: 'bold',
-						fontSize: 22,
-						textAlign: !isCentralized ? 'left' : 'center',
-						whiteSpace: 'pre-line'
-					}}>
+					<text
+						className = {style.Title}
+						style = {{
+							textAlign: !isCentralized ? 'left' : 'center'}}>
 
 						{paragraph.title}
 
 					</text>
 
-					<text style = {{
-						paddingTop: 6,
-						paddingLeft: 20.5 + 10.5,
-						paddingRight: 20.5 + 10.5,
-						paddingBottom: 7,
-						color: 'white',
-						fontFamily: 'system-ui',
-						fontWeight: 'normal',
-						fontSize: 16,
-						textAlign: !isCentralized ? 'left' : 'center',
-						whiteSpace: 'pre-line'
-					}}>
+					<text
+						className = {style.Text}
+						style = {{
+							textAlign: !isCentralized ? 'left' : 'center'
+						}}
+					>
 
 						{paragraph.text}
 

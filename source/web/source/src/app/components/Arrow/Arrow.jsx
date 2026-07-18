@@ -2,36 +2,22 @@
 
 import pictureArrow from '../../pictures/arrow.svg'
 
+import style from './style/style.module.sass'
+
 
 
 const Arrow = () => {
 
 	return (
 
-		<div style = {{
-			paddingTop: 14.5,
-			scale: 0.85
-		}}>
+		<div className = {style.Container}>
 
-			<div style = {{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				width: 40,
-				height: 40,
-				border: '3.5px solid #202020',
-				borderRadius: '100%',
-				background: '#000000',
-				overflow: 'hidden'
-			}}>
+			<div className = {style.Arrow}>
 
 				<img
 					src = {pictureArrow}
 					alt = 'стрелка'
-					style = {{
-						width: 42.5,
-						height: 42.5
-				}}/>
+					className = {style.Picture}/>
 
 			</div>
 
