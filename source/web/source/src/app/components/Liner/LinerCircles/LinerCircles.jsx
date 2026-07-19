@@ -5,7 +5,7 @@ import { CircleBottomBig } from '../../Circle/CircleBottomBig/CircleBottomBig'
 
 import pictureTelegram from '../../../pictures/circle_bottom_small_telegram.png'
 import pictureGithub from '../../../pictures/circle_bottom_small_github.png'
-import picturePlaymarket from '../../../pictures/circle_bottom_small_playmarket.png'
+import picturePlaymarket from '../../../pictures/circle_bottom_small_playstore.png'
 import pictureAppstore from '../../../pictures/circle_bottom_small_appstore.png'
 import pictureGmail from '../../../pictures/circle_bottom_small_gmail.png'
 import pictureLi from '../../../pictures/circle_bottom_big.png'

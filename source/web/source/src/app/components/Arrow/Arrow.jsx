@@ -1,6 +1,6 @@
 // Components - Arrow
 
-import pictureArrow from '../../pictures/arrow.svg'
+import pictureArrow from '../../pictures/arrow_grey.svg'
 
 import style from './style/style.module.sass'
 

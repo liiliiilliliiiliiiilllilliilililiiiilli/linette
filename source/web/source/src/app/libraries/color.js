@@ -1,6 +1,6 @@
 // Colors library file
 
-const Colors = {
+const color = {
 
 	'blue': '#80879E',
 	'white': '#F2F2F2',
@@ -16,4 +16,4 @@ const Colors = {
 
 
 
-export { Colors }
+export { color }
