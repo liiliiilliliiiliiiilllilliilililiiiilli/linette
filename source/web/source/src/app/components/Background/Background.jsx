@@ -1,6 +1,6 @@
 // Components - Background
 
-import pictureBackground from '../.././pictures/background.png'
+import pictureBackground from '@pictures/background.png'
 
 import style from './style/style.module.sass'
 
@@ -14,8 +14,9 @@ const Background = ({children}) => {
 
 			<img
 				src = {pictureBackground}
-				alt = 'Задний фон'
-				className = {style.Picture}/>
+				alt = 'Background'
+				className = {style.Picture}
+			/>
 
 			<div className = {style.Content}>
 
@@ -26,8 +27,9 @@ const Background = ({children}) => {
 		</div>
 
 	)
+
 }
 
 
 
-export { Background }
+export default Background

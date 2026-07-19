@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 
 import { StrictMode } from 'react'
 
-import { App } from '../app/App.jsx'
+import App from '@app/App'
 
 import './index.sass'
 

@@ -1,8 +1,8 @@
 // Components - Circle top
 
-import style from './style/style.module.sass'
+import pictureLinette from '@pictures/linette.png'
 
-import pictureLinette from '../../../pictures/circle_top.png'
+import style from './style/style.module.sass'
 
 
 
@@ -16,7 +16,7 @@ const CircleTop = () => {
 
 				<img
 					src = {pictureLinette}
-					alt = 'User Profile'
+					alt = 'Linette'
 					className = {style.Picture}
 				/>
 
@@ -30,4 +30,4 @@ const CircleTop = () => {
 
 
 
-export { CircleTop }
+export default CircleTop

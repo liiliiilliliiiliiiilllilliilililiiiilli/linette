@@ -1,8 +1,8 @@
 // Components - Text block state
 
-import style from './style/style.module.sass'
+import pictureArrowBlue from '@pictures/arrow_blue.png'
 
-import pictureArrowBlue from '../../pictures/arrow_blue.svg'
+import style from './style/style.module.sass'
 
 
 
@@ -31,8 +31,9 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 						<img
 							src = {pictureArrowBlue}
-							alt = 'стрелка'
-							className = {style.Arrow}/>
+							alt = 'Arrow'
+							className = {style.Arrow}
+						/>
 
 						<text className = {style.Text}>
 
@@ -76,7 +77,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 						<img
 							src = {pictureArrowBlue}
-							alt = 'стрелка'
+							alt = 'Arrow'
 							className = {style.Arrow}
 						/>
 
@@ -120,9 +121,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 		<div
 			className = {style.TextBlockState}
-			style = {{
-				width: width
-		}}>
+			style = {{width: width}}
+		>
 
 			{text.text.map (paragraph => (
 
@@ -130,9 +130,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 					<text
 						className = {style.Title}
-						style = {{
-							textAlign: !isCentralized ? 'left' : 'center'
-					}}>
+						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
+					>
 
 						{paragraph.title}
 
@@ -140,9 +139,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 					<text
 						className = {style.Text}
-						style = {{
-							textAlign: !isCentralized ? 'left' : 'center'
-					}}>
+						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
+					>
 
 						{paragraph.text}
 
@@ -162,4 +160,4 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 
 
-export { TextBlockState }
+export default TextBlockState

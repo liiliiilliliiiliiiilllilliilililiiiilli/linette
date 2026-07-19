@@ -1,6 +1,6 @@
 // Components - Arrow
 
-import pictureArrow from '../../pictures/arrow_grey.svg'
+import pictureArrow from '@pictures/arrow_grey.png'
 
 import style from './style/style.module.sass'
 
@@ -16,8 +16,9 @@ const Arrow = () => {
 
 				<img
 					src = {pictureArrow}
-					alt = 'стрелка'
-					className = {style.Picture}/>
+					alt = 'Arrow'
+					className = {style.Picture}
+				/>
 
 			</div>
 
@@ -29,4 +30,4 @@ const Arrow = () => {
 
 
 
-export { Arrow }
+export default Arrow

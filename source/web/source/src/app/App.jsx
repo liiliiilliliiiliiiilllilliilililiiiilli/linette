@@ -1,17 +1,17 @@
 // Main application file
 
-import { Background } from './components/Background/Background'
-import { CircleTop } from './components/Circle/CircleTop/CircleTop'
-import { Title } from './components/Title/Title'
-import { Description } from './components/Description/Description'
-import { LinerTitle } from './components/Liner/LinerTitle/LinerTitle'
-import { LinerCircles } from './components/Liner/LinerCircles/LinerCircles'
-import { TextBlock } from './components/TextBlock/TextBlock'
-import { TextBlockState } from './components/TextBlockState/TextBlockState'
-import { Arrow } from './components/Arrow/Arrow'
-import { End } from './components/End/End'
+import Background from '@components/Background/Background'
+import CircleTop from '@components/Circle/CircleTop/CircleTop'
+import Title from '@components/Title/Title'
+import Description from '@components/Description/Description'
+import LinerTitle from '@components/Liner/LinerTitle/LinerTitle'
+import LinerCircles from '@components/Liner/LinerCircles/LinerCircles'
+import TextBlock from '@components/TextBlock/TextBlock'
+import TextBlockState from '@components/TextBlockState/TextBlockState'
+import Arrow from '@components/Arrow/Arrow'
+import End from '@components/End/End'
 
-import { text } from './libraries/text'
+import text from '@libraries/text.js'
 
 import style from './style/style.module.sass'
 
@@ -163,4 +163,4 @@ const App = () => {
 
 
 
-export { App }
+export default App

@@ -51,4 +51,4 @@ const LinerTitle = ({text}) => {
 
 
 
-export { LinerTitle }
+export default LinerTitle

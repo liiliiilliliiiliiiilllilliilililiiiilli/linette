@@ -1,14 +1,14 @@
 // Components - Liner circles
 
-import { CircleBottomSmall } from '../../Circle/CircleBottomSmall/CircleBottomSmall'
-import { CircleBottomBig } from '../../Circle/CircleBottomBig/CircleBottomBig'
+import CircleBottomSmall from '@components/Circle/CircleBottomSmall/CircleBottomSmall'
+import CircleBottomBig from '@components/Circle/CircleBottomBig/CircleBottomBig'
 
-import pictureTelegram from '../../../pictures/circle_bottom_small_telegram.png'
-import pictureGithub from '../../../pictures/circle_bottom_small_github.png'
-import picturePlaymarket from '../../../pictures/circle_bottom_small_playstore.png'
-import pictureAppstore from '../../../pictures/circle_bottom_small_appstore.png'
-import pictureGmail from '../../../pictures/circle_bottom_small_gmail.png'
-import pictureLi from '../../../pictures/circle_bottom_big.png'
+import pictureTelegram from '@pictures/telegram.png'
+import pictureGithub from '@pictures/github.png'
+import picturePlaystore from '@pictures/playstore.png'
+import pictureAppstore from '@pictures/appstore.png'
+import pictureGmail from '@pictures/gmail.png'
+import pictureLi from '@pictures/li.png'
 
 import style from './style/style.module.sass'
 
@@ -49,16 +49,16 @@ const LinerCircles = () => {
 				/>
 
 				{/* <CircleBottomSmall
-					picture = {picturePlaymarket}
-					link = {'https://playmarket.com'}
-				/>
+					picture = {picturePlaystore}
+					link = {'https://playstore.com'}
+				/> */}
 
-				<CircleBottomSmall
+				{/* <CircleBottomSmall
 					picture = {pictureAppstore}
 					link = {'https://appstore.com'}
-				/>
+				/> */}
 
-				<CircleBottomSmall
+				{/* <CircleBottomSmall
 					picture = {pictureGmail}
 					link = {'https://gmail.com'}
 				/> */}
@@ -85,4 +85,4 @@ const LinerCircles = () => {
 
 
 
-export { LinerCircles }
+export default LinerCircles

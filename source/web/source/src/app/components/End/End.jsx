@@ -20,4 +20,4 @@ const End = () => {
 
 
 
-export { End }
+export default End

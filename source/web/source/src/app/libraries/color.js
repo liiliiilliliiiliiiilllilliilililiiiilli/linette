@@ -16,4 +16,4 @@ const color = {
 
 
 
-export { color }
+export default color

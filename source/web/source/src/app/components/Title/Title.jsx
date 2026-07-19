@@ -20,4 +20,4 @@ const Title = () => {
 
 
 
-export { Title }
+export default Title

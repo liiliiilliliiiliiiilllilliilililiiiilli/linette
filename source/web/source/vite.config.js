@@ -1,4 +1,5 @@
-import path from 'node:path'
+// Project builder configuration file
+
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
@@ -15,12 +16,12 @@ export default defineConfig ({
 
 	],
 
-	root: resolve (__dirname, 'src/index'),  // Указываем новую корневую директорию для Vite
+	root: resolve (__dirname, 'src/index'),
 
 	build: {
 
-		outDir: resolve (__dirname, 'build'),  // Указываем, что папка сборки build должна быть в корне проекта
-		emptyOutDir: true  // Очищаем папку build перед каждой новой сборкой
+		outDir: resolve (__dirname, 'build'),
+		emptyOutDir: true
 
 	},
 
@@ -28,8 +29,14 @@ export default defineConfig ({
 
 		alias: {
 
-			'@app': resolve (__dirname, 'src/app'),  // Настраиваем алиас для удобного импорта из папки app (которая теперь выше уровнем)
-			'@style': path.resolve(__dirname, 'src/app/style')
+			'@app': resolve (__dirname, 'src/app'),
+			'@index': resolve (__dirname, 'src/index'),
+
+			'@components': resolve (__dirname, 'src/app/components'),
+			'@libraries': resolve (__dirname, 'src/app/libraries'),
+			'@pictures': resolve (__dirname, 'src/app/pictures'),
+
+			'@style': resolve (__dirname, 'src/app/style')
 
 		}
 

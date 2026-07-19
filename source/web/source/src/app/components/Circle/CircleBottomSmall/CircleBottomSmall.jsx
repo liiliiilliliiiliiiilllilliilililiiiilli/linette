@@ -8,7 +8,10 @@ const CircleBottomSmall = ({picture, link}) => {
 
 	return (
 
-		<a href = {link} target = '_blank' rel = 'noopener noreferrer'>
+		<a
+			href = {link}
+			rel = 'noopener noreferrer'
+		>
 
 			<div className = {style.RingOut}>
 
@@ -16,8 +19,9 @@ const CircleBottomSmall = ({picture, link}) => {
 
 					<img
 						src = {picture}
-						alt = 'User Profile'
-						className = {style.Picture}/>
+						alt = 'Socials'
+						className = {style.Picture}
+					/>
 
 				</div>
 
@@ -31,4 +35,4 @@ const CircleBottomSmall = ({picture, link}) => {
 
 
 
-export { CircleBottomSmall }
+export default CircleBottomSmall
