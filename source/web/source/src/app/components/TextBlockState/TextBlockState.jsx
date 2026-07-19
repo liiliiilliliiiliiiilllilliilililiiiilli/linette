@@ -53,7 +53,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 					<text className = {style.Hint}>
 
-						{'Последнее обновление: 15 июля 2026'}
+						{text.hint}
 
 					</text>
 
@@ -77,7 +77,8 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 						<img
 							src = {pictureArrowBlue}
 							alt = 'стрелка'
-							className = {style.Arrow}/>
+							className = {style.Arrow}
+						/>
 
 					</div>
 
@@ -123,7 +124,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 				width: width
 		}}>
 
-			{text.map (paragraph => (
+			{text.text.map (paragraph => (
 
 				<>
 
