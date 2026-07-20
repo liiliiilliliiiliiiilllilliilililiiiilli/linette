@@ -1,6 +1,7 @@
 // Components - Circle top - Style
 
-@use '@style/breakpoints' as b
+@use '@style/color' as color
+@use '@style/breakpoint' as breakpoint
 
 
 .RingOut
@@ -10,12 +11,18 @@
 	justify-content: center
 	width: 10rem
 	height: 10rem
-	border: 0.25rem solid #000000
+	border: 0.25rem solid color.$black
 	border-radius: 100%
 
-	@include b.media-up (m1)
+	@include breakpoint.media-up (m1)
 
-		border: 0.2rem solid #f2f2f2
+		border: 0.2rem solid color.$white
+		width: 10rem * 0.75
+		height: 10rem * 0.75
+
+	@include breakpoint.media-up (m2)
+
+		border: 0.2rem solid color.$white
 		width: 10rem * 0.75
 		height: 10rem * 0.75
 
@@ -26,12 +33,18 @@
 		justify-content: center
 		width: 9rem
 		height: 9rem
-		border: 0.25rem solid #000000
+		border: 0.25rem solid color.$black
 		border-radius: 100%
 
-		@include b.media-up (m1)
+		@include breakpoint.media-up (m1)
 
-			border: 0.2rem solid #000000
+			border: 0.2rem solid color.$black
+			width: 9rem * 0.75
+			height: 9rem * 0.75
+
+		@include breakpoint.media-up (m2)
+
+			border: 0.2rem solid color.$black
 			width: 9rem * 0.75
 			height: 9rem * 0.75
 

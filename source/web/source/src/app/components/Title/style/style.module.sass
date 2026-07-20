@@ -1,6 +1,7 @@
 // Components - Title - Style
 
-@use '@style/breakpoints' as b
+@use '@style/color' as color
+@use '@style/breakpoint' as breakpoint
 
 
 .Title
@@ -9,8 +10,12 @@
 	font-family: Baskervville
 	font-weight: bold
 	font-size: 3rem
-	color: #f2f2f2
+	color: color.$white
 
-	@include b.media-up (m1)
+	@include breakpoint.media-up (m1)
+
+		font-size: 3rem * 0.7
+
+	@include breakpoint.media-up (m2)
 
 		font-size: 3rem * 0.7

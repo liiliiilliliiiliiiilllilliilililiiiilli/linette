@@ -1,6 +1,7 @@
 // Components - Liner circles - Style
 
-@use '@style/breakpoints' as b
+@use '@style/color' as color
+@use '@style/breakpoint' as breakpoint
 
 
 .LinerCircles
@@ -12,7 +13,11 @@
 	width: 100%
 	padding-bottom: 3.625rem
 
-	@include b.media-up (m1)
+	@include breakpoint.media-up (m1)
+
+		padding-bottom: 3.625rem * 0.75
+
+	@include breakpoint.media-up (m2)
 
 		padding-bottom: 3.625rem * 0.75
 
@@ -23,9 +28,13 @@
 		height: 0.1875rem
 		top: 50%
 		border-radius: 100%
-		background: #363636
+		background: color.$grey_2
 
-		@include b.media-up (m1)
+		@include breakpoint.media-up (m1)
+
+			height: 0.1875rem * 0.75
+
+		@include breakpoint.media-up (m2)
 
 			height: 0.1875rem * 0.75
 
@@ -39,6 +48,10 @@
 		padding-left: 1.5625rem
 		padding-right: 1.5625rem
 
-		@include b.media-up (m1)
+		@include breakpoint.media-up (m1)
+
+			gap: 2.5rem * 0.8
+
+		@include breakpoint.media-up (m2)
 
 			gap: 2.5rem * 0.8
