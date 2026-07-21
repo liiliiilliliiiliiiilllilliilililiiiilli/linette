@@ -37,7 +37,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 						<text className = {style.Text}>
 
-							{'Ранее'}
+							{text.buttons.left}
 
 						</text>
 
@@ -54,7 +54,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 					<text className = {style.Hint}>
 
-						{text.hint}
+						{text.hint.at (-1)}
 
 					</text>
 
@@ -71,7 +71,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 
 						<text className = {style.Text}>
 
-							{'Позже'}
+							{text.buttons.right}
 
 						</text>
 
@@ -142,7 +142,7 @@ const TextBlockState = ({text, width, isCentralized = false}) => {
 						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
 					>
 
-						{paragraph.text}
+						{paragraph.text.at (-1)}
 
 					</text>
 

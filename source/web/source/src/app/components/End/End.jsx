@@ -4,13 +4,13 @@ import style from './style/style.module.sass'
 
 
 
-const End = () => {
+const End = ({text}) => {
 
 	return (
 
 		<text className = {style.Text}>
 
-			{`Это возможно.`}
+			{text}
 
 		</text>
 

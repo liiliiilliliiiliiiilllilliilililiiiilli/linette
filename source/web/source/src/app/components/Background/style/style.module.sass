@@ -1,7 +1,7 @@
 // Components - Background - Style
 
-@use '@style/color' as color
-@use '@style/breakpoint' as breakpoint
+@use '@style/colors' as colors
+@use '@style/breakpoints' as breakpoints
 
 
 .Background
@@ -32,12 +32,12 @@
 		padding-top: 3.125rem
 		z-index: 1
 
-		@include breakpoint.media-up (m1)
+		@include breakpoints.media-up (m1)
 
 			padding-top: 3.125rem * 0.75
 			gap: 6.25rem * 0.6
 
-		@include breakpoint.media-up (m2)
+		@include breakpoints.media-up (m2)
 
 			padding-top: 3.125rem * 0.75
 			gap: 6.25rem * 0.6

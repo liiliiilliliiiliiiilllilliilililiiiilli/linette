@@ -33,7 +33,6 @@ export default defineConfig ({
 			'@index': resolve (__dirname, 'src/index'),
 
 			'@components': resolve (__dirname, 'src/app/components'),
-			'@libraries': resolve (__dirname, 'src/app/libraries'),
 			'@pictures': resolve (__dirname, 'src/app/pictures'),
 
 			'@style': resolve (__dirname, 'src/app/style')

@@ -1,12 +1,12 @@
 // Components - End - Style
 
-@use '@style/color' as color
-@use '@style/breakpoint' as breakpoint
+@use '@style/colors' as colors
+@use '@style/breakpoints' as breakpoints
 
 
 .Text
 
-	color: color.$white
+	color: colors.$white
 	font-family: system-ui
 	font-weight: 550
 	font-size: 2rem
@@ -14,12 +14,12 @@
 	white-space: pre-line
 	padding-bottom: 1.25rem
 
-	@include breakpoint.media-up (m1)
+	@include breakpoints.media-up (m1)
 
 		font-size: 2rem * 0.66
 		margin-bottom: 1.25rem * -1.66
 
-	@include breakpoint.media-up (m2)
+	@include breakpoints.media-up (m2)
 
 		font-size: 2rem * 0.66
 		margin-bottom: 1.25rem * -1.66

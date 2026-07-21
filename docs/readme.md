@@ -1,1 +1,1 @@
-service/readme/readme.ru.md
+service/readme/md/readme.ru.md

@@ -1,7 +1,7 @@
 // Components - Circle bottom big - Style
 
-@use '@style/color' as color
-@use '@style/breakpoint' as breakpoint
+@use '@style/colors' as colors
+@use '@style/breakpoints' as breakpoints
 
 
 .RingOut
@@ -13,26 +13,26 @@
 	height: 7.1875rem
 	padding-top: 0.046875rem
 	padding-left: 0.046875rem
-	border: 0.125rem solid color.$grey_2
+	border: 0.125rem solid colors.$grey_2
 	border-radius: 100%
-	background: color.$dark_2
+	background: colors.$dark_2
 	scale: 1.25
 
-	@include breakpoint.media-up (m1)
+	@include breakpoints.media-up (m1)
 
 		width: 7.1875rem * 0.75
 		height: 7.1875rem * 0.75
 		padding-top: 0.046875rem * 0.75
 		padding-left: 0.046875rem * 0.75
-		border: 0.1875rem * 0.66 solid color.$grey_2
+		border: 0.1875rem * 0.66 solid colors.$grey_2
 
-	@include breakpoint.media-up (m2)
+	@include breakpoints.media-up (m2)
 
 		width: 7.1875rem * 0.75
 		height: 7.1875rem * 0.75
 		padding-top: 0.046875rem * 0.75
 		padding-left: 0.046875rem * 0.75
-		border: 0.1875rem * 0.66 solid color.$grey_2
+		border: 0.1875rem * 0.66 solid colors.$grey_2
 
 	.RingIn
 
@@ -43,12 +43,12 @@
 		height: 6.875rem
 		border-radius: 100%
 
-		@include breakpoint.media-up (m1)
+		@include breakpoints.media-up (m1)
 
 			width: 6.875rem * 0.75
 			height: 6.875rem * 0.75
 
-		@include breakpoint.media-up (m2)
+		@include breakpoints.media-up (m2)
 
 			width: 6.875rem * 0.75
 			height: 6.875rem * 0.75

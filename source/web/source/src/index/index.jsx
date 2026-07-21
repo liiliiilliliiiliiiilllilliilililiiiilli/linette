@@ -8,6 +8,8 @@ import App from '@app/App'
 
 import './index.sass'
 
+import './locales/locales.js'
+
 
 
 createRoot (document.getElementById ('root')).render (

@@ -1,7 +1,7 @@
 // Components - Arrow - Style
 
-@use '@style/color' as color
-@use '@style/breakpoint' as breakpoint
+@use '@style/colors' as colors
+@use '@style/breakpoints' as breakpoints
 
 
 .Container
@@ -15,17 +15,17 @@
 		justify-content: enter
 		width: 2.5rem
 		height: 2.5rem
-		border: 0.2rem solid color.$grey_3
+		border: 0.2rem solid colors.$grey_3
 		border-radius: 100%
-		background: color.$black
+		background: colors.$black
 		overflow: hidden
 
-		@include breakpoint.media-up (m1)
+		@include breakpoints.media-up (m1)
 
 			margin-top: -0.3125rem
 			scale: 0.75
 
-		@include breakpoint.media-up (m2)
+		@include breakpoints.media-up (m2)
 
 			margin-top: -0.3125rem
 			scale: 0.75
