@@ -1,8 +1,8 @@
-# Русский перевод (неофициальный)
-
 [![localfile_switch_ru]][localfile_licence_ru]
 [![localfile_switch_en]][localfile_licence_en]
 [![localfile_switch_zh]][localfile_licence_zh]
+
+# Русский перевод (неофициальный)
 
 Данный текст является неофициальным переводом лицензии MIT на русский язык. Юридической силой обладает исключительно оригинальная английская версия, находящаяся по пути `/service/licence/md/licence.en.md`.
 
