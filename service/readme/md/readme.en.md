@@ -1,8 +1,8 @@
-# Linette - It is possible.
-
 [![localfile_switch_ru]][localfile_readme_ru]
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
+
+# Linette - It is possible.
 
 ![localfile_pic]
 

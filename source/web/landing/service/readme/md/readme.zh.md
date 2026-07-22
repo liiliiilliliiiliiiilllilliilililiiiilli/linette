@@ -1,8 +1,8 @@
-# Linette - Web!
-
 [![localfile_switch_ru]][localfile_readme_ru]
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
+
+# Linette - Web!
 
 [localfile_switch_ru]: /source/web/landing/service/readme/md/svg/ru.svg
 [localfile_switch_en]: /source/web/landing/service/readme/md/svg/en.svg
