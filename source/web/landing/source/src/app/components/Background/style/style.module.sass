@@ -1,0 +1,43 @@
+// Components - Background - Style
+
+@use '@style/colors' as colors
+@use '@style/breakpoints' as breakpoints
+
+
+.Background
+
+	position: relative
+	display: flex
+	justify-content: center
+	width: 100%
+	min-height: 100vh
+
+	.Picture
+
+		position: absolute
+		width: 100%
+		top: -5.9rem
+		z-index: 0
+		pointer-events: none
+		user-select: none
+
+	.Content
+
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 100%
+		gap: 6.25rem
+		padding-top: 3.125rem
+		z-index: 1
+
+		@include breakpoints.media-up (m1)
+
+			padding-top: 3.125rem * 0.75
+			gap: 6.25rem * 0.6
+
+		@include breakpoints.media-up (m2)
+
+			padding-top: 3.125rem * 0.75
+			gap: 6.25rem * 0.6

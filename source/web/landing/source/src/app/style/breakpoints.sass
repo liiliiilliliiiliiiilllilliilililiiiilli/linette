@@ -1,0 +1,40 @@
+// App - Breakpoints for adaptive styles
+
+$m1: 576px
+$m2: 768px
+$m3: 992px
+$m4: 1200px
+$m5: 1400px
+
+
+@mixin media-up ($breakpoint)
+
+	@if $breakpoint == m1
+
+		@media (max-width: $m1)
+
+			@content
+
+	@else if $breakpoint == m2
+
+		@media (max-width: $m2)
+
+			@content
+
+	@else if $breakpoint == m3
+
+		@media (max-width: $m3)
+
+			@content
+
+	@else if $breakpoint == m4
+
+		@media (max-width: $m4)
+
+			@content
+
+	@else if $breakpoint == m5
+
+		@media (max-width: $m5)
+
+			@content
