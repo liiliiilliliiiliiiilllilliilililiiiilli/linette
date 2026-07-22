@@ -1,0 +1,25 @@
+# 简体中文翻译（非官方）
+
+[![localfile_switch_ru]][localfile_readme_ru]
+[![localfile_switch_en]][localfile_readme_en]
+[![localfile_switch_zh]][localfile_readme_zh]
+
+本文件是 MIT 许可证的非官方中文翻译，仅供参考。仅英文原版具有法律效力，原版位于 `./licence.en.md` 路径下。
+
+# MIT 许可证
+
+版权所有 (c) 2026 li
+
+特此免费授予任何获得本软件及相关文档文件（以下简称“软件”）副本的人，不受限制地使用本软件的权利，包括但不限于使用、复制、修改、合并、出版、分发、再许可和/或销售本软件副本的权利，并允许获得本软件的人这样做，但须满足以下条件：
+
+上述版权声明和本许可声明应包含在本软件的所有副本或重要部分中。
+
+本软件按“原样”提供，不提供任何形式的明示或暗示担保，包括但不限于对适销性、特定用途的适用性和不侵权的担保。在任何情况下，作者或版权持有人均不对因本软件、本软件的使用或其他交易中引起的任何索赔、损害或其他责任承担责任，无论是合同、侵权还是其他行为。
+
+[localfile_switch_ru]: /service/readme/md/svg/ru.svg
+[localfile_switch_en]: /service/readme/md/svg/en.svg
+[localfile_switch_zh]: /service/readme/md/svg/zh.svg
+
+[localfile_readme_ru]: /service/readme/md/readme.ru.md
+[localfile_readme_en]: /service/readme/md/readme.en.md
+[localfile_readme_zh]: /service/readme/md/readme.zh.md
