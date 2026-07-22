@@ -1,12 +1,12 @@
-// File for text translations
+// File for all texts
 
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
-import ru from './languages/ru.json'
-import en from './languages/en.json'
-import zh from './languages/zh.json'
+import ru from './localisations/ru.json'
+import en from './localisations/en.json'
+import zh from './localisations/zh.json'
 
 
 

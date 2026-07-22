@@ -1,10 +1,10 @@
-// Components - End
+// Components - Conclusion
 
 import style from './style/style.module.sass'
 
 
 
-const End = ({text}) => {
+const Conclusion = ({text}) => {
 
 	return (
 
@@ -20,4 +20,4 @@ const End = ({text}) => {
 
 
 
-export default End
+export default Conclusion

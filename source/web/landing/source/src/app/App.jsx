@@ -1,5 +1,7 @@
 // Main application file
 
+import { useTranslation } from 'react-i18next'
+
 import Background from '@components/Background/Background'
 import CircleTop from '@components/Circle/CircleTop/CircleTop'
 import Title from '@components/Title/Title'
@@ -9,11 +11,9 @@ import LinerCircles from '@components/Liner/LinerCircles/LinerCircles'
 import TextBlock from '@components/TextBlock/TextBlock'
 import TextBlockState from '@components/TextBlockState/TextBlockState'
 import Arrow from '@components/Arrow/Arrow'
-import End from '@components/End/End'
+import Conclusion from '@components/Conclusion/Conclusion'
 
 import style from './style/style.module.sass'
-
-import { useTranslation } from 'react-i18next'
 
 
 
@@ -39,11 +39,11 @@ const App = () => {
 	}
 
 
-	const Section_1 = () => {
+	const Idea = () => {
 
 		return (
 
-			<div className = {style.Section_1}>
+			<div className = {style.Idea}>
 
 				<LinerTitle text = {t('liner.idea')}/>
 
@@ -59,11 +59,11 @@ const App = () => {
 	}
 
 
-	const Section_2 = () => {
+	const Plan = () => {
 
 		return (
 
-			<div className = {style.Section_2}>
+			<div className = {style.Plan}>
 
 				<LinerTitle text = {t('liner.plan')}/>
 
@@ -105,11 +105,11 @@ const App = () => {
 	}
 
 
-	const Section_3 = () => {
+	const YouHelp = () => {
 
 		return (
 
-			<div className = {style.Section_3}>
+			<div className = {style.YouHelp}>
 
 				<LinerTitle text = {t('liner.youHelp')}/>
 
@@ -136,7 +136,7 @@ const App = () => {
 
 			<div className = {style.Bottom}>
 
-				<End text = {t('end')}/>
+				<Conclusion text = {t('conclusion')}/>
 				<LinerCircles/>
 
 			</div>
@@ -151,9 +151,9 @@ const App = () => {
 		<Background>
 
 			<Top/>
-			<Section_1/>
-			<Section_2/>
-			<Section_3/>
+			<Idea/>
+			<Plan/>
+			<YouHelp/>
 			<Bottom/>
 
 		</Background>

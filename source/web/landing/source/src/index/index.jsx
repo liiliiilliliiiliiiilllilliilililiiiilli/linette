@@ -6,9 +6,9 @@ import { StrictMode } from 'react'
 
 import App from '@app/App'
 
-import './index.sass'
+import '@texts/texts.js'
 
-import './locales/locales.js'
+import './index.sass'
 
 
 

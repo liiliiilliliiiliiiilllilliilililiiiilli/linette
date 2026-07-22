@@ -1,10 +1,10 @@
 // Components - Text block state
 
+import { Fragment, useState, useEffect } from 'react'
+
 import pictureArrowBlue from '@pictures/arrow_blue.png'
 
 import style from './style/style.module.sass'
-
-import { Fragment, useState, useEffect } from 'react'
 
 
 

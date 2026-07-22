@@ -1,6 +1,6 @@
 {
 	"description": "Pain is passed down from generation to generation. We didn't choose this pain.\nI have a plan to break the cycle of pain.\nBreak it to be free.",
-	"end": "This is possible.",
+	"conclusion": "This is possible.",
 	"liner": {
 		"idea": "Idea",
 		"plan": "Plan",
@@ -72,7 +72,7 @@
 				},
 				"hint": {
 					"last": "Most recent update: ",
-					"previous": "Updated on: ",
+					"previous": "Update from: ",
 					"dates": [
 						"July 15, 2026",
 						"July 19, 2026"

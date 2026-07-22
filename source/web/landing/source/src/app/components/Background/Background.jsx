@@ -1,6 +1,6 @@
 // Components - Background
 
-import pictureBackground from '@pictures/background.png'
+import pictureBackground from '@pictures/background.jpg'
 
 import style from './style/style.module.sass'
 
