@@ -4,7 +4,7 @@
 
 # 简体中文翻译（非官方）
 
-本文件是 MIT 许可证的非官方中文翻译，仅供参考。仅英文原版具有法律效力，原版位于 `./licence.en.md` 路径下。
+本文件是 MIT 许可证的非官方中文翻译，仅供参考。仅英文原版具有法律效力，原版位于 [`/service/licence/md/licence.en.md`][localfile_licence_en] 路径下。
 
 # MIT 许可证
 
