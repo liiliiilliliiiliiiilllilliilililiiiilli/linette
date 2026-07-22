@@ -37,7 +37,7 @@
 				],
 				"scaling": [
 					{
-						"title": "3: Helping your projects scale",
+						"title": "3: Helping your projects.\nScaling",
 						"text": "Automation of energy, agricultural food, raw material extraction and processing, and subsequent economic sectors, following Colin Clark's model. Subsequently, emerging resource generators should work to create and maintain new generators, potentially leading to exponential growth in automation. Money should work to eliminate the need for it."
 					}
 				]
@@ -52,7 +52,7 @@
 		"youHelp": {
 			"useApp": [
 				{
-					"title": "For now, just use my app.",
+					"title": "For now, just use my app",
 					"text": "The initial capital hasn't been accumulated yet. As long as you maintain an active VPN service, you'll enjoy a convenient way to surf the internet freely and also invest in the future creation of eco-stations. You can choose between free and paid connections, or become a developer and publish your connections for income."
 				}
 			],
@@ -61,7 +61,7 @@
 					{
 						"title": "Project status",
 						"text": [
-							"We're currently developing a website and mobile app for Android. Next comes iOS development and service optimization based on your feedback.",
+							"I'm currently developing a website and mobile app for Android. Next comes iOS development and service optimization based on your feedback.",
 							"A website describing the project has been created (and is being finalized). Next comes the development of a mobile app for Android and iOS, as well as service optimization based on your comments."
 						]
 					}

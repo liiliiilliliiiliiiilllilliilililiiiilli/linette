@@ -31,10 +31,8 @@ export default defineConfig ({
 
 			'@app': resolve (__dirname, 'src/app'),
 			'@index': resolve (__dirname, 'src/index'),
-
 			'@components': resolve (__dirname, 'src/app/components'),
 			'@pictures': resolve (__dirname, 'src/app/pictures'),
-
 			'@style': resolve (__dirname, 'src/app/style')
 
 		}

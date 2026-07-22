@@ -6,6 +6,7 @@ import { initReactI18next } from 'react-i18next'
 
 import ru from './languages/ru.json'
 import en from './languages/en.json'
+import zh from './languages/zh.json'
 
 
 
@@ -19,23 +20,29 @@ i18n
 
 		resources: {
 
-			ru: {
+			'ru': {
 
 				translation: ru
 
 			},
 
-			en: {
+			'en': {
 
 				translation: en
+
+			},
+
+			'zh': {
+
+				translation: zh
 
 			}
 
 		},
 
-		returnObjects: true,
+		fallbackLng: 'en',
 
-		fallbackLng: 'ru',
+		returnObjects: true,
 
 		interpolation: {
 
