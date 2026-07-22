@@ -4,10 +4,6 @@
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
 
-![localfile_pic]
-
-### 每个人都想让世界变得更好，但每个人都以自己的方式去做。
-
 [localfile_switch_ru]: /docs/service/readme/md/svg/ru.svg
 [localfile_switch_en]: /docs/service/readme/md/svg/en.svg
 [localfile_switch_zh]: /docs/service/readme/md/svg/zh.svg
@@ -15,5 +11,3 @@
 [localfile_readme_ru]: /docs/service/readme/md/readme.ru.md
 [localfile_readme_en]: /docs/service/readme/md/readme.en.md
 [localfile_readme_zh]: /docs/service/readme/md/readme.zh.md
-
-[localfile_pic]: /docs/service/readme/md/png/pic.png

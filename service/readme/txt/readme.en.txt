@@ -1,3 +1,3 @@
 Linette - It is possible.
 
-Blah blah blah.....
+Everyone wants to make the world a better place, but everyone does it in their own way.
