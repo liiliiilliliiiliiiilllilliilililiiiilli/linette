@@ -31,7 +31,7 @@ const LinerTitle = ({text}) => {
 
 				<span className = {style.Text}>
 
-					{`${text}`}
+					{text}
 
 				</span>
 
