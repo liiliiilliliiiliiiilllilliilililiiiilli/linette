@@ -1,8 +1,8 @@
 # Русский перевод (неофициальный)
 
-[![localfile_switch_ru]][localfile_readme_ru]
-[![localfile_switch_en]][localfile_readme_en]
-[![localfile_switch_zh]][localfile_readme_zh]
+[![localfile_switch_ru]][localfile_licence_ru]
+[![localfile_switch_en]][localfile_licence_en]
+[![localfile_switch_zh]][localfile_licence_zh]
 
 Данный текст является неофициальным переводом лицензии MIT на русский язык. Юридической силой обладает исключительно оригинальная английская версия, находящаяся по пути `./licence.en.md`.
 
@@ -20,6 +20,6 @@
 [localfile_switch_en]: /service/licence/md/svg/en.svg
 [localfile_switch_zh]: /service/licence/md/svg/zh.svg
 
-[localfile_readme_ru]: /service/licence/md/licence.ru.md
-[localfile_readme_en]: /service/licence/md/licence.en.md
-[localfile_readme_zh]: /service/licence/md/licence.zh.md
+[localfile_licence_ru]: /service/licence/md/licence.ru.md
+[localfile_licence_en]: /service/licence/md/licence.en.md
+[localfile_licence_zh]: /service/licence/md/licence.zh.md
