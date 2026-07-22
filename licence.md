@@ -1,1 +1,0 @@
-service/licence/md/licence.ru.md
