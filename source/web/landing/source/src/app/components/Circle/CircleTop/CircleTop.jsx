@@ -17,6 +17,7 @@ const CircleTop = () => {
 				<img
 					src = {pictureLinette}
 					alt = 'Linette'
+					draggable = {false}
 					className = {style.Picture}
 				/>
 

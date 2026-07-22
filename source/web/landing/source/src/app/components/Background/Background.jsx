@@ -15,6 +15,7 @@ const Background = ({children}) => {
 			<img
 				src = {pictureBackground}
 				alt = 'Background'
+				draggable = {false}
 				className = {style.Picture}
 			/>
 

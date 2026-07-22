@@ -10,6 +10,7 @@ const CircleBottomSmall = ({picture, link}) => {
 
 		<a
 			href = {link}
+			draggable = {false}
 			rel = 'noopener noreferrer'
 		>
 
@@ -20,6 +21,7 @@ const CircleBottomSmall = ({picture, link}) => {
 					<img
 						src = {picture}
 						alt = 'Socials'
+						draggable = {false}
 						className = {style.Picture}
 					/>
 

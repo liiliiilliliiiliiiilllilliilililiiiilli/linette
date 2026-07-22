@@ -70,10 +70,14 @@
 					"left": "Before",
 					"right": "Later"
 				},
-				"hint": [
-					"Last updated: July 15, 2026",
-					"Last updated: July 19, 2026"
-				]
+				"hint": {
+					"last": "Most recent update: ",
+					"previous": "Updated on: ",
+					"dates": [
+						"July 15, 2026",
+						"July 19, 2026"
+					]
+				}
 			}
 		}
 	}

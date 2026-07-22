@@ -17,6 +17,7 @@ const Arrow = () => {
 				<img
 					src = {pictureArrow}
 					alt = 'Arrow'
+					draggable = {false}
 					className = {style.Picture}
 				/>
 

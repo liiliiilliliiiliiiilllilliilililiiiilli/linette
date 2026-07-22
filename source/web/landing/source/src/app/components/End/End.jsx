@@ -8,11 +8,11 @@ const End = ({text}) => {
 
 	return (
 
-		<text className = {style.Text}>
+		<span className = {style.Text}>
 
 			{text}
 
-		</text>
+		</span>
 
 	)
 

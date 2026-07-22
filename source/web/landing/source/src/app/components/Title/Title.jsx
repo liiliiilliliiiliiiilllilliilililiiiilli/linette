@@ -8,11 +8,11 @@ const Title = () => {
 
 	return (
 
-		<text className = {style.Title}>
+		<span className = {style.Title}>
 
 			{'Linette'}
 
-		</text>
+		</span>
 
 	)
 

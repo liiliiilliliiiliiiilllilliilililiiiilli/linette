@@ -1,5 +1,7 @@
 // Components - Text block
 
+import { Fragment } from 'react'
+
 import style from './style/style.module.sass'
 
 
@@ -15,29 +17,29 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 
 			{text.map ((paragraph, index) => (
 
-				<>
+				<Fragment key = {index}>
 
 					{index >= 1 ? <div style = {{height: '1rem'}}/> : <></>}
 
-					<text
+					<span
 						className = {style.Title}
 						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
 					>
 
 						{paragraph.title}
 
-					</text>
+					</span>
 
-					<text
+					<span
 						className = {style.Text}
 						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
 					>
 
 						{paragraph.text}
 
-					</text>
+					</span>
 
-				</>
+				</Fragment>
 
 			))}
 

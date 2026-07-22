@@ -23,11 +23,23 @@ const LinerTitle = ({text}) => {
 
 			<div className = {style.Title}>
 
-				<text className = {style.Text}>
+				<span className = {style.Points}>
 
-					{`· ${text} ·`}
+					{'·'}
 
-				</text>
+				</span>
+
+				<span className = {style.Text}>
+
+					{`${text}`}
+
+				</span>
+
+				<span className = {style.Points}>
+
+					{'·'}
+
+				</span>
 
 			</div>
 

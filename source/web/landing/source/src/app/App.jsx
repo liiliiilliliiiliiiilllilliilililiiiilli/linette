@@ -11,9 +11,9 @@ import TextBlockState from '@components/TextBlockState/TextBlockState'
 import Arrow from '@components/Arrow/Arrow'
 import End from '@components/End/End'
 
-import { useTranslation } from 'react-i18next'
-
 import style from './style/style.module.sass'
+
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -30,7 +30,7 @@ const App = () => {
 
 				<CircleTop/>
 				<Title/>
-				<Description text = {t ('description')}/>
+				<Description text = {t('description')}/>
 
 			</div>
 
@@ -45,10 +45,10 @@ const App = () => {
 
 			<div className = {style.Section_1}>
 
-				<LinerTitle text = {t ('liner.idea')}/>
+				<LinerTitle text = {t('liner.idea')}/>
 
 				<TextBlock
-					text = {t ('block.idea')}
+					text = {t('block.idea')}
 					width = {1000}
 				/>
 
@@ -65,12 +65,12 @@ const App = () => {
 
 			<div className = {style.Section_2}>
 
-				<LinerTitle text = {t ('liner.plan')}/>
+				<LinerTitle text = {t('liner.plan')}/>
 
 				<div className = {style.Scrolls}>
 
 					<TextBlock
-						text = {t ('block.plan.steps.saving')}
+						text = {t('block.plan.steps.saving')}
 						width = {500}
 						isCentralized = {true}
 					/>
@@ -78,7 +78,7 @@ const App = () => {
 					<Arrow/>
 
 					<TextBlock
-						text = {t ('block.plan.steps.generation')}
+						text = {t('block.plan.steps.generation')}
 						width = {500}
 						isCentralized = {true}
 					/>
@@ -86,7 +86,7 @@ const App = () => {
 					<Arrow/>
 
 					<TextBlock
-						text = {t ('block.plan.steps.scaling')}
+						text = {t('block.plan.steps.scaling')}
 						width = {500}
 						isCentralized = {true}
 					/>
@@ -94,7 +94,7 @@ const App = () => {
 				</div>
 
 				<TextBlock
-					text = {t ('block.plan.result')}
+					text = {t('block.plan.result')}
 					width = {1000}
 				/>
 
@@ -111,16 +111,16 @@ const App = () => {
 
 			<div className = {style.Section_3}>
 
-				<LinerTitle text = {t ('liner.youHelp')}/>
+				<LinerTitle text = {t('liner.youHelp')}/>
 
 				<TextBlock
-					text = {t ('block.youHelp.useApp')}
+					text = {t('block.youHelp.useApp')}
 					width = {1000}
 				/>
 
 				<TextBlockState
 					width = {1000}
-					text = {t ('block.youHelp.projectState')}
+					text = {t('block.youHelp.projectState')}
 				/>
 
 			</div>
@@ -136,7 +136,7 @@ const App = () => {
 
 			<div className = {style.Bottom}>
 
-				<End text = {t ('end')}/>
+				<End text = {t('end')}/>
 				<LinerCircles/>
 
 			</div>
