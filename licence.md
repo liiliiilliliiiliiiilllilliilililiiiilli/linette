@@ -1,1 +1,1 @@
-service/licence/md/license.ru.md
+service/licence/md/licence.ru.md
