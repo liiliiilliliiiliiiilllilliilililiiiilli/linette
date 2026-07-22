@@ -8,12 +8,12 @@
 
 ### 每个人都想让世界变得更好，但每个人都以自己的方式去做。
 
-[localfile_switch_ru]: ./svg/ru.svg
-[localfile_switch_en]: ./svg/en.svg
-[localfile_switch_zh]: ./svg/zh.svg
+[localfile_switch_ru]: /service/readme/md/svg/ru.svg
+[localfile_switch_en]: /service/readme/md/svg/en.svg
+[localfile_switch_zh]: /service/readme/md/svg/zh.svg
 
-[localfile_readme_ru]: ./readme.ru.md
-[localfile_readme_en]: ./readme.en.md
-[localfile_readme_zh]: ./readme.zh.md
+[localfile_readme_ru]: /service/readme/md/readme.ru.md
+[localfile_readme_en]: /service/readme/md/readme.en.md
+[localfile_readme_zh]: /service/readme/md/readme.zh.md
 
-[localfile_pic]: ./png/pic.png
+[localfile_pic]: /service/readme/md/png/pic.png
