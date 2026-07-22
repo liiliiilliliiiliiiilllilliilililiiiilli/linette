@@ -12,10 +12,10 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[localfile_switch_ru]: /service/readme/md/svg/ru.svg
-[localfile_switch_en]: /service/readme/md/svg/en.svg
-[localfile_switch_zh]: /service/readme/md/svg/zh.svg
+[localfile_switch_ru]: /service/licence/md/svg/ru.svg
+[localfile_switch_en]: /service/licence/md/svg/en.svg
+[localfile_switch_zh]: /service/licence/md/svg/zh.svg
 
-[localfile_readme_ru]: /service/readme/md/readme.ru.md
-[localfile_readme_en]: /service/readme/md/readme.en.md
-[localfile_readme_zh]: /service/readme/md/readme.zh.md
+[localfile_readme_ru]: /service/licence/md/licence.ru.md
+[localfile_readme_en]: /service/licence/md/licence.en.md
+[localfile_readme_zh]: /service/licence/md/licence.zh.md

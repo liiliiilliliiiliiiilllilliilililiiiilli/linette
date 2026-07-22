@@ -16,10 +16,10 @@
 
 ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ГАРАНТИЯМИ ТОВАРНОЙ ПРИГОДНОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЁННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ИНЫЕ ОБЯЗАТЕЛЬСТВА, БУДЬ ТО В СИЛУ ДОГОВОРА, ДЕЛИКТА ИЛИ ИНЫМ ОБРАЗОМ, ВОЗНИКАЮЩИЕ В СВЯЗИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ, ЕГО ИСПОЛЬЗОВАНИЕМ ИЛИ ИНЫМИ ДЕЙСТВИЯМИ С НИМ.
 
-[localfile_switch_ru]: /service/readme/md/svg/ru.svg
-[localfile_switch_en]: /service/readme/md/svg/en.svg
-[localfile_switch_zh]: /service/readme/md/svg/zh.svg
+[localfile_switch_ru]: /service/licence/md/svg/ru.svg
+[localfile_switch_en]: /service/licence/md/svg/en.svg
+[localfile_switch_zh]: /service/licence/md/svg/zh.svg
 
-[localfile_readme_ru]: /service/readme/md/readme.ru.md
-[localfile_readme_en]: /service/readme/md/readme.en.md
-[localfile_readme_zh]: /service/readme/md/readme.zh.md
+[localfile_readme_ru]: /service/licence/md/licence.ru.md
+[localfile_readme_en]: /service/licence/md/licence.en.md
+[localfile_readme_zh]: /service/licence/md/licence.zh.md

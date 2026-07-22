@@ -16,10 +16,10 @@
 
 本软件按“原样”提供，不提供任何形式的明示或暗示担保，包括但不限于对适销性、特定用途的适用性和不侵权的担保。在任何情况下，作者或版权持有人均不对因本软件、本软件的使用或其他交易中引起的任何索赔、损害或其他责任承担责任，无论是合同、侵权还是其他行为。
 
-[localfile_switch_ru]: /service/readme/md/svg/ru.svg
-[localfile_switch_en]: /service/readme/md/svg/en.svg
-[localfile_switch_zh]: /service/readme/md/svg/zh.svg
+[localfile_switch_ru]: /service/licence/md/svg/ru.svg
+[localfile_switch_en]: /service/licence/md/svg/en.svg
+[localfile_switch_zh]: /service/licence/md/svg/zh.svg
 
-[localfile_readme_ru]: /service/readme/md/readme.ru.md
-[localfile_readme_en]: /service/readme/md/readme.en.md
-[localfile_readme_zh]: /service/readme/md/readme.zh.md
+[localfile_readme_ru]: /service/licence/md/licence.ru.md
+[localfile_readme_en]: /service/licence/md/licence.en.md
+[localfile_readme_zh]: /service/licence/md/licence.zh.md
