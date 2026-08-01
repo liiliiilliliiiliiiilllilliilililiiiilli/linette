@@ -31,11 +31,11 @@ export default defineConfig ({
 
 			'@app': resolve (__dirname, 'src/app'),
 			'@index': resolve (__dirname, 'src/index'),
-			'@components': resolve (__dirname, 'src/app/global/components'),
-			'@hooks': resolve (__dirname, 'src/app/global/hooks'),
-			'@pictures': resolve (__dirname, 'src/app/global/pictures'),
-			'@texts': resolve (__dirname, 'src/app/global/texts'),
-			'@styles': resolve (__dirname, 'src/app/global/styles')
+			'@components': resolve (__dirname, 'src/common/components'),
+			'@hooks': resolve (__dirname, 'src/common/hooks'),
+			'@pictures': resolve (__dirname, 'src/common/pictures'),
+			'@texts': resolve (__dirname, 'src/common/texts'),
+			'@styles': resolve (__dirname, 'src/common/styles')
 
 		}
 

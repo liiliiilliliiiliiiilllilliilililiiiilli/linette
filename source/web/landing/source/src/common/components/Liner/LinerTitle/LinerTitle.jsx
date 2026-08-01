@@ -53,6 +53,7 @@ const LinerTitle = ({text}) => {
 		<div className = {style.LinerTitle}>
 
 			<Line/>
+
 			<Title/>
 
 		</div>

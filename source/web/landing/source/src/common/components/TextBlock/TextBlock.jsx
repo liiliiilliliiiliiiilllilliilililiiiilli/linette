@@ -8,6 +8,10 @@ import style from './style/style.module.sass'
 
 const TextBlock = ({text, width, isCentralized = false}) => {
 
+	const titleStyle = {textAlign: !isCentralized ? 'left' : 'center'}
+	const paragraphStyle = {textAlign: !isCentralized ? 'left' : 'center'}
+
+
 	return (
 
 		<div
@@ -15,7 +19,7 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 			style = {{width: width}}
 		>
 
-			{text.map ((paragraph, index) => (
+			{text.map ((content, index) => (
 
 				<Fragment key = {index}>
 
@@ -23,19 +27,19 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 
 					<span
 						className = {style.Title}
-						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
+						style = {titleStyle}
 					>
 
-						{paragraph.title}
+						{content.title}
 
 					</span>
 
 					<span
-						className = {style.Text}
-						style = {{textAlign: !isCentralized ? 'left' : 'center'}}
+						className = {style.Paragraph}
+						style = {paragraphStyle}
 					>
 
-						{paragraph.text}
+						{content.paragraph}
 
 					</span>
 

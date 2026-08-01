@@ -1,11 +1,11 @@
-// Hooks - UseTunePageTitle
+// Hooks - Use autotune pageTitle
 
-import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 
 
-const useTunePageTitle = () => {
+const useAutotunePageTitle = () => {
 
 	const {t, i18n} = useTranslation ()
 
@@ -19,10 +19,10 @@ const useTunePageTitle = () => {
 
 		}
 
-	}, [i18n.language, t])
+	}, [t, i18n.language])
 
 }
 
 
 
-export { useTunePageTitle }
+export { useAutotunePageTitle }

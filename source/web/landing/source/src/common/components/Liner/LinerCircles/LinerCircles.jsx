@@ -75,6 +75,7 @@ const LinerCircles = () => {
 		<div className = {style.LinerCircles}>
 
 			<Line/>
+
 			<Circles/>
 
 		</div>

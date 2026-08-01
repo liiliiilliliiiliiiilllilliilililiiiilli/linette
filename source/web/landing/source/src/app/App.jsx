@@ -1,8 +1,7 @@
 // Main application file
 
 import { useTranslation } from 'react-i18next'
-
-import { useTunePageTitle } from '@hooks/UseTunePageTitle'
+import { useAutotunePageTitle } from '@hooks/UseAutotunePageTitle'
 
 import { Background } from '@components/Background/Background'
 import { CircleTop } from '@components/Circle/CircleTop/CircleTop'
@@ -11,7 +10,7 @@ import { Description } from '@components/Description/Description'
 import { LinerTitle } from '@components/Liner/LinerTitle/LinerTitle'
 import { LinerCircles } from '@components/Liner/LinerCircles/LinerCircles'
 import { TextBlock } from '@components/TextBlock/TextBlock'
-import { TextBlockState } from '@components/TextBlockState/TextBlockState'
+import { TextBlockHistory } from '@components/TextBlockHistory/TextBlockHistory'
 import { Arrow } from '@components/Arrow/Arrow'
 import { Conclusion } from '@components/Conclusion/Conclusion'
 
@@ -23,7 +22,7 @@ const App = () => {
 
 	const {t} = useTranslation ()
 
-	useTunePageTitle ()
+	useAutotunePageTitle ()
 
 
 	const Top = () => {
@@ -33,7 +32,9 @@ const App = () => {
 			<div className = {style.Top}>
 
 				<CircleTop/>
+
 				<Title/>
+
 				<Description text = {t('description')}/>
 
 			</div>
@@ -122,7 +123,7 @@ const App = () => {
 					width = {1000}
 				/>
 
-				<TextBlockState
+				<TextBlockHistory
 					width = {1000}
 					text = {t('block.youHelp.projectState')}
 				/>
@@ -141,6 +142,7 @@ const App = () => {
 			<div className = {style.Bottom}>
 
 				<Conclusion text = {t('conclusion')}/>
+
 				<LinerCircles/>
 
 			</div>
@@ -155,9 +157,13 @@ const App = () => {
 		<Background>
 
 			<Top/>
+
 			<Idea/>
+
 			<Plan/>
+
 			<YouHelp/>
+
 			<Bottom/>
 
 		</Background>
