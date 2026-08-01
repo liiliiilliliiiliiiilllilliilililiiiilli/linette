@@ -1,10 +1,10 @@
-[![localfile_switch_ru]][localfile_licence_ru]
-[![localfile_switch_en]][localfile_licence_en]
-[![localfile_switch_zh]][localfile_licence_zh]
+[![localfile_switch_ru]][localfile_license_ru]
+[![localfile_switch_en]][localfile_license_en]
+[![localfile_switch_zh]][localfile_license_zh]
 
 # 简体中文翻译（非官方）
 
-本文件是 MIT 许可证的非官方中文翻译，仅供参考。仅英文原版具有法律效力，原版位于 [**`/service/licence/md/licence.en.md`**][localfile_licence_en] 路径下。
+本文件是 MIT 许可证的非官方中文翻译，仅供参考。仅英文原版具有法律效力，原版位于 [**`/service/license/md/license.en.md`**][localfile_license_en] 路径下。
 
 ## MIT 许可证
 
@@ -16,10 +16,10 @@
 
 本软件按“原样”提供，不提供任何形式的明示或暗示担保，包括但不限于对适销性、特定用途的适用性和不侵权的担保。在任何情况下，作者或版权持有人均不对因本软件、本软件的使用或其他交易中引起的任何索赔、损害或其他责任承担责任，无论是合同、侵权还是其他行为。
 
-[localfile_switch_ru]: /service/licence/md/svg/ru.svg
-[localfile_switch_en]: /service/licence/md/svg/en.svg
-[localfile_switch_zh]: /service/licence/md/svg/zh.svg
+[localfile_switch_ru]: /service/license/md/svg/ru.svg
+[localfile_switch_en]: /service/license/md/svg/en.svg
+[localfile_switch_zh]: /service/license/md/svg/zh.svg
 
-[localfile_licence_ru]: /service/licence/md/licence.ru.md
-[localfile_licence_en]: /service/licence/md/licence.en.md
-[localfile_licence_zh]: /service/licence/md/licence.zh.md
+[localfile_license_ru]: /service/license/md/license.ru.md
+[localfile_license_en]: /service/license/md/license.en.md
+[localfile_license_zh]: /service/license/md/license.zh.md
