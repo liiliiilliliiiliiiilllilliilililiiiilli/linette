@@ -2,16 +2,18 @@
 
 import { useTranslation } from 'react-i18next'
 
-import Background from '@components/Background/Background'
-import CircleTop from '@components/Circle/CircleTop/CircleTop'
-import Title from '@components/Title/Title'
-import Description from '@components/Description/Description'
-import LinerTitle from '@components/Liner/LinerTitle/LinerTitle'
-import LinerCircles from '@components/Liner/LinerCircles/LinerCircles'
-import TextBlock from '@components/TextBlock/TextBlock'
-import TextBlockState from '@components/TextBlockState/TextBlockState'
-import Arrow from '@components/Arrow/Arrow'
-import Conclusion from '@components/Conclusion/Conclusion'
+import { useTunePageTitle } from '@hooks/UseTunePageTitle'
+
+import { Background } from '@components/Background/Background'
+import { CircleTop } from '@components/Circle/CircleTop/CircleTop'
+import { Title } from '@components/Title/Title'
+import { Description } from '@components/Description/Description'
+import { LinerTitle } from '@components/Liner/LinerTitle/LinerTitle'
+import { LinerCircles } from '@components/Liner/LinerCircles/LinerCircles'
+import { TextBlock } from '@components/TextBlock/TextBlock'
+import { TextBlockState } from '@components/TextBlockState/TextBlockState'
+import { Arrow } from '@components/Arrow/Arrow'
+import { Conclusion } from '@components/Conclusion/Conclusion'
 
 import style from './style/style.module.sass'
 
@@ -20,6 +22,8 @@ import style from './style/style.module.sass'
 const App = () => {
 
 	const {t} = useTranslation ()
+
+	useTunePageTitle ()
 
 
 	const Top = () => {
@@ -164,4 +168,4 @@ const App = () => {
 
 
 
-export default App
+export { App }

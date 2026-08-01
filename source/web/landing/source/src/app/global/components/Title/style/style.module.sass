@@ -1,0 +1,21 @@
+// Components - Title - Style
+
+@use '@styles/colors' as colors
+@use '@styles/breakpoints' as breakpoints
+
+
+.Title
+
+	text-align: center
+	font-family: Baskervville
+	font-weight: bold
+	font-size: 3rem
+	color: colors.$white
+
+	@include breakpoints.media-up (m1)
+
+		font-size: 3rem * 0.7
+
+	@include breakpoints.media-up (m2)
+
+		font-size: 3rem * 0.7
