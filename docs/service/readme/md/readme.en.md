@@ -2,7 +2,7 @@
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
 
-# Linette's website is hosted here!
+# Linette's landing page is hosted here!
 
 [localfile_switch_ru]: /docs/service/readme/md/svg/ru.svg
 [localfile_switch_en]: /docs/service/readme/md/svg/en.svg

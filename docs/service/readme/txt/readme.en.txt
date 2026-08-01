@@ -1,1 +1,1 @@
-Linette's website is hosted here!
+Linette's landing page is hosted here!
