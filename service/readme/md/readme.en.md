@@ -11,7 +11,7 @@ Full material freedom will be the natural state of every member of society, and 
 Technological progress guarantees that this moment will definitely come, and it is within our power to bring it as close as possible.
 I call this the moment of physical freedom.
 
-The **System** project is a plan (an idea) for implementing a global life-support system of this kind.
+The **Linette** project is a plan (an idea) for implementing a global life-support system of this kind.
 
 Right now, green energy is already capable of supplying continuous, automatic power to a large part of production.
 Vertical hydroponic farms produce food more efficiently than traditional tillage-based farming.
