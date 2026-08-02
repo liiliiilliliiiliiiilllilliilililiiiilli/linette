@@ -16,22 +16,37 @@ const TextBlockHistory = ({text, width, isCentralized = false}) => {
 		currentHistoryIndex,
 		goBack,
 		goForward,
-		styleBack,
-		styleMain,
-		styleForward
+		styleControllerBack,
+		styleControllerMain,
+		styleControllerForward
 
 	} = useHistoryController (text)
 
 
-	const titleStyle = {textAlign: !isCentralized ? 'left' : 'center'}
-	const paragraphStyle = {textAlign: !isCentralized ? 'left' : 'center'}
+	const styleMain = {
+
+		width: width
+
+	}
+
+	const styleTitle = {
+
+		textAlign: !isCentralized ? 'left' : 'center'
+
+	}
+
+	const styleParagraph = {
+
+		textAlign: !isCentralized ? 'left' : 'center'
+
+	}
 
 
 	return (
 
 		<div
 			className = {style.TextBlockHistory}
-			style = {{width: width}}
+			style = {styleMain}
 		>
 
 			{text.contentStack.map ((content, index) => (
@@ -40,7 +55,7 @@ const TextBlockHistory = ({text, width, isCentralized = false}) => {
 
 					<span
 						className = {style.Title}
-						style = {titleStyle}
+						style = {styleTitle}
 					>
 
 						{content.title}
@@ -49,7 +64,7 @@ const TextBlockHistory = ({text, width, isCentralized = false}) => {
 
 					<span
 						className = {style.Paragraph}
-						style = {paragraphStyle}
+						style = {styleParagraph}
 					>
 
 						{content.paragraphStack.at (currentHistoryIndex)}
@@ -65,9 +80,9 @@ const TextBlockHistory = ({text, width, isCentralized = false}) => {
 				currentHistoryIndex = {currentHistoryIndex}
 				goBack = {goBack}
 				goForward = {goForward}
-				styleBack = {styleBack}
-				styleMain = {styleMain}
-				styleForward = {styleForward}
+				styleBack = {styleControllerBack}
+				styleMain = {styleControllerMain}
+				styleForward = {styleControllerForward}
 			/>
 
 		</div>

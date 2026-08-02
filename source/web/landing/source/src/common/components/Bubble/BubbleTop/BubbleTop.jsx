@@ -1,4 +1,4 @@
-// Components - Circle top
+// Components - Bubble top
 
 import pictureLinette from '@pictures/linette.png'
 
@@ -6,7 +6,7 @@ import style from './style/style.module.sass'
 
 
 
-const CircleTop = () => {
+const BubbleTop = () => {
 
 	return (
 
@@ -31,4 +31,4 @@ const CircleTop = () => {
 
 
 
-export { CircleTop }
+export { BubbleTop }

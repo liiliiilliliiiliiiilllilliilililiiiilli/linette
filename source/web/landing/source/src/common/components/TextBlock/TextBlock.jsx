@@ -8,26 +8,52 @@ import style from './style/style.module.sass'
 
 const TextBlock = ({text, width, isCentralized = false}) => {
 
-	const titleStyle = {textAlign: !isCentralized ? 'left' : 'center'}
-	const paragraphStyle = {textAlign: !isCentralized ? 'left' : 'center'}
+	const styleMain = {
+
+		width: width
+
+	}
+
+	const styleTitle = {
+
+		textAlign: !isCentralized ? 'left' : 'center'
+
+	}
+
+	const styleParagraph = {
+
+		textAlign: !isCentralized ? 'left' : 'center'
+
+	}
+
+
+	const Gap = () => {
+
+		return (
+
+			<div style = {{height: '1rem'}}/>
+
+		)
+
+	}
 
 
 	return (
 
 		<div
 			className = {style.TextBlock}
-			style = {{width: width}}
+			style = {styleMain}
 		>
 
 			{text.map ((content, index) => (
 
 				<Fragment key = {index}>
 
-					{index >= 1 ? <div style = {{height: '1rem'}}/> : <></>}
+					{index >= 1 ? <Gap/> : <></>}
 
 					<span
 						className = {style.Title}
-						style = {titleStyle}
+						style = {styleTitle}
 					>
 
 						{content.title}
@@ -36,7 +62,7 @@ const TextBlock = ({text, width, isCentralized = false}) => {
 
 					<span
 						className = {style.Paragraph}
-						style = {paragraphStyle}
+						style = {styleParagraph}
 					>
 
 						{content.paragraph}

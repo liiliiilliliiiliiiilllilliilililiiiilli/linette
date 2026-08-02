@@ -1,7 +1,7 @@
-// Components - Liner circles
+// Components - Liner bubbles
 
-import { CircleBottomSmall } from '@components/Circle/CircleBottomSmall/CircleBottomSmall'
-import { CircleBottomBig } from '@components/Circle/CircleBottomBig/CircleBottomBig'
+import { BubbleBottomSmall } from '@components/Bubble/BubbleBottomSmall/BubbleBottomSmall'
+import { BubbleBottomBig } from '@components/Bubble/BubbleBottomBig/BubbleBottomBig'
 
 import pictureTelegram from '@pictures/telegram.png'
 import pictureGithub from '@pictures/github.png'
@@ -14,7 +14,7 @@ import style from './style/style.module.sass'
 
 
 
-const LinerCircles = () => {
+const LinerBubbles = () => {
 
 	const Line = () => {
 
@@ -27,38 +27,38 @@ const LinerCircles = () => {
 	}
 
 
-	const Circles = () => {
+	const Bubbles = () => {
 
 		return (
 
-			<div className = {style.Circles}>
+			<div className = {style.Bubbles}>
 
-				<CircleBottomSmall
+				<BubbleBottomSmall
 					picture = {pictureTelegram}
 					link = {'https://t.me/LinetteTelegramChannel'}
 				/>
 
-				<CircleBottomBig
+				<BubbleBottomBig
 					picture = {pictureLi}
 					link = {'https://t.me/liiliiilliliiiliiiilllilliililil'}
 				/>
 
-				<CircleBottomSmall
+				<BubbleBottomSmall
 					picture = {pictureGithub}
 					link = {'https://github.com/liiliiilliliiiliiiilllilliilililiiiilli/linette'}
 				/>
 
-				{/* <CircleBottomSmall
+				{/* <BubbleBottomSmall
 					picture = {picturePlaystore}
 					link = {'https://playstore.com'}
 				/> */}
 
-				{/* <CircleBottomSmall
+				{/* <BubbleBottomSmall
 					picture = {pictureAppstore}
 					link = {'https://appstore.com'}
 				/> */}
 
-				{/* <CircleBottomSmall
+				{/* <BubbleBottomSmall
 					picture = {pictureGmail}
 					link = {'https://gmail.com'}
 				/> */}
@@ -72,11 +72,11 @@ const LinerCircles = () => {
 
 	return (
 
-		<div className = {style.LinerCircles}>
+		<div className = {style.LinerBubbles}>
 
 			<Line/>
 
-			<Circles/>
+			<Bubbles/>
 
 		</div>
 
@@ -86,4 +86,4 @@ const LinerCircles = () => {
 
 
 
-export { LinerCircles }
+export { LinerBubbles }

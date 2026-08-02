@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next'
 import { useAutotunePageTitle } from '@hooks/UseAutotunePageTitle'
 
 import { Background } from '@components/Background/Background'
-import { CircleTop } from '@components/Circle/CircleTop/CircleTop'
+import { BubbleTop } from '@components/Bubble/BubbleTop/BubbleTop'
 import { Title } from '@components/Title/Title'
 import { Description } from '@components/Description/Description'
 import { LinerTitle } from '@components/Liner/LinerTitle/LinerTitle'
-import { LinerCircles } from '@components/Liner/LinerCircles/LinerCircles'
+import { LinerBubbles } from '@components/Liner/LinerBubbles/LinerBubbles'
 import { TextBlock } from '@components/TextBlock/TextBlock'
 import { TextBlockHistory } from '@components/TextBlockHistory/TextBlockHistory'
 import { Arrow } from '@components/Arrow/Arrow'
@@ -31,7 +31,7 @@ const App = () => {
 
 			<div className = {style.Top}>
 
-				<CircleTop/>
+				<BubbleTop/>
 
 				<Title/>
 
@@ -143,7 +143,7 @@ const App = () => {
 
 				<Conclusion text = {t('conclusion')}/>
 
-				<LinerCircles/>
+				<LinerBubbles/>
 
 			</div>
 

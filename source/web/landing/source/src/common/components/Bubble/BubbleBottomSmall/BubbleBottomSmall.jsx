@@ -1,10 +1,10 @@
-// Components - Circle bottom small
+// Components - Bubble bottom small
 
 import style from './style/style.module.sass'
 
 
 
-const CircleBottomSmall = ({picture, link}) => {
+const BubbleBottomSmall = ({picture, link}) => {
 
 	return (
 
@@ -37,4 +37,4 @@ const CircleBottomSmall = ({picture, link}) => {
 
 
 
-export { CircleBottomSmall }
+export { BubbleBottomSmall }

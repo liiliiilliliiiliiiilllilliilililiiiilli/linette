@@ -8,9 +8,9 @@ const useHistoryController = (text) => {
 
 	const [currentHistoryIndex, setCurrentHistoryIndex] = useState (-1)
 
-	const [styleBack, setStyleBack] = useState ()
-	const [styleMain, setStyleMain] = useState ()
-	const [styleForward, setStyleForward] = useState ()
+	const [styleControllerBack, setstyleControllerBack] = useState ()
+	const [styleControllerMain, setstyleControllerMain] = useState ()
+	const [styleControllerForward, setstyleControllerForward] = useState ()
 
 
 	const historySteps = text.hint.dates.length
@@ -32,7 +32,7 @@ const useHistoryController = (text) => {
 
 	useEffect (() => {
 
-		setStyleBack ({
+		setstyleControllerBack ({
 
 			display: historySteps >= 1 ? 'flex' : 'none',
 			pointerEvents: -currentHistoryIndex != historySteps ? 'auto' : 'none',
@@ -40,13 +40,13 @@ const useHistoryController = (text) => {
 
 		})
 
-		setStyleMain ({
+		setstyleControllerMain ({
 
 			justifyContent: historySteps >= 1 ? 'space-between' : 'center'
 
 		})
 
-		setStyleForward ({
+		setstyleControllerForward ({
 
 			display: historySteps >= 1 ? 'flex' : 'none',
 			pointerEvents: currentHistoryIndex != -1 ? 'auto' : 'none',
@@ -62,9 +62,9 @@ const useHistoryController = (text) => {
 		currentHistoryIndex,
 		goBack,
 		goForward,
-		styleBack,
-		styleMain,
-		styleForward
+		styleControllerBack,
+		styleControllerMain,
+		styleControllerForward
 
 	}
 
