@@ -11,6 +11,9 @@
 *.sw?
 
 
+
+# Лэндинг:
+
 # Логи:
 
 logs
@@ -21,7 +24,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
 # Остальное:
 
 node_modules
@@ -30,3 +32,54 @@ dist-ssr
 build
 build-ssr
 *.local
+
+
+
+# Приложение под Android:
+
+# Различное:
+
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Intellij:
+
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter / Dart / Pub:
+
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Символизация:
+
+app.*.symbols
+
+# Обфускация:
+
+app.*.map.json
+
+# Android Studio:
+
+/android/app/debug
+/android/app/profile
+/android/app/release
