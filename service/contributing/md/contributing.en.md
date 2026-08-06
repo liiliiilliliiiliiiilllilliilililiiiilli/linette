@@ -2,7 +2,7 @@
 [![localfile_switch_en]][localfile_contributing_en]
 [![localfile_switch_zh]][localfile_contributing_zh]
 
-# Contributing to this Repository
+# Contributing to this repository
 
 At this time the project does not accept external contributions.
 

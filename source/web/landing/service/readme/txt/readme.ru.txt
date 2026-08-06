@@ -1,1 +1,1 @@
-Linette - Web!
+Linette - Лендинг

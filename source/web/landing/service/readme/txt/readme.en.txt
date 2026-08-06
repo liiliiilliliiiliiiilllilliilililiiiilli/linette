@@ -1,1 +1,1 @@
-Linette - Web!
+Linette - Landing page

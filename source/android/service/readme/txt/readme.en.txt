@@ -1,1 +1,1 @@
-Linette - Android!
+Linette - Android

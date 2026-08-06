@@ -2,7 +2,7 @@
 [![localfile_switch_en]][localfile_license_en]
 [![localfile_switch_zh]][localfile_license_zh]
 
-# MIT License
+# MIT license
 
 Copyright (c) 2026 li
 
