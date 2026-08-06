@@ -2,7 +2,7 @@
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
 
-# Linette - Android!
+# Linette - Android!!
 
 [localfile_switch_ru]: /source/android/service/readme/md/svg/ru.svg
 [localfile_switch_en]: /source/android/service/readme/md/svg/en.svg
