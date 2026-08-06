@@ -1,7 +1,7 @@
 name: linette
-description: "Plan to save the world"
+description: 'Plan to save the world'
 publish_to: 'none'
-version: 0.1.0+1
+version: 0.1+1
 
 environment:
   sdk: ^3.11.5
@@ -13,7 +13,31 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+  flutter_lints: 6.0.0
+  flutter_launcher_icons: '0.14.4'
+  flutter_native_splash: '2.4.7'
 
 flutter:
   uses-material-design: true
+
+flutter_launcher_icons:
+  android: true
+  image_path: 'assets/icon/icon.png'
+  adaptive_icon_background: '#f2f2f2'
+  adaptive_icon_foreground: 'assets/icon/icon.png'
+
+flutter_native_splash:
+  android: true
+  image: 'assets/icon/icon_light.png'
+  image_dark: 'assets/icon/icon_dark.png'
+  branding: "assets/branding/branding_light.png"
+  branding_dark: "assets/branding/branding_dark.png"
+  color: '#f2f2f2'
+  color_dark: '#070707'
+  android_12:
+    image: 'assets/icon/icon_light.png'
+    image_dark: 'assets/icon/icon_dark.png'
+    branding: "assets/branding/branding_light.png"
+    branding_dark: "assets/branding/branding_dark.png"
+    icon_background_color: '#f2f2f2'
+    icon_background_color_dark: '#070707'
