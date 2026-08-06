@@ -1,4 +1,4 @@
-Linette – 这是可能的。
+Linette – 这是可能的：
 
 	未来。
 

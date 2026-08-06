@@ -2,7 +2,7 @@
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
 
-# Linette – 这是可能的。
+# Linette – 这是可能的
 
 未来。
 

@@ -2,7 +2,7 @@
 [![localfile_switch_en]][localfile_readme_en]
 [![localfile_switch_zh]][localfile_readme_zh]
 
-# Linette – This is possible.
+# Linette – This is possible
 
 The future.
 
