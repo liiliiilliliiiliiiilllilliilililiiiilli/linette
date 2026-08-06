@@ -1,0 +1,3 @@
+Contributing to this repository.
+
+	At this time the project does not accept external contributions.
