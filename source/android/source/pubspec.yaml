@@ -1,43 +1,52 @@
-name: linette
+# Файл конфигурации проекта
+
+name: 'linette'
 description: 'Plan to save the world'
 publish_to: 'none'
-version: 0.1.0+1
+version: '0.0.0+1'
 
 environment:
-  sdk: ^3.11.5
+  sdk: '^3.11.5'
 
 dependencies:
   flutter:
-    sdk: flutter
+    sdk: 'flutter'
+  flutter_svg: '^2.3.0'
 
 dev_dependencies:
   flutter_test:
-    sdk: flutter
-  flutter_lints: 6.0.0
+    sdk: 'flutter'
+  flutter_lints: '6.0.0'
   flutter_launcher_icons: '0.14.4'
   flutter_native_splash: '2.4.7'
 
 flutter:
   uses-material-design: true
+  assets:
+    - 'assets/pictures/theme_green_dark/icons/'
+  fonts:
+    - family: 'Fredoka'
+      fonts:
+        - asset: 'assets/fonts/fredoka_variable_width_weight.ttf'
 
 flutter_launcher_icons:
   android: true
-  image_path: 'assets/icon/light/icon.png'
-  adaptive_icon_foreground: 'assets/icon/light/icon.png'
+  image_path: 'assets/pictures/theme_green_light/logo/logo.png'
+  adaptive_icon_foreground: 'assets/pictures/theme_green_light/logo/logo.png'
   adaptive_icon_background: '#f2f2f2'
 
 flutter_native_splash:
   android: true
-  image: 'assets/icon/light/icon.png'
-  image_dark: 'assets/icon/dark/icon.png'
-  branding: 'assets/branding/light/branding.png'
-  branding_dark: 'assets/branding/dark/branding.png'
+  image: 'assets/pictures/theme_green_light/logo/logo.png'
+  image_dark: 'assets/pictures/theme_green_dark/logo/logo.png'
+  branding: 'assets/pictures/theme_green_light/branding/branding.png'
+  branding_dark: 'assets/pictures/theme_green_dark/branding/branding.png'
   color: '#f2f2f2'
   color_dark: '#070707'
   android_12:
-    image: 'assets/icon/light/icon.png'
-    image_dark: 'assets/icon/dark/icon.png'
-    branding: 'assets/branding/light/branding.png'
-    branding_dark: 'assets/branding/dark/branding.png'
+    image: 'assets/pictures/theme_green_light/logo/logo.png'
+    image_dark: 'assets/pictures/theme_green_dark/logo/logo.png'
+    branding: 'assets/pictures/theme_green_light/branding/branding.png'
+    branding_dark: 'assets/pictures/theme_green_dark/branding/branding.png'
     icon_background_color: '#f2f2f2'
     icon_background_color_dark: '#070707'
