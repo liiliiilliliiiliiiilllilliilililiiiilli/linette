@@ -1,7 +1,7 @@
-// Entry point
+// Development entry point
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/app.dart';
+import 'app/app.dart';
 
 
 

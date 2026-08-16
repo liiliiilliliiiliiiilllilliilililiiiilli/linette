@@ -1,7 +1,7 @@
-// App
+// App (root component)
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/pages/home.dart';
+import 'pages/home/home.dart';
 
 
 
