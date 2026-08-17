@@ -1,8 +1,9 @@
 // Connections page
 
 import 'package:flutter/material.dart';
-import 'components/appbar.dart';
-import 'components/body.dart';
+import 'components/appbar/appbar.dart';
+import 'components/body/body.dart';
+import 'package:linette/app/themes/themes.dart';
 
 
 
@@ -11,13 +12,14 @@ class Connections extends StatelessWidget {
   const Connections ({super.key});
 
 
-  @override build (BuildContext context) {
+  @override Widget build (BuildContext context) {
 
     return (
 
       Scaffold (
         appBar: AppBarComponent (),
-        body: BodyComponent ()
+        body: BodyComponent (),
+        backgroundColor: context.colors.barBack
       )
 
     );

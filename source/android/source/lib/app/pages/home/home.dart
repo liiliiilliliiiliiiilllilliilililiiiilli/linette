@@ -1,8 +1,9 @@
 // Home page
 
 import 'package:flutter/material.dart';
-import 'components/appbar.dart';
-import 'components/body.dart';
+import 'components/appbar/appbar.dart';
+import 'components/body/body.dart';
+import 'package:linette/app/themes/themes.dart';
 
 
 
@@ -11,14 +12,14 @@ class Home extends StatelessWidget {
   const Home ({super.key});
 
 
-  @override build (BuildContext context) {
+  @override Widget build (BuildContext context) {
 
     return (
 
       Scaffold (
         appBar: AppBarComponent (),
         body: BodyComponent (),
-        backgroundColor: Color (0xff070707)
+        backgroundColor: context.colors.barBack
       )
 
     );

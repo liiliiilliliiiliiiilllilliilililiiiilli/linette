@@ -1,4 +1,4 @@
-# Файл конфигурации проекта
+# Project's configuration file
 
 name: 'linette'
 description: 'Plan to save the world'
@@ -28,6 +28,9 @@ flutter:
     - family: 'Fredoka'
       fonts:
         - asset: 'assets/fonts/fredoka_variable_width_weight.ttf'
+    - family: 'Archivo'
+      fonts:
+        - asset: 'assets/fonts/archivo_variable_width_weight.ttf'
 
 flutter_launcher_icons:
   android: true

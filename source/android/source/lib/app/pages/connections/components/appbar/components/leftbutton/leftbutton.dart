@@ -1,0 +1,56 @@
+// Connections page - App bar - Left button
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:linette/app/themes/themes.dart';
+import 'dart:math' as math;
+
+
+
+class LeftButtonComponent extends StatelessWidget {
+
+  const LeftButtonComponent ({super.key});
+
+
+  @override Widget build (BuildContext context) {
+
+    void handleTap () {
+
+      print ('Нажата кнопка "назад"!');
+
+    }
+
+
+    return (
+
+      GestureDetector (
+        onTap: handleTap,
+        child: Center (
+          child: Container (
+            width: 38,
+            height: 38,
+            padding: EdgeInsets.all (7.5),
+            decoration: BoxDecoration (
+              color: context.colors.black,
+              border: Border.all (
+                width: 3,
+                color: context.colors.buttonsBorder
+              ),
+              borderRadius: BorderRadius.all (Radius.circular (100))
+            ),
+            child: Transform.translate (
+              offset: Offset (-1, 0),
+              child: Transform.rotate (
+                angle: 180 * math.pi / 180,
+                child: SvgPicture.asset ('assets/pictures/theme_green_dark/icons/arrow_navigation.svg')
+              )
+            )
+          )
+        )
+      )
+
+    );
+
+  }
+
+}
