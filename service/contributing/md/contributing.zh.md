@@ -9,7 +9,6 @@
 [localfile_switch_ru]: /service/contributing/md/svg/ru.svg
 [localfile_switch_en]: /service/contributing/md/svg/en.svg
 [localfile_switch_zh]: /service/contributing/md/svg/zh.svg
-
 [localfile_contributing_ru]: /service/contributing/md/contributing.ru.md
 [localfile_contributing_en]: /service/contributing/md/contributing.en.md
 [localfile_contributing_zh]: /service/contributing/md/contributing.zh.md

@@ -15,7 +15,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [localfile_switch_ru]: /service/license/md/svg/ru.svg
 [localfile_switch_en]: /service/license/md/svg/en.svg
 [localfile_switch_zh]: /service/license/md/svg/zh.svg
-
 [localfile_license_ru]: /service/license/md/license.ru.md
 [localfile_license_en]: /service/license/md/license.en.md
 [localfile_license_zh]: /service/license/md/license.zh.md

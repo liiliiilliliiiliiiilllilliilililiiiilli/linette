@@ -52,14 +52,14 @@ build-ssr
 .swiftpm/
 migrate_working_dir/
 
-# Intellij:
+# IntelliJ:
 
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# Flutter / Dart / Pub:
+# Flutter / Pub / Dart:
 
 **/doc/api/
 **/ios/Flutter/.last_build_id
