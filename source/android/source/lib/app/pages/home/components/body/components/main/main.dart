@@ -1,9 +1,9 @@
 // Home page - Body - Main
 
 import 'package:flutter/material.dart';
+import 'components/status/status.dart';
 import 'components/connect/connect.dart';
 import 'components/sets/sets.dart';
-import 'components/status/status.dart';
 
 
 

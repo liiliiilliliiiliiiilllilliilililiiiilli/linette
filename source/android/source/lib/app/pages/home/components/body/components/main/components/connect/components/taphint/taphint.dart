@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:linette/app/theme/icons.dart';
 
 
 
@@ -19,7 +20,7 @@ class TapHint extends StatelessWidget {
 
       Row (
         children: [
-          SvgPicture.asset ('assets/pictures/theme_green_light/icons/tap.svg'),
+          SvgPicture.asset (context.icons.tap),
           Text (
             action,
             style: TextStyle (

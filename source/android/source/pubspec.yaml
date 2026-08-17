@@ -23,7 +23,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - 'assets/pictures/theme_green_dark/icons/'
+    - 'assets/images/light_green/icons/'
+    - 'assets/images/dark_green/icons/'
   fonts:
     - family: 'Fredoka'
       fonts:
@@ -34,22 +35,22 @@ flutter:
 
 flutter_launcher_icons:
   android: true
-  image_path: 'assets/pictures/theme_green_light/logo/logo.png'
-  adaptive_icon_foreground: 'assets/pictures/theme_green_light/logo/logo.png'
+  image_path: 'assets/images/dark_green/logo/logo.png'
+  adaptive_icon_foreground: 'assets/images/dark_green/logo/logo.png'
   adaptive_icon_background: '#f2f2f2'
 
 flutter_native_splash:
   android: true
-  image: 'assets/pictures/theme_green_light/logo/logo.png'
-  image_dark: 'assets/pictures/theme_green_dark/logo/logo.png'
-  branding: 'assets/pictures/theme_green_light/branding/branding.png'
-  branding_dark: 'assets/pictures/theme_green_dark/branding/branding.png'
+  image: 'assets/images/light_green/logo/logo.png'
+  image_dark: 'assets/images/dark_green/logo/logo.png'
+  branding: 'assets/images/light_green/branding/branding.png'
+  branding_dark: 'assets/images/dark_green/branding/branding.png'
   color: '#f2f2f2'
   color_dark: '#070707'
   android_12:
-    image: 'assets/pictures/theme_green_light/logo/logo.png'
-    image_dark: 'assets/pictures/theme_green_dark/logo/logo.png'
-    branding: 'assets/pictures/theme_green_light/branding/branding.png'
-    branding_dark: 'assets/pictures/theme_green_dark/branding/branding.png'
+    image: 'assets/images/light_green/logo/logo.png'
+    image_dark: 'assets/images/dark_green/logo/logo.png'
+    branding: 'assets/images/light_green/branding/branding.png'
+    branding_dark: 'assets/images/dark_green/branding/branding.png'
     icon_background_color: '#f2f2f2'
     icon_background_color_dark: '#070707'

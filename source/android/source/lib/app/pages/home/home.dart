@@ -1,9 +1,9 @@
 // Home page
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/colors.dart';
 import 'components/appbar/appbar.dart';
 import 'components/body/body.dart';
-import 'package:linette/app/themes/themes.dart';
 
 
 

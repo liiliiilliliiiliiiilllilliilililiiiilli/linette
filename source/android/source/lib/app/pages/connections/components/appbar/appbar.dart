@@ -1,9 +1,9 @@
 // Connections page - App bar
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/colors.dart';
 import 'components/leftbutton/leftbutton.dart';
-import 'components/titlecomponent/titlecomponent.dart';
-import 'package:linette/app/themes/themes.dart';
+import 'components/title/title.dart';
 
 
 

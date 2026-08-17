@@ -1,10 +1,10 @@
 // Home page - App bar
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/colors.dart';
 import 'components/leftbutton/leftbutton.dart';
 import 'components/title/title.dart';
 import 'components/rightbutton/rightbutton.dart';
-import 'package:linette/app/themes/themes.dart';
 
 
 

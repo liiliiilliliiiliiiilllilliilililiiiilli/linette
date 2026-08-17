@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/themes/themes.dart';
+import 'package:linette/app/theme/icons.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 
@@ -37,7 +38,7 @@ class LeftButtonComponent extends StatelessWidget {
               ),
               borderRadius: BorderRadius.all (Radius.circular (10))
             ),
-            child: SvgPicture.asset ('assets/pictures/theme_green_dark/icons/menu.svg')
+            child: SvgPicture.asset (context.icons.menu)
           )
         )
       )

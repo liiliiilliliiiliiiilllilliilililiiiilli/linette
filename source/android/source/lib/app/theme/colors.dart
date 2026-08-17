@@ -47,20 +47,6 @@ class AppColors extends ThemeExtension <AppColors> {
     line: Color (0xff1b1c1b)
   );
 
-  static const darkBlue = AppColors (
-    white: Color (0xfff2f2f2),
-    grey: Color (0xff808080),
-    black: Color (0xff000000),
-    barBack: Color (0xff070707),
-    barBorder: Color (0xff171717),
-    block: Color (0xff101010),
-    prime: Color (0xff8b9e80),
-    primeChoice: Color (0xff394335),
-    buttonsBorder: Color (0xff202020),
-    circlesBorder: Color (0xff303030),
-    line: Color (0xff1b1c1b)
-  );
-
   static const lightGreen = AppColors (
     white: Color (0xfff2f2f2),
     grey: Color (0xff808080),
@@ -76,8 +62,7 @@ class AppColors extends ThemeExtension <AppColors> {
   );
 
 
-  @override
-  AppColors copyWith ({
+  @override AppColors copyWith ({
     Color? white,
     Color? grey,
     Color? black,
@@ -111,12 +96,11 @@ class AppColors extends ThemeExtension <AppColors> {
 
   }
 
-  @override
-  AppColors lerp (ThemeExtension <AppColors>? other, double t) {
+  @override AppColors lerp (ThemeExtension <AppColors>? other, double t) {
 
     if (other is! AppColors)
 
-      return this;
+      return (this);
 
     return (
 
@@ -144,7 +128,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
 enum AppThemeOption {
   darkGreen,
-  darkBlue,
   lightGreen
 }
 

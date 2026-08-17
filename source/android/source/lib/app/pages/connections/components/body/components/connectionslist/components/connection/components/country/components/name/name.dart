@@ -1,7 +1,7 @@
 // Connections page - Body - Connections list - Connection - Country - Name
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/themes/themes.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 

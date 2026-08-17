@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/themes/themes.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 
@@ -19,7 +19,7 @@ class Flag extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final picturePath = ['netherlands', 'finland', 'germany'].contains (name) ? 'assets/pictures/theme_green_dark/icons/flag_$name.svg' : 'assets/pictures/theme_green_dark/icons/flag_netherlands.svg';
+    final picturePath = ['netherlands', 'finland', 'germany'].contains (name) ? 'assets/images/dark_green/icons/flag_$name.svg' : 'assets/images/dark_green/icons/flag_netherlands.svg';
 
 
     return (

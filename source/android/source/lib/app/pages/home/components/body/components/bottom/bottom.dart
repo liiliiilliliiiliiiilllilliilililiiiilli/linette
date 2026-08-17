@@ -1,7 +1,7 @@
 // Home page - Body - Bottom
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/themes/themes.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 

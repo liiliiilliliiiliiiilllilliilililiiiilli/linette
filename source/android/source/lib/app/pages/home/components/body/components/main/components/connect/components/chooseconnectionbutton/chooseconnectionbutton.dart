@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:linette/app/theme/icons.dart';
 
 
 
@@ -19,7 +20,7 @@ class ChooseConnectionButton extends StatelessWidget {
 
       Row (
         children: [
-          SvgPicture.asset ('assets/pictures/theme_green_light/icons/location.svg'),
+          SvgPicture.asset (context.icons.location),
           Text (
             location,
             style: TextStyle (
@@ -29,7 +30,7 @@ class ChooseConnectionButton extends StatelessWidget {
               color: Colors.lightGreenAccent
             )
           ),
-          SvgPicture.asset ('assets/pictures/theme_green_light/icons/arrow.svg')
+          SvgPicture.asset (context.icons.arrow)
         ]
       )
 

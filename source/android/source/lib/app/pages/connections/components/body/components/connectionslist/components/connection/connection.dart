@@ -1,10 +1,10 @@
 // Connections page - Body - Connections list - Connection
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/colors.dart';
 import 'components/country/country.dart';
 import 'components/choicestatus/choicestatus.dart';
 import 'components/availabilitystatus/availabilitystatus.dart';
-import 'package:linette/app/themes/themes.dart';
 
 
 

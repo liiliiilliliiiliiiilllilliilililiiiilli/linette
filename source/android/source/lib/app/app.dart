@@ -1,10 +1,10 @@
 // App
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/icons.dart';
+import 'package:linette/app/theme/colors.dart';
 // import 'pages/home/home.dart';
 import 'pages/connections/connections.dart';
-
-import 'themes/themes.dart';
 
 
 
@@ -15,58 +15,62 @@ class App extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    return ValueListenableBuilder <AppThemeOption> (
+    return (
 
-      valueListenable: currentTheme,
-      builder: (context, selectedOption, _) {
+      ValueListenableBuilder <AppThemeOption> (
 
-        final AppColors customColors;
-        final Brightness baseBrightness;
+        valueListenable: currentTheme,
+        builder: (context, selectedOption, _) {
+
+          final AppAssets customAssets;
+          final AppColors customColors;
+          final Brightness baseBrightness;
 
 
-        switch (selectedOption) {
+          switch (selectedOption) {
 
-          case AppThemeOption.darkGreen:
+            case AppThemeOption.darkGreen:
 
-            customColors = AppColors.darkGreen;
-            baseBrightness = Brightness.dark;
+              customAssets = AppAssets.darkGreen;
+              customColors = AppColors.darkGreen;
+              baseBrightness = Brightness.dark;
 
-            break;
+              break;
 
-          case AppThemeOption.darkBlue:
+            case AppThemeOption.lightGreen:
 
-            customColors = AppColors.darkBlue;
-            baseBrightness = Brightness.dark;
+              customAssets = AppAssets.lightGreen;
+              customColors = AppColors.lightGreen;
+              baseBrightness = Brightness.light;
 
-            break;
+              break;
 
-          case AppThemeOption.lightGreen:
+          }
 
-            customColors = AppColors.lightGreen;
-            baseBrightness = Brightness.light;
+          return (
 
-            break;
+            MaterialApp (
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData (
+                brightness: baseBrightness,
+                // scaffoldBackgroundColor: customColors.background,
+                extensions: [
+                  customAssets,
+                  customColors
+                ]
+              ),
+              // home: Home ()
+              home: Connections ()
+            )
+
+          );
 
         }
 
-        return (
-
-          MaterialApp (
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData (
-              brightness: baseBrightness,
-              // scaffoldBackgroundColor: customColors.background,
-              extensions: [customColors]
-            ),
-            // home: Home ()
-            home: Connections ()
-          )
-
-        );
-
-      }
+      )
 
     );
+
 
   }
 

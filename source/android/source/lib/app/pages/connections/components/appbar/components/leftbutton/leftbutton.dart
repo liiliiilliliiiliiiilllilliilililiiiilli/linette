@@ -1,9 +1,10 @@
 // Connections page - App bar - Left button
 
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/themes/themes.dart';
-import 'dart:math' as math;
+import 'package:linette/app/theme/icons.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 
@@ -42,7 +43,7 @@ class LeftButtonComponent extends StatelessWidget {
               offset: Offset (-1, 0),
               child: Transform.rotate (
                 angle: 180 * math.pi / 180,
-                child: SvgPicture.asset ('assets/pictures/theme_green_dark/icons/arrow_navigation.svg')
+                child: SvgPicture.asset (context.icons.arrow_navigation)
               )
             )
           )

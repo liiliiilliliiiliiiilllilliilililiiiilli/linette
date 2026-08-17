@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/themes/themes.dart';
+import 'package:linette/app/theme/icons.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 
@@ -27,7 +28,7 @@ class ConnectionButton extends StatelessWidget {
             borderRadius: BorderRadius.circular (1000),
             color: context.colors.grey
           ),
-          child: SvgPicture.asset ('assets/pictures/theme_green_light/icons/olive.svg')
+          child: SvgPicture.asset (context.icons.olive)
         )
       )
 
