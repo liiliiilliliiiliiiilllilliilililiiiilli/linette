@@ -11,13 +11,13 @@ class AvailabilityStatus extends StatelessWidget {
 
   const AvailabilityStatus ({
     super.key,
-    required bool this.isAvailable
+    required this.isAvailable
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final color = isAvailable ? Colors.green : Colors.red;
+    final Color color = isAvailable ? Colors.green : Colors.red;
 
 
     return (

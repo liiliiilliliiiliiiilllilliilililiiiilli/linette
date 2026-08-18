@@ -96,6 +96,7 @@ class AppColors extends ThemeExtension <AppColors> {
 
   }
 
+
   @override AppColors lerp (ThemeExtension <AppColors>? other, double t) {
 
     if (other is! AppColors)
@@ -105,17 +106,17 @@ class AppColors extends ThemeExtension <AppColors> {
     return (
 
       AppColors (
-        white: Color.lerp (white, other.white, t)!,
-        grey: Color.lerp (grey, other.grey, t)!,
-        black: Color.lerp (black, other.black, t)!,
-        barBack: Color.lerp (barBack, other.barBack, t)!,
-        barBorder: Color.lerp (barBorder, other.barBorder, t)!,
-        block: Color.lerp (block, other.block, t)!,
-        prime: Color.lerp (prime, other.prime, t)!,
-        primeChoice: Color.lerp (primeChoice, other.primeChoice, t)!,
-        buttonsBorder: Color.lerp (buttonsBorder, other.buttonsBorder, t)!,
-        circlesBorder: Color.lerp (circlesBorder, other.circlesBorder, t)!,
-        line: Color.lerp (line, other.line, t)!
+        white: Color.lerp (white, other.white, t) ?? white,
+        grey: Color.lerp (grey, other.grey, t) ?? grey,
+        black: Color.lerp (black, other.black, t) ?? black,
+        barBack: Color.lerp (barBack, other.barBack, t) ?? barBack,
+        barBorder: Color.lerp (barBorder, other.barBorder, t) ?? barBorder,
+        block: Color.lerp (block, other.block, t) ?? block,
+        prime: Color.lerp (prime, other.prime, t) ?? prime,
+        primeChoice: Color.lerp (primeChoice, other.primeChoice, t) ?? primeChoice,
+        buttonsBorder: Color.lerp (buttonsBorder, other.buttonsBorder, t) ?? buttonsBorder,
+        circlesBorder: Color.lerp (circlesBorder, other.circlesBorder, t) ?? circlesBorder,
+        line: Color.lerp (line, other.line, t) ?? line
       )
 
     );
@@ -139,6 +140,10 @@ final currentTheme = ValueNotifier <AppThemeOption> (AppThemeOption.darkGreen);
 
 extension AppColorsExtension on BuildContext {
 
-  AppColors get colors => Theme.of(this).extension<AppColors>()!;
+  AppColors get colors {
+
+    return (Theme.of(this).extension<AppColors>()!);
+
+  }
 
 }

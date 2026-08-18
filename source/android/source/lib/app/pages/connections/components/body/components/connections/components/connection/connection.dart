@@ -5,37 +5,34 @@ import 'package:linette/app/theme/colors.dart';
 import 'components/country/country.dart';
 import 'components/choicestatus/choicestatus.dart';
 import 'components/availabilitystatus/availabilitystatus.dart';
+import 'model/model.dart';
 
 
 
 class Connection extends StatelessWidget {
 
-  final String name;
-  final bool isChosen;
-  final bool isAvailable;
+  final ConnectionModel model;
 
 
   const Connection ({
     super.key,
-    required String this.name,
-    required bool this.isChosen,
-    required bool this.isAvailable
+    required this.model
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final outlineColor = isChosen ? context.colors.primeChoice : context.colors.block;
+    final Color colorOutline = model.isChosen ? context.colors.primeChoice : context.colors.block;
 
 
     return (
 
       Container (
-        padding: EdgeInsets.fromLTRB (16+4, 14, 32+4, 14),
+        padding: EdgeInsets.fromLTRB (16 + 4, 14, 32 + 4, 14),
         decoration: BoxDecoration (
           color: context.colors.block,
           border: Border.all (
-            color: outlineColor,
+            color: colorOutline,
             width: 2
           ),
           borderRadius: BorderRadius.circular (16)
@@ -44,13 +41,14 @@ class Connection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Country (
-              name: name
+              flag: model.flag,
+              name: model.name
             ),
             ChoiceStatus (
-              isChosen: isChosen
+              isChosen: model.isChosen
             ),
             AvailabilityStatus (
-              isAvailable: isAvailable
+              isAvailable: model.isAvailable
             )
           ]
         )

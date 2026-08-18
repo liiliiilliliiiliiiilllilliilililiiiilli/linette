@@ -12,13 +12,13 @@ class ChoiceStatus extends StatelessWidget {
 
   const ChoiceStatus ({
     super.key,
-    required bool this.isChosen
+    required this.isChosen
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final text = isChosen ? 'Выбран' : '';
+    final String text = isChosen ? 'Выбран' : '';
 
 
     return (

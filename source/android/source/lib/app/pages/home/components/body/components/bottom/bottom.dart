@@ -12,6 +12,9 @@ class Bottom extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
+    final String text = 'Подробнее о приложении, которое создано для обхода ограничений.';
+
+
     return (
 
       Center (
@@ -27,7 +30,7 @@ class Bottom extends StatelessWidget {
             color: context.colors.black
           ),
           child: Text (
-            'Подробнее о приложении, которое создано для обхода ограничений.',
+            text,
             style: TextStyle (
               fontFamily: 'Fredoka',
               fontWeight: FontWeight.w400,

@@ -18,7 +18,7 @@ class Liner extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final text = '$onlineNum онлайн';
+    final String text = '$onlineNum онлайн';
 
 
     return (
@@ -35,7 +35,10 @@ class Liner extends StatelessWidget {
             offset: Offset (38, -2),
             child: Container (
               color: Colors.black,
-              padding: EdgeInsets.only (left: 8, right: 8),
+              padding: EdgeInsets.only (
+                left: 8,
+                right: 8
+              ),
               child: Text (
                 text,
                 style: TextStyle (

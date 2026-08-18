@@ -13,7 +13,15 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
   const AppBarComponent ({super.key});
 
 
-  @override Size get preferredSize => const Size.fromHeight (kToolbarHeight + 10);
+  @override Size get preferredSize {
+
+    return (
+
+      const Size.fromHeight (kToolbarHeight + 10)
+
+    );
+
+  }
 
 
   @override Widget build (BuildContext context) {
@@ -23,20 +31,26 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
       PreferredSize (
         preferredSize: Size.fromHeight (kToolbarHeight + 10),
         child: Padding (
-          padding: EdgeInsets.only (top: 5),
+          padding: EdgeInsets.only (
+            top: 5
+          ),
           child: AppBar (
             leading: Padding (
-              padding: EdgeInsetsGeometry.only (left: 16),
-              child: LeftButtonComponent ()
+              padding: EdgeInsetsGeometry.only (
+                left: 16
+              ),
+              child: LeftButton ()
             ),
             automaticallyImplyLeading: false,
             leadingWidth: 56 + 16,
             title: TitleComponent (),
             centerTitle: true,
             actions: [
-              RightButtonComponent ()
+              RightButton ()
             ],
-            actionsPadding: EdgeInsetsGeometry.only (right: 8 + 16),
+            actionsPadding: EdgeInsetsGeometry.only (
+              right: 8 + 16
+            ),
             backgroundColor: context.colors.barBack,
             bottom: PreferredSize (
               preferredSize: Size.fromHeight (2),

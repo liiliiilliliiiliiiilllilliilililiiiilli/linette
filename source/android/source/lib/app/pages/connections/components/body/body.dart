@@ -1,8 +1,10 @@
 // Connections page - Body
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/icons.dart';
 import 'components/liner/liner.dart';
-import 'components/connectionslist/connectionslist.dart';
+import 'components/connections/connections.dart';
+import 'components/connections/components/connection/model/model.dart';
 
 
 
@@ -13,35 +15,45 @@ class BodyComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
+    final String textNetherlands = 'Нидерланды';
+    final String textFinland = 'Финляндия';
+    final String textGermany = 'Германия';
+
+
     return (
 
       Container (
         color: Colors.black,
-        padding: EdgeInsets.only (top: 30),
+        padding: EdgeInsets.only (
+          top: 30
+        ),
         child: Column (
           spacing: 16,
           children: [
             Liner (
               onlineNum: 3
             ),
-            ConnectionsList (
-              // connections: [
-              //   Connection (
-              //     name: 'netherlands',
-              //     isChosen: true,
-              //     isAvailable: false
-              //   ),
-              //   Connection (
-              //     name: 'finland',
-              //     isChosen: false,
-              //     isAvailable: false
-              //   ),
-              //   Connection (
-              //     name: 'germany',
-              //     isChosen: false,
-              //     isAvailable: false
-              //   )
-              // ]
+            Connections (
+              connections: [
+                ConnectionModel (
+                  flag: context.icons.flagNetherlands,
+                  name: textNetherlands,
+                  isChosen: true,
+                  isAvailable: false
+                ),
+                ConnectionModel (
+                  flag: context.icons.flagFinland,
+                  name: textFinland,
+                  isChosen: false,
+                  isAvailable: false
+                ),
+                ConnectionModel (
+                  flag: context.icons.flagGermany,
+                  name: textGermany,
+                  isChosen: false,
+                  isAvailable: false
+                )
+              ]
             )
           ]
         )
@@ -52,20 +64,3 @@ class BodyComponent extends StatelessWidget {
   }
 
 }
-
-
-
-// class ConnectionModule {
-
-//   final String name;
-//   final bool isChosen;
-//   final bool isAvailable;
-
-
-//   Connection ({
-//     required this.name,
-//     required this.isChosen,
-//     required this.isAvailable
-//   });
-
-// }

@@ -1,4 +1,4 @@
-// App
+// App (root component)
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/icons.dart';
@@ -47,13 +47,13 @@ class App extends StatelessWidget {
 
           }
 
+
           return (
 
             MaterialApp (
               debugShowCheckedModeBanner: false,
               theme: ThemeData (
                 brightness: baseBrightness,
-                // scaffoldBackgroundColor: customColors.background,
                 extensions: [
                   customAssets,
                   customColors
@@ -70,7 +70,6 @@ class App extends StatelessWidget {
       )
 
     );
-
 
   }
 

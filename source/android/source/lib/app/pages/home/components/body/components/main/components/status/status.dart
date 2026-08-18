@@ -12,13 +12,13 @@ class Status extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    const String status = 'Соединение не защищено';
+    final String text = 'Соединение не защищено';
 
 
     return (
 
       Text (
-        status,
+        text,
         style: TextStyle (
           fontFamily: 'Fredoka',
           fontWeight: FontWeight.w600,

@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 class AppAssets extends ThemeExtension <AppAssets> {
 
-  final String arrow_navigation;
+  final String arrowNavigation;
   final String arrow;
-  final String flag_finland;
-  final String flag_germany;
-  final String flag_netherlands;
+  final String flagFinland;
+  final String flagGermany;
+  final String flagNetherlands;
   final String info;
-  final String letter_a;
+  final String letterA;
   final String location;
   final String menu;
   final String moon;
@@ -22,13 +22,13 @@ class AppAssets extends ThemeExtension <AppAssets> {
   final String world;
 
   const AppAssets ({
-    required this.arrow_navigation,
+    required this.arrowNavigation,
     required this.arrow,
-    required this.flag_finland,
-    required this.flag_germany,
-    required this.flag_netherlands,
+    required this.flagFinland,
+    required this.flagGermany,
+    required this.flagNetherlands,
     required this.info,
-    required this.letter_a,
+    required this.letterA,
     required this.location,
     required this.menu,
     required this.moon,
@@ -40,13 +40,13 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
 
   static const darkGreen = AppAssets (
-    arrow_navigation: 'assets/images/dark_green/icons/arrow_navigation.svg',
+    arrowNavigation: 'assets/images/dark_green/icons/arrow_navigation.svg',
     arrow: 'assets/images/dark_green/icons/arrow.svg',
-    flag_finland: 'assets/images/dark_green/icons/flag_finland.svg',
-    flag_germany: 'assets/images/dark_green/icons/flag_germany.svg',
-    flag_netherlands: 'assets/images/dark_green/icons/flag_netherlands.svg',
+    flagFinland: 'assets/images/dark_green/icons/flag_finland.svg',
+    flagGermany: 'assets/images/dark_green/icons/flag_germany.svg',
+    flagNetherlands: 'assets/images/dark_green/icons/flag_netherlands.svg',
     info: 'assets/images/dark_green/icons/info.svg',
-    letter_a: 'assets/images/dark_green/icons/letter_a.svg',
+    letterA: 'assets/images/dark_green/icons/letter_a.svg',
     location: 'assets/images/dark_green/icons/location.svg',
     menu: 'assets/images/dark_green/icons/menu.svg',
     moon: 'assets/images/dark_green/icons/moon.svg',
@@ -57,13 +57,13 @@ class AppAssets extends ThemeExtension <AppAssets> {
   );
 
   static const lightGreen = AppAssets (
-    arrow_navigation: 'assets/images/light_green/icons/arrow_navigation.svg',
+    arrowNavigation: 'assets/images/light_green/icons/arrow_navigation.svg',
     arrow: 'assets/images/light_green/icons/arrow.svg',
-    flag_finland: 'assets/images/light_green/icons/flag_finland.svg',
-    flag_germany: 'assets/images/light_green/icons/flag_germany.svg',
-    flag_netherlands: 'assets/images/light_green/icons/flag_netherlands.svg',
+    flagFinland: 'assets/images/light_green/icons/flag_finland.svg',
+    flagGermany: 'assets/images/light_green/icons/flag_germany.svg',
+    flagNetherlands: 'assets/images/light_green/icons/flag_netherlands.svg',
     info: 'assets/images/light_green/icons/info.svg',
-    letter_a: 'assets/images/light_green/icons/letter_a.svg',
+    letterA: 'assets/images/light_green/icons/letter_a.svg',
     location: 'assets/images/light_green/icons/location.svg',
     menu: 'assets/images/light_green/icons/menu.svg',
     moon: 'assets/images/light_green/icons/moon.svg',
@@ -75,13 +75,13 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
 
   @override AppAssets copyWith ({
-    String? arrow_navigation,
+    String? arrowNavigation,
     String? arrow,
-    String? flag_finland,
-    String? flag_germany,
-    String? flag_netherlands,
+    String? flagFinland,
+    String? flagGermany,
+    String? flagNetherlands,
     String? info,
-    String? letter_a,
+    String? letterA,
     String? location,
     String? menu,
     String? moon,
@@ -94,13 +94,13 @@ class AppAssets extends ThemeExtension <AppAssets> {
     return (
 
       AppAssets (
-        arrow_navigation: arrow_navigation ?? this.arrow_navigation,
+        arrowNavigation: arrowNavigation ?? this.arrowNavigation,
         arrow: arrow ?? this.arrow,
-        flag_finland: flag_finland ?? this.flag_finland,
-        flag_germany: flag_germany ?? this.flag_germany,
-        flag_netherlands: flag_netherlands ?? this.flag_netherlands,
+        flagFinland: flagFinland ?? this.flagFinland,
+        flagGermany: flagGermany ?? this.flagGermany,
+        flagNetherlands: flagNetherlands ?? this.flagNetherlands,
         info: info ?? this.info,
-        letter_a: letter_a ?? this.letter_a,
+        letterA: letterA ?? this.letterA,
         location: location ?? this.location,
         menu: menu ?? this.menu,
         moon: moon ?? this.moon,
@@ -114,13 +114,14 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
   }
 
+
   @override AppAssets lerp (ThemeExtension <AppAssets>? other, double t) {
 
     if (other is! AppAssets)
 
       return (this);
 
-    return (other);
+    return (t < 0.5 ? this : other);
 
   }
 
@@ -130,6 +131,10 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
 extension AppAssetsExtension on BuildContext {
 
-  AppAssets get icons => Theme.of(this).extension<AppAssets>()!;
+  AppAssets get icons {
+
+    return (Theme.of(this).extension<AppAssets>()!);
+
+  }
 
 }

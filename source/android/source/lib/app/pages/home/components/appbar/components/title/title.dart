@@ -12,6 +12,9 @@ class TitleComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
+    final String text = 'OliveVPN';
+
+
     return (
 
       IntrinsicWidth (
@@ -19,7 +22,7 @@ class TitleComponent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text (
-              'OliveVPN',
+              text,
               style: TextStyle (
                 fontFamily: 'Fredoka',
                 fontWeight: FontWeight.w600,

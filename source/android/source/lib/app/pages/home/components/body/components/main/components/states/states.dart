@@ -1,24 +1,24 @@
-// Home page - Body - Main - Sets
+// Home page - Body - Main - States
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
 
-class Sets extends StatelessWidget {
+class States extends StatelessWidget {
 
-  const Sets ({super.key});
+  const States ({super.key});
 
 
   @override Widget build (BuildContext context) {
 
-    const String sets = 'Нет подключения';
+    final String text = 'Нет подключения';
 
 
     return (
 
       Text (
-        sets,
+        text,
         style: TextStyle (
           fontFamily: 'Fredoka',
           fontWeight: FontWeight.w400,

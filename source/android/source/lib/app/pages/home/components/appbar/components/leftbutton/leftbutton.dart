@@ -7,9 +7,9 @@ import 'package:linette/app/theme/colors.dart';
 
 
 
-class LeftButtonComponent extends StatelessWidget {
+class LeftButton extends StatelessWidget {
 
-  const LeftButtonComponent ({super.key});
+  const LeftButton ({super.key});
 
 
   @override Widget build (BuildContext context) {

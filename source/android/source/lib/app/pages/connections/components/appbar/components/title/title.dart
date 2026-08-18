@@ -12,12 +12,15 @@ class TitleComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
+    final String text = 'Выберите сервер';
+
+
     return (
 
       Transform.translate (
         offset: Offset (-4, -1),
         child: Text (
-          'Выберите сервер',
+          text,
           style: TextStyle (
             fontFamily: 'Fredoka',
             fontWeight: FontWeight.w600,

@@ -8,9 +8,9 @@ import 'package:linette/app/theme/colors.dart';
 
 
 
-class LeftButtonComponent extends StatelessWidget {
+class LeftButton extends StatelessWidget {
 
-  const LeftButtonComponent ({super.key});
+  const LeftButton ({super.key});
 
 
   @override Widget build (BuildContext context) {
@@ -43,7 +43,7 @@ class LeftButtonComponent extends StatelessWidget {
               offset: Offset (-1, 0),
               child: Transform.rotate (
                 angle: 180 * math.pi / 180,
-                child: SvgPicture.asset (context.icons.arrow_navigation)
+                child: SvgPicture.asset (context.icons.arrowNavigation)
               )
             )
           )

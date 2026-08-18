@@ -13,7 +13,7 @@ class ChooseConnectionButton extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    const String location = 'Нидерланды';
+    final String text = 'Нидерланды';
 
 
     return (
@@ -22,7 +22,7 @@ class ChooseConnectionButton extends StatelessWidget {
         children: [
           SvgPicture.asset (context.icons.location),
           Text (
-            location,
+            text,
             style: TextStyle (
               fontFamily: 'Fredoka',
               fontWeight: FontWeight.w400,

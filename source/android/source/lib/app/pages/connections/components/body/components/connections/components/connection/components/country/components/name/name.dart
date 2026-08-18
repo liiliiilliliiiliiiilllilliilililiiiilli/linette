@@ -12,21 +12,18 @@ class Name extends StatelessWidget {
 
   const Name ({
     super.key,
-    required String this.name
+    required this.name
   });
 
 
   @override Widget build (BuildContext context) {
-
-    final q = this.name == 'netherlands' ? 'Нидерланды' : this.name == 'finland' ? 'Финляндия' : this.name == 'germany' ? 'Германия' : 'Нидерланды';
-
 
     return (
 
       Transform.translate (
         offset: Offset (0, -1),
         child: Text (
-          q,
+          name,
           style: TextStyle (
             fontFamily: 'Archivo',
             fontWeight: FontWeight.w600,

@@ -8,12 +8,14 @@ import 'components/name/name.dart';
 
 class Country extends StatelessWidget {
 
+  final String flag;
   final String name;
 
 
   const Country ({
     super.key,
-    required String this.name
+    required this.flag,
+    required this.name
   });
 
 
@@ -24,7 +26,7 @@ class Country extends StatelessWidget {
       Row (
         children: [
           Flag (
-            name: name
+            flag: flag
           ),
           SizedBox (
             width: 16

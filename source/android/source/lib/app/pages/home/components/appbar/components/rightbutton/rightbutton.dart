@@ -7,9 +7,9 @@ import 'package:linette/app/theme/colors.dart';
 
 
 
-class RightButtonComponent extends StatelessWidget {
+class RightButton extends StatelessWidget {
 
-  const RightButtonComponent ({super.key});
+  const RightButton ({super.key});
 
 
   @override Widget build (BuildContext context) {

@@ -13,7 +13,7 @@ class TapHint extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    const String action = 'Нажмите для подключения к VPN';
+    final String text = 'Нажмите для подключения к VPN';
 
 
     return (
@@ -22,7 +22,7 @@ class TapHint extends StatelessWidget {
         children: [
           SvgPicture.asset (context.icons.tap),
           Text (
-            action,
+            text,
             style: TextStyle (
               fontFamily: 'Fredoka',
               fontWeight: FontWeight.w400,

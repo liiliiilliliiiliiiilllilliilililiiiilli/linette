@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'components/status/status.dart';
 import 'components/connect/connect.dart';
-import 'components/sets/sets.dart';
+import 'components/states/states.dart';
 
 
 
@@ -20,7 +20,7 @@ class Main extends StatelessWidget {
         children: [
           Status (),
           Connect (),
-          Sets ()
+          States ()
         ]
       )
 

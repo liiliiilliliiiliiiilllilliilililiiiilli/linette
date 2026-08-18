@@ -8,19 +8,16 @@ import 'package:linette/app/theme/colors.dart';
 
 class Flag extends StatelessWidget {
 
-  final String name;
+  final String flag;
 
 
   const Flag ({
     super.key,
-    required String this.name
+    required this.flag
   });
 
 
   @override Widget build (BuildContext context) {
-
-    final picturePath = ['netherlands', 'finland', 'germany'].contains (name) ? 'assets/images/dark_green/icons/flag_$name.svg' : 'assets/images/dark_green/icons/flag_netherlands.svg';
-
 
     return (
 
@@ -37,7 +34,7 @@ class Flag extends StatelessWidget {
           color: Colors.black
         ),
         child: ClipOval (
-          child: SvgPicture.asset (picturePath)
+          child: SvgPicture.asset (flag)
         ),
         clipBehavior: Clip.antiAlias
       )
