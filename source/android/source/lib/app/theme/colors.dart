@@ -17,6 +17,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color prime;
   final Color primeHint;
   final Color primeChoice;
+  final Color primeGlow;
   final Color buttonsBorder;
   final Color circlesBorder;
   final Color line;
@@ -34,6 +35,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.prime,
     required this.primeHint,
     required this.primeChoice,
+    required this.primeGlow,
     required this.buttonsBorder,
     required this.circlesBorder,
     required this.line,
@@ -53,6 +55,7 @@ class AppColors extends ThemeExtension <AppColors> {
     prime: Color (0xff8b9e80),
     primeHint: Color (0xff687262),
     primeChoice: Color (0xff394335),
+    primeGlow: Color (0xff567560),
     buttonsBorder: Color (0xff202020),
     circlesBorder: Color (0xff303030),
     line: Color (0xff1b1c1b),
@@ -71,6 +74,7 @@ class AppColors extends ThemeExtension <AppColors> {
     prime: Color (0xff8b9e80),
     primeHint: Color (0xff687262),
     primeChoice: Color (0xff394335),
+    primeGlow: Color (0xff567560),
     buttonsBorder: Color (0xff202020),
     circlesBorder: Color (0xff303030),
     line: Color (0xff1b1c1b),
@@ -90,6 +94,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? prime,
     Color? primeHint,
     Color? primeChoice,
+    Color? primeGlow,
     Color? buttonsBorder,
     Color? circlesBorder,
     Color? line,
@@ -110,6 +115,7 @@ class AppColors extends ThemeExtension <AppColors> {
         prime: prime ?? this.prime,
         primeHint: primeHint ?? this.primeHint,
         primeChoice: primeChoice ?? this.primeChoice,
+        primeGlow: primeGlow ?? this.primeGlow,
         buttonsBorder: buttonsBorder ?? this.buttonsBorder,
         circlesBorder: circlesBorder ?? this.circlesBorder,
         line: line ?? this.line,
@@ -141,6 +147,7 @@ class AppColors extends ThemeExtension <AppColors> {
         prime: Color.lerp (prime, other.prime, t) ?? prime,
         primeHint: Color.lerp (primeHint, other.primeHint, t) ?? primeHint,
         primeChoice: Color.lerp (primeChoice, other.primeChoice, t) ?? primeChoice,
+        primeGlow: Color.lerp (primeGlow, other.primeGlow, t) ?? primeGlow,
         buttonsBorder: Color.lerp (buttonsBorder, other.buttonsBorder, t) ?? buttonsBorder,
         circlesBorder: Color.lerp (circlesBorder, other.circlesBorder, t) ?? circlesBorder,
         line: Color.lerp (line, other.line, t) ?? line,

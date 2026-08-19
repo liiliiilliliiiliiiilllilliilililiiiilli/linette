@@ -32,8 +32,8 @@ class Bottom extends StatelessWidget {
           child: ClipRect (
             child: BackdropFilter (
               filter: ImageFilter.blur (
-                sigmaX: 50,
-                sigmaY: 50
+                sigmaX: 150,
+                sigmaY: 150
               ),
               child: Container (
                 padding: EdgeInsets.fromLTRB (25, 16, 25, 16),
@@ -44,7 +44,7 @@ class Bottom extends StatelessWidget {
                       color: context.colors.black
                     )
                   ),
-                  color: context.colors.black.withAlpha (128)
+                  color: context.colors.barBack.withAlpha (128)
                 ),
                 child: RichText (
                   text: TextSpan (
@@ -63,7 +63,8 @@ class Bottom extends StatelessWidget {
                       TextSpan (
                         text: text_2,
                         style: TextStyle (
-                          color: context.colors.hint
+                          color: Color.fromARGB (255, 128 + 11, 128 + 11, 128 + 11)
+                          // color: context.colors.grey
                         )
                       )
                     ]
