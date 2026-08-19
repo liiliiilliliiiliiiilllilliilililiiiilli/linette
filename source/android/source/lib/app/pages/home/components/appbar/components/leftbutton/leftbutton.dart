@@ -18,6 +18,8 @@ class LeftButton extends StatelessWidget {
 
       print ('Нажата кнопка открытия меню!');
 
+      Scaffold.of(context).openDrawer ();
+
     }
 
 
@@ -25,6 +27,7 @@ class LeftButton extends StatelessWidget {
 
       GestureDetector (
         onTap: handleTap,
+        behavior: HitTestBehavior.opaque,
         child: Center (
           child: Container (
             width: 38,

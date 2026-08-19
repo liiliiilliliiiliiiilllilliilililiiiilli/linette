@@ -13,11 +13,14 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color green;
   final Color barBack;
   final Color barBorder;
+  final Color drawerBack;
   final Color block;
   final Color prime;
   final Color primeHint;
   final Color primeChoice;
   final Color primeGlow;
+  final Color checkBorder;
+  final Color checkBack;
   final Color buttonsBorder;
   final Color circlesBorder;
   final Color line;
@@ -31,11 +34,14 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.green,
     required this.barBack,
     required this.barBorder,
+    required this.drawerBack,
     required this.block,
     required this.prime,
     required this.primeHint,
     required this.primeChoice,
     required this.primeGlow,
+    required this.checkBorder,
+    required this.checkBack,
     required this.buttonsBorder,
     required this.circlesBorder,
     required this.line,
@@ -51,11 +57,14 @@ class AppColors extends ThemeExtension <AppColors> {
     green: Color (0xff4caf50),
     barBack: Color (0xff070707),
     barBorder: Color (0xff171717),
+    drawerBack: Color (0xff0b0b0b),
     block: Color (0xff101010),
     prime: Color (0xff8b9e80),
     primeHint: Color (0xff687262),
     primeChoice: Color (0xff394335),
     primeGlow: Color (0xff567560),
+    checkBorder: Color (0xff3e3e3e),
+    checkBack: Color (0xff1f1f1f),
     buttonsBorder: Color (0xff202020),
     circlesBorder: Color (0xff303030),
     line: Color (0xff1b1c1b),
@@ -70,11 +79,14 @@ class AppColors extends ThemeExtension <AppColors> {
     green: Color (0xff4caf50),
     barBack: Color (0xff070707),
     barBorder: Color (0xff171717),
+    drawerBack: Color (0xff0b0b0b),
     block: Color (0xff101010),
     prime: Color (0xff8b9e80),
     primeHint: Color (0xff687262),
     primeChoice: Color (0xff394335),
     primeGlow: Color (0xff567560),
+    checkBorder: Color (0xff3e3e3e),
+    checkBack: Color (0xff1f1f1f),
     buttonsBorder: Color (0xff202020),
     circlesBorder: Color (0xff303030),
     line: Color (0xff1b1c1b),
@@ -90,11 +102,14 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? green,
     Color? barBack,
     Color? barBorder,
+    Color? drawerBack,
     Color? block,
     Color? prime,
     Color? primeHint,
     Color? primeChoice,
     Color? primeGlow,
+    Color? checkBorder,
+    Color? checkBack,
     Color? buttonsBorder,
     Color? circlesBorder,
     Color? line,
@@ -111,11 +126,14 @@ class AppColors extends ThemeExtension <AppColors> {
         green: green ?? this.green,
         barBack: barBack ?? this.barBack,
         barBorder: barBorder ?? this.barBorder,
+        drawerBack: drawerBack ?? this.drawerBack,
         block: block ?? this.block,
         prime: prime ?? this.prime,
         primeHint: primeHint ?? this.primeHint,
         primeChoice: primeChoice ?? this.primeChoice,
         primeGlow: primeGlow ?? this.primeGlow,
+        checkBorder: checkBorder ?? this.checkBorder,
+        checkBack: checkBack ?? this.checkBack,
         buttonsBorder: buttonsBorder ?? this.buttonsBorder,
         circlesBorder: circlesBorder ?? this.circlesBorder,
         line: line ?? this.line,
@@ -143,11 +161,14 @@ class AppColors extends ThemeExtension <AppColors> {
         green: Color.lerp (green, other.green, t) ?? green,
         barBack: Color.lerp (barBack, other.barBack, t) ?? barBack,
         barBorder: Color.lerp (barBorder, other.barBorder, t) ?? barBorder,
+        drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
         block: Color.lerp (block, other.block, t) ?? block,
         prime: Color.lerp (prime, other.prime, t) ?? prime,
         primeHint: Color.lerp (primeHint, other.primeHint, t) ?? primeHint,
         primeChoice: Color.lerp (primeChoice, other.primeChoice, t) ?? primeChoice,
         primeGlow: Color.lerp (primeGlow, other.primeGlow, t) ?? primeGlow,
+        checkBorder: Color.lerp (checkBorder, other.checkBorder, t) ?? checkBorder,
+        checkBack: Color.lerp (checkBack, other.checkBack, t) ?? checkBack,
         buttonsBorder: Color.lerp (buttonsBorder, other.buttonsBorder, t) ?? buttonsBorder,
         circlesBorder: Color.lerp (circlesBorder, other.circlesBorder, t) ?? circlesBorder,
         line: Color.lerp (line, other.line, t) ?? line,

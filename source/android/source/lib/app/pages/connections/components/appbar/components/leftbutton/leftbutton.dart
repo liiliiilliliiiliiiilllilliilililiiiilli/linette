@@ -28,6 +28,7 @@ class LeftButton extends StatelessWidget {
 
       GestureDetector (
         onTap: () => handleTap (context),
+        behavior: HitTestBehavior.opaque,
         child: Center (
           child: Container (
             width: 38,

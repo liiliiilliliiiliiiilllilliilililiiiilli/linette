@@ -13,19 +13,20 @@ class ConnectionButton extends StatelessWidget {
   const ConnectionButton ({super.key});
 
 
-  void handleTap () {
-
-    print ('Нажата кнопка подключения!');
-
-  }
-
-
   @override Widget build (BuildContext context) {
+
+    void handleTap () {
+
+      print ('Нажата кнопка подключения!');
+
+    }
+
 
     return (
 
       GestureDetector (
         onTap: handleTap,
+        behavior: HitTestBehavior.opaque,
         child: Center (
           child: Opacity (
             opacity: 0.9,

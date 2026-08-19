@@ -11,23 +11,24 @@ class Bottom extends StatelessWidget {
   const Bottom ({super.key});
 
 
-  void handleTap () {
-
-    print ('Нажата кнопка "Подробнее"!');
-
-  }
-
-
   @override Widget build (BuildContext context) {
 
     final String text_1 = 'Подробнее';
     final String text_2 = ' о приложении, которое создано для обхода ограничений.';
 
 
+    void handleTap () {
+
+      print ('Нажата кнопка "Подробнее"!');
+
+    }
+
+
     return (
 
       GestureDetector (
         onTap: handleTap,
+        behavior: HitTestBehavior.opaque,
         child: Center (
           child: ClipRect (
             child: BackdropFilter (

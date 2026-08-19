@@ -25,6 +25,7 @@ class RightButton extends StatelessWidget {
 
       GestureDetector (
         onTap: handleTap,
+        behavior: HitTestBehavior.opaque,
         child: Center (
           child: Container (
             width: 38,
