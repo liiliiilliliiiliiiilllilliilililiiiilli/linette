@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'pages/home/home.dart';
-// import 'pages/connections/connections.dart';
+import 'pages/connections/connections.dart';
 
 
 
@@ -52,6 +52,7 @@ class App extends StatelessWidget {
 
             MaterialApp (
               debugShowCheckedModeBanner: false,
+              title: 'Linette',
               theme: ThemeData (
                 brightness: baseBrightness,
                 extensions: [
@@ -59,8 +60,11 @@ class App extends StatelessWidget {
                   customColors
                 ]
               ),
-              home: Home ()
-              // home: Connections ()
+              initialRoute: '/home',
+              routes: {
+                '/home': (context) => Home (),
+                '/connections': (context) => Connections (),
+              }
             )
 
           );

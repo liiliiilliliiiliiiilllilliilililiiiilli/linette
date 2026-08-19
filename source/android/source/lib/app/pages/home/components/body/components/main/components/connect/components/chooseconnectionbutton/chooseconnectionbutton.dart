@@ -12,9 +12,11 @@ class ChooseConnectionButton extends StatelessWidget {
   const ChooseConnectionButton ({super.key});
 
 
-  void handleTap () {
+  void handleTap (context) {
 
     print ('Нажата кнопка выбора подключения!');
+
+    Navigator.pushNamed (context, '/connections');
 
   }
 
@@ -27,7 +29,7 @@ class ChooseConnectionButton extends StatelessWidget {
     return (
 
       GestureDetector (
-        onTap: handleTap,
+        onTap: () => handleTap (context),
         child: Row (
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,

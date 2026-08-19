@@ -15,9 +15,11 @@ class LeftButton extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    void handleTap () {
+    void handleTap (context) {
 
       print ('Нажата кнопка "назад"!');
+
+      Navigator.pop (context);
 
     }
 
@@ -25,7 +27,7 @@ class LeftButton extends StatelessWidget {
     return (
 
       GestureDetector (
-        onTap: handleTap,
+        onTap: () => handleTap (context),
         child: Center (
           child: Container (
             width: 38,
