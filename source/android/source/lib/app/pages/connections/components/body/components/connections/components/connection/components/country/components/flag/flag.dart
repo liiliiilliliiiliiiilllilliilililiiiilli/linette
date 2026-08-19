@@ -31,7 +31,7 @@ class Flag extends StatelessWidget {
             width: 1.75
           ),
           shape: BoxShape.circle,
-          color: Colors.black
+          color: context.colors.black
         ),
         child: ClipOval (
           child: SvgPicture.asset (flag)

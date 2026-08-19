@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/icons.dart';
+import 'package:linette/app/theme/colors.dart';
 import 'components/liner/liner.dart';
 import 'components/connections/connections.dart';
 import 'components/connections/components/connection/model/model.dart';
@@ -23,7 +24,7 @@ class BodyComponent extends StatelessWidget {
     return (
 
       Container (
-        color: Colors.black,
+        color: context.colors.black,
         padding: EdgeInsets.only (
           top: 30
         ),

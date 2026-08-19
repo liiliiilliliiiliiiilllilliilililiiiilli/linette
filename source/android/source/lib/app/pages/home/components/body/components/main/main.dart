@@ -16,12 +16,21 @@ class Main extends StatelessWidget {
 
     return (
 
-      Column (
-        children: [
-          Status (),
-          Connect (),
-          States ()
-        ]
+      Expanded (
+        child: Container (
+          padding: EdgeInsets.only (
+            top: 28,
+            bottom: 15
+          ),
+          child: Column (
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Status (),
+              Connect (),
+              States ()
+            ]
+          )
+        )
       )
 
     );

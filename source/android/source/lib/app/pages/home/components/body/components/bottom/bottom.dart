@@ -1,5 +1,6 @@
 // Home page - Body - Bottom
 
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';
 
@@ -10,32 +11,65 @@ class Bottom extends StatelessWidget {
   const Bottom ({super.key});
 
 
+  void handleTap () {
+
+    print ('Нажата кнопка "Подробнее"!');
+
+  }
+
+
   @override Widget build (BuildContext context) {
 
-    final String text = 'Подробнее о приложении, которое создано для обхода ограничений.';
+    final String text_1 = 'Подробнее';
+    final String text_2 = ' о приложении, которое создано для обхода ограничений.';
 
 
     return (
 
-      Center (
-        child: Container (
-          padding: EdgeInsets.fromLTRB (25, 16, 25, 16),
-          decoration: BoxDecoration (
-            border: Border (
-              top: BorderSide (
-                width: 2,
-                color: context.colors.grey
+      GestureDetector (
+        onTap: handleTap,
+        child: Center (
+          child: ClipRect (
+            child: BackdropFilter (
+              filter: ImageFilter.blur (
+                sigmaX: 50,
+                sigmaY: 50
+              ),
+              child: Container (
+                padding: EdgeInsets.fromLTRB (25, 16, 25, 16),
+                decoration: BoxDecoration (
+                  border: Border (
+                    top: BorderSide (
+                      width: 2,
+                      color: context.colors.black
+                    )
+                  ),
+                  color: context.colors.black.withAlpha (128)
+                ),
+                child: RichText (
+                  text: TextSpan (
+                    style: TextStyle (
+                      fontFamily: 'Fredoka',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16
+                    ),
+                    children: [
+                      TextSpan (
+                        text: text_1,
+                        style: TextStyle (
+                          color: context.colors.prime
+                        )
+                      ),
+                      TextSpan (
+                        text: text_2,
+                        style: TextStyle (
+                          color: context.colors.hint
+                        )
+                      )
+                    ]
+                  )
+                )
               )
-            ),
-            color: context.colors.black
-          ),
-          child: Text (
-            text,
-            style: TextStyle (
-              fontFamily: 'Fredoka',
-              fontWeight: FontWeight.w400,
-              fontSize: 16,
-              color: context.colors.white
             )
           )
         )

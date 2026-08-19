@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
-// import 'pages/home/home.dart';
-import 'pages/connections/connections.dart';
+import 'pages/home/home.dart';
+// import 'pages/connections/connections.dart';
 
 
 
@@ -59,8 +59,8 @@ class App extends StatelessWidget {
                   customColors
                 ]
               ),
-              // home: Home ()
-              home: Connections ()
+              home: Home ()
+              // home: Connections ()
             )
 
           );

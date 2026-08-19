@@ -22,7 +22,7 @@ class Status extends StatelessWidget {
         style: TextStyle (
           fontFamily: 'Fredoka',
           fontWeight: FontWeight.w600,
-          fontSize: 21,
+          fontSize: 26,
           color: context.colors.white
         )
       )

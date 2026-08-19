@@ -1,6 +1,8 @@
 // Home page - Body
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/icons.dart';
+import 'package:linette/app/theme/colors.dart';
 import 'components/main/main.dart';
 import 'components/bottom/bottom.dart';
 
@@ -16,7 +18,13 @@ class BodyComponent extends StatelessWidget {
     return (
 
       Container (
-        color: Color.fromARGB (255, 28, 51, 2),
+        decoration: BoxDecoration (
+          image: DecorationImage (
+            image: AssetImage (context.icons.background),
+            fit: BoxFit.cover
+          ),
+          color: context.colors.black
+        ),
         child: Column (
           children: [
             Main (),
@@ -24,7 +32,6 @@ class BodyComponent extends StatelessWidget {
           ]
         )
       )
-
     );
 
   }

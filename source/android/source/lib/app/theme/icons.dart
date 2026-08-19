@@ -8,6 +8,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
   final String arrowNavigation;
   final String arrow;
+  final String background;
   final String flagFinland;
   final String flagGermany;
   final String flagNetherlands;
@@ -24,6 +25,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   const AppAssets ({
     required this.arrowNavigation,
     required this.arrow,
+    required this.background,
     required this.flagFinland,
     required this.flagGermany,
     required this.flagNetherlands,
@@ -42,6 +44,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   static const darkGreen = AppAssets (
     arrowNavigation: 'assets/images/dark_green/icons/arrow_navigation.svg',
     arrow: 'assets/images/dark_green/icons/arrow.svg',
+    background: 'assets/images/dark_green/icons/background.png',
     flagFinland: 'assets/images/dark_green/icons/flag_finland.svg',
     flagGermany: 'assets/images/dark_green/icons/flag_germany.svg',
     flagNetherlands: 'assets/images/dark_green/icons/flag_netherlands.svg',
@@ -59,6 +62,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   static const lightGreen = AppAssets (
     arrowNavigation: 'assets/images/light_green/icons/arrow_navigation.svg',
     arrow: 'assets/images/light_green/icons/arrow.svg',
+    background: 'assets/images/light_green/icons/background.png',
     flagFinland: 'assets/images/light_green/icons/flag_finland.svg',
     flagGermany: 'assets/images/light_green/icons/flag_germany.svg',
     flagNetherlands: 'assets/images/light_green/icons/flag_netherlands.svg',
@@ -77,6 +81,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   @override AppAssets copyWith ({
     String? arrowNavigation,
     String? arrow,
+    String? background,
     String? flagFinland,
     String? flagGermany,
     String? flagNetherlands,
@@ -96,6 +101,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
       AppAssets (
         arrowNavigation: arrowNavigation ?? this.arrowNavigation,
         arrow: arrow ?? this.arrow,
+        background: background ?? this.background,
         flagFinland: flagFinland ?? this.flagFinland,
         flagGermany: flagGermany ?? this.flagGermany,
         flagNetherlands: flagNetherlands ?? this.flagNetherlands,

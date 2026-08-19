@@ -34,7 +34,7 @@ class Liner extends StatelessWidget {
           Transform.translate (
             offset: Offset (38, -2),
             child: Container (
-              color: Colors.black,
+              color: context.colors.black,
               padding: EdgeInsets.only (
                 left: 8,
                 right: 8

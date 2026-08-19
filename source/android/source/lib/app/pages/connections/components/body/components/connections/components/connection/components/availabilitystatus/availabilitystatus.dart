@@ -1,6 +1,7 @@
 // Connections page - Body - Connections list - Connection - Availability status
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/theme/colors.dart';
 
 
 
@@ -17,7 +18,7 @@ class AvailabilityStatus extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final Color color = isAvailable ? Colors.green : Colors.red;
+    final Color color = isAvailable ? context.colors.green : context.colors.red;
 
 
     return (
