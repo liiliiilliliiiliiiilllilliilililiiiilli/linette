@@ -28,8 +28,8 @@ class BodyComponent extends StatelessWidget {
             sharpness: 2.0,
             blurSigma: 40.0,
             resolution: 50,
-            topDarkness: 1,
-            topDarknessHeight: 0.33
+            topDarkness: 0.8,
+            topDarknessHeight: 0.375
           ),
           Column (
             children: [

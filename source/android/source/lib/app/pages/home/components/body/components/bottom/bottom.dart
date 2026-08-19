@@ -14,7 +14,7 @@ class Bottom extends StatelessWidget {
   @override Widget build (BuildContext context) {
 
     final String text_1 = 'Подробнее';
-    final String text_2 = ' о приложении, которое создано для обхода ограничений.';
+    final String text_2 = ' о сервисе, который создан для обхода ограничений.';
 
 
     void handleTap () {

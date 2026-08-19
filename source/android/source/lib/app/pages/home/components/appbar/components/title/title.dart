@@ -12,7 +12,7 @@ class TitleComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = 'OliveVPN';
+    final String text = 'Linette';
 
 
     return (
