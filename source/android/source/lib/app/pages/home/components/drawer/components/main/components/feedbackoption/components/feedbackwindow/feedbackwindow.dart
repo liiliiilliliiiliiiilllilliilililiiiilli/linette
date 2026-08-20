@@ -1,4 +1,4 @@
-// Home page - Body - Bottom - Hint window
+// Home page - Drawer - Main - Feedback option - Feedback window
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';
@@ -8,9 +8,9 @@ import 'components/bottom/bottom.dart';
 
 
 
-class HintWindow extends StatelessWidget {
+class FeedbackWindow extends StatelessWidget {
 
-  const HintWindow ({super.key});
+  const FeedbackWindow ({super.key});
 
 
   @override Widget build (BuildContext context) {
@@ -31,22 +31,18 @@ class HintWindow extends StatelessWidget {
           ),
           child: ClipRRect (
             borderRadius: BorderRadius.circular (8),
-            child: ConstrainedBox (
-              constraints: BoxConstraints (
-                maxHeight: 500
-              ),
-              child: Container (
-                width: 340,
-                color: context.colors.windowBack,
-                child: Column (
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    TopComponent (),
-                    BodyComponent (),
-                    BottomComponent ()
-                  ]
-                )
+            child: Container (
+              width: 340,
+              color: context.colors.windowBack,
+              child: Column (
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  TopComponent (),
+                  BodyComponent (),
+                  BottomComponent ()
+                ]
               )
             )
           )

@@ -6,13 +6,15 @@ class ConnectionModel {
   final String name;
   final bool isChosen;
   final bool isAvailable;
+  final void Function () onTap;
 
 
   ConnectionModel ({
     required this.flag,
     required this.name,
     required this.isChosen,
-    required this.isAvailable
+    required this.isAvailable,
+    required this.onTap
   });
 
 }

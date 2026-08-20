@@ -27,30 +27,33 @@ class Connection extends StatelessWidget {
 
     return (
 
-      Container (
-        padding: EdgeInsets.fromLTRB (16 + 4, 14, 32 + 4, 14),
-        decoration: BoxDecoration (
-          color: context.colors.block,
-          border: Border.all (
-            color: colorOutline,
-            width: 2
+      GestureDetector (
+        onTap: model.onTap,
+        child: Container (
+          padding: EdgeInsets.fromLTRB (16 + 4, 14, 32 + 4, 14),
+          decoration: BoxDecoration (
+            border: Border.all (
+              width: 2,
+              color: colorOutline
+            ),
+            borderRadius: BorderRadius.circular (16),
+            color: context.colors.block
           ),
-          borderRadius: BorderRadius.circular (16)
-        ),
-        child: Row (
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Country (
-              flag: model.flag,
-              name: model.name
-            ),
-            ChoiceStatus (
-              isChosen: model.isChosen
-            ),
-            AvailabilityStatus (
-              isAvailable: model.isAvailable
-            )
-          ]
+          child: Row (
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Country (
+                flag: model.flag,
+                name: model.name
+              ),
+              ChoiceStatus (
+                isChosen: model.isChosen
+              ),
+              AvailabilityStatus (
+                isAvailable: model.isAvailable
+              )
+            ]
+          )
         )
       )
 

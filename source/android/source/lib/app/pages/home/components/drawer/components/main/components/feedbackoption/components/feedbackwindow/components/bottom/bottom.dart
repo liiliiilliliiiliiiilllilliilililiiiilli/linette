@@ -1,4 +1,4 @@
-// Home page - Body - Bottom - Hint window - Bottom
+// Home page - Drawer - Main - Feedback option - Feedback window - Bottom
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';

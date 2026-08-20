@@ -1,6 +1,7 @@
 // Connections page - Body
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'components/liner/liner.dart';
@@ -9,7 +10,7 @@ import 'components/connections/components/connection/model/model.dart';
 
 
 
-class BodyComponent extends StatelessWidget {
+class BodyComponent extends HookWidget {
 
   const BodyComponent ({super.key});
 
@@ -19,6 +20,9 @@ class BodyComponent extends StatelessWidget {
     final String textNetherlands = 'Нидерланды';
     final String textFinland = 'Финляндия';
     final String textGermany = 'Германия';
+
+
+    final chosen = useState ('Нидерланды');
 
 
     return (
@@ -39,20 +43,23 @@ class BodyComponent extends StatelessWidget {
                 ConnectionModel (
                   flag: context.icons.flagNetherlands,
                   name: textNetherlands,
-                  isChosen: true,
-                  isAvailable: false
+                  isChosen: chosen.value == textNetherlands,
+                  isAvailable: false,
+                  onTap: () => {chosen.value = textNetherlands}
                 ),
                 ConnectionModel (
                   flag: context.icons.flagFinland,
                   name: textFinland,
-                  isChosen: false,
-                  isAvailable: false
+                  isChosen: chosen.value == textFinland,
+                  isAvailable: false,
+                  onTap: () => {chosen.value = textFinland}
                 ),
                 ConnectionModel (
                   flag: context.icons.flagGermany,
                   name: textGermany,
-                  isChosen: false,
-                  isAvailable: false
+                  isChosen: chosen.value == textGermany,
+                  isAvailable: false,
+                  onTap: () => {chosen.value = textGermany}
                 )
               ]
             )

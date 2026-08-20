@@ -1,4 +1,4 @@
-// Home page - Body - Bottom - Hint window - Bottom
+// Home page - Drawer - Main - Language option - Change language window - Bottom
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';
@@ -12,12 +12,12 @@ class BottomComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = 'Ок';
+    final String text = 'Готово';
 
 
     void handleTap () {
 
-      print ('Нажата кнопка "Ок"!');
+      print ('Нажата кнопка "Готово"!');
 
       Navigator.pop (context);
 

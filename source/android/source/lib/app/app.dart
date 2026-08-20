@@ -54,6 +54,13 @@ class App extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: 'Linette',
               theme: ThemeData (
+                pageTransitionsTheme: PageTransitionsTheme (
+                  builders: {
+                    TargetPlatform.android: FadeForwardsPageTransitionsBuilder (
+                      backgroundColor: Colors.transparent
+                    )
+                  }
+                ),
                 brightness: baseBrightness,
                 extensions: [
                   customAssets,

@@ -11,6 +11,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color black;
   final Color red;
   final Color green;
+  final Color link;
   final Color barBack;
   final Color barBorder;
   final Color drawerBack;
@@ -35,6 +36,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.black,
     required this.red,
     required this.green,
+    required this.link,
     required this.barBack,
     required this.barBorder,
     required this.drawerBack,
@@ -61,6 +63,7 @@ class AppColors extends ThemeExtension <AppColors> {
     black: Color (0xff000000),
     red: Color (0xfff44336),
     green: Color (0xff4caf50),
+    link: Color (0xff9da6d9),
     barBack: Color (0xff070707),
     barBorder: Color (0xff171717),
     drawerBack: Color (0xff0b0b0b),
@@ -86,6 +89,7 @@ class AppColors extends ThemeExtension <AppColors> {
     black: Color (0xff000000),
     red: Color (0xfff44336),
     green: Color (0xff4caf50),
+    link: Color (0xff9da6d9),
     barBack: Color (0xff070707),
     barBorder: Color (0xff171717),
     drawerBack: Color (0xff0b0b0b),
@@ -112,6 +116,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? black,
     Color? red,
     Color? green,
+    Color? link,
     Color? barBack,
     Color? barBorder,
     Color? drawerBack,
@@ -139,6 +144,7 @@ class AppColors extends ThemeExtension <AppColors> {
         black: black ?? this.black,
         red: red ?? this.red,
         green: green ?? this.green,
+        link: link ?? this.link,
         barBack: barBack ?? this.barBack,
         barBorder: barBorder ?? this.barBorder,
         drawerBack: drawerBack ?? this.drawerBack,
@@ -177,6 +183,7 @@ class AppColors extends ThemeExtension <AppColors> {
         black: Color.lerp (black, other.black, t) ?? black,
         red: Color.lerp (red, other.red, t) ?? red,
         green: Color.lerp (green, other.green, t) ?? green,
+        link: Color.lerp (link, other.link, t) ?? link,
         barBack: Color.lerp (barBack, other.barBack, t) ?? barBack,
         barBorder: Color.lerp (barBorder, other.barBorder, t) ?? barBorder,
         drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
