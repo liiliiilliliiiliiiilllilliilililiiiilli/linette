@@ -1,0 +1,50 @@
+// Home page - Body - Bottom - Hint window - Top
+
+import 'package:flutter/material.dart';
+import 'package:linette/app/theme/colors.dart';
+
+
+
+class TopComponent extends StatelessWidget {
+
+  const TopComponent ({super.key});
+
+
+  @override Widget build (BuildContext context) {
+
+    final String text = 'Для чего создано это приложение?';
+
+
+    return (
+
+      Container (
+        padding: EdgeInsets.only (
+          top: 12,
+          left: 20,
+          bottom: 12
+        ),
+        decoration: BoxDecoration (
+          border: Border (
+            bottom: BorderSide (
+              width: 2,
+              color: context.colors.windowBorder
+            )
+          ),
+          color: context.colors.windowTop
+        ),
+        child: Text (
+          text,
+          style: TextStyle (
+            fontFamily: 'Fedoka',
+            fontWeight: FontWeight.w600,
+            fontSize: 16.5,
+            color: context.colors.white
+          )
+        )
+      )
+
+    );
+
+  }
+
+}

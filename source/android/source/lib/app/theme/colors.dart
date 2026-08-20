@@ -14,6 +14,9 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color barBack;
   final Color barBorder;
   final Color drawerBack;
+  final Color windowTop;
+  final Color windowBack;
+  final Color windowBorder;
   final Color block;
   final Color prime;
   final Color primeHint;
@@ -35,6 +38,9 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.barBack,
     required this.barBorder,
     required this.drawerBack,
+    required this.windowTop,
+    required this.windowBack,
+    required this.windowBorder,
     required this.block,
     required this.prime,
     required this.primeHint,
@@ -58,6 +64,9 @@ class AppColors extends ThemeExtension <AppColors> {
     barBack: Color (0xff070707),
     barBorder: Color (0xff171717),
     drawerBack: Color (0xff0b0b0b),
+    windowTop: Color (0xff1a1a1a),
+    windowBack: Color (0xff141414),
+    windowBorder: Color (0xff0f0f0f),
     block: Color (0xff101010),
     prime: Color (0xff8b9e80),
     primeHint: Color (0xff687262),
@@ -80,6 +89,9 @@ class AppColors extends ThemeExtension <AppColors> {
     barBack: Color (0xff070707),
     barBorder: Color (0xff171717),
     drawerBack: Color (0xff0b0b0b),
+    windowTop: Color (0xff1a1a1a),
+    windowBack: Color (0xff141414),
+    windowBorder: Color (0xff0f0f0f),
     block: Color (0xff101010),
     prime: Color (0xff8b9e80),
     primeHint: Color (0xff687262),
@@ -103,6 +115,9 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? barBack,
     Color? barBorder,
     Color? drawerBack,
+    Color? windowTop,
+    Color? windowBack,
+    Color? windowBorder,
     Color? block,
     Color? prime,
     Color? primeHint,
@@ -127,6 +142,9 @@ class AppColors extends ThemeExtension <AppColors> {
         barBack: barBack ?? this.barBack,
         barBorder: barBorder ?? this.barBorder,
         drawerBack: drawerBack ?? this.drawerBack,
+        windowTop: windowTop ?? this.windowTop,
+        windowBack: windowBack ?? this.windowBack,
+        windowBorder: windowBorder ?? this.windowBorder,
         block: block ?? this.block,
         prime: prime ?? this.prime,
         primeHint: primeHint ?? this.primeHint,
@@ -162,6 +180,9 @@ class AppColors extends ThemeExtension <AppColors> {
         barBack: Color.lerp (barBack, other.barBack, t) ?? barBack,
         barBorder: Color.lerp (barBorder, other.barBorder, t) ?? barBorder,
         drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
+        windowTop: Color.lerp (windowTop, other.windowTop, t) ?? windowTop,
+        windowBack: Color.lerp (windowBack, other.windowBack, t) ?? windowBack,
+        windowBorder: Color.lerp (windowBorder, other.windowBorder, t) ?? windowBorder,
         block: Color.lerp (block, other.block, t) ?? block,
         prime: Color.lerp (prime, other.prime, t) ?? prime,
         primeHint: Color.lerp (primeHint, other.primeHint, t) ?? primeHint,

@@ -3,6 +3,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';
+import 'components/window/window.dart';
 
 
 
@@ -20,6 +21,19 @@ class Bottom extends StatelessWidget {
     void handleTap () {
 
       print ('Нажата кнопка "Подробнее"!');
+
+      showDialog (
+        context: context,
+        builder: (BuildContext context) {
+
+          return (
+
+            HintWindow ()
+
+          );
+
+        }
+      );
 
     }
 
