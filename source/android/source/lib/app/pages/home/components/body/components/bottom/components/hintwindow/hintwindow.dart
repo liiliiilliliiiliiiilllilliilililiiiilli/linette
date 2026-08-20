@@ -22,7 +22,7 @@ class HintWindow extends StatelessWidget {
           decoration: BoxDecoration (
             boxShadow: [
               BoxShadow (
-                color: Color.fromARGB (64, 0, 0, 0),
+                color: context.colors.black.withAlpha (64),
                 offset: Offset (0, 10),
                 blurRadius: 12,
                 spreadRadius: 5
@@ -32,18 +32,12 @@ class HintWindow extends StatelessWidget {
           child: ClipRRect (
             borderRadius: BorderRadius.circular (8),
             child: Container (
-              padding: EdgeInsets.only (
-                bottom: 16
-              ),
-              decoration: BoxDecoration (
-                color: context.colors.windowBack
-              ),
               width: 340,
               height: 500,
+              color: context.colors.windowBack,
               child: Column (
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                spacing: 1 + 8,
                 children: [
                   TopComponent (),
                   BodyComponent (),

@@ -19,20 +19,48 @@ class BodyComponent extends StatelessWidget {
 
       Expanded (
         child: Container (
-          padding: EdgeInsets.only (
-            left: 20,
-            right: 20
+          padding: EdgeInsets.symmetric (
+            horizontal: 20
           ),
-          child: SingleChildScrollView (
-            child: Text (
-              text,
-              style: TextStyle (
-                fontFamily: 'Fedoka',
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                color: context.colors.white
+          child: Stack (
+            children: [
+              SingleChildScrollView (
+                child: Padding (
+                  padding: EdgeInsets.only (
+                    top: 10
+                  ),
+                  child: Text (
+                    text,
+                    style: TextStyle (
+                      fontFamily: 'Fedoka',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: context.colors.white
+                    )
+                  )
+                )
+              ),
+              Positioned (
+                top: 0,
+                left: 0,
+                right: 0,
+                height: 15,
+                child: IgnorePointer (
+                  child: Container (
+                    decoration: BoxDecoration (
+                      gradient: LinearGradient (
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          context.colors.windowBack,
+                          context.colors.windowBack.withAlpha (0)
+                        ]
+                      )
+                    )
+                  )
+                )
               )
-            )
+            ]
           )
         )
       )

@@ -57,7 +57,7 @@ class AppColors extends ThemeExtension <AppColors> {
 
   static const darkGreen = AppColors (
     white: Color (0xfff2f2f2),
-    grey: Color (0xff808080),
+    grey: Color (0xff8b8b8b),
     black: Color (0xff000000),
     red: Color (0xfff44336),
     green: Color (0xff4caf50),
@@ -82,7 +82,7 @@ class AppColors extends ThemeExtension <AppColors> {
 
   static const lightGreen = AppColors (
     white: Color (0xfff2f2f2),
-    grey: Color (0xff808080),
+    grey: Color (0xff8b8b8b),
     black: Color (0xff000000),
     red: Color (0xfff44336),
     green: Color (0xff4caf50),

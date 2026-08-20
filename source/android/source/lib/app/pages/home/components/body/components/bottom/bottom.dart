@@ -3,7 +3,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors.dart';
-import 'components/window/window.dart';
+import 'components/hintwindow/hintwindow.dart';
 
 
 
@@ -78,8 +78,7 @@ class Bottom extends StatelessWidget {
                       TextSpan (
                         text: text_2,
                         style: TextStyle (
-                          color: Color.fromARGB (255, 128 + 11, 128 + 11, 128 + 11)
-                          // color: context.colors.grey
+                          color: context.colors.grey
                         )
                       )
                     ]

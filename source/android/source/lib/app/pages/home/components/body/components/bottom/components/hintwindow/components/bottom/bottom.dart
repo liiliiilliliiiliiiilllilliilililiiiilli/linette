@@ -32,8 +32,9 @@ class BottomComponent extends StatelessWidget {
         child: Container (
           alignment: Alignment.centerRight,
           padding: EdgeInsets.only (
-            top: 12 - 8,
-            right: 35
+            top: 12,
+            right: 4 + 32,
+            bottom: 12 + 4
           ),
           child: Text (
             text,
