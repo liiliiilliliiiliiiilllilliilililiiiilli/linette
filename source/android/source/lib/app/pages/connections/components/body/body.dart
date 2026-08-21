@@ -28,7 +28,7 @@ class BodyComponent extends HookWidget {
     return (
 
       Container (
-        color: context.colors.black,
+        color: context.colors.back,
         padding: EdgeInsets.only (
           top: 30
         ),

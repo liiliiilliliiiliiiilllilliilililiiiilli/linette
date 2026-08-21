@@ -57,7 +57,7 @@ class App extends StatelessWidget {
                 pageTransitionsTheme: PageTransitionsTheme (
                   builders: {
                     TargetPlatform.android: FadeForwardsPageTransitionsBuilder (
-                      backgroundColor: Colors.transparent
+                      backgroundColor: currentTheme.value == AppThemeOption.darkGreen ? Color (0xff000000) : Color (0xfff2f2f2)
                     )
                   }
                 ),

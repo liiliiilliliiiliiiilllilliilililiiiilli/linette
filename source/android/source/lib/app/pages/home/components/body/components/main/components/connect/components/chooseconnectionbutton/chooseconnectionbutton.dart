@@ -57,7 +57,7 @@ class ChooseConnectionButton extends HookWidget {
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w600,
                     fontSize: 17.5,
-                    color: context.colors.prime,
+                    color: context.colors.textChooseConnectionButton,
                     height: 1
                   )
                 ),

@@ -28,7 +28,7 @@ class Name extends StatelessWidget {
             fontFamily: 'Archivo',
             fontWeight: FontWeight.w600,
             fontSize: 16.5,
-            color: context.colors.white
+            color: context.colors.textBlock
           )
         )
       )

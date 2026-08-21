@@ -41,11 +41,11 @@ class Bottom extends HookWidget {
           alignment: Alignment.bottomLeft,
           padding: EdgeInsets.fromLTRB (20, 15, 20, 15),
           decoration: BoxDecoration (
-            color: context.colors.barBack,
+            color: context.colors.appBarBack,
             border: Border (
               top: BorderSide (
                 width: 2,
-                color: context.colors.barBorder
+                color: context.colors.appBarBorder
               )
             )
           ),
@@ -64,7 +64,7 @@ class Bottom extends HookWidget {
                       fontFamily: 'Fredoka',
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
-                      color: context.colors.white
+                      color: context.colors.textDrawerBottom
                     )
                   )
                 ),
@@ -73,8 +73,8 @@ class Bottom extends HookWidget {
                   child: Checkbox (
                     value: isChecked.value,
                     onChanged: (context) => {},
-                    checkColor: context.colors.black,
-                    activeColor: context.colors.prime
+                    checkColor: context.colors.checkColor,
+                    activeColor: context.colors.checkColorBack
                   )
                 )
               ]

@@ -20,9 +20,9 @@ class BodyComponent extends StatelessWidget {
       Stack (
         children: [
           Noise (
-            backgroundColor: context.colors.black,
-            primaryColor: context.colors.primeGlow,
-            secondaryColor: context.colors.black,
+            backgroundColor: context.colors.noiseBackground,
+            primaryColor: context.colors.noisePrimary,
+            secondaryColor: context.colors.noiseSecondary,
             scale: 0.03 * 0.75,
             speed: 0.2 * 8 * 0.33,
             sharpness: 2.0,

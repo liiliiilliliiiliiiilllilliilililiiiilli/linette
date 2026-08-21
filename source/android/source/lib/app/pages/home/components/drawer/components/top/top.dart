@@ -22,11 +22,11 @@ class Top extends StatelessWidget {
         ),
         height: 34 + 56 + 10,
         decoration: BoxDecoration (
-          color: context.colors.barBack,
+          color: context.colors.appBarBack,
           border: Border (
             bottom: BorderSide (
               width: 2,
-              color: context.colors.barBorder
+              color: context.colors.appBarBorder
             )
           )
         ),
@@ -36,7 +36,7 @@ class Top extends StatelessWidget {
             fontFamily: 'Archivo',
             fontWeight: FontWeight.w500,
             fontSize: 25,
-            color: context.colors.white
+            color: context.colors.textTitle
           )
         )
       )

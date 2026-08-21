@@ -18,8 +18,7 @@ class Main extends StatelessWidget {
     return (
 
       Expanded (
-        child:
-        Container (
+        child: Container (
           padding: EdgeInsets.fromLTRB (20, 12, 20, 12),
           decoration: BoxDecoration (
             color: context.colors.drawerBack

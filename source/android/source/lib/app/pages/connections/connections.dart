@@ -19,7 +19,7 @@ class Connections extends StatelessWidget {
       Scaffold (
         appBar: AppBarComponent (),
         body: BodyComponent (),
-        backgroundColor: context.colors.barBack
+        backgroundColor: context.colors.appBarBack
       )
 
     );

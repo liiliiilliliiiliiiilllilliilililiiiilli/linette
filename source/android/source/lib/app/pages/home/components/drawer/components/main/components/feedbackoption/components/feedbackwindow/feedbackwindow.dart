@@ -33,7 +33,7 @@ class FeedbackWindow extends StatelessWidget {
             borderRadius: BorderRadius.circular (8),
             child: Container (
               width: 340,
-              color: context.colors.windowBack,
+              color: context.colors.windowMainBack,
               child: Column (
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -37,7 +37,7 @@ class HintWindow extends StatelessWidget {
               ),
               child: Container (
                 width: 340,
-                color: context.colors.windowBack,
+                color: context.colors.windowMainBack,
                 child: Column (
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -25,7 +25,7 @@ class TitleComponent extends StatelessWidget {
             fontFamily: 'Fredoka',
             fontWeight: FontWeight.w600,
             fontSize: 25,
-            color: context.colors.white
+            color: context.colors.textTitle
           )
         )
       )

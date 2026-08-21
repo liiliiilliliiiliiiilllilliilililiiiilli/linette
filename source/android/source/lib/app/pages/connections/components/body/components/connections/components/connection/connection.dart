@@ -28,7 +28,7 @@ class Connection extends HookWidget {
     final isPressed = useState (false);
 
 
-    final Color colorOutline = model.isChosen ? context.colors.primeChoice : context.colors.block;
+    final Color colorOutline = model.isChosen ? context.colors.blockBorder : context.colors.block;
 
 
     return (

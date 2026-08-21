@@ -62,10 +62,10 @@ class Bottom extends HookWidget {
                   border: Border (
                     top: BorderSide (
                       width: 2,
-                      color: context.colors.black
+                      color: context.colors.bottomBarBorder
                     )
                   ),
-                  color: context.colors.barBack.withAlpha (128)
+                  color: context.colors.bottomBarBack
                 ),
                 child: AnimatorPresser (
                   isPressed: isPressed,
@@ -81,13 +81,13 @@ class Bottom extends HookWidget {
                         TextSpan (
                           text: text_1,
                           style: TextStyle (
-                            color: context.colors.prime
+                            color: context.colors.textBottomBarPrime
                           )
                         ),
                         TextSpan (
                           text: text_2,
                           style: TextStyle (
-                            color: context.colors.grey
+                            color: context.colors.textBottomBar
                           )
                         )
                       ]

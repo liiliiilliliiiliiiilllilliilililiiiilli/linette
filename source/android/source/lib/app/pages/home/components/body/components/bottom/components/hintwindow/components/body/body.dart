@@ -35,7 +35,7 @@ class BodyComponent extends StatelessWidget {
                       fontFamily: 'Fedoka',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
-                      color: context.colors.white
+                      color: context.colors.windowMainText
                     )
                   )
                 )
@@ -52,8 +52,8 @@ class BodyComponent extends StatelessWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          context.colors.windowBack,
-                          context.colors.windowBack.withAlpha (0)
+                          context.colors.windowMainBack,
+                          context.colors.windowMainBack.withAlpha (0)
                         ]
                       )
                     )

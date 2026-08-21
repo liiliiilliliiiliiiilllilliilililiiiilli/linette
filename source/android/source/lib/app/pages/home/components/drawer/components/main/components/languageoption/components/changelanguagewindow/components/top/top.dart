@@ -27,10 +27,10 @@ class TopComponent extends StatelessWidget {
           border: Border (
             bottom: BorderSide (
               width: 2,
-              color: context.colors.windowBorder
+              color: context.colors.windowSeparator
             )
           ),
-          color: context.colors.windowTop
+          color: context.colors.windowTopBack
         ),
         child: Text (
           text,
@@ -38,7 +38,7 @@ class TopComponent extends StatelessWidget {
             fontFamily: 'Fedoka',
             fontWeight: FontWeight.w600,
             fontSize: 16.5,
-            color: context.colors.white
+            color: context.colors.windowTopText
           )
         )
       )

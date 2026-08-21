@@ -23,7 +23,7 @@ class States extends StatelessWidget {
           fontFamily: 'Fredoka',
           fontWeight: FontWeight.w500,
           fontSize: 16,
-          color: context.colors.grey
+          color: context.colors.textStates
         )
       )
 

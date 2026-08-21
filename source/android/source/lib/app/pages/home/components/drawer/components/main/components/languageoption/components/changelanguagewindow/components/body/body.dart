@@ -67,7 +67,7 @@ class BodyComponent extends HookWidget {
                               fontFamily: 'Archivo',
                               fontWeight: FontWeight.w600,
                               fontSize: 15,
-                              color: context.colors.white
+                              color: context.colors.windowMainText
                             )
                           ),
                           subtitle: Text (
@@ -76,7 +76,7 @@ class BodyComponent extends HookWidget {
                               fontFamily: 'Archivo',
                               fontWeight: FontWeight.w500,
                               fontSize: 15,
-                              color: context.colors.grey
+                              color: context.colors.windowMainText
                             )
                           )
                         )

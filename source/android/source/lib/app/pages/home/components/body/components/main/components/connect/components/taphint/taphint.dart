@@ -79,7 +79,7 @@ class TapHint extends HookWidget {
                   fontFamily: 'Fredoka',
                   fontWeight: FontWeight.w500,
                   fontSize: 17.5,
-                  color: context.colors.primeHint,
+                  color: context.colors.textTapHint,
                   height: 1
                 )
               )

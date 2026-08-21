@@ -51,7 +51,7 @@ class BottomComponent extends HookWidget {
                 fontFamily: 'Fedoka',
                 fontWeight: FontWeight.w400,
                 fontSize: 16.5,
-                color: context.colors.prime
+                color: context.colors.windowBottomText
               )
             )
           )

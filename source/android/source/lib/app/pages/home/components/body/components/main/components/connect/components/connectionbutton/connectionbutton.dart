@@ -50,7 +50,7 @@ class ConnectionButton extends HookWidget {
                   borderRadius: BorderRadius.circular (1000),
                   boxShadow: [
                     BoxShadow (
-                      color: Color.fromARGB (150, 0, 0, 0),
+                      color: context.colors.black.withAlpha (150),
                       offset: Offset (0, 5),
                       blurRadius: 8,
                       spreadRadius: 2.5

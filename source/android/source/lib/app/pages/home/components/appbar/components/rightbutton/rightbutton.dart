@@ -24,6 +24,11 @@ class RightButton extends HookWidget {
 
       print ('Нажата кнопка смены темы!');
 
+      currentTheme.value == AppThemeOption.darkGreen
+
+        ? currentTheme.value = AppThemeOption.lightGreen
+        : currentTheme.value = AppThemeOption.darkGreen;
+
     }
 
 
@@ -40,10 +45,10 @@ class RightButton extends HookWidget {
               height: 38,
               padding: EdgeInsets.all (7.5),
               decoration: BoxDecoration (
-                color: context.colors.black,
+                color: context.colors.appBarButtonBack,
                 border: Border.all (
                   width: 3,
-                  color: context.colors.buttonsBorder
+                  color: context.colors.appBarButtonBorder
                 ),
                 borderRadius: BorderRadius.all (Radius.circular (100))
               ),

@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
         appBar: AppBarComponent (),
         body: BodyComponent (),
         drawer: DrawerComponent (),
-        backgroundColor: context.colors.barBack
+        backgroundColor: context.colors.appBarBack
       )
 
     );

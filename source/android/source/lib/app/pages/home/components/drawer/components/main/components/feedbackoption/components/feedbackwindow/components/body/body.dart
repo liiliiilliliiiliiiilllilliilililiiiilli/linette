@@ -58,20 +58,20 @@ class BodyComponent extends StatelessWidget {
                       TextSpan (
                         text: text_1,
                         style: TextStyle (
-                          color: context.colors.white
+                          color: context.colors.windowMainText
                         )
                       ),
                       TextSpan (
                         text: text_2,
                         style: TextStyle (
-                          color: context.colors.link
+                          color: context.colors.windowMainText
                         ),
                         recognizer: TapGestureRecognizer()..onTap = openLink
                       ),
                       TextSpan (
                         text: text_3,
                         style: TextStyle (
-                          color: context.colors.white
+                          color: context.colors.windowMainText
                         )
                       )
                     ]
@@ -91,8 +91,8 @@ class BodyComponent extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        context.colors.windowBack,
-                        context.colors.windowBack.withAlpha (0)
+                        context.colors.windowMainBack,
+                        context.colors.windowMainBack.withAlpha (0)
                       ]
                     )
                   )

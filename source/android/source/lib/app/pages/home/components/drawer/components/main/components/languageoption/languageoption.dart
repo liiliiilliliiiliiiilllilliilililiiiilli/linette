@@ -75,7 +75,7 @@ class LanguageOption extends HookWidget {
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
-                    color: context.colors.white
+                    color: context.colors.textDrawerOption
                   )
                 ),
                 Flexible (
@@ -87,7 +87,7 @@ class LanguageOption extends HookWidget {
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
-                    color: context.colors.grey
+                    color: context.colors.textDrawerOptionValue
                   )
                 )
               ]
