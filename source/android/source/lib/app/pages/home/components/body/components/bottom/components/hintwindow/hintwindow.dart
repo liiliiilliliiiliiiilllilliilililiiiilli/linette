@@ -17,35 +17,38 @@ class HintWindow extends StatelessWidget {
 
     return (
 
-      Center (
-        child: Container (
-          decoration: BoxDecoration (
-            boxShadow: [
-              BoxShadow (
-                color: context.colors.black.withAlpha (64),
-                offset: Offset (0, 10),
-                blurRadius: 12,
-                spreadRadius: 5
-              )
-            ]
-          ),
-          child: ClipRRect (
-            borderRadius: BorderRadius.circular (8),
-            child: ConstrainedBox (
-              constraints: BoxConstraints (
-                maxHeight: 500
-              ),
-              child: Container (
-                width: 340,
-                color: context.colors.windowMainBack,
-                child: Column (
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    TopComponent (),
-                    BodyComponent (),
-                    BottomComponent ()
-                  ]
+      Material (
+        type: MaterialType.transparency,
+        child: Center (
+          child: Container (
+            decoration: BoxDecoration (
+              boxShadow: [
+                BoxShadow (
+                  color: context.colors.black.withAlpha (64),
+                  offset: Offset (0, 10),
+                  blurRadius: 12,
+                  spreadRadius: 5
+                )
+              ]
+            ),
+            child: ClipRRect (
+              borderRadius: BorderRadius.circular (8),
+              child: ConstrainedBox (
+                constraints: BoxConstraints (
+                  maxHeight: 500
+                ),
+                child: Container (
+                  width: 340,
+                  color: context.colors.windowMainBack,
+                  child: Column (
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      TopComponent (),
+                      BodyComponent (),
+                      BottomComponent ()
+                    ]
+                  )
                 )
               )
             )

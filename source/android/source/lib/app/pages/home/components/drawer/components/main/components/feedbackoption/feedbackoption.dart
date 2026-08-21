@@ -20,20 +20,56 @@ class FeedbackOption extends HookWidget {
     final isPressed = useState (false);
 
 
-    void handleTap () {
+    void handleTap () async {
 
       print ('Нажата кнопка обратной связи!');
 
+
       Navigator.pop (context);
 
-      showDialog (
+
+      await Future.delayed (Duration (milliseconds: 150));
+
+      if (!context.mounted) return;
+
+
+      showGeneralDialog (
         context: context,
-        builder: (BuildContext context) {
+        barrierDismissible: true,
+        barrierLabel: 'Dismiss',
+        barrierColor: Colors.black.withAlpha (128),
+        transitionDuration: Duration (milliseconds: 175),
+        pageBuilder: (context, animation, secondaryAnimation) {
+          return FeedbackWindow ();
+        },
+        transitionBuilder: (context, animation, secondaryAnimation, child) {
 
-          return (
+          final fadeAnimation = CurvedAnimation (
+            parent: animation,
+            curve: Curves.easeOut,
+            reverseCurve: Curves.easeIn
+          );
 
-            FeedbackWindow ()
+          if (animation.status == AnimationStatus.reverse) {
+            return FadeTransition (
+              opacity: fadeAnimation,
+              child: child
+            );
+          }
 
+          final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
+            CurvedAnimation (
+              parent: animation,
+              curve: Curves.easeOut
+            )
+          );
+
+          return FadeTransition (
+            opacity: fadeAnimation,
+            child: ScaleTransition (
+              scale: scaleAnimation,
+              child: child
+            )
           );
 
         }

@@ -25,6 +25,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color drawerBack;
   final Color textDrawerBottom;
   final Color line;
+  final Color linkPressed;
   final Color textLine;
   final Color block;
   final Color blockBorder;
@@ -80,6 +81,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.drawerBack,
     required this.textDrawerBottom,
     required this.line,
+    required this.linkPressed,
     required this.textLine,
     required this.block,
     required this.blockBorder,
@@ -160,6 +162,7 @@ class AppColors extends ThemeExtension <AppColors> {
     red: Color (0xfff44336),
     green: Color (0xff4caf50),
     link: Color (0xff9da6d9),
+    linkPressed: Color (0xff70769b),
     windowTop: Color (0xff1a1a1a),
     windowBack: Color (0xff141414),
     windowBorder: Color (0xff0f0f0f),
@@ -215,7 +218,8 @@ class AppColors extends ThemeExtension <AppColors> {
     black: Color (0xff000000),
     red: Color (0xfff44336),
     green: Color (0xff4caf50),
-    link: Color (0xff9da6d9),
+    link: Color (0xff0645AD),
+    linkPressed: Color (0xff1e3c6d),
     windowTop: Color (0xff1a1a1a),
     windowBack: Color (0xff141414),
     windowBorder: Color (0xff0f0f0f),
@@ -273,6 +277,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? red,
     Color? green,
     Color? link,
+    Color? linkPressed,
     Color? windowTop,
     Color? windowBack,
     Color? windowBorder,
@@ -331,6 +336,7 @@ class AppColors extends ThemeExtension <AppColors> {
         red: red ?? this.red,
         green: green ?? this.green,
         link: link ?? this.link,
+        linkPressed: linkPressed ?? this.linkPressed,
         windowTop: windowTop ?? this.windowTop,
         windowBack: windowBack ?? this.windowBack,
         windowBorder: windowBorder ?? this.windowBorder,
@@ -400,6 +406,7 @@ class AppColors extends ThemeExtension <AppColors> {
         red: Color.lerp (red, other.red, t) ?? red,
         green: Color.lerp (green, other.green, t) ?? green,
         link: Color.lerp (link, other.link, t) ?? link,
+        linkPressed: Color.lerp (linkPressed, other.linkPressed, t) ?? linkPressed,
         windowTop: Color.lerp (windowTop, other.windowTop, t) ?? windowTop,
         windowBack: Color.lerp (windowBack, other.windowBack, t) ?? windowBack,
         windowBorder: Color.lerp (windowBorder, other.windowBorder, t) ?? windowBorder,

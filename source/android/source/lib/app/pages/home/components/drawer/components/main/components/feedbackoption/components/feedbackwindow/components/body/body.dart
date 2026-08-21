@@ -1,13 +1,14 @@
 // Home page - Drawer - Main - Feedback option - Feedback window - Body
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
 
 
 
-class BodyComponent extends StatelessWidget {
+class BodyComponent extends HookWidget {
 
   const BodyComponent ({super.key});
 
@@ -32,6 +33,38 @@ class BodyComponent extends StatelessWidget {
       }
 
     }
+
+
+    final isPressed = useState (false);
+
+    final gestureRecognizer = useMemoized (() {
+
+      return TapGestureRecognizer ();
+
+    }, []);
+
+
+    gestureRecognizer
+      ..onTapDown = (_) {
+        isPressed.value = true;
+      }
+      ..onTapUp = (_) {
+        isPressed.value = false;
+        openLink ();
+      }
+      ..onTapCancel = () {
+        isPressed.value = false;
+      };
+
+
+    useEffect (() {
+
+      return gestureRecognizer.dispose;
+
+    }, [gestureRecognizer]);
+
+
+    final linkColor = isPressed.value ? context.colors.linkPressed : context.colors.link;
 
 
     return (
@@ -64,9 +97,9 @@ class BodyComponent extends StatelessWidget {
                       TextSpan (
                         text: text_2,
                         style: TextStyle (
-                          color: context.colors.windowMainText
+                          color: linkColor,
                         ),
-                        recognizer: TapGestureRecognizer()..onTap = openLink
+                        recognizer: gestureRecognizer
                       ),
                       TextSpan (
                         text: text_3,
