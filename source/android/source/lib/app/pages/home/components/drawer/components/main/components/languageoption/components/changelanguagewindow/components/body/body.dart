@@ -56,29 +56,27 @@ class BodyComponent extends HookWidget {
                     child: Column (
                       spacing: 0,
                       children: languages.map ((lang) =>
-                        Container (
-                          child: RadioListTile (
-                            horizontalTitleGap: 5,
-                            value: lang ['id']!,
-                            contentPadding: EdgeInsets.zero,
-                            activeColor: context.colors.prime,
-                            title: Text (
-                              lang ['title']!,
-                              style: TextStyle (
-                                fontFamily: 'Archivo',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                                color: context.colors.white
-                              )
-                            ),
-                            subtitle: Text (
-                              lang ['subtitle']!,
-                              style: TextStyle (
-                                fontFamily: 'Archivo',
-                                fontWeight: FontWeight.w500,
-                                fontSize: 15,
-                                color: context.colors.grey
-                              )
+                        RadioListTile (
+                          horizontalTitleGap: 5,
+                          value: lang ['id']!,
+                          contentPadding: EdgeInsets.zero,
+                          activeColor: context.colors.prime,
+                          title: Text (
+                            lang ['title']!,
+                            style: TextStyle (
+                              fontFamily: 'Archivo',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                              color: context.colors.white
+                            )
+                          ),
+                          subtitle: Text (
+                            lang ['subtitle']!,
+                            style: TextStyle (
+                              fontFamily: 'Archivo',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15,
+                              color: context.colors.grey
                             )
                           )
                         )

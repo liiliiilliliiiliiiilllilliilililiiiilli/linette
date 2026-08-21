@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/theme/colors.dart';
+import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
 
 
 
@@ -13,6 +14,7 @@ class Bottom extends HookWidget {
 
   @override build (BuildContext context) {
 
+    final isPressed = useState (false);
     final isChecked = useState (false);
 
 
@@ -30,6 +32,11 @@ class Bottom extends HookWidget {
       GestureDetector (
         onTap: handleTap,
         behavior: HitTestBehavior.opaque,
+        onPanDown: (details) => isPressed.value = true,
+        onTapUp: (details) => isPressed.value = false,
+        onPanCancel: () => isPressed.value = false,
+        onTapCancel: () => isPressed.value = false,
+        onLongPressCancel: () => isPressed.value = false,
         child: Container (
           alignment: Alignment.bottomLeft,
           padding: EdgeInsets.fromLTRB (20, 15, 20, 15),
@@ -42,29 +49,36 @@ class Bottom extends HookWidget {
               )
             )
           ),
-          child: Row (
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded (
-                child: Text (
-                  softWrap: true,
-                  'Подключение к VPN при запуске приложения',
-                  style: TextStyle (
-                    fontFamily: 'Fredoka',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: context.colors.white
+          child: AnimatorPresser (
+            isPressed: isPressed,
+            scaleRate: 0.97,
+            child: Row (
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded (
+                  child: Text (
+                    softWrap: true,
+                    'Подключение к VPN при запуске приложения',
+                    style: TextStyle (
+                      fontFamily: 'Fredoka',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: context.colors.white
+                    )
+                  )
+                ),
+                IgnorePointer (
+                  ignoring: true,
+                  child: Checkbox (
+                    value: isChecked.value,
+                    onChanged: (context) => {},
+                    checkColor: context.colors.black,
+                    activeColor: context.colors.prime
                   )
                 )
-              ),
-              Checkbox (
-                value: isChecked.value,
-                onChanged: (context) => {},
-                checkColor: context.colors.black,
-                activeColor: context.colors.prime
-              )
-            ]
+              ]
+            )
           )
         )
       )

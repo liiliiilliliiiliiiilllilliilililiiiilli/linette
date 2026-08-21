@@ -2,17 +2,23 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'components/hintwindow/hintwindow.dart';
+import 'package:linette/app/elements/presser/presser.dart';
+import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
 
 
 
-class Bottom extends StatelessWidget {
+class Bottom extends HookWidget {
 
   const Bottom ({super.key});
 
 
   @override Widget build (BuildContext context) {
+
+    final isPressed = useState (false);
+
 
     final String text_1 = 'Подробнее';
     final String text_2 = ' о сервисе, который создан для обхода ограничений.';
@@ -40,9 +46,9 @@ class Bottom extends StatelessWidget {
 
     return (
 
-      GestureDetector (
-        onTap: handleTap,
-        behavior: HitTestBehavior.opaque,
+      Presser (
+        isPressed: isPressed,
+        handleTap: handleTap,
         child: Center (
           child: ClipRect (
             child: BackdropFilter (
@@ -61,27 +67,31 @@ class Bottom extends StatelessWidget {
                   ),
                   color: context.colors.barBack.withAlpha (128)
                 ),
-                child: RichText (
-                  text: TextSpan (
-                    style: TextStyle (
-                      fontFamily: 'Fredoka',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16
-                    ),
-                    children: [
-                      TextSpan (
-                        text: text_1,
-                        style: TextStyle (
-                          color: context.colors.prime
-                        )
+                child: AnimatorPresser (
+                  isPressed: isPressed,
+                  scaleRate: 0.975,
+                  child: RichText (
+                    text: TextSpan (
+                      style: TextStyle (
+                        fontFamily: 'Fredoka',
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16
                       ),
-                      TextSpan (
-                        text: text_2,
-                        style: TextStyle (
-                          color: context.colors.grey
+                      children: [
+                        TextSpan (
+                          text: text_1,
+                          style: TextStyle (
+                            color: context.colors.prime
+                          )
+                        ),
+                        TextSpan (
+                          text: text_2,
+                          style: TextStyle (
+                            color: context.colors.grey
+                          )
                         )
-                      )
-                    ]
+                      ]
+                    )
                   )
                 )
               )
