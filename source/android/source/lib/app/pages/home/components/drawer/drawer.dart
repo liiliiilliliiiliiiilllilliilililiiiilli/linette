@@ -14,18 +14,31 @@ class DrawerComponent extends Drawer {
 
   @override build (BuildContext context) {
 
+    void onPopInvokedWithResult (didPop, result) {
+
+      if (didPop) return;
+
+      Scaffold.of(context).closeDrawer ();
+
+    }
+
+
     return (
 
-      Drawer (
-        shape: RoundedRectangleBorder (
-          borderRadius: BorderRadius.zero
-        ),
-        child: Column (
-          children: [
-            Top (),
-            Main (),
-            Bottom ()
-          ]
+      PopScope (
+        canPop: false,
+        onPopInvokedWithResult: onPopInvokedWithResult,
+        child: Drawer (
+          shape: RoundedRectangleBorder (
+            borderRadius: BorderRadius.zero
+          ),
+          child: Column (
+            children: [
+              Top (),
+              Main (),
+              Bottom ()
+            ]
+          )
         )
       )
 
