@@ -38,9 +38,17 @@ class FeedbackOption extends HookWidget {
         barrierDismissible: true,
         barrierLabel: 'Dismiss',
         barrierColor: Colors.black.withAlpha (128),
-        transitionDuration: Duration (milliseconds: 175),
+        transitionDuration: Duration (
+          milliseconds: 175
+        ),
         pageBuilder: (context, animation, secondaryAnimation) {
-          return FeedbackWindow ();
+
+          return (
+
+            FeedbackWindow ()
+
+          );
+
         },
         transitionBuilder: (context, animation, secondaryAnimation, child) {
 
@@ -51,10 +59,16 @@ class FeedbackOption extends HookWidget {
           );
 
           if (animation.status == AnimationStatus.reverse) {
-            return FadeTransition (
-              opacity: fadeAnimation,
-              child: child
+
+            return (
+
+              FadeTransition (
+                opacity: fadeAnimation,
+                child: child
+              )
+
             );
+
           }
 
           final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
@@ -64,12 +78,16 @@ class FeedbackOption extends HookWidget {
             )
           );
 
-          return FadeTransition (
-            opacity: fadeAnimation,
-            child: ScaleTransition (
-              scale: scaleAnimation,
-              child: child
+          return (
+
+            FadeTransition (
+              opacity: fadeAnimation,
+              child: ScaleTransition (
+                scale: scaleAnimation,
+                child: child
+              )
             )
+
           );
 
         }
@@ -100,6 +118,10 @@ class FeedbackOption extends HookWidget {
               children: [
                 SvgPicture.asset (
                   context.icons.info,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.iconInfo,
+                    BlendMode.srcIn
+                  ),
                   height: 19
                 ),
                 SizedBox (
@@ -118,7 +140,11 @@ class FeedbackOption extends HookWidget {
                   child: Container ()
                 ),
                 SvgPicture.asset (
-                  context.icons.arrowNavigation,
+                  context.icons.arrowDrawerOption,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.iconArrowDrawerOption,
+                    BlendMode.srcIn
+                  ),
                   height: 14
                 )
               ]

@@ -32,6 +32,18 @@ class RightButton extends HookWidget {
     }
 
 
+    final themeIcon = currentTheme.value == AppThemeOption.darkGreen
+
+      ? context.icons.moon
+      : context.icons.sun;
+
+
+    final themeIconColor = currentTheme.value == AppThemeOption.darkGreen
+
+      ? context.colors.iconMoon
+      : context.colors.iconSun;
+
+
     return (
 
       Presser (
@@ -39,20 +51,32 @@ class RightButton extends HookWidget {
         handleTap: handleTap,
         child: AnimatorPresser (
           isPressed: isPressed,
-          child: Center (
-            child: Container (
-              width: 38,
-              height: 38,
-              padding: EdgeInsets.all (7.5),
-              decoration: BoxDecoration (
-                color: context.colors.appBarButtonBack,
-                border: Border.all (
-                  width: 3,
-                  color: context.colors.appBarButtonBorder
+          child: AnimatedContainer (
+            duration: Duration (
+              milliseconds: 80
+            ),
+            transform: Matrix4.translationValues (0, isPressed.value ? 1.0 : 0.0, 0),
+            child: Center (
+              child: Container (
+                width: 38,
+                height: 38,
+                padding: EdgeInsets.all (7.5),
+                decoration: BoxDecoration (
+                  color: context.colors.appBarButtonBack,
+                  border: Border.all (
+                    width: 3,
+                    color: context.colors.appBarButtonBorder
+                  ),
+                  borderRadius: BorderRadius.all (Radius.circular (100))
                 ),
-                borderRadius: BorderRadius.all (Radius.circular (100))
-              ),
-              child: SvgPicture.asset (context.icons.sun)
+                child: SvgPicture.asset (
+                  themeIcon,
+                  colorFilter: ColorFilter.mode (
+                    themeIconColor,
+                    BlendMode.srcIn
+                  )
+                )
+              )
             )
           )
         )

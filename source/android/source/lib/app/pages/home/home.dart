@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
     return (
 
       Scaffold (
+        drawerEnableOpenDragGesture: false,
         appBar: AppBarComponent (),
         body: BodyComponent (),
         drawer: DrawerComponent (),

@@ -37,24 +37,36 @@ class LeftButton extends HookWidget {
         handleTap: () => handleTap (context),
         child: AnimatorPresser (
           isPressed: isPressed,
-          child: Center (
-            child: Container (
-              width: 38,
-              height: 38,
-              padding: EdgeInsets.all (7.5),
-              decoration: BoxDecoration (
-                color: context.colors.appBarButtonBack,
-                border: Border.all (
-                  width: 3,
-                  color: context.colors.appBarButtonBorder
+          child: AnimatedContainer (
+            duration: Duration (
+              milliseconds: 80
+            ),
+            transform: Matrix4.translationValues (0, isPressed.value ? 1.0 : 0.0, 0),
+            child: Center (
+              child: Container (
+                width: 38,
+                height: 38,
+                padding: EdgeInsets.all (7.5),
+                decoration: BoxDecoration (
+                  color: context.colors.appBarButtonBack,
+                  border: Border.all (
+                    width: 3,
+                    color: context.colors.appBarButtonBorder
+                  ),
+                  borderRadius: BorderRadius.all (Radius.circular (100))
                 ),
-                borderRadius: BorderRadius.all (Radius.circular (100))
-              ),
-              child: Transform.translate (
-                offset: Offset (-1, 0),
-                child: Transform.rotate (
-                  angle: 180 * math.pi / 180,
-                  child: SvgPicture.asset (context.icons.arrowNavigation)
+                child: Transform.translate (
+                  offset: Offset (-1, 0),
+                  child: Transform.rotate (
+                    angle: 180 * math.pi / 180,
+                    child: SvgPicture.asset (
+                      context.icons.arrowNavigation,
+                      colorFilter: ColorFilter.mode (
+                        context.colors.iconArrowNavigation,
+                        BlendMode.srcIn
+                      )
+                    )
+                  )
                 )
               )
             )

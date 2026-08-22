@@ -17,7 +17,9 @@ class TapHint extends HookWidget {
   @override Widget build (BuildContext context) {
 
     final controller = useAnimationController (
-      duration: Duration (milliseconds: 1100),
+      duration: Duration (
+        milliseconds: 1100
+      ),
       initialValue: 1.0
     );
 
@@ -29,13 +31,21 @@ class TapHint extends HookWidget {
 
     final opacityAnimation = useMemoized (() {
 
-      return Tween(begin: 0.3, end: 1.0).animate(curvedAnimation);
+      return (
+
+        Tween(begin: 0.3, end: 1.0).animate(curvedAnimation)
+
+      );
 
     }, [controller]);
 
     final scaleAnimation = useMemoized (() {
 
-      return Tween(begin: 0.9875, end: 1.0).animate(curvedAnimation);
+      return (
+
+        Tween(begin: 0.9875, end: 1.0).animate(curvedAnimation)
+
+      );
 
     }, [controller]);
 
@@ -70,6 +80,10 @@ class TapHint extends HookWidget {
             children: [
               SvgPicture.asset (
                 context.icons.tap,
+                colorFilter: ColorFilter.mode (
+                  context.colors.iconTap,
+                  BlendMode.srcIn
+                ),
                 width: 17,
                 height: 17
               ),

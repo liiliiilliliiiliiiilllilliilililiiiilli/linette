@@ -48,6 +48,10 @@ class ChooseConnectionButton extends HookWidget {
               children: [
                 SvgPicture.asset (
                   context.icons.location,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.iconLocation,
+                    BlendMode.srcIn
+                  ),
                   width: 17,
                   height: 17
                 ),
@@ -63,6 +67,10 @@ class ChooseConnectionButton extends HookWidget {
                 ),
                 SvgPicture.asset (
                   context.icons.arrow,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.iconArrow,
+                    BlendMode.srcIn
+                  ),
                   width: 17,
                   height: 17
                 )

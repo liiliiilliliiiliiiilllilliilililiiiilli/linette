@@ -38,9 +38,17 @@ class LanguageOption extends HookWidget {
         barrierDismissible: true,
         barrierLabel: 'Dismiss',
         barrierColor: Colors.black.withAlpha (128),
-        transitionDuration: Duration (milliseconds: 175),
+        transitionDuration: Duration (
+          milliseconds: 175
+        ),
         pageBuilder: (context, animation, secondaryAnimation) {
-          return ChangeLanguageWindow ();
+
+          return (
+
+            ChangeLanguageWindow ()
+
+          );
+
         },
         transitionBuilder: (context, animation, secondaryAnimation, child) {
 
@@ -51,10 +59,16 @@ class LanguageOption extends HookWidget {
           );
 
           if (animation.status == AnimationStatus.reverse) {
-            return FadeTransition (
-              opacity: fadeAnimation,
-              child: child
+
+            return (
+
+              FadeTransition (
+                opacity: fadeAnimation,
+                child: child
+              )
+
             );
+
           }
 
           final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
@@ -64,12 +78,16 @@ class LanguageOption extends HookWidget {
             )
           );
 
-          return FadeTransition (
-            opacity: fadeAnimation,
-            child: ScaleTransition (
-              scale: scaleAnimation,
-              child: child
+          return (
+
+            FadeTransition (
+              opacity: fadeAnimation,
+              child: ScaleTransition (
+                scale: scaleAnimation,
+                child: child
+              )
             )
+
           );
 
         }
@@ -100,6 +118,10 @@ class LanguageOption extends HookWidget {
               children: [
                 SvgPicture.asset (
                   context.icons.world,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.iconWorld,
+                    BlendMode.srcIn
+                  ),
                   height: 19
                 ),
                 SizedBox (

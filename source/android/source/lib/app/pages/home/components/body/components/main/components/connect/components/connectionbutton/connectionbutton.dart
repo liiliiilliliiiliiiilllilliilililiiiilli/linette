@@ -63,9 +63,7 @@ class ConnectionButton extends HookWidget {
                     offset: Offset (0, -2),
                     child: Transform.rotate (
                       angle: 5 * math.pi / 180,
-                      child: SvgPicture.asset (
-                        context.icons.olive
-                      )
+                      child: SvgPicture.asset (context.icons.olive)
                     )
                   )
                 )

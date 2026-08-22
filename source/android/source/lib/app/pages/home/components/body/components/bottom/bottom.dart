@@ -41,7 +41,13 @@ class Bottom extends HookWidget {
         barrierColor: Colors.black.withAlpha (128),
         transitionDuration: Duration (milliseconds: 175),
         pageBuilder: (context, animation, secondaryAnimation) {
-          return HintWindow ();
+
+          return (
+
+            HintWindow ()
+
+          );
+
         },
         transitionBuilder: (context, animation, secondaryAnimation, child) {
 
@@ -52,10 +58,16 @@ class Bottom extends HookWidget {
           );
 
           if (animation.status == AnimationStatus.reverse) {
-            return FadeTransition (
-              opacity: fadeAnimation,
-              child: child
+
+            return (
+
+              FadeTransition (
+                opacity: fadeAnimation,
+                child: child
+              )
+
             );
+
           }
 
           final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
@@ -65,12 +77,16 @@ class Bottom extends HookWidget {
             )
           );
 
-          return FadeTransition (
-            opacity: fadeAnimation,
-            child: ScaleTransition (
-              scale: scaleAnimation,
-              child: child
+          return (
+
+            FadeTransition (
+              opacity: fadeAnimation,
+              child: ScaleTransition (
+                scale: scaleAnimation,
+                child: child
+              )
             )
+
           );
 
         }
@@ -105,27 +121,33 @@ class Bottom extends HookWidget {
                 child: AnimatorPresser (
                   isPressed: isPressed,
                   scaleRate: 0.975,
-                  child: RichText (
-                    text: TextSpan (
-                      style: TextStyle (
-                        fontFamily: 'Fredoka',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16
-                      ),
-                      children: [
-                        TextSpan (
-                          text: text_1,
-                          style: TextStyle (
-                            color: context.colors.textBottomBarPrime
-                          )
+                  child: AnimatedContainer (
+                    duration: Duration (
+                      milliseconds: 80
+                    ),
+                    transform: Matrix4.translationValues (0, isPressed.value ? -1.0 : 0.0, 0),
+                    child: RichText (
+                      text: TextSpan (
+                        style: TextStyle (
+                          fontFamily: 'Fredoka',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16
                         ),
-                        TextSpan (
-                          text: text_2,
-                          style: TextStyle (
-                            color: context.colors.textBottomBar
+                        children: [
+                          TextSpan (
+                            text: text_1,
+                            style: TextStyle (
+                              color: context.colors.textBottomBarPrime
+                            )
+                          ),
+                          TextSpan (
+                            text: text_2,
+                            style: TextStyle (
+                              color: context.colors.textBottomBar
+                            )
                           )
-                        )
-                      ]
+                        ]
+                      )
                     )
                   )
                 )
