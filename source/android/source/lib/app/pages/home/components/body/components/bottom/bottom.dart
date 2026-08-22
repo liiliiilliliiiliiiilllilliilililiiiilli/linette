@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'components/hintwindow/hintwindow.dart';
-import 'package:linette/app/elements/presser/presser.dart';
 import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
 
 
@@ -97,9 +96,14 @@ class Bottom extends HookWidget {
 
     return (
 
-      Presser (
-        isPressed: isPressed,
-        handleTap: handleTap,
+      GestureDetector (
+        onTap: handleTap,
+        onPanDown: (details) => isPressed.value = true,
+        onTapUp: (details) => isPressed.value = false,
+        onPanCancel: () => isPressed.value = false,
+        onTapCancel: () => isPressed.value = false,
+        onLongPressCancel: () => isPressed.value = false,
+        behavior: HitTestBehavior.opaque,
         child: Center (
           child: ClipRect (
             child: BackdropFilter (
