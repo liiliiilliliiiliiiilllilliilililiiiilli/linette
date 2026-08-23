@@ -113,7 +113,7 @@ class Bottom extends HookWidget {
             ),
             child: Container (
               width: double.infinity,
-              height: 82,
+              height: 80,
               padding: EdgeInsets.fromLTRB (25, 16, 25, 16),
               decoration: BoxDecoration (
                 border: Border (

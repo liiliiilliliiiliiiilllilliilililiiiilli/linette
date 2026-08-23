@@ -24,7 +24,7 @@ class Top extends StatelessWidget {
           left: 30,
           bottom: 20
         ),
-        height: 34 + 56 + 10,
+        height: 34 + 56 + 10 - 0.5,
         decoration: BoxDecoration (
           color: context.colors.appBarBack,
           border: Border (

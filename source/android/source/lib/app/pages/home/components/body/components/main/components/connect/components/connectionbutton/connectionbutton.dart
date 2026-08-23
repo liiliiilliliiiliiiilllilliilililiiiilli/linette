@@ -38,7 +38,10 @@ class ConnectionButton extends HookWidget {
             isPressed: isPressed,
             child: Opacity (
               opacity: 0.9,
-              child: Container (
+              child: AnimatedContainer (
+                duration: Duration (
+                  milliseconds: 80
+                ),
                 width: 225,
                 height: 225,
                 padding: EdgeInsets.all (32),
@@ -51,9 +54,9 @@ class ConnectionButton extends HookWidget {
                   boxShadow: [
                     BoxShadow (
                       color: context.colors.black.withAlpha (150),
-                      offset: Offset (0, 5),
-                      blurRadius: 8,
-                      spreadRadius: 2.5
+                      offset: isPressed.value ? Offset (0, 5 * 0.825) : Offset (0, 5),
+                      blurRadius: isPressed.value ? 8 * 0.825 : 8,
+                      spreadRadius: isPressed.value ? 2.5 * 0.825 : 2.5
                     )
                   ],
                   color: context.colors.prime

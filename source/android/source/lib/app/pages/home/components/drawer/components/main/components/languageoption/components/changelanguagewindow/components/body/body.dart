@@ -16,7 +16,7 @@ class BodyComponent extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final languages = <Map <String, dynamic>> [
+    final languages = <Map <String, dynamic> > [
       {
         'code': 'ru',
         'title': T.of(context).russian,
