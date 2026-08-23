@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:linette/app/elements/presser/presser.dart';
@@ -20,7 +21,7 @@ class ChooseConnectionButton extends HookWidget {
     final isPressed = useState (false);
 
 
-    final String text = 'Нидерланды';
+    final String text = T.of(context).netherlands;
 
 
     void handleTap (context) {

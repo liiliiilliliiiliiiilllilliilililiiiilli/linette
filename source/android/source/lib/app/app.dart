@@ -1,6 +1,10 @@
 // App (root component)
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:linette/app/providers/locale.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'pages/home/home.dart';
@@ -8,12 +12,15 @@ import 'pages/connections/connections.dart';
 
 
 
-class App extends StatelessWidget {
+class App extends ConsumerWidget {
 
   const App ({super.key});
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    final currentLocale = ref.watch (localeProvider);
+
 
     return (
 
@@ -21,6 +28,11 @@ class App extends StatelessWidget {
 
         valueListenable: currentTheme,
         builder: (context, selectedOption, _) {
+
+          final backgroundColor = currentTheme.value == AppThemeOption.darkGreen
+            ? Color (0xff000000)
+            : Color (0xfff2f2f2);
+
 
           final AppAssets customAssets;
           final AppColors customColors;
@@ -57,7 +69,7 @@ class App extends StatelessWidget {
                 pageTransitionsTheme: PageTransitionsTheme (
                   builders: {
                     TargetPlatform.android: FadeForwardsPageTransitionsBuilder (
-                      backgroundColor: currentTheme.value == AppThemeOption.darkGreen ? Color (0xff000000) : Color (0xfff2f2f2)
+                      backgroundColor: backgroundColor
                     )
                   }
                 ),
@@ -68,9 +80,17 @@ class App extends StatelessWidget {
                 ]
               ),
               initialRoute: '/home',
+              localizationsDelegates: [
+                  T.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate
+              ],
+              supportedLocales: T.delegate.supportedLocales,
+              locale: currentLocale,
               routes: {
                 '/home': (context) => Home (),
-                '/connections': (context) => Connections (),
+                '/connections': (context) => Connections ()
               }
             )
 

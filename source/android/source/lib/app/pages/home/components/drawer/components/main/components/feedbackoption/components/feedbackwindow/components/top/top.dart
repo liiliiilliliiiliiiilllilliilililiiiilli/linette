@@ -1,6 +1,7 @@
 // Home page - Drawer - Main - Feedback option - Feedback window - Top
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
@@ -12,7 +13,7 @@ class TopComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = 'Обратная связь';
+    final String text = T.of(context).feedBack;
 
 
     return (

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:linette/app/elements/presser/presser.dart';
 import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
@@ -18,7 +19,7 @@ class BottomComponent extends HookWidget {
     final isPressed = useState (false);
 
 
-    final String text = 'Ок';
+    final String text = T.of(context).ok;
 
 
     void handleTap () {

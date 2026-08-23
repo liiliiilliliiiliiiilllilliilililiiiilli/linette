@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
 
@@ -13,6 +14,9 @@ class Bottom extends HookWidget {
 
 
   @override build (BuildContext context) {
+
+    final text = T.of(context).connectToVpnOnLaunch;
+
 
     final isPressed = useState (false);
     final isChecked = useState (false);
@@ -59,7 +63,7 @@ class Bottom extends HookWidget {
                 Expanded (
                   child: Text (
                     softWrap: true,
-                    'Подключение к VPN при запуске приложения',
+                    text,
                     style: TextStyle (
                       fontFamily: 'Fredoka',
                       fontWeight: FontWeight.w600,

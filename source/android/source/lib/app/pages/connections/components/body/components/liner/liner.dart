@@ -1,6 +1,7 @@
 // Connections page - Body - Liner
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
@@ -18,7 +19,7 @@ class Liner extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = '$onlineNum онлайн';
+    final String text = T.of(context).numOnline(onlineNum);
 
 
     return (

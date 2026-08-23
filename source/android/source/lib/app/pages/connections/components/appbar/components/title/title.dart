@@ -1,6 +1,7 @@
 // Connections page - App bar - Title
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
@@ -12,7 +13,7 @@ class TitleComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = 'Выберите сервер';
+    final String text = T.of(context).chooseServer;
 
 
     return (

@@ -1,6 +1,7 @@
 // Connections page - Body - Connections list - Connection - Choice status
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
@@ -18,7 +19,7 @@ class ChoiceStatus extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = isChosen ? 'Выбран' : '';
+    final String text = isChosen ? T.of(context).chosen : '';
 
 
     return (

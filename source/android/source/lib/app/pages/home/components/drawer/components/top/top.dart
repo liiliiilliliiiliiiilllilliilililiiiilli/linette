@@ -1,6 +1,7 @@
 // Home page - Drawer - Top
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
@@ -11,6 +12,9 @@ class Top extends StatelessWidget {
 
 
   @override build (BuildContext context) {
+
+    final text = T.of(context).options;
+
 
     return (
 
@@ -31,7 +35,7 @@ class Top extends StatelessWidget {
           )
         ),
         child: Text (
-          'Опции',
+          text,
           style: TextStyle (
             fontFamily: 'Archivo',
             fontWeight: FontWeight.w500,

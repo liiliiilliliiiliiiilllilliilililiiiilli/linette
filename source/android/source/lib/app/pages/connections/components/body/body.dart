@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'components/liner/liner.dart';
@@ -17,9 +18,9 @@ class BodyComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String textNetherlands = 'Нидерланды';
-    final String textFinland = 'Финляндия';
-    final String textGermany = 'Германия';
+    final String textNetherlands = T.of(context).netherlands;
+    final String textFinland = T.of(context).finland;
+    final String textGermany = T.of(context).germany;
 
 
     final chosen = useState ('Нидерланды');

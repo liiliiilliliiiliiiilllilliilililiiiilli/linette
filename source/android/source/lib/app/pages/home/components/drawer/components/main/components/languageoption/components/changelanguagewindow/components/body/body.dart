@@ -2,37 +2,43 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/providers/locale.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
 
-class BodyComponent extends HookWidget {
+class BodyComponent extends HookConsumerWidget {
 
   const BodyComponent ({super.key});
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final languages = [
+    final languages = <Map <String, dynamic>> [
       {
-        'id': '1',
-        'title': 'Русский',
-        'subtitle': 'Русский'
+        'code': 'ru',
+        'title': T.of(context).russian,
+        'subtitle': T.of(context).russianNative
       },
       {
-        'id': '2',
-        'title': 'Английский',
-        'subtitle': 'English'
+        'code': 'en',
+        'title': T.of(context).english,
+        'subtitle': T.of(context).englishNative
       },
       {
-        'id': '3',
-        'title': 'Китайский',
-        'subtitle': '中国人'
+        'code': 'zh',
+        'title': T.of(context).chinese,
+        'subtitle': T.of(context).chineseNative
       }
     ];
 
 
-    final selectedValue = useState ('1');
+    final currentLocale = ref.watch(localeProvider).languageCode;
+
+
+    final selectedValue = useState (currentLocale);
 
 
     return (
@@ -50,37 +56,45 @@ class BodyComponent extends HookWidget {
                 ),
                 child: Material (
                   type: MaterialType.transparency,
-                  child: RadioGroup <String> (
+                  child: RadioGroup (
                     groupValue: selectedValue.value,
-                    onChanged: (value) => selectedValue.value = value!,
+                    onChanged: (value) {
+                      if (value != null) {
+                        final newLanguageCode = value.toString ();
+                        selectedValue.value = newLanguageCode;
+                        ref.read(localeProvider.notifier).changeLocale(Locale(newLanguageCode));
+                      }
+                    },
                     child: Column (
-                      spacing: 0,
-                      children: languages.map ((lang) =>
-                        RadioListTile (
-                          horizontalTitleGap: 5,
-                          value: lang ['id']!,
-                          contentPadding: EdgeInsets.zero,
-                          activeColor: context.colors.prime,
-                          title: Text (
-                            lang ['title']!,
-                            style: TextStyle (
-                              fontFamily: 'Archivo',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15,
-                              color: context.colors.windowMainText
-                            )
-                          ),
-                          subtitle: Text (
-                            lang ['subtitle']!,
-                            style: TextStyle (
-                              fontFamily: 'Archivo',
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15,
-                              color: context.colors.windowMainText
+                      children: languages.map ((language) {
+                        return (
+                          RadioListTile (
+                            value: language['code'].toString(),
+                            horizontalTitleGap: 5,
+                            contentPadding: EdgeInsets.zero,
+                            activeColor: context.colors.prime,
+                            selected: selectedValue.value == language['code'].toString(),
+                            title: Text (
+                              language['title'],
+                              style: TextStyle (
+                                fontFamily: 'Archivo',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                                color: context.colors.windowMainText
+                              )
+                            ),
+                            subtitle: Text (
+                              language['subtitle'],
+                              style: TextStyle (
+                                fontFamily: 'Archivo',
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15,
+                                color: context.colors.windowMainText
+                              )
                             )
                           )
-                        )
-                      ).toList ()
+                        );
+                      }).toList ()
                     )
                   )
                 )

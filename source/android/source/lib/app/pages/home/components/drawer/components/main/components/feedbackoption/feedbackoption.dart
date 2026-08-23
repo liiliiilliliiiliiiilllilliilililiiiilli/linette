@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
@@ -16,6 +17,9 @@ class FeedbackOption extends HookWidget {
 
 
   @override Widget build (BuildContext context) {
+
+    final text = T.of(context).feedBack;
+
 
     final isPressed = useState (false);
 
@@ -128,7 +132,7 @@ class FeedbackOption extends HookWidget {
                   width: 12
                 ),
                 Text (
-                  'Обратная связь',
+                  text,
                   style: TextStyle (
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,

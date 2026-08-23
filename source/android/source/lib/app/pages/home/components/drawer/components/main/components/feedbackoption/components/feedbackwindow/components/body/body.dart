@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
@@ -15,9 +16,9 @@ class BodyComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text_1 = 'Новости сервиса публикуются в ';
-    final String text_2 = 'официальном Telegram-канале';
-    final String text_3 = '.';
+    final String text_1 = T.of(context).serviceNews_1;
+    final String text_2 = T.of(context).serviceNews_2;
+    final String text_3 = T.of(context).serviceNews_3;
 
     final String link = 'https://t.me/LinetteTelegramChannel';
 
@@ -80,8 +81,8 @@ class BodyComponent extends HookWidget {
                 padding: EdgeInsets.only (
                   top: 10
                 ),
-                child: RichText (
-                  text: TextSpan (
+                child: Text.rich (
+                  TextSpan (
                     style: TextStyle (
                       fontFamily: 'Fedoka',
                       fontWeight: FontWeight.w400,

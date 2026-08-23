@@ -12,9 +12,14 @@ dependencies:
   flutter:
     sdk: 'flutter'
   flutter_hooks: '^0.21.3+1'
+  hooks_riverpod: '^2.5.1'
+  shared_preferences: '^2.5.5'
   url_launcher: '^6.3.2'
   flutter_svg: '^2.3.0'
   perlin: '^1.0.0'
+  intl: '^0.20.2'
+  flutter_localizations:
+    sdk: 'flutter'
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +40,7 @@ flutter:
     - family: 'Archivo'
       fonts:
         - asset: 'assets/fonts/archivo_variable_width_weight.ttf'
+  generate: true
 
 flutter_launcher_icons:
   android: true
@@ -57,3 +63,10 @@ flutter_native_splash:
     branding_dark: 'assets/images/dark_green/branding/branding.png'
     icon_background_color: '#f2f2f2'
     icon_background_color_dark: '#070707'
+
+flutter_intl:
+  enabled: true
+  arb_dir: 'lib/app/localization/locales'
+  output_dir: 'lib/app/localization/generated'
+  template-arb-file: 'intl_en.arb'
+  class_name: 'T'

@@ -1,6 +1,7 @@
 // Home page - Body - Main - States
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
 
 
@@ -12,7 +13,7 @@ class States extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = 'Нет подключения';
+    final String text = T.of(context).noConnection;
 
 
     return (

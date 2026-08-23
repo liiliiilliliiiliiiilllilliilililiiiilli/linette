@@ -3,9 +3,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors.dart';
-import 'components/hintwindow/hintwindow.dart';
 import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
+import 'components/hintwindow/hintwindow.dart';
 
 
 
@@ -19,8 +20,8 @@ class Bottom extends HookWidget {
     final isPressed = useState (false);
 
 
-    final String text_1 = 'Подробнее';
-    final String text_2 = ' о сервисе, который создан для обхода ограничений.';
+    final String text_1 = T.of(context).readMore_1;
+    final String text_2 = T.of(context).readMore_2;
 
 
     void handleTap () async {
@@ -104,34 +105,38 @@ class Bottom extends HookWidget {
         onTapCancel: () => isPressed.value = false,
         onLongPressCancel: () => isPressed.value = false,
         behavior: HitTestBehavior.opaque,
-        child: Center (
-          child: ClipRect (
-            child: BackdropFilter (
-              filter: ImageFilter.blur (
-                sigmaX: 150,
-                sigmaY: 150
-              ),
-              child: Container (
-                padding: EdgeInsets.fromLTRB (25, 16, 25, 16),
-                decoration: BoxDecoration (
-                  border: Border (
-                    top: BorderSide (
-                      width: 2,
-                      color: context.colors.bottomBarBorder
-                    )
-                  ),
-                  color: context.colors.bottomBarBack
+        child: ClipRect (
+          child: BackdropFilter (
+            filter: ImageFilter.blur (
+              sigmaX: 150,
+              sigmaY: 150
+            ),
+            child: Container (
+              width: double.infinity,
+              height: 82,
+              padding: EdgeInsets.fromLTRB (25, 16, 25, 16),
+              decoration: BoxDecoration (
+                border: Border (
+                  top: BorderSide (
+                    width: 2,
+                    color: context.colors.bottomBarBorder
+                  )
                 ),
-                child: AnimatorPresser (
-                  isPressed: isPressed,
-                  scaleRate: 0.975,
-                  child: AnimatedContainer (
-                    duration: Duration (
-                      milliseconds: 80
-                    ),
-                    transform: Matrix4.translationValues (0, isPressed.value ? -1.0 : 0.0, 0),
-                    child: RichText (
-                      text: TextSpan (
+                color: context.colors.bottomBarBack
+              ),
+              child: AnimatorPresser (
+                isPressed: isPressed,
+                scaleRate: 0.975,
+                child: AnimatedContainer (
+                  duration: Duration (
+                    milliseconds: 80
+                  ),
+                  transform: Matrix4.translationValues (0, isPressed.value ? -1.0 : 0.0, 0),
+                  child: Center (
+                    child: Text.rich (
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      TextSpan (
                         style: TextStyle (
                           fontFamily: 'Fredoka',
                           fontWeight: FontWeight.w400,

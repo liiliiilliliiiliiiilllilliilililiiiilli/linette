@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/providers/locale.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/icons.dart';
 import 'package:linette/app/theme/colors.dart';
 import 'package:linette/app/elements/animatorpresser/animatorpresser.dart';
@@ -10,12 +13,15 @@ import 'components/changelanguagewindow/changelanguagewindow.dart';
 
 
 
-class LanguageOption extends HookWidget {
+class LanguageOption extends HookConsumerWidget {
 
   const LanguageOption ({super.key});
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    final currentLocale = ref.watch(localeProvider).languageCode;
+
 
     final isPressed = useState (false);
 
@@ -128,7 +134,7 @@ class LanguageOption extends HookWidget {
                   width: 12
                 ),
                 Text (
-                  'Язык',
+                  T.of(context).language,
                   style: TextStyle (
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,
@@ -140,7 +146,7 @@ class LanguageOption extends HookWidget {
                   child: Container ()
                 ),
                 Text (
-                  'Русский',
+                  currentLocale == 'ru' ? T.of(context).russian : currentLocale == 'en' ? T.of(context).english : T.of(context).chinese,
                   style: TextStyle (
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,
