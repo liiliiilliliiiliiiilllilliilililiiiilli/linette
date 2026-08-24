@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:linette/app/providers/locale.dart';
+import 'package:linette/app/providers/locale/locale.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/icons.dart';
-import 'package:linette/app/theme/colors.dart';
+import 'package:linette/app/theme/icons/icons.dart';
+import 'package:linette/app/theme/colors/colors.dart';
 import 'pages/home/home.dart';
 import 'pages/connections/connections.dart';
 

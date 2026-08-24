@@ -1,5 +1,4 @@
 {
-
 	"@@locale": "en",
 
 	"connectionIsNotProtected": "Connection is not secured",
@@ -49,5 +48,4 @@
 
 	"done": "Done",
 	"ok": "Ok"
-
 }

@@ -1,5 +1,4 @@
 {
-
 	"@@locale": "ru",
 
 	"connectionIsNotProtected": "Соединение не защищено",
@@ -49,5 +48,4 @@
 
 	"done": "Готово",
 	"ok": "Ок"
-
 }

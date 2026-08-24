@@ -1,10 +1,10 @@
 // Home page
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors.dart';
-import 'components/appbar/appbar.dart';
-import 'components/body/body.dart';
-import 'components/drawer/drawer.dart';
+import 'package:linette/app/theme/colors/colors.dart';
+import 'widgets/appbar/appbar.dart';
+import 'widgets/body/body.dart';
+import 'widgets/drawer/drawer.dart';
 
 
 

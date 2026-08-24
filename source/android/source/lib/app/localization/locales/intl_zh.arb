@@ -1,5 +1,4 @@
 {
-
 	"@@locale": "zh",
 
 	"connectionIsNotProtected": "连接未受保护",
@@ -49,5 +48,4 @@
 
 	"done": "完成",
 	"ok": "确定"
-
 }
