@@ -20,6 +20,7 @@ dependencies:
   flutter_localizations:
     sdk: 'flutter'
   perlin: '^1.0.0'
+  flutter_riverpod: ^2.6.1
 
 dev_dependencies:
   flutter_test:

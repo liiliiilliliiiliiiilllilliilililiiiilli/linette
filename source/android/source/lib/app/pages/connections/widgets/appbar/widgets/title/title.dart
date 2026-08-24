@@ -19,7 +19,7 @@ class TitleComponent extends StatelessWidget {
     return (
 
       Transform.translate (
-        offset: Offset (-4, -1),
+        offset: const Offset (-4, -1),
         child: Text (
           text,
           style: TextStyle (

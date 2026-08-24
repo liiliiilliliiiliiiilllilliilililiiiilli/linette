@@ -16,7 +16,7 @@ class Connect extends StatelessWidget {
 
     return (
 
-      Column (
+      const Column (
         children: [
           ConnectionButton (),
           SizedBox (

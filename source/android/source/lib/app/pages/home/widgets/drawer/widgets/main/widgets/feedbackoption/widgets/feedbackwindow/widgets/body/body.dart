@@ -20,7 +20,7 @@ class BodyComponent extends HookWidget {
     final String text_2 = T.of(context).serviceNews_2;
     final String text_3 = T.of(context).serviceNews_3;
 
-    final String link = 'https://t.me/LinetteTelegramChannel';
+    const String link = 'https://t.me/LinetteTelegramChannel';
 
 
     Future openLink () async {
@@ -71,19 +71,19 @@ class BodyComponent extends HookWidget {
     return (
 
       Container (
-        padding: EdgeInsets.symmetric (
+        padding: const EdgeInsets.symmetric (
           horizontal: 20
         ),
         child: Stack (
           children: [
             SingleChildScrollView (
               child: Padding (
-                padding: EdgeInsets.only (
+                padding: const EdgeInsets.only (
                   top: 10
                 ),
                 child: Text.rich (
                   TextSpan (
-                    style: TextStyle (
+                    style: const TextStyle (
                       fontFamily: 'Fedoka',
                       fontWeight: FontWeight.w400,
                       fontSize: 16

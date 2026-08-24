@@ -10,7 +10,7 @@ void main () {
 
 	runApp (
 
-    ProviderScope (
+    const ProviderScope (
 
       child: App ()
 

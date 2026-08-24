@@ -24,7 +24,7 @@ class Flag extends StatelessWidget {
       Container (
         width: 42,
         height: 42,
-        padding: EdgeInsets.all (2.5),
+        padding: const EdgeInsets.all (2.5),
         decoration: BoxDecoration (
           border: Border.all (
             color: context.colors.circlesBorder,
@@ -33,10 +33,10 @@ class Flag extends StatelessWidget {
           shape: BoxShape.circle,
           color: context.colors.circlesBack
         ),
+        clipBehavior: Clip.antiAlias,
         child: ClipOval (
           child: SvgPicture.asset (flag)
-        ),
-        clipBehavior: Clip.antiAlias
+        )
       )
 
     );

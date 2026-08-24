@@ -40,7 +40,7 @@ class Connection extends HookWidget {
           isPressed: isPressed,
           scaleRate: 0.975,
           child: Container (
-            padding: EdgeInsets.fromLTRB (16 + 4, 14, 32 + 4, 14),
+            padding: const EdgeInsets.fromLTRB (16 + 4, 14, 32 + 4, 14),
             decoration: BoxDecoration (
               border: Border.all (
                 width: 2,

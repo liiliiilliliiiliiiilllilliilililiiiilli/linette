@@ -417,9 +417,11 @@ class AppColors extends ThemeExtension <AppColors> {
 
   @override AppColors lerp (ThemeExtension <AppColors>? other, double t) {
 
-    if (other is! AppColors)
+    if (other is! AppColors) {
 
       return (this);
+
+    }
 
     return (
 

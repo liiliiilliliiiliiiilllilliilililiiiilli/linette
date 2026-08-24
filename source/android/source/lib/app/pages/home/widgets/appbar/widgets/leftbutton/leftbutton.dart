@@ -22,8 +22,6 @@ class LeftButton extends HookWidget {
 
     void handleTap () {
 
-      print ('Нажата кнопка открытия меню!');
-
       Scaffold.of(context).openDrawer ();
 
     }
@@ -37,7 +35,7 @@ class LeftButton extends HookWidget {
         child: AnimatorPresser (
           isPressed: isPressed,
           child: AnimatedContainer (
-            duration: Duration (
+            duration: const Duration (
               milliseconds: 80
             ),
             transform: Matrix4.translationValues (0, isPressed.value ? 1.0 : 0.0, 0),
@@ -45,14 +43,14 @@ class LeftButton extends HookWidget {
               child: Container (
                 width: 38,
                 height: 38,
-                padding: EdgeInsets.all (7.5),
+                padding: const EdgeInsets.all (7.5),
                 decoration: BoxDecoration (
                   color: context.colors.appBarButtonBack,
                   border: Border.all (
                     width: 3,
                     color: context.colors.appBarButtonBorder
                   ),
-                  borderRadius: BorderRadius.all (Radius.circular (10))
+                  borderRadius: const BorderRadius.all (Radius.circular (10))
                 ),
                 child: SvgPicture.asset (
                   context.icons.menu,

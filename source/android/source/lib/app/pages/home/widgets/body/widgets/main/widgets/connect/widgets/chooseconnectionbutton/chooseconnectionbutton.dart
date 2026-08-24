@@ -26,8 +26,6 @@ class ChooseConnectionButton extends HookWidget {
 
     void handleTap (context) {
 
-      print ('Нажата кнопка выбора подключения!');
-
       Navigator.pushNamed (context, '/connections');
 
     }
@@ -41,7 +39,7 @@ class ChooseConnectionButton extends HookWidget {
         child: AnimatorPresser (
           isPressed: isPressed,
           child: Container (
-            padding: EdgeInsets.all (5),
+            padding: const EdgeInsets.all (5),
             child: Row (
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,

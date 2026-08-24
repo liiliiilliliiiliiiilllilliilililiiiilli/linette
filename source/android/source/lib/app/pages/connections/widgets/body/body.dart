@@ -60,13 +60,13 @@ class BodyComponent extends HookWidget {
           color: Colors.transparent,
           child: Container (
             color: context.colors.back,
-            padding: EdgeInsets.only (
+            padding: const EdgeInsets.only (
               top: 30
             ),
             child: Column (
               spacing: 16,
               children: [
-                Liner (
+                const Liner (
                   onlineNum: 3
                 ),
                 Connections (

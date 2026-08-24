@@ -19,11 +19,11 @@ class Main extends StatelessWidget {
 
       Expanded (
         child: Container (
-          padding: EdgeInsets.fromLTRB (20, 12, 20, 12),
+          padding: const EdgeInsets.fromLTRB (20, 12, 20, 12),
           decoration: BoxDecoration (
             color: context.colors.drawerBack
           ),
-          child: Column (
+          child: const Column (
             spacing: 10,
             children: [
               LanguageOption (),

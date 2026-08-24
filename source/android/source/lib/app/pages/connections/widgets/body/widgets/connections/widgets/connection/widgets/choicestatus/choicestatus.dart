@@ -25,7 +25,7 @@ class ChoiceStatus extends StatelessWidget {
     return (
 
       Transform.translate (
-        offset: Offset (0, -1),
+        offset: const Offset (0, -1),
         child: Text (
           text,
           style: TextStyle (

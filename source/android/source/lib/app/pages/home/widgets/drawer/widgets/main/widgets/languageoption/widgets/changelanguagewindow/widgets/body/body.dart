@@ -44,14 +44,14 @@ class BodyComponent extends HookConsumerWidget {
     return (
 
       Container (
-        padding: EdgeInsets.symmetric (
+        padding: const EdgeInsets.symmetric (
           horizontal: 20 - 4
         ),
         child: Stack (
           children: [
             SingleChildScrollView (
               child: Padding (
-                padding: EdgeInsets.only (
+                padding: const EdgeInsets.only (
                   top: 5
                 ),
                 child: Material (

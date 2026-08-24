@@ -18,7 +18,7 @@ class TapHint extends HookWidget {
   @override Widget build (BuildContext context) {
 
     final controller = useAnimationController (
-      duration: Duration (
+      duration: const Duration (
         milliseconds: 1100
       ),
       initialValue: 1.0
@@ -53,7 +53,7 @@ class TapHint extends HookWidget {
 
     useEffect (() {
 
-      final timer = Timer.periodic (Duration (milliseconds: 7200), (t) async {
+      final timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
 
         await controller.reverse ();
         await controller.forward ();

@@ -25,7 +25,7 @@ class ChangeLanguageWindow extends StatelessWidget {
               boxShadow: [
                 BoxShadow (
                   color: context.colors.black.withAlpha (64),
-                  offset: Offset (0, 10),
+                  offset: const Offset (0, 10),
                   blurRadius: 12,
                   spreadRadius: 5
                 )
@@ -36,7 +36,7 @@ class ChangeLanguageWindow extends StatelessWidget {
               child: Container (
                 width: 300,
                 color: context.colors.windowMainBack,
-                child: Column (
+                child: const Column (
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.stretch,

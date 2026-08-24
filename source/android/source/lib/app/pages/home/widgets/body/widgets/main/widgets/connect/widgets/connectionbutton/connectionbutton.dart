@@ -21,11 +21,7 @@ class ConnectionButton extends HookWidget {
     final isPressed = useState (false);
 
 
-    void handleTap () {
-
-      print ('Нажата кнопка подключения!');
-
-    }
+    void handleTap () {}
 
 
     return (
@@ -39,12 +35,12 @@ class ConnectionButton extends HookWidget {
             child: Opacity (
               opacity: 0.9,
               child: AnimatedContainer (
-                duration: Duration (
+                duration: const Duration (
                   milliseconds: 80
                 ),
                 width: 225,
                 height: 225,
-                padding: EdgeInsets.all (32),
+                padding: const EdgeInsets.all (32),
                 decoration: BoxDecoration (
                   border: Border.all (
                     width: 4,
@@ -54,7 +50,7 @@ class ConnectionButton extends HookWidget {
                   boxShadow: [
                     BoxShadow (
                       color: context.colors.black.withAlpha (150),
-                      offset: isPressed.value ? Offset (0, 5 * 0.825) : Offset (0, 5),
+                      offset: isPressed.value ? const Offset (0, 5 * 0.825) : const Offset (0, 5),
                       blurRadius: isPressed.value ? 8 * 0.825 : 8,
                       spreadRadius: isPressed.value ? 2.5 * 0.825 : 2.5
                     )
@@ -63,7 +59,7 @@ class ConnectionButton extends HookWidget {
                 ),
                 child: Center (
                   child: Transform.translate (
-                    offset: Offset (0, -2),
+                    offset: const Offset (0, -2),
                     child: Transform.rotate (
                       angle: 5 * math.pi / 180,
                       child: SvgPicture.asset (context.icons.olive)

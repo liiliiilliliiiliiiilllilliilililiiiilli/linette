@@ -70,13 +70,13 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
         child: Container (
           color: Colors.transparent,
           child: PreferredSize (
-            preferredSize: Size.fromHeight (kToolbarHeight + 10),
+            preferredSize: const Size.fromHeight (kToolbarHeight + 10),
             child: Padding (
-              padding: EdgeInsets.only (
+              padding: const EdgeInsets.only (
                 top: 5
               ),
               child: AppBar (
-                leading: Padding (
+                leading: const Padding (
                   padding: EdgeInsetsGeometry.only (
                     left: 16
                   ),
@@ -84,17 +84,17 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
                 ),
                 automaticallyImplyLeading: false,
                 leadingWidth: 56 + 16,
-                title: TitleComponent (),
+                title: const TitleComponent (),
                 centerTitle: true,
-                actions: [
+                actions: const [
                   RightButton ()
                 ],
-                actionsPadding: EdgeInsetsGeometry.only (
+                actionsPadding: const EdgeInsetsGeometry.only (
                   right: 8 + 16
                 ),
                 backgroundColor: context.colors.appBarBack,
                 bottom: PreferredSize (
-                  preferredSize: Size.fromHeight (2),
+                  preferredSize: const Size.fromHeight (2),
                   child: Container (
                     height: 2,
                     color: context.colors.appBarBorder

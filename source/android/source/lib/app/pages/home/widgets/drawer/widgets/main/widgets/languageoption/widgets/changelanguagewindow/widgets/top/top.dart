@@ -19,7 +19,7 @@ class TopComponent extends StatelessWidget {
     return (
 
       Container (
-        padding: EdgeInsets.only (
+        padding: const EdgeInsets.only (
           top: 12 + 2,
           left: 4 + 16,
           bottom: 12

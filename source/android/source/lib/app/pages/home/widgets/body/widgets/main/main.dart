@@ -18,11 +18,11 @@ class Main extends StatelessWidget {
 
       Expanded (
         child: Container (
-          padding: EdgeInsets.only (
+          padding: const EdgeInsets.only (
             top: 28,
             bottom: 15
           ),
-          child: Column (
+          child: const Column (
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Status (),

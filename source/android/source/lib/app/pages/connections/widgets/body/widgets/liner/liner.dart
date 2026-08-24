@@ -33,10 +33,10 @@ class Liner extends StatelessWidget {
             width: double.infinity
           ),
           Transform.translate (
-            offset: Offset (38, -2),
+            offset: const Offset (38, -2),
             child: Container (
               color: context.colors.back,
-              padding: EdgeInsets.only (
+              padding: const EdgeInsets.only (
                 left: 8,
                 right: 8
               ),

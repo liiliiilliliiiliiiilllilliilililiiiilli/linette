@@ -30,8 +30,8 @@ class App extends ConsumerWidget {
         builder: (context, selectedOption, _) {
 
           final backgroundColor = currentTheme.value == AppThemeOption.darkGreen
-            ? Color (0xff000000)
-            : Color (0xfff2f2f2);
+            ? const Color (0xff000000)
+            : const Color (0xfff2f2f2);
 
 
           final AppAssets customAssets;
@@ -80,7 +80,7 @@ class App extends ConsumerWidget {
                 ]
               ),
               initialRoute: '/home',
-              localizationsDelegates: [
+              localizationsDelegates: const [
                   T.delegate,
                   GlobalMaterialLocalizations.delegate,
                   GlobalWidgetsLocalizations.delegate,
@@ -89,8 +89,8 @@ class App extends ConsumerWidget {
               supportedLocales: T.delegate.supportedLocales,
               locale: currentLocale,
               routes: {
-                '/home': (context) => Home (),
-                '/connections': (context) => Connections ()
+                '/home': (context) => const Home (),
+                '/connections': (context) => const Connections ()
               }
             )
 

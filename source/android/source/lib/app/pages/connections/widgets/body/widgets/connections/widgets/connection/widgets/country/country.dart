@@ -28,7 +28,7 @@ class Country extends StatelessWidget {
           Flag (
             flag: flag
           ),
-          SizedBox (
+          const SizedBox (
             width: 16
           ),
           Name (

@@ -24,8 +24,6 @@ class BottomComponent extends HookWidget {
 
     void handleTap () {
 
-      print ('Нажата кнопка "Готово"!');
-
       Navigator.pop (context);
 
     }
@@ -41,7 +39,7 @@ class BottomComponent extends HookWidget {
           scaleRate: 0.98,
           child: Container (
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.only (
+            padding: const EdgeInsets.only (
               top: 12,
               right: 4 + 32,
               bottom: 12 + 4

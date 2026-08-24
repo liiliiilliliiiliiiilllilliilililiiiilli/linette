@@ -117,9 +117,11 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
   @override AppAssets lerp (ThemeExtension <AppAssets>? other, double t) {
 
-    if (other is! AppAssets)
+    if (other is! AppAssets) {
 
       return (this);
+
+    }
 
     return (t < 0.5 ? this : other);
 

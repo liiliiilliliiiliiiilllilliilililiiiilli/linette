@@ -20,14 +20,14 @@ class BodyComponent extends StatelessWidget {
 
       Expanded (
         child: Container (
-          padding: EdgeInsets.symmetric (
+          padding: const EdgeInsets.symmetric (
             horizontal: 20
           ),
           child: Stack (
             children: [
               SingleChildScrollView (
                 child: Padding (
-                  padding: EdgeInsets.only (
+                  padding: const EdgeInsets.only (
                     top: 10
                   ),
                   child: Text (

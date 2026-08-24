@@ -28,13 +28,10 @@ class LanguageOption extends HookConsumerWidget {
 
     void handleTap () async {
 
-      print ('Нажата кнопка опции смены языка!');
-
-
       Navigator.pop (context);
 
 
-      await Future.delayed (Duration (milliseconds: 150));
+      await Future.delayed (const Duration (milliseconds: 150));
 
       if (!context.mounted) return;
 
@@ -44,14 +41,14 @@ class LanguageOption extends HookConsumerWidget {
         barrierDismissible: true,
         barrierLabel: 'Dismiss',
         barrierColor: Colors.black.withAlpha (128),
-        transitionDuration: Duration (
+        transitionDuration: const Duration (
           milliseconds: 175
         ),
         pageBuilder: (context, animation, secondaryAnimation) {
 
           return (
 
-            ChangeLanguageWindow ()
+            const ChangeLanguageWindow ()
 
           );
 
@@ -116,7 +113,7 @@ class LanguageOption extends HookConsumerWidget {
           isPressed: isPressed,
           scaleRate: 0.97,
           child: Container (
-            padding: EdgeInsets.only (
+            padding: const EdgeInsets.only (
               top: 10,
               bottom: 10
             ),
@@ -130,7 +127,7 @@ class LanguageOption extends HookConsumerWidget {
                   ),
                   height: 19
                 ),
-                SizedBox (
+                const SizedBox (
                   width: 12
                 ),
                 Text (

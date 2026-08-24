@@ -19,9 +19,9 @@ class Home extends StatelessWidget {
 
       Scaffold (
         drawerEnableOpenDragGesture: false,
-        appBar: AppBarComponent (),
-        body: BodyComponent (),
-        drawer: DrawerComponent (),
+        appBar: const AppBarComponent (),
+        body: const BodyComponent (),
+        drawer: const DrawerComponent (),
         backgroundColor: context.colors.appBarBack
       )
 

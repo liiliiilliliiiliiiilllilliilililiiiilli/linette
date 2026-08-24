@@ -21,7 +21,7 @@ class Name extends StatelessWidget {
     return (
 
       Transform.translate (
-        offset: Offset (0, -1),
+        offset: const Offset (0, -1),
         child: Text (
           name,
           style: TextStyle (

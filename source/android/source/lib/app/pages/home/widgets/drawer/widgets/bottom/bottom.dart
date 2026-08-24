@@ -24,8 +24,6 @@ class Bottom extends HookWidget {
 
     void handleTap () {
 
-      print ('Нажата кнопка автоматического подключения к VPN!');
-
       isChecked.value = !isChecked.value;
 
     }
@@ -43,7 +41,7 @@ class Bottom extends HookWidget {
         onLongPressCancel: () => isPressed.value = false,
         child: Container (
           alignment: Alignment.bottomLeft,
-          padding: EdgeInsets.fromLTRB (20, 15, 20, 15),
+          padding: const EdgeInsets.fromLTRB (20, 15, 20, 15),
           decoration: BoxDecoration (
             color: context.colors.appBarBack,
             border: Border (

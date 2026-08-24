@@ -25,7 +25,7 @@ class HintWindow extends StatelessWidget {
               boxShadow: [
                 BoxShadow (
                   color: context.colors.black.withAlpha (64),
-                  offset: Offset (0, 10),
+                  offset: const Offset (0, 10),
                   blurRadius: 12,
                   spreadRadius: 5
                 )
@@ -34,13 +34,13 @@ class HintWindow extends StatelessWidget {
             child: ClipRRect (
               borderRadius: BorderRadius.circular (8),
               child: ConstrainedBox (
-                constraints: BoxConstraints (
+                constraints: const BoxConstraints (
                   maxHeight: 500
                 ),
                 child: Container (
                   width: 340,
                   color: context.colors.windowMainBack,
-                  child: Column (
+                  child: const Column (
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [

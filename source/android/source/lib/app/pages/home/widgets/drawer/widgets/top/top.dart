@@ -20,7 +20,7 @@ class Top extends StatelessWidget {
 
       Container (
         alignment: Alignment.bottomLeft,
-        padding: EdgeInsets.only (
+        padding: const EdgeInsets.only (
           left: 30,
           bottom: 20
         ),

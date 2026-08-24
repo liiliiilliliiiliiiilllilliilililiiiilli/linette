@@ -28,7 +28,7 @@ class DrawerComponent extends Drawer {
       PopScope (
         canPop: false,
         onPopInvokedWithResult: onPopInvokedWithResult,
-        child: Drawer (
+        child: const Drawer (
           shape: RoundedRectangleBorder (
             borderRadius: BorderRadius.zero
           ),

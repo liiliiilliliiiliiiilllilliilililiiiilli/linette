@@ -72,7 +72,7 @@ class BodyComponent extends HookWidget {
                 topDarkness: 0.8,
                 topDarknessHeight: 0.375
               ),
-              Column (
+              const Column (
                 children: [
                   Main (),
                   Bottom ()
