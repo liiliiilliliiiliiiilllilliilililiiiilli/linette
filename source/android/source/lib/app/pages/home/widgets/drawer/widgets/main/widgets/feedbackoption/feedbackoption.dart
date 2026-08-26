@@ -18,9 +18,6 @@ class FeedbackOption extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final text = T.of(context).feedBack;
-
-
     final isPressed = useState (false);
 
 
@@ -34,64 +31,70 @@ class FeedbackOption extends HookWidget {
       if (!context.mounted) return;
 
 
-      showGeneralDialog (
-        context: context,
-        barrierDismissible: true,
-        barrierLabel: 'Dismiss',
-        barrierColor: Colors.black.withAlpha (128),
-        transitionDuration: const Duration (
-          milliseconds: 175
-        ),
-        pageBuilder: (context, animation, secondaryAnimation) {
+      Widget pageBuilder (context, animation, secondaryAnimation) {
 
-          return (
+        return (
 
-            const FeedbackWindow ()
+          const FeedbackWindow ()
 
-          );
+        );
 
-        },
-        transitionBuilder: (context, animation, secondaryAnimation, child) {
+      }
 
-          final fadeAnimation = CurvedAnimation (
-            parent: animation,
-            curve: Curves.easeOut,
-            reverseCurve: Curves.easeIn
-          );
 
-          if (animation.status == AnimationStatus.reverse) {
+      Widget transitionBuilder (context, animation, secondaryAnimation, child) {
 
-            return (
+        final fadeAnimation = CurvedAnimation (
+          parent: animation,
+          curve: Curves.easeOut,
+          reverseCurve: Curves.easeIn
+        );
 
-              FadeTransition (
-                opacity: fadeAnimation,
-                child: child
-              )
-
-            );
-
-          }
-
-          final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
-            CurvedAnimation (
-              parent: animation,
-              curve: Curves.easeOut
-            )
-          );
+        if (animation.status == AnimationStatus.reverse) {
 
           return (
 
             FadeTransition (
               opacity: fadeAnimation,
-              child: ScaleTransition (
-                scale: scaleAnimation,
-                child: child
-              )
+              child: child
             )
 
           );
 
         }
+
+        final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
+          CurvedAnimation (
+            parent: animation,
+            curve: Curves.easeOut
+          )
+        );
+
+        return (
+
+          FadeTransition (
+            opacity: fadeAnimation,
+            child: ScaleTransition (
+              scale: scaleAnimation,
+              child: child
+            )
+          )
+
+        );
+
+      }
+
+
+      showGeneralDialog (
+        context: context,
+        barrierDismissible: true,
+        barrierLabel: 'Dismiss',
+        barrierColor: context.colors.windowBarrier,
+        transitionDuration: const Duration (
+          milliseconds: 175
+        ),
+        pageBuilder: pageBuilder,
+        transitionBuilder: transitionBuilder
       );
 
     }
@@ -129,7 +132,7 @@ class FeedbackOption extends HookWidget {
                   width: 12
                 ),
                 Text (
-                  text,
+                  T.of(context).feedBack,
                   style: TextStyle (
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,

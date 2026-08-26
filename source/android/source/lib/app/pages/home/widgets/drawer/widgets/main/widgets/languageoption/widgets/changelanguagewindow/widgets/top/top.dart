@@ -13,9 +13,6 @@ class TopComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = T.of(context).appLanguage;
-
-
     return (
 
       Container (
@@ -34,7 +31,7 @@ class TopComponent extends StatelessWidget {
           color: context.colors.windowTopBack
         ),
         child: Text (
-          text,
+          T.of(context).appLanguage,
           style: TextStyle (
             fontFamily: 'Fedoka',
             fontWeight: FontWeight.w600,

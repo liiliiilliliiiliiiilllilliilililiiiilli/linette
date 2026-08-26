@@ -65,9 +65,6 @@ class TapHint extends HookWidget {
     }, const []);
 
 
-    final String text = T.of(context).tapToConectToVpn;
-
-
     return (
 
       ScaleTransition (
@@ -89,7 +86,7 @@ class TapHint extends HookWidget {
                 height: 17
               ),
               Text (
-                text,
+                T.of(context).tapToConectToVpn,
                 style: TextStyle (
                   fontFamily: 'Fredoka',
                   fontWeight: FontWeight.w500,

@@ -1,6 +1,8 @@
 {
 	"@@locale": "zh",
 
+	"title": "Linette",
+
 	"connectionIsNotProtected": "连接未受保护",
 	"tapToConectToVpn": "点击连接VPN",
 	"noConnection": "无连接",
@@ -47,5 +49,7 @@
 	"germany": "德国",
 
 	"done": "完成",
-	"ok": "确定"
+	"ok": "确定",
+
+	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel"
 }

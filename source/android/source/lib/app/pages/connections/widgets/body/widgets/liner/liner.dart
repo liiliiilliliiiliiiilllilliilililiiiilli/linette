@@ -19,9 +19,6 @@ class Liner extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = T.of(context).numOnline(onlineNum);
-
-
     return (
 
       Stack (
@@ -41,7 +38,7 @@ class Liner extends StatelessWidget {
                 right: 8
               ),
               child: Text (
-                text,
+                T.of(context).numOnline(onlineNum),
                 style: TextStyle (
                   fontFamily: 'Archivo',
                   fontWeight: FontWeight.w700,

@@ -13,9 +13,6 @@ class Top extends StatelessWidget {
 
   @override build (BuildContext context) {
 
-    final text = T.of(context).options;
-
-
     return (
 
       Container (
@@ -35,7 +32,7 @@ class Top extends StatelessWidget {
           )
         ),
         child: Text (
-          text,
+          T.of(context).options,
           style: TextStyle (
             fontFamily: 'Archivo',
             fontWeight: FontWeight.w500,

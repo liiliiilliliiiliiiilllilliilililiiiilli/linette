@@ -21,9 +21,6 @@ class ChooseConnectionButton extends HookWidget {
     final isPressed = useState (false);
 
 
-    final String text = T.of(context).netherlands;
-
-
     void handleTap (context) {
 
       Navigator.pushNamed (context, '/connections');
@@ -55,7 +52,7 @@ class ChooseConnectionButton extends HookWidget {
                   height: 17
                 ),
                 Text (
-                  text,
+                  T.of(context).netherlands,
                   style: TextStyle (
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w600,

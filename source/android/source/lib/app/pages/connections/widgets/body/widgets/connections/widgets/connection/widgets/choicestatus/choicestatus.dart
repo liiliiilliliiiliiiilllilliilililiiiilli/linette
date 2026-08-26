@@ -19,7 +19,9 @@ class ChoiceStatus extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = isChosen ? T.of(context).chosen : '';
+    final String text = isChosen
+      ? T.of(context).chosen
+      : '';
 
 
     return (

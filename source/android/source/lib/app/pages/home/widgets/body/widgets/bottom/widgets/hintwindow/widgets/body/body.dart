@@ -13,9 +13,6 @@ class BodyComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = T.of(context).serviceDescription;
-
-
     return (
 
       Expanded (
@@ -31,7 +28,7 @@ class BodyComponent extends StatelessWidget {
                     top: 10
                   ),
                   child: Text (
-                    text,
+                    T.of(context).serviceDescription,
                     style: TextStyle (
                       fontFamily: 'Fedoka',
                       fontWeight: FontWeight.w400,

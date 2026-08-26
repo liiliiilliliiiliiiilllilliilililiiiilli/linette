@@ -29,31 +29,31 @@ class App extends ConsumerWidget {
         valueListenable: currentTheme,
         builder: (context, selectedOption, _) {
 
-          final backgroundColor = currentTheme.value == AppThemeOption.darkGreen
+          final Color backgroundColor = currentTheme.value == AppThemeOption.darkGreen
             ? const Color (0xff000000)
             : const Color (0xfff2f2f2);
 
 
+          final Brightness baseBrightness;
           final AppAssets customAssets;
           final AppColors customColors;
-          final Brightness baseBrightness;
 
 
           switch (selectedOption) {
 
             case AppThemeOption.darkGreen:
 
+              baseBrightness = Brightness.dark;
               customAssets = AppAssets.darkGreen;
               customColors = AppColors.darkGreen;
-              baseBrightness = Brightness.dark;
 
               break;
 
             case AppThemeOption.lightGreen:
 
+              baseBrightness = Brightness.light;
               customAssets = AppAssets.lightGreen;
               customColors = AppColors.lightGreen;
-              baseBrightness = Brightness.light;
 
               break;
 

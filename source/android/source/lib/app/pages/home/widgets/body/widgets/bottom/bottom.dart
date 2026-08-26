@@ -20,10 +20,6 @@ class Bottom extends HookWidget {
     final isPressed = useState (false);
 
 
-    final String text_1 = T.of(context).readMore_1;
-    final String text_2 = T.of(context).readMore_2;
-
-
     void handleTap () async {
 
       await Future.delayed (const Duration (milliseconds: 150));
@@ -31,65 +27,78 @@ class Bottom extends HookWidget {
       if (!context.mounted) return;
 
 
-      showGeneralDialog (
-        context: context,
-        barrierDismissible: true,
-        barrierLabel: 'Dismiss',
-        barrierColor: Colors.black.withAlpha (128),
-        transitionDuration: const Duration (milliseconds: 175),
-        pageBuilder: (context, animation, secondaryAnimation) {
+      Widget pageBuilder (context, animation, secondaryAnimation) {
 
-          return (
+        return (
 
-            const HintWindow ()
+          const HintWindow ()
 
-          );
+        );
 
-        },
-        transitionBuilder: (context, animation, secondaryAnimation, child) {
+      }
 
-          final fadeAnimation = CurvedAnimation (
-            parent: animation,
-            curve: Curves.easeOut,
-            reverseCurve: Curves.easeIn
-          );
 
-          if (animation.status == AnimationStatus.reverse) {
+      Widget transitionBuilder (context, animation, secondaryAnimation, child) {
 
-            return (
+        final fadeAnimation = CurvedAnimation (
+          parent: animation,
+          curve: Curves.easeOut,
+          reverseCurve: Curves.easeIn
+        );
 
-              FadeTransition (
-                opacity: fadeAnimation,
-                child: child
-              )
-
-            );
-
-          }
-
-          final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
-            CurvedAnimation (
-              parent: animation,
-              curve: Curves.easeOut
-            )
-          );
+        if (animation.status == AnimationStatus.reverse) {
 
           return (
 
             FadeTransition (
               opacity: fadeAnimation,
-              child: ScaleTransition (
-                scale: scaleAnimation,
-                child: child
-              )
+              child: child
             )
 
           );
 
         }
+
+        final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
+          CurvedAnimation (
+            parent: animation,
+            curve: Curves.easeOut
+          )
+        );
+
+        return (
+
+          FadeTransition (
+            opacity: fadeAnimation,
+            child: ScaleTransition (
+              scale: scaleAnimation,
+              child: child
+            )
+          )
+
+        );
+
+      }
+
+
+      showGeneralDialog (
+        context: context,
+        barrierDismissible: true,
+        barrierLabel: 'Dismiss',
+        barrierColor: context.colors.windowBarrier,
+        transitionDuration: const Duration (
+          milliseconds: 175
+        ),
+        pageBuilder: pageBuilder,
+        transitionBuilder: transitionBuilder
       );
 
     }
+
+
+    final double translationYValue = isPressed.value
+      ? -1
+      : 0;
 
 
     return (
@@ -128,7 +137,7 @@ class Bottom extends HookWidget {
                   duration: const Duration (
                     milliseconds: 80
                   ),
-                  transform: Matrix4.translationValues (0, isPressed.value ? -1.0 : 0.0, 0),
+                  transform: Matrix4.translationValues (0, translationYValue, 0),
                   child: Center (
                     child: Text.rich (
                       maxLines: 2,
@@ -137,17 +146,17 @@ class Bottom extends HookWidget {
                         style: const TextStyle (
                           fontFamily: 'Fredoka',
                           fontWeight: FontWeight.w400,
-                          fontSize: 16
+                          fontSize: 15.75
                         ),
                         children: [
                           TextSpan (
-                            text: text_1,
+                            text: T.of(context).readMore_1,
                             style: TextStyle (
                               color: context.colors.textBottomBarPrime
                             )
                           ),
                           TextSpan (
-                            text: text_2,
+                            text: T.of(context).readMore_2,
                             style: TextStyle (
                               color: context.colors.textBottomBar
                             )

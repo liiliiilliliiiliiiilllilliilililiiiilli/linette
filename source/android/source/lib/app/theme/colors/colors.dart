@@ -16,13 +16,11 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color blockBorder;
   final Color bottomBarBack;
   final Color bottomBarBorder;
-  final Color buttonsBorder;
-  final Color checkBack;
-  final Color checkBorder;
   final Color checkColor;
   final Color checkColorBack;
   final Color circlesBack;
   final Color circlesBorder;
+  final Color connectionButtonShadow;
   final Color drawerBack;
   final Color green;
   final Color grey;
@@ -44,9 +42,11 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color noisePrimary;
   final Color noiseSecondary;
   final Color prime;
-  final Color primeChoice;
-  final Color primeGlow;
-  final Color primeHint;
+  final Color radioButtonBack;
+  final Color radioButtonInsidesChosen;
+  final Color radioButtonInsidesNotChosen;
+  final Color radioButtonOutsidesChosen;
+  final Color radioButtonOutsidesNotChosen;
   final Color red;
   final Color textBlock;
   final Color textBottomBar;
@@ -60,13 +60,13 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color textStatus;
   final Color textTapHint;
   final Color textTitle;
-  final Color white;
-  final Color windowBack;
-  final Color windowBorder;
+  final Color transparent;
+  final Color windowBarrier;
   final Color windowBottomText;
   final Color windowMainBack;
   final Color windowMainText;
   final Color windowSeparator;
+  final Color windowShadow;
   final Color windowTop;
   final Color windowTopBack;
   final Color windowTopText;
@@ -82,13 +82,11 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.blockBorder,
     required this.bottomBarBack,
     required this.bottomBarBorder,
-    required this.buttonsBorder,
-    required this.checkBack,
-    required this.checkBorder,
     required this.checkColor,
     required this.checkColorBack,
     required this.circlesBack,
     required this.circlesBorder,
+    required this.connectionButtonShadow,
     required this.drawerBack,
     required this.green,
     required this.grey,
@@ -110,9 +108,11 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.noisePrimary,
     required this.noiseSecondary,
     required this.prime,
-    required this.primeChoice,
-    required this.primeGlow,
-    required this.primeHint,
+    required this.radioButtonBack,
+    required this.radioButtonInsidesChosen,
+    required this.radioButtonInsidesNotChosen,
+    required this.radioButtonOutsidesChosen,
+    required this.radioButtonOutsidesNotChosen,
     required this.red,
     required this.textBlock,
     required this.textBottomBar,
@@ -126,13 +126,13 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.textStatus,
     required this.textTapHint,
     required this.textTitle,
-    required this.white,
-    required this.windowBack,
-    required this.windowBorder,
+    required this.transparent,
+    required this.windowBarrier,
     required this.windowBottomText,
     required this.windowMainBack,
     required this.windowMainText,
     required this.windowSeparator,
+    required this.windowShadow,
     required this.windowTop,
     required this.windowTopBack,
     required this.windowTopText
@@ -150,13 +150,11 @@ class AppColors extends ThemeExtension <AppColors> {
     blockBorder: Color (0xff394335),
     bottomBarBack: Color (0x80070707),
     bottomBarBorder: Color (0xff000000),
-    buttonsBorder: Color (0xff202020),
-    checkBack: Color (0xff1f1f1f),
-    checkBorder: Color (0xff3e3e3e),
     checkColor: Color (0xff0b0b0b),
     checkColorBack: Color (0xff8b9e80),
     circlesBack: Color (0xff000000),
     circlesBorder: Color (0xff303030),
+    connectionButtonShadow: Color (0x94000000),
     drawerBack: Color (0xff0b0b0b),
     green: Color (0xff4caf50),
     grey: Color (0xff8b8b8b),
@@ -178,9 +176,11 @@ class AppColors extends ThemeExtension <AppColors> {
     noisePrimary: Color (0xff567560),
     noiseSecondary: Color (0xff000000),
     prime: Color (0xff8b9e80),
-    primeChoice: Color (0xff394335),
-    primeGlow: Color (0xff567560),
-    primeHint: Color (0xff687262),
+    radioButtonBack: Color (0xff000000),
+    radioButtonInsidesChosen: Color (0xff8b9e80),
+    radioButtonInsidesNotChosen: Color (0xff000000),
+    radioButtonOutsidesChosen: Color (0x808b9e80),
+    radioButtonOutsidesNotChosen: Color (0x40808080),
     red: Color (0xfff44336),
     textBlock: Color (0xfff2f2f2),
     textBottomBar: Color (0xff8b8b8b),
@@ -194,13 +194,13 @@ class AppColors extends ThemeExtension <AppColors> {
     textStatus: Color (0xfff2f2f2),
     textTapHint: Color (0xff687262),
     textTitle: Color (0xfff2f2f2),
-    white: Color (0xfff2f2f2),
-    windowBack: Color (0xff141414),
-    windowBorder: Color (0xff0f0f0f),
+    transparent: Color (0x00000000),
+    windowBarrier: Color (0x80000000),
     windowBottomText: Color (0xff8b9e80),
     windowMainBack: Color (0xff141414),
     windowMainText: Color (0xfff2f2f2),
     windowSeparator: Color (0xff0f0f0f),
+    windowShadow: Color (0x40000000),
     windowTop: Color (0xff1a1a1a),
     windowTopBack: Color (0xff1a1a1a),
     windowTopText: Color (0xfff2f2f2)
@@ -217,13 +217,11 @@ class AppColors extends ThemeExtension <AppColors> {
     blockBorder: Color (0xffcdcdcd),
     bottomBarBack: Color (0x80ffffff),
     bottomBarBorder: Color (0xffcdcdcd),
-    buttonsBorder: Color (0xff202020),
-    checkBack: Color (0xff1f1f1f),
-    checkBorder: Color (0xff3e3e3e),
     checkColor: Color (0xfff2f2f2),
     checkColorBack: Color (0xff8b9e80),
     circlesBack: Color (0xfff2f2f2),
     circlesBorder: Color (0xffcdcdcd),
+    connectionButtonShadow: Color (0x94000000),
     drawerBack: Color (0xfff2f2f2),
     green: Color (0xff4caf50),
     grey: Color (0xff8b8b8b),
@@ -245,9 +243,11 @@ class AppColors extends ThemeExtension <AppColors> {
     noisePrimary: Color (0xff12361b),
     noiseSecondary: Color (0xffd8e0d7),
     prime: Color (0xff8b9e80),
-    primeChoice: Color (0xff394335),
-    primeGlow: Color (0xff567560),
-    primeHint: Color (0xff687262),
+    radioButtonBack: Color (0xffffffff),
+    radioButtonInsidesChosen: Color (0xff8b9e80),
+    radioButtonInsidesNotChosen: Color (0xffffffff),
+    radioButtonOutsidesChosen: Color (0x808b9e80),
+    radioButtonOutsidesNotChosen: Color (0x40808080),
     red: Color (0xfff44336),
     textBlock: Color (0xff000000),
     textBottomBar: Color (0xff000000),
@@ -261,13 +261,13 @@ class AppColors extends ThemeExtension <AppColors> {
     textStatus: Color (0xff000000),
     textTapHint: Color (0xff000000),
     textTitle: Color (0xff000000),
-    white: Color (0xfff2f2f2),
-    windowBack: Color (0xff141414),
-    windowBorder: Color (0xff0f0f0f),
+    transparent: Color (0x00000000),
+    windowBarrier: Color (0x80000000),
     windowBottomText: Color (0xff000000),
     windowMainBack: Color (0xfff2f2f2),
     windowMainText: Color (0xff000000),
     windowSeparator: Color (0xffcdcdcd),
+    windowShadow: Color (0x40000000),
     windowTop: Color (0xff1a1a1a),
     windowTopBack: Color (0xfffafafa),
     windowTopText: Color (0xff000000)
@@ -285,13 +285,11 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? blockBorder,
     Color? bottomBarBack,
     Color? bottomBarBorder,
-    Color? buttonsBorder,
-    Color? checkBack,
-    Color? checkBorder,
     Color? checkColor,
     Color? checkColorBack,
     Color? circlesBack,
     Color? circlesBorder,
+    Color? connectionButtonShadow,
     Color? drawerBack,
     Color? green,
     Color? grey,
@@ -313,9 +311,11 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? noisePrimary,
     Color? noiseSecondary,
     Color? prime,
-    Color? primeChoice,
-    Color? primeGlow,
-    Color? primeHint,
+    Color? radioButtonBack,
+    Color? radioButtonInsidesChosen,
+    Color? radioButtonInsidesNotChosen,
+    Color? radioButtonOutsidesChosen,
+    Color? radioButtonOutsidesNotChosen,
     Color? red,
     Color? textBlock,
     Color? textBottomBar,
@@ -329,13 +329,13 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? textStatus,
     Color? textTapHint,
     Color? textTitle,
-    Color? white,
-    Color? windowBack,
-    Color? windowBorder,
+    Color? transparent,
+    Color? windowBarrier,
     Color? windowBottomText,
     Color? windowMainBack,
     Color? windowMainText,
     Color? windowSeparator,
+    Color? windowShadow,
     Color? windowTop,
     Color? windowTopBack,
     Color? windowTopText
@@ -354,13 +354,11 @@ class AppColors extends ThemeExtension <AppColors> {
         blockBorder: blockBorder ?? this.blockBorder,
         bottomBarBack: bottomBarBack ?? this.bottomBarBack,
         bottomBarBorder: bottomBarBorder ?? this.bottomBarBorder,
-        buttonsBorder: buttonsBorder ?? this.buttonsBorder,
-        checkBack: checkBack ?? this.checkBack,
-        checkBorder: checkBorder ?? this.checkBorder,
         checkColor: checkColor ?? this.checkColor,
         checkColorBack: checkColorBack ?? this.checkColorBack,
         circlesBack: circlesBack ?? this.circlesBack,
         circlesBorder: circlesBorder ?? this.circlesBorder,
+        connectionButtonShadow: connectionButtonShadow ?? this.connectionButtonShadow,
         drawerBack: drawerBack ?? this.drawerBack,
         green: green ?? this.green,
         grey: grey ?? this.grey,
@@ -382,9 +380,11 @@ class AppColors extends ThemeExtension <AppColors> {
         noisePrimary: noisePrimary ?? this.noisePrimary,
         noiseSecondary: noiseSecondary ?? this.noiseSecondary,
         prime: prime ?? this.prime,
-        primeChoice: primeChoice ?? this.primeChoice,
-        primeGlow: primeGlow ?? this.primeGlow,
-        primeHint: primeHint ?? this.primeHint,
+        radioButtonBack: radioButtonBack ?? this.radioButtonBack,
+        radioButtonInsidesChosen: radioButtonInsidesChosen ?? this.radioButtonInsidesChosen,
+        radioButtonInsidesNotChosen: radioButtonInsidesNotChosen ?? this.radioButtonInsidesNotChosen,
+        radioButtonOutsidesChosen: radioButtonOutsidesChosen ?? this.radioButtonOutsidesChosen,
+        radioButtonOutsidesNotChosen: radioButtonOutsidesNotChosen ?? this.radioButtonOutsidesNotChosen,
         red: red ?? this.red,
         textBlock: textBlock ?? this.textBlock,
         textBottomBar: textBottomBar ?? this.textBottomBar,
@@ -398,13 +398,13 @@ class AppColors extends ThemeExtension <AppColors> {
         textStatus: textStatus ?? this.textStatus,
         textTapHint: textTapHint ?? this.textTapHint,
         textTitle: textTitle ?? this.textTitle,
-        white: white ?? this.white,
-        windowBack: windowBack ?? this.windowBack,
-        windowBorder: windowBorder ?? this.windowBorder,
+        transparent: transparent ?? this.transparent,
+        windowBarrier: windowBarrier ?? this.windowBarrier,
         windowBottomText: windowBottomText ?? this.windowBottomText,
         windowMainBack: windowMainBack ?? this.windowMainBack,
         windowMainText: windowMainText ?? this.windowMainText,
         windowSeparator: windowSeparator ?? this.windowSeparator,
+        windowShadow: windowShadow ?? this.windowShadow,
         windowTop: windowTop ?? this.windowTop,
         windowTopBack: windowTopBack ?? this.windowTopBack,
         windowTopText: windowTopText ?? this.windowTopText
@@ -436,13 +436,11 @@ class AppColors extends ThemeExtension <AppColors> {
         blockBorder: Color.lerp (blockBorder, other.blockBorder, t) ?? blockBorder,
         bottomBarBack: Color.lerp (bottomBarBack, other.bottomBarBack, t) ?? bottomBarBack,
         bottomBarBorder: Color.lerp (bottomBarBorder, other.bottomBarBorder, t) ?? bottomBarBorder,
-        buttonsBorder: Color.lerp (buttonsBorder, other.buttonsBorder, t) ?? buttonsBorder,
-        checkBack: Color.lerp (checkBack, other.checkBack, t) ?? checkBack,
-        checkBorder: Color.lerp (checkBorder, other.checkBorder, t) ?? checkBorder,
         checkColor: Color.lerp (checkColor, other.checkColor, t) ?? checkColor,
         checkColorBack: Color.lerp (checkColorBack, other.checkColorBack, t) ?? checkColorBack,
         circlesBack: Color.lerp (circlesBack, other.circlesBack, t) ?? circlesBack,
         circlesBorder: Color.lerp (circlesBorder, other.circlesBorder, t) ?? circlesBorder,
+        connectionButtonShadow: Color.lerp (connectionButtonShadow, other.connectionButtonShadow, t) ?? connectionButtonShadow,
         drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
         green: Color.lerp (green, other.green, t) ?? green,
         grey: Color.lerp (grey, other.grey, t) ?? grey,
@@ -464,9 +462,11 @@ class AppColors extends ThemeExtension <AppColors> {
         noisePrimary: Color.lerp (noisePrimary, other.noisePrimary, t) ?? noisePrimary,
         noiseSecondary: Color.lerp (noiseSecondary, other.noiseSecondary, t) ?? noiseSecondary,
         prime: Color.lerp (prime, other.prime, t) ?? prime,
-        primeChoice: Color.lerp (primeChoice, other.primeChoice, t) ?? primeChoice,
-        primeGlow: Color.lerp (primeGlow, other.primeGlow, t) ?? primeGlow,
-        primeHint: Color.lerp (primeHint, other.primeHint, t) ?? primeHint,
+        radioButtonBack: Color.lerp (radioButtonBack, other.radioButtonBack, t) ?? radioButtonBack,
+        radioButtonInsidesChosen: Color.lerp (radioButtonInsidesChosen, other.radioButtonInsidesChosen, t) ?? radioButtonInsidesChosen,
+        radioButtonInsidesNotChosen: Color.lerp (radioButtonInsidesNotChosen, other.radioButtonInsidesNotChosen, t) ?? radioButtonInsidesNotChosen,
+        radioButtonOutsidesChosen: Color.lerp (radioButtonOutsidesChosen, other.radioButtonOutsidesChosen, t) ?? radioButtonOutsidesChosen,
+        radioButtonOutsidesNotChosen: Color.lerp (radioButtonOutsidesNotChosen, other.radioButtonOutsidesNotChosen, t) ?? radioButtonOutsidesNotChosen,
         red: Color.lerp (red, other.red, t) ?? red,
         textBlock: Color.lerp (textBlock, other.textBlock, t) ?? textBlock,
         textBottomBar: Color.lerp (textBottomBar, other.textBottomBar, t) ?? textBottomBar,
@@ -480,13 +480,13 @@ class AppColors extends ThemeExtension <AppColors> {
         textStatus: Color.lerp (textStatus, other.textStatus, t) ?? textStatus,
         textTapHint: Color.lerp (textTapHint, other.textTapHint, t) ?? textTapHint,
         textTitle: Color.lerp (textTitle, other.textTitle, t) ?? textTitle,
-        white: Color.lerp (white, other.white, t) ?? white,
-        windowBack: Color.lerp (windowBack, other.windowBack, t) ?? windowBack,
-        windowBorder: Color.lerp (windowBorder, other.windowBorder, t) ?? windowBorder,
+        transparent: Color.lerp (transparent, other.transparent, t) ?? transparent,
+        windowBarrier: Color.lerp (windowBarrier, other.windowBarrier, t) ?? windowBarrier,
         windowBottomText: Color.lerp (windowBottomText, other.windowBottomText, t) ?? windowBottomText,
         windowMainBack: Color.lerp (windowMainBack, other.windowMainBack, t) ?? windowMainBack,
         windowMainText: Color.lerp (windowMainText, other.windowMainText, t) ?? windowMainText,
         windowSeparator: Color.lerp (windowSeparator, other.windowSeparator, t) ?? windowSeparator,
+        windowShadow: Color.lerp (windowShadow, other.windowShadow, t) ?? windowShadow,
         windowTop: Color.lerp (windowTop, other.windowTop, t) ?? windowTop,
         windowTopBack: Color.lerp (windowTopBack, other.windowTopBack, t) ?? windowTopBack,
         windowTopText: Color.lerp (windowTopText, other.windowTopText, t) ?? windowTopText

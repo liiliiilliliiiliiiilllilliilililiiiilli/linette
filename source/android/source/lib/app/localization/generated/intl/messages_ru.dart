@@ -42,6 +42,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "finland": MessageLookupByLibrary.simpleMessage("Финляндия"),
     "germany": MessageLookupByLibrary.simpleMessage("Германия"),
     "language": MessageLookupByLibrary.simpleMessage("Язык"),
+    "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
+      "https://t.me/LinetteTelegramChannel",
+    ),
     "netherlands": MessageLookupByLibrary.simpleMessage("Нидерланды"),
     "noConnection": MessageLookupByLibrary.simpleMessage("Нет подключения"),
     "numOnline": m0,
@@ -69,5 +72,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "tapToConectToVpn": MessageLookupByLibrary.simpleMessage(
       "Нажмите для подключения к VPN",
     ),
+    "title": MessageLookupByLibrary.simpleMessage("Linette"),
   };
 }

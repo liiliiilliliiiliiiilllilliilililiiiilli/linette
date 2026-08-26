@@ -68,7 +68,7 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
         onHorizontalDragStart: onHorizontalDragStart,
         onHorizontalDragUpdate: onHorizontalDragUpdate,
         child: Container (
-          color: Colors.transparent,
+          color: context.colors.transparent,
           child: PreferredSize (
             preferredSize: const Size.fromHeight (kToolbarHeight + 10),
             child: Padding (

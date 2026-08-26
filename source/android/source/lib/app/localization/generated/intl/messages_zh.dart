@@ -40,6 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "finland": MessageLookupByLibrary.simpleMessage("芬兰"),
     "germany": MessageLookupByLibrary.simpleMessage("德国"),
     "language": MessageLookupByLibrary.simpleMessage("语言"),
+    "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
+      "https://t.me/LinetteTelegramChannel",
+    ),
     "netherlands": MessageLookupByLibrary.simpleMessage("荷兰"),
     "noConnection": MessageLookupByLibrary.simpleMessage("无连接"),
     "numOnline": m0,
@@ -57,5 +60,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "serviceNews_2": MessageLookupByLibrary.simpleMessage("官方Telegram频道"),
     "serviceNews_3": MessageLookupByLibrary.simpleMessage("."),
     "tapToConectToVpn": MessageLookupByLibrary.simpleMessage("点击连接VPN"),
+    "title": MessageLookupByLibrary.simpleMessage("Linette"),
   };
 }

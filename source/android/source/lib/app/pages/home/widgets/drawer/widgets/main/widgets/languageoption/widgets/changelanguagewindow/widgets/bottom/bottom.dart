@@ -19,9 +19,6 @@ class BottomComponent extends HookWidget {
     final isPressed = useState (false);
 
 
-    final String text = T.of(context).done;
-
-
     void handleTap () {
 
       Navigator.pop (context);
@@ -45,7 +42,7 @@ class BottomComponent extends HookWidget {
               bottom: 12 + 4
             ),
             child: Text (
-              text,
+              T.of(context).done,
               style: TextStyle (
                 fontFamily: 'Fedoka',
                 fontWeight: FontWeight.w400,

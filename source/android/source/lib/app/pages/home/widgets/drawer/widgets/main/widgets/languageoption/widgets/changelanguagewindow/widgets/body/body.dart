@@ -5,9 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
-import 'package:linette/app/widgets/presser/presser.dart';
+import 'package:linette/app/widgets/radioitem/radioitem.dart';
 
 
 
@@ -18,7 +16,7 @@ class BodyComponent extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final languages = <Map <String, dynamic> > [
+    final List <Map <String, String>> languages =  [
       {
         'code': 'ru',
         'title': T.of(context).russian,
@@ -43,6 +41,22 @@ class BodyComponent extends HookConsumerWidget {
     final selectedValue = useState (currentLocale);
 
 
+    void onPress (Map <String, String> language) {
+
+      final code = language['code'];
+
+
+      if (code != null && code.isNotEmpty) {
+
+        selectedValue.value = code;
+
+        ref.read(localeProvider.notifier).changeLocale(Locale(code));
+
+      }
+
+    }
+
+
     return (
 
       Container (
@@ -62,138 +76,35 @@ class BodyComponent extends HookConsumerWidget {
                     padding: const EdgeInsets.fromLTRB (0, 10, 0, 10),
                       child: Column (
                       spacing: 22,
-                      children: languages.map ((language) {
+                      children: languages.map ((language) =>
 
-                        void onPress () => selectedValue.value = language['code'].toString(); ref.read(localeProvider.notifier).changeLocale(Locale(selectedValue.value));
+                        switch (language) {
 
-                        return (
+                          {
+                            'code': String code,
+                            'title': String title,
+                            'subtitle': String subtitle
+                          }
 
-                          RadioItem (
-                            value: language['code'].toString(),
-                            isChosen: language['code'].toString() == selectedValue.value,
-                            onPress: onPress,
-                            title: language['title'].toString(),
-                            subtitle: language['subtitle'].toString()
-                          )
+                            => RadioItem (
+                              value: code,
+                              isChosen: code == selectedValue.value,
+                              onPress: () => onPress (language),
+                              title: title,
+                              subtitle: subtitle
+                            ),
 
-                        );
-                      }).toList ()
+                          _ => Container ()
+
+                        }
+
+                      ).toList ()
                     )
                   )
                 )
               )
             )
           ]
-        )
-      )
-
-    );
-
-  }
-
-}
-
-
-
-class RadioItem extends HookWidget {
-
-  final String value;
-  final bool isChosen;
-  final Function onPress;
-  final String title;
-  final String subtitle;
-
-
-  const RadioItem ({
-    super.key,
-    required this.value,
-    required this.isChosen,
-    required this.onPress,
-    required this.title,
-    required this.subtitle
-  });
-
-
-  @override Widget build (BuildContext context) {
-
-    final isPressed = useState (false);
-
-
-    void handleTap () {
-
-      onPress ();
-
-    }
-
-
-    final colorFill = isChosen ? context.colors.prime : context.colors.black;
-    final colorOutline = isChosen ? context.colors.prime.withAlpha (128) : context.colors.grey.withAlpha (64);
-
-
-    return (
-
-      Container (
-        color: Colors.transparent,
-        padding: const EdgeInsets.symmetric (
-          horizontal: 10
-        ),
-        child: Presser (
-          isPressed: isPressed,
-          handleTap: handleTap,
-          child: AnimatorPresser (
-            scaleRate: 0.97,
-            isPressed: isPressed,
-            child: Row (
-              spacing: 15,
-              children: [
-                Container (
-                  decoration: BoxDecoration (
-                    shape: BoxShape.circle,
-                    color: Colors.black,
-                    border: Border.all (
-                      color: colorOutline,
-                      width: 1.5
-                    )
-                  ),
-                  child: Container (
-                    padding: const EdgeInsets.all (2.5),
-                    child: Container (
-                      width: 11,
-                      height: 11,
-                      decoration: BoxDecoration (
-                        shape: BoxShape.circle,
-                        color: colorFill
-                      )
-                    )
-                  )
-                ),
-                Column (
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: 5,
-                  children: [
-                    Text (
-                      title,
-                      style: TextStyle (
-                        fontFamily: 'Archivo',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                        color: context.colors.windowMainText
-                      )
-                    ),
-                    Text (
-                      subtitle,
-                      style: TextStyle (
-                        fontFamily: 'Archivo',
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                        color: context.colors.windowMainText
-                      )
-                    )
-                  ]
-                )
-              ]
-            )
-          )
         )
       )
 

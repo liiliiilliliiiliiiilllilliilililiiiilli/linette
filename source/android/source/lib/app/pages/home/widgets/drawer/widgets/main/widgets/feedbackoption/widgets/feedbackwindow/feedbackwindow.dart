@@ -24,7 +24,7 @@ class FeedbackWindow extends StatelessWidget {
             decoration: BoxDecoration (
               boxShadow: [
                 BoxShadow (
-                  color: context.colors.black.withAlpha (64),
+                  color: context.colors.windowShadow,
                   offset: const Offset (0, 10),
                   blurRadius: 12,
                   spreadRadius: 5

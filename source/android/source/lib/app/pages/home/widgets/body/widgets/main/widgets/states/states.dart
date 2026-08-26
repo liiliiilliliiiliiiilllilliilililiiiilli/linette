@@ -13,13 +13,10 @@ class States extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = T.of(context).noConnection;
-
-
     return (
 
       Text (
-        text,
+        T.of(context).noConnection,
         style: TextStyle (
           fontFamily: 'Fredoka',
           fontWeight: FontWeight.w500,

@@ -18,7 +18,9 @@ class AvailabilityStatus extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final Color color = isAvailable ? context.colors.green : context.colors.red;
+    final Color color = isAvailable
+      ? context.colors.green
+      : context.colors.red;
 
 
     return (

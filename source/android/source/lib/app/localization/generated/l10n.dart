@@ -55,6 +55,11 @@ class T {
     return Localizations.of<T>(context, T);
   }
 
+  /// `Linette`
+  String get title {
+    return Intl.message('Linette', name: 'title', desc: '', args: []);
+  }
+
   /// `Connection is not secured`
   String get connectionIsNotProtected {
     return Intl.message(
@@ -221,7 +226,7 @@ class T {
   }
 
   /// `{num} online`
-  String numOnline(Object num) {
+  String numOnline(int num) {
     return Intl.message(
       '$num online',
       name: 'numOnline',
@@ -258,6 +263,16 @@ class T {
   /// `Ok`
   String get ok {
     return Intl.message('Ok', name: 'ok', desc: '', args: []);
+  }
+
+  /// `https://t.me/LinetteTelegramChannel`
+  String get linkTelegramChannel {
+    return Intl.message(
+      'https://t.me/LinetteTelegramChannel',
+      name: 'linkTelegramChannel',
+      desc: '',
+      args: [],
+    );
   }
 }
 

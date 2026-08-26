@@ -23,23 +23,25 @@ class RightButton extends HookWidget {
     void handleTap () {
 
       currentTheme.value == AppThemeOption.darkGreen
-
         ? currentTheme.value = AppThemeOption.lightGreen
         : currentTheme.value = AppThemeOption.darkGreen;
 
     }
 
 
-    final themeIcon = currentTheme.value == AppThemeOption.darkGreen
-
+    final String themeIcon = currentTheme.value == AppThemeOption.darkGreen
       ? context.icons.moon
       : context.icons.sun;
 
 
-    final themeIconColor = currentTheme.value == AppThemeOption.darkGreen
-
+    final Color themeIconColor = currentTheme.value == AppThemeOption.darkGreen
       ? context.colors.iconMoon
       : context.colors.iconSun;
+
+
+    final double translationYValue = isPressed.value
+      ? 1
+      : 0;
 
 
     return (
@@ -53,7 +55,7 @@ class RightButton extends HookWidget {
             duration: const Duration (
               milliseconds: 80
             ),
-            transform: Matrix4.translationValues (0, isPressed.value ? 1.0 : 0.0, 0),
+            transform: Matrix4.translationValues (0, translationYValue, 0),
             child: Center (
               child: Container (
                 width: 38,

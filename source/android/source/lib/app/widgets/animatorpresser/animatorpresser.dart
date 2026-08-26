@@ -26,18 +26,27 @@ class AnimatorPresser extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
+    final double opacity = isPressed.value
+      ? opacityRate
+      : 1;
+
+    final double scale = isPressed.value
+      ? scaleRate
+      : 1;
+
+
     return (
 
       AnimatedOpacity (
         duration: Duration (
           milliseconds: duration
         ),
-        opacity: isPressed.value ? opacityRate : 1,
+        opacity: opacity,
         child: AnimatedScale (
           duration: Duration (
             milliseconds: duration
           ),
-          scale: isPressed.value ? scaleRate : 1,
+          scale: scale,
           child: child
         )
       )

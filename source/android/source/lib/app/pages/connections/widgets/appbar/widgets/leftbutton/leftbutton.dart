@@ -28,6 +28,11 @@ class LeftButton extends HookWidget {
     }
 
 
+    final double translationYValue = isPressed.value
+      ? 1
+      : 0;
+
+
     return (
 
       Presser (
@@ -39,7 +44,7 @@ class LeftButton extends HookWidget {
             duration: const Duration (
               milliseconds: 80
             ),
-            transform: Matrix4.translationValues (0, isPressed.value ? 1.0 : 0.0, 0),
+            transform: Matrix4.translationValues (0, translationYValue, 0),
             child: Center (
               child: Container (
                 width: 38,

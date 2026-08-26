@@ -24,6 +24,19 @@ class ConnectionButton extends HookWidget {
     void handleTap () {}
 
 
+    final Offset offset = isPressed.value
+      ? const Offset (0, 5 * 0.825)
+      : const Offset (0, 5);
+
+    final double blurRadius = isPressed.value
+      ? 8 * 0.825
+      : 8;
+
+    final double spreadRadius = isPressed.value
+      ? 2.5 * 0.825
+      : 2.5;
+
+
     return (
 
       Center (
@@ -49,10 +62,10 @@ class ConnectionButton extends HookWidget {
                   borderRadius: BorderRadius.circular (1000),
                   boxShadow: [
                     BoxShadow (
-                      color: context.colors.black.withAlpha (150),
-                      offset: isPressed.value ? const Offset (0, 5 * 0.825) : const Offset (0, 5),
-                      blurRadius: isPressed.value ? 8 * 0.825 : 8,
-                      spreadRadius: isPressed.value ? 2.5 * 0.825 : 2.5
+                      color: context.colors.connectionButtonShadow,
+                      offset: offset,
+                      blurRadius: blurRadius,
+                      spreadRadius: spreadRadius
                     )
                   ],
                   color: context.colors.prime

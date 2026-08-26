@@ -16,15 +16,9 @@ class BodyComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text_1 = T.of(context).serviceNews_1;
-    final String text_2 = T.of(context).serviceNews_2;
-    final String text_3 = T.of(context).serviceNews_3;
-
-    const String link = 'https://t.me/LinetteTelegramChannel';
-
-
     Future openLink () async {
 
+      final link = T.of(context).linkTelegramChannel;
       final Uri url = Uri.parse (link);
 
       if (await canLaunchUrl (url)) {
@@ -65,7 +59,9 @@ class BodyComponent extends HookWidget {
     }, [gestureRecognizer]);
 
 
-    final linkColor = isPressed.value ? context.colors.linkPressed : context.colors.link;
+    final Color linkColor = isPressed.value
+      ? context.colors.linkPressed
+      : context.colors.link;
 
 
     return (
@@ -90,20 +86,20 @@ class BodyComponent extends HookWidget {
                     ),
                     children: [
                       TextSpan (
-                        text: text_1,
+                        text: T.of(context).serviceNews_1,
                         style: TextStyle (
                           color: context.colors.windowMainText
                         )
                       ),
                       TextSpan (
-                        text: text_2,
+                        text: T.of(context).serviceNews_2,
                         style: TextStyle (
                           color: linkColor,
                         ),
                         recognizer: gestureRecognizer
                       ),
                       TextSpan (
-                        text: text_3,
+                        text: T.of(context).serviceNews_3,
                         style: TextStyle (
                           color: context.colors.windowMainText
                         )

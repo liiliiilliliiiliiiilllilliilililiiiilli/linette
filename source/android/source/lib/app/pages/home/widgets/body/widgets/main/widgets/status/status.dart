@@ -13,13 +13,10 @@ class Status extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String text = T.of(context).connectionIsNotProtected;
-
-
     return (
 
       Text (
-        text,
+        T.of(context).connectionIsNotProtected,
         style: TextStyle (
           fontFamily: 'Fredoka',
           fontWeight: FontWeight.w600,

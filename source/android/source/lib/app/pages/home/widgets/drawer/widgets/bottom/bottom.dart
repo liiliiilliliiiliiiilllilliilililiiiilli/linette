@@ -15,9 +15,6 @@ class Bottom extends HookWidget {
 
   @override build (BuildContext context) {
 
-    final text = T.of(context).connectToVpnOnLaunch;
-
-
     final isPressed = useState (false);
     final isChecked = useState (false);
 
@@ -61,7 +58,7 @@ class Bottom extends HookWidget {
                 Expanded (
                   child: Text (
                     softWrap: true,
-                    text,
+                    T.of(context).connectToVpnOnLaunch,
                     style: TextStyle (
                       fontFamily: 'Fredoka',
                       fontWeight: FontWeight.w600,

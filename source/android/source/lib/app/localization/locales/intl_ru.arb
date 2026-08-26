@@ -1,6 +1,8 @@
 {
 	"@@locale": "ru",
 
+	"title": "Linette",
+
 	"connectionIsNotProtected": "Соединение не защищено",
 	"tapToConectToVpn": "Нажмите для подключения к VPN",
 	"noConnection": "Нет подключения",
@@ -47,5 +49,7 @@
 	"germany": "Германия",
 
 	"done": "Готово",
-	"ok": "Ок"
+	"ok": "Ок",
+
+	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel"
 }

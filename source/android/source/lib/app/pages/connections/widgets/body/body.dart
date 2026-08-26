@@ -57,7 +57,7 @@ class BodyComponent extends HookWidget {
         onHorizontalDragStart: onHorizontalDragStart,
         onHorizontalDragUpdate: onHorizontalDragUpdate,
         child: Container (
-          color: Colors.transparent,
+          color: context.colors.transparent,
           child: Container (
             color: context.colors.back,
             padding: const EdgeInsets.only (

@@ -26,11 +26,11 @@ class Flag extends StatelessWidget {
         height: 42,
         padding: const EdgeInsets.all (2.5),
         decoration: BoxDecoration (
-          border: Border.all (
-            color: context.colors.circlesBorder,
-            width: 1.75
-          ),
           shape: BoxShape.circle,
+          border: Border.all (
+            width: 1.75,
+            color: context.colors.circlesBorder
+          ),
           color: context.colors.circlesBack
         ),
         clipBehavior: Clip.antiAlias,

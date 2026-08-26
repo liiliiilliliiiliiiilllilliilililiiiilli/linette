@@ -1,6 +1,7 @@
 // Home page - App bar - Title
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors/colors.dart';
 
 
@@ -12,9 +13,6 @@ class TitleComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    const String text = 'Linette';
-
-
     return (
 
       IntrinsicWidth (
@@ -22,7 +20,7 @@ class TitleComponent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text (
-              text,
+              T.of(context).title,
               style: TextStyle (
                 fontFamily: 'Fredoka',
                 fontWeight: FontWeight.w600,
@@ -33,8 +31,8 @@ class TitleComponent extends StatelessWidget {
             Container (
               height: 2.75,
               decoration: BoxDecoration (
-                color: context.colors.prime,
-                borderRadius: BorderRadius.circular (100)
+                borderRadius: BorderRadius.circular (100),
+                color: context.colors.prime
               )
             )
           ]
