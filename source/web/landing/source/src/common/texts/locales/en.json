@@ -64,7 +64,8 @@
 						"paragraphStack": [
 							"I'm currently developing a website and mobile app for Android. Next comes iOS development and service optimization based on your feedback.",
 							"A website describing the project has been created (and is being finalized). Next comes the development of a mobile app for Android and iOS, as well as service optimization based on your comments.",
-							"The project's website has been fully developed. Mobile app designs have been created."
+							"The project's website has been fully developed. Mobile app designs have been created.",
+							"A demo version of the Android app has been created. Planning for the beta version's design and implementation are underway."
 						]
 					}
 				],
@@ -78,7 +79,8 @@
 					"dates": [
 						"July 15, 2026",
 						"July 19, 2026",
-						"July 23, 2026"
+						"July 23, 2026",
+						"August 26, 2026"
 					]
 				}
 			}

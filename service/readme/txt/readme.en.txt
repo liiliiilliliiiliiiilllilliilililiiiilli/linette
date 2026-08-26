@@ -28,7 +28,7 @@ This service:
 	Current development progress of the platform:
 
 		The project landing page is available.
-		The Android application is being developed.
+		A demo version of the application for Android has been created.
 
 This repository:
 
