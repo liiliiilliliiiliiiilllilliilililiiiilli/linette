@@ -25,12 +25,11 @@ class Connections extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB (5, 0, 5, 0),
         child: Column (
           spacing: 11,
-          children: [
-            for (var connection in connections)
-              Connection (
-                model: connection
-              )
-          ]
+          children: connections.map ((connection) =>
+            Connection (
+              model: connection
+            )
+          ).toList ()
         )
       )
 

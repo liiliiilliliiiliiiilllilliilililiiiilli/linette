@@ -6,6 +6,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presser/presser.dart';
 
 
 
@@ -56,43 +58,24 @@ class BodyComponent extends HookConsumerWidget {
                 ),
                 child: Material (
                   type: MaterialType.transparency,
-                  child: RadioGroup (
-                    groupValue: selectedValue.value,
-                    onChanged: (value) {
-                      if (value != null) {
-                        final newLanguageCode = value.toString ();
-                        selectedValue.value = newLanguageCode;
-                        ref.read(localeProvider.notifier).changeLocale(Locale(newLanguageCode));
-                      }
-                    },
-                    child: Column (
+                  child: Padding (
+                    padding: const EdgeInsets.fromLTRB (0, 10, 0, 10),
+                      child: Column (
+                      spacing: 22,
                       children: languages.map ((language) {
+
+                        void onPress () => selectedValue.value = language['code'].toString(); ref.read(localeProvider.notifier).changeLocale(Locale(selectedValue.value));
+
                         return (
-                          RadioListTile (
+
+                          RadioItem (
                             value: language['code'].toString(),
-                            horizontalTitleGap: 5,
-                            contentPadding: EdgeInsets.zero,
-                            activeColor: context.colors.prime,
-                            selected: selectedValue.value == language['code'].toString(),
-                            title: Text (
-                              language['title'],
-                              style: TextStyle (
-                                fontFamily: 'Archivo',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                                color: context.colors.windowMainText
-                              )
-                            ),
-                            subtitle: Text (
-                              language['subtitle'],
-                              style: TextStyle (
-                                fontFamily: 'Archivo',
-                                fontWeight: FontWeight.w500,
-                                fontSize: 15,
-                                color: context.colors.windowMainText
-                              )
-                            )
+                            isChosen: language['code'].toString() == selectedValue.value,
+                            onPress: onPress,
+                            title: language['title'].toString(),
+                            subtitle: language['subtitle'].toString()
                           )
+
                         );
                       }).toList ()
                     )
@@ -101,6 +84,116 @@ class BodyComponent extends HookConsumerWidget {
               )
             )
           ]
+        )
+      )
+
+    );
+
+  }
+
+}
+
+
+
+class RadioItem extends HookWidget {
+
+  final String value;
+  final bool isChosen;
+  final Function onPress;
+  final String title;
+  final String subtitle;
+
+
+  const RadioItem ({
+    super.key,
+    required this.value,
+    required this.isChosen,
+    required this.onPress,
+    required this.title,
+    required this.subtitle
+  });
+
+
+  @override Widget build (BuildContext context) {
+
+    final isPressed = useState (false);
+
+
+    void handleTap () {
+
+      onPress ();
+
+    }
+
+
+    final colorFill = isChosen ? context.colors.prime : context.colors.black;
+    final colorOutline = isChosen ? context.colors.prime.withAlpha (128) : context.colors.grey.withAlpha (64);
+
+
+    return (
+
+      Container (
+        color: Colors.transparent,
+        padding: const EdgeInsets.symmetric (
+          horizontal: 10
+        ),
+        child: Presser (
+          isPressed: isPressed,
+          handleTap: handleTap,
+          child: AnimatorPresser (
+            scaleRate: 0.97,
+            isPressed: isPressed,
+            child: Row (
+              spacing: 15,
+              children: [
+                Container (
+                  decoration: BoxDecoration (
+                    shape: BoxShape.circle,
+                    color: Colors.black,
+                    border: Border.all (
+                      color: colorOutline,
+                      width: 1.5
+                    )
+                  ),
+                  child: Container (
+                    padding: const EdgeInsets.all (2.5),
+                    child: Container (
+                      width: 11,
+                      height: 11,
+                      decoration: BoxDecoration (
+                        shape: BoxShape.circle,
+                        color: colorFill
+                      )
+                    )
+                  )
+                ),
+                Column (
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 5,
+                  children: [
+                    Text (
+                      title,
+                      style: TextStyle (
+                        fontFamily: 'Archivo',
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: context.colors.windowMainText
+                      )
+                    ),
+                    Text (
+                      subtitle,
+                      style: TextStyle (
+                        fontFamily: 'Archivo',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: context.colors.windowMainText
+                      )
+                    )
+                  ]
+                )
+              ]
+            )
+          )
         )
       )
 
