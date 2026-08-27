@@ -20,7 +20,7 @@ class LanguageOption extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final currentLocale = ref.watch(localeProvider).languageCode;
+    final localeState = ref.watch (localeProvider);
 
 
     final isPressed = useState (false);
@@ -105,9 +105,9 @@ class LanguageOption extends HookConsumerWidget {
     }
 
 
-    final String currentLanguage = currentLocale == 'ru'
+    final String textCurrentLanguage = localeState == 'ru'
       ? T.of(context).russian
-      : currentLocale == 'en'
+      : localeState == 'en'
         ? T.of(context).english
         : T.of(context).chinese;
 
@@ -156,7 +156,7 @@ class LanguageOption extends HookConsumerWidget {
                   child: Container ()
                 ),
                 Text (
-                  currentLanguage,
+                  textCurrentLanguage,
                   style: TextStyle (
                     fontFamily: 'Fredoka',
                     fontWeight: FontWeight.w500,

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:linette/app/providers/theme/theme.dart';
 import 'package:linette/app/providers/locale/locale.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:linette/app/localization/generated/l10n.dart';
@@ -19,85 +20,71 @@ class App extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final currentLocale = ref.watch (localeProvider);
+    final localeState = ref.watch (localeProvider);
+    final themeState = ref.watch (themeProvider);
+
+
+    final Brightness baseBrightness;
+    final Color backgroundColor;
+    final AppAssets customAssets;
+    final AppColors customColors;
+
+
+    switch (themeState) {
+
+      case AppThemeOption.darkGreen:
+
+        baseBrightness = Brightness.dark;
+        backgroundColor = const Color (0xff000000);
+        customAssets = AppAssets.darkGreen;
+        customColors = AppColors.darkGreen;
+
+        break;
+
+      case AppThemeOption.lightGreen:
+
+        baseBrightness = Brightness.light;
+        backgroundColor = const Color (0xfff2f2f2);
+        customAssets = AppAssets.lightGreen;
+        customColors = AppColors.lightGreen;
+
+        break;
+
+    }
 
 
     return (
 
-      ValueListenableBuilder <AppThemeOption> (
-
-        valueListenable: currentTheme,
-        builder: (context, selectedOption, _) {
-
-          final Color backgroundColor = currentTheme.value == AppThemeOption.darkGreen
-            ? const Color (0xff000000)
-            : const Color (0xfff2f2f2);
-
-
-          final Brightness baseBrightness;
-          final AppAssets customAssets;
-          final AppColors customColors;
-
-
-          switch (selectedOption) {
-
-            case AppThemeOption.darkGreen:
-
-              baseBrightness = Brightness.dark;
-              customAssets = AppAssets.darkGreen;
-              customColors = AppColors.darkGreen;
-
-              break;
-
-            case AppThemeOption.lightGreen:
-
-              baseBrightness = Brightness.light;
-              customAssets = AppAssets.lightGreen;
-              customColors = AppColors.lightGreen;
-
-              break;
-
-          }
-
-
-          return (
-
-            MaterialApp (
-              debugShowCheckedModeBanner: false,
-              title: 'Linette',
-              theme: ThemeData (
-                pageTransitionsTheme: PageTransitionsTheme (
-                  builders: {
-                    TargetPlatform.android: FadeForwardsPageTransitionsBuilder (
-                      backgroundColor: backgroundColor
-                    )
-                  }
-                ),
-                brightness: baseBrightness,
-                extensions: [
-                  customAssets,
-                  customColors
-                ]
-              ),
-              initialRoute: '/home',
-              localizationsDelegates: const [
-                  T.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate
-              ],
-              supportedLocales: T.delegate.supportedLocales,
-              locale: currentLocale,
-              routes: {
-                '/home': (context) => const Home (),
-                '/connections': (context) => const Connections ()
-              }
-            )
-
-          );
-
+      MaterialApp (
+        debugShowCheckedModeBanner: false,
+        title: 'Linette',
+        theme: ThemeData (
+          pageTransitionsTheme: PageTransitionsTheme (
+            builders: {
+              TargetPlatform.android: FadeForwardsPageTransitionsBuilder (
+                backgroundColor: backgroundColor
+              )
+            }
+          ),
+          brightness: baseBrightness,
+          extensions: [
+            customAssets,
+            customColors
+          ]
+        ),
+        initialRoute: '/home',
+        localizationsDelegates: const [
+            T.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate
+        ],
+        supportedLocales: T.delegate.supportedLocales,
+        locale: Locale (localeState),
+        routes: {
+          '/home': (context) => const Home (),
+          '/connections': (context) => const Connections ()
         }
-
       )
 
     );

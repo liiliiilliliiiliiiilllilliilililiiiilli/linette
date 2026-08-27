@@ -7,57 +7,29 @@ import 'package:linette/app/localization/generated/l10n.dart';
 
 
 
-const String localeKey = 'selected_language_code';
+const defaultLocale = 'en';
 
 
 
-final localeProvider = StateNotifierProvider <LocaleNotifier, Locale> ((ref) {
-
-  return (LocaleNotifier ());
-
-});
+final localeProvider = NotifierProvider <LocaleNotifier, String> (LocaleNotifier.new);
 
 
 
-class LocaleNotifier extends StateNotifier <Locale> {
+class LocaleNotifier extends Notifier <String> {
 
-  LocaleNotifier () : super (const Locale ('ru')) {
+  @override String build () {
 
-    initLocale ();
+    initState ();
+
+    return (defaultLocale);
 
   }
 
 
-  Future <void> initLocale () async {
-
-    final prefs = await SharedPreferences.getInstance ();
-    final String? savedLanguageCode = prefs.getString (localeKey);
-
-
-    if (savedLanguageCode != null) {
-
-      final savedLocale = Locale (savedLanguageCode);
-
-      await T.load (savedLocale);
-
-      state = savedLocale;
-
-    } else {
-
-      final systemLocale = getSystemLocale ();
-
-      await T.load (systemLocale);
-
-      state = systemLocale;
-
-    }
-
-  }
-
-
-  static Locale getSystemLocale () {
+  static String getSystemLocale () {
 
     final systemLocale = WidgetsBinding.instance.platformDispatcher.locales.firstOrNull;
+
 
     if (systemLocale != null) {
 
@@ -65,25 +37,54 @@ class LocaleNotifier extends StateNotifier <Locale> {
 
       if (isSupported) {
 
-        return (Locale (systemLocale.languageCode));
+        return (systemLocale.languageCode);
 
       }
 
     }
 
-    return (const Locale ('ru'));
+
+    return ('en');
 
   }
 
 
-  Future <void> changeLocale (Locale newLocale) async {
+  Future <void> initState () async {
 
-    await T.load (newLocale);
+    final preferences = await SharedPreferences.getInstance ();
 
-    final prefs = await SharedPreferences.getInstance ();
-    await prefs.setString (localeKey, newLocale.languageCode);
+    final String? appLocale = preferences.getString ('app_locale');
 
-    state = newLocale;
+
+    if (appLocale == null) {
+
+      final systemLocale = getSystemLocale ();
+
+      await T.load (Locale (systemLocale));
+
+      state = systemLocale;
+
+      await preferences.setString ('app_locale', systemLocale);
+
+    } else {
+
+      await T.load (Locale (appLocale));
+
+      state = appLocale;
+
+    }
+
+  }
+
+
+  Future <void> changeState (String locale) async {
+
+    await T.load (Locale (locale));
+
+    state = locale;
+
+    final preferences = await SharedPreferences.getInstance ();
+    await preferences.setString ('app_locale', locale);
 
   }
 

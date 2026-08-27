@@ -16,7 +16,14 @@ class BodyComponent extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final List <Map <String, String>> languages =  [
+    final localeState = ref.watch (localeProvider);
+    final localeStateNotifier = ref.watch (localeProvider.notifier);
+
+
+    final selectedLocale = useState (localeState);
+
+
+    final List <Map <String, String > > languages =  [
       {
         'code': 'ru',
         'title': T.of(context).russian,
@@ -35,12 +42,6 @@ class BodyComponent extends HookConsumerWidget {
     ];
 
 
-    final currentLocale = ref.watch(localeProvider).languageCode;
-
-
-    final selectedValue = useState (currentLocale);
-
-
     void onPress (Map <String, String> language) {
 
       final code = language['code'];
@@ -48,9 +49,9 @@ class BodyComponent extends HookConsumerWidget {
 
       if (code != null && code.isNotEmpty) {
 
-        selectedValue.value = code;
+        selectedLocale.value = code;
 
-        ref.read(localeProvider.notifier).changeLocale(Locale(code));
+        localeStateNotifier.changeState (code);
 
       }
 
@@ -88,7 +89,7 @@ class BodyComponent extends HookConsumerWidget {
 
                             => RadioItem (
                               value: code,
-                              isChosen: code == selectedValue.value,
+                              isChosen: code == selectedLocale.value,
                               onPress: () => onPress (language),
                               title: title,
                               subtitle: subtitle

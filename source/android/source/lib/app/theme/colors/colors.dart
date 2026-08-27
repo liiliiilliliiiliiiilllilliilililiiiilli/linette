@@ -501,13 +501,11 @@ class AppColors extends ThemeExtension <AppColors> {
 
 
 enum AppThemeOption {
+
   darkGreen,
   lightGreen
+
 }
-
-
-
-final currentTheme = ValueNotifier <AppThemeOption> (AppThemeOption.darkGreen);
 
 
 

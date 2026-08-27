@@ -57,8 +57,8 @@ class Bottom extends HookWidget {
               children: [
                 Expanded (
                   child: Text (
-                    softWrap: true,
                     T.of(context).connectToVpnOnLaunch,
+                    softWrap: true,
                     style: TextStyle (
                       fontFamily: 'Fredoka',
                       fontWeight: FontWeight.w600,

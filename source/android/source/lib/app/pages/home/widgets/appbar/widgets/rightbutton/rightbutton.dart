@@ -1,7 +1,9 @@
 // Home page - App bar - Right button
 
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/providers/theme/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/theme/icons/icons.dart';
 import 'package:linette/app/theme/colors/colors.dart';
@@ -10,31 +12,35 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
 
-class RightButton extends HookWidget {
+class RightButton extends HookConsumerWidget {
 
   const RightButton ({super.key});
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    final themeState = ref.read (themeProvider);
+    final themeStateNotifier = ref.read (themeProvider.notifier);
+
 
     final isPressed = useState (false);
 
 
     void handleTap () {
 
-      currentTheme.value == AppThemeOption.darkGreen
-        ? currentTheme.value = AppThemeOption.lightGreen
-        : currentTheme.value = AppThemeOption.darkGreen;
+      themeState == AppThemeOption.darkGreen
+        ? themeStateNotifier.changeState (AppThemeOption.lightGreen)
+        : themeStateNotifier.changeState (AppThemeOption.darkGreen);
 
     }
 
 
-    final String themeIcon = currentTheme.value == AppThemeOption.darkGreen
+    final String themeIcon = themeState == AppThemeOption.darkGreen
       ? context.icons.moon
       : context.icons.sun;
 
 
-    final Color themeIconColor = currentTheme.value == AppThemeOption.darkGreen
+    final Color themeIconColor = themeState == AppThemeOption.darkGreen
       ? context.colors.iconMoon
       : context.colors.iconSun;
 

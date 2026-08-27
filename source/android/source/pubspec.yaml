@@ -1,78 +1,76 @@
 # Project's configuration file
 
-name: 'linette'
-description: 'Plan to save the world'
-version: '0.0.0+1'
-publish_to: 'none'
+name: linette
+description: Plan to save the world
+version: 0.0.0+1
+publish_to: none
 
 environment:
-  sdk: '^3.11.5'
+  sdk: ^3.11.5
 
 dependencies:
   flutter:
-    sdk: 'flutter'
-  flutter_hooks: '^0.21.3+1'
-  hooks_riverpod: '^2.5.1'
-  shared_preferences: '^2.5.5'
-  flutter_svg: '^2.3.0'
-  url_launcher: '^6.3.2'
-  intl: '^0.20.2'
-  flutter_localizations:
-    sdk: 'flutter'
-  perlin: '^1.0.0'
+    sdk: flutter
+  flutter_hooks: ^0.21.3+1
   flutter_riverpod: ^2.6.1
+  hooks_riverpod: ^2.5.1
+  shared_preferences: ^2.5.5
+  flutter_svg: ^2.3.0
+  url_launcher: ^6.3.2
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  perlin: ^1.0.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: 'flutter'
-  flutter_lints: '6.0.0'
-  flutter_launcher_icons: '0.14.4'
-  flutter_native_splash: '2.4.7'
+  flutter_lints: 6.0.0
+  flutter_launcher_icons: 0.14.4
+  flutter_native_splash: 2.4.7
 
 flutter:
   uses-material-design: true
   assets:
-    - 'assets/images/branding/dark/'
-    - 'assets/images/branding/light/'
-    - 'assets/images/icons/common/'
-    - 'assets/images/icons/dark/green/'
-    - 'assets/images/icons/light/green/'
-    - 'assets/images/logo/dark/'
-    - 'assets/images/logo/light/'
+    - assets/images/branding/dark/
+    - assets/images/branding/light/
+    - assets/images/icons/common/
+    - assets/images/icons/dark/green/
+    - assets/images/icons/light/green/
+    - assets/images/logo/dark/
+    - assets/images/logo/light/
   fonts:
-    - family: 'Fredoka'
+    - family: Archivo
       fonts:
-        - asset: 'assets/fonts/fredoka_variable_width_weight.ttf'
-    - family: 'Archivo'
+        - asset: assets/fonts/archivo_variable_width_weight.ttf
+    - family: Fredoka
       fonts:
-        - asset: 'assets/fonts/archivo_variable_width_weight.ttf'
+        - asset: assets/fonts/fredoka_variable_width_weight.ttf
   generate: true
 
 flutter_intl:
   enabled: true
-  arb_dir: 'lib/app/localization/locales'
-  output_dir: 'lib/app/localization/generated'
-  template-arb-file: 'intl_en.arb'
-  class_name: 'T'
+  arb_dir: lib/app/localization/locales
+  output_dir: lib/app/localization/generated
+  template-arb-file: intl_en.arb
+  class_name: T
 
 flutter_launcher_icons:
   android: true
-  image_path: 'assets/images/logo/dark/logo.png'
-  adaptive_icon_foreground: 'assets/images/logo/dark/logo.png'
+  image_path: assets/images/logo/dark/logo.png
+  adaptive_icon_foreground: assets/images/logo/dark/logo.png
   adaptive_icon_background: '#f2f2f2'
 
 flutter_native_splash:
   android: true
-  image: 'assets/images/logo/light/logo.png'
-  image_dark: 'assets/images/logo/dark/logo.png'
-  branding: 'assets/images/branding/light/branding.png'
-  branding_dark: 'assets/images/branding/dark/branding.png'
+  image: assets/images/logo/light/logo.png
+  image_dark: assets/images/logo/dark/logo.png
+  branding: assets/images/branding/light/branding.png
+  branding_dark: assets/images/branding/dark/branding.png
   color: '#f2f2f2'
   color_dark: '#070707'
   android_12:
-    image: 'assets/images/logo/light/logo.png'
-    image_dark: 'assets/images/logo/dark/logo.png'
-    branding: 'assets/images/branding/light/branding.png'
-    branding_dark: 'assets/images/branding/dark/branding.png'
+    image: assets/images/logo/light/logo.png
+    image_dark: assets/images/logo/dark/logo.png
+    branding: assets/images/branding/light/branding.png
+    branding_dark: assets/images/branding/dark/branding.png
     icon_background_color: '#f2f2f2'
     icon_background_color_dark: '#070707'
