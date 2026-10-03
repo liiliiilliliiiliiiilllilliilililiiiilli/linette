@@ -11,19 +11,21 @@ import 'package:linette/app/widgets/radioitem/radioitem.dart';
 
 class BodyComponent extends HookConsumerWidget {
 
-  const BodyComponent ({super.key});
+  const BodyComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final localeState = ref.watch (localeProvider);
-    final localeStateNotifier = ref.watch (localeProvider.notifier);
+    final String localeState = ref.watch (localeProvider);
+    final LocaleNotifier localeNotifier = ref.watch (localeProvider.notifier);
 
 
-    final selectedLocale = useState (localeState);
+    final ValueNotifier <String> selectedLocale = useState (localeState);
 
 
-    final List <Map <String, String > > languages =  [
+    final List <Map <String, String>> languages =  [
       {
         'code': 'ru',
         'title': T.of(context).russian,
@@ -44,14 +46,14 @@ class BodyComponent extends HookConsumerWidget {
 
     void onPress (Map <String, String> language) {
 
-      final code = language['code'];
+      final String? code = language['code'];
 
 
       if (code != null && code.isNotEmpty) {
 
         selectedLocale.value = code;
 
-        localeStateNotifier.changeState (code);
+        localeNotifier.changeState (code);
 
       }
 

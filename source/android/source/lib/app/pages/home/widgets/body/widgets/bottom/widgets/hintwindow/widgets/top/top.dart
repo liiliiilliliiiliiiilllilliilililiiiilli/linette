@@ -8,7 +8,9 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 class TopComponent extends StatelessWidget {
 
-  const TopComponent ({super.key});
+  const TopComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

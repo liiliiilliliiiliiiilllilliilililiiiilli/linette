@@ -9,7 +9,9 @@ import 'widgets/chooseconnectionbutton/chooseconnectionbutton.dart';
 
 class Connect extends StatelessWidget {
 
-  const Connect ({super.key});
+  const Connect ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

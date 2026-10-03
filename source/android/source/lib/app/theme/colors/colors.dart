@@ -71,6 +71,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color windowTopBack;
   final Color windowTopText;
 
+
   const AppColors ({
     required this.appBarBack,
     required this.appBarBorder,
@@ -139,7 +140,7 @@ class AppColors extends ThemeExtension <AppColors> {
   });
 
 
-  static const darkGreen = AppColors (
+  static const AppColors darkGreen = AppColors (
     appBarBack: Color (0xff070707),
     appBarBorder: Color (0xff171717),
     appBarButtonBack: Color (0xff000000),
@@ -206,7 +207,7 @@ class AppColors extends ThemeExtension <AppColors> {
     windowTopText: Color (0xfff2f2f2)
   );
 
-  static const lightGreen = AppColors (
+  static const AppColors lightGreen = AppColors (
     appBarBack: Color (0xfffafafa),
     appBarBorder: Color (0xffcdcdcd),
     appBarButtonBack: Color (0xffffffff),

@@ -11,12 +11,14 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 class BottomComponent extends HookWidget {
 
-  const BottomComponent ({super.key});
+  const BottomComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () {

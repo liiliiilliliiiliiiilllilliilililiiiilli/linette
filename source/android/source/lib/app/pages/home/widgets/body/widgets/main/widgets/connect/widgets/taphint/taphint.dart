@@ -12,25 +12,27 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 class TapHint extends HookWidget {
 
-  const TapHint ({super.key});
+  const TapHint ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
 
-    final controller = useAnimationController (
+    final AnimationController controller = useAnimationController (
       duration: const Duration (
         milliseconds: 1100
       ),
       initialValue: 1.0
     );
 
-    final curvedAnimation = CurvedAnimation (
+    final CurvedAnimation curvedAnimation = CurvedAnimation (
       parent: controller,
       curve: Curves.easeInOut
     );
 
 
-    final opacityAnimation = useMemoized (() {
+    final Animation <double> opacityAnimation = useMemoized (() {
 
       return (
 
@@ -40,7 +42,7 @@ class TapHint extends HookWidget {
 
     }, [controller]);
 
-    final scaleAnimation = useMemoized (() {
+    final Animation <double> scaleAnimation = useMemoized (() {
 
       return (
 
@@ -53,7 +55,7 @@ class TapHint extends HookWidget {
 
     useEffect (() {
 
-      final timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
+      final Timer timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
 
         await controller.reverse ();
         await controller.forward ();

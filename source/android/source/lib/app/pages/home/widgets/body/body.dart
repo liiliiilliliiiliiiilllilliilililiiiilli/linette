@@ -11,16 +11,18 @@ import 'widgets/bottom/bottom.dart';
 
 class BodyComponent extends HookWidget {
 
-  const BodyComponent ({super.key});
+  const BodyComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
 
-    const safeZone = 38;
+    const double safeZone = 38;
 
-    final startX = useState <double> (0.0);
+    final ValueNotifier <double> startX = useState (0.0);
 
-    final screenWidth = MediaQuery.of(context).size.width;
+    final double screenWidth = MediaQuery.of(context).size.width;
 
 
     void onHorizontalDragStart (details) {

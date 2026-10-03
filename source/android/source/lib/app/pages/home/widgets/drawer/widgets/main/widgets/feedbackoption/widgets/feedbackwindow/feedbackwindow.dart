@@ -10,7 +10,9 @@ import 'widgets/bottom/bottom.dart';
 
 class FeedbackWindow extends StatelessWidget {
 
-  const FeedbackWindow ({super.key});
+  const FeedbackWindow ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

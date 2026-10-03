@@ -7,7 +7,9 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 class Separator extends StatelessWidget {
 
-  const Separator ({super.key});
+  const Separator ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

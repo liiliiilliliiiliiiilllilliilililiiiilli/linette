@@ -13,12 +13,14 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 class LeftButton extends HookWidget {
 
-  const LeftButton ({super.key});
+  const LeftButton ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap (context) {

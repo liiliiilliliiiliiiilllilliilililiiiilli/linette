@@ -8,7 +8,9 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 class TitleComponent extends StatelessWidget {
 
-  const TitleComponent ({super.key});
+  const TitleComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

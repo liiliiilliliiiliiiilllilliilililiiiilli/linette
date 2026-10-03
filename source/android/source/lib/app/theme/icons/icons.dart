@@ -21,6 +21,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   final String tap;
   final String world;
 
+
   const AppAssets ({
     required this.arrowConnection,
     required this.arrowDrawerOption,
@@ -39,7 +40,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   });
 
 
-  static const darkGreen = AppAssets (
+  static const AppAssets darkGreen = AppAssets (
     arrowConnection: 'assets/images/icons/common/arrow_connection.svg',
     arrowDrawerOption: 'assets/images/icons/common/arrow_drawer_option.svg',
     arrowNavigation: 'assets/images/icons/common/arrow_navigation.svg',
@@ -56,7 +57,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
     world: 'assets/images/icons/common/world.svg'
   );
 
-  static const lightGreen = AppAssets (
+  static const AppAssets lightGreen = AppAssets (
     arrowConnection: 'assets/images/icons/common/arrow_connection.svg',
     arrowDrawerOption: 'assets/images/icons/common/arrow_drawer_option.svg',
     arrowNavigation: 'assets/images/icons/common/arrow_navigation.svg',

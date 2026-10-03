@@ -29,7 +29,7 @@ class RadioItem extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () {

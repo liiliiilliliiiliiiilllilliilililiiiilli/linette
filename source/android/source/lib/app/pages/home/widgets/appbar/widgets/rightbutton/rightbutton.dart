@@ -14,23 +14,25 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 class RightButton extends HookConsumerWidget {
 
-  const RightButton ({super.key});
+  const RightButton ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final themeState = ref.read (themeProvider);
-    final themeStateNotifier = ref.read (themeProvider.notifier);
+    final AppThemeOption themeState = ref.read (themeProvider);
+    final ThemeNotifier themeNotifier = ref.read (themeProvider.notifier);
 
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () {
 
       themeState == AppThemeOption.darkGreen
-        ? themeStateNotifier.changeState (AppThemeOption.lightGreen)
-        : themeStateNotifier.changeState (AppThemeOption.darkGreen);
+        ? themeNotifier.changeState (AppThemeOption.lightGreen)
+        : themeNotifier.changeState (AppThemeOption.darkGreen);
 
     }
 

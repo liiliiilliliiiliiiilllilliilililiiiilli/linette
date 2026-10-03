@@ -8,7 +8,9 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 class BodyComponent extends StatelessWidget {
 
-  const BodyComponent ({super.key});
+  const BodyComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

@@ -8,7 +8,9 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 class States extends StatelessWidget {
 
-  const States ({super.key});
+  const States ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

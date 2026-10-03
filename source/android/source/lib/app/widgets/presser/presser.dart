@@ -31,12 +31,12 @@ class Presser extends HookWidget {
 
     void onPointerMove (event) {
 
-      final renderBox = context.findRenderObject () as RenderBox?;
+      final RenderBox? renderBox = context.findRenderObject () as RenderBox?;
 
       if (renderBox != null) {
 
-        final localPos = renderBox.globalToLocal (event.position);
-        final isInside = renderBox.size.contains (localPos);
+        final Offset localPos = renderBox.globalToLocal (event.position);
+        final bool isInside = renderBox.size.contains (localPos);
 
         isPressed.value = isInside;
 
@@ -47,11 +47,11 @@ class Presser extends HookWidget {
 
     void onPointerUp (event) {
 
-      final renderBox = context.findRenderObject () as RenderBox?;
+      final RenderBox? renderBox = context.findRenderObject () as RenderBox?;
 
       if (renderBox != null) {
 
-        final localPos = renderBox.globalToLocal (event.position);
+        final Offset localPos = renderBox.globalToLocal (event.position);
 
         if (renderBox.size.contains (localPos)) {
 

@@ -9,7 +9,9 @@ import 'widgets/bottom/bottom.dart';
 
 class DrawerComponent extends Drawer {
 
-  const DrawerComponent ({super.key});
+  const DrawerComponent ({
+    super.key
+  });
 
 
   @override build (BuildContext context) {

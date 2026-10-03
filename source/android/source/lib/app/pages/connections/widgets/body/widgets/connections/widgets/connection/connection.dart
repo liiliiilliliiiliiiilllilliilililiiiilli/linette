@@ -25,7 +25,7 @@ class Connection extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     final Color colorOutline = model.isChosen

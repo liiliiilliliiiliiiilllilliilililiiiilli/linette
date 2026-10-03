@@ -7,7 +7,7 @@ import 'package:linette/app/localization/generated/l10n.dart';
 
 
 
-const defaultLocale = 'en';
+const String defaultLocale = 'en';
 
 
 
@@ -21,6 +21,7 @@ class LocaleNotifier extends Notifier <String> {
 
     initState ();
 
+
     return (defaultLocale);
 
   }
@@ -28,12 +29,12 @@ class LocaleNotifier extends Notifier <String> {
 
   static String getSystemLocale () {
 
-    final systemLocale = WidgetsBinding.instance.platformDispatcher.locales.firstOrNull;
+    final Locale? systemLocale = WidgetsBinding.instance.platformDispatcher.locales.firstOrNull;
 
 
     if (systemLocale != null) {
 
-      final isSupported = T.delegate.supportedLocales.any ((locale) => locale.languageCode == systemLocale.languageCode);
+      final bool isSupported = T.delegate.supportedLocales.any ((locale) => locale.languageCode == systemLocale.languageCode);
 
       if (isSupported) {
 
@@ -51,14 +52,14 @@ class LocaleNotifier extends Notifier <String> {
 
   Future <void> initState () async {
 
-    final preferences = await SharedPreferences.getInstance ();
+    final SharedPreferences preferences = await SharedPreferences.getInstance ();
 
     final String? appLocale = preferences.getString ('app_locale');
 
 
     if (appLocale == null) {
 
-      final systemLocale = getSystemLocale ();
+      final String systemLocale = getSystemLocale ();
 
       await T.load (Locale (systemLocale));
 
@@ -83,7 +84,8 @@ class LocaleNotifier extends Notifier <String> {
 
     state = locale;
 
-    final preferences = await SharedPreferences.getInstance ();
+    final SharedPreferences preferences = await SharedPreferences.getInstance ();
+
     await preferences.setString ('app_locale', locale);
 
   }

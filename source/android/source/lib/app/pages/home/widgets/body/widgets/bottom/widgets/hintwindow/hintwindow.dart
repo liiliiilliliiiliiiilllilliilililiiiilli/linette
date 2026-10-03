@@ -10,7 +10,9 @@ import 'widgets/bottom/bottom.dart';
 
 class HintWindow extends StatelessWidget {
 
-  const HintWindow ({super.key});
+  const HintWindow ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

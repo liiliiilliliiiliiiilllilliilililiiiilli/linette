@@ -10,7 +10,9 @@ import 'widgets/bottom/bottom.dart';
 
 class ChangeLanguageWindow extends StatelessWidget {
 
-  const ChangeLanguageWindow ({super.key});
+  const ChangeLanguageWindow ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

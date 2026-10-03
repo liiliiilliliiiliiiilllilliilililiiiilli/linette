@@ -9,7 +9,9 @@ import 'widgets/body/body.dart';
 
 class Connections extends StatelessWidget {
 
-  const Connections ({super.key});
+  const Connections ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

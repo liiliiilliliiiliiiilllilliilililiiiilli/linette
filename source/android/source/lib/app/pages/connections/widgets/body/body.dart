@@ -13,7 +13,9 @@ import 'widgets/connections/widgets/connection/model/model.dart';
 
 class BodyComponent extends HookWidget {
 
-  const BodyComponent ({super.key});
+  const BodyComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
@@ -23,12 +25,12 @@ class BodyComponent extends HookWidget {
     final String textGermany = T.of(context).germany;
 
 
-    final chosen = useState (textNetherlands);
+    final ValueNotifier <String> chosen = useState (textNetherlands);
 
 
-    const safeZone = 38;
+    const double safeZone = 38;
 
-    final startX = useState (0.0);
+    final ValueNotifier <double> startX = useState (0.0);
 
 
     void onHorizontalDragStart (details) {

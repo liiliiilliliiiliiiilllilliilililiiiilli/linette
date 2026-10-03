@@ -15,15 +15,17 @@ import 'widgets/changelanguagewindow/changelanguagewindow.dart';
 
 class LanguageOption extends HookConsumerWidget {
 
-  const LanguageOption ({super.key});
+  const LanguageOption ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final localeState = ref.watch (localeProvider);
+    final String localeState = ref.watch (localeProvider);
 
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () async {
@@ -49,7 +51,7 @@ class LanguageOption extends HookConsumerWidget {
 
       Widget transitionBuilder (context, animation, secondaryAnimation, child) {
 
-        final fadeAnimation = CurvedAnimation (
+        final CurvedAnimation fadeAnimation = CurvedAnimation (
           parent: animation,
           curve: Curves.easeOut,
           reverseCurve: Curves.easeIn
@@ -68,7 +70,7 @@ class LanguageOption extends HookConsumerWidget {
 
         }
 
-        final scaleAnimation = Tween(begin: 0.975, end: 1.0).animate(
+        final Animation <double> scaleAnimation = Tween(begin: 0.975, end: 1.0).animate(
           CurvedAnimation (
             parent: animation,
             curve: Curves.easeOut

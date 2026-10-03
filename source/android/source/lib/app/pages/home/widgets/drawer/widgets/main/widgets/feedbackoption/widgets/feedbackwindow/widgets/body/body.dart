@@ -11,14 +11,16 @@ import 'package:flutter/gestures.dart';
 
 class BodyComponent extends HookWidget {
 
-  const BodyComponent ({super.key});
+  const BodyComponent ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
 
     Future openLink () async {
 
-      final link = T.of(context).linkTelegramChannel;
+      final String link = T.of(context).linkTelegramChannel;
       final Uri url = Uri.parse (link);
 
       if (await canLaunchUrl (url)) {
@@ -30,9 +32,9 @@ class BodyComponent extends HookWidget {
     }
 
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
-    final gestureRecognizer = useMemoized (() {
+    final TapGestureRecognizer gestureRecognizer = useMemoized (() {
 
       return TapGestureRecognizer ();
 

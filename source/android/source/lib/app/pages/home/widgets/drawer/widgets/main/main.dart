@@ -10,7 +10,9 @@ import 'widgets/feedbackoption/feedbackoption.dart';
 
 class Main extends StatelessWidget {
 
-  const Main ({super.key});
+  const Main ({
+    super.key
+  });
 
 
   @override build (BuildContext context) {

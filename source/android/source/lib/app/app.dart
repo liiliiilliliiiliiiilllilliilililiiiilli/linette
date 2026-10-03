@@ -1,4 +1,4 @@
-// App (root component)
+// Root component
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,38 +15,40 @@ import 'pages/connections/connections.dart';
 
 class App extends ConsumerWidget {
 
-  const App ({super.key});
+  const App ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final localeState = ref.watch (localeProvider);
-    final themeState = ref.watch (themeProvider);
+    final String localeState = ref.watch (localeProvider);
+    final AppThemeOption themeState = ref.watch (themeProvider);
 
 
-    final Brightness baseBrightness;
-    final Color backgroundColor;
     final AppAssets customAssets;
     final AppColors customColors;
+    final Brightness baseBrightness;
+    final Color backgroundColor;
 
 
     switch (themeState) {
 
       case AppThemeOption.darkGreen:
 
-        baseBrightness = Brightness.dark;
-        backgroundColor = const Color (0xff000000);
         customAssets = AppAssets.darkGreen;
         customColors = AppColors.darkGreen;
+        baseBrightness = Brightness.dark;
+        backgroundColor = const Color (0xff000000);
 
         break;
 
       case AppThemeOption.lightGreen:
 
-        baseBrightness = Brightness.light;
-        backgroundColor = const Color (0xfff2f2f2);
         customAssets = AppAssets.lightGreen;
         customColors = AppColors.lightGreen;
+        baseBrightness = Brightness.light;
+        backgroundColor = const Color (0xfff2f2f2);
 
         break;
 
@@ -72,7 +74,6 @@ class App extends ConsumerWidget {
             customColors
           ]
         ),
-        initialRoute: '/home',
         localizationsDelegates: const [
             T.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -84,7 +85,8 @@ class App extends ConsumerWidget {
         routes: {
           '/home': (context) => const Home (),
           '/connections': (context) => const Connections ()
-        }
+        },
+        initialRoute: '/home'
       )
 
     );

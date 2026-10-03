@@ -10,7 +10,9 @@ import 'widgets/title/title.dart';
 
 class AppBarComponent extends HookWidget implements PreferredSizeWidget  {
 
-  const AppBarComponent ({super.key});
+  const AppBarComponent ({
+    super.key
+  });
 
 
   @override Size get preferredSize {
@@ -26,9 +28,9 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget  {
 
   @override Widget build (BuildContext context) {
 
-    const safeZone = 38;
+    const double safeZone = 38;
 
-    final startX = useState <double> (0.0);
+    final ValueNotifier <double> startX = useState (0.0);
 
 
     void onHorizontalDragStart (details) {

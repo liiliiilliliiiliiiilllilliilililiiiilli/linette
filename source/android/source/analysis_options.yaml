@@ -1,3 +1,5 @@
+# Project's linter file
+
 analyzer:
   exclude:
     - build/**

@@ -12,12 +12,14 @@ import 'widgets/hintwindow/hintwindow.dart';
 
 class Bottom extends HookWidget {
 
-  const Bottom ({super.key});
+  const Bottom ({
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () async {
@@ -40,7 +42,7 @@ class Bottom extends HookWidget {
 
       Widget transitionBuilder (context, animation, secondaryAnimation, child) {
 
-        final fadeAnimation = CurvedAnimation (
+        final CurvedAnimation fadeAnimation = CurvedAnimation (
           parent: animation,
           curve: Curves.easeOut,
           reverseCurve: Curves.easeIn
@@ -59,7 +61,7 @@ class Bottom extends HookWidget {
 
         }
 
-        final scaleAnimation = Tween <double> (begin: 0.975, end: 1.0).animate (
+        final Animation <double> scaleAnimation = Tween (begin: 0.975, end: 1.0).animate (
           CurvedAnimation (
             parent: animation,
             curve: Curves.easeOut

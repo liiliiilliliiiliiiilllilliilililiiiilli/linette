@@ -41,5 +41,4 @@ class Country extends StatelessWidget {
 
   }
 
-
 }

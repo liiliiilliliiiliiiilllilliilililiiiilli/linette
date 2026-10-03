@@ -19,11 +19,15 @@ android {
 
     }
 
-    kotlinOptions {
+	kotlin {
 
-        jvmTarget = JavaVersion.VERSION_17.toString ()
+		compilerOptions {
 
-    }
+			jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+
+		}
+
+	}
 
     defaultConfig {
 
@@ -35,11 +39,21 @@ android {
 
     }
 
+	signingConfigs {
+
+        create ("release") {
+
+            // Настройки keystore
+
+        }
+
+    }
+
     buildTypes {
 
         release {
 
-            signingConfig = signingConfigs.getByName ("debug")
+			signingConfig = signingConfigs.getByName ("release")
 
         }
 

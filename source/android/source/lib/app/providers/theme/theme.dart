@@ -7,7 +7,7 @@ import 'package:linette/app/theme/colors/colors.dart';
 
 
 
-const defaultTheme = AppThemeOption.darkGreen;
+const AppThemeOption defaultTheme = AppThemeOption.darkGreen;
 
 
 
@@ -21,6 +21,7 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
 
     initState ();
 
+
     return (defaultTheme);
 
   }
@@ -28,7 +29,9 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
 
   static Future <AppThemeOption?> getSavedTheme () async {
 
-    final String? savedTheme = (await SharedPreferences.getInstance()).getString('app_theme');
+    final SharedPreferences preferences = await SharedPreferences.getInstance ();
+
+    final String? savedTheme = preferences.getString ('app_theme');
 
 
     switch (savedTheme) {
@@ -52,15 +55,18 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
 
   static Future <void> saveTheme (AppThemeOption theme) async {
 
+    final SharedPreferences preferences = await SharedPreferences.getInstance ();
+
+
     switch (theme) {
 
       case AppThemeOption.darkGreen:
 
-        await (await SharedPreferences.getInstance()).setString('app_theme', 'darkGreen');
+        await preferences.setString ('app_theme', 'darkGreen');
 
       case AppThemeOption.lightGreen:
 
-        await (await SharedPreferences.getInstance()).setString('app_theme', 'lightGreen');
+        await preferences.setString ('app_theme', 'lightGreen');
 
     }
 
@@ -69,7 +75,7 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
 
   static AppThemeOption getSystemTheme () {
 
-    final systemTheme = PlatformDispatcher.instance.platformBrightness == Brightness.dark
+    final AppThemeOption  systemTheme = PlatformDispatcher.instance.platformBrightness == Brightness.dark
       ? AppThemeOption.darkGreen
       : AppThemeOption.lightGreen;
 
