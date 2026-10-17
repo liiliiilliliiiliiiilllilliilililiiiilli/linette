@@ -16,9 +16,9 @@
 
 本软件按“原样”提供，不提供任何形式的明示或暗示担保，包括但不限于对适销性、特定用途的适用性和不侵权的担保。在任何情况下，作者或版权持有人均不对因本软件、本软件的使用或其他交易中引起的任何索赔、损害或其他责任承担责任，无论是合同、侵权还是其他行为。
 
-[switch_ru]: /service/license/md/svg/ru.svg  <!-- local resource -->
-[switch_en]: /service/license/md/svg/en.svg  <!-- local resource -->
-[switch_zh]: /service/license/md/svg/zh.svg  <!-- local resource -->
-[license_ru]: /service/license/md/license.ru.md  <!-- local resource -->
-[license_en]: /service/license/md/license.en.md  <!-- local resource -->
-[license_zh]: /service/license/md/license.zh.md  <!-- local resource -->
+[switch_ru]: /service/license/md/svg/ru.svg
+[switch_en]: /service/license/md/svg/en.svg
+[switch_zh]: /service/license/md/svg/zh.svg
+[license_ru]: /service/license/md/license.ru.md
+[license_en]: /service/license/md/license.en.md
+[license_zh]: /service/license/md/license.zh.md

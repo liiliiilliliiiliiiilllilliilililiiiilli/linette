@@ -12,9 +12,9 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[switch_ru]: /service/license/md/svg/ru.svg  <!-- local resource -->
-[switch_en]: /service/license/md/svg/en.svg  <!-- local resource -->
-[switch_zh]: /service/license/md/svg/zh.svg  <!-- local resource -->
-[license_ru]: /service/license/md/license.ru.md  <!-- local resource -->
-[license_en]: /service/license/md/license.en.md  <!-- local resource -->
-[license_zh]: /service/license/md/license.zh.md  <!-- local resource -->
+[switch_ru]: /service/license/md/svg/ru.svg
+[switch_en]: /service/license/md/svg/en.svg
+[switch_zh]: /service/license/md/svg/zh.svg
+[license_ru]: /service/license/md/license.ru.md
+[license_en]: /service/license/md/license.en.md
+[license_zh]: /service/license/md/license.zh.md

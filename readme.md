@@ -45,9 +45,9 @@
 
 Это возможно.
 
-[switch_ru]: /service/readme/md/svg/ru.svg  <!-- local resource -->
-[switch_en]: /service/readme/md/svg/en.svg  <!-- local resource -->
-[switch_zh]: /service/readme/md/svg/zh.svg  <!-- local resource -->
-[readme_ru]: /service/readme/md/readme.ru.md  <!-- local resource -->
-[readme_en]: /service/readme/md/readme.en.md  <!-- local resource -->
-[readme_zh]: /service/readme/md/readme.zh.md  <!-- local resource -->
+[switch_ru]: /service/readme/md/svg/ru.svg
+[switch_en]: /service/readme/md/svg/en.svg
+[switch_zh]: /service/readme/md/svg/zh.svg
+[readme_ru]: /service/readme/md/readme.ru.md
+[readme_en]: /service/readme/md/readme.en.md
+[readme_zh]: /service/readme/md/readme.zh.md

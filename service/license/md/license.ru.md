@@ -16,9 +16,9 @@
 
 ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ГАРАНТИЯМИ ТОВАРНОЙ ПРИГОДНОСТИ, ПРИГОДНОСТИ под ОПРЕДЕЛЁННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ИНЫЕ ОБЯЗАТЕЛЬСТВА, БУДЬ ТО В СИЛУ ДОГОВОРА, ДЕЛИКТА ИЛИ ИНЫМ ОБРАЗОМ, ВОЗНИКАЮЩИЕ В СВЯЗИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ, ЕГО ИСПОЛЬЗОВАНИЕМ ИЛИ ИНЫМИ ДЕЙСТВИЯМИ С НИМ.
 
-[switch_ru]: /service/license/md/svg/ru.svg  <!-- local resource -->
-[switch_en]: /service/license/md/svg/en.svg  <!-- local resource -->
-[switch_zh]: /service/license/md/svg/zh.svg  <!-- local resource -->
-[license_ru]: /service/license/md/license.ru.md  <!-- local resource -->
-[license_en]: /service/license/md/license.en.md  <!-- local resource -->
-[license_zh]: /service/license/md/license.zh.md  <!-- local resource -->
+[switch_ru]: /service/license/md/svg/ru.svg
+[switch_en]: /service/license/md/svg/en.svg
+[switch_zh]: /service/license/md/svg/zh.svg
+[license_ru]: /service/license/md/license.ru.md
+[license_en]: /service/license/md/license.en.md
+[license_zh]: /service/license/md/license.zh.md
