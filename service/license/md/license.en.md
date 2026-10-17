@@ -1,6 +1,6 @@
-[![localfile_switch_ru]][localfile_license_ru]
-[![localfile_switch_en]][localfile_license_en]
-[![localfile_switch_zh]][localfile_license_zh]
+[![switch_ru]][license_ru]
+[![switch_en]][license_en]
+[![switch_zh]][license_zh]
 
 # MIT license
 
@@ -12,9 +12,9 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[localfile_switch_ru]: /service/license/md/svg/ru.svg
-[localfile_switch_en]: /service/license/md/svg/en.svg
-[localfile_switch_zh]: /service/license/md/svg/zh.svg
-[localfile_license_ru]: /service/license/md/license.ru.md
-[localfile_license_en]: /service/license/md/license.en.md
-[localfile_license_zh]: /service/license/md/license.zh.md
+[switch_ru]: /service/license/md/svg/ru.svg  <!-- local resource -->
+[switch_en]: /service/license/md/svg/en.svg  <!-- local resource -->
+[switch_zh]: /service/license/md/svg/zh.svg  <!-- local resource -->
+[license_ru]: /service/license/md/license.ru.md  <!-- local resource -->
+[license_en]: /service/license/md/license.en.md  <!-- local resource -->
+[license_zh]: /service/license/md/license.zh.md  <!-- local resource -->

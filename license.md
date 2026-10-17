@@ -1,10 +1,10 @@
-[![localfile_switch_ru]][localfile_license_ru]
-[![localfile_switch_en]][localfile_license_en]
-[![localfile_switch_zh]][localfile_license_zh]
+[![switch_ru]][license_ru]
+[![switch_en]][license_en]
+[![switch_zh]][license_zh]
 
 # Русский перевод (неофициальный)
 
-Данный текст является неофициальным переводом лицензии MIT на русский язык. Юридической силой обладает исключительно оригинальная английская версия, находящаяся по пути [**`/service/license/md/license.en.md`**][localfile_license_en].
+Данный текст является неофициальным переводом лицензии MIT на русский язык. Юридической силой обладает исключительно оригинальная английская версия, находящаяся по пути [**`/service/license/md/license.en.md`**][license_en].
 
 ## Лицензия MIT
 
@@ -16,9 +16,9 @@
 
 ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ГАРАНТИЯМИ ТОВАРНОЙ ПРИГОДНОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЁННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ИНЫЕ ОБЯЗАТЕЛЬСТВА, БУДЬ ТО В СИЛУ ДОГОВОРА, ДЕЛИКТА ИЛИ ИНЫМ ОБРАЗОМ, ВОЗНИКАЮЩИЕ В СВЯЗИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ, ЕГО ИСПОЛЬЗОВАНИЕМ ИЛИ ИНЫМИ ДЕЙСТВИЯМИ С НИМ.
 
-[localfile_switch_ru]: /service/license/md/svg/ru.svg
-[localfile_switch_en]: /service/license/md/svg/en.svg
-[localfile_switch_zh]: /service/license/md/svg/zh.svg
-[localfile_license_ru]: /service/license/md/license.ru.md
-[localfile_license_en]: /service/license/md/license.en.md
-[localfile_license_zh]: /service/license/md/license.zh.md
+[switch_ru]: /service/license/md/svg/ru.svg  <!-- local resource -->
+[switch_en]: /service/license/md/svg/en.svg  <!-- local resource -->
+[switch_zh]: /service/license/md/svg/zh.svg  <!-- local resource -->
+[license_ru]: /service/license/md/license.ru.md  <!-- local resource -->
+[license_en]: /service/license/md/license.en.md  <!-- local resource -->
+[license_zh]: /service/license/md/license.zh.md  <!-- local resource -->
