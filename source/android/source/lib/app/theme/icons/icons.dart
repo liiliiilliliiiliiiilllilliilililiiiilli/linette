@@ -13,6 +13,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   final String flagGermany;
   final String flagNetherlands;
   final String info;
+  final String language;
   final String location;
   final String menu;
   final String moon;
@@ -30,6 +31,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
     required this.flagGermany,
     required this.flagNetherlands,
     required this.info,
+    required this.language,
     required this.location,
     required this.menu,
     required this.moon,
@@ -48,6 +50,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
     flagGermany: 'assets/images/icons/common/flag_germany.svg',
     flagNetherlands: 'assets/images/icons/common/flag_netherlands.svg',
     info: 'assets/images/icons/common/info.svg',
+    language: 'assets/images/icons/common/language.svg',
     location: 'assets/images/icons/common/location.svg',
     menu: 'assets/images/icons/common/menu.svg',
     moon: 'assets/images/icons/common/moon.svg',
@@ -65,6 +68,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
     flagGermany: 'assets/images/icons/common/flag_germany.svg',
     flagNetherlands: 'assets/images/icons/common/flag_netherlands.svg',
     info: 'assets/images/icons/common/info.svg',
+    language: 'assets/images/icons/common/language.svg',
     location: 'assets/images/icons/common/location.svg',
     menu: 'assets/images/icons/common/menu.svg',
     moon: 'assets/images/icons/common/moon.svg',
@@ -83,6 +87,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
     String? flagGermany,
     String? flagNetherlands,
     String? info,
+    String? language,
     String? location,
     String? menu,
     String? moon,
@@ -102,6 +107,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
         flagGermany: flagGermany ?? this.flagGermany,
         flagNetherlands: flagNetherlands ?? this.flagNetherlands,
         info: info ?? this.info,
+        language: language ?? this.language,
         location: location ?? this.location,
         menu: menu ?? this.menu,
         moon: moon ?? this.moon,

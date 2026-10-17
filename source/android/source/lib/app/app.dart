@@ -2,12 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:linette/app/providers/welcome/welcome.dart';
 import 'package:linette/app/providers/theme/theme.dart';
 import 'package:linette/app/providers/locale/locale.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/icons/icons.dart';
 import 'package:linette/app/theme/colors/colors.dart';
+import 'pages/welcome/welcome.dart';
 import 'pages/home/home.dart';
 import 'pages/connections/connections.dart';
 
@@ -24,6 +26,7 @@ class App extends ConsumerWidget {
 
     final String localeState = ref.watch (localeProvider);
     final AppThemeOption themeState = ref.watch (themeProvider);
+    final bool? welcomeState = ref.read (welcomeProvider);
 
 
     final AppAssets customAssets;
@@ -51,6 +54,30 @@ class App extends ConsumerWidget {
         backgroundColor = const Color (0xfff2f2f2);
 
         break;
+
+    }
+
+
+    final Widget startScreen;
+
+
+    if (welcomeState == null) {
+
+      startScreen = Scaffold (
+        backgroundColor: backgroundColor
+      );
+
+    }
+
+    else if (!welcomeState) {
+
+      startScreen = const Welcome ();
+
+    }
+
+    else {
+
+      startScreen = const Home ();
 
     }
 
@@ -83,10 +110,11 @@ class App extends ConsumerWidget {
         supportedLocales: T.delegate.supportedLocales,
         locale: Locale (localeState),
         routes: {
+          '/welcome': (context) => const Welcome (),
           '/home': (context) => const Home (),
           '/connections': (context) => const Connections ()
         },
-        initialRoute: '/home'
+        home: startScreen
       )
 
     );

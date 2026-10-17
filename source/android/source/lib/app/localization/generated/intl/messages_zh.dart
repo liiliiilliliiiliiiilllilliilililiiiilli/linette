@@ -54,12 +54,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "russian": MessageLookupByLibrary.simpleMessage("俄语"),
     "russianNative": MessageLookupByLibrary.simpleMessage("Русский"),
     "serviceDescription": MessageLookupByLibrary.simpleMessage(
-      "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nOliveVPN 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
+      "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nLinette 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
     ),
     "serviceNews_1": MessageLookupByLibrary.simpleMessage("服务新闻发布在 "),
     "serviceNews_2": MessageLookupByLibrary.simpleMessage("官方Telegram频道"),
     "serviceNews_3": MessageLookupByLibrary.simpleMessage("."),
     "tapToConectToVpn": MessageLookupByLibrary.simpleMessage("点击连接VPN"),
     "title": MessageLookupByLibrary.simpleMessage("Linette"),
+    "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage("更改语言"),
+    "welcomeGo": MessageLookupByLibrary.simpleMessage("我们走吧！"),
+    "welcomeSubtitle": MessageLookupByLibrary.simpleMessage("拯救世界的计划"),
+    "welcomeTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
+    "welcomeTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
+      "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
+    ),
   };
 }

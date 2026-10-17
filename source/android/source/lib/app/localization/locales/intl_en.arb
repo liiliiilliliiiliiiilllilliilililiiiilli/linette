@@ -1,6 +1,13 @@
 {
 	"@@locale": "en",
 
+	"welcomeTitleDot": "•",
+	"welcomeTitle": " Linette ",
+	"welcomeSubtitle": "Plan to save the world",
+	"welcomeWhatToDo": "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
+	"welcomeGo": "Let's go!",
+	"welcomeChangeLanguage": "Change language",
+
 	"title": "Linette",
 
 	"connectionIsNotProtected": "Connection is not secured",

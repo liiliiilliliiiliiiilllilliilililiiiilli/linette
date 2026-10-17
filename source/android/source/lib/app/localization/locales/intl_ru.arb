@@ -1,6 +1,13 @@
 {
 	"@@locale": "ru",
 
+	"welcomeTitleDot": "•",
+	"welcomeTitle": " Linette ",
+	"welcomeSubtitle": "План по спасению мира",
+	"welcomeWhatToDo": "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
+	"welcomeGo": "Поехали!",
+	"welcomeChangeLanguage": "Изменить язык",
+
 	"title": "Linette",
 
 	"connectionIsNotProtected": "Соединение не защищено",

@@ -55,6 +55,51 @@ class T {
     return Localizations.of<T>(context, T);
   }
 
+  /// `•`
+  String get welcomeTitleDot {
+    return Intl.message('•', name: 'welcomeTitleDot', desc: '', args: []);
+  }
+
+  /// ` Linette `
+  String get welcomeTitle {
+    return Intl.message(' Linette ', name: 'welcomeTitle', desc: '', args: []);
+  }
+
+  /// `Plan to save the world`
+  String get welcomeSubtitle {
+    return Intl.message(
+      'Plan to save the world',
+      name: 'welcomeSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1) Bypass restrictions\n\n2) Help others\n\n3) Get money`
+  String get welcomeWhatToDo {
+    return Intl.message(
+      '1) Bypass restrictions\n\n2) Help others\n\n3) Get money',
+      name: 'welcomeWhatToDo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's go!`
+  String get welcomeGo {
+    return Intl.message('Let\'s go!', name: 'welcomeGo', desc: '', args: []);
+  }
+
+  /// `Change language`
+  String get welcomeChangeLanguage {
+    return Intl.message(
+      'Change language',
+      name: 'welcomeChangeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Linette`
   String get title {
     return Intl.message('Linette', name: 'title', desc: '', args: []);
@@ -115,10 +160,10 @@ class T {
     );
   }
 
-  /// `If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nOliveVPN is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.`
+  /// `If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.`
   String get serviceDescription {
     return Intl.message(
-      'If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nOliveVPN is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.',
+      'If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.',
       name: 'serviceDescription',
       desc: '',
       args: [],

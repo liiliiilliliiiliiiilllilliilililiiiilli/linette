@@ -1,6 +1,13 @@
 {
 	"@@locale": "zh",
 
+	"welcomeTitleDot": "•",
+	"welcomeTitle": " Linette ",
+	"welcomeSubtitle": "拯救世界的计划",
+	"welcomeWhatToDo": "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
+	"welcomeGo": "我们走吧！",
+	"welcomeChangeLanguage": "更改语言",
+
 	"title": "Linette",
 
 	"connectionIsNotProtected": "连接未受保护",
