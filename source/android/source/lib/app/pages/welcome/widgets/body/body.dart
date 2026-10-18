@@ -19,23 +19,29 @@ class BodyComponent extends HookWidget {
 
     return (
 
-      Center (
-        child: Container (
-          padding: const EdgeInsets.symmetric (
-            vertical: 75
-          ),
-          child: (
-            const Column (
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Top (),
-                Main (),
-                Bottom ()
-              ]
+      Stack (
+        children: [
+          Positioned (
+            left: 0,
+            top: -1.5 * (kToolbarHeight + 10),
+            right: 0,
+            bottom: 0,
+            child: Container (
+              padding: const EdgeInsets.symmetric (
+                vertical: 75
+              ),
+              child: const Column (
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Top (),
+                  Main (),
+                  Bottom ()
+                ]
+              )
             )
           )
-        )
+        ]
       )
 
     );

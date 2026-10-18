@@ -62,7 +62,7 @@ class TextButtonComponent extends HookWidget {
                 SvgPicture.asset (
                   pictureLeft!,
                   colorFilter: ColorFilter.mode (
-                    context.colors.prime,
+                    context.colors.textButton,
                     BlendMode.srcIn
                   ),
                   width: pictureLeftWidth,
@@ -75,14 +75,14 @@ class TextButtonComponent extends HookWidget {
                   fontFamily: 'Archivo',
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
-                  color: context.colors.prime
+                  color: context.colors.textButton
                 )
               ),
               if (pictureRight != null) ... [
                 SvgPicture.asset (
                   pictureRight!,
                   colorFilter: ColorFilter.mode (
-                    context.colors.prime,
+                    context.colors.textButton,
                     BlendMode.srcIn
                   ),
                   width: pictureRightWidth,

@@ -16,6 +16,8 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color blockBorder;
   final Color bottomBarBack;
   final Color bottomBarBorder;
+  final Color button;
+  final Color buttonText;
   final Color checkColor;
   final Color checkColorBack;
   final Color circlesBack;
@@ -51,6 +53,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color textBlock;
   final Color textBottomBar;
   final Color textBottomBarPrime;
+  final Color textButton;
   final Color textChooseConnectionButton;
   final Color textDrawerBottom;
   final Color textDrawerOption;
@@ -83,6 +86,8 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.blockBorder,
     required this.bottomBarBack,
     required this.bottomBarBorder,
+    required this.button,
+    required this.buttonText,
     required this.checkColor,
     required this.checkColorBack,
     required this.circlesBack,
@@ -118,6 +123,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.textBlock,
     required this.textBottomBar,
     required this.textBottomBarPrime,
+    required this.textButton,
     required this.textChooseConnectionButton,
     required this.textDrawerBottom,
     required this.textDrawerOption,
@@ -151,6 +157,8 @@ class AppColors extends ThemeExtension <AppColors> {
     blockBorder: Color (0xff394335),
     bottomBarBack: Color (0x80070707),
     bottomBarBorder: Color (0xff000000),
+    button: Color (0xff8b9e80),
+    buttonText: Color (0xff000000),
     checkColor: Color (0xff0b0b0b),
     checkColorBack: Color (0xff8b9e80),
     circlesBack: Color (0xff000000),
@@ -186,6 +194,7 @@ class AppColors extends ThemeExtension <AppColors> {
     textBlock: Color (0xfff2f2f2),
     textBottomBar: Color (0xff8b8b8b),
     textBottomBarPrime: Color (0xff8b9e80),
+    textButton: Color (0xff8b9e80),
     textChooseConnectionButton: Color (0xff8b9e80),
     textDrawerBottom: Color (0xfff2f2f2),
     textDrawerOption: Color (0xfff2f2f2),
@@ -218,6 +227,8 @@ class AppColors extends ThemeExtension <AppColors> {
     blockBorder: Color (0xffcdcdcd),
     bottomBarBack: Color (0x80ffffff),
     bottomBarBorder: Color (0xffcdcdcd),
+    button: Color (0xff000000),
+    buttonText: Color (0xfff2f2f2),
     checkColor: Color (0xfff2f2f2),
     checkColorBack: Color (0xff8b9e80),
     circlesBack: Color (0xfff2f2f2),
@@ -253,6 +264,7 @@ class AppColors extends ThemeExtension <AppColors> {
     textBlock: Color (0xff000000),
     textBottomBar: Color (0xff000000),
     textBottomBarPrime: Color (0xff567560),
+    textButton: Color (0xff000000),
     textChooseConnectionButton: Color (0xff000000),
     textDrawerBottom: Color (0xff000000),
     textDrawerOption: Color (0xff000000),
@@ -286,6 +298,8 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? blockBorder,
     Color? bottomBarBack,
     Color? bottomBarBorder,
+    Color? button,
+    Color? buttonText,
     Color? checkColor,
     Color? checkColorBack,
     Color? circlesBack,
@@ -321,6 +335,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? textBlock,
     Color? textBottomBar,
     Color? textBottomBarPrime,
+    Color? textButton,
     Color? textChooseConnectionButton,
     Color? textDrawerBottom,
     Color? textDrawerOption,
@@ -355,6 +370,8 @@ class AppColors extends ThemeExtension <AppColors> {
         blockBorder: blockBorder ?? this.blockBorder,
         bottomBarBack: bottomBarBack ?? this.bottomBarBack,
         bottomBarBorder: bottomBarBorder ?? this.bottomBarBorder,
+        button: button ?? this.button,
+        buttonText: buttonText ?? this.buttonText,
         checkColor: checkColor ?? this.checkColor,
         checkColorBack: checkColorBack ?? this.checkColorBack,
         circlesBack: circlesBack ?? this.circlesBack,
@@ -390,6 +407,7 @@ class AppColors extends ThemeExtension <AppColors> {
         textBlock: textBlock ?? this.textBlock,
         textBottomBar: textBottomBar ?? this.textBottomBar,
         textBottomBarPrime: textBottomBarPrime ?? this.textBottomBarPrime,
+        textButton: textButton ?? this.textButton,
         textChooseConnectionButton: textChooseConnectionButton ?? this.textChooseConnectionButton,
         textDrawerBottom: textDrawerBottom ?? this.textDrawerBottom,
         textDrawerOption: textDrawerOption ?? this.textDrawerOption,
@@ -437,6 +455,8 @@ class AppColors extends ThemeExtension <AppColors> {
         blockBorder: Color.lerp (blockBorder, other.blockBorder, t) ?? blockBorder,
         bottomBarBack: Color.lerp (bottomBarBack, other.bottomBarBack, t) ?? bottomBarBack,
         bottomBarBorder: Color.lerp (bottomBarBorder, other.bottomBarBorder, t) ?? bottomBarBorder,
+        button: Color.lerp (button, other.button, t) ?? button,
+        buttonText: Color.lerp (buttonText, other.buttonText, t) ?? buttonText,
         checkColor: Color.lerp (checkColor, other.checkColor, t) ?? checkColor,
         checkColorBack: Color.lerp (checkColorBack, other.checkColorBack, t) ?? checkColorBack,
         circlesBack: Color.lerp (circlesBack, other.circlesBack, t) ?? circlesBack,
@@ -472,6 +492,7 @@ class AppColors extends ThemeExtension <AppColors> {
         textBlock: Color.lerp (textBlock, other.textBlock, t) ?? textBlock,
         textBottomBar: Color.lerp (textBottomBar, other.textBottomBar, t) ?? textBottomBar,
         textBottomBarPrime: Color.lerp (textBottomBarPrime, other.textBottomBarPrime, t) ?? textBottomBarPrime,
+        textButton: Color.lerp (textButton, other.textButton, t) ?? textButton,
         textChooseConnectionButton: Color.lerp (textChooseConnectionButton, other.textChooseConnectionButton, t) ?? textChooseConnectionButton,
         textDrawerBottom: Color.lerp (textDrawerBottom, other.textDrawerBottom, t) ?? textDrawerBottom,
         textDrawerOption: Color.lerp (textDrawerOption, other.textDrawerOption, t) ?? textDrawerOption,

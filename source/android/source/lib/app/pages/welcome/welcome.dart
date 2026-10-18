@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors/colors.dart';
+import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 
 
@@ -18,6 +19,7 @@ class Welcome extends StatelessWidget {
     return (
 
       Scaffold (
+        appBar: const AppBarComponent (),
         body: const BodyComponent (),
         backgroundColor: context.colors.appBarBack
       )

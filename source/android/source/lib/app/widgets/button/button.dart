@@ -69,7 +69,7 @@ class ButtonComponent extends HookWidget {
                 ),
                 decoration: BoxDecoration (
                   borderRadius: BorderRadius.circular (10),
-                  color: context.colors.prime
+                  color: context.colors.button
                 ),
                 child: Text (
                   text,
@@ -77,7 +77,7 @@ class ButtonComponent extends HookWidget {
                     fontFamily: 'Archivo',
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                    color: context.colors.black
+                    color: context.colors.buttonText
                   )
                 )
               ),
@@ -85,7 +85,7 @@ class ButtonComponent extends HookWidget {
                 SvgPicture.asset (
                   picture!,
                   colorFilter: ColorFilter.mode (
-                    context.colors.prime,
+                    context.colors.button,
                     BlendMode.srcIn
                   ),
                   width: pictureWidth,

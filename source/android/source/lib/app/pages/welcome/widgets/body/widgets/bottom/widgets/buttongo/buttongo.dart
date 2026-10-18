@@ -54,7 +54,7 @@ class ButtonGo extends HookConsumerWidget {
                         Opacity (
                           opacity: curveValue,
                           child: Container (
-                            color: context.colors.black,
+                            color: context.colors.appBarBack
                           )
                         )
 
@@ -70,7 +70,7 @@ class ButtonGo extends HookConsumerWidget {
                       return (
 
                         Container (
-                          color: context.colors.black,
+                          color: context.colors.appBarBack,
                           child: Opacity (
                             opacity: curveValue,
                             child: child
