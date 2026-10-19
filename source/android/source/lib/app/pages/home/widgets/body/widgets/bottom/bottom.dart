@@ -98,6 +98,77 @@ class Bottom extends HookWidget {
     }
 
 
+    bool isInDeadZone (double localY) {
+
+      const double componentHeight = 80;
+      const double deadZoneHeight = 9.25;
+
+      final isInDeadZone = localY > (componentHeight - deadZoneHeight);
+
+
+      return isInDeadZone;
+
+    }
+
+    void onTapDown (details) {
+
+      if (isInDeadZone (details.localPosition.dy)) {
+
+        return;
+
+      }
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      if (isInDeadZone (details.localPosition.dy)) {
+
+        isPressed.value = false;
+
+        return;
+
+      }
+
+      isPressed.value = false;
+
+      handleTap ();
+
+    }
+
+    void onPanDown (details) {
+
+      if (isInDeadZone (details.localPosition.dy)) {
+
+        return;
+
+      }
+
+      isPressed.value = true;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
+
     final double translationYValue = isPressed.value
       ? -1
       : 0;
@@ -106,12 +177,12 @@ class Bottom extends HookWidget {
     return (
 
       GestureDetector (
-        onTap: handleTap,
-        onPanDown: (details) => isPressed.value = true,
-        onTapUp: (details) => isPressed.value = false,
-        onPanCancel: () => isPressed.value = false,
-        onTapCancel: () => isPressed.value = false,
-        onLongPressCancel: () => isPressed.value = false,
+        onTapDown: onTapDown,
+        onTapUp: onTapUp,
+        onPanDown: onPanDown,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
         behavior: HitTestBehavior.opaque,
         child: ClipRect (
           child: BackdropFilter (

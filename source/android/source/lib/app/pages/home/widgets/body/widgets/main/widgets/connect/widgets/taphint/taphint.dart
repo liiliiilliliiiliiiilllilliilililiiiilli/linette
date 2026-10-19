@@ -23,7 +23,7 @@ class TapHint extends HookWidget {
       duration: const Duration (
         milliseconds: 1100
       ),
-      initialValue: 1.0
+      initialValue: 0
     );
 
     final CurvedAnimation curvedAnimation = CurvedAnimation (
@@ -32,21 +32,21 @@ class TapHint extends HookWidget {
     );
 
 
-    final Animation <double> opacityAnimation = useMemoized (() {
+    final Animation <double> scaleAnimation = useMemoized (() {
 
       return (
 
-        Tween(begin: 0.3, end: 1.0).animate(curvedAnimation)
+        Tween(begin: 1.0, end: 0.9875).animate(curvedAnimation)
 
       );
 
     }, [controller]);
 
-    final Animation <double> scaleAnimation = useMemoized (() {
+    final Animation <double> opacityAnimation = useMemoized (() {
 
       return (
 
-        Tween(begin: 0.9875, end: 1.0).animate(curvedAnimation)
+        Tween(begin: 1.0, end: 0.3).animate(curvedAnimation)
 
       );
 
@@ -57,8 +57,8 @@ class TapHint extends HookWidget {
 
       final Timer timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
 
-        await controller.reverse ();
         await controller.forward ();
+        await controller.reverse ();
 
       });
 

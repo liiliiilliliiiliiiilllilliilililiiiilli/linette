@@ -1,5 +1,6 @@
-// Global widgets - Button
+// Welcome page - Body - Bottom - Button go - Button
 
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
@@ -34,6 +35,44 @@ class ButtonComponent extends HookWidget {
     final pictureHeight = pictureSize ?? 12.5;
 
 
+    final AnimationController controller = useAnimationController (
+      duration: const Duration (
+        milliseconds: 1100
+      ),
+      initialValue: 0
+    );
+
+    final CurvedAnimation curvedAnimation = CurvedAnimation (
+      parent: controller,
+      curve: Curves.easeInOut
+    );
+
+
+    final Animation <Offset> slideAnimation = useMemoized (() {
+
+      return (
+
+        Tween (begin: const Offset (0, 0), end: const Offset (0.21, 0)).animate(curvedAnimation)
+
+      );
+
+    }, [controller]);
+
+
+    useEffect (() {
+
+      final Timer timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
+
+        await controller.forward ();
+        await controller.reverse ();
+
+      });
+
+      return () => timer.cancel ();
+
+    }, const []);
+
+
     return (
 
       GestureDetector (
@@ -52,14 +91,17 @@ class ButtonComponent extends HookWidget {
             spacing: 8,
             children: [
               if (picture != null) ... [
-                SvgPicture.asset (
-                  picture!,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.transparent,
-                    BlendMode.srcIn
-                  ),
-                  width: pictureWidth,
-                  height: pictureHeight
+                SlideTransition (
+                  position: slideAnimation,
+                  child: SvgPicture.asset (
+                    picture!,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.transparent,
+                      BlendMode.srcIn
+                    ),
+                    width: pictureWidth,
+                    height: pictureHeight
+                  )
                 )
               ],
               Container (
@@ -82,14 +124,17 @@ class ButtonComponent extends HookWidget {
                 )
               ),
               if (picture != null) ... [
-                SvgPicture.asset (
-                  picture!,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.button,
-                    BlendMode.srcIn
-                  ),
-                  width: pictureWidth,
-                  height: pictureHeight
+                SlideTransition (
+                  position: slideAnimation,
+                  child: SvgPicture.asset (
+                    picture!,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.button,
+                      BlendMode.srcIn
+                    ),
+                    width: pictureWidth,
+                    height: pictureHeight
+                  )
                 )
               ]
             ]
