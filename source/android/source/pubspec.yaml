@@ -36,8 +36,10 @@ flutter:
     - assets/images/icons/common/
     - assets/images/icons/dark/green/
     - assets/images/icons/light/green/
-    - assets/images/logo/dark/
-    - assets/images/logo/light/
+    - assets/images/logo/launcher/dark/
+    - assets/images/logo/launcher/light/
+    - assets/images/logo/splash/dark/
+    - assets/images/logo/splash/light/
   fonts:
     - family: Archivo
       fonts:
@@ -56,21 +58,21 @@ flutter_intl:
 
 flutter_launcher_icons:
   android: true
-  image_path: assets/images/logo/dark/logo.png
-  adaptive_icon_foreground: assets/images/logo/dark/logo.png
+  image_path: assets/images/logo/launcher/dark/logo.png
+  adaptive_icon_foreground: assets/images/logo/launcher/dark/logo.png
   adaptive_icon_background: '#f2f2f2'
 
 flutter_native_splash:
   android: true
-  image: assets/images/logo/light/logo.png
-  image_dark: assets/images/logo/dark/logo.png
+  image: assets/images/logo/splash/light/logo.png
+  image_dark: assets/images/logo/splash/dark/logo.png
   branding: assets/images/branding/light/branding.png
   branding_dark: assets/images/branding/dark/branding.png
   color: '#f2f2f2'
   color_dark: '#070707'
   android_12:
-    image: assets/images/logo/light/logo.png
-    image_dark: assets/images/logo/dark/logo.png
+    image: assets/images/logo/splash/light/logo.png
+    image_dark: assets/images/logo/splash/dark/logo.png
     branding: assets/images/branding/light/branding.png
     branding_dark: assets/images/branding/dark/branding.png
     icon_background_color: '#f2f2f2'
