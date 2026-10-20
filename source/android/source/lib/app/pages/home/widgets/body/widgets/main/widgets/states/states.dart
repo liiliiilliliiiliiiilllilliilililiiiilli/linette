@@ -20,7 +20,7 @@ class States extends StatelessWidget {
       Text (
         T.of(context).noConnection,
         style: TextStyle (
-          fontFamily: 'Fredoka',
+          fontFamily: 'Archivo',
           fontWeight: FontWeight.w500,
           fontSize: 16,
           color: context.colors.textStates

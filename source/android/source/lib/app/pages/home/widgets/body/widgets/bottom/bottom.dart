@@ -217,7 +217,7 @@ class Bottom extends HookWidget {
                       overflow: TextOverflow.ellipsis,
                       TextSpan (
                         style: const TextStyle (
-                          fontFamily: 'Fredoka',
+                          fontFamily: 'Archivo',
                           fontWeight: FontWeight.w400,
                           fontSize: 15.75
                         ),

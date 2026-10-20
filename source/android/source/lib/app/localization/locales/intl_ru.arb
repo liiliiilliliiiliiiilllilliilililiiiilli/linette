@@ -51,12 +51,26 @@
 	},
 	"chosen": "Выбран",
 
-	"netherlands": "Нидерланды",
-	"finland": "Финляндия",
-	"germany": "Германия",
+	"connectionNetherlands": "Нидерланды",
+	"connectionFinland": "Финляндия",
+	"connectionGermany": "Германия",
+
+	"netherlands": "Нидерланды  |  tropic_rain",
+	"finland": "Финляндия  |  tropic_rain",
+	"germany": "Германия  |  tropic_rain",
 
 	"done": "Готово",
 	"ok": "Ок",
 
-	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel"
+	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel",
+
+	"windowTopArsenal": "Арсенал приложения",
+	"windowTopNetParameters": "Параметры сети",
+	"windowTopAccount": "Аккаунт",
+	"windowTopWallet": "Кошелек",
+
+	"arsenal": "Арсенал",
+	"netParameters": "Параметры сети",
+	"accout": "Аккаунт",
+	"wallet": "Кошелек"
 }

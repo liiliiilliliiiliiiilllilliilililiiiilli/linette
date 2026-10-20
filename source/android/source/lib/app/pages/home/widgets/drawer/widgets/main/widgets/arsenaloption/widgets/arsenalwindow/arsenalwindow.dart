@@ -1,17 +1,18 @@
-// Home page - Drawer - Main - Feedback option - Feedback window - Body
+// Home page - Drawer - Main - Arsenal option - Arsenal window
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
+import 'package:linette/app/localization/generated/l10n.dart';
+import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/widgets/window/window.dart';
 
 
 
-class BodyComponent extends HookWidget {
+class ArsenalWindow extends HookWidget {
 
-  const BodyComponent ({
+  const ArsenalWindow ({
     super.key
   });
 
@@ -68,11 +69,9 @@ class BodyComponent extends HookWidget {
 
     return (
 
-      Container (
-        padding: const EdgeInsets.symmetric (
-          horizontal: 20
-        ),
-        child: Stack (
+      Window (
+        title: T.of(context).windowTopArsenal,
+        body: Stack (
           children: [
             SingleChildScrollView (
               child: Padding (
@@ -132,7 +131,9 @@ class BodyComponent extends HookWidget {
               )
             )
           ]
-        )
+        ),
+        action: T.of(context).done,
+        width: 340
       )
 
     );

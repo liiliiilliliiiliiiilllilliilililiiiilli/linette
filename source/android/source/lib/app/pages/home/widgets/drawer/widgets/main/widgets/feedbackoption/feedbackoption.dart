@@ -101,16 +101,46 @@ class FeedbackOption extends HookWidget {
 
     }
 
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
 
     return (
 
       GestureDetector (
         onTap: handleTap,
-        onPanDown: (details) => isPressed.value = true,
-        onTapUp: (details) => isPressed.value = false,
-        onPanCancel: () => isPressed.value = false,
-        onTapCancel: () => isPressed.value = false,
-        onLongPressCancel: () => isPressed.value = false,
+        onPanDown: onPanDown,
+        onTapUp: onTapUp,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
         behavior: HitTestBehavior.opaque,
         child: AnimatorPresser (
           isPressed: isPressed,
@@ -125,7 +155,7 @@ class FeedbackOption extends HookWidget {
                 SvgPicture.asset (
                   context.icons.info,
                   colorFilter: ColorFilter.mode (
-                    context.colors.iconInfo,
+                    context.colors.drawerOptionIcon,
                     BlendMode.srcIn
                   ),
                   height: 19
@@ -136,7 +166,7 @@ class FeedbackOption extends HookWidget {
                 Text (
                   T.of(context).feedBack,
                   style: TextStyle (
-                    fontFamily: 'Fredoka',
+                    fontFamily: 'Archivo',
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
                     color: context.colors.textDrawerOption

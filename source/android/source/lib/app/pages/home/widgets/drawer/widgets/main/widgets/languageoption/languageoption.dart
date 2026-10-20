@@ -106,6 +106,36 @@ class LanguageOption extends HookConsumerWidget {
 
     }
 
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
 
     final String textCurrentLanguage = localeState == 'ru'
       ? T.of(context).russian
@@ -118,11 +148,11 @@ class LanguageOption extends HookConsumerWidget {
 
       GestureDetector (
         onTap: handleTap,
-        onPanDown: (details) => isPressed.value = true,
-        onTapUp: (details) => isPressed.value = false,
-        onPanCancel: () => isPressed.value = false,
-        onTapCancel: () => isPressed.value = false,
-        onLongPressCancel: () => isPressed.value = false,
+        onPanDown: onPanDown,
+        onTapUp: onTapUp,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
         behavior: HitTestBehavior.opaque,
         child: AnimatorPresser (
           isPressed: isPressed,
@@ -135,9 +165,9 @@ class LanguageOption extends HookConsumerWidget {
             child: Row (
               children: [
                 SvgPicture.asset (
-                  context.icons.world,
+                  context.icons.languageDrawerOption,
                   colorFilter: ColorFilter.mode (
-                    context.colors.iconWorld,
+                    context.colors.drawerOptionIcon,
                     BlendMode.srcIn
                   ),
                   height: 19
@@ -148,7 +178,7 @@ class LanguageOption extends HookConsumerWidget {
                 Text (
                   T.of(context).language,
                   style: TextStyle (
-                    fontFamily: 'Fredoka',
+                    fontFamily: 'Archivo',
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
                     color: context.colors.textDrawerOption
@@ -160,7 +190,7 @@ class LanguageOption extends HookConsumerWidget {
                 Text (
                   textCurrentLanguage,
                   style: TextStyle (
-                    fontFamily: 'Fredoka',
+                    fontFamily: 'Archivo',
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
                     color: context.colors.textDrawerOptionValue

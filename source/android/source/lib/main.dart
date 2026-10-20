@@ -30,6 +30,7 @@ void main () async {
     'assets/images/icons/common/flag_netherlands.svg',
     'assets/images/icons/common/info.svg',
     'assets/images/icons/common/language.svg',
+    'assets/images/icons/common/language_drawer_option.svg',
     'assets/images/icons/common/location.svg',
     'assets/images/icons/common/menu.svg',
     'assets/images/icons/common/moon.svg',
@@ -37,8 +38,10 @@ void main () async {
     'assets/images/icons/common/sun.svg',
     'assets/images/icons/common/tap.svg',
     'assets/images/icons/common/world.svg',
-    'source/assets/images/logo/dark/logo.png',
-    'source/assets/images/logo/light/logo.png'
+    'assets/images/logo/launcher/dark/logo.png',
+    'assets/images/logo/launcher/light/logo.png',
+    'assets/images/logo/splash/dark/logo.png',
+    'assets/images/logo/splash/light/logo.png'
   ];
 
 
@@ -46,7 +49,7 @@ void main () async {
 
     await Future.wait (
 
-      appImages.map ((asset) => vg.loadPicture (SvgAssetLoader (asset), null))
+      appImages.map ((image) => vg.loadPicture (SvgAssetLoader (image), null))
 
     );
 
@@ -54,7 +57,7 @@ void main () async {
 
   catch (error) {
 
-    debugPrint ('Ошибка предзагрузки SVG: $error');
+    debugPrint ('Ошибка предзагрузки картинок приложения: $error');
 
   }
 

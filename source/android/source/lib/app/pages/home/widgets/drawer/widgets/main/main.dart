@@ -3,8 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:linette/app/theme/colors/colors.dart';
 import 'widgets/languageoption/languageoption.dart';
-import 'widgets/separator/separator.dart';
 import 'widgets/feedbackoption/feedbackoption.dart';
+import 'widgets/arsenaloption/arsenaloption.dart';
+import 'widgets/netparametersoption/netparametersoption.dart';
+import 'widgets/accoutoption/accoutoption.dart';
+import 'widgets/walletoption/walletoption.dart';
+import 'widgets/separator/separator.dart';
 
 
 
@@ -29,8 +33,13 @@ class Main extends StatelessWidget {
             spacing: 10,
             children: [
               LanguageOption (),
+              FeedbackOption (),
               Separator (),
-              FeedbackOption ()
+              ArsenalOption (),
+              NetParametersOption (),
+              Separator (),
+              AccoutOption (),
+              WalletOption ()
             ]
           )
         )

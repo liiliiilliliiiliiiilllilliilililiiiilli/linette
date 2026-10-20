@@ -24,7 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "accout": MessageLookupByLibrary.simpleMessage("帐户"),
     "appLanguage": MessageLookupByLibrary.simpleMessage("应用程序语言"),
+    "arsenal": MessageLookupByLibrary.simpleMessage("兵工厂"),
     "chinese": MessageLookupByLibrary.simpleMessage("中文"),
     "chineseNative": MessageLookupByLibrary.simpleMessage("中文"),
     "chooseServer": MessageLookupByLibrary.simpleMessage("选择服务器"),
@@ -32,18 +34,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "connectToVpnOnLaunch": MessageLookupByLibrary.simpleMessage(
       "启动应用程序时连接VPN",
     ),
+    "connectionFinland": MessageLookupByLibrary.simpleMessage("芬兰"),
+    "connectionGermany": MessageLookupByLibrary.simpleMessage("德国"),
     "connectionIsNotProtected": MessageLookupByLibrary.simpleMessage("连接未受保护"),
+    "connectionNetherlands": MessageLookupByLibrary.simpleMessage("荷兰"),
     "done": MessageLookupByLibrary.simpleMessage("完成"),
     "english": MessageLookupByLibrary.simpleMessage("英语"),
     "englishNative": MessageLookupByLibrary.simpleMessage("English"),
     "feedBack": MessageLookupByLibrary.simpleMessage("反馈"),
-    "finland": MessageLookupByLibrary.simpleMessage("芬兰"),
-    "germany": MessageLookupByLibrary.simpleMessage("德国"),
+    "finland": MessageLookupByLibrary.simpleMessage("芬兰  |  tropic_rain"),
+    "germany": MessageLookupByLibrary.simpleMessage("德国  |  tropic_rain"),
     "language": MessageLookupByLibrary.simpleMessage("语言"),
     "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
       "https://t.me/LinetteTelegramChannel",
     ),
-    "netherlands": MessageLookupByLibrary.simpleMessage("荷兰"),
+    "netParameters": MessageLookupByLibrary.simpleMessage("网络参数"),
+    "netherlands": MessageLookupByLibrary.simpleMessage("荷兰  |  tropic_rain"),
     "noConnection": MessageLookupByLibrary.simpleMessage("无连接"),
     "numOnline": m0,
     "ok": MessageLookupByLibrary.simpleMessage("确定"),
@@ -61,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "serviceNews_3": MessageLookupByLibrary.simpleMessage("."),
     "tapToConectToVpn": MessageLookupByLibrary.simpleMessage("点击连接VPN"),
     "title": MessageLookupByLibrary.simpleMessage("Linette"),
+    "wallet": MessageLookupByLibrary.simpleMessage("钱包"),
     "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage("更改语言"),
     "welcomeGo": MessageLookupByLibrary.simpleMessage("我们走吧！"),
     "welcomeSubtitle": MessageLookupByLibrary.simpleMessage("拯救世界的计划"),
@@ -69,5 +76,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
       "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
     ),
+    "windowTopAccount": MessageLookupByLibrary.simpleMessage("帐户"),
+    "windowTopArsenal": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
+    "windowTopNetParameters": MessageLookupByLibrary.simpleMessage("网络参数"),
+    "windowTopWallet": MessageLookupByLibrary.simpleMessage("钱包"),
   };
 }

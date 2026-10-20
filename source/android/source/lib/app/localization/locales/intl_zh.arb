@@ -51,12 +51,26 @@
 	},
 	"chosen": "已选",
 
-	"netherlands": "荷兰",
-	"finland": "芬兰",
-	"germany": "德国",
+	"connectionNetherlands": "荷兰",
+	"connectionFinland": "芬兰",
+	"connectionGermany": "德国",
+
+	"netherlands": "荷兰  |  tropic_rain",
+	"finland": "芬兰  |  tropic_rain",
+	"germany": "德国  |  tropic_rain",
 
 	"done": "完成",
 	"ok": "确定",
 
-	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel"
+	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel",
+
+	"windowTopArsenal": "应用程序的武器库",
+	"windowTopNetParameters": "网络参数",
+	"windowTopAccount": "帐户",
+	"windowTopWallet": "钱包",
+
+	"arsenal": "兵工厂",
+	"netParameters": "网络参数",
+	"accout": "帐户",
+	"wallet": "钱包"
 }

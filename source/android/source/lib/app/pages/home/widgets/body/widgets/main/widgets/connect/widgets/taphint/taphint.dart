@@ -90,7 +90,7 @@ class TapHint extends HookWidget {
               Text (
                 T.of(context).tapToConectToVpn,
                 style: TextStyle (
-                  fontFamily: 'Fredoka',
+                  fontFamily: 'Archivo',
                   fontWeight: FontWeight.w500,
                   fontSize: 17.5,
                   color: context.colors.textTapHint,

@@ -24,6 +24,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color circlesBorder;
   final Color connectionButtonShadow;
   final Color drawerBack;
+  final Color drawerOptionIcon;
   final Color green;
   final Color grey;
   final Color hint;
@@ -94,6 +95,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.circlesBorder,
     required this.connectionButtonShadow,
     required this.drawerBack,
+    required this.drawerOptionIcon,
     required this.green,
     required this.grey,
     required this.hint,
@@ -165,6 +167,7 @@ class AppColors extends ThemeExtension <AppColors> {
     circlesBorder: Color (0xff303030),
     connectionButtonShadow: Color (0x94000000),
     drawerBack: Color (0xff0b0b0b),
+    drawerOptionIcon: Color (0xff808080),
     green: Color (0xff4caf50),
     grey: Color (0xff8b8b8b),
     hint: Color (0xff545454),
@@ -235,6 +238,7 @@ class AppColors extends ThemeExtension <AppColors> {
     circlesBorder: Color (0xffcdcdcd),
     connectionButtonShadow: Color (0x94000000),
     drawerBack: Color (0xfff2f2f2),
+    drawerOptionIcon: Color (0xff000000),
     green: Color (0xff4caf50),
     grey: Color (0xff8b8b8b),
     hint: Color (0xff545454),
@@ -306,6 +310,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? circlesBorder,
     Color? connectionButtonShadow,
     Color? drawerBack,
+    Color? drawerOptionIcon,
     Color? green,
     Color? grey,
     Color? hint,
@@ -378,6 +383,7 @@ class AppColors extends ThemeExtension <AppColors> {
         circlesBorder: circlesBorder ?? this.circlesBorder,
         connectionButtonShadow: connectionButtonShadow ?? this.connectionButtonShadow,
         drawerBack: drawerBack ?? this.drawerBack,
+        drawerOptionIcon: drawerOptionIcon ?? this.drawerOptionIcon,
         green: green ?? this.green,
         grey: grey ?? this.grey,
         hint: hint ?? this.hint,
@@ -463,6 +469,7 @@ class AppColors extends ThemeExtension <AppColors> {
         circlesBorder: Color.lerp (circlesBorder, other.circlesBorder, t) ?? circlesBorder,
         connectionButtonShadow: Color.lerp (connectionButtonShadow, other.connectionButtonShadow, t) ?? connectionButtonShadow,
         drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
+        drawerOptionIcon: Color.lerp (drawerOptionIcon, other.drawerOptionIcon, t) ?? drawerOptionIcon,
         green: Color.lerp (green, other.green, t) ?? green,
         grey: Color.lerp (grey, other.grey, t) ?? grey,
         hint: Color.lerp (hint, other.hint, t) ?? hint,

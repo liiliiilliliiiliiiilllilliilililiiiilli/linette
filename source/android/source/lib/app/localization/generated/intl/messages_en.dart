@@ -24,7 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "accout": MessageLookupByLibrary.simpleMessage("Account"),
     "appLanguage": MessageLookupByLibrary.simpleMessage("App language"),
+    "arsenal": MessageLookupByLibrary.simpleMessage("Arsenal"),
     "chinese": MessageLookupByLibrary.simpleMessage("Chinese"),
     "chineseNative": MessageLookupByLibrary.simpleMessage("中文"),
     "chooseServer": MessageLookupByLibrary.simpleMessage("Choose the server"),
@@ -32,20 +34,28 @@ class MessageLookup extends MessageLookupByLibrary {
     "connectToVpnOnLaunch": MessageLookupByLibrary.simpleMessage(
       "Connect to VPN on app launch",
     ),
+    "connectionFinland": MessageLookupByLibrary.simpleMessage("Finland"),
+    "connectionGermany": MessageLookupByLibrary.simpleMessage("Germany"),
     "connectionIsNotProtected": MessageLookupByLibrary.simpleMessage(
       "Connection is not secured",
+    ),
+    "connectionNetherlands": MessageLookupByLibrary.simpleMessage(
+      "Netherlands",
     ),
     "done": MessageLookupByLibrary.simpleMessage("Done"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "englishNative": MessageLookupByLibrary.simpleMessage("English"),
     "feedBack": MessageLookupByLibrary.simpleMessage("Feedback"),
-    "finland": MessageLookupByLibrary.simpleMessage("Finland"),
-    "germany": MessageLookupByLibrary.simpleMessage("Germany"),
+    "finland": MessageLookupByLibrary.simpleMessage("Finland  |  tropic_rain"),
+    "germany": MessageLookupByLibrary.simpleMessage("Germany  |  tropic_rain"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
     "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
       "https://t.me/LinetteTelegramChannel",
     ),
-    "netherlands": MessageLookupByLibrary.simpleMessage("Netherlands"),
+    "netParameters": MessageLookupByLibrary.simpleMessage("Network parameters"),
+    "netherlands": MessageLookupByLibrary.simpleMessage(
+      "Netherlands  |  tropic_rain",
+    ),
     "noConnection": MessageLookupByLibrary.simpleMessage("No connection"),
     "numOnline": m0,
     "ok": MessageLookupByLibrary.simpleMessage("Ok"),
@@ -73,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tap to connect to VPN",
     ),
     "title": MessageLookupByLibrary.simpleMessage("Linette"),
+    "wallet": MessageLookupByLibrary.simpleMessage("Wallet"),
     "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Change language",
     ),
@@ -85,5 +96,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
       "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
     ),
+    "windowTopAccount": MessageLookupByLibrary.simpleMessage("Account"),
+    "windowTopArsenal": MessageLookupByLibrary.simpleMessage("App\'s arsenal"),
+    "windowTopNetParameters": MessageLookupByLibrary.simpleMessage(
+      "Network parameters",
+    ),
+    "windowTopWallet": MessageLookupByLibrary.simpleMessage("Wallet"),
   };
 }

@@ -20,9 +20,9 @@ class BodyComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String textNetherlands = T.of(context).netherlands;
-    final String textFinland = T.of(context).finland;
-    final String textGermany = T.of(context).germany;
+    final String textNetherlands = T.of(context).connectionNetherlands;
+    final String textFinland = T.of(context).connectionFinland;
+    final String textGermany = T.of(context).connectionGermany;
 
 
     final ValueNotifier <String> chosen = useState (textNetherlands);

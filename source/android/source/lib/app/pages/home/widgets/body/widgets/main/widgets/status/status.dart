@@ -20,7 +20,7 @@ class Status extends StatelessWidget {
       Text (
         T.of(context).connectionIsNotProtected,
         style: TextStyle (
-          fontFamily: 'Fredoka',
+          fontFamily: 'Archivo',
           fontWeight: FontWeight.w600,
           fontSize: 26,
           color: context.colors.textStatus

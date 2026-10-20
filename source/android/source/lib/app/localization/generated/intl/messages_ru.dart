@@ -24,7 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "accout": MessageLookupByLibrary.simpleMessage("Аккаунт"),
     "appLanguage": MessageLookupByLibrary.simpleMessage("Язык приложения"),
+    "arsenal": MessageLookupByLibrary.simpleMessage("Арсенал"),
     "chinese": MessageLookupByLibrary.simpleMessage("Китайский"),
     "chineseNative": MessageLookupByLibrary.simpleMessage("中文"),
     "chooseServer": MessageLookupByLibrary.simpleMessage("Выберите сервер"),
@@ -32,20 +34,28 @@ class MessageLookup extends MessageLookupByLibrary {
     "connectToVpnOnLaunch": MessageLookupByLibrary.simpleMessage(
       "Подключение к VPN при запуске приложения",
     ),
+    "connectionFinland": MessageLookupByLibrary.simpleMessage("Финляндия"),
+    "connectionGermany": MessageLookupByLibrary.simpleMessage("Германия"),
     "connectionIsNotProtected": MessageLookupByLibrary.simpleMessage(
       "Соединение не защищено",
     ),
+    "connectionNetherlands": MessageLookupByLibrary.simpleMessage("Нидерланды"),
     "done": MessageLookupByLibrary.simpleMessage("Готово"),
     "english": MessageLookupByLibrary.simpleMessage("Английский"),
     "englishNative": MessageLookupByLibrary.simpleMessage("English"),
     "feedBack": MessageLookupByLibrary.simpleMessage("Обратная связь"),
-    "finland": MessageLookupByLibrary.simpleMessage("Финляндия"),
-    "germany": MessageLookupByLibrary.simpleMessage("Германия"),
+    "finland": MessageLookupByLibrary.simpleMessage(
+      "Финляндия  |  tropic_rain",
+    ),
+    "germany": MessageLookupByLibrary.simpleMessage("Германия  |  tropic_rain"),
     "language": MessageLookupByLibrary.simpleMessage("Язык"),
     "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
       "https://t.me/LinetteTelegramChannel",
     ),
-    "netherlands": MessageLookupByLibrary.simpleMessage("Нидерланды"),
+    "netParameters": MessageLookupByLibrary.simpleMessage("Параметры сети"),
+    "netherlands": MessageLookupByLibrary.simpleMessage(
+      "Нидерланды  |  tropic_rain",
+    ),
     "noConnection": MessageLookupByLibrary.simpleMessage("Нет подключения"),
     "numOnline": m0,
     "ok": MessageLookupByLibrary.simpleMessage("Ок"),
@@ -73,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Нажмите для подключения к VPN",
     ),
     "title": MessageLookupByLibrary.simpleMessage("Linette"),
+    "wallet": MessageLookupByLibrary.simpleMessage("Кошелек"),
     "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Изменить язык",
     ),
@@ -85,5 +96,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
       "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
     ),
+    "windowTopAccount": MessageLookupByLibrary.simpleMessage("Аккаунт"),
+    "windowTopArsenal": MessageLookupByLibrary.simpleMessage(
+      "Арсенал приложения",
+    ),
+    "windowTopNetParameters": MessageLookupByLibrary.simpleMessage(
+      "Параметры сети",
+    ),
+    "windowTopWallet": MessageLookupByLibrary.simpleMessage("Кошелек"),
   };
 }

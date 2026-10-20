@@ -51,12 +51,26 @@
 	},
 	"chosen": "Chosen",
 
-	"netherlands": "Netherlands",
-	"finland": "Finland",
-	"germany": "Germany",
+	"connectionNetherlands": "Netherlands",
+	"connectionFinland": "Finland",
+	"connectionGermany": "Germany",
+
+	"netherlands": "Netherlands  |  tropic_rain",
+	"finland": "Finland  |  tropic_rain",
+	"germany": "Germany  |  tropic_rain",
 
 	"done": "Done",
 	"ok": "Ok",
 
-	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel"
+	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel",
+
+	"windowTopArsenal": "App's arsenal",
+	"windowTopNetParameters": "Network parameters",
+	"windowTopAccount": "Account",
+	"windowTopWallet": "Wallet",
+
+	"arsenal": "Arsenal",
+	"netParameters": "Network parameters",
+	"accout": "Account",
+	"wallet": "Wallet"
 }

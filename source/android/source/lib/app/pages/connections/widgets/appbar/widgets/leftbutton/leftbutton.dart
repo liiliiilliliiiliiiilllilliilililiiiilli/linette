@@ -23,7 +23,7 @@ class LeftButton extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap (context) {
+    void handleTap () {
 
       Navigator.pop (context);
 
@@ -39,7 +39,7 @@ class LeftButton extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        handleTap: () => handleTap (context),
+        handleTap: handleTap,
         child: AnimatorPresser (
           isPressed: isPressed,
           child: AnimatedContainer (

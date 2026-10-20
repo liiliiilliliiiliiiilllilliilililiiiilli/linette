@@ -100,7 +100,7 @@ class ButtonChangeLanguage extends HookWidget {
       TextButtonComponent (
         pictureLeft: context.icons.language,
         text: T.of(context).welcomeChangeLanguage,
-        onTap: () => handleTap ()
+        onTap: handleTap
       )
 
     );

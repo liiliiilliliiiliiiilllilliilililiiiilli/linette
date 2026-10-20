@@ -23,7 +23,7 @@ class ChooseConnectionButton extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap (context) {
+    void handleTap () {
 
       Navigator.pushNamed (context, '/connections');
 
@@ -34,7 +34,7 @@ class ChooseConnectionButton extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        handleTap: () => handleTap (context),
+        handleTap: handleTap,
         child: AnimatorPresser (
           isPressed: isPressed,
           child: Container (
@@ -56,7 +56,7 @@ class ChooseConnectionButton extends HookWidget {
                 Text (
                   T.of(context).netherlands,
                   style: TextStyle (
-                    fontFamily: 'Fredoka',
+                    fontFamily: 'Archivo',
                     fontWeight: FontWeight.w600,
                     fontSize: 17.5,
                     color: context.colors.textChooseConnectionButton,
@@ -69,8 +69,8 @@ class ChooseConnectionButton extends HookWidget {
                     context.colors.iconArrow,
                     BlendMode.srcIn
                   ),
-                  width: 17,
-                  height: 17
+                  width: 15,
+                  height: 15
                 )
               ]
             )

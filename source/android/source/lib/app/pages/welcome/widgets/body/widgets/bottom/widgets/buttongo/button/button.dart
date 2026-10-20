@@ -61,7 +61,7 @@ class ButtonComponent extends HookWidget {
 
     useEffect (() {
 
-      final Timer timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
+      final Timer timer = Timer.periodic (const Duration (milliseconds: 5000), (t) async {
 
         await controller.forward ();
         await controller.reverse ();
@@ -73,15 +73,46 @@ class ButtonComponent extends HookWidget {
     }, const []);
 
 
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
+
     return (
 
       GestureDetector (
-        onTap: () => onTap (),
-        onPanDown: (details) => isPressed.value = true,
-        onTapUp: (details) => isPressed.value = false,
-        onPanCancel: () => isPressed.value = false,
-        onTapCancel: () => isPressed.value = false,
-        onLongPressCancel: () => isPressed.value = false,
+        onTap: onTap,
+        onPanDown: onPanDown,
+        onTapUp: onTapUp,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
         behavior: HitTestBehavior.opaque,
         child: AnimatorPresser (
           isPressed: isPressed,

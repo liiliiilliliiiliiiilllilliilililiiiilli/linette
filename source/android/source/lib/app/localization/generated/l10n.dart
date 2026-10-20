@@ -286,18 +286,63 @@ class T {
   }
 
   /// `Netherlands`
-  String get netherlands {
-    return Intl.message('Netherlands', name: 'netherlands', desc: '', args: []);
+  String get connectionNetherlands {
+    return Intl.message(
+      'Netherlands',
+      name: 'connectionNetherlands',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Finland`
-  String get finland {
-    return Intl.message('Finland', name: 'finland', desc: '', args: []);
+  String get connectionFinland {
+    return Intl.message(
+      'Finland',
+      name: 'connectionFinland',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Germany`
+  String get connectionGermany {
+    return Intl.message(
+      'Germany',
+      name: 'connectionGermany',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Netherlands  |  tropic_rain`
+  String get netherlands {
+    return Intl.message(
+      'Netherlands  |  tropic_rain',
+      name: 'netherlands',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Finland  |  tropic_rain`
+  String get finland {
+    return Intl.message(
+      'Finland  |  tropic_rain',
+      name: 'finland',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Germany  |  tropic_rain`
   String get germany {
-    return Intl.message('Germany', name: 'germany', desc: '', args: []);
+    return Intl.message(
+      'Germany  |  tropic_rain',
+      name: 'germany',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Done`
@@ -318,6 +363,66 @@ class T {
       desc: '',
       args: [],
     );
+  }
+
+  /// `App's arsenal`
+  String get windowTopArsenal {
+    return Intl.message(
+      'App\'s arsenal',
+      name: 'windowTopArsenal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network parameters`
+  String get windowTopNetParameters {
+    return Intl.message(
+      'Network parameters',
+      name: 'windowTopNetParameters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get windowTopAccount {
+    return Intl.message(
+      'Account',
+      name: 'windowTopAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wallet`
+  String get windowTopWallet {
+    return Intl.message('Wallet', name: 'windowTopWallet', desc: '', args: []);
+  }
+
+  /// `Arsenal`
+  String get arsenal {
+    return Intl.message('Arsenal', name: 'arsenal', desc: '', args: []);
+  }
+
+  /// `Network parameters`
+  String get netParameters {
+    return Intl.message(
+      'Network parameters',
+      name: 'netParameters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get accout {
+    return Intl.message('Account', name: 'accout', desc: '', args: []);
+  }
+
+  /// `Wallet`
+  String get wallet {
+    return Intl.message('Wallet', name: 'wallet', desc: '', args: []);
   }
 }
 

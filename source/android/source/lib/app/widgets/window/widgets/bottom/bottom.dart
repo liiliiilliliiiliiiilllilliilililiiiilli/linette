@@ -1,8 +1,7 @@
-// Home page - Drawer - Main - Language option - Change language window - Bottom
+// Global widgets - Window - Bottom
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
@@ -11,7 +10,11 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 class BottomComponent extends HookWidget {
 
+  final String action;
+
+
   const BottomComponent ({
+    required this.action,
     super.key
   });
 
@@ -44,7 +47,7 @@ class BottomComponent extends HookWidget {
               bottom: 12 + 4
             ),
             child: Text (
-              T.of(context).done,
+              action,
               style: TextStyle (
                 fontFamily: 'Fedoka',
                 fontWeight: FontWeight.w400,

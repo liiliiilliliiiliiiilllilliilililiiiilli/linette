@@ -1,14 +1,17 @@
-// Home page - Body - Bottom - Hint window - Top
+// Global widgets - Window - Top
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/theme/colors/colors.dart';
 
 
 
 class TopComponent extends StatelessWidget {
 
+  final String title;
+
+
   const TopComponent ({
+    required this.title,
     super.key
   });
 
@@ -33,7 +36,7 @@ class TopComponent extends StatelessWidget {
           color: context.colors.windowTopBack
         ),
         child: Text (
-          T.of(context).purposeOfThisApp,
+          title,
           style: TextStyle (
             fontFamily: 'Fedoka',
             fontWeight: FontWeight.w600,
