@@ -1,8 +1,9 @@
 // Welcome page - Body - Main
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -18,13 +19,13 @@ class Main extends StatelessWidget {
     return (
 
       Text (
-        T.of(context).welcomeWhatToDo,
+        context.texts.pageWelcomeCenter,
         textAlign: TextAlign.center,
         style: TextStyle (
-          fontFamily: 'Archivo',
+          fontFamily: context.fonts.archivo,
           fontWeight: FontWeight.w500,
           fontSize: 18,
-          color: context.colors.textTitle
+          color: context.colors.title
         )
       )
 

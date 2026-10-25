@@ -1,15 +1,15 @@
 // Connections page
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 
 
 
-class Connections extends StatelessWidget {
+class ConnectionsPage extends StatelessWidget {
 
-  const Connections ({
+  const ConnectionsPage ({
     super.key
   });
 

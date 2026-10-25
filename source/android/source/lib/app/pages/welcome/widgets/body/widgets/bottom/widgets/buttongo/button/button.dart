@@ -4,7 +4,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -12,16 +13,16 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 class ButtonComponent extends HookWidget {
 
   final String text;
-  final String? picture;
-  final double? pictureSize;
+  final String? icon;
+  final double? iconSize;
   final Function () onTap;
 
 
   const ButtonComponent ({
     super.key,
     required this.text,
-    this.picture,
-    this.pictureSize,
+    this.icon,
+    this.iconSize,
     required this.onTap
   });
 
@@ -31,8 +32,8 @@ class ButtonComponent extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final pictureWidth = pictureSize ?? 12.5;
-    final pictureHeight = pictureSize ?? 12.5;
+    final iconWidth = iconSize ?? 12.5;
+    final iconHeight = iconSize ?? 12.5;
 
 
     final AnimationController controller = useAnimationController (
@@ -121,17 +122,17 @@ class ButtonComponent extends HookWidget {
             mainAxisSize: MainAxisSize.min,
             spacing: 8,
             children: [
-              if (picture != null) ... [
+              if (icon != null) ... [
                 SlideTransition (
                   position: slideAnimation,
                   child: SvgPicture.asset (
-                    picture!,
+                    icon!,
                     colorFilter: ColorFilter.mode (
                       context.colors.transparent,
                       BlendMode.srcIn
                     ),
-                    width: pictureWidth,
-                    height: pictureHeight
+                    width: iconWidth,
+                    height: iconHeight
                   )
                 )
               ],
@@ -147,24 +148,24 @@ class ButtonComponent extends HookWidget {
                 child: Text (
                   text,
                   style: TextStyle (
-                    fontFamily: 'Archivo',
+                    fontFamily: context.fonts.archivo,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
                     color: context.colors.buttonText
                   )
                 )
               ),
-              if (picture != null) ... [
+              if (icon != null) ... [
                 SlideTransition (
                   position: slideAnimation,
                   child: SvgPicture.asset (
-                    picture!,
+                    icon!,
                     colorFilter: ColorFilter.mode (
                       context.colors.button,
                       BlendMode.srcIn
                     ),
-                    width: pictureWidth,
-                    height: pictureHeight
+                    width: iconWidth,
+                    height: iconHeight
                   )
                 )
               ]

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 import 'widgets/country/country.dart';
@@ -28,7 +28,7 @@ class Connection extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final Color colorOutline = model.isChosen
+    final Color colorBorder = model.isChosen
       ? context.colors.blockBorder
       : context.colors.block;
 
@@ -46,7 +46,7 @@ class Connection extends HookWidget {
             decoration: BoxDecoration (
               border: Border.all (
                 width: 2,
-                color: colorOutline
+                color: colorBorder
               ),
               borderRadius: BorderRadius.circular (16),
               color: context.colors.block

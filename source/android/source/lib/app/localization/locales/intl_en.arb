@@ -1,76 +1,76 @@
 {
 	"@@locale": "en",
 
-	"welcomeTitleDot": "•",
-	"welcomeTitle": " Linette ",
-	"welcomeSubtitle": "Plan to save the world",
-	"welcomeWhatToDo": "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
-	"welcomeGo": "Let's go!",
-	"welcomeChangeLanguage": "Change language",
+	"pageWelcomeTopTitle": " Linette ",
+	"pageWelcomeTopTitleDot": "•",
+	"pageWelcomeTopSubtitle": "Plan to save the world",
+	"pageWelcomeCenter": "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
+	"pageWelcomeBottomGo": "Let's go!",
+	"pageWelcomeBottomChangeLanguage": "Change language",
 
-	"title": "Linette",
+	"pageHomeAppBar": "Linette",
+	"pageHomeBodyTop": "Connection is not secured",
+	"pageHomeBodyCenterTapToConnect": "Tap to start the system",
+	"pageHomeBodyCenterTapToDisconnect": "Tap to stop the system",
+	"pageHomeBodyCenterGoNetherlands": "Netherlands  |  tropic_rain",
+	"pageHomeBodyCenterGoFinland": "Finland  |  tropic_rain",
+	"pageHomeBodyCenterGoGermany": "Germany  |  tropic_rain",
+	"pageHomeBodyBottom": "No connection",
+    "pageHomeBottom_1": "Read more",
+	"pageHomeBottom_2": " about the service, created to pass the restrictions.",
 
-	"connectionIsNotProtected": "Connection is not secured",
-	"tapToConectToVpn": "Tap to connect to VPN",
-	"noConnection": "No connection",
-    "readMore_1": "Read more",
-	"readMore_2": " about the service, created to pass the restrictions.",
-	"purposeOfThisApp": "Which purpose does this app have?",
-	"serviceDescription": "If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.",
+	"pageHomeDrawerTop": "Options",
+	"pageHomeDrawerCenterLanguage": "Language",
+	"pageHomeDrawerCenterFeedback": "Feedback",
+	"pageHomeDrawerCenterArsenal": "Arsenal",
+	"pageHomeDrawerCenterNetParameters": "Network parameters",
+	"pageHomeDrawerCenterAccout": "Account",
+	"pageHomeDrawerCenterWallet": "Wallet",
+	"pageHomeDrawerBottom": "Connect to VPN on app launch",
 
-	"options": "Options",
-
-	"language": "Language",
-
-	"appLanguage": "App language",
-
-	"russian": "Russian",
-	"english": "English",
-	"chinese": "Chinese",
-
-	"russianNative": "Русский",
-	"englishNative": "English",
-	"chineseNative": "中文",
-
-	"feedBack": "Feedback",
-
-    "serviceNews_1": "Service news are being published on the ",
-    "serviceNews_2": "official Telegram channel",
-    "serviceNews_3": ".",
-
-	"connectToVpnOnLaunch": "Connect to VPN on app launch",
-
-	"chooseServer": "Choose the server",
-	"numOnline": "{num} online",
-	"@numOnline": {
+	"pageConnectionsAppbar": "Choose the server",
+	"pageConnectionsBodyLiner": "{num} online",
+	"@pageConnectionsBodyLiner": {
 		"placeholders": {
 			"num": {
 				"type": "int"
 			}
 		}
 	},
-	"chosen": "Chosen",
+	"pageConnectionsBodyListCountryNetherlands": "Netherlands",
+	"pageConnectionsBodyListCountryFinland": "Finland",
+	"pageConnectionsBodyListCountryGermany": "Germany",
+	"pageConnectionsBodyListIsChosen": "Chosen",
 
-	"connectionNetherlands": "Netherlands",
-	"connectionFinland": "Finland",
-	"connectionGermany": "Germany",
+	"windowPurposeOfThisAppTop": "Which purpose does this app have?",
+	"windowPurposeOfThisAppCenter": "If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.",
+	"windowPurposeOfThisAppBottom": "Ok",
 
-	"netherlands": "Netherlands  |  tropic_rain",
-	"finland": "Finland  |  tropic_rain",
-	"germany": "Germany  |  tropic_rain",
+	"windowAppLanguageTop": "App language",
+	"windowAppLanguageCenterRussian": "Russian",
+	"windowAppLanguageCenterEnglish": "English",
+	"windowAppLanguageCenterChinese": "Chinese",
+	"windowAppLanguageCenterRussianNative": "Русский",
+	"windowAppLanguageCenterEnglishNative": "English",
+	"windowAppLanguageCenterChineseNative": "中文",
+	"windowAppLanguageBottom": "Done",
 
-	"done": "Done",
-	"ok": "Ok",
+	"windowFeedbackTop": "Feedback",
+    "windowFeedbackCenter_1": "Service news are being published on the ",
+    "windowFeedbackCenter_2": "official Telegram channel",
+	"windowFeedbackCenter_2_Link": "https://t.me/LinetteTelegramChannel",
+    "windowFeedbackCenter_3": ".",
+	"windowFeedbackBottom": "Ok",
 
-	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel",
+	"windowArsenalTop": "App's arsenal",
+	"windowArsenalBottom": "Done",
 
-	"windowTopArsenal": "App's arsenal",
-	"windowTopNetParameters": "Network parameters",
-	"windowTopAccount": "Account",
-	"windowTopWallet": "Wallet",
+	"windowNetParametersTop": "Network parameters",
+	"windowNetParametersBottom": "Ok",
 
-	"arsenal": "Arsenal",
-	"netParameters": "Network parameters",
-	"accout": "Account",
-	"wallet": "Wallet"
+	"windowAccountTop": "Account",
+	"windowAccountBottom": "Done",
+
+	"windowWalletTop": "Wallet",
+	"windowWalletBottom": "Done"
 }

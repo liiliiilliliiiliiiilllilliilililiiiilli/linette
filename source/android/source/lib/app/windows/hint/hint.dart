@@ -1,9 +1,9 @@
-// Home page - Body - Bottom - Hint window
+// Hint window
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 
 
@@ -21,7 +21,7 @@ class HintWindow extends HookWidget {
 
       Window (
         isExpanded: true,
-        title: T.of(context).purposeOfThisApp,
+        title: context.texts.windowPurposeOfThisAppTop,
         body: Stack (
           children: [
             SingleChildScrollView (
@@ -30,7 +30,7 @@ class HintWindow extends HookWidget {
                   top: 10
                 ),
                 child: Text (
-                  T.of(context).serviceDescription,
+                  context.texts.windowPurposeOfThisAppCenter,
                   style: TextStyle (
                     fontFamily: 'Fedoka',
                     fontWeight: FontWeight.w400,
@@ -62,7 +62,7 @@ class HintWindow extends HookWidget {
             )
           ]
         ),
-        action: T.of(context).ok,
+        action: context.texts.windowPurposeOfThisAppBottom,
         width: 340
       )
 

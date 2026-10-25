@@ -24,61 +24,100 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "accout": MessageLookupByLibrary.simpleMessage("帐户"),
-    "appLanguage": MessageLookupByLibrary.simpleMessage("应用程序语言"),
-    "arsenal": MessageLookupByLibrary.simpleMessage("兵工厂"),
-    "chinese": MessageLookupByLibrary.simpleMessage("中文"),
-    "chineseNative": MessageLookupByLibrary.simpleMessage("中文"),
-    "chooseServer": MessageLookupByLibrary.simpleMessage("选择服务器"),
-    "chosen": MessageLookupByLibrary.simpleMessage("已选"),
-    "connectToVpnOnLaunch": MessageLookupByLibrary.simpleMessage(
+    "pageConnectionsAppbar": MessageLookupByLibrary.simpleMessage("选择服务器"),
+    "pageConnectionsBodyLiner": m0,
+    "pageConnectionsBodyListCountryFinland":
+        MessageLookupByLibrary.simpleMessage("芬兰"),
+    "pageConnectionsBodyListCountryGermany":
+        MessageLookupByLibrary.simpleMessage("德国"),
+    "pageConnectionsBodyListCountryNetherlands":
+        MessageLookupByLibrary.simpleMessage("荷兰"),
+    "pageConnectionsBodyListIsChosen": MessageLookupByLibrary.simpleMessage(
+      "已选",
+    ),
+    "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
+    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("无连接"),
+    "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
+      "芬兰  |  tropic_rain",
+    ),
+    "pageHomeBodyCenterGoGermany": MessageLookupByLibrary.simpleMessage(
+      "德国  |  tropic_rain",
+    ),
+    "pageHomeBodyCenterGoNetherlands": MessageLookupByLibrary.simpleMessage(
+      "荷兰  |  tropic_rain",
+    ),
+    "pageHomeBodyCenterTapToConnect": MessageLookupByLibrary.simpleMessage(
+      "点击启动系统",
+    ),
+    "pageHomeBodyCenterTapToDisconnect": MessageLookupByLibrary.simpleMessage(
+      "点击关闭系统",
+    ),
+    "pageHomeBodyTop": MessageLookupByLibrary.simpleMessage("连接未受保护"),
+    "pageHomeBottom_1": MessageLookupByLibrary.simpleMessage("了解更多"),
+    "pageHomeBottom_2": MessageLookupByLibrary.simpleMessage(" 关于为绕过限制而创建的服务。"),
+    "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage(
       "启动应用程序时连接VPN",
     ),
-    "connectionFinland": MessageLookupByLibrary.simpleMessage("芬兰"),
-    "connectionGermany": MessageLookupByLibrary.simpleMessage("德国"),
-    "connectionIsNotProtected": MessageLookupByLibrary.simpleMessage("连接未受保护"),
-    "connectionNetherlands": MessageLookupByLibrary.simpleMessage("荷兰"),
-    "done": MessageLookupByLibrary.simpleMessage("完成"),
-    "english": MessageLookupByLibrary.simpleMessage("英语"),
-    "englishNative": MessageLookupByLibrary.simpleMessage("English"),
-    "feedBack": MessageLookupByLibrary.simpleMessage("反馈"),
-    "finland": MessageLookupByLibrary.simpleMessage("芬兰  |  tropic_rain"),
-    "germany": MessageLookupByLibrary.simpleMessage("德国  |  tropic_rain"),
-    "language": MessageLookupByLibrary.simpleMessage("语言"),
-    "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
-      "https://t.me/LinetteTelegramChannel",
+    "pageHomeDrawerCenterAccout": MessageLookupByLibrary.simpleMessage("帐户"),
+    "pageHomeDrawerCenterArsenal": MessageLookupByLibrary.simpleMessage("兵工厂"),
+    "pageHomeDrawerCenterFeedback": MessageLookupByLibrary.simpleMessage("反馈"),
+    "pageHomeDrawerCenterLanguage": MessageLookupByLibrary.simpleMessage("语言"),
+    "pageHomeDrawerCenterNetParameters": MessageLookupByLibrary.simpleMessage(
+      "网络参数",
     ),
-    "netParameters": MessageLookupByLibrary.simpleMessage("网络参数"),
-    "netherlands": MessageLookupByLibrary.simpleMessage("荷兰  |  tropic_rain"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("无连接"),
-    "numOnline": m0,
-    "ok": MessageLookupByLibrary.simpleMessage("确定"),
-    "options": MessageLookupByLibrary.simpleMessage("选项"),
-    "purposeOfThisApp": MessageLookupByLibrary.simpleMessage("此应用程序的目的是什么？"),
-    "readMore_1": MessageLookupByLibrary.simpleMessage("了解更多"),
-    "readMore_2": MessageLookupByLibrary.simpleMessage(" 关于为绕过限制而创建的服务。"),
-    "russian": MessageLookupByLibrary.simpleMessage("俄语"),
-    "russianNative": MessageLookupByLibrary.simpleMessage("Русский"),
-    "serviceDescription": MessageLookupByLibrary.simpleMessage(
-      "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nLinette 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
+    "pageHomeDrawerCenterWallet": MessageLookupByLibrary.simpleMessage("钱包"),
+    "pageHomeDrawerTop": MessageLookupByLibrary.simpleMessage("选项"),
+    "pageWelcomeBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
+      "更改语言",
     ),
-    "serviceNews_1": MessageLookupByLibrary.simpleMessage("服务新闻发布在 "),
-    "serviceNews_2": MessageLookupByLibrary.simpleMessage("官方Telegram频道"),
-    "serviceNews_3": MessageLookupByLibrary.simpleMessage("."),
-    "tapToConectToVpn": MessageLookupByLibrary.simpleMessage("点击连接VPN"),
-    "title": MessageLookupByLibrary.simpleMessage("Linette"),
-    "wallet": MessageLookupByLibrary.simpleMessage("钱包"),
-    "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage("更改语言"),
-    "welcomeGo": MessageLookupByLibrary.simpleMessage("我们走吧！"),
-    "welcomeSubtitle": MessageLookupByLibrary.simpleMessage("拯救世界的计划"),
-    "welcomeTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
-    "welcomeTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBottomGo": MessageLookupByLibrary.simpleMessage("我们走吧！"),
+    "pageWelcomeCenter": MessageLookupByLibrary.simpleMessage(
       "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
     ),
-    "windowTopAccount": MessageLookupByLibrary.simpleMessage("帐户"),
-    "windowTopArsenal": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
-    "windowTopNetParameters": MessageLookupByLibrary.simpleMessage("网络参数"),
-    "windowTopWallet": MessageLookupByLibrary.simpleMessage("钱包"),
+    "pageWelcomeTopSubtitle": MessageLookupByLibrary.simpleMessage("拯救世界的计划"),
+    "pageWelcomeTopTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
+    "pageWelcomeTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "windowAccountBottom": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowAccountTop": MessageLookupByLibrary.simpleMessage("帐户"),
+    "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowAppLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
+      "中文",
+    ),
+    "windowAppLanguageCenterChineseNative":
+        MessageLookupByLibrary.simpleMessage("中文"),
+    "windowAppLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
+      "英语",
+    ),
+    "windowAppLanguageCenterEnglishNative":
+        MessageLookupByLibrary.simpleMessage("English"),
+    "windowAppLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
+      "俄语",
+    ),
+    "windowAppLanguageCenterRussianNative":
+        MessageLookupByLibrary.simpleMessage("Русский"),
+    "windowAppLanguageTop": MessageLookupByLibrary.simpleMessage("应用程序语言"),
+    "windowArsenalBottom": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowArsenalTop": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
+    "windowFeedbackBottom": MessageLookupByLibrary.simpleMessage("确定"),
+    "windowFeedbackCenter_1": MessageLookupByLibrary.simpleMessage("服务新闻发布在 "),
+    "windowFeedbackCenter_2": MessageLookupByLibrary.simpleMessage(
+      "官方Telegram频道",
+    ),
+    "windowFeedbackCenter_2_Link": MessageLookupByLibrary.simpleMessage(
+      "https://t.me/LinetteTelegramChannel",
+    ),
+    "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
+    "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("反馈"),
+    "windowNetParametersBottom": MessageLookupByLibrary.simpleMessage("确定"),
+    "windowNetParametersTop": MessageLookupByLibrary.simpleMessage("网络参数"),
+    "windowPurposeOfThisAppBottom": MessageLookupByLibrary.simpleMessage("确定"),
+    "windowPurposeOfThisAppCenter": MessageLookupByLibrary.simpleMessage(
+      "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nLinette 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
+    ),
+    "windowPurposeOfThisAppTop": MessageLookupByLibrary.simpleMessage(
+      "此应用程序的目的是什么？",
+    ),
+    "windowWalletBottom": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowWalletTop": MessageLookupByLibrary.simpleMessage("钱包"),
   };
 }

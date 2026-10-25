@@ -1,16 +1,16 @@
 // Home page
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 import 'widgets/drawer/drawer.dart';
 
 
 
-class Home extends StatelessWidget {
+class HomePage extends StatelessWidget {
 
-  const Home ({
+  const HomePage ({
     super.key
   });
 

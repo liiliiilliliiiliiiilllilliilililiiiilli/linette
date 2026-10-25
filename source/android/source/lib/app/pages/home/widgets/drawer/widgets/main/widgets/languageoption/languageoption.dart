@@ -3,13 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:linette/app/providers/locale/locale.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/providers/locale/locale.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/windows/changelanguage/changelanguage.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
-import 'widgets/changelanguagewindow/changelanguagewindow.dart';
 
 
 
@@ -138,10 +139,10 @@ class LanguageOption extends HookConsumerWidget {
 
 
     final String textCurrentLanguage = localeState == 'ru'
-      ? T.of(context).russian
+      ? context.texts.windowAppLanguageCenterRussian
       : localeState == 'en'
-        ? T.of(context).english
-        : T.of(context).chinese;
+        ? context.texts.windowAppLanguageCenterEnglish
+        : context.texts.windowAppLanguageCenterChinese;
 
 
     return (
@@ -165,9 +166,9 @@ class LanguageOption extends HookConsumerWidget {
             child: Row (
               children: [
                 SvgPicture.asset (
-                  context.icons.languageDrawerOption,
+                  context.icons.language,
                   colorFilter: ColorFilter.mode (
-                    context.colors.drawerOptionIcon,
+                    context.colors.drawerOptionIconLeft,
                     BlendMode.srcIn
                   ),
                   height: 19
@@ -176,12 +177,12 @@ class LanguageOption extends HookConsumerWidget {
                   width: 12
                 ),
                 Text (
-                  T.of(context).language,
+                  context.texts.pageHomeDrawerCenterLanguage,
                   style: TextStyle (
-                    fontFamily: 'Archivo',
+                    fontFamily: context.fonts.archivo,
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
-                    color: context.colors.textDrawerOption
+                    color: context.colors.drawerOptionText
                   )
                 ),
                 Flexible (
@@ -190,10 +191,10 @@ class LanguageOption extends HookConsumerWidget {
                 Text (
                   textCurrentLanguage,
                   style: TextStyle (
-                    fontFamily: 'Archivo',
+                    fontFamily: context.fonts.archivo,
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
-                    color: context.colors.textDrawerOptionValue
+                    color: context.colors.drawerOptionTextValue
                   )
                 )
               ]

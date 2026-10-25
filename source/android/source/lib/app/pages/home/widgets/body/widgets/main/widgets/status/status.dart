@@ -1,8 +1,9 @@
 // Home page - Body - Main - Status
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -18,12 +19,12 @@ class Status extends StatelessWidget {
     return (
 
       Text (
-        T.of(context).connectionIsNotProtected,
+        context.texts.pageHomeBodyTop,
         style: TextStyle (
-          fontFamily: 'Archivo',
+          fontFamily: context.fonts.archivo,
           fontWeight: FontWeight.w600,
           fontSize: 26,
-          color: context.colors.textStatus
+          color: context.colors.status
         )
       )
 

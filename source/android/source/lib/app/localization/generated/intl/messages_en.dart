@@ -24,83 +24,124 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "accout": MessageLookupByLibrary.simpleMessage("Account"),
-    "appLanguage": MessageLookupByLibrary.simpleMessage("App language"),
-    "arsenal": MessageLookupByLibrary.simpleMessage("Arsenal"),
-    "chinese": MessageLookupByLibrary.simpleMessage("Chinese"),
-    "chineseNative": MessageLookupByLibrary.simpleMessage("中文"),
-    "chooseServer": MessageLookupByLibrary.simpleMessage("Choose the server"),
-    "chosen": MessageLookupByLibrary.simpleMessage("Chosen"),
-    "connectToVpnOnLaunch": MessageLookupByLibrary.simpleMessage(
-      "Connect to VPN on app launch",
+    "pageConnectionsAppbar": MessageLookupByLibrary.simpleMessage(
+      "Choose the server",
     ),
-    "connectionFinland": MessageLookupByLibrary.simpleMessage("Finland"),
-    "connectionGermany": MessageLookupByLibrary.simpleMessage("Germany"),
-    "connectionIsNotProtected": MessageLookupByLibrary.simpleMessage(
-      "Connection is not secured",
+    "pageConnectionsBodyLiner": m0,
+    "pageConnectionsBodyListCountryFinland":
+        MessageLookupByLibrary.simpleMessage("Finland"),
+    "pageConnectionsBodyListCountryGermany":
+        MessageLookupByLibrary.simpleMessage("Germany"),
+    "pageConnectionsBodyListCountryNetherlands":
+        MessageLookupByLibrary.simpleMessage("Netherlands"),
+    "pageConnectionsBodyListIsChosen": MessageLookupByLibrary.simpleMessage(
+      "Chosen",
     ),
-    "connectionNetherlands": MessageLookupByLibrary.simpleMessage(
-      "Netherlands",
+    "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
+    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("No connection"),
+    "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
+      "Finland  |  tropic_rain",
     ),
-    "done": MessageLookupByLibrary.simpleMessage("Done"),
-    "english": MessageLookupByLibrary.simpleMessage("English"),
-    "englishNative": MessageLookupByLibrary.simpleMessage("English"),
-    "feedBack": MessageLookupByLibrary.simpleMessage("Feedback"),
-    "finland": MessageLookupByLibrary.simpleMessage("Finland  |  tropic_rain"),
-    "germany": MessageLookupByLibrary.simpleMessage("Germany  |  tropic_rain"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
-      "https://t.me/LinetteTelegramChannel",
+    "pageHomeBodyCenterGoGermany": MessageLookupByLibrary.simpleMessage(
+      "Germany  |  tropic_rain",
     ),
-    "netParameters": MessageLookupByLibrary.simpleMessage("Network parameters"),
-    "netherlands": MessageLookupByLibrary.simpleMessage(
+    "pageHomeBodyCenterGoNetherlands": MessageLookupByLibrary.simpleMessage(
       "Netherlands  |  tropic_rain",
     ),
-    "noConnection": MessageLookupByLibrary.simpleMessage("No connection"),
-    "numOnline": m0,
-    "ok": MessageLookupByLibrary.simpleMessage("Ok"),
-    "options": MessageLookupByLibrary.simpleMessage("Options"),
-    "purposeOfThisApp": MessageLookupByLibrary.simpleMessage(
-      "Which purpose does this app have?",
+    "pageHomeBodyCenterTapToConnect": MessageLookupByLibrary.simpleMessage(
+      "Tap to start the system",
     ),
-    "readMore_1": MessageLookupByLibrary.simpleMessage("Read more"),
-    "readMore_2": MessageLookupByLibrary.simpleMessage(
+    "pageHomeBodyCenterTapToDisconnect": MessageLookupByLibrary.simpleMessage(
+      "Tap to stop the system",
+    ),
+    "pageHomeBodyTop": MessageLookupByLibrary.simpleMessage(
+      "Connection is not secured",
+    ),
+    "pageHomeBottom_1": MessageLookupByLibrary.simpleMessage("Read more"),
+    "pageHomeBottom_2": MessageLookupByLibrary.simpleMessage(
       " about the service, created to pass the restrictions.",
     ),
-    "russian": MessageLookupByLibrary.simpleMessage("Russian"),
-    "russianNative": MessageLookupByLibrary.simpleMessage("Русский"),
-    "serviceDescription": MessageLookupByLibrary.simpleMessage(
-      "If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.",
+    "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage(
+      "Connect to VPN on app launch",
     ),
-    "serviceNews_1": MessageLookupByLibrary.simpleMessage(
-      "Service news are being published on the ",
+    "pageHomeDrawerCenterAccout": MessageLookupByLibrary.simpleMessage(
+      "Account",
     ),
-    "serviceNews_2": MessageLookupByLibrary.simpleMessage(
-      "official Telegram channel",
+    "pageHomeDrawerCenterArsenal": MessageLookupByLibrary.simpleMessage(
+      "Arsenal",
     ),
-    "serviceNews_3": MessageLookupByLibrary.simpleMessage("."),
-    "tapToConectToVpn": MessageLookupByLibrary.simpleMessage(
-      "Tap to connect to VPN",
+    "pageHomeDrawerCenterFeedback": MessageLookupByLibrary.simpleMessage(
+      "Feedback",
     ),
-    "title": MessageLookupByLibrary.simpleMessage("Linette"),
-    "wallet": MessageLookupByLibrary.simpleMessage("Wallet"),
-    "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage(
-      "Change language",
+    "pageHomeDrawerCenterLanguage": MessageLookupByLibrary.simpleMessage(
+      "Language",
     ),
-    "welcomeGo": MessageLookupByLibrary.simpleMessage("Let\'s go!"),
-    "welcomeSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Plan to save the world",
-    ),
-    "welcomeTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
-    "welcomeTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
-      "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
-    ),
-    "windowTopAccount": MessageLookupByLibrary.simpleMessage("Account"),
-    "windowTopArsenal": MessageLookupByLibrary.simpleMessage("App\'s arsenal"),
-    "windowTopNetParameters": MessageLookupByLibrary.simpleMessage(
+    "pageHomeDrawerCenterNetParameters": MessageLookupByLibrary.simpleMessage(
       "Network parameters",
     ),
-    "windowTopWallet": MessageLookupByLibrary.simpleMessage("Wallet"),
+    "pageHomeDrawerCenterWallet": MessageLookupByLibrary.simpleMessage(
+      "Wallet",
+    ),
+    "pageHomeDrawerTop": MessageLookupByLibrary.simpleMessage("Options"),
+    "pageWelcomeBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
+      "Change language",
+    ),
+    "pageWelcomeBottomGo": MessageLookupByLibrary.simpleMessage("Let\'s go!"),
+    "pageWelcomeCenter": MessageLookupByLibrary.simpleMessage(
+      "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
+    ),
+    "pageWelcomeTopSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Plan to save the world",
+    ),
+    "pageWelcomeTopTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
+    "pageWelcomeTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "windowAccountBottom": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowAccountTop": MessageLookupByLibrary.simpleMessage("Account"),
+    "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowAppLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
+      "Chinese",
+    ),
+    "windowAppLanguageCenterChineseNative":
+        MessageLookupByLibrary.simpleMessage("中文"),
+    "windowAppLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
+      "English",
+    ),
+    "windowAppLanguageCenterEnglishNative":
+        MessageLookupByLibrary.simpleMessage("English"),
+    "windowAppLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
+      "Russian",
+    ),
+    "windowAppLanguageCenterRussianNative":
+        MessageLookupByLibrary.simpleMessage("Русский"),
+    "windowAppLanguageTop": MessageLookupByLibrary.simpleMessage(
+      "App language",
+    ),
+    "windowArsenalBottom": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowArsenalTop": MessageLookupByLibrary.simpleMessage("App\'s arsenal"),
+    "windowFeedbackBottom": MessageLookupByLibrary.simpleMessage("Ok"),
+    "windowFeedbackCenter_1": MessageLookupByLibrary.simpleMessage(
+      "Service news are being published on the ",
+    ),
+    "windowFeedbackCenter_2": MessageLookupByLibrary.simpleMessage(
+      "official Telegram channel",
+    ),
+    "windowFeedbackCenter_2_Link": MessageLookupByLibrary.simpleMessage(
+      "https://t.me/LinetteTelegramChannel",
+    ),
+    "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
+    "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("Feedback"),
+    "windowNetParametersBottom": MessageLookupByLibrary.simpleMessage("Ok"),
+    "windowNetParametersTop": MessageLookupByLibrary.simpleMessage(
+      "Network parameters",
+    ),
+    "windowPurposeOfThisAppBottom": MessageLookupByLibrary.simpleMessage("Ok"),
+    "windowPurposeOfThisAppCenter": MessageLookupByLibrary.simpleMessage(
+      "If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.",
+    ),
+    "windowPurposeOfThisAppTop": MessageLookupByLibrary.simpleMessage(
+      "Which purpose does this app have?",
+    ),
+    "windowWalletBottom": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowWalletTop": MessageLookupByLibrary.simpleMessage("Wallet"),
   };
 }

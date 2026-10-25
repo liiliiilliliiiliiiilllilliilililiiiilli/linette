@@ -1,10 +1,10 @@
-// Home page - Drawer - Main - Language option - Change language window
+// Change language window
 
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/locale/locale.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 import 'package:linette/app/widgets/radioitem/radioitem.dart';
 
@@ -29,18 +29,18 @@ class ChangeLanguageWindow extends HookConsumerWidget {
     final List <Map <String, String>> languages =  [
       {
         'code': 'ru',
-        'title': T.of(context).russian,
-        'subtitle': T.of(context).russianNative
+        'title': context.texts.windowAppLanguageCenterRussian,
+        'subtitle': context.texts.windowAppLanguageCenterRussianNative
       },
       {
         'code': 'en',
-        'title': T.of(context).english,
-        'subtitle': T.of(context).englishNative
+        'title': context.texts.windowAppLanguageCenterEnglish,
+        'subtitle': context.texts.windowAppLanguageCenterEnglishNative
       },
       {
         'code': 'zh',
-        'title': T.of(context).chinese,
-        'subtitle': T.of(context).chineseNative
+        'title': context.texts.windowAppLanguageCenterChinese,
+        'subtitle': context.texts.windowAppLanguageCenterChineseNative
       }
     ];
 
@@ -64,7 +64,7 @@ class ChangeLanguageWindow extends HookConsumerWidget {
     return (
 
       Window (
-        title: T.of(context).appLanguage,
+        title: context.texts.windowAppLanguageTop,
         body: Stack (
           children: [
             SingleChildScrollView (
@@ -108,7 +108,7 @@ class ChangeLanguageWindow extends HookConsumerWidget {
             )
           ]
         ),
-        action: T.of(context).done,
+        action: context.texts.windowAppLanguageBottom,
         width: 300
       )
 

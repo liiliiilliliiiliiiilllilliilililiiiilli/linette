@@ -1,8 +1,9 @@
 // Connections page - Body - Connections list - Connection - Choice status
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -20,7 +21,7 @@ class ChoiceStatus extends StatelessWidget {
   @override Widget build (BuildContext context) {
 
     final String text = isChosen
-      ? T.of(context).chosen
+      ? context.texts.pageConnectionsBodyListIsChosen
       : '';
 
 
@@ -31,10 +32,10 @@ class ChoiceStatus extends StatelessWidget {
         child: Text (
           text,
           style: TextStyle (
-            fontFamily: 'Archivo',
+            fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 16.5,
-            color: context.colors.grey
+            color: context.colors.textChoiceStatus
           )
         )
       )

@@ -4,9 +4,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -81,19 +82,19 @@ class TapHint extends HookWidget {
               SvgPicture.asset (
                 context.icons.tap,
                 colorFilter: ColorFilter.mode (
-                  context.colors.iconTap,
+                  context.colors.tapHintIcon,
                   BlendMode.srcIn
                 ),
                 width: 17,
                 height: 17
               ),
               Text (
-                T.of(context).tapToConectToVpn,
+                context.texts.pageHomeBodyCenterTapToConnect,
                 style: TextStyle (
-                  fontFamily: 'Archivo',
+                  fontFamily: context.fonts.archivo,
                   fontWeight: FontWeight.w500,
                   fontSize: 17.5,
-                  color: context.colors.textTapHint,
+                  color: context.colors.tapHintText,
                   height: 1
                 )
               )

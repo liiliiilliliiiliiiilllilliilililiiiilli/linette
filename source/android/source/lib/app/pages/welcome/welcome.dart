@@ -1,15 +1,15 @@
 // Welcome page
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 
 
 
-class Welcome extends StatelessWidget {
+class WelcomePage extends StatelessWidget {
 
-  const Welcome ({
+  const WelcomePage ({
     super.key
   });
 

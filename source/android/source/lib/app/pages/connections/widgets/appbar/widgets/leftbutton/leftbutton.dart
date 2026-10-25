@@ -4,8 +4,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
@@ -65,9 +65,9 @@ class LeftButton extends HookWidget {
                   child: Transform.rotate (
                     angle: 180 * math.pi / 180,
                     child: SvgPicture.asset (
-                      context.icons.arrowNavigation,
+                      context.icons.arrow,
                       colorFilter: ColorFilter.mode (
-                        context.colors.iconArrowNavigation,
+                        context.colors.appBarButtonIcon,
                         BlendMode.srcIn
                       )
                     )

@@ -4,8 +4,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
@@ -59,12 +59,12 @@ class ConnectionButton extends HookWidget {
                 decoration: BoxDecoration (
                   border: Border.all (
                     width: 4,
-                    color: context.colors.black
+                    color: context.colors.buttonConnectBorder
                   ),
                   borderRadius: BorderRadius.circular (1000),
                   boxShadow: [
                     BoxShadow (
-                      color: context.colors.connectionButtonShadow,
+                      color: context.colors.buttonConnectShadow,
                       offset: offset,
                       blurRadius: blurRadius,
                       spreadRadius: spreadRadius
@@ -77,7 +77,13 @@ class ConnectionButton extends HookWidget {
                     offset: const Offset (0, -2),
                     child: Transform.rotate (
                       angle: 5 * math.pi / 180,
-                      child: SvgPicture.asset (context.icons.olive)
+                      child: SvgPicture.asset (
+                        context.icons.olive,
+                        colorFilter: ColorFilter.mode (
+                          context.colors.buttonConnectIcon,
+                          BlendMode.srcIn
+                        )
+                      )
                     )
                   )
                 )

@@ -1,7 +1,7 @@
 // Global widgets - Window
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 import 'widgets/top/top.dart';
 import 'widgets/body/body.dart';
 import 'widgets/bottom/bottom.dart';

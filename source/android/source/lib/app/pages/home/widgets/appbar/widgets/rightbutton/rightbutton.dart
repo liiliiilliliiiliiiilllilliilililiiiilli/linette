@@ -1,12 +1,12 @@
 // Home page - App bar - Right button
 
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/providers/theme/theme.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/providers/theme/theme.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
@@ -42,11 +42,6 @@ class RightButton extends HookConsumerWidget {
       : context.icons.sun;
 
 
-    final Color themeIconColor = themeState == AppThemeOption.darkGreen
-      ? context.colors.iconMoon
-      : context.colors.iconSun;
-
-
     final double translationYValue = isPressed.value
       ? 1
       : 0;
@@ -80,7 +75,7 @@ class RightButton extends HookConsumerWidget {
                 child: SvgPicture.asset (
                   themeIcon,
                   colorFilter: ColorFilter.mode (
-                    themeIconColor,
+                    context.colors.appBarButtonIcon,
                     BlendMode.srcIn
                   )
                 )

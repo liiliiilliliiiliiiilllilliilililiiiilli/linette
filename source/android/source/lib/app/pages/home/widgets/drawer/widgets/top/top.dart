@@ -1,8 +1,9 @@
 // Home page - Drawer - Top
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -34,12 +35,12 @@ class Top extends StatelessWidget {
           )
         ),
         child: Text (
-          T.of(context).options,
+          context.texts.pageHomeDrawerTop,
           style: TextStyle (
-            fontFamily: 'Archivo',
+            fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,
             fontSize: 25,
-            color: context.colors.textTitle
+            color: context.colors.title
           )
         )
       )

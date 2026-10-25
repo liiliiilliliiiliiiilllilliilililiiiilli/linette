@@ -3,28 +3,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
 
 class TextButtonComponent extends HookWidget {
 
-  final String? pictureLeft;
-  final double? pictureLeftSize;
+  final String? iconLeft;
+  final double? iconLeftSize;
   final String text;
-  final String? pictureRight;
-  final double? pictureRightSize;
+  final String? iconRight;
+  final double? iconRightSize;
   final Function () onTap;
 
 
   const TextButtonComponent ({
     super.key,
-    this.pictureLeft,
-    this.pictureLeftSize,
+    this.iconLeft,
+    this.iconLeftSize,
     required this.text,
-    this.pictureRight,
-    this.pictureRightSize,
+    this.iconRight,
+    this.iconRightSize,
     required this.onTap
   });
 
@@ -34,10 +35,10 @@ class TextButtonComponent extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final pictureLeftWidth = pictureLeftSize ?? 20;
-    final pictureLeftHeight = pictureLeftSize ?? 20;
-    final pictureRightWidth = pictureRightSize ?? 20;
-    final pictureRightHeight = pictureRightSize ?? 20;
+    final iconLeftWidth = iconLeftSize ?? 20;
+    final iconLeftHeight = iconLeftSize ?? 20;
+    final iconRightWidth = iconRightSize ?? 20;
+    final iconRightHeight = iconRightSize ?? 20;
 
 
     void onPanDown (details) {
@@ -89,35 +90,35 @@ class TextButtonComponent extends HookWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             spacing: 8,
             children: [
-              if (pictureLeft != null) ... [
+              if (iconLeft != null) ... [
                 SvgPicture.asset (
-                  pictureLeft!,
+                  iconLeft!,
                   colorFilter: ColorFilter.mode (
                     context.colors.textButton,
                     BlendMode.srcIn
                   ),
-                  width: pictureLeftWidth,
-                  height: pictureLeftHeight
+                  width: iconLeftWidth,
+                  height: iconLeftHeight
                 )
               ],
               Text (
                 text,
                 style: TextStyle (
-                  fontFamily: 'Archivo',
+                  fontFamily: context.fonts.archivo,
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
                   color: context.colors.textButton
                 )
               ),
-              if (pictureRight != null) ... [
+              if (iconRight != null) ... [
                 SvgPicture.asset (
-                  pictureRight!,
+                  iconRight!,
                   colorFilter: ColorFilter.mode (
                     context.colors.textButton,
                     BlendMode.srcIn
                   ),
-                  width: pictureRightWidth,
-                  height: pictureRightHeight
+                  width: iconRightWidth,
+                  height: iconRightHeight
                 )
               ]
             ]

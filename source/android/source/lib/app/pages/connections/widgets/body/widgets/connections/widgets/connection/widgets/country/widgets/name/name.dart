@@ -1,7 +1,8 @@
 // Connections page - Body - Connections list - Connection - Country - Name
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
 
 
 
@@ -25,10 +26,10 @@ class Name extends StatelessWidget {
         child: Text (
           name,
           style: TextStyle (
-            fontFamily: 'Archivo',
+            fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 16.5,
-            color: context.colors.textBlock
+            color: context.colors.textCountryName
           )
         )
       )

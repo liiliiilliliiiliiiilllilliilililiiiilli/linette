@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/windows/changelanguage/changelanguage.dart';
 import 'package:linette/app/widgets/textbutton/textbutton.dart';
-import 'package:linette/app/pages/home/widgets/drawer/widgets/main/widgets/languageoption/widgets/changelanguagewindow/changelanguagewindow.dart';
 
 
 
@@ -98,8 +98,8 @@ class ButtonChangeLanguage extends HookWidget {
     return (
 
       TextButtonComponent (
-        pictureLeft: context.icons.language,
-        text: T.of(context).welcomeChangeLanguage,
+        iconLeft: context.icons.language,
+        text: context.texts.pageWelcomeBottomChangeLanguage,
         onTap: handleTap
       )
 

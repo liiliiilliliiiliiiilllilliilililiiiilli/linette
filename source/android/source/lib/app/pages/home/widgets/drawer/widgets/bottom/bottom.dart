@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -89,13 +90,13 @@ class Bottom extends HookWidget {
               children: [
                 Expanded (
                   child: Text (
-                    T.of(context).connectToVpnOnLaunch,
+                    context.texts.pageHomeDrawerBottom,
                     softWrap: true,
                     style: TextStyle (
-                      fontFamily: 'Archivo',
+                      fontFamily: context.fonts.archivo,
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
-                      color: context.colors.textDrawerBottom
+                      color: context.colors.drawerBottomText
                     )
                   )
                 ),
@@ -104,8 +105,8 @@ class Bottom extends HookWidget {
                   child: Checkbox (
                     value: isChecked.value,
                     onChanged: (context) => {},
-                    checkColor: context.colors.checkColor,
-                    activeColor: context.colors.checkColorBack
+                    checkColor: context.colors.check,
+                    activeColor: context.colors.checkBack
                   )
                 )
               ]

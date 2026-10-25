@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 
 
 
@@ -29,9 +29,9 @@ class Flag extends StatelessWidget {
           shape: BoxShape.circle,
           border: Border.all (
             width: 1.75,
-            color: context.colors.circlesBorder
+            color: context.colors.circleBorder
           ),
-          color: context.colors.circlesBack
+          color: context.colors.circleBack
         ),
         clipBehavior: Clip.antiAlias,
         child: ClipOval (

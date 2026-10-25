@@ -1,76 +1,76 @@
 {
 	"@@locale": "zh",
 
-	"welcomeTitleDot": "•",
-	"welcomeTitle": " Linette ",
-	"welcomeSubtitle": "拯救世界的计划",
-	"welcomeWhatToDo": "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
-	"welcomeGo": "我们走吧！",
-	"welcomeChangeLanguage": "更改语言",
+	"pageWelcomeTopTitle": " Linette ",
+	"pageWelcomeTopTitleDot": "•",
+	"pageWelcomeTopSubtitle": "拯救世界的计划",
+	"pageWelcomeCenter": "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
+	"pageWelcomeBottomGo": "我们走吧！",
+	"pageWelcomeBottomChangeLanguage": "更改语言",
 
-	"title": "Linette",
+	"pageHomeAppBar": "Linette",
+	"pageHomeBodyTop": "连接未受保护",
+	"pageHomeBodyCenterTapToConnect": "点击启动系统",
+	"pageHomeBodyCenterTapToDisconnect": "点击关闭系统",
+	"pageHomeBodyCenterGoNetherlands": "荷兰  |  tropic_rain",
+	"pageHomeBodyCenterGoFinland": "芬兰  |  tropic_rain",
+	"pageHomeBodyCenterGoGermany": "德国  |  tropic_rain",
+	"pageHomeBodyBottom": "无连接",
+	"pageHomeBottom_1": "了解更多",
+	"pageHomeBottom_2": " 关于为绕过限制而创建的服务。",
 
-	"connectionIsNotProtected": "连接未受保护",
-	"tapToConectToVpn": "点击连接VPN",
-	"noConnection": "无连接",
-	"readMore_1": "了解更多",
-	"readMore_2": " 关于为绕过限制而创建的服务。",
-	"purposeOfThisApp": "此应用程序的目的是什么？",
-	"serviceDescription": "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nLinette 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
+	"pageHomeDrawerTop": "选项",
+	"pageHomeDrawerCenterLanguage": "语言",
+	"pageHomeDrawerCenterFeedback": "反馈",
+	"pageHomeDrawerCenterArsenal": "兵工厂",
+	"pageHomeDrawerCenterNetParameters": "网络参数",
+	"pageHomeDrawerCenterAccout": "帐户",
+	"pageHomeDrawerCenterWallet": "钱包",
+	"pageHomeDrawerBottom": "启动应用程序时连接VPN",
 
-	"options": "选项",
-
-	"language": "语言",
-
-	"appLanguage": "应用程序语言",
-
-	"russian": "俄语",
-	"english": "英语",
-	"chinese": "中文",
-
-	"russianNative": "Русский",
-	"englishNative": "English",
-	"chineseNative": "中文",
-
-	"feedBack": "反馈",
-
-	"serviceNews_1": "服务新闻发布在 ",
-	"serviceNews_2": "官方Telegram频道",
-	"serviceNews_3": ".",
-
-	"connectToVpnOnLaunch": "启动应用程序时连接VPN",
-
-	"chooseServer": "选择服务器",
-	"numOnline": "{num} 在线",
-	"@numOnline": {
+	"pageConnectionsAppbar": "选择服务器",
+	"pageConnectionsBodyLiner": "{num} 在线",
+	"@pageConnectionsBodyLiner": {
 		"placeholders": {
 			"num": {
 				"type": "int"
 			}
 		}
 	},
-	"chosen": "已选",
+	"pageConnectionsBodyListCountryNetherlands": "荷兰",
+	"pageConnectionsBodyListCountryFinland": "芬兰",
+	"pageConnectionsBodyListCountryGermany": "德国",
+	"pageConnectionsBodyListIsChosen": "已选",
 
-	"connectionNetherlands": "荷兰",
-	"connectionFinland": "芬兰",
-	"connectionGermany": "德国",
+	"windowPurposeOfThisAppTop": "此应用程序的目的是什么？",
+	"windowPurposeOfThisAppCenter": "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nLinette 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
+	"windowPurposeOfThisAppBottom": "确定",
 
-	"netherlands": "荷兰  |  tropic_rain",
-	"finland": "芬兰  |  tropic_rain",
-	"germany": "德国  |  tropic_rain",
+	"windowAppLanguageTop": "应用程序语言",
+	"windowAppLanguageCenterRussian": "俄语",
+	"windowAppLanguageCenterEnglish": "英语",
+	"windowAppLanguageCenterChinese": "中文",
+	"windowAppLanguageCenterRussianNative": "Русский",
+	"windowAppLanguageCenterEnglishNative": "English",
+	"windowAppLanguageCenterChineseNative": "中文",
+	"windowAppLanguageBottom": "完成",
 
-	"done": "完成",
-	"ok": "确定",
+	"windowFeedbackTop": "反馈",
+	"windowFeedbackCenter_1": "服务新闻发布在 ",
+	"windowFeedbackCenter_2": "官方Telegram频道",
+	"windowFeedbackCenter_2_Link": "https://t.me/LinetteTelegramChannel",
+	"windowFeedbackCenter_3": ".",
+	"windowFeedbackBottom": "确定",
 
-	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel",
+	"windowArsenalTop": "应用程序的武器库",
+	"windowArsenalBottom": "完成",
 
-	"windowTopArsenal": "应用程序的武器库",
-	"windowTopNetParameters": "网络参数",
-	"windowTopAccount": "帐户",
-	"windowTopWallet": "钱包",
+	"windowNetParametersTop": "网络参数",
+	"windowNetParametersBottom": "确定",
 
-	"arsenal": "兵工厂",
-	"netParameters": "网络参数",
-	"accout": "帐户",
-	"wallet": "钱包"
+	"windowAccountTop": "帐户",
+	"windowAccountBottom": "完成",
+
+	"windowWalletTop": "钱包",
+	"windowWalletBottom": "完成"
 }

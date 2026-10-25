@@ -1,11 +1,11 @@
-// Home page - Drawer - Main - Accout option - Accout window
+// Accout window
 
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter/gestures.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 
 
@@ -21,7 +21,7 @@ class AccoutWindow extends HookWidget {
 
     Future openLink () async {
 
-      final String link = T.of(context).linkTelegramChannel;
+      final String link = context.texts.windowFeedbackCenter_2_Link;
       final Uri url = Uri.parse (link);
 
       if (await canLaunchUrl (url)) {
@@ -70,7 +70,7 @@ class AccoutWindow extends HookWidget {
     return (
 
       Window (
-        title: T.of(context).windowTopAccount,
+        title: context.texts.windowAccountTop,
         body: Stack (
           children: [
             SingleChildScrollView (
@@ -87,20 +87,20 @@ class AccoutWindow extends HookWidget {
                     ),
                     children: [
                       TextSpan (
-                        text: T.of(context).serviceNews_1,
+                        text: context.texts.windowFeedbackCenter_1,
                         style: TextStyle (
                           color: context.colors.windowMainText
                         )
                       ),
                       TextSpan (
-                        text: T.of(context).serviceNews_2,
+                        text: context.texts.windowFeedbackCenter_2,
                         style: TextStyle (
                           color: linkColor,
                         ),
                         recognizer: gestureRecognizer
                       ),
                       TextSpan (
-                        text: T.of(context).serviceNews_3,
+                        text: context.texts.windowFeedbackCenter_3,
                         style: TextStyle (
                           color: context.colors.windowMainText
                         )
@@ -132,7 +132,7 @@ class AccoutWindow extends HookWidget {
             )
           ]
         ),
-        action: T.of(context).done,
+        action: context.texts.windowAccountBottom,
         width: 340
       )
 

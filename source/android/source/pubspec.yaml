@@ -13,7 +13,6 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.4.8
   flutter_hooks: ^0.21.3+1
-  flutter_riverpod: ^2.6.1
   hooks_riverpod: ^2.5.1
   shared_preferences: ^2.5.5
   flutter_svg: ^2.3.0
@@ -49,13 +48,6 @@ flutter:
         - asset: assets/fonts/fredoka_variable_width_weight.ttf
   generate: true
 
-flutter_intl:
-  enabled: true
-  arb_dir: lib/app/localization/locales
-  output_dir: lib/app/localization/generated
-  template-arb-file: intl_en.arb
-  class_name: T
-
 flutter_launcher_icons:
   android: true
   image_path: assets/images/logo/launcher/dark/logo.png
@@ -77,3 +69,10 @@ flutter_native_splash:
     branding_dark: assets/images/branding/dark/branding.png
     icon_background_color: '#f2f2f2'
     icon_background_color_dark: '#070707'
+
+flutter_intl:
+  enabled: true
+  arb_dir: lib/app/localization/locales
+  output_dir: lib/app/localization/generated
+  template-arb-file: intl_en.arb
+  class_name: T

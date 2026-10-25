@@ -1,18 +1,18 @@
-// Home page - Drawer - Main - Arsenal option - Arsenal window
+// Feedback window
 
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter/gestures.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 
 
 
-class ArsenalWindow extends HookWidget {
+class FeedbackWindow extends HookWidget {
 
-  const ArsenalWindow ({
+  const FeedbackWindow ({
     super.key
   });
 
@@ -21,7 +21,7 @@ class ArsenalWindow extends HookWidget {
 
     Future openLink () async {
 
-      final String link = T.of(context).linkTelegramChannel;
+      final String link = context.texts.windowFeedbackCenter_2_Link;
       final Uri url = Uri.parse (link);
 
       if (await canLaunchUrl (url)) {
@@ -70,7 +70,7 @@ class ArsenalWindow extends HookWidget {
     return (
 
       Window (
-        title: T.of(context).windowTopArsenal,
+        title: context.texts.windowFeedbackTop,
         body: Stack (
           children: [
             SingleChildScrollView (
@@ -87,20 +87,20 @@ class ArsenalWindow extends HookWidget {
                     ),
                     children: [
                       TextSpan (
-                        text: T.of(context).serviceNews_1,
+                        text: context.texts.windowFeedbackCenter_1,
                         style: TextStyle (
                           color: context.colors.windowMainText
                         )
                       ),
                       TextSpan (
-                        text: T.of(context).serviceNews_2,
+                        text: context.texts.windowFeedbackCenter_2,
                         style: TextStyle (
                           color: linkColor,
                         ),
                         recognizer: gestureRecognizer
                       ),
                       TextSpan (
-                        text: T.of(context).serviceNews_3,
+                        text: context.texts.windowFeedbackCenter_3,
                         style: TextStyle (
                           color: context.colors.windowMainText
                         )
@@ -109,30 +109,10 @@ class ArsenalWindow extends HookWidget {
                   )
                 )
               )
-            ),
-            Positioned (
-              top: 0,
-              left: 0,
-              right: 0,
-              height: 15,
-              child: IgnorePointer (
-                child: Container (
-                  decoration: BoxDecoration (
-                    gradient: LinearGradient (
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        context.colors.windowMainBack,
-                        context.colors.windowMainBack.withAlpha (0)
-                      ]
-                    )
-                  )
-                )
-              )
             )
           ]
         ),
-        action: T.of(context).done,
+        action: context.texts.windowFeedbackBottom,
         width: 340
       )
 

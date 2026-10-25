@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'widgets/liner/liner.dart';
 import 'widgets/connections/connections.dart';
 import 'widgets/connections/widgets/connection/model/model.dart';
@@ -20,9 +20,9 @@ class BodyComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String textNetherlands = T.of(context).connectionNetherlands;
-    final String textFinland = T.of(context).connectionFinland;
-    final String textGermany = T.of(context).connectionGermany;
+    final String textNetherlands = context.texts.pageConnectionsBodyListCountryNetherlands;
+    final String textFinland = context.texts.pageConnectionsBodyListCountryFinland;
+    final String textGermany = context.texts.pageConnectionsBodyListCountryGermany;
 
 
     final ValueNotifier <String> chosen = useState (textNetherlands);

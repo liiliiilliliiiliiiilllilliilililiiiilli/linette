@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
-<path d="M0.06 50C50.02 50 99.98 50 149.94 50C149.94 66.67 149.94 83.33 149.94 100C99.98 100 50.02 100 0.06 100C0.06 83.33 0.06 66.67 0.06 50Z" fill="#204487" fill-rule="evenodd" stroke="#204487" stroke-width="0.25" stroke-linejoin="round"/>
-<path d="M0.08 0.08C50.03 0.08 99.97 0.08 149.92 0.08C149.93 16.72 149.94 33.36 149.94 50C99.98 50 50.02 50 0.06 50C0.06 33.36 0.07 16.72 0.08 0.08Z" fill="#a91b27" fill-rule="evenodd" stroke="#a91b27" stroke-width="0.25" stroke-linejoin="round"/>
-<path d="M0.06 100C50.02 100 99.98 100 149.94 100C149.94 116.64 149.93 133.28 149.92 149.92C99.97 149.92 50.03 149.92 0.08 149.92C0.07 133.28 0.06 116.64 0.06 100Z" fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-width="0.25" stroke-linejoin="round"/>
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_641_62474)">
+<path d="M0.0595703 50C50.0196 50 99.9796 50 149.94 50C149.94 66.67 149.94 83.33 149.94 100C99.9796 100 50.0196 100 0.0595703 100C0.0595703 83.33 0.0595703 66.67 0.0595703 50Z" fill-rule="evenodd" clip-rule="evenodd" fill="#204487" stroke-width="0.25" stroke-linejoin="round" stroke="#204487"/>
+<path d="M0.0795703 0.0800781C50.0296 0.0800781 99.9696 0.0800781 149.92 0.0800781C149.93 16.7201 149.94 33.3601 149.94 50.0001C99.9796 50.0001 50.0196 50.0001 0.0595703 50.0001C0.0595703 33.3601 0.0695703 16.7201 0.0795703 0.0800781Z" fill-rule="evenodd" clip-rule="evenodd" fill="#A91B27" stroke-width="0.25" stroke-linejoin="round" stroke="#A91B27"/>
+<path d="M0.0595703 100C50.0196 100 99.9796 100 149.94 100C149.94 116.64 149.93 133.28 149.92 149.92C99.9696 149.92 50.0296 149.92 0.0795703 149.92C0.0695703 133.28 0.0595703 116.64 0.0595703 100Z" fill-rule="evenodd" clip-rule="evenodd" fill="white" stroke-width="0.25" stroke-linejoin="round" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_641_62474">
+<rect width="150" height="150" fill="white"/>
+</clipPath>
+</defs>
 </svg>

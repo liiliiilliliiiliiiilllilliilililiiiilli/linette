@@ -24,85 +24,128 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "accout": MessageLookupByLibrary.simpleMessage("Аккаунт"),
-    "appLanguage": MessageLookupByLibrary.simpleMessage("Язык приложения"),
-    "arsenal": MessageLookupByLibrary.simpleMessage("Арсенал"),
-    "chinese": MessageLookupByLibrary.simpleMessage("Китайский"),
-    "chineseNative": MessageLookupByLibrary.simpleMessage("中文"),
-    "chooseServer": MessageLookupByLibrary.simpleMessage("Выберите сервер"),
-    "chosen": MessageLookupByLibrary.simpleMessage("Выбран"),
-    "connectToVpnOnLaunch": MessageLookupByLibrary.simpleMessage(
-      "Подключение к VPN при запуске приложения",
+    "pageConnectionsAppbar": MessageLookupByLibrary.simpleMessage(
+      "Выберите сервер",
     ),
-    "connectionFinland": MessageLookupByLibrary.simpleMessage("Финляндия"),
-    "connectionGermany": MessageLookupByLibrary.simpleMessage("Германия"),
-    "connectionIsNotProtected": MessageLookupByLibrary.simpleMessage(
-      "Соединение не защищено",
+    "pageConnectionsBodyLiner": m0,
+    "pageConnectionsBodyListCountryFinland":
+        MessageLookupByLibrary.simpleMessage("Финляндия"),
+    "pageConnectionsBodyListCountryGermany":
+        MessageLookupByLibrary.simpleMessage("Германия"),
+    "pageConnectionsBodyListCountryNetherlands":
+        MessageLookupByLibrary.simpleMessage("Нидерланды"),
+    "pageConnectionsBodyListIsChosen": MessageLookupByLibrary.simpleMessage(
+      "Выбран",
     ),
-    "connectionNetherlands": MessageLookupByLibrary.simpleMessage("Нидерланды"),
-    "done": MessageLookupByLibrary.simpleMessage("Готово"),
-    "english": MessageLookupByLibrary.simpleMessage("Английский"),
-    "englishNative": MessageLookupByLibrary.simpleMessage("English"),
-    "feedBack": MessageLookupByLibrary.simpleMessage("Обратная связь"),
-    "finland": MessageLookupByLibrary.simpleMessage(
+    "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
+    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage(
+      "Нет подключения",
+    ),
+    "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
       "Финляндия  |  tropic_rain",
     ),
-    "germany": MessageLookupByLibrary.simpleMessage("Германия  |  tropic_rain"),
-    "language": MessageLookupByLibrary.simpleMessage("Язык"),
-    "linkTelegramChannel": MessageLookupByLibrary.simpleMessage(
-      "https://t.me/LinetteTelegramChannel",
+    "pageHomeBodyCenterGoGermany": MessageLookupByLibrary.simpleMessage(
+      "Германия  |  tropic_rain",
     ),
-    "netParameters": MessageLookupByLibrary.simpleMessage("Параметры сети"),
-    "netherlands": MessageLookupByLibrary.simpleMessage(
+    "pageHomeBodyCenterGoNetherlands": MessageLookupByLibrary.simpleMessage(
       "Нидерланды  |  tropic_rain",
     ),
-    "noConnection": MessageLookupByLibrary.simpleMessage("Нет подключения"),
-    "numOnline": m0,
-    "ok": MessageLookupByLibrary.simpleMessage("Ок"),
-    "options": MessageLookupByLibrary.simpleMessage("Опции"),
-    "purposeOfThisApp": MessageLookupByLibrary.simpleMessage(
-      "Для чего создано это приложение?",
+    "pageHomeBodyCenterTapToConnect": MessageLookupByLibrary.simpleMessage(
+      "Нажмите для запуска системы",
     ),
-    "readMore_1": MessageLookupByLibrary.simpleMessage("Подробнее"),
-    "readMore_2": MessageLookupByLibrary.simpleMessage(
+    "pageHomeBodyCenterTapToDisconnect": MessageLookupByLibrary.simpleMessage(
+      "Нажмите для отключения системы",
+    ),
+    "pageHomeBodyTop": MessageLookupByLibrary.simpleMessage(
+      "Соединение не защищено",
+    ),
+    "pageHomeBottom_1": MessageLookupByLibrary.simpleMessage("Подробнее"),
+    "pageHomeBottom_2": MessageLookupByLibrary.simpleMessage(
       " о сервисе, который создан для обхода ограничений.",
     ),
-    "russian": MessageLookupByLibrary.simpleMessage("Русский"),
-    "russianNative": MessageLookupByLibrary.simpleMessage("Русский"),
-    "serviceDescription": MessageLookupByLibrary.simpleMessage(
-      "Если вы сталкиваетесь с проблемами доступа к удаленным ресурсам или хотите сохранить конфиденциальность личных данных в небезопасной сети, одним из решений может стать надежное VPN соединение.\n\nVPN (Virtual Private Network) - технология межсетевой коммуникации для создания безопасных виртуальных каналов связи. Шифруемые данные трафика защищены криптографическими методами так, что злоумышленнику при перехвате на их дешифровку потребуются миллионы и миллионы лет.\n\nПомимо VPN сущетсвует множество иных способов обезопасить себя в сети, например сетевые прокси или изменение IP адреса. Почти каждый из них разделяет принципы работы VPN, а также имеет ряд отдельных протоколов связи, разработанных для лучшей работы в определенных сценариях (корпоративные, персональные решения или иные специфические области).\n\nНесмотря на свои широкие возможности, такие технологии основаны на простых математических принципах и несложны в реализации. При желании, вы можете развернуть свой собственный VPN сервер или настроить приватный прокси - это лучший способ сохранить контроль и приватность Ваших данных.\n\nLinette - такой же сетевой провайдер, каким вы можете стать для самих себя, если внимательно изучите кибербезопасность и основы программирования.\n\nПомните: никто не может ощутить информацию физически, но кто угодно может воплотить любую идею, основанную на этой информации.",
+    "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage(
+      "Подключение к VPN при запуске приложения",
     ),
-    "serviceNews_1": MessageLookupByLibrary.simpleMessage(
-      "Новости сервиса публикуются в ",
+    "pageHomeDrawerCenterAccout": MessageLookupByLibrary.simpleMessage(
+      "Аккаунт",
     ),
-    "serviceNews_2": MessageLookupByLibrary.simpleMessage(
-      "официальном Telegram-канале",
+    "pageHomeDrawerCenterArsenal": MessageLookupByLibrary.simpleMessage(
+      "Арсенал",
     ),
-    "serviceNews_3": MessageLookupByLibrary.simpleMessage("."),
-    "tapToConectToVpn": MessageLookupByLibrary.simpleMessage(
-      "Нажмите для подключения к VPN",
+    "pageHomeDrawerCenterFeedback": MessageLookupByLibrary.simpleMessage(
+      "Обратная связь",
     ),
-    "title": MessageLookupByLibrary.simpleMessage("Linette"),
-    "wallet": MessageLookupByLibrary.simpleMessage("Кошелек"),
-    "welcomeChangeLanguage": MessageLookupByLibrary.simpleMessage(
-      "Изменить язык",
+    "pageHomeDrawerCenterLanguage": MessageLookupByLibrary.simpleMessage(
+      "Язык",
     ),
-    "welcomeGo": MessageLookupByLibrary.simpleMessage("Поехали!"),
-    "welcomeSubtitle": MessageLookupByLibrary.simpleMessage(
-      "План по спасению мира",
-    ),
-    "welcomeTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
-    "welcomeTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "welcomeWhatToDo": MessageLookupByLibrary.simpleMessage(
-      "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
-    ),
-    "windowTopAccount": MessageLookupByLibrary.simpleMessage("Аккаунт"),
-    "windowTopArsenal": MessageLookupByLibrary.simpleMessage(
-      "Арсенал приложения",
-    ),
-    "windowTopNetParameters": MessageLookupByLibrary.simpleMessage(
+    "pageHomeDrawerCenterNetParameters": MessageLookupByLibrary.simpleMessage(
       "Параметры сети",
     ),
-    "windowTopWallet": MessageLookupByLibrary.simpleMessage("Кошелек"),
+    "pageHomeDrawerCenterWallet": MessageLookupByLibrary.simpleMessage(
+      "Кошелек",
+    ),
+    "pageHomeDrawerTop": MessageLookupByLibrary.simpleMessage("Опции"),
+    "pageWelcomeBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
+      "Изменить язык",
+    ),
+    "pageWelcomeBottomGo": MessageLookupByLibrary.simpleMessage("Поехали!"),
+    "pageWelcomeCenter": MessageLookupByLibrary.simpleMessage(
+      "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
+    ),
+    "pageWelcomeTopSubtitle": MessageLookupByLibrary.simpleMessage(
+      "План по спасению мира",
+    ),
+    "pageWelcomeTopTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
+    "pageWelcomeTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "windowAccountBottom": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowAccountTop": MessageLookupByLibrary.simpleMessage("Аккаунт"),
+    "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowAppLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
+      "Китайский",
+    ),
+    "windowAppLanguageCenterChineseNative":
+        MessageLookupByLibrary.simpleMessage("中文"),
+    "windowAppLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
+      "Английский",
+    ),
+    "windowAppLanguageCenterEnglishNative":
+        MessageLookupByLibrary.simpleMessage("English"),
+    "windowAppLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
+      "Русский",
+    ),
+    "windowAppLanguageCenterRussianNative":
+        MessageLookupByLibrary.simpleMessage("Русский"),
+    "windowAppLanguageTop": MessageLookupByLibrary.simpleMessage(
+      "Язык приложения",
+    ),
+    "windowArsenalBottom": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowArsenalTop": MessageLookupByLibrary.simpleMessage(
+      "Арсенал приложения",
+    ),
+    "windowFeedbackBottom": MessageLookupByLibrary.simpleMessage("Ок"),
+    "windowFeedbackCenter_1": MessageLookupByLibrary.simpleMessage(
+      "Новости сервиса публикуются в ",
+    ),
+    "windowFeedbackCenter_2": MessageLookupByLibrary.simpleMessage(
+      "официальном Telegram-канале",
+    ),
+    "windowFeedbackCenter_2_Link": MessageLookupByLibrary.simpleMessage(
+      "https://t.me/LinetteTelegramChannel",
+    ),
+    "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
+    "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("Обратная связь"),
+    "windowNetParametersBottom": MessageLookupByLibrary.simpleMessage("Ок"),
+    "windowNetParametersTop": MessageLookupByLibrary.simpleMessage(
+      "Параметры сети",
+    ),
+    "windowPurposeOfThisAppBottom": MessageLookupByLibrary.simpleMessage("Ок"),
+    "windowPurposeOfThisAppCenter": MessageLookupByLibrary.simpleMessage(
+      "Если вы сталкиваетесь с проблемами доступа к удаленным ресурсам или хотите сохранить конфиденциальность личных данных в небезопасной сети, одним из решений может стать надежное VPN соединение.\n\nVPN (Virtual Private Network) - технология межсетевой коммуникации для создания безопасных виртуальных каналов связи. Шифруемые данные трафика защищены криптографическими методами так, что злоумышленнику при перехвате на их дешифровку потребуются миллионы и миллионы лет.\n\nПомимо VPN сущетсвует множество иных способов обезопасить себя в сети, например сетевые прокси или изменение IP адреса. Почти каждый из них разделяет принципы работы VPN, а также имеет ряд отдельных протоколов связи, разработанных для лучшей работы в определенных сценариях (корпоративные, персональные решения или иные специфические области).\n\nНесмотря на свои широкие возможности, такие технологии основаны на простых математических принципах и несложны в реализации. При желании, вы можете развернуть свой собственный VPN сервер или настроить приватный прокси - это лучший способ сохранить контроль и приватность Ваших данных.\n\nLinette - такой же сетевой провайдер, каким вы можете стать для самих себя, если внимательно изучите кибербезопасность и основы программирования.\n\nПомните: никто не может ощутить информацию физически, но кто угодно может воплотить любую идею, основанную на этой информации.",
+    ),
+    "windowPurposeOfThisAppTop": MessageLookupByLibrary.simpleMessage(
+      "Для чего создано это приложение?",
+    ),
+    "windowWalletBottom": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowWalletTop": MessageLookupByLibrary.simpleMessage("Кошелек"),
   };
 }

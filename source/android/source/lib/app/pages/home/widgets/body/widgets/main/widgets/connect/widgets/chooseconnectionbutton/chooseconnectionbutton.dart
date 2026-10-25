@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/icons/icons.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
@@ -47,26 +48,26 @@ class ChooseConnectionButton extends HookWidget {
                 SvgPicture.asset (
                   context.icons.location,
                   colorFilter: ColorFilter.mode (
-                    context.colors.iconLocation,
+                    context.colors.buttonChooseConnectionIconLeft,
                     BlendMode.srcIn
                   ),
                   width: 17,
                   height: 17
                 ),
                 Text (
-                  T.of(context).netherlands,
+                  context.texts.pageHomeBodyCenterGoNetherlands,
                   style: TextStyle (
-                    fontFamily: 'Archivo',
+                    fontFamily: context.fonts.archivo,
                     fontWeight: FontWeight.w600,
                     fontSize: 17.5,
-                    color: context.colors.textChooseConnectionButton,
+                    color: context.colors.buttonChooseConnectionText,
                     height: 1
                   )
                 ),
                 SvgPicture.asset (
-                  context.icons.arrowConnection,
+                  context.icons.arrow,
                   colorFilter: ColorFilter.mode (
-                    context.colors.iconArrow,
+                    context.colors.buttonChooseConnectionIconRight,
                     BlendMode.srcIn
                   ),
                   width: 15,

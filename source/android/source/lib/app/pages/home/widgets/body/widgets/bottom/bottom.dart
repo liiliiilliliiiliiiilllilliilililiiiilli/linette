@@ -3,10 +3,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/windows/hint/hint.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
-import 'widgets/hintwindow/hintwindow.dart';
 
 
 
@@ -216,22 +217,22 @@ class Bottom extends HookWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       TextSpan (
-                        style: const TextStyle (
-                          fontFamily: 'Archivo',
+                        style: TextStyle (
+                          fontFamily: context.fonts.archivo,
                           fontWeight: FontWeight.w400,
                           fontSize: 15.75
                         ),
                         children: [
                           TextSpan (
-                            text: T.of(context).readMore_1,
+                            text: context.texts.pageHomeBottom_1,
                             style: TextStyle (
-                              color: context.colors.textBottomBarPrime
+                              color: context.colors.bottomBarTextPrime
                             )
                           ),
                           TextSpan (
-                            text: T.of(context).readMore_2,
+                            text: context.texts.pageHomeBottom_2,
                             style: TextStyle (
-                              color: context.colors.textBottomBar
+                              color: context.colors.bottomBarText
                             )
                           )
                         ]

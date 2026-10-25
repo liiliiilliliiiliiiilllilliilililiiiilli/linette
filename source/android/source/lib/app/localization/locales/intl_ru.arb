@@ -1,76 +1,76 @@
 {
 	"@@locale": "ru",
 
-	"welcomeTitleDot": "•",
-	"welcomeTitle": " Linette ",
-	"welcomeSubtitle": "План по спасению мира",
-	"welcomeWhatToDo": "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
-	"welcomeGo": "Поехали!",
-	"welcomeChangeLanguage": "Изменить язык",
+	"pageWelcomeTopTitle": " Linette ",
+	"pageWelcomeTopTitleDot": "•",
+	"pageWelcomeTopSubtitle": "План по спасению мира",
+	"pageWelcomeCenter": "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
+	"pageWelcomeBottomGo": "Поехали!",
+	"pageWelcomeBottomChangeLanguage": "Изменить язык",
 
-	"title": "Linette",
+	"pageHomeAppBar": "Linette",
+	"pageHomeBodyTop": "Соединение не защищено",
+	"pageHomeBodyCenterTapToConnect": "Нажмите для запуска системы",
+	"pageHomeBodyCenterTapToDisconnect": "Нажмите для отключения системы",
+	"pageHomeBodyCenterGoNetherlands": "Нидерланды  |  tropic_rain",
+	"pageHomeBodyCenterGoFinland": "Финляндия  |  tropic_rain",
+	"pageHomeBodyCenterGoGermany": "Германия  |  tropic_rain",
+	"pageHomeBodyBottom": "Нет подключения",
+    "pageHomeBottom_1": "Подробнее",
+	"pageHomeBottom_2": " о сервисе, который создан для обхода ограничений.",
 
-	"connectionIsNotProtected": "Соединение не защищено",
-	"tapToConectToVpn": "Нажмите для подключения к VPN",
-	"noConnection": "Нет подключения",
-    "readMore_1": "Подробнее",
-	"readMore_2": " о сервисе, который создан для обхода ограничений.",
-	"purposeOfThisApp": "Для чего создано это приложение?",
-	"serviceDescription": "Если вы сталкиваетесь с проблемами доступа к удаленным ресурсам или хотите сохранить конфиденциальность личных данных в небезопасной сети, одним из решений может стать надежное VPN соединение.\n\nVPN (Virtual Private Network) - технология межсетевой коммуникации для создания безопасных виртуальных каналов связи. Шифруемые данные трафика защищены криптографическими методами так, что злоумышленнику при перехвате на их дешифровку потребуются миллионы и миллионы лет.\n\nПомимо VPN сущетсвует множество иных способов обезопасить себя в сети, например сетевые прокси или изменение IP адреса. Почти каждый из них разделяет принципы работы VPN, а также имеет ряд отдельных протоколов связи, разработанных для лучшей работы в определенных сценариях (корпоративные, персональные решения или иные специфические области).\n\nНесмотря на свои широкие возможности, такие технологии основаны на простых математических принципах и несложны в реализации. При желании, вы можете развернуть свой собственный VPN сервер или настроить приватный прокси - это лучший способ сохранить контроль и приватность Ваших данных.\n\nLinette - такой же сетевой провайдер, каким вы можете стать для самих себя, если внимательно изучите кибербезопасность и основы программирования.\n\nПомните: никто не может ощутить информацию физически, но кто угодно может воплотить любую идею, основанную на этой информации.",
+	"pageHomeDrawerTop": "Опции",
+	"pageHomeDrawerCenterLanguage": "Язык",
+	"pageHomeDrawerCenterFeedback": "Обратная связь",
+	"pageHomeDrawerCenterArsenal": "Арсенал",
+	"pageHomeDrawerCenterNetParameters": "Параметры сети",
+	"pageHomeDrawerCenterAccout": "Аккаунт",
+	"pageHomeDrawerCenterWallet": "Кошелек",
+	"pageHomeDrawerBottom": "Подключение к VPN при запуске приложения",
 
-	"options": "Опции",
-
-	"language": "Язык",
-
-	"appLanguage": "Язык приложения",
-
-	"russian": "Русский",
-	"english": "Английский",
-	"chinese": "Китайский",
-
-	"russianNative": "Русский",
-	"englishNative": "English",
-	"chineseNative": "中文",
-
-	"feedBack": "Обратная связь",
-
-    "serviceNews_1": "Новости сервиса публикуются в ",
-    "serviceNews_2": "официальном Telegram-канале",
-    "serviceNews_3": ".",
-
-	"connectToVpnOnLaunch": "Подключение к VPN при запуске приложения",
-
-	"chooseServer": "Выберите сервер",
-	"numOnline": "{num} онлайн",
-	"@numOnline": {
+	"pageConnectionsAppbar": "Выберите сервер",
+	"pageConnectionsBodyLiner": "{num} онлайн",
+	"@pageConnectionsBodyLiner": {
 		"placeholders": {
 			"num": {
 				"type": "int"
 			}
 		}
 	},
-	"chosen": "Выбран",
+	"pageConnectionsBodyListCountryNetherlands": "Нидерланды",
+	"pageConnectionsBodyListCountryFinland": "Финляндия",
+	"pageConnectionsBodyListCountryGermany": "Германия",
+	"pageConnectionsBodyListIsChosen": "Выбран",
 
-	"connectionNetherlands": "Нидерланды",
-	"connectionFinland": "Финляндия",
-	"connectionGermany": "Германия",
+	"windowPurposeOfThisAppTop": "Для чего создано это приложение?",
+	"windowPurposeOfThisAppCenter": "Если вы сталкиваетесь с проблемами доступа к удаленным ресурсам или хотите сохранить конфиденциальность личных данных в небезопасной сети, одним из решений может стать надежное VPN соединение.\n\nVPN (Virtual Private Network) - технология межсетевой коммуникации для создания безопасных виртуальных каналов связи. Шифруемые данные трафика защищены криптографическими методами так, что злоумышленнику при перехвате на их дешифровку потребуются миллионы и миллионы лет.\n\nПомимо VPN сущетсвует множество иных способов обезопасить себя в сети, например сетевые прокси или изменение IP адреса. Почти каждый из них разделяет принципы работы VPN, а также имеет ряд отдельных протоколов связи, разработанных для лучшей работы в определенных сценариях (корпоративные, персональные решения или иные специфические области).\n\nНесмотря на свои широкие возможности, такие технологии основаны на простых математических принципах и несложны в реализации. При желании, вы можете развернуть свой собственный VPN сервер или настроить приватный прокси - это лучший способ сохранить контроль и приватность Ваших данных.\n\nLinette - такой же сетевой провайдер, каким вы можете стать для самих себя, если внимательно изучите кибербезопасность и основы программирования.\n\nПомните: никто не может ощутить информацию физически, но кто угодно может воплотить любую идею, основанную на этой информации.",
+	"windowPurposeOfThisAppBottom": "Ок",
 
-	"netherlands": "Нидерланды  |  tropic_rain",
-	"finland": "Финляндия  |  tropic_rain",
-	"germany": "Германия  |  tropic_rain",
+	"windowAppLanguageTop": "Язык приложения",
+	"windowAppLanguageCenterRussian": "Русский",
+	"windowAppLanguageCenterEnglish": "Английский",
+	"windowAppLanguageCenterChinese": "Китайский",
+	"windowAppLanguageCenterRussianNative": "Русский",
+	"windowAppLanguageCenterEnglishNative": "English",
+	"windowAppLanguageCenterChineseNative": "中文",
+	"windowAppLanguageBottom": "Готово",
 
-	"done": "Готово",
-	"ok": "Ок",
+	"windowFeedbackTop": "Обратная связь",
+    "windowFeedbackCenter_1": "Новости сервиса публикуются в ",
+    "windowFeedbackCenter_2": "официальном Telegram-канале",
+	"windowFeedbackCenter_2_Link": "https://t.me/LinetteTelegramChannel",
+    "windowFeedbackCenter_3": ".",
+	"windowFeedbackBottom": "Ок",
 
-	"linkTelegramChannel": "https://t.me/LinetteTelegramChannel",
+	"windowArsenalTop": "Арсенал приложения",
+	"windowArsenalBottom": "Готово",
 
-	"windowTopArsenal": "Арсенал приложения",
-	"windowTopNetParameters": "Параметры сети",
-	"windowTopAccount": "Аккаунт",
-	"windowTopWallet": "Кошелек",
+	"windowNetParametersTop": "Параметры сети",
+	"windowNetParametersBottom": "Ок",
 
-	"arsenal": "Арсенал",
-	"netParameters": "Параметры сети",
-	"accout": "Аккаунт",
-	"wallet": "Кошелек"
+	"windowAccountTop": "Аккаунт",
+	"windowAccountBottom": "Готово",
+
+	"windowWalletTop": "Кошелек",
+	"windowWalletBottom": "Готово"
 }

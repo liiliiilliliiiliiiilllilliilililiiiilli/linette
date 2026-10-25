@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/welcome/welcome.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
-import 'package:linette/app/theme/icons/icons.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/pages/home/home.dart';
 import 'button/button.dart';
 
@@ -32,7 +32,7 @@ class ButtonGo extends HookConsumerWidget {
         await Navigator.pushReplacement (
           context,
           PageRouteBuilder (
-            pageBuilder: (context, animation, secondaryAnimation) => const Home (),
+            pageBuilder: (context, animation, secondaryAnimation) => const HomePage (),
             transitionDuration: const Duration (milliseconds: 750),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
 
@@ -98,10 +98,10 @@ class ButtonGo extends HookConsumerWidget {
     return (
 
       ButtonComponent (
-        text: T.of(context).welcomeGo,
+        text: context.texts.pageWelcomeBottomGo,
         onTap: onTap,
-        picture: context.icons.arrowConnection,
-        pictureSize: 14
+        icon: context.icons.arrow,
+        iconSize: 14
       )
 
     );

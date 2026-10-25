@@ -1,8 +1,9 @@
 // Connections page - App bar - Title
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -20,12 +21,12 @@ class TitleComponent extends StatelessWidget {
       Transform.translate (
         offset: const Offset (-4, -1),
         child: Text (
-          T.of(context).chooseServer,
+          context.texts.pageConnectionsAppbar,
           style: TextStyle (
-            fontFamily: 'Fredoka',
+            fontFamily: context.fonts.fredoka,
             fontWeight: FontWeight.w600,
             fontSize: 25,
-            color: context.colors.textTitle
+            color: context.colors.title
           )
         )
       )

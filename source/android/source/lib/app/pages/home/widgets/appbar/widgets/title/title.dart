@@ -1,8 +1,9 @@
 // Home page - App bar - Title
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -22,12 +23,12 @@ class TitleComponent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text (
-              T.of(context).title,
+              context.texts.pageHomeAppBar,
               style: TextStyle (
-                fontFamily: 'Fredoka',
+                fontFamily: context.fonts.fredoka,
                 fontWeight: FontWeight.w600,
                 fontSize: 25,
-                color: context.colors.textTitle
+                color: context.colors.title
               )
             ),
             Container (

@@ -1,7 +1,7 @@
 // Home page - Drawer - Main - Separator
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
 
 
 

@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app/app.dart';
 
 
@@ -37,7 +37,6 @@ void main () async {
     'assets/images/icons/common/olive.svg',
     'assets/images/icons/common/sun.svg',
     'assets/images/icons/common/tap.svg',
-    'assets/images/icons/common/world.svg',
     'assets/images/logo/launcher/dark/logo.png',
     'assets/images/logo/launcher/light/logo.png',
     'assets/images/logo/splash/dark/logo.png',

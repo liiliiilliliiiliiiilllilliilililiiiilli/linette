@@ -1,8 +1,9 @@
 // Welcome page - Body - Top
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -21,27 +22,27 @@ class Top extends StatelessWidget {
         children: [
           Text.rich (
             TextSpan (
-              style: const TextStyle (
-                fontFamily: 'Fredoka',
+              style: TextStyle (
+                fontFamily: context.fonts.fredoka,
                 fontWeight: FontWeight.w600,
                 fontSize: 41
               ),
               children: [
                 TextSpan (
-                  text: T.of(context).welcomeTitleDot,
+                  text: context.texts.pageWelcomeTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
                     color: context.colors.prime
                   )
                 ),
                 TextSpan (
-                  text: T.of(context).welcomeTitle,
+                  text: context.texts.pageWelcomeTopTitle,
                   style: TextStyle (
-                    color: context.colors.textTitle
+                    color: context.colors.title
                   )
                 ),
                 TextSpan (
-                  text: T.of(context).welcomeTitleDot,
+                  text: context.texts.pageWelcomeTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
                     color: context.colors.prime
@@ -51,12 +52,12 @@ class Top extends StatelessWidget {
             )
           ),
           Text (
-            T.of(context).welcomeSubtitle,
+            context.texts.pageWelcomeTopSubtitle,
             style: TextStyle (
-              fontFamily: 'Archivo',
+              fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w500,
               fontSize: 20,
-              color: context.colors.textTitle
+              color: context.colors.title
             )
           )
         ]

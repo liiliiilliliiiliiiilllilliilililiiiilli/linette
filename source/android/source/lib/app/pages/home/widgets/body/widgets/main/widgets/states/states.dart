@@ -1,8 +1,9 @@
 // Home page - Body - Main - States
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
-import 'package:linette/app/theme/colors/colors.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 
 
 
@@ -18,12 +19,12 @@ class States extends StatelessWidget {
     return (
 
       Text (
-        T.of(context).noConnection,
+        context.texts.pageHomeBodyBottom,
         style: TextStyle (
-          fontFamily: 'Archivo',
+          fontFamily: context.fonts.archivo,
           fontWeight: FontWeight.w500,
           fontSize: 16,
-          color: context.colors.textStates
+          color: context.colors.states
         )
       )
 
