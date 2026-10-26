@@ -99,7 +99,7 @@ class ButtonChangeLanguage extends HookWidget {
 
       TextButtonComponent (
         iconLeft: context.icons.language,
-        text: context.texts.pageWelcomeBottomChangeLanguage,
+        text: context.texts.pageWelcomeBodyBottomChangeLanguage,
         onTap: handleTap
       )
 

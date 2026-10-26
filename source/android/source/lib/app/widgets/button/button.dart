@@ -1,4 +1,4 @@
-// Welcome page - Body - Bottom - Button go - Button
+// Global widgets - Button
 
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -53,23 +53,39 @@ class ButtonComponent extends HookWidget {
 
       return (
 
-        Tween (begin: const Offset (0, 0), end: const Offset (0.21, 0)).animate(curvedAnimation)
+        Tween(begin: const Offset (0, 0), end: const Offset (0.21, 0)).animate(curvedAnimation)
 
       );
 
     }, [controller]);
 
 
-    useEffect (() {
+    useEffect (() {  // Анимация начинается с серидины
 
-      final Timer timer = Timer.periodic (const Duration (milliseconds: 5000), (t) async {
+      Timer? initialTimer;
+      Timer? periodicTimer;
 
-        await controller.forward ();
-        await controller.reverse ();
+
+      initialTimer = Timer (const Duration (milliseconds: 2500), () {
+
+        controller.forward ().then ((_) => controller.reverse ());
+
+        periodicTimer = Timer.periodic (const Duration (milliseconds: 5000), (t) async {
+
+          await controller.forward ();
+          await controller.reverse ();
+
+        });
 
       });
 
-      return () => timer.cancel ();
+
+      return () {
+
+        initialTimer?.cancel ();
+        periodicTimer?.cancel ();
+
+      };
 
     }, const []);
 

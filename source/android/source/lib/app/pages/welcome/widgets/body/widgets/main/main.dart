@@ -19,7 +19,7 @@ class Main extends StatelessWidget {
     return (
 
       Text (
-        context.texts.pageWelcomeCenter,
+        context.texts.pageWelcomeBodyCenter,
         textAlign: TextAlign.center,
         style: TextStyle (
           fontFamily: context.fonts.archivo,

@@ -24,17 +24,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "pageConnectionsAppbar": MessageLookupByLibrary.simpleMessage("选择服务器"),
+    "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage("选择服务器"),
     "pageConnectionsBodyLiner": m0,
-    "pageConnectionsBodyListCountryFinland":
+    "pageConnectionsBodyListConnectionCountryFinland":
         MessageLookupByLibrary.simpleMessage("芬兰"),
-    "pageConnectionsBodyListCountryGermany":
+    "pageConnectionsBodyListConnectionCountryGermany":
         MessageLookupByLibrary.simpleMessage("德国"),
-    "pageConnectionsBodyListCountryNetherlands":
+    "pageConnectionsBodyListConnectionCountryNetherlands":
         MessageLookupByLibrary.simpleMessage("荷兰"),
-    "pageConnectionsBodyListIsChosen": MessageLookupByLibrary.simpleMessage(
-      "已选",
-    ),
+    "pageConnectionsBodyListConnectionIsChosen":
+        MessageLookupByLibrary.simpleMessage("已选"),
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("无连接"),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
@@ -67,16 +66,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "pageHomeDrawerCenterWallet": MessageLookupByLibrary.simpleMessage("钱包"),
     "pageHomeDrawerTop": MessageLookupByLibrary.simpleMessage("选项"),
-    "pageWelcomeBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "更改语言",
     ),
-    "pageWelcomeBottomGo": MessageLookupByLibrary.simpleMessage("我们走吧！"),
-    "pageWelcomeCenter": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyBottomGo": MessageLookupByLibrary.simpleMessage("我们走吧！"),
+    "pageWelcomeBodyCenter": MessageLookupByLibrary.simpleMessage(
       "1）绕过限制\n\n2）帮助他人\n\n3）获得金钱",
     ),
-    "pageWelcomeTopSubtitle": MessageLookupByLibrary.simpleMessage("拯救世界的计划"),
-    "pageWelcomeTopTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
-    "pageWelcomeTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "pageWelcomeBodyTopSubtitle": MessageLookupByLibrary.simpleMessage(
+      "拯救世界的计划",
+    ),
+    "pageWelcomeBodyTopTitle": MessageLookupByLibrary.simpleMessage(
+      " Linette ",
+    ),
+    "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
     "windowAccountBottom": MessageLookupByLibrary.simpleMessage("完成"),
     "windowAccountTop": MessageLookupByLibrary.simpleMessage("帐户"),
     "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("完成"),

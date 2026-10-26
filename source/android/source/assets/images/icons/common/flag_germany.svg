@@ -1,12 +1,17 @@
-<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_641_62470)">
-<path d="M0.0595703 50C50.0196 50 99.9796 50 149.94 50C149.94 66.67 149.94 83.33 149.94 100C99.9796 100 50.0196 100 0.0595703 100C0.0595703 83.33 0.0595703 66.67 0.0595703 50Z" fill-rule="evenodd" clip-rule="evenodd" fill="#D60000" stroke-width="0.25" stroke-linejoin="round" stroke="#D60000"/>
-<path d="M0.0795703 0.0800781C50.0296 0.0800781 99.9696 0.0800781 149.92 0.0800781C149.93 16.7201 149.94 33.3601 149.94 50.0001C99.9796 50.0001 50.0196 50.0001 0.0595703 50.0001C0.0595703 33.3601 0.0695703 16.7201 0.0795703 0.0800781Z" fill-rule="evenodd" clip-rule="evenodd" fill="black" stroke-width="0.25" stroke-linejoin="round" stroke="black"/>
-<path d="M0.0595703 100C50.0196 100 99.9796 100 149.94 100C149.94 116.64 149.93 133.28 149.92 149.92C99.9696 149.92 50.0296 149.92 0.0795703 149.92C0.0695703 133.28 0.0595703 116.64 0.0595703 100Z" fill-rule="evenodd" clip-rule="evenodd" fill="#F7C800" stroke-width="0.25" stroke-linejoin="round" stroke="#F7C800"/>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_647_62475)">
+<mask id="mask0_647_62475" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+<path d="M256 0H0V256H256V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_647_62475)">
+<path d="M0.101562 85.333C85.3667 85.333 170.632 85.333 255.898 85.333C255.898 113.783 255.898 142.216 255.898 170.666C170.632 170.666 85.3667 170.666 0.101562 170.666C0.101562 142.216 0.101562 113.783 0.101562 85.333Z" fill-rule="evenodd" clip-rule="evenodd" fill="#D60000" stroke-width="0.426667" stroke-linejoin="round" stroke="#D60000"/>
+<path d="M0.135696 0.136719C85.3838 0.136719 170.615 0.136719 255.863 0.136719C255.88 28.5357 255.898 56.9346 255.898 85.3336C170.632 85.3336 85.3667 85.3336 0.101562 85.3336C0.101562 56.9346 0.118629 28.5357 0.135696 0.136719Z" fill-rule="evenodd" clip-rule="evenodd" fill="black" stroke-width="0.426667" stroke-linejoin="round" stroke="black"/>
+<path d="M0.101562 170.667C85.3667 170.667 170.632 170.667 255.898 170.667C255.898 199.066 255.88 227.465 255.863 255.864C170.615 255.864 85.3838 255.864 0.135696 255.864C0.118629 227.465 0.101562 199.066 0.101562 170.667Z" fill-rule="evenodd" clip-rule="evenodd" fill="#F7C800" stroke-width="0.426667" stroke-linejoin="round" stroke="#F7C800"/>
+</g>
 </g>
 <defs>
-<clipPath id="clip0_641_62470">
-<rect width="150" height="150" fill="white"/>
+<clipPath id="clip0_647_62475">
+<rect width="256" height="256" fill="white"/>
 </clipPath>
 </defs>
 </svg>

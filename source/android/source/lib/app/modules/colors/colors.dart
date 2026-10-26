@@ -56,7 +56,6 @@ class AppPalette {
 class AppColors extends ThemeExtension <AppColors> {
 
   final Color appBarBack;
-  final Color buttonConnectIcon;
   final Color appBarBorder;
   final Color appBarButtonBack;
   final Color appBarButtonBorder;
@@ -73,6 +72,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color buttonChooseConnectionIconRight;
   final Color buttonChooseConnectionText;
   final Color buttonConnectBorder;
+  final Color buttonConnectIcon;
   final Color buttonConnectShadow;
   final Color buttonText;
   final Color check;
@@ -122,7 +122,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
   const AppColors ({
     required this.appBarBack,
-    required this.buttonConnectIcon,
     required this.appBarBorder,
     required this.appBarButtonBack,
     required this.appBarButtonBorder,
@@ -139,6 +138,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.buttonChooseConnectionIconRight,
     required this.buttonChooseConnectionText,
     required this.buttonConnectBorder,
+    required this.buttonConnectIcon,
     required this.buttonConnectShadow,
     required this.buttonText,
     required this.check,
@@ -189,7 +189,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
   static const AppColors darkGreen = AppColors (
     appBarBack: AppPalette.grey_2,
-    buttonConnectIcon: AppPalette.grey_1,
     appBarBorder: AppPalette.grey_7,
     appBarButtonBack: AppPalette.black,
     appBarButtonBorder: AppPalette.grey_9,
@@ -206,6 +205,7 @@ class AppColors extends ThemeExtension <AppColors> {
     buttonChooseConnectionIconRight: AppPalette.green_6,
     buttonChooseConnectionText: AppPalette.green_6,
     buttonConnectBorder: AppPalette.black,
+    buttonConnectIcon: AppPalette.grey_1,
     buttonConnectShadow: AppPalette.transparent_3_grey_1,
     buttonText: AppPalette.black,
     check: AppPalette.grey_3,
@@ -255,7 +255,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
   static const AppColors lightGreen = AppColors (
     appBarBack: AppPalette.grey_14,
-    buttonConnectIcon: AppPalette.grey_1,
     appBarBorder: AppPalette.grey_13,
     appBarButtonBack: AppPalette.white,
     appBarButtonBorder: AppPalette.grey_13,
@@ -272,6 +271,7 @@ class AppColors extends ThemeExtension <AppColors> {
     buttonChooseConnectionIconRight: AppPalette.black,
     buttonChooseConnectionText: AppPalette.black,
     buttonConnectBorder: AppPalette.black,
+    buttonConnectIcon: AppPalette.grey_1,
     buttonConnectShadow: AppPalette.transparent_3_grey_1,
     buttonText: AppPalette.cream,
     check: AppPalette.cream,
@@ -322,7 +322,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
   @override AppColors copyWith ({
     Color? appBarBack,
-    Color? buttonConnectIcon,
     Color? appBarBorder,
     Color? appBarButtonBack,
     Color? appBarButtonBorder,
@@ -339,6 +338,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? buttonChooseConnectionIconRight,
     Color? buttonChooseConnectionText,
     Color? buttonConnectBorder,
+    Color? buttonConnectIcon,
     Color? buttonConnectShadow,
     Color? buttonText,
     Color? check,
@@ -390,7 +390,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
       AppColors (
         appBarBack: appBarBack ?? this.appBarBack,
-        buttonConnectIcon: buttonConnectIcon ?? this.buttonConnectIcon,
         appBarBorder: appBarBorder ?? this.appBarBorder,
         appBarButtonBack: appBarButtonBack ?? this.appBarButtonBack,
         appBarButtonBorder: appBarButtonBorder ?? this.appBarButtonBorder,
@@ -407,6 +406,7 @@ class AppColors extends ThemeExtension <AppColors> {
         buttonChooseConnectionIconRight: buttonChooseConnectionIconRight ?? this.buttonChooseConnectionIconRight,
         buttonChooseConnectionText: buttonChooseConnectionText ?? this.buttonChooseConnectionText,
         buttonConnectBorder: buttonConnectBorder ?? this.buttonConnectBorder,
+        buttonConnectIcon: buttonConnectIcon ?? this.buttonConnectIcon,
         buttonConnectShadow: buttonConnectShadow ?? this.buttonConnectShadow,
         buttonText: buttonText ?? this.buttonText,
         check: check ?? this.check,
@@ -471,7 +471,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
       AppColors (
         appBarBack: Color.lerp (appBarBack, other.appBarBack, t) ?? appBarBack,
-        buttonConnectIcon: Color.lerp (buttonConnectIcon, other.buttonConnectIcon, t) ?? buttonConnectIcon,
         appBarBorder: Color.lerp (appBarBorder, other.appBarBorder, t) ?? appBarBorder,
         appBarButtonBack: Color.lerp (appBarButtonBack, other.appBarButtonBack, t) ?? appBarButtonBack,
         appBarButtonBorder: Color.lerp (appBarButtonBorder, other.appBarButtonBorder, t) ?? appBarButtonBorder,
@@ -488,6 +487,7 @@ class AppColors extends ThemeExtension <AppColors> {
         buttonChooseConnectionIconRight: Color.lerp (buttonChooseConnectionIconRight, other.buttonChooseConnectionIconRight, t) ?? buttonChooseConnectionIconRight,
         buttonChooseConnectionText: Color.lerp (buttonChooseConnectionText, other.buttonChooseConnectionText, t) ?? buttonChooseConnectionText,
         buttonConnectBorder: Color.lerp (buttonConnectBorder, other.buttonConnectBorder, t) ?? buttonConnectBorder,
+        buttonConnectIcon: Color.lerp (buttonConnectIcon, other.buttonConnectIcon, t) ?? buttonConnectIcon,
         buttonConnectShadow: Color.lerp (buttonConnectShadow, other.buttonConnectShadow, t) ?? buttonConnectShadow,
         buttonText: Color.lerp (buttonText, other.buttonText, t) ?? buttonText,
         check: Color.lerp (check, other.check, t) ?? check,

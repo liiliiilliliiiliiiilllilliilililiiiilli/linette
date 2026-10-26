@@ -1,12 +1,12 @@
 {
 	"@@locale": "en",
 
-	"pageWelcomeTopTitle": " Linette ",
-	"pageWelcomeTopTitleDot": "•",
-	"pageWelcomeTopSubtitle": "Plan to save the world",
-	"pageWelcomeCenter": "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
-	"pageWelcomeBottomGo": "Let's go!",
-	"pageWelcomeBottomChangeLanguage": "Change language",
+	"pageWelcomeBodyTopTitle": " Linette ",
+	"pageWelcomeBodyTopTitleDot": "•",
+	"pageWelcomeBodyTopSubtitle": "Plan to save the world",
+	"pageWelcomeBodyCenter": "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
+	"pageWelcomeBodyBottomGo": "Let's go!",
+	"pageWelcomeBodyBottomChangeLanguage": "Change language",
 
 	"pageHomeAppBar": "Linette",
 	"pageHomeBodyTop": "Connection is not secured",
@@ -28,7 +28,7 @@
 	"pageHomeDrawerCenterWallet": "Wallet",
 	"pageHomeDrawerBottom": "Connect to VPN on app launch",
 
-	"pageConnectionsAppbar": "Choose the server",
+	"pageConnectionsAppBar": "Choose the server",
 	"pageConnectionsBodyLiner": "{num} online",
 	"@pageConnectionsBodyLiner": {
 		"placeholders": {
@@ -37,10 +37,10 @@
 			}
 		}
 	},
-	"pageConnectionsBodyListCountryNetherlands": "Netherlands",
-	"pageConnectionsBodyListCountryFinland": "Finland",
-	"pageConnectionsBodyListCountryGermany": "Germany",
-	"pageConnectionsBodyListIsChosen": "Chosen",
+	"pageConnectionsBodyListConnectionCountryNetherlands": "Netherlands",
+	"pageConnectionsBodyListConnectionCountryFinland": "Finland",
+	"pageConnectionsBodyListConnectionCountryGermany": "Germany",
+	"pageConnectionsBodyListConnectionIsChosen": "Chosen",
 
 	"windowPurposeOfThisAppTop": "Which purpose does this app have?",
 	"windowPurposeOfThisAppCenter": "If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.",

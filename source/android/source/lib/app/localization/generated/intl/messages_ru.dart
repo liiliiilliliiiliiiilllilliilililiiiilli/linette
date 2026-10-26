@@ -24,19 +24,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "pageConnectionsAppbar": MessageLookupByLibrary.simpleMessage(
+    "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Выберите сервер",
     ),
     "pageConnectionsBodyLiner": m0,
-    "pageConnectionsBodyListCountryFinland":
+    "pageConnectionsBodyListConnectionCountryFinland":
         MessageLookupByLibrary.simpleMessage("Финляндия"),
-    "pageConnectionsBodyListCountryGermany":
+    "pageConnectionsBodyListConnectionCountryGermany":
         MessageLookupByLibrary.simpleMessage("Германия"),
-    "pageConnectionsBodyListCountryNetherlands":
+    "pageConnectionsBodyListConnectionCountryNetherlands":
         MessageLookupByLibrary.simpleMessage("Нидерланды"),
-    "pageConnectionsBodyListIsChosen": MessageLookupByLibrary.simpleMessage(
-      "Выбран",
-    ),
+    "pageConnectionsBodyListConnectionIsChosen":
+        MessageLookupByLibrary.simpleMessage("Выбран"),
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage(
       "Нет подключения",
@@ -85,18 +84,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Кошелек",
     ),
     "pageHomeDrawerTop": MessageLookupByLibrary.simpleMessage("Опции"),
-    "pageWelcomeBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Изменить язык",
     ),
-    "pageWelcomeBottomGo": MessageLookupByLibrary.simpleMessage("Поехали!"),
-    "pageWelcomeCenter": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyBottomGo": MessageLookupByLibrary.simpleMessage("Поехали!"),
+    "pageWelcomeBodyCenter": MessageLookupByLibrary.simpleMessage(
       "1) Обходите ограничения\n\n2) Помогайте окружающим\n\n3) Получайте деньги",
     ),
-    "pageWelcomeTopSubtitle": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyTopSubtitle": MessageLookupByLibrary.simpleMessage(
       "План по спасению мира",
     ),
-    "pageWelcomeTopTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
-    "pageWelcomeTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "pageWelcomeBodyTopTitle": MessageLookupByLibrary.simpleMessage(
+      " Linette ",
+    ),
+    "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
     "windowAccountBottom": MessageLookupByLibrary.simpleMessage("Готово"),
     "windowAccountTop": MessageLookupByLibrary.simpleMessage("Аккаунт"),
     "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("Готово"),

@@ -21,9 +21,9 @@ class TitleComponent extends StatelessWidget {
       Transform.translate (
         offset: const Offset (-4, -1),
         child: Text (
-          context.texts.pageConnectionsAppbar,
+          context.texts.pageConnectionsAppBar,
           style: TextStyle (
-            fontFamily: context.fonts.fredoka,
+            fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 25,
             color: context.colors.title

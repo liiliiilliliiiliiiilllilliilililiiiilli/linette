@@ -7,7 +7,7 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/pages/home/home.dart';
-import 'button/button.dart';
+import 'package:linette/app/widgets/button/button.dart';
 
 
 
@@ -98,7 +98,7 @@ class ButtonGo extends HookConsumerWidget {
     return (
 
       ButtonComponent (
-        text: context.texts.pageWelcomeBottomGo,
+        text: context.texts.pageWelcomeBodyBottomGo,
         onTap: onTap,
         icon: context.icons.arrow,
         iconSize: 14

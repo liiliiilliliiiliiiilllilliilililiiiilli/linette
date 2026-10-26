@@ -56,60 +56,60 @@ class T {
   }
 
   /// ` Linette `
-  String get pageWelcomeTopTitle {
+  String get pageWelcomeBodyTopTitle {
     return Intl.message(
       ' Linette ',
-      name: 'pageWelcomeTopTitle',
+      name: 'pageWelcomeBodyTopTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `•`
-  String get pageWelcomeTopTitleDot {
+  String get pageWelcomeBodyTopTitleDot {
     return Intl.message(
       '•',
-      name: 'pageWelcomeTopTitleDot',
+      name: 'pageWelcomeBodyTopTitleDot',
       desc: '',
       args: [],
     );
   }
 
   /// `Plan to save the world`
-  String get pageWelcomeTopSubtitle {
+  String get pageWelcomeBodyTopSubtitle {
     return Intl.message(
       'Plan to save the world',
-      name: 'pageWelcomeTopSubtitle',
+      name: 'pageWelcomeBodyTopSubtitle',
       desc: '',
       args: [],
     );
   }
 
   /// `1) Bypass restrictions\n\n2) Help others\n\n3) Get money`
-  String get pageWelcomeCenter {
+  String get pageWelcomeBodyCenter {
     return Intl.message(
       '1) Bypass restrictions\n\n2) Help others\n\n3) Get money',
-      name: 'pageWelcomeCenter',
+      name: 'pageWelcomeBodyCenter',
       desc: '',
       args: [],
     );
   }
 
   /// `Let's go!`
-  String get pageWelcomeBottomGo {
+  String get pageWelcomeBodyBottomGo {
     return Intl.message(
       'Let\'s go!',
-      name: 'pageWelcomeBottomGo',
+      name: 'pageWelcomeBodyBottomGo',
       desc: '',
       args: [],
     );
   }
 
   /// `Change language`
-  String get pageWelcomeBottomChangeLanguage {
+  String get pageWelcomeBodyBottomChangeLanguage {
     return Intl.message(
       'Change language',
-      name: 'pageWelcomeBottomChangeLanguage',
+      name: 'pageWelcomeBodyBottomChangeLanguage',
       desc: '',
       args: [],
     );
@@ -291,10 +291,10 @@ class T {
   }
 
   /// `Choose the server`
-  String get pageConnectionsAppbar {
+  String get pageConnectionsAppBar {
     return Intl.message(
       'Choose the server',
-      name: 'pageConnectionsAppbar',
+      name: 'pageConnectionsAppBar',
       desc: '',
       args: [],
     );
@@ -311,40 +311,40 @@ class T {
   }
 
   /// `Netherlands`
-  String get pageConnectionsBodyListCountryNetherlands {
+  String get pageConnectionsBodyListConnectionCountryNetherlands {
     return Intl.message(
       'Netherlands',
-      name: 'pageConnectionsBodyListCountryNetherlands',
+      name: 'pageConnectionsBodyListConnectionCountryNetherlands',
       desc: '',
       args: [],
     );
   }
 
   /// `Finland`
-  String get pageConnectionsBodyListCountryFinland {
+  String get pageConnectionsBodyListConnectionCountryFinland {
     return Intl.message(
       'Finland',
-      name: 'pageConnectionsBodyListCountryFinland',
+      name: 'pageConnectionsBodyListConnectionCountryFinland',
       desc: '',
       args: [],
     );
   }
 
   /// `Germany`
-  String get pageConnectionsBodyListCountryGermany {
+  String get pageConnectionsBodyListConnectionCountryGermany {
     return Intl.message(
       'Germany',
-      name: 'pageConnectionsBodyListCountryGermany',
+      name: 'pageConnectionsBodyListConnectionCountryGermany',
       desc: '',
       args: [],
     );
   }
 
   /// `Chosen`
-  String get pageConnectionsBodyListIsChosen {
+  String get pageConnectionsBodyListConnectionIsChosen {
     return Intl.message(
       'Chosen',
-      name: 'pageConnectionsBodyListIsChosen',
+      name: 'pageConnectionsBodyListConnectionIsChosen',
       desc: '',
       args: [],
     );

@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -30,12 +29,47 @@ class BottomComponent extends HookWidget {
 
     }
 
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
 
     return (
 
-      Presser (
-        isPressed: isPressed,
-        handleTap: handleTap,
+      GestureDetector (
+        onTap: handleTap,
+        onPanDown: onPanDown,
+        onTapUp: onTapUp,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
+        behavior: HitTestBehavior.opaque,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.98,

@@ -21,7 +21,7 @@ class ChoiceStatus extends StatelessWidget {
   @override Widget build (BuildContext context) {
 
     final String text = isChosen
-      ? context.texts.pageConnectionsBodyListIsChosen
+      ? context.texts.pageConnectionsBodyListConnectionIsChosen
       : '';
 
 

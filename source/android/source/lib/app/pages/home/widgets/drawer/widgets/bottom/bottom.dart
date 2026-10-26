@@ -70,6 +70,7 @@ class Bottom extends HookWidget {
         onLongPressCancel: onLongPressCancel,
         behavior: HitTestBehavior.opaque,
         child: Container (
+          height: 80,
           alignment: Alignment.bottomLeft,
           padding: const EdgeInsets.fromLTRB (20, 15, 20, 15),
           decoration: BoxDecoration (

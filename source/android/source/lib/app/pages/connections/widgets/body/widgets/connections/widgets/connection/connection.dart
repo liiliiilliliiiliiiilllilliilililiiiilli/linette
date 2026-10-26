@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 import 'widgets/country/country.dart';
 import 'widgets/choicestatus/choicestatus.dart';
@@ -28,6 +27,43 @@ class Connection extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
+    void handleTap () {
+
+        model.onTap ();
+
+    }
+
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
+
     final Color colorBorder = model.isChosen
       ? context.colors.blockBorder
       : context.colors.block;
@@ -35,9 +71,14 @@ class Connection extends HookWidget {
 
     return (
 
-      Presser (
-        isPressed: isPressed,
-        handleTap: model.onTap,
+      GestureDetector (
+        onTap: handleTap,
+        onPanDown: onPanDown,
+        onTapUp: onTapUp,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
+        behavior: HitTestBehavior.opaque,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.975,

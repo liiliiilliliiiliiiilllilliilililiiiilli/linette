@@ -1,12 +1,10 @@
 // Home page - Body - Main - Connect - Connection button
 
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
-import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -25,6 +23,36 @@ class ConnectionButton extends HookWidget {
 
     void handleTap () {}
 
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
 
     final Offset offset = isPressed.value
       ? const Offset (0, 5 * 0.825)
@@ -42,9 +70,14 @@ class ConnectionButton extends HookWidget {
     return (
 
       Center (
-        child: Presser (
-          isPressed: isPressed,
-          handleTap: handleTap,
+        child: GestureDetector (
+          onTap: handleTap,
+          onPanDown: onPanDown,
+          onTapUp: onTapUp,
+          onPanCancel: onPanCancel,
+          onTapCancel: onTapCancel,
+          onLongPressCancel: onLongPressCancel,
+          behavior: HitTestBehavior.opaque,
           child: AnimatorPresser (
             isPressed: isPressed,
             child: Opacity (
@@ -72,18 +105,13 @@ class ConnectionButton extends HookWidget {
                   ],
                   color: context.colors.prime
                 ),
-                child: Center (
-                  child: Transform.translate (
-                    offset: const Offset (0, -2),
-                    child: Transform.rotate (
-                      angle: 5 * math.pi / 180,
-                      child: SvgPicture.asset (
-                        context.icons.olive,
-                        colorFilter: ColorFilter.mode (
-                          context.colors.buttonConnectIcon,
-                          BlendMode.srcIn
-                        )
-                      )
+                child: Container (
+                  padding: const EdgeInsets.all (1.75),
+                  child: SvgPicture.asset (
+                    context.icons.olive,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.buttonConnectIcon,
+                      BlendMode.srcIn
                     )
                   )
                 )

@@ -29,20 +29,20 @@ class Top extends StatelessWidget {
               ),
               children: [
                 TextSpan (
-                  text: context.texts.pageWelcomeTopTitleDot,
+                  text: context.texts.pageWelcomeBodyTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
                     color: context.colors.prime
                   )
                 ),
                 TextSpan (
-                  text: context.texts.pageWelcomeTopTitle,
+                  text: context.texts.pageWelcomeBodyTopTitle,
                   style: TextStyle (
                     color: context.colors.title
                   )
                 ),
                 TextSpan (
-                  text: context.texts.pageWelcomeTopTitleDot,
+                  text: context.texts.pageWelcomeBodyTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
                     color: context.colors.prime
@@ -52,7 +52,7 @@ class Top extends StatelessWidget {
             )
           ),
           Text (
-            context.texts.pageWelcomeTopSubtitle,
+            context.texts.pageWelcomeBodyTopSubtitle,
             style: TextStyle (
               fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w500,

@@ -24,19 +24,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "pageConnectionsAppbar": MessageLookupByLibrary.simpleMessage(
+    "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Choose the server",
     ),
     "pageConnectionsBodyLiner": m0,
-    "pageConnectionsBodyListCountryFinland":
+    "pageConnectionsBodyListConnectionCountryFinland":
         MessageLookupByLibrary.simpleMessage("Finland"),
-    "pageConnectionsBodyListCountryGermany":
+    "pageConnectionsBodyListConnectionCountryGermany":
         MessageLookupByLibrary.simpleMessage("Germany"),
-    "pageConnectionsBodyListCountryNetherlands":
+    "pageConnectionsBodyListConnectionCountryNetherlands":
         MessageLookupByLibrary.simpleMessage("Netherlands"),
-    "pageConnectionsBodyListIsChosen": MessageLookupByLibrary.simpleMessage(
-      "Chosen",
-    ),
+    "pageConnectionsBodyListConnectionIsChosen":
+        MessageLookupByLibrary.simpleMessage("Chosen"),
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("No connection"),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
@@ -83,18 +82,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Wallet",
     ),
     "pageHomeDrawerTop": MessageLookupByLibrary.simpleMessage("Options"),
-    "pageWelcomeBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyBottomChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Change language",
     ),
-    "pageWelcomeBottomGo": MessageLookupByLibrary.simpleMessage("Let\'s go!"),
-    "pageWelcomeCenter": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyBottomGo": MessageLookupByLibrary.simpleMessage(
+      "Let\'s go!",
+    ),
+    "pageWelcomeBodyCenter": MessageLookupByLibrary.simpleMessage(
       "1) Bypass restrictions\n\n2) Help others\n\n3) Get money",
     ),
-    "pageWelcomeTopSubtitle": MessageLookupByLibrary.simpleMessage(
+    "pageWelcomeBodyTopSubtitle": MessageLookupByLibrary.simpleMessage(
       "Plan to save the world",
     ),
-    "pageWelcomeTopTitle": MessageLookupByLibrary.simpleMessage(" Linette "),
-    "pageWelcomeTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
+    "pageWelcomeBodyTopTitle": MessageLookupByLibrary.simpleMessage(
+      " Linette ",
+    ),
+    "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
     "windowAccountBottom": MessageLookupByLibrary.simpleMessage("Done"),
     "windowAccountTop": MessageLookupByLibrary.simpleMessage("Account"),
     "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("Done"),

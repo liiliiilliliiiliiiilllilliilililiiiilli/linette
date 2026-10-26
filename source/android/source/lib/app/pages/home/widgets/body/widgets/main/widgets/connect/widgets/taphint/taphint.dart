@@ -54,16 +54,32 @@ class TapHint extends HookWidget {
     }, [controller]);
 
 
-    useEffect (() {
+    useEffect (() {  // Анимация начинается с серидины
 
-      final Timer timer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
+      Timer? initialTimer;
+      Timer? periodicTimer;
 
-        await controller.forward ();
-        await controller.reverse ();
+
+      initialTimer = Timer (const Duration (milliseconds: 3600), () {
+
+        controller.forward ().then ((_) => controller.reverse ());
+
+        periodicTimer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
+
+          await controller.forward ();
+          await controller.reverse ();
+
+        });
 
       });
 
-      return () => timer.cancel ();
+
+      return () {
+
+        initialTimer?.cancel ();
+        periodicTimer?.cancel ();
+
+      };
 
     }, const []);
 

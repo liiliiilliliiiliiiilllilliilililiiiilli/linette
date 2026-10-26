@@ -5,7 +5,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
-import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -28,6 +27,36 @@ class LeftButton extends HookWidget {
 
     }
 
+    void onPanDown (details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (details) {
+
+      isPressed.value = false;
+
+    }
+
+    void onPanCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+    void onLongPressCancel () {
+
+      isPressed.value = false;
+
+    }
+
 
     final double translationYValue = isPressed.value
       ? 1
@@ -36,9 +65,14 @@ class LeftButton extends HookWidget {
 
     return (
 
-      Presser (
-        isPressed: isPressed,
-        handleTap: handleTap,
+      GestureDetector (
+        onTap: handleTap,
+        onPanDown: onPanDown,
+        onTapUp: onTapUp,
+        onPanCancel: onPanCancel,
+        onTapCancel: onTapCancel,
+        onLongPressCancel: onLongPressCancel,
+        behavior: HitTestBehavior.opaque,
         child: AnimatorPresser (
           isPressed: isPressed,
           child: AnimatedContainer (
