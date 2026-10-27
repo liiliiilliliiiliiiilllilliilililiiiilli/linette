@@ -351,110 +351,105 @@ class T {
   }
 
   /// `Which purpose does this app have?`
-  String get windowPurposeOfThisAppTop {
+  String get windowHintTop {
     return Intl.message(
       'Which purpose does this app have?',
-      name: 'windowPurposeOfThisAppTop',
+      name: 'windowHintTop',
       desc: '',
       args: [],
     );
   }
 
   /// `If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.`
-  String get windowPurposeOfThisAppCenter {
+  String get windowHintCenter {
     return Intl.message(
       'If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.',
-      name: 'windowPurposeOfThisAppCenter',
+      name: 'windowHintCenter',
       desc: '',
       args: [],
     );
   }
 
   /// `Ok`
-  String get windowPurposeOfThisAppBottom {
-    return Intl.message(
-      'Ok',
-      name: 'windowPurposeOfThisAppBottom',
-      desc: '',
-      args: [],
-    );
+  String get windowHintBottom {
+    return Intl.message('Ok', name: 'windowHintBottom', desc: '', args: []);
   }
 
   /// `App language`
-  String get windowAppLanguageTop {
+  String get windowLanguageTop {
     return Intl.message(
       'App language',
-      name: 'windowAppLanguageTop',
+      name: 'windowLanguageTop',
       desc: '',
       args: [],
     );
   }
 
   /// `Russian`
-  String get windowAppLanguageCenterRussian {
+  String get windowLanguageCenterRussian {
     return Intl.message(
       'Russian',
-      name: 'windowAppLanguageCenterRussian',
+      name: 'windowLanguageCenterRussian',
       desc: '',
       args: [],
     );
   }
 
   /// `English`
-  String get windowAppLanguageCenterEnglish {
+  String get windowLanguageCenterEnglish {
     return Intl.message(
       'English',
-      name: 'windowAppLanguageCenterEnglish',
+      name: 'windowLanguageCenterEnglish',
       desc: '',
       args: [],
     );
   }
 
   /// `Chinese`
-  String get windowAppLanguageCenterChinese {
+  String get windowLanguageCenterChinese {
     return Intl.message(
       'Chinese',
-      name: 'windowAppLanguageCenterChinese',
+      name: 'windowLanguageCenterChinese',
       desc: '',
       args: [],
     );
   }
 
   /// `Русский`
-  String get windowAppLanguageCenterRussianNative {
+  String get windowLanguageCenterRussianNative {
     return Intl.message(
       'Русский',
-      name: 'windowAppLanguageCenterRussianNative',
+      name: 'windowLanguageCenterRussianNative',
       desc: '',
       args: [],
     );
   }
 
   /// `English`
-  String get windowAppLanguageCenterEnglishNative {
+  String get windowLanguageCenterEnglishNative {
     return Intl.message(
       'English',
-      name: 'windowAppLanguageCenterEnglishNative',
+      name: 'windowLanguageCenterEnglishNative',
       desc: '',
       args: [],
     );
   }
 
   /// `中文`
-  String get windowAppLanguageCenterChineseNative {
+  String get windowLanguageCenterChineseNative {
     return Intl.message(
       '中文',
-      name: 'windowAppLanguageCenterChineseNative',
+      name: 'windowLanguageCenterChineseNative',
       desc: '',
       args: [],
     );
   }
 
   /// `Done`
-  String get windowAppLanguageBottom {
+  String get windowLanguageBottom {
     return Intl.message(
       'Done',
-      name: 'windowAppLanguageBottom',
+      name: 'windowLanguageBottom',
       desc: '',
       args: [],
     );

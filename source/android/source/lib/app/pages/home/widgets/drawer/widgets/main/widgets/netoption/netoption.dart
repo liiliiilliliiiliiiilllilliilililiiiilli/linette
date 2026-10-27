@@ -1,7 +1,6 @@
 // Home page - Drawer - Main - Net option
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/draweroption/draweroption.dart';
@@ -9,7 +8,7 @@ import 'package:linette/app/windows/net/net.dart';
 
 
 
-class NetOption extends HookWidget {
+class NetOption extends StatelessWidget {
 
   const NetOption ({
     super.key

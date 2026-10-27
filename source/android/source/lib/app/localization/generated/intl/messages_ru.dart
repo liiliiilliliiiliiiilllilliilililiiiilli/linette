@@ -100,25 +100,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
     "windowAccountBottom": MessageLookupByLibrary.simpleMessage("Готово"),
     "windowAccountTop": MessageLookupByLibrary.simpleMessage("Аккаунт"),
-    "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("Готово"),
-    "windowAppLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
-      "Китайский",
-    ),
-    "windowAppLanguageCenterChineseNative":
-        MessageLookupByLibrary.simpleMessage("中文"),
-    "windowAppLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
-      "Английский",
-    ),
-    "windowAppLanguageCenterEnglishNative":
-        MessageLookupByLibrary.simpleMessage("English"),
-    "windowAppLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
-      "Русский",
-    ),
-    "windowAppLanguageCenterRussianNative":
-        MessageLookupByLibrary.simpleMessage("Русский"),
-    "windowAppLanguageTop": MessageLookupByLibrary.simpleMessage(
-      "Язык приложения",
-    ),
     "windowArsenalBottom": MessageLookupByLibrary.simpleMessage("Готово"),
     "windowArsenalTop": MessageLookupByLibrary.simpleMessage(
       "Арсенал приложения",
@@ -135,15 +116,37 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
     "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("Обратная связь"),
-    "windowNetBottom": MessageLookupByLibrary.simpleMessage("Ок"),
-    "windowNetTop": MessageLookupByLibrary.simpleMessage("Параметры сети"),
-    "windowPurposeOfThisAppBottom": MessageLookupByLibrary.simpleMessage("Ок"),
-    "windowPurposeOfThisAppCenter": MessageLookupByLibrary.simpleMessage(
+    "windowHintBottom": MessageLookupByLibrary.simpleMessage("Ок"),
+    "windowHintCenter": MessageLookupByLibrary.simpleMessage(
       "Если вы сталкиваетесь с проблемами доступа к удаленным ресурсам или хотите сохранить конфиденциальность личных данных в небезопасной сети, одним из решений может стать надежное VPN соединение.\n\nVPN (Virtual Private Network) - технология межсетевой коммуникации для создания безопасных виртуальных каналов связи. Шифруемые данные трафика защищены криптографическими методами так, что злоумышленнику при перехвате на их дешифровку потребуются миллионы и миллионы лет.\n\nПомимо VPN сущетсвует множество иных способов обезопасить себя в сети, например сетевые прокси или изменение IP адреса. Почти каждый из них разделяет принципы работы VPN, а также имеет ряд отдельных протоколов связи, разработанных для лучшей работы в определенных сценариях (корпоративные, персональные решения или иные специфические области).\n\nНесмотря на свои широкие возможности, такие технологии основаны на простых математических принципах и несложны в реализации. При желании, вы можете развернуть свой собственный VPN сервер или настроить приватный прокси - это лучший способ сохранить контроль и приватность Ваших данных.\n\nLinette - такой же сетевой провайдер, каким вы можете стать для самих себя, если внимательно изучите кибербезопасность и основы программирования.\n\nПомните: никто не может ощутить информацию физически, но кто угодно может воплотить любую идею, основанную на этой информации.",
     ),
-    "windowPurposeOfThisAppTop": MessageLookupByLibrary.simpleMessage(
+    "windowHintTop": MessageLookupByLibrary.simpleMessage(
       "Для чего создано это приложение?",
     ),
+    "windowLanguageBottom": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
+      "Китайский",
+    ),
+    "windowLanguageCenterChineseNative": MessageLookupByLibrary.simpleMessage(
+      "中文",
+    ),
+    "windowLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
+      "Английский",
+    ),
+    "windowLanguageCenterEnglishNative": MessageLookupByLibrary.simpleMessage(
+      "English",
+    ),
+    "windowLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
+      "Русский",
+    ),
+    "windowLanguageCenterRussianNative": MessageLookupByLibrary.simpleMessage(
+      "Русский",
+    ),
+    "windowLanguageTop": MessageLookupByLibrary.simpleMessage(
+      "Язык приложения",
+    ),
+    "windowNetBottom": MessageLookupByLibrary.simpleMessage("Ок"),
+    "windowNetTop": MessageLookupByLibrary.simpleMessage("Параметры сети"),
     "windowWalletBottom": MessageLookupByLibrary.simpleMessage("Готово"),
     "windowWalletTop": MessageLookupByLibrary.simpleMessage("Кошелек"),
   };

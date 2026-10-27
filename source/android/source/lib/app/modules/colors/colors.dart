@@ -115,7 +115,6 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color windowMainText;
   final Color windowSeparator;
   final Color windowShadow;
-  final Color windowTop;
   final Color windowTopBack;
   final Color windowTopText;
 
@@ -181,7 +180,6 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.windowMainText,
     required this.windowSeparator,
     required this.windowShadow,
-    required this.windowTop,
     required this.windowTopBack,
     required this.windowTopText
   });
@@ -248,7 +246,6 @@ class AppColors extends ThemeExtension <AppColors> {
     windowMainText: AppPalette.cream,
     windowSeparator: AppPalette.grey_4,
     windowShadow: AppPalette.transparent_1_grey_1,
-    windowTop: AppPalette.grey_8,
     windowTopBack: AppPalette.grey_8,
     windowTopText: AppPalette.cream
   );
@@ -314,7 +311,6 @@ class AppColors extends ThemeExtension <AppColors> {
     windowMainText: AppPalette.black,
     windowSeparator: AppPalette.grey_13,
     windowShadow: AppPalette.transparent_1_grey_1,
-    windowTop: AppPalette.grey_8,
     windowTopBack: AppPalette.grey_14,
     windowTopText: AppPalette.black
   );
@@ -381,7 +377,6 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? windowMainText,
     Color? windowSeparator,
     Color? windowShadow,
-    Color? windowTop,
     Color? windowTopBack,
     Color? windowTopText
   }) {
@@ -449,7 +444,6 @@ class AppColors extends ThemeExtension <AppColors> {
         windowMainText: windowMainText ?? this.windowMainText,
         windowSeparator: windowSeparator ?? this.windowSeparator,
         windowShadow: windowShadow ?? this.windowShadow,
-        windowTop: windowTop ?? this.windowTop,
         windowTopBack: windowTopBack ?? this.windowTopBack,
         windowTopText: windowTopText ?? this.windowTopText
       )
@@ -530,7 +524,6 @@ class AppColors extends ThemeExtension <AppColors> {
         windowMainText: Color.lerp (windowMainText, other.windowMainText, t) ?? windowMainText,
         windowSeparator: Color.lerp (windowSeparator, other.windowSeparator, t) ?? windowSeparator,
         windowShadow: Color.lerp (windowShadow, other.windowShadow, t) ?? windowShadow,
-        windowTop: Color.lerp (windowTop, other.windowTop, t) ?? windowTop,
         windowTopBack: Color.lerp (windowTopBack, other.windowTopBack, t) ?? windowTopBack,
         windowTopText: Color.lerp (windowTopText, other.windowTopText, t) ?? windowTopText
       )

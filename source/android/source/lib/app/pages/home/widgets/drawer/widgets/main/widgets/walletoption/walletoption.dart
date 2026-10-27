@@ -1,7 +1,6 @@
 // Home page - Drawer - Main - Wallet option
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/draweroption/draweroption.dart';
@@ -9,7 +8,7 @@ import 'package:linette/app/windows/wallet/wallet.dart';
 
 
 
-class WalletOption extends HookWidget {
+class WalletOption extends StatelessWidget {
 
   const WalletOption ({
     super.key

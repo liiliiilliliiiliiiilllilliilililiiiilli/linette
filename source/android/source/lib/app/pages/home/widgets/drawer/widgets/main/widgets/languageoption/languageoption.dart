@@ -6,7 +6,7 @@ import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/draweroption/draweroption.dart';
-import 'package:linette/app/windows/changelanguage/changelanguage.dart';
+import 'package:linette/app/windows/language/language.dart';
 
 
 
@@ -23,10 +23,10 @@ class LanguageOption extends HookConsumerWidget {
 
 
     final String textCurrentLanguage = localeState == 'ru'
-      ? context.texts.windowAppLanguageCenterRussian
+      ? context.texts.windowLanguageCenterRussian
       : localeState == 'en'
-        ? context.texts.windowAppLanguageCenterEnglish
-        : context.texts.windowAppLanguageCenterChinese;
+        ? context.texts.windowLanguageCenterEnglish
+        : context.texts.windowLanguageCenterChinese;
 
 
     return (
@@ -35,7 +35,7 @@ class LanguageOption extends HookConsumerWidget {
         iconLeft: context.icons.language,
         text: context.texts.pageHomeDrawerCenterLanguage,
         textRight: textCurrentLanguage,
-        window: const ChangeLanguageWindow ()
+        window: const LanguageWindow ()
       )
 
     );

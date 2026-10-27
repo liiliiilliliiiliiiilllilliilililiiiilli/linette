@@ -10,19 +10,19 @@ import 'widgets/bottom/bottom.dart';
 
 class Window extends StatelessWidget {
 
+  final double width;
   final bool? isExpanded;
   final String title;
   final Widget body;
   final String action;
-  final double width;
 
 
   const Window ({
+    required this.width,
     this.isExpanded = false,
     required this.title,
     required this.body,
     required this.action,
-    required this.width,
     super.key
   });
 
@@ -62,20 +62,16 @@ class Window extends StatelessWidget {
                       TopComponent (
                         title: title
                       ),
-                      ... (isExpanded != null) ?
-                        [
-                          BodyComponent (
-                            isExpanded: isExpanded!,
-                            child: body
-                          )
-                        ]
+                      isExpanded != null ?
+                        BodyComponent (
+                          isExpanded: isExpanded!,
+                          child: body
+                        )
                       :
-                        [
-                          BodyComponent (
-                            isExpanded: false,
-                            child: body
-                          )
-                        ]
+                        BodyComponent (
+                          isExpanded: false,
+                          child: body
+                        )
                       ,
                       BottomComponent (
                         action: action

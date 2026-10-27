@@ -80,23 +80,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
     "windowAccountBottom": MessageLookupByLibrary.simpleMessage("完成"),
     "windowAccountTop": MessageLookupByLibrary.simpleMessage("帐户"),
-    "windowAppLanguageBottom": MessageLookupByLibrary.simpleMessage("完成"),
-    "windowAppLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
-      "中文",
-    ),
-    "windowAppLanguageCenterChineseNative":
-        MessageLookupByLibrary.simpleMessage("中文"),
-    "windowAppLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
-      "英语",
-    ),
-    "windowAppLanguageCenterEnglishNative":
-        MessageLookupByLibrary.simpleMessage("English"),
-    "windowAppLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
-      "俄语",
-    ),
-    "windowAppLanguageCenterRussianNative":
-        MessageLookupByLibrary.simpleMessage("Русский"),
-    "windowAppLanguageTop": MessageLookupByLibrary.simpleMessage("应用程序语言"),
     "windowArsenalBottom": MessageLookupByLibrary.simpleMessage("完成"),
     "windowArsenalTop": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
     "windowFeedbackBottom": MessageLookupByLibrary.simpleMessage("确定"),
@@ -109,15 +92,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
     "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("反馈"),
-    "windowNetBottom": MessageLookupByLibrary.simpleMessage("确定"),
-    "windowNetTop": MessageLookupByLibrary.simpleMessage("网络参数"),
-    "windowPurposeOfThisAppBottom": MessageLookupByLibrary.simpleMessage("确定"),
-    "windowPurposeOfThisAppCenter": MessageLookupByLibrary.simpleMessage(
+    "windowHintBottom": MessageLookupByLibrary.simpleMessage("确定"),
+    "windowHintCenter": MessageLookupByLibrary.simpleMessage(
       "如果您在访问远程资源时遇到问题，或者想在非安全网络中保护个人数据的隐私，一个可靠的VPN连接可能是解决方案之一。\n\nVPN（虚拟专用网络）是一种用于创建安全虚拟通信信道的网络间通信技术。加密的流量数据通过加密方法得到保护，因此攻击者在拦截后解密这些数据将需要数百万年甚至数亿年。\n\n除了VPN，还有许多其他方法可以在网上保护自己，例如网络代理或更改IP地址。几乎每种方法都共享VPN的工作原理，并且还有一系列单独的通信协议，针对特定场景（企业、个人解决方案或其他特定领域）进行了优化。\n\n尽管功能广泛，但这些技术基于简单的数学原理，实现起来并不复杂。如果您愿意，您可以部署自己的VPN服务器或设置私有代理——这是保持对您数据的控制和隐私的最佳方式。\n\nLinette 就像您自己可以成为的网络提供商一样，如果您仔细研究网络安全和编程基础。\n\n请记住：没有人能够物理上感知信息，但任何人都可以根据这些信息实现任何想法。",
     ),
-    "windowPurposeOfThisAppTop": MessageLookupByLibrary.simpleMessage(
-      "此应用程序的目的是什么？",
+    "windowHintTop": MessageLookupByLibrary.simpleMessage("此应用程序的目的是什么？"),
+    "windowLanguageBottom": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowLanguageCenterChinese": MessageLookupByLibrary.simpleMessage("中文"),
+    "windowLanguageCenterChineseNative": MessageLookupByLibrary.simpleMessage(
+      "中文",
     ),
+    "windowLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage("英语"),
+    "windowLanguageCenterEnglishNative": MessageLookupByLibrary.simpleMessage(
+      "English",
+    ),
+    "windowLanguageCenterRussian": MessageLookupByLibrary.simpleMessage("俄语"),
+    "windowLanguageCenterRussianNative": MessageLookupByLibrary.simpleMessage(
+      "Русский",
+    ),
+    "windowLanguageTop": MessageLookupByLibrary.simpleMessage("应用程序语言"),
+    "windowNetBottom": MessageLookupByLibrary.simpleMessage("确定"),
+    "windowNetTop": MessageLookupByLibrary.simpleMessage("网络参数"),
     "windowWalletBottom": MessageLookupByLibrary.simpleMessage("完成"),
     "windowWalletTop": MessageLookupByLibrary.simpleMessage("钱包"),
   };

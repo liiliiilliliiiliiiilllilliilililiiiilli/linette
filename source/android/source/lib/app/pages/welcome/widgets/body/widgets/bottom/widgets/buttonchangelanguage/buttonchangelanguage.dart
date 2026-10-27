@@ -1,16 +1,15 @@
 // Welcome page - Body - Bottom - Button change language
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/windows/changelanguage/changelanguage.dart';
+import 'package:linette/app/windows/language/language.dart';
 import 'package:linette/app/widgets/textbutton/textbutton.dart';
 
 
 
-class ButtonChangeLanguage extends HookWidget {
+class ButtonChangeLanguage extends StatelessWidget {
 
   const ButtonChangeLanguage ({
     super.key
@@ -30,7 +29,7 @@ class ButtonChangeLanguage extends HookWidget {
 
         return (
 
-          const ChangeLanguageWindow ()
+          const LanguageWindow ()
 
         );
 

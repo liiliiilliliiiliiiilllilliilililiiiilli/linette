@@ -184,34 +184,25 @@ class DrawerOption extends HookWidget {
                 Flexible (
                   child: Container ()
                 ),
-
-                ... [textRight == null
-
-                  ?
-
-                    SvgPicture.asset (
-                      context.icons.arrow,
-                      colorFilter: ColorFilter.mode (
-                        context.colors.drawerOptionIconRight,
-                        BlendMode.srcIn
-                      ),
-                      height: 14
+                textRight == null ?
+                  SvgPicture.asset (
+                    context.icons.arrow,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.drawerOptionIconRight,
+                      BlendMode.srcIn
+                    ),
+                    height: 14
                   )
-
-                  :
-
-                    Text (
-                      textRight!,
-                      style: TextStyle (
-                        fontFamily: context.fonts.archivo,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17.5,
-                        color: context.colors.drawerOptionTextValue
-                      )
+                :
+                  Text (
+                    textRight!,
+                    style: TextStyle (
+                      fontFamily: context.fonts.archivo,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 17.5,
+                      color: context.colors.drawerOptionTextValue
                     )
-
-                ]
-
+                  )
               ]
             )
           )

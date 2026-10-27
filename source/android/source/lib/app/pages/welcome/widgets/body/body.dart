@@ -1,14 +1,13 @@
 // Welcome page - Body
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'widgets/top/top.dart';
 import 'widgets/main/main.dart';
 import 'widgets/bottom/bottom.dart';
 
 
 
-class BodyComponent extends HookWidget {
+class BodyComponent extends StatelessWidget {
 
   const BodyComponent ({
     super.key

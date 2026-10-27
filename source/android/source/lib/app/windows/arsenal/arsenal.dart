@@ -70,70 +70,46 @@ class ArsenalWindow extends HookWidget {
     return (
 
       Window (
+        width: 340,
         title: context.texts.windowArsenalTop,
-        body: Stack (
-          children: [
-            SingleChildScrollView (
-              child: Padding (
-                padding: const EdgeInsets.only (
-                  top: 10
-                ),
-                child: Text.rich (
-                  TextSpan (
-                    style: const TextStyle (
-                      fontFamily: 'Fedoka',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16
-                    ),
-                    children: [
-                      TextSpan (
-                        text: context.texts.windowFeedbackCenter_1,
-                        style: TextStyle (
-                          color: context.colors.windowMainText
-                        )
-                      ),
-                      TextSpan (
-                        text: context.texts.windowFeedbackCenter_2,
-                        style: TextStyle (
-                          color: linkColor,
-                        ),
-                        recognizer: gestureRecognizer
-                      ),
-                      TextSpan (
-                        text: context.texts.windowFeedbackCenter_3,
-                        style: TextStyle (
-                          color: context.colors.windowMainText
-                        )
-                      )
-                    ]
-                  )
-                )
-              )
+        body: SingleChildScrollView (
+          child: Padding (
+            padding: const EdgeInsets.only (
+              top: 10
             ),
-            Positioned (
-              top: 0,
-              left: 0,
-              right: 0,
-              height: 15,
-              child: IgnorePointer (
-                child: Container (
-                  decoration: BoxDecoration (
-                    gradient: LinearGradient (
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        context.colors.windowMainBack,
-                        context.colors.windowMainBack.withAlpha (0)
-                      ]
+            child: Text.rich (
+              TextSpan (
+                style: const TextStyle (
+                  fontFamily: 'Fedoka',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16
+                ),
+                children: [
+                  TextSpan (
+                    text: context.texts.windowFeedbackCenter_1,
+                    style: TextStyle (
+                      color: context.colors.windowMainText
+                    )
+                  ),
+                  TextSpan (
+                    text: context.texts.windowFeedbackCenter_2,
+                    style: TextStyle (
+                      color: linkColor,
+                    ),
+                    recognizer: gestureRecognizer
+                  ),
+                  TextSpan (
+                    text: context.texts.windowFeedbackCenter_3,
+                    style: TextStyle (
+                      color: context.colors.windowMainText
                     )
                   )
-                )
+                ]
               )
             )
-          ]
+          )
         ),
-        action: context.texts.windowArsenalBottom,
-        width: 340
+        action: context.texts.windowArsenalBottom
       )
 
     );

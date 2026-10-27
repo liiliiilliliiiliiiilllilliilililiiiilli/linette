@@ -70,50 +70,46 @@ class FeedbackWindow extends HookWidget {
     return (
 
       Window (
+        width: 340,
         title: context.texts.windowFeedbackTop,
-        body: Stack (
-          children: [
-            SingleChildScrollView (
-              child: Padding (
-                padding: const EdgeInsets.only (
-                  top: 10
+        body: SingleChildScrollView (
+          child: Padding (
+            padding: const EdgeInsets.only (
+              top: 10
+            ),
+            child: Text.rich (
+              TextSpan (
+                style: const TextStyle (
+                  fontFamily: 'Fedoka',
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16
                 ),
-                child: Text.rich (
+                children: [
                   TextSpan (
-                    style: const TextStyle (
-                      fontFamily: 'Fedoka',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16
+                    text: context.texts.windowFeedbackCenter_1,
+                    style: TextStyle (
+                      color: context.colors.windowMainText
+                    )
+                  ),
+                  TextSpan (
+                    text: context.texts.windowFeedbackCenter_2,
+                    style: TextStyle (
+                      color: linkColor,
                     ),
-                    children: [
-                      TextSpan (
-                        text: context.texts.windowFeedbackCenter_1,
-                        style: TextStyle (
-                          color: context.colors.windowMainText
-                        )
-                      ),
-                      TextSpan (
-                        text: context.texts.windowFeedbackCenter_2,
-                        style: TextStyle (
-                          color: linkColor,
-                        ),
-                        recognizer: gestureRecognizer
-                      ),
-                      TextSpan (
-                        text: context.texts.windowFeedbackCenter_3,
-                        style: TextStyle (
-                          color: context.colors.windowMainText
-                        )
-                      )
-                    ]
+                    recognizer: gestureRecognizer
+                  ),
+                  TextSpan (
+                    text: context.texts.windowFeedbackCenter_3,
+                    style: TextStyle (
+                      color: context.colors.windowMainText
+                    )
                   )
-                )
+                ]
               )
             )
-          ]
+          )
         ),
-        action: context.texts.windowFeedbackBottom,
-        width: 340
+        action: context.texts.windowFeedbackBottom
       )
 
     );
