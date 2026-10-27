@@ -1,4 +1,4 @@
-// Global widgets - Window - Top
+// Window global widget - Top
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

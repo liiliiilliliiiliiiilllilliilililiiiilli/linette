@@ -1,4 +1,4 @@
-// Global widgets - Button
+// Button global widget
 
 import 'dart:async';
 import 'package:flutter/material.dart';
