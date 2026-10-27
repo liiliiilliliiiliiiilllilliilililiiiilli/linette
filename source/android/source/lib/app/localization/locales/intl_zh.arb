@@ -23,7 +23,7 @@
 	"pageHomeDrawerCenterLanguage": "语言",
 	"pageHomeDrawerCenterFeedback": "反馈",
 	"pageHomeDrawerCenterArsenal": "兵工厂",
-	"pageHomeDrawerCenterNetParameters": "网络参数",
+	"pageHomeDrawerCenterNet": "网络参数",
 	"pageHomeDrawerCenterAccout": "帐户",
 	"pageHomeDrawerCenterWallet": "钱包",
 	"pageHomeDrawerBottom": "启动应用程序时连接VPN",
@@ -65,8 +65,8 @@
 	"windowArsenalTop": "应用程序的武器库",
 	"windowArsenalBottom": "完成",
 
-	"windowNetParametersTop": "网络参数",
-	"windowNetParametersBottom": "确定",
+	"windowNetTop": "网络参数",
+	"windowNetBottom": "确定",
 
 	"windowAccountTop": "帐户",
 	"windowAccountBottom": "完成",

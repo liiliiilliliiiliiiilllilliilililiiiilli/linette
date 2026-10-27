@@ -1,4 +1,4 @@
-// Net parameters window
+// Net window
 
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
@@ -10,9 +10,9 @@ import 'package:linette/app/widgets/window/window.dart';
 
 
 
-class NetParametersWindow extends HookWidget {
+class NetWindow extends HookWidget {
 
-  const NetParametersWindow ({
+  const NetWindow ({
     super.key
   });
 
@@ -70,7 +70,7 @@ class NetParametersWindow extends HookWidget {
     return (
 
       Window (
-        title: context.texts.windowNetParametersTop,
+        title: context.texts.windowNetTop,
         body: Stack (
           children: [
             SingleChildScrollView (
@@ -132,7 +132,7 @@ class NetParametersWindow extends HookWidget {
             )
           ]
         ),
-        action: context.texts.windowNetParametersBottom,
+        action: context.texts.windowNetBottom,
         width: 340
       )
 

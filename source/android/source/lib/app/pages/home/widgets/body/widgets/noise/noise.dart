@@ -64,7 +64,7 @@ class Noise extends HookWidget {
         color: backgroundColor,
         child: Stack (
           children: [
-            RepaintBoundary (  // Шум Перлина
+            RepaintBoundary (  // Шум перлина
               child: ImageFiltered (
                 imageFilter: ImageFilter.blur (
                   sigmaX: blurSigma,

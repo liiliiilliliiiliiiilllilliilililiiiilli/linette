@@ -251,10 +251,10 @@ class T {
   }
 
   /// `Network parameters`
-  String get pageHomeDrawerCenterNetParameters {
+  String get pageHomeDrawerCenterNet {
     return Intl.message(
       'Network parameters',
-      name: 'pageHomeDrawerCenterNetParameters',
+      name: 'pageHomeDrawerCenterNet',
       desc: '',
       args: [],
     );
@@ -536,23 +536,18 @@ class T {
   }
 
   /// `Network parameters`
-  String get windowNetParametersTop {
+  String get windowNetTop {
     return Intl.message(
       'Network parameters',
-      name: 'windowNetParametersTop',
+      name: 'windowNetTop',
       desc: '',
       args: [],
     );
   }
 
   /// `Ok`
-  String get windowNetParametersBottom {
-    return Intl.message(
-      'Ok',
-      name: 'windowNetParametersBottom',
-      desc: '',
-      args: [],
-    );
+  String get windowNetBottom {
+    return Intl.message('Ok', name: 'windowNetBottom', desc: '', args: []);
   }
 
   /// `Account`

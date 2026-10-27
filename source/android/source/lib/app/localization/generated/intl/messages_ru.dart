@@ -77,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pageHomeDrawerCenterLanguage": MessageLookupByLibrary.simpleMessage(
       "Язык",
     ),
-    "pageHomeDrawerCenterNetParameters": MessageLookupByLibrary.simpleMessage(
+    "pageHomeDrawerCenterNet": MessageLookupByLibrary.simpleMessage(
       "Параметры сети",
     ),
     "pageHomeDrawerCenterWallet": MessageLookupByLibrary.simpleMessage(
@@ -135,10 +135,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
     "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("Обратная связь"),
-    "windowNetParametersBottom": MessageLookupByLibrary.simpleMessage("Ок"),
-    "windowNetParametersTop": MessageLookupByLibrary.simpleMessage(
-      "Параметры сети",
-    ),
+    "windowNetBottom": MessageLookupByLibrary.simpleMessage("Ок"),
+    "windowNetTop": MessageLookupByLibrary.simpleMessage("Параметры сети"),
     "windowPurposeOfThisAppBottom": MessageLookupByLibrary.simpleMessage("Ок"),
     "windowPurposeOfThisAppCenter": MessageLookupByLibrary.simpleMessage(
       "Если вы сталкиваетесь с проблемами доступа к удаленным ресурсам или хотите сохранить конфиденциальность личных данных в небезопасной сети, одним из решений может стать надежное VPN соединение.\n\nVPN (Virtual Private Network) - технология межсетевой коммуникации для создания безопасных виртуальных каналов связи. Шифруемые данные трафика защищены криптографическими методами так, что злоумышленнику при перехвате на их дешифровку потребуются миллионы и миллионы лет.\n\nПомимо VPN сущетсвует множество иных способов обезопасить себя в сети, например сетевые прокси или изменение IP адреса. Почти каждый из них разделяет принципы работы VPN, а также имеет ряд отдельных протоколов связи, разработанных для лучшей работы в определенных сценариях (корпоративные, персональные решения или иные специфические области).\n\nНесмотря на свои широкие возможности, такие технологии основаны на простых математических принципах и несложны в реализации. При желании, вы можете развернуть свой собственный VPN сервер или настроить приватный прокси - это лучший способ сохранить контроль и приватность Ваших данных.\n\nLinette - такой же сетевой провайдер, каким вы можете стать для самих себя, если внимательно изучите кибербезопасность и основы программирования.\n\nПомните: никто не может ощутить информацию физически, но кто угодно может воплотить любую идею, основанную на этой информации.",

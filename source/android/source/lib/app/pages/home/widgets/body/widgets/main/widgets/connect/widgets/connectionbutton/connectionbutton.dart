@@ -70,51 +70,73 @@ class ConnectionButton extends HookWidget {
     return (
 
       Center (
-        child: GestureDetector (
-          onTap: handleTap,
-          onPanDown: onPanDown,
-          onTapUp: onTapUp,
-          onPanCancel: onPanCancel,
-          onTapCancel: onTapCancel,
-          onLongPressCancel: onLongPressCancel,
-          behavior: HitTestBehavior.opaque,
-          child: AnimatorPresser (
-            isPressed: isPressed,
-            child: Opacity (
-              opacity: 0.9,
-              child: AnimatedContainer (
-                duration: const Duration (
-                  milliseconds: 80
-                ),
-                width: 225,
-                height: 225,
-                padding: const EdgeInsets.all (32),
-                decoration: BoxDecoration (
-                  border: Border.all (
-                    width: 4,
-                    color: context.colors.buttonConnectBorder
-                  ),
-                  borderRadius: BorderRadius.circular (1000),
-                  boxShadow: [
-                    BoxShadow (
-                      color: context.colors.buttonConnectShadow,
-                      offset: offset,
-                      blurRadius: blurRadius,
-                      spreadRadius: spreadRadius
+        child: AnimatorPresser (
+          isPressed: isPressed,
+          child: Opacity (
+            opacity: 0.9,
+            child: SizedBox (
+              width: 225,
+              height: 225,
+              child: Stack (
+                clipBehavior: Clip.none,
+                children: [
+                  AnimatedContainer (
+                    duration: const Duration (
+                      milliseconds: 80
+                    ),
+                    decoration: BoxDecoration (
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow (
+                          color: context.colors.buttonConnectShadow,
+                          offset: offset,
+                          blurRadius: blurRadius,
+                          spreadRadius: spreadRadius
+                        )
+                      ]
                     )
-                  ],
-                  color: context.colors.prime
-                ),
-                child: Container (
-                  padding: const EdgeInsets.all (1.75),
-                  child: SvgPicture.asset (
-                    context.icons.olive,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.buttonConnectIcon,
-                      BlendMode.srcIn
+                  ),
+                  AnimatedContainer (
+                    duration: const Duration (
+                      milliseconds: 80
+                    ),
+                    decoration: const BoxDecoration (
+                      shape: BoxShape.circle
+                    ),
+                    child: ClipOval (
+                      child: GestureDetector (
+                        onTap: handleTap,
+                        onPanDown: onPanDown,
+                        onTapUp: onTapUp,
+                        onPanCancel: onPanCancel,
+                        onTapCancel: onTapCancel,
+                        onLongPressCancel: onLongPressCancel,
+                        behavior: HitTestBehavior.opaque,
+                        child: Container (
+                          padding: const EdgeInsets.all (32),
+                          decoration: BoxDecoration (
+                            border: Border.all (
+                              width: 4,
+                              color: context.colors.buttonConnectBorder
+                            ),
+                            shape: BoxShape.circle,
+                            color: context.colors.prime
+                          ),
+                          child: Container (
+                            padding: const EdgeInsets.all (1.75),
+                            child: SvgPicture.asset (
+                              context.icons.olive,
+                              colorFilter: ColorFilter.mode (
+                                context.colors.buttonConnectIcon,
+                                BlendMode.srcIn
+                              )
+                            )
+                          )
+                        )
+                      )
                     )
                   )
-                )
+                ]
               )
             )
           )

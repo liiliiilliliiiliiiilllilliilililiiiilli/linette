@@ -23,7 +23,7 @@
 	"pageHomeDrawerCenterLanguage": "Language",
 	"pageHomeDrawerCenterFeedback": "Feedback",
 	"pageHomeDrawerCenterArsenal": "Arsenal",
-	"pageHomeDrawerCenterNetParameters": "Network parameters",
+	"pageHomeDrawerCenterNet": "Network parameters",
 	"pageHomeDrawerCenterAccout": "Account",
 	"pageHomeDrawerCenterWallet": "Wallet",
 	"pageHomeDrawerBottom": "Connect to VPN on app launch",
@@ -65,8 +65,8 @@
 	"windowArsenalTop": "App's arsenal",
 	"windowArsenalBottom": "Done",
 
-	"windowNetParametersTop": "Network parameters",
-	"windowNetParametersBottom": "Ok",
+	"windowNetTop": "Network parameters",
+	"windowNetBottom": "Ok",
 
 	"windowAccountTop": "Account",
 	"windowAccountBottom": "Done",

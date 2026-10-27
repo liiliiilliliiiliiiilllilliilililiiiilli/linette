@@ -23,7 +23,7 @@
 	"pageHomeDrawerCenterLanguage": "Язык",
 	"pageHomeDrawerCenterFeedback": "Обратная связь",
 	"pageHomeDrawerCenterArsenal": "Арсенал",
-	"pageHomeDrawerCenterNetParameters": "Параметры сети",
+	"pageHomeDrawerCenterNet": "Параметры сети",
 	"pageHomeDrawerCenterAccout": "Аккаунт",
 	"pageHomeDrawerCenterWallet": "Кошелек",
 	"pageHomeDrawerBottom": "Подключение к VPN при запуске приложения",
@@ -65,8 +65,8 @@
 	"windowArsenalTop": "Арсенал приложения",
 	"windowArsenalBottom": "Готово",
 
-	"windowNetParametersTop": "Параметры сети",
-	"windowNetParametersBottom": "Ок",
+	"windowNetTop": "Параметры сети",
+	"windowNetBottom": "Ок",
 
 	"windowAccountTop": "Аккаунт",
 	"windowAccountBottom": "Готово",
