@@ -39,16 +39,16 @@ class DrawerOption extends HookWidget {
 
       await Future.delayed (const Duration (milliseconds: 150));
 
-      if (!context.mounted) return;
+      if (!context.mounted) {
+
+        return;
+
+      }
 
 
       Widget pageBuilder (context, animation, secondaryAnimation) {
 
-        return (
-
-          window
-
-        );
+        return window;
 
       }
 

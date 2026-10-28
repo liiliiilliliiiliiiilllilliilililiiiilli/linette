@@ -22,7 +22,7 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
     initState ();
 
 
-    return (defaultTheme);
+    return defaultTheme;
 
   }
 
@@ -75,7 +75,7 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
 
   static AppThemeOption getSystemTheme () {
 
-    final AppThemeOption  systemTheme = PlatformDispatcher.instance.platformBrightness == Brightness.dark
+    final AppThemeOption systemTheme = PlatformDispatcher.instance.platformBrightness == Brightness.dark
       ? AppThemeOption.darkGreen
       : AppThemeOption.lightGreen;
 

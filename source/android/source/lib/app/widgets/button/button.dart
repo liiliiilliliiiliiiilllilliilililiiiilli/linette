@@ -68,7 +68,7 @@ class ButtonComponent extends HookWidget {
 
       initialTimer = Timer (const Duration (milliseconds: 2500), () {
 
-        controller.forward ().then ((_) => controller.reverse ());
+        controller.forward().then((_) => controller.reverse ());
 
         periodicTimer = Timer.periodic (const Duration (milliseconds: 5000), (t) async {
 

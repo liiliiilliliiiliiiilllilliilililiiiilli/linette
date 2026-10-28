@@ -132,11 +132,11 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
     if (other is! AppAssets) {
 
-      return (this);
+      return this;
 
     }
 
-    return (t < 0.5 ? this : other);
+    return t < 0.5 ? this : other;
 
   }
 
@@ -148,7 +148,7 @@ extension AppAssetsExtension on BuildContext {
 
   AppAssets get icons {
 
-    return (Theme.of(this).extension<AppAssets>()!);
+    return Theme.of(this).extension<AppAssets>()!;
 
   }
 

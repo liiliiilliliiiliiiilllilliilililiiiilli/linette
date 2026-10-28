@@ -457,7 +457,7 @@ class AppColors extends ThemeExtension <AppColors> {
 
     if (other is! AppColors) {
 
-      return (this);
+      return this;
 
     }
 
@@ -549,7 +549,7 @@ extension AppColorsExtension on BuildContext {
 
   AppColors get colors {
 
-    return (Theme.of(this).extension<AppColors>()!);
+    return Theme.of(this).extension<AppColors>()!;
 
   }
 

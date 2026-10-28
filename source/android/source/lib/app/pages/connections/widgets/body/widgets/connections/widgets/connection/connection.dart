@@ -7,7 +7,7 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 import 'widgets/country/country.dart';
 import 'widgets/choicestatus/choicestatus.dart';
 import 'widgets/availabilitystatus/availabilitystatus.dart';
-import 'model/model.dart';
+import 'models/connection/connection.dart';
 
 
 

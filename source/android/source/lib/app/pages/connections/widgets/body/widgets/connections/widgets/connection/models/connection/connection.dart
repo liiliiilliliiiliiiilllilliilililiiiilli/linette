@@ -1,4 +1,4 @@
-// Connections page - Body - Connections list - Connection - Model
+// Connections page - Body - Connections list - Connection - Connection model
 
 class ConnectionModel {
 

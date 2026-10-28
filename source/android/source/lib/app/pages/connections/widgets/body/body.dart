@@ -7,7 +7,7 @@ import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'widgets/liner/liner.dart';
 import 'widgets/connections/connections.dart';
-import 'widgets/connections/widgets/connection/model/model.dart';
+import 'widgets/connections/widgets/connection/models/connection/connection.dart';
 
 
 
@@ -44,7 +44,11 @@ class BodyComponent extends HookWidget {
 
       if (details.delta.dx > 10) {
 
-        if (startX.value < safeZone) return;
+        if (startX.value < safeZone) {
+
+          return;
+
+        }
 
         Navigator.pop (context);
 

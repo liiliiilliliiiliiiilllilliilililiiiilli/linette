@@ -162,7 +162,11 @@ class _NoisePainter extends CustomPainter {
 
   @override void paint (Canvas canvas, Size size) {
 
-    if (size.isEmpty) return;
+    if (size.isEmpty) {
+
+      return;
+
+    }
 
     final time = timeNotifier.value * speed;
     final cellWidth = size.width / resolution;

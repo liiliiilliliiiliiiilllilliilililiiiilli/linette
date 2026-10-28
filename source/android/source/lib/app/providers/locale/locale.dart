@@ -22,7 +22,7 @@ class LocaleNotifier extends Notifier <String> {
     initState ();
 
 
-    return (defaultLocale);
+    return defaultLocale;
 
   }
 
@@ -38,14 +38,14 @@ class LocaleNotifier extends Notifier <String> {
 
       if (isSupported) {
 
-        return (systemLocale.languageCode);
+        return systemLocale.languageCode;
 
       }
 
     }
 
 
-    return ('en');
+    return 'en';
 
   }
 

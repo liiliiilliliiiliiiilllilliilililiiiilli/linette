@@ -5,7 +5,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
+import 'package:linette/app/widgets/appbarbutton/models/shape/shape.dart';
 
 
 
@@ -18,90 +19,23 @@ class LeftButton extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final ValueNotifier <bool> isPressed = useState (false);
-
-
     void handleTap () {
 
-      Scaffold.of(context).openDrawer ();
+      Scaffold.of(context).openDrawer();
 
     }
-
-    void onPanDown (details) {
-
-      isPressed.value = true;
-
-    }
-
-    void onTapUp (details) {
-
-      isPressed.value = false;
-
-    }
-
-    void onPanCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onLongPressCancel () {
-
-      isPressed.value = false;
-
-    }
-
-
-    final double translationYValue = isPressed.value
-      ? 1
-      : 0;
 
 
     return (
 
-      GestureDetector (
-        onTap: handleTap,
-        onPanDown: onPanDown,
-        onTapUp: onTapUp,
-        onPanCancel: onPanCancel,
-        onTapCancel: onTapCancel,
-        onLongPressCancel: onLongPressCancel,
-        behavior: HitTestBehavior.opaque,
-        child: AnimatorPresser (
-          isPressed: isPressed,
-          child: AnimatedContainer (
-            duration: const Duration (
-              milliseconds: 80
-            ),
-            transform: Matrix4.translationValues (0, translationYValue, 0),
-            child: Center (
-              child: Container (
-                width: 38,
-                height: 38,
-                padding: const EdgeInsets.all (7.5),
-                decoration: BoxDecoration (
-                  color: context.colors.appBarButtonBack,
-                  border: Border.all (
-                    width: 3,
-                    color: context.colors.appBarButtonBorder
-                  ),
-                  borderRadius: const BorderRadius.all (Radius.circular (10))
-                ),
-                child: SvgPicture.asset (
-                  context.icons.menu,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.appBarButtonIcon,
-                    BlendMode.srcIn
-                  )
-                )
-              )
-            )
+      AppBarButton (
+        onPress: handleTap,
+        shape: ShapeModel.square,
+        icon: SvgPicture.asset (
+          context.icons.menu,
+          colorFilter: ColorFilter.mode (
+            context.colors.appBarButtonIcon,
+            BlendMode.srcIn
           )
         )
       )

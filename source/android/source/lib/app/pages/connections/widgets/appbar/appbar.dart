@@ -44,7 +44,11 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget  {
 
       if (details.delta.dx > 10) {
 
-        if (startX.value < safeZone) return;
+        if (startX.value < safeZone) {
+
+          return;
+
+        }
 
         Navigator.pop (context);
 

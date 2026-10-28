@@ -47,15 +47,23 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
 
       if (details.delta.dx > 10) {
 
-        if (startX.value < safeZone) return;
+        if (startX.value < safeZone) {
 
-        Scaffold.of(context).openDrawer ();
+          return;
+
+        }
+
+        Scaffold.of(context).openDrawer();
 
       }
 
       else if (details.delta.dx < -10) {
 
-        if (startX.value > (screenWidth - safeZone)) return;
+        if (startX.value > (screenWidth - safeZone)) {
+
+          return;
+
+        }
 
         Navigator.pushNamed (context, '/connections');
 

@@ -28,7 +28,7 @@ class WelcomeNotifier extends Notifier <bool?> {
     final bool status = preferences.getBool ('already_welcomed') ?? false;
 
 
-    return (status);
+    return status;
 
   }
 

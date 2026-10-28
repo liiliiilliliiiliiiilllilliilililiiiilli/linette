@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'widgets/connection/connection.dart';
-import 'widgets/connection/model/model.dart';
+import 'widgets/connection/models/connection/connection.dart';
 
 
 
