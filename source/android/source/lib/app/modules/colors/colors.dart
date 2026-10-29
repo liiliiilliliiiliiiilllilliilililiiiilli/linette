@@ -23,6 +23,7 @@ class AppPalette {
   static const Color transparent_2_grey_3 = Color (0x80070707);
   static const Color transparent_2_grey_4 = Color (0x80ffffff);
   static const Color transparent_3_grey_1 = Color (0x94000000);
+  static const Color transparent_4_grey_1 = Color (0xc4808080);
   static const Color transparent_4_green_1 = Color (0x808b9e80);
   static const Color grey_1 = Color (0xff010101);
   static const Color grey_2 = Color (0xff070707);
@@ -108,6 +109,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color textChoiceStatus;
   final Color textCountryName;
   final Color title;
+  final Color titleShadow;
   final Color transparent;
   final Color windowBarrier;
   final Color windowBottomText;
@@ -173,6 +175,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.textChoiceStatus,
     required this.textCountryName,
     required this.title,
+    required this.titleShadow,
     required this.transparent,
     required this.windowBarrier,
     required this.windowBottomText,
@@ -239,6 +242,7 @@ class AppColors extends ThemeExtension <AppColors> {
     textChoiceStatus: AppPalette.grey_12,
     textCountryName: AppPalette.cream,
     title: AppPalette.cream,
+    titleShadow: AppPalette.transparent_4_grey_1,
     transparent: AppPalette.transparent,
     windowBarrier: AppPalette.transparent_2_grey_1,
     windowBottomText: AppPalette.green_6,
@@ -304,6 +308,7 @@ class AppColors extends ThemeExtension <AppColors> {
     textChoiceStatus: AppPalette.grey_12,
     textCountryName: AppPalette.black,
     title: AppPalette.black,
+    titleShadow: AppPalette.transparent_4_grey_1,
     transparent: AppPalette.transparent,
     windowBarrier: AppPalette.transparent_2_grey_1,
     windowBottomText: AppPalette.black,
@@ -370,6 +375,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? textChoiceStatus,
     Color? textCountryName,
     Color? title,
+    Color? titleShadow,
     Color? transparent,
     Color? windowBarrier,
     Color? windowBottomText,
@@ -437,6 +443,7 @@ class AppColors extends ThemeExtension <AppColors> {
         textChoiceStatus: textChoiceStatus ?? this.textChoiceStatus,
         textCountryName: textCountryName ?? this.textCountryName,
         title: title ?? this.title,
+        titleShadow: titleShadow ?? this.titleShadow,
         transparent: transparent ?? this.transparent,
         windowBarrier: windowBarrier ?? this.windowBarrier,
         windowBottomText: windowBottomText ?? this.windowBottomText,
@@ -517,6 +524,7 @@ class AppColors extends ThemeExtension <AppColors> {
         textChoiceStatus: Color.lerp (textChoiceStatus, other.textChoiceStatus, t) ?? textChoiceStatus,
         textCountryName: Color.lerp (textCountryName, other.textCountryName, t) ?? textCountryName,
         title: Color.lerp (title, other.title, t) ?? title,
+        titleShadow: Color.lerp (titleShadow, other.titleShadow, t) ?? titleShadow,
         transparent: Color.lerp (transparent, other.transparent, t) ?? transparent,
         windowBarrier: Color.lerp (windowBarrier, other.windowBarrier, t) ?? windowBarrier,
         windowBottomText: Color.lerp (windowBottomText, other.windowBottomText, t) ?? windowBottomText,
