@@ -9,9 +9,10 @@ import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/localization/generated/l10n.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
-import 'pages/welcome/welcome.dart';
-import 'pages/home/home.dart';
-import 'pages/connections/connections.dart';
+import 'package:linette/app/pages/welcome/welcome.dart';
+import 'package:linette/app/pages/home/home.dart';
+import 'package:linette/app/pages/connections/connections.dart';
+import 'package:linette/app/widgets/multitouchblocker/multitouchblocker.dart';
 
 
 
@@ -82,6 +83,21 @@ class App extends ConsumerWidget {
     }
 
 
+    Widget builder (BuildContext context, Widget? child) {
+
+      return (
+
+        MultitouchBlocker (
+
+          child: child ?? const SizedBox ()
+
+        )
+
+      );
+
+    }
+
+
     return (
 
       MaterialApp (
@@ -114,7 +130,8 @@ class App extends ConsumerWidget {
           '/home': (context) => const HomePage (),
           '/connections': (context) => const ConnectionsPage ()
         },
-        home: startScreen
+        home: startScreen,
+        builder: builder
       )
 
     );

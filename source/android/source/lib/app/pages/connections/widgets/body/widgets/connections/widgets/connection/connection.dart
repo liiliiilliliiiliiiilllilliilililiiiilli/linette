@@ -29,17 +29,17 @@ class Connection extends HookWidget {
 
     void handleTap () {
 
-        model.onTap ();
+      model.onTap ();
 
     }
 
-    void onPanDown (details) {
+    void onPanDown (DragDownDetails details) {
 
       isPressed.value = true;
 
     }
 
-    void onTapUp (details) {
+    void onTapUp (TapUpDetails details) {
 
       isPressed.value = false;
 

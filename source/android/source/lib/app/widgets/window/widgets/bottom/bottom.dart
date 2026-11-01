@@ -2,12 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
 
-class BottomComponent extends HookWidget {
+class BottomComponent extends HookConsumerWidget {
 
   final String action;
 
@@ -18,24 +20,29 @@ class BottomComponent extends HookWidget {
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
+
 
     final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () {
 
+      actionsFreezeNotifier.freeze ();
+
       Navigator.pop (context);
 
     }
 
-    void onPanDown (details) {
+    void onPanDown (DragDownDetails details) {
 
       isPressed.value = true;
 
     }
 
-    void onTapUp (details) {
+    void onTapUp (TapUpDetails details) {
 
       isPressed.value = false;
 

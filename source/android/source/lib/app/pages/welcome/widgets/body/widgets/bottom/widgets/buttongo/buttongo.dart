@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/welcome/welcome.dart';
+import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
@@ -11,7 +12,7 @@ import 'package:linette/app/widgets/button/button.dart';
 
 
 
-class ButtonGo extends HookConsumerWidget {
+class ButtonGo extends ConsumerWidget {
 
   const ButtonGo ({
     super.key
@@ -20,11 +21,17 @@ class ButtonGo extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
+    final WelcomeNotifier welcomeNotifier = ref.watch (welcomeProvider.notifier);
+
+    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
+
+
     void onTap () async {
 
-      final welcomeNotifier = ref.read (welcomeProvider.notifier);
-
       await welcomeNotifier.completeWelcome ();
+
+
+      actionsFreezeNotifier.freeze ();
 
 
       if (context.mounted) {

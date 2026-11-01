@@ -25,14 +25,14 @@ class BodyComponent extends HookWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
 
 
-    void onHorizontalDragStart (details) {
+    void onHorizontalDragStart (DragStartDetails details) {
 
       startX.value = details.globalPosition.dx;
 
     }
 
 
-    void onHorizontalDragUpdate (details) {
+    void onHorizontalDragUpdate (DragUpdateDetails details) {
 
       if (details.delta.dx > 10) {
 
@@ -42,17 +42,30 @@ class BodyComponent extends HookWidget {
 
         }
 
+
         Scaffold.of(context).openDrawer();
 
       }
 
       else if (details.delta.dx < -10) {
 
+        // Если текущий экран не активен (если поверх него уже что-нибудь есть), то игнорируем нажатие:
+
+        final isCurrentRoute = ModalRoute.of(context)?.isCurrent ?? true;
+
+        if (!isCurrentRoute || Scaffold.of(context).isDrawerOpen) {
+
+          return;
+
+        }
+
+
         if (startX.value > (screenWidth - safeZone)) {
 
           return;
 
         }
+
 
         Navigator.pushNamed (context, '/connections');
 

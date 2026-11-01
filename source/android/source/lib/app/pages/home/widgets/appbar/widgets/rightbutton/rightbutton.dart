@@ -20,8 +20,8 @@ class RightButton extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final AppThemeOption themeState = ref.read (themeProvider);
-    final ThemeNotifier themeNotifier = ref.read (themeProvider.notifier);
+    final AppThemeOption themeState = ref.watch (themeProvider);
+    final ThemeNotifier themeNotifier = ref.watch (themeProvider.notifier);
 
 
     void handleTap () {

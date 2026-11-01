@@ -90,13 +90,13 @@ class ButtonComponent extends HookWidget {
     }, const []);
 
 
-    void onPanDown (details) {
+    void onPanDown (DragDownDetails details) {
 
       isPressed.value = true;
 
     }
 
-    void onTapUp (details) {
+    void onTapUp (TapUpDetails details) {
 
       isPressed.value = false;
 

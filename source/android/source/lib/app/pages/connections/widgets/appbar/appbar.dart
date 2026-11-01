@@ -33,14 +33,14 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget  {
     final ValueNotifier <double> startX = useState (0.0);
 
 
-    void onHorizontalDragStart (details) {
+    void onHorizontalDragStart (DragStartDetails details) {
 
       startX.value = details.globalPosition.dx;
 
     }
 
 
-    void onHorizontalDragUpdate (details) {
+    void onHorizontalDragUpdate (DragUpdateDetails details) {
 
       if (details.delta.dx > 10) {
 

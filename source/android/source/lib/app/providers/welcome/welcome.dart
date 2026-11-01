@@ -21,11 +21,11 @@ class WelcomeNotifier extends Notifier <bool?> {
   }
 
 
-  static Future <bool> getSavedWelcomeStatus () async {
+  static Future <bool> getWelcomeStatus () async {
 
     final SharedPreferences preferences = await SharedPreferences.getInstance ();
 
-    final bool status = preferences.getBool ('already_welcomed') ?? false;
+    final bool status = preferences.getBool ('welcomed') ?? false;
 
 
     return status;
@@ -37,14 +37,14 @@ class WelcomeNotifier extends Notifier <bool?> {
 
     final SharedPreferences preferences = await SharedPreferences.getInstance ();
 
-    await preferences.setBool ('already_welcomed', status);
+    await preferences.setBool ('welcomed', status);
 
   }
 
 
   Future <void> initState () async {
 
-    final bool status = await getSavedWelcomeStatus ();
+    final bool status = await getWelcomeStatus ();
 
     state = status;
 

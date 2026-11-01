@@ -41,13 +41,13 @@ class TextButtonComponent extends HookWidget {
     final iconRightHeight = iconRightSize ?? 20;
 
 
-    void onPanDown (details) {
+    void onPanDown (DragDownDetails details) {
 
       isPressed.value = true;
 
     }
 
-    void onTapUp (details) {
+    void onTapUp (TapUpDetails details) {
 
       isPressed.value = false;
 

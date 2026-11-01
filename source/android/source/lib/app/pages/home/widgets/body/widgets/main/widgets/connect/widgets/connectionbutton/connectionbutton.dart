@@ -21,15 +21,19 @@ class ConnectionButton extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap () {}
+    void handleTap () {
 
-    void onPanDown (details) {
+      return;
+
+    }
+
+    void onPanDown (DragDownDetails details) {
 
       isPressed.value = true;
 
     }
 
-    void onTapUp (details) {
+    void onTapUp (TapUpDetails details) {
 
       isPressed.value = false;
 
@@ -125,6 +129,8 @@ class ConnectionButton extends HookWidget {
                           child: Container (
                             padding: const EdgeInsets.all (1.75),
                             child: SvgPicture.asset (
+                              width: 256,
+                              height: 256,
                               context.icons.olive,
                               colorFilter: ColorFilter.mode (
                                 context.colors.buttonConnectIcon,

@@ -16,7 +16,7 @@ class DrawerComponent extends Drawer {
 
   @override build (BuildContext context) {
 
-    void onPopInvokedWithResult (didPop, result) {
+    void onPopInvokedWithResult (bool didPop, Object? result) {
 
       if (didPop) {
 

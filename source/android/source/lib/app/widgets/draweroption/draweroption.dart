@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
@@ -10,7 +12,7 @@ import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
 
-class DrawerOption extends HookWidget {
+class DrawerOption extends HookConsumerWidget {
 
   final String iconLeft;
   final String text;
@@ -27,17 +29,24 @@ class DrawerOption extends HookWidget {
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
+
 
     final ValueNotifier <bool> isPressed = useState (false);
 
 
     void handleTap () async {
 
+      actionsFreezeNotifier.freeze ();
+
+
       Navigator.pop (context);
 
 
       await Future.delayed (const Duration (milliseconds: 150));
+
 
       if (!context.mounted) {
 
@@ -52,7 +61,6 @@ class DrawerOption extends HookWidget {
 
       }
 
-
       Widget transitionBuilder (context, animation, secondaryAnimation, child) {
 
         final CurvedAnimation fadeAnimation = CurvedAnimation (
@@ -60,6 +68,7 @@ class DrawerOption extends HookWidget {
           curve: Curves.easeOut,
           reverseCurve: Curves.easeIn
         );
+
 
         if (animation.status == AnimationStatus.reverse) {
 
@@ -74,12 +83,14 @@ class DrawerOption extends HookWidget {
 
         }
 
+
         final Animation <double> scaleAnimation = Tween(begin: 0.975, end: 1.0).animate(
           CurvedAnimation (
             parent: animation,
             curve: Curves.easeOut
           )
         );
+
 
         return (
 
@@ -96,7 +107,7 @@ class DrawerOption extends HookWidget {
       }
 
 
-      showGeneralDialog (
+      await showGeneralDialog (
         context: context,
         barrierDismissible: true,
         barrierLabel: 'Dismiss',
@@ -108,15 +119,25 @@ class DrawerOption extends HookWidget {
         transitionBuilder: transitionBuilder
       );
 
+
+      if (!context.mounted) {
+
+        return;
+
+      }
+
+
+      actionsFreezeNotifier.freeze ();
+
     }
 
-    void onPanDown (details) {
+    void onPanDown (DragDownDetails details) {
 
       isPressed.value = true;
 
     }
 
-    void onTapUp (details) {
+    void onTapUp (TapUpDetails details) {
 
       isPressed.value = false;
 
