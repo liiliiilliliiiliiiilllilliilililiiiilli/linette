@@ -6,8 +6,8 @@ import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/windows/language/language.dart';
 import 'package:linette/app/widgets/textbutton/textbutton.dart';
+import 'package:linette/app/windows/language/language.dart';
 
 
 

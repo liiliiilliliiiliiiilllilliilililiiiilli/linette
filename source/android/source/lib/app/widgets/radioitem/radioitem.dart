@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -32,39 +33,9 @@ class RadioItem extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap () {
+    void presserAction () {
 
       onPress ();
-
-    }
-
-    void onPanDown (DragDownDetails details) {
-
-      isPressed.value = true;
-
-    }
-
-    void onTapUp (TapUpDetails details) {
-
-      isPressed.value = false;
-
-    }
-
-    void onPanCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onLongPressCancel () {
-
-      isPressed.value = false;
 
     }
 
@@ -85,14 +56,9 @@ class RadioItem extends HookWidget {
         padding: const EdgeInsets.symmetric (
           horizontal: 10
         ),
-        child: GestureDetector (
-          onTap: handleTap,
-          onPanDown: onPanDown,
-          onTapUp: onTapUp,
-          onPanCancel: onPanCancel,
-          onTapCancel: onTapCancel,
-          onLongPressCancel: onLongPressCancel,
-          behavior: HitTestBehavior.opaque,
+        child: Presser (
+          isPressed: isPressed,
+          action: presserAction,
           child: AnimatorPresser (
             scaleRate: 0.9675,
             isPressed: isPressed,

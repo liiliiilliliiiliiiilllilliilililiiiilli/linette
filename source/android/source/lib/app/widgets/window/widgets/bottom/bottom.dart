@@ -5,6 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
 
@@ -28,7 +29,7 @@ class BottomComponent extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap () {
+    void presserAction () {
 
       actionsFreezeNotifier.freeze ();
 
@@ -36,47 +37,12 @@ class BottomComponent extends HookConsumerWidget {
 
     }
 
-    void onPanDown (DragDownDetails details) {
-
-      isPressed.value = true;
-
-    }
-
-    void onTapUp (TapUpDetails details) {
-
-      isPressed.value = false;
-
-    }
-
-    void onPanCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onLongPressCancel () {
-
-      isPressed.value = false;
-
-    }
-
 
     return (
 
-      GestureDetector (
-        onTap: handleTap,
-        onPanDown: onPanDown,
-        onTapUp: onTapUp,
-        onPanCancel: onPanCancel,
-        onTapCancel: onTapCancel,
-        onLongPressCancel: onLongPressCancel,
-        behavior: HitTestBehavior.opaque,
+      Presser (
+        isPressed: isPressed,
+        action: presserAction,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.98,

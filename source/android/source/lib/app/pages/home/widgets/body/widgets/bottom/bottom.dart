@@ -8,8 +8,9 @@ import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/windows/hint/hint.dart';
+import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/windows/hint/hint.dart';
 
 
 
@@ -28,7 +29,7 @@ class Bottom extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap () async {
+    void presserAction () async {
 
       actionsFreezeNotifier.freeze ();
 
@@ -123,7 +124,6 @@ class Bottom extends HookConsumerWidget {
 
     }
 
-
     bool isInDeadZone (double localY) {
 
       const double componentHeight = 80;
@@ -145,8 +145,6 @@ class Bottom extends HookConsumerWidget {
 
       }
 
-      isPressed.value = true;
-
     }
 
     void onTapUp (TapUpDetails details) {
@@ -159,10 +157,6 @@ class Bottom extends HookConsumerWidget {
 
       }
 
-      isPressed.value = false;
-
-      handleTap ();
-
     }
 
     void onPanDown (DragDownDetails details) {
@@ -172,26 +166,6 @@ class Bottom extends HookConsumerWidget {
         return;
 
       }
-
-      isPressed.value = true;
-
-    }
-
-    void onPanCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onLongPressCancel () {
-
-      isPressed.value = false;
 
     }
 
@@ -203,14 +177,12 @@ class Bottom extends HookConsumerWidget {
 
     return (
 
-      GestureDetector (
+      Presser (
+        isPressed: isPressed,
+        action: presserAction,
         onTapDown: onTapDown,
         onTapUp: onTapUp,
         onPanDown: onPanDown,
-        onPanCancel: onPanCancel,
-        onTapCancel: onTapCancel,
-        onLongPressCancel: onLongPressCancel,
-        behavior: HitTestBehavior.opaque,
         child: ClipRect (
           child: BackdropFilter (
             filter: ImageFilter.blur (

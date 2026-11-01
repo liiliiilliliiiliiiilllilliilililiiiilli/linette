@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presser/presser.dart';
 
 
 
@@ -21,39 +22,9 @@ class ConnectionButton extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void handleTap () {
+    void presserAction () {
 
       return;
-
-    }
-
-    void onPanDown (DragDownDetails details) {
-
-      isPressed.value = true;
-
-    }
-
-    void onTapUp (TapUpDetails details) {
-
-      isPressed.value = false;
-
-    }
-
-    void onPanCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-    void onLongPressCancel () {
-
-      isPressed.value = false;
 
     }
 
@@ -108,14 +79,9 @@ class ConnectionButton extends HookWidget {
                       shape: BoxShape.circle
                     ),
                     child: ClipOval (
-                      child: GestureDetector (
-                        onTap: handleTap,
-                        onPanDown: onPanDown,
-                        onTapUp: onTapUp,
-                        onPanCancel: onPanCancel,
-                        onTapCancel: onTapCancel,
-                        onLongPressCancel: onLongPressCancel,
-                        behavior: HitTestBehavior.opaque,
+                      child: Presser (
+                        isPressed: isPressed,
+                        action: presserAction,
                         child: Container (
                           padding: const EdgeInsets.all (32),
                           decoration: BoxDecoration (

@@ -62,23 +62,27 @@ class App extends ConsumerWidget {
     final Widget startScreen;
 
 
-    if (welcomeState == null) {
+    switch (welcomeState) {
 
-      startScreen = Scaffold (
-        backgroundColor: backgroundColor
-      );
+      case null:
 
-    }
+        startScreen = Scaffold (
+          backgroundColor: backgroundColor
+        );
 
-    else if (!welcomeState) {
+        break;
 
-      startScreen = const WelcomePage ();
+      case false:
 
-    }
+        startScreen = const WelcomePage ();
 
-    else {
+        break;
 
-      startScreen = const HomePage ();
+      case true:
+
+        startScreen = const HomePage ();
+
+        break;
 
     }
 
