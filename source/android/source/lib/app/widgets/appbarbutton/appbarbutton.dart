@@ -11,29 +11,22 @@ import 'models/shape/shape.dart';
 
 class AppBarButton extends HookWidget {
 
-  final Function onPress;
+  final void Function () onPress;
   final ShapeModel shape;
   final Widget icon;
 
 
   const AppBarButton ({
+    super.key,
     required this.onPress,
     required this.shape,
-    required this.icon,
-    super.key
+    required this.icon
   });
 
 
   @override Widget build (BuildContext context) {
 
     final ValueNotifier <bool> isPressed = useState (false);
-
-
-    void presserAction () {
-
-      onPress ();
-
-    }
 
 
     final double translationYValue = isPressed.value
@@ -50,7 +43,7 @@ class AppBarButton extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           child: AnimatedContainer (

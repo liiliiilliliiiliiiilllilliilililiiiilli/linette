@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/widgets/slider/slider.dart';
 import 'widgets/leftbutton/leftbutton.dart';
 import 'widgets/title/title.dart';
 import 'widgets/rightbutton/rightbutton.dart';
@@ -29,54 +30,19 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
 
   @override Widget build (BuildContext context) {
 
-    const double safeZone = 38;
+    void onSwipeLeft () {
 
-    final ValueNotifier <double> startX = useState (0.0);
-
-    final double screenWidth = MediaQuery.of(context).size.width;
-
-
-    void onHorizontalDragStart (DragStartDetails details) {
-
-      startX.value = details.globalPosition.dx;
+      Scaffold.of(context).openDrawer();
 
     }
 
+    void onSwipeRight () {
 
-    void onHorizontalDragUpdate (DragUpdateDetails details) {
+      // Если текущий экран не активен (если поверх него уже что-нибудь есть), то игнорируем нажатие:
 
-      if (details.delta.dx > 10) {
+      final bool isCurrentRoute = ModalRoute.of(context)?.isCurrent ?? true;
 
-        if (startX.value < safeZone) {
-
-          return;
-
-        }
-
-
-        Scaffold.of(context).openDrawer();
-
-      }
-
-      else if (details.delta.dx < -10) {
-
-        // Если текущий экран не активен (если поверх него уже что-нибудь есть), то игнорируем нажатие:
-
-        final isCurrentRoute = ModalRoute.of(context)?.isCurrent ?? true;
-
-        if (!isCurrentRoute || Scaffold.of(context).isDrawerOpen) {
-
-          return;
-
-        }
-
-
-        if (startX.value > (screenWidth - safeZone)) {
-
-          return;
-
-        }
-
+      if (isCurrentRoute && !Scaffold.of(context).isDrawerOpen) {
 
         Navigator.pushNamed (context, '/connections');
 
@@ -87,9 +53,9 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
 
     return (
 
-      GestureDetector (
-        onHorizontalDragStart: onHorizontalDragStart,
-        onHorizontalDragUpdate: onHorizontalDragUpdate,
+      SliderComponent (
+        onSwipeLeft: onSwipeLeft,
+        onSwipeRight: onSwipeRight,
         child: Container (
           color: context.colors.transparent,
           child: PreferredSize (

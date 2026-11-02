@@ -22,7 +22,7 @@ class ConnectionButton extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () {
+    void onPress () {
 
       return;
 
@@ -81,7 +81,7 @@ class ConnectionButton extends HookWidget {
                     child: ClipOval (
                       child: Presser (
                         isPressed: isPressed,
-                        action: presserAction,
+                        onPress: onPress,
                         child: Container (
                           padding: const EdgeInsets.all (32),
                           decoration: BoxDecoration (

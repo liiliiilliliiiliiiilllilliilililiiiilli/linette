@@ -33,13 +33,6 @@ class RadioItem extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () {
-
-      onPress ();
-
-    }
-
-
     final Color colorInsides = isChosen
       ? context.colors.radioButtonInsidesChosen
       : context.colors.radioButtonInsidesNotChosen;
@@ -58,7 +51,7 @@ class RadioItem extends HookWidget {
         ),
         child: Presser (
           isPressed: isPressed,
-          action: presserAction,
+          onPress: onPress,
           child: AnimatorPresser (
             scaleRate: 0.9675,
             isPressed: isPressed,

@@ -6,7 +6,7 @@ class ConnectionModel {
   final String name;
   final bool isChosen;
   final bool isAvailable;
-  final void Function () onTap;
+  final void Function () onPress;
 
 
   ConnectionModel ({
@@ -14,7 +14,7 @@ class ConnectionModel {
     required this.name,
     required this.isChosen,
     required this.isAvailable,
-    required this.onTap
+    required this.onPress
   });
 
 }

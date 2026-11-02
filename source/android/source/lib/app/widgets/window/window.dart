@@ -18,12 +18,12 @@ class Window extends StatelessWidget {
 
 
   const Window ({
+    super.key,
     required this.width,
     this.isExpanded = false,
     required this.title,
     required this.body,
-    required this.action,
-    super.key
+    required this.action
   });
 
 

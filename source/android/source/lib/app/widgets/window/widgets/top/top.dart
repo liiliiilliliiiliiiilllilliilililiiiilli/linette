@@ -11,8 +11,8 @@ class TopComponent extends StatelessWidget {
 
 
   const TopComponent ({
-    required this.title,
-    super.key
+    super.key,
+    required this.title
   });
 
 

@@ -12,9 +12,9 @@ class BodyComponent extends StatelessWidget {
 
 
   const BodyComponent ({
+    super.key,
     required this.isExpanded,
-    required this.child,
-    super.key
+    required this.child
   });
 
 

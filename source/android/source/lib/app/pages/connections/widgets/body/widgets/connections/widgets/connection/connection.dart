@@ -28,13 +28,6 @@ class Connection extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () {
-
-      model.onTap ();
-
-    }
-
-
     final Color colorBorder = model.isChosen
       ? context.colors.blockBorder
       : context.colors.block;
@@ -44,7 +37,7 @@ class Connection extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: model.onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.975,

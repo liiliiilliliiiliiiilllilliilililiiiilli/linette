@@ -29,7 +29,7 @@ class Bottom extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () async {
+    void onPress () async {
 
       actionsFreezeNotifier.freeze ();
 
@@ -130,7 +130,7 @@ class Bottom extends HookConsumerWidget {
       const double deadZoneHeight = 9.25;
 
 
-      final isInDeadZone = localY > (componentHeight - deadZoneHeight);
+      final bool isInDeadZone = localY > (componentHeight - deadZoneHeight);
 
 
       return isInDeadZone;
@@ -139,9 +139,9 @@ class Bottom extends HookConsumerWidget {
 
     void onTapDown (TapDownDetails details) {
 
-      if (isInDeadZone (details.localPosition.dy)) {
+      if (!isInDeadZone (details.localPosition.dy)) {
 
-        return;
+        isPressed.value = true;
 
       }
 
@@ -149,11 +149,11 @@ class Bottom extends HookConsumerWidget {
 
     void onTapUp (TapUpDetails details) {
 
-      if (isInDeadZone (details.localPosition.dy)) {
+      isPressed.value = false;
 
-        isPressed.value = false;
+      if (!isInDeadZone (details.localPosition.dy)) {
 
-        return;
+        onPress ();
 
       }
 
@@ -161,9 +161,9 @@ class Bottom extends HookConsumerWidget {
 
     void onPanDown (DragDownDetails details) {
 
-      if (isInDeadZone (details.localPosition.dy)) {
+      if (!isInDeadZone (details.localPosition.dy)) {
 
-        return;
+        isPressed.value = true;
 
       }
 
@@ -179,7 +179,7 @@ class Bottom extends HookConsumerWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: onPress,
         onTapDown: onTapDown,
         onTapUp: onTapUp,
         onPanDown: onPanDown,

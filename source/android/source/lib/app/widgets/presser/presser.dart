@@ -1,14 +1,13 @@
 // Presser global widget
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
 
 
-class Presser extends HookWidget {
+class Presser extends StatelessWidget {
 
   final ValueNotifier <bool> isPressed;
-  final void Function () action;
+  final void Function () onPress;
   final void Function (TapDownDetails details)? onTapDown;
   final void Function (TapUpDetails details)? onTapUp;
   final void Function ()? onTapCancel;
@@ -21,7 +20,7 @@ class Presser extends HookWidget {
   const Presser ({
     super.key,
     required this.isPressed,
-    required this.action,
+    required this.onPress,
     this.onTapDown,
     this.onTapUp,
     this.onTapCancel,
@@ -36,25 +35,19 @@ class Presser extends HookWidget {
 
     void onTapDown (TapDownDetails details) {
 
-      this.onTapDown?.call (details);
-
       isPressed.value = true;
 
     }
 
     void onTapUp (TapUpDetails details) {
 
-      this.onTapUp?.call (details);
-
       isPressed.value = false;
 
-      action ();
+      onPress ();
 
     }
 
     void onTapCancel () {
-
-      this.onTapCancel?.call ();
 
       isPressed.value = false;
 
@@ -62,23 +55,17 @@ class Presser extends HookWidget {
 
     void onPanDown (DragDownDetails details) {
 
-      this.onPanDown?.call (details);
-
       isPressed.value = true;
 
     }
 
     void onPanCancel () {
 
-      this.onPanCancel?.call ();
-
       isPressed.value = false;
 
     }
 
     void onLongPressCancel () {
-
-      this.onLongPressCancel?.call ();
 
       isPressed.value = false;
 
@@ -88,12 +75,12 @@ class Presser extends HookWidget {
     return (
 
       GestureDetector (
-        onTapDown: onTapDown,
-        onTapUp: onTapUp,
-        onTapCancel: onTapCancel,
-        onPanDown: onPanDown,
-        onPanCancel: onPanCancel,
-        onLongPressCancel: onLongPressCancel,
+        onTapDown: this.onTapDown ?? onTapDown,
+        onTapUp: this.onTapUp ?? onTapUp,
+        onTapCancel: this.onTapCancel ?? onTapCancel,
+        onPanDown: this.onPanDown ?? onPanDown,
+        onPanCancel: this.onPanCancel ?? onPanCancel,
+        onLongPressCancel: this.onLongPressCancel ?? onLongPressCancel,
         behavior: HitTestBehavior.opaque,
         child: child
       )

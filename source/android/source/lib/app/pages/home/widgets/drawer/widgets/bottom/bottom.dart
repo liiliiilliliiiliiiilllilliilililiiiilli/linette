@@ -23,7 +23,7 @@ class Bottom extends HookWidget {
     final ValueNotifier <bool> isChecked = useState (false);
 
 
-    void presserAction () {
+    void onPress () {
 
       isChecked.value = !isChecked.value;
 
@@ -34,7 +34,7 @@ class Bottom extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: onPress,
         child: Container (
           height: 80,
           alignment: Alignment.bottomLeft,

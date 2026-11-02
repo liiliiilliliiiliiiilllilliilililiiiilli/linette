@@ -24,7 +24,7 @@ class RightButton extends HookConsumerWidget {
     final ThemeNotifier themeNotifier = ref.watch (themeProvider.notifier);
 
 
-    void handleTap () {
+    void onPress () {
 
       themeState == AppThemeOption.darkGreen
         ? themeNotifier.changeState (AppThemeOption.lightGreen)
@@ -41,7 +41,7 @@ class RightButton extends HookConsumerWidget {
     return (
 
       AppBarButton (
-        onPress: handleTap,
+        onPress: onPress,
         shape: ShapeModel.circle,
         icon: SvgPicture.asset (
           themeIcon,

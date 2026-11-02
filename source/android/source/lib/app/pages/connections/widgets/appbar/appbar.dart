@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/widgets/slider/slider.dart';
 import 'widgets/leftbutton/leftbutton.dart';
 import 'widgets/title/title.dart';
 
@@ -28,40 +29,17 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget  {
 
   @override Widget build (BuildContext context) {
 
-    const double safeZone = 38;
+    void onSwipeLeft () {
 
-    final ValueNotifier <double> startX = useState (0.0);
-
-
-    void onHorizontalDragStart (DragStartDetails details) {
-
-      startX.value = details.globalPosition.dx;
-
-    }
-
-
-    void onHorizontalDragUpdate (DragUpdateDetails details) {
-
-      if (details.delta.dx > 10) {
-
-        if (startX.value < safeZone) {
-
-          return;
-
-        }
-
-        Navigator.pop (context);
-
-      }
+      Navigator.pop (context);
 
     }
 
 
     return (
 
-      GestureDetector (
-        onHorizontalDragStart: onHorizontalDragStart,
-        onHorizontalDragUpdate: onHorizontalDragUpdate,
+      SliderComponent (
+        onSwipeLeft: onSwipeLeft,
         child: Container (
           color: context.colors.transparent,
           child: PreferredSize (

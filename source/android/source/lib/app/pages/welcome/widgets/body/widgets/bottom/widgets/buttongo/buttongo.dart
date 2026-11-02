@@ -26,7 +26,7 @@ class ButtonGo extends ConsumerWidget {
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
 
 
-    void onTap () async {
+    void onPress () async {
 
       await welcomeNotifier.completeWelcome ();
 
@@ -49,12 +49,12 @@ class ButtonGo extends ConsumerWidget {
                   animation: animation,
                   builder: (context, _) {
 
-                    final value = animation.value;
+                    final double value = animation.value;
 
                     if (value < 0.5) {
 
-                      final progress = value * 2;
-                      final curveValue = Curves.easeInOut.transform (progress);
+                      final double progress = value * 2;
+                      final double curveValue = Curves.easeInOut.transform (progress);
 
                       return (
 
@@ -71,8 +71,8 @@ class ButtonGo extends ConsumerWidget {
 
                     else {
 
-                      final progress = (value - 0.5) * 2;
-                      final curveValue = Curves.easeInOut.transform (progress);
+                      final double progress = (value - 0.5) * 2;
+                      final double curveValue = Curves.easeInOut.transform (progress);
 
                       return (
 
@@ -106,7 +106,7 @@ class ButtonGo extends ConsumerWidget {
 
       ButtonComponent (
         text: context.texts.pageWelcomeBodyBottomGo,
-        onTap: onTap,
+        onPress: onPress,
         icon: context.icons.arrow,
         iconSize: 14
       )

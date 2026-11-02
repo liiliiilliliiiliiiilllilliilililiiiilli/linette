@@ -16,8 +16,8 @@ class BottomComponent extends HookConsumerWidget {
 
 
   const BottomComponent ({
-    required this.action,
-    super.key
+    super.key,
+    required this.action
   });
 
 
@@ -29,7 +29,7 @@ class BottomComponent extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () {
+    void onPress () {
 
       actionsFreezeNotifier.freeze ();
 
@@ -42,7 +42,7 @@ class BottomComponent extends HookConsumerWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.98,

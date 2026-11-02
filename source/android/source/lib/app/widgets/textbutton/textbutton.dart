@@ -17,7 +17,7 @@ class TextButtonComponent extends HookWidget {
   final String text;
   final String? iconRight;
   final double? iconRightSize;
-  final Function () onTap;
+  final void Function () onPress;
 
 
   const TextButtonComponent ({
@@ -27,7 +27,7 @@ class TextButtonComponent extends HookWidget {
     required this.text,
     this.iconRight,
     this.iconRightSize,
-    required this.onTap
+    required this.onPress
   });
 
 
@@ -36,17 +36,17 @@ class TextButtonComponent extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final iconLeftWidth = iconLeftSize ?? 20;
-    final iconLeftHeight = iconLeftSize ?? 20;
-    final iconRightWidth = iconRightSize ?? 20;
-    final iconRightHeight = iconRightSize ?? 20;
+    final double iconLeftWidth = iconLeftSize ?? 20;
+    final double iconLeftHeight = iconLeftSize ?? 20;
+    final double iconRightWidth = iconRightSize ?? 20;
+    final double iconRightHeight = iconRightSize ?? 20;
 
 
     return (
 
       Presser (
         isPressed: isPressed,
-        action: onTap,
+        onPress: onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.97,

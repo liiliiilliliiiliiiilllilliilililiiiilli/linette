@@ -24,7 +24,7 @@ class LeftButton extends ConsumerWidget {
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
 
 
-    void handleTap () {
+    void onPress () {
 
       actionsFreezeNotifier.freeze ();
 
@@ -36,7 +36,7 @@ class LeftButton extends ConsumerWidget {
     return (
 
       AppBarButton (
-        onPress: handleTap,
+        onPress: onPress,
         shape: ShapeModel.circle,
         icon: Transform.translate (
           offset: const Offset (-1, 0),

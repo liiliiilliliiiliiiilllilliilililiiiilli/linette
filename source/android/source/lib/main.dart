@@ -19,7 +19,7 @@ void main () async {
   );
 
 
-  final appImages = [
+  final List <String> appImages = [
     'assets/images/branding/dark/branding.png',
     'assets/images/branding/light/branding.png',
     'assets/images/icons/common/arrow.svg',

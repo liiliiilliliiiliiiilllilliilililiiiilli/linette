@@ -18,13 +18,11 @@ class DrawerComponent extends Drawer {
 
     void onPopInvokedWithResult (bool didPop, Object? result) {
 
-      if (didPop) {
+      if (!didPop) {
 
-        return;
+        Scaffold.of(context).closeDrawer();
 
       }
-
-      Scaffold.of(context).closeDrawer();
 
     }
 

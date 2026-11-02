@@ -18,9 +18,9 @@ class MultitouchBlocker extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final activePointers = useRef <Set <int> > ({});  // Храним id активных пальцев на экране в useRef (без лишних перерисовок)
+    final ObjectRef <Set <int>> activePointers = useRef ({});  // Храним id активных пальцев на экране в useRef (без лишних перерисовок)
 
-    final isAbsorbing = useState <bool> (false);  // Состояние, которое включает / выключает AbsorbPointer на весь экран
+    final ValueNotifier <bool> isAbsorbing = useState (false);  // Состояние, которое включает / выключает AbsorbPointer на весь экран
 
 
     void onPointerDown (PointerDownEvent event) {

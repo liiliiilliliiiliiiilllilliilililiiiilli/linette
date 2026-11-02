@@ -5,6 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/widgets/slider/slider.dart';
 import 'widgets/liner/liner.dart';
 import 'widgets/connections/connections.dart';
 import 'widgets/connections/widgets/connection/models/connection/connection.dart';
@@ -28,40 +29,17 @@ class BodyComponent extends HookWidget {
     final ValueNotifier <String> chosen = useState (textNetherlands);
 
 
-    const double safeZone = 38;
+    void onSwipeLeft () {
 
-    final ValueNotifier <double> startX = useState (0.0);
-
-
-    void onHorizontalDragStart (DragStartDetails details) {
-
-      startX.value = details.globalPosition.dx;
-
-    }
-
-
-    void onHorizontalDragUpdate (DragUpdateDetails details) {
-
-      if (details.delta.dx > 10) {
-
-        if (startX.value < safeZone) {
-
-          return;
-
-        }
-
-        Navigator.pop (context);
-
-      }
+      Navigator.pop (context);
 
     }
 
 
     return (
 
-      GestureDetector (
-        onHorizontalDragStart: onHorizontalDragStart,
-        onHorizontalDragUpdate: onHorizontalDragUpdate,
+      SliderComponent (
+        onSwipeLeft: onSwipeLeft,
         child: Container (
           color: context.colors.transparent,
           child: Container (
@@ -82,21 +60,21 @@ class BodyComponent extends HookWidget {
                       name: textNetherlands,
                       isChosen: chosen.value == textNetherlands,
                       isAvailable: false,
-                      onTap: () => {chosen.value = textNetherlands}
+                      onPress: () => {chosen.value = textNetherlands}
                     ),
                     ConnectionModel (
                       flag: context.icons.flagFinland,
                       name: textFinland,
                       isChosen: chosen.value == textFinland,
                       isAvailable: false,
-                      onTap: () => {chosen.value = textFinland}
+                      onPress: () => {chosen.value = textFinland}
                     ),
                     ConnectionModel (
                       flag: context.icons.flagGermany,
                       name: textGermany,
                       isChosen: chosen.value == textGermany,
                       isAvailable: false,
-                      onTap: () => {chosen.value = textGermany}
+                      onPress: () => {chosen.value = textGermany}
                     )
                   ]
                 )

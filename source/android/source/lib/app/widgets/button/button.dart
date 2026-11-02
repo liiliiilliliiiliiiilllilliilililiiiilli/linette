@@ -16,7 +16,7 @@ class ButtonComponent extends HookWidget {
   final String text;
   final String? icon;
   final double? iconSize;
-  final Function () onTap;
+  final Function () onPress;
 
 
   const ButtonComponent ({
@@ -24,7 +24,7 @@ class ButtonComponent extends HookWidget {
     required this.text,
     this.icon,
     this.iconSize,
-    required this.onTap
+    required this.onPress
   });
 
 
@@ -33,8 +33,8 @@ class ButtonComponent extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final iconWidth = iconSize ?? 12.5;
-    final iconHeight = iconSize ?? 12.5;
+    final double iconWidth = iconSize ?? 12.5;
+    final double iconHeight = iconSize ?? 12.5;
 
 
     final AnimationController controller = useAnimationController (
@@ -95,7 +95,7 @@ class ButtonComponent extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        action: onTap,
+        onPress: onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.97,

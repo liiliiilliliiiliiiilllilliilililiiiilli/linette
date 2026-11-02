@@ -23,7 +23,7 @@ class ButtonChangeLanguage extends ConsumerWidget {
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
 
 
-    void handleTap () async {
+    void onPress () async {
 
       actionsFreezeNotifier.freeze ();
 
@@ -124,7 +124,7 @@ class ButtonChangeLanguage extends ConsumerWidget {
       TextButtonComponent (
         iconLeft: context.icons.language,
         text: context.texts.pageWelcomeBodyBottomChangeLanguage,
-        onTap: handleTap
+        onPress: onPress
       )
 
     );

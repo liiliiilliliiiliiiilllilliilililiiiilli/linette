@@ -22,11 +22,11 @@ class DrawerOption extends HookConsumerWidget {
 
 
   const DrawerOption ({
+    super.key,
     required this.iconLeft,
     required this.text,
     this.textRight,
-    required this.window,
-    super.key
+    required this.window
   });
 
 
@@ -38,7 +38,7 @@ class DrawerOption extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () async {
+    void onPress () async {
 
       actionsFreezeNotifier.freeze ();
 
@@ -137,7 +137,7 @@ class DrawerOption extends HookConsumerWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           scaleRate: 0.97,

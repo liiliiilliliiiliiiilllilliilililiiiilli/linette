@@ -24,7 +24,7 @@ class ChooseConnectionButton extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void presserAction () {
+    void onPress () {
 
       Navigator.pushNamed (context, '/connections');
 
@@ -35,7 +35,7 @@ class ChooseConnectionButton extends HookWidget {
 
       Presser (
         isPressed: isPressed,
-        action: presserAction,
+        onPress: onPress,
         child: AnimatorPresser (
           isPressed: isPressed,
           child: Container (

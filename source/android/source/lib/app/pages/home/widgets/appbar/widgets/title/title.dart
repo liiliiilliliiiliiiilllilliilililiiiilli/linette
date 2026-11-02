@@ -24,7 +24,7 @@ class TitleComponent extends HookWidget {
     const double glowWidth = 0.32;
 
 
-    final animationController = useAnimationController(
+    final AnimationController animationController = useAnimationController(
       duration: Duration (seconds: (common * 4 / speed / periodicity).toInt ()),
       initialValue: 0.32
     )..repeat();
