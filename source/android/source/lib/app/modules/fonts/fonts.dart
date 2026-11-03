@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 
 
-class ThemeFonts {
+class AppFonts {
 
-  const ThemeFonts ();
+  const AppFonts ();
 
 
   String get archivo => 'Archivo';
@@ -16,8 +16,8 @@ class ThemeFonts {
 
 
 
-extension AppFontsBuildContext on BuildContext {
+extension AppFontsExtension on BuildContext {
 
-  ThemeFonts get fonts => const ThemeFonts ();
+  AppFonts get fonts => const AppFonts ();
 
 }

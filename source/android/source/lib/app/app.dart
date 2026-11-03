@@ -29,18 +29,18 @@ class App extends ConsumerWidget {
     final AppThemeOption themeState = ref.watch (themeProvider);
     final bool? welcomeState = ref.read (welcomeProvider);
 
-
-    final AppAssets customAssets;
+    final AppIcons customAssets;
     final AppColors customColors;
     final Brightness baseBrightness;
     final Color backgroundColor;
+    final Widget startScreen;
 
 
     switch (themeState) {
 
       case AppThemeOption.darkGreen:
 
-        customAssets = AppAssets.darkGreen;
+        customAssets = AppIcons.darkGreen;
         customColors = AppColors.darkGreen;
         baseBrightness = Brightness.dark;
         backgroundColor = const Color (0xff000000);
@@ -49,7 +49,7 @@ class App extends ConsumerWidget {
 
       case AppThemeOption.lightGreen:
 
-        customAssets = AppAssets.lightGreen;
+        customAssets = AppIcons.lightGreen;
         customColors = AppColors.lightGreen;
         baseBrightness = Brightness.light;
         backgroundColor = const Color (0xfff2f2f2);
@@ -57,10 +57,6 @@ class App extends ConsumerWidget {
         break;
 
     }
-
-
-    final Widget startScreen;
-
 
     switch (welcomeState) {
 
@@ -92,9 +88,7 @@ class App extends ConsumerWidget {
       return (
 
         MultitouchBlocker (
-
           child: child ?? const SizedBox ()
-
         )
 
       );
@@ -122,20 +116,20 @@ class App extends ConsumerWidget {
           ]
         ),
         localizationsDelegates: const [
-            T.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate
+          T.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate
         ],
         supportedLocales: T.delegate.supportedLocales,
         locale: Locale (localeState),
+        builder: builder,
         routes: {
           '/welcome': (context) => const WelcomePage (),
           '/home': (context) => const HomePage (),
           '/connections': (context) => const ConnectionsPage ()
         },
-        home: startScreen,
-        builder: builder
+        home: startScreen
       )
 
     );

@@ -20,75 +20,49 @@ class BodyComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    return (
-
-      !isExpanded ?
-
-        Container (
-          padding: const EdgeInsets.symmetric (
-            horizontal: 20 - 4
-          ),
-          child: Stack (
-            children: [
-              child,
-              Positioned (
-                top: 0,
-                left: 0,
-                right: 0,
-                height: 15,
-                child: IgnorePointer (
-                  child: Container (
-                    decoration: BoxDecoration (
-                      gradient: LinearGradient (
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          context.colors.windowMainBack,
-                          context.colors.windowMainBack.withAlpha (0)
-                        ]
-                      )
-                    )
+    final Container main = Container (
+      padding: const EdgeInsets.symmetric (
+        horizontal: 20 - 4
+      ),
+      child: Stack (
+        children: [
+          child,
+          Positioned (
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 15,
+            child: IgnorePointer (
+              child: Container (
+                decoration: BoxDecoration (
+                  gradient: LinearGradient (
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      context.colors.windowMainBack,
+                      context.colors.windowMainBack.withAlpha (0)
+                    ]
                   )
                 )
               )
-            ]
+            )
           )
+        ]
+      )
+    );
+
+
+    return (
+
+      isExpanded ?
+
+        Expanded (
+          child: main
         )
 
       :
 
-        Expanded (
-          child: Container (
-            padding: const EdgeInsets.symmetric (
-              horizontal: 20 - 4
-            ),
-            child: Stack (
-              children: [
-                child,
-                Positioned (
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: 15,
-                  child: IgnorePointer (
-                    child: Container (
-                      decoration: BoxDecoration (
-                        gradient: LinearGradient (
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            context.colors.windowMainBack,
-                            context.colors.windowMainBack.withAlpha (0)
-                          ]
-                        )
-                      )
-                    )
-                  )
-                )
-              ]
-            )
-          )
-        )
+        main
 
     );
 

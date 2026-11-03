@@ -26,7 +26,7 @@ class LanguageWindow extends HookConsumerWidget {
     final ValueNotifier <String> selectedLocale = useState (localeState);
 
 
-    final List <Map <String, String>> languages =  [
+    final List <Map <String, String>> languages = [
       {
         'code': 'ru',
         'title': context.texts.windowLanguageCenterRussian,

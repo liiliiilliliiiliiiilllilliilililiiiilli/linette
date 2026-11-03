@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 
@@ -19,21 +19,8 @@ class WalletWindow extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    Future openLink () async {
-
-      final String link = context.texts.windowFeedbackCenter_2_Link;
-      final Uri url = Uri.parse (link);
-
-      if (await canLaunchUrl (url)) {
-
-        await launchUrl (url);
-
-      }
-
-    }
-
-
     final ValueNotifier <bool> isPressed = useState (false);
+
 
     final TapGestureRecognizer gestureRecognizer = useMemoized (() {
 
@@ -42,17 +29,33 @@ class WalletWindow extends HookWidget {
     }, []);
 
 
+    void onTapDown (TapDownDetails details) {
+
+      isPressed.value = true;
+
+    }
+
+    void onTapUp (TapUpDetails details) {
+
+      isPressed.value = false;
+
+      context.methods.openLink (
+        link: context.texts.windowFeedbackCenter_2_Link
+      );
+
+    }
+
+    void onTapCancel () {
+
+      isPressed.value = false;
+
+    }
+
+
     gestureRecognizer
-      ..onTapDown = (_) {
-        isPressed.value = true;
-      }
-      ..onTapUp = (_) {
-        isPressed.value = false;
-        openLink ();
-      }
-      ..onTapCancel = () {
-        isPressed.value = false;
-      };
+      ..onTapDown = onTapDown
+      ..onTapUp = onTapUp
+      ..onTapCancel = onTapCancel;
 
 
     useEffect (() {

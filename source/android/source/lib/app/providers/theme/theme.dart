@@ -3,7 +3,15 @@
 import 'dart:ui';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:linette/app/modules/colors/colors.dart';
+
+
+
+enum AppThemeOption {
+
+  darkGreen,
+  lightGreen
+
+}
 
 
 

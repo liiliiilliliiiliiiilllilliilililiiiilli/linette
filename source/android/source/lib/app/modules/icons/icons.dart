@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 
 
-class AppAssets extends ThemeExtension <AppAssets> {
+class AppIcons extends ThemeExtension <AppIcons> {
 
   final String arrow;
   final String flagFinland;
@@ -24,7 +24,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   final String wallet;
 
 
-  const AppAssets ({
+  const AppIcons ({
     required this.arrow,
     required this.flagFinland,
     required this.flagGermany,
@@ -44,7 +44,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   });
 
 
-  static const AppAssets darkGreen = AppAssets (
+  static const AppIcons darkGreen = AppIcons (
     arrow: 'assets/images/icons/common/arrow.svg',
     flagFinland: 'assets/images/icons/common/flag_finland.svg',
     flagGermany: 'assets/images/icons/common/flag_germany.svg',
@@ -63,7 +63,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
     wallet: 'assets/images/icons/common/wallet.svg'
   );
 
-  static const AppAssets lightGreen = AppAssets (
+  static const AppIcons lightGreen = AppIcons (
     arrow: 'assets/images/icons/common/arrow.svg',
     flagFinland: 'assets/images/icons/common/flag_finland.svg',
     flagGermany: 'assets/images/icons/common/flag_germany.svg',
@@ -83,7 +83,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
   );
 
 
-  @override AppAssets copyWith ({
+  @override AppIcons copyWith ({
     String? arrow,
     String? flagFinland,
     String? flagGermany,
@@ -104,7 +104,7 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
     return (
 
-      AppAssets (
+      AppIcons (
         arrow: arrow ?? this.arrow,
         flagFinland: flagFinland ?? this.flagFinland,
         flagGermany: flagGermany ?? this.flagGermany,
@@ -128,9 +128,9 @@ class AppAssets extends ThemeExtension <AppAssets> {
   }
 
 
-  @override AppAssets lerp (ThemeExtension <AppAssets>? other, double t) {
+  @override AppIcons lerp (ThemeExtension <AppIcons>? other, double t) {
 
-    if (other is! AppAssets) {
+    if (other is! AppIcons) {
 
       return this;
 
@@ -144,11 +144,11 @@ class AppAssets extends ThemeExtension <AppAssets> {
 
 
 
-extension AppAssetsExtension on BuildContext {
+extension AppIconsExtension on BuildContext {
 
-  AppAssets get icons {
+  AppIcons get icons {
 
-    return Theme.of(this).extension<AppAssets>()!;
+    return Theme.of(this).extension<AppIcons>()!;
 
   }
 

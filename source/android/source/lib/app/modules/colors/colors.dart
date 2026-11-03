@@ -544,15 +544,6 @@ class AppColors extends ThemeExtension <AppColors> {
 
 
 
-enum AppThemeOption {
-
-  darkGreen,
-  lightGreen
-
-}
-
-
-
 extension AppColorsExtension on BuildContext {
 
   AppColors get colors {

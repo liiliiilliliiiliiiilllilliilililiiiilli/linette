@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
 
@@ -32,103 +32,17 @@ class DrawerOption extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
-
-
     final ValueNotifier <bool> isPressed = useState (false);
 
 
     void onPress () async {
 
-      actionsFreezeNotifier.freeze ();
-
-
-      Navigator.pop (context);
-
-
-      await Future.delayed (const Duration (milliseconds: 150));
-
-
-      if (!context.mounted) {
-
-        return;
-
-      }
-
-
-      Widget pageBuilder (context, animation, secondaryAnimation) {
-
-        return window;
-
-      }
-
-      Widget transitionBuilder (context, animation, secondaryAnimation, child) {
-
-        final CurvedAnimation fadeAnimation = CurvedAnimation (
-          parent: animation,
-          curve: Curves.easeOut,
-          reverseCurve: Curves.easeIn
-        );
-
-
-        if (animation.status == AnimationStatus.reverse) {
-
-          return (
-
-            FadeTransition (
-              opacity: fadeAnimation,
-              child: child
-            )
-
-          );
-
-        }
-
-
-        final Animation <double> scaleAnimation = Tween(begin: 0.975, end: 1.0).animate(
-          CurvedAnimation (
-            parent: animation,
-            curve: Curves.easeOut
-          )
-        );
-
-
-        return (
-
-          FadeTransition (
-            opacity: fadeAnimation,
-            child: ScaleTransition (
-              scale: scaleAnimation,
-              child: child
-            )
-          )
-
-        );
-
-      }
-
-
-      await showGeneralDialog (
+      context.methods.openWindow (
+        window: window,
+        callback: () => Navigator.pop (context),
         context: context,
-        barrierDismissible: true,
-        barrierLabel: 'Dismiss',
-        barrierColor: context.colors.windowBarrier,
-        transitionDuration: const Duration (
-          milliseconds: 175
-        ),
-        pageBuilder: pageBuilder,
-        transitionBuilder: transitionBuilder
+        ref: ref
       );
-
-
-      if (!context.mounted) {
-
-        return;
-
-      }
-
-
-      actionsFreezeNotifier.freeze ();
 
     }
 
