@@ -1,4 +1,4 @@
-// Methods module - Open window method
+// Methods module - Open window component
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -7,9 +7,9 @@ import 'package:linette/app/modules/colors/colors.dart';
 
 
 
-abstract class OpenWindowMethod {
+class OpenWindowComponent {
 
-  static Future <void> openWindow ({required Widget window, required VoidCallback callback, required BuildContext context, required WidgetRef ref}) async {
+  static Future <void> openWindow ({required BuildContext context, required WidgetRef ref, required Widget window, required VoidCallback callback}) async {
 
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
 

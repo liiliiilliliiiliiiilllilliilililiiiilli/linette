@@ -29,10 +29,10 @@ class Bottom extends HookConsumerWidget {
     void onPress () async {
 
       context.methods.openWindow (
-        window: const HintWindow (),
-        callback: () => {},
         context: context,
-        ref: ref
+        ref: ref,
+        window: const HintWindow (),
+        callback: () => {}
       );
 
     }

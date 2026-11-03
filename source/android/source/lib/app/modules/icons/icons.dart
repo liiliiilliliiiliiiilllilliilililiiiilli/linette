@@ -146,10 +146,6 @@ class AppIcons extends ThemeExtension <AppIcons> {
 
 extension AppIconsExtension on BuildContext {
 
-  AppIcons get icons {
-
-    return Theme.of(this).extension<AppIcons>()!;
-
-  }
+  AppIcons get icons => Theme.of(this).extension<AppIcons>()!;
 
 }

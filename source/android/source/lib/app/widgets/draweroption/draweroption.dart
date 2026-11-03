@@ -38,10 +38,10 @@ class DrawerOption extends HookConsumerWidget {
     void onPress () async {
 
       context.methods.openWindow (
-        window: window,
-        callback: () => Navigator.pop (context),
         context: context,
-        ref: ref
+        ref: ref,
+        window: window,
+        callback: () => Navigator.pop (context)
       );
 
     }

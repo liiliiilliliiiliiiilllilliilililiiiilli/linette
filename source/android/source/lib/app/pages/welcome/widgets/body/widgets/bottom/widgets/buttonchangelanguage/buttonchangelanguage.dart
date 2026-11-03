@@ -22,10 +22,10 @@ class ButtonChangeLanguage extends ConsumerWidget {
     void onPress () async {
 
       context.methods.openWindow (
-        window: const LanguageWindow (),
-        callback: () => {},
         context: context,
-        ref: ref
+        ref: ref,
+        window: const LanguageWindow (),
+        callback: () => {}
       );
 
     }

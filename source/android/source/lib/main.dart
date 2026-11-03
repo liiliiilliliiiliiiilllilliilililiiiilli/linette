@@ -1,27 +1,22 @@
 // Development entry point
 
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'app/app.dart';
+import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/app.dart';
 
 
 
 void main () async {
 
-  // Предзагурзка всех картинок приложения на фоне заставки:
+  // Предзагрузка графики:
 
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized ();
-
-  FlutterNativeSplash.preserve (
-    widgetsBinding: widgetsBinding
-  );
+  WidgetsFlutterBinding.ensureInitialized ();
 
 
-  final List <String> appImages = [
-    'assets/images/branding/dark/branding.png',
-    'assets/images/branding/light/branding.png',
+  // Предзагрузка иконок:
+
+  const AppMethods().preloadIcons([
     'assets/images/icons/common/arrow.svg',
     'assets/images/icons/common/flag_finland.svg',
     'assets/images/icons/common/flag_germany.svg',
@@ -37,35 +32,11 @@ void main () async {
     'assets/images/icons/common/sun.svg',
     'assets/images/icons/common/tap.svg',
     'assets/images/icons/common/user.svg',
-    'assets/images/icons/common/wallet.svg',
-    'assets/images/logo/launcher/dark/logo.png',
-    'assets/images/logo/launcher/light/logo.png',
-    'assets/images/logo/splash/dark/logo.png',
-    'assets/images/logo/splash/light/logo.png'
-  ];
+    'assets/images/icons/common/wallet.svg'
+  ]);
 
 
-  try {
-
-    await Future.wait (
-
-      appImages.map ((image) => vg.loadPicture (SvgAssetLoader (image), null))
-
-    );
-
-  }
-
-  catch (error) {
-
-    debugPrint ('Ошибка предзагрузки картинок приложения: $error');
-
-  }
-
-
-  FlutterNativeSplash.remove ();
-
-
-  // Основная логика:
+  // Запуск основной логики:
 
 	runApp (
 
