@@ -39,9 +39,7 @@ class AccoutWindow extends HookWidget {
 
       isPressed.value = false;
 
-      context.methods.openLink (
-        link: context.texts.windowFeedbackCenter_2_Link
-      );
+      context.methods.openLink (context.texts.windowFeedbackCenter_2_Link);
 
     }
 

@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'components/openlink.dart';
-import 'components/openwindow.dart';
-import 'components/preloadicons.dart';
+import 'elements/openlink/openlink.dart';
+import 'elements/openwindow/openwindow.dart';
+import 'elements/preloadicons/preloadicons.dart';
 
 
 
@@ -13,17 +13,15 @@ class AppMethods {
   const AppMethods ();
 
 
-  Future <void> openLink ({required String link}) {
+  Future <void> openLink (String link) {
 
-    return OpenLinkComponent.openLink (
-      link: link
-    );
+    return OpenLinkElement.openLink (link);
 
   }
 
-  Future <void> openWindow ({required BuildContext context, required WidgetRef ref, required Widget window, required VoidCallback callback}) {
+  Future <void> openWindow ({required BuildContext context, required WidgetRef ref, required Widget window, void Function ()? callback}) {
 
-    return OpenWindowComponent.openWindow (
+    return OpenWindowElement.openWindow (
       context: context,
       ref: ref,
       window: window,
@@ -34,9 +32,7 @@ class AppMethods {
 
   Future <void> preloadIcons (List <String> icons) {
 
-    return PreloadIconsComponent.preloadIcons (
-      icons
-    );
+    return PreloadIconsElement.preloadIcons (icons);
 
   }
 

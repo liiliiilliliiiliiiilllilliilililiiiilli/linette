@@ -16,7 +16,7 @@ void main () async {
 
   // Предзагрузка иконок:
 
-  const AppMethods().preloadIcons([
+  await const AppMethods().preloadIcons([
     'assets/images/icons/common/arrow.svg',
     'assets/images/icons/common/flag_finland.svg',
     'assets/images/icons/common/flag_germany.svg',

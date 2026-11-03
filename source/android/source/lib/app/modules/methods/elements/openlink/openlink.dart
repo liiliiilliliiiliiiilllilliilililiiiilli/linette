@@ -1,12 +1,12 @@
-// Methods module - Open link component
+// Methods module - Open link element
 
 import 'package:url_launcher/url_launcher.dart';
 
 
 
-class OpenLinkComponent {
+class OpenLinkElement {
 
-  static Future <void> openLink ({required String link}) async {
+  static Future <void> openLink (String link) async {
 
     final Uri url = Uri.parse (link);
 

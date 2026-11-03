@@ -31,8 +31,7 @@ class Bottom extends HookConsumerWidget {
       context.methods.openWindow (
         context: context,
         ref: ref,
-        window: const HintWindow (),
-        callback: () => {}
+        window: const HintWindow ()
       );
 
     }

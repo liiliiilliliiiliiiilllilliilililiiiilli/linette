@@ -2,6 +2,7 @@
 
 import 'dart:math';
 import 'dart:ui';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
@@ -38,13 +39,13 @@ class Noise extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final vsync = useSingleTickerProvider ();
-    final timeNotifier = useValueNotifier (0.0);
+    final TickerProvider vsync = useSingleTickerProvider ();
+    final ValueNotifier <double> timeNotifier = useValueNotifier (0.0);
 
 
     useEffect (() {
 
-      final ticker = vsync.createTicker ((elapsed) {
+      final Ticker ticker = vsync.createTicker ((elapsed) {
 
         timeNotifier.value = elapsed.inMilliseconds / 1000.0;
 
@@ -140,8 +141,8 @@ class _NoisePainter extends CustomPainter {
 
   late final List <Color> _palette = List.generate (256, (i) {
 
-    final t = i / 255.0;
-    final sharpT = pow(t, sharpness).toDouble();
+    final double t = i / 255.0;
+    final double sharpT = pow(t, sharpness).toDouble();
 
 
     return Color.lerp (secondaryColor, primaryColor, sharpT)!;
@@ -168,26 +169,26 @@ class _NoisePainter extends CustomPainter {
 
     }
 
-    final time = timeNotifier.value * speed;
-    final cellWidth = size.width / resolution;
-    final cellHeight = size.height / resolution;
+    final double time = timeNotifier.value * speed;
+    final double cellWidth = size.width / resolution;
+    final double cellHeight = size.height / resolution;
 
-    final aspectRatio = size.height / size.width;
-    final stepX = scale;
-    final stepY = scale * aspectRatio;
+    final double aspectRatio = size.height / size.width;
+    final double stepX = scale;
+    final double stepY = scale * aspectRatio;
 
-    final paint = Paint ();
+    final Paint paint = Paint ();
 
     for (int y = 0; y < resolution; y++) {
 
       for (int x = 0; x < resolution; x++) {
 
-        final nx = x * stepX;
-        final ny = y * stepY;
-        final nz = time;
+        final double nx = x * stepX;
+        final double ny = y * stepY;
+        final double nz = time;
 
-        final noise = _Noise.noise3D (nx, ny, nz);
-        final colorIndex = (noise * 255).clamp(0, 255).round();
+        final double noise = _Noise.noise3D (nx, ny, nz);
+        final int colorIndex = (noise * 255).clamp(0, 255).round();
 
         paint.color = _palette [colorIndex];
 
@@ -252,9 +253,9 @@ class _Noise {
 
   static double grad (int hash, double x, double y, double z) {
 
-    final h = hash & 15;
-    final u = h < 8 ? x : y;
-    final v = h < 4 ? y : (h == 12 || h == 14 ? x : z);
+    final int h = hash & 15;
+    final double u = h < 8 ? x : y;
+    final double v = h < 4 ? y : (h == 12 || h == 14 ? x : z);
 
 
     return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
@@ -263,34 +264,34 @@ class _Noise {
 
   static double noise3D (double x, double y, double z) {
 
-    final xi = x.floor () & 255;
-    final yi = y.floor () & 255;
-    final zi = z.floor () & 255;
+    final int xi = x.floor () & 255;
+    final int yi = y.floor () & 255;
+    final int zi = z.floor () & 255;
 
-    final xf = x - x.floor ();
-    final yf = y - y.floor ();
-    final zf = z - z.floor ();
+    final double xf = x - x.floor ();
+    final double yf = y - y.floor ();
+    final double zf = z - z.floor ();
 
-    final u = fade (xf);
-    final v = fade (yf);
-    final w = fade (zf);
+    final double u = fade (xf);
+    final double v = fade (yf);
+    final double w = fade (zf);
 
-    final aaa = p [p [p [xi] + yi] + zi];
-    final aba = p [p [p [xi] + yi + 1] + zi];
-    final aab = p [p [p [xi] + yi] + zi + 1];
-    final abb = p [p [p [xi] + yi + 1] + zi + 1];
-    final baa = p [p [p [xi + 1] + yi] + zi];
-    final bba = p [p [p [xi + 1] + yi + 1] + zi];
-    final bab = p [p [p [xi + 1] + yi] + zi + 1];
-    final bbb = p [p [p [xi + 1] + yi + 1] + zi + 1];
+    final int aaa = p [p [p [xi] + yi] + zi];
+    final int aba = p [p [p [xi] + yi + 1] + zi];
+    final int aab = p [p [p [xi] + yi] + zi + 1];
+    final int abb = p [p [p [xi] + yi + 1] + zi + 1];
+    final int baa = p [p [p [xi + 1] + yi] + zi];
+    final int bba = p [p [p [xi + 1] + yi + 1] + zi];
+    final int bab = p [p [p [xi + 1] + yi] + zi + 1];
+    final int bbb = p [p [p [xi + 1] + yi + 1] + zi + 1];
 
-    final x1 = lerp (grad (aaa, xf, yf, zf), grad (baa, xf - 1, yf, zf), u);
-    final x2 = lerp (grad (aba, xf, yf - 1, zf), grad (bba, xf - 1, yf - 1, zf), u);
-    final y1 = lerp (x1, x2, v);
+    final double x1 = lerp (grad (aaa, xf, yf, zf), grad (baa, xf - 1, yf, zf), u);
+    final double x2 = lerp (grad (aba, xf, yf - 1, zf), grad (bba, xf - 1, yf - 1, zf), u);
+    final double y1 = lerp (x1, x2, v);
 
-    final x3 = lerp (grad (aab, xf, yf, zf - 1), grad (bab, xf - 1, yf, zf - 1), u);
-    final x4 = lerp (grad (abb, xf, yf - 1, zf - 1), grad (bbb, xf - 1, yf - 1, zf - 1), u);
-    final y2 = lerp (x3, x4, v);
+    final double x3 = lerp (grad (aab, xf, yf, zf - 1), grad (bab, xf - 1, yf, zf - 1), u);
+    final double x4 = lerp (grad (abb, xf, yf - 1, zf - 1), grad (bbb, xf - 1, yf - 1, zf - 1), u);
+    final double y2 = lerp (x3, x4, v);
 
 
     return (lerp (y1, y2, w) + 1) / 2;

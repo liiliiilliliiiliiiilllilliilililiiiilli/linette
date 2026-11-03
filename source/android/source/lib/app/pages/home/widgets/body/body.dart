@@ -27,11 +27,7 @@ class BodyComponent extends HookWidget {
 
     void onSwipeRight () {
 
-      // Если текущий экран не активен (если поверх него уже что-нибудь есть), то игнорируем нажатие:
-
-      final bool isCurrentRoute = ModalRoute.of(context)?.isCurrent ?? true;
-
-      if (isCurrentRoute && !Scaffold.of(context).isDrawerOpen) {
+      if ((ModalRoute.of(context)?.isCurrent ?? true) && !(Scaffold.of(context).isDrawerOpen)) {  // Если текущий экран активен (т.е. поверх него ничего нет) и если не открыто боковое меню
 
         Navigator.pushNamed (context, '/connections');
 

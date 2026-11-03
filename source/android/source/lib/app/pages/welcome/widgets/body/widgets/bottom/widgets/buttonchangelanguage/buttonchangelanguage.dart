@@ -24,8 +24,7 @@ class ButtonChangeLanguage extends ConsumerWidget {
       context.methods.openWindow (
         context: context,
         ref: ref,
-        window: const LanguageWindow (),
-        callback: () => {}
+        window: const LanguageWindow ()
       );
 
     }
