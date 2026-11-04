@@ -101,13 +101,17 @@ class Top extends HookWidget {
               ]
             )
           ),
-          Text (
-            context.texts.pageWelcomeBodyTopSubtitle,
-            style: TextStyle (
-              fontFamily: context.fonts.archivo,
-              fontWeight: FontWeight.w500,
-              fontSize: 20,
-              color: context.colors.title
+          Container (
+            height: 31,
+            alignment: Alignment.center,
+            child: Text (
+              context.texts.pageWelcomeBodyTopSubtitle,
+              style: TextStyle (
+                fontFamily: context.fonts.archivo,
+                fontWeight: FontWeight.w500,
+                fontSize: 20,
+                color: context.colors.title
+              )
             )
           )
         ]

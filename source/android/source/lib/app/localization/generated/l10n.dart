@@ -280,10 +280,10 @@ class T {
     );
   }
 
-  /// `Connect to VPN on app launch`
+  /// `Start the system on app launch`
   String get pageHomeDrawerBottom {
     return Intl.message(
-      'Connect to VPN on app launch',
+      'Start the system on app launch',
       name: 'pageHomeDrawerBottom',
       desc: '',
       args: [],

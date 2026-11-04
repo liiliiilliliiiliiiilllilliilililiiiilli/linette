@@ -18,13 +18,17 @@ class States extends StatelessWidget {
 
     return (
 
-      Text (
-        context.texts.pageHomeBodyBottom,
-        style: TextStyle (
-          fontFamily: context.fonts.archivo,
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-          color: context.colors.states
+      Container (
+        height: 25,
+        alignment: Alignment.center,
+        child: Text (
+          context.texts.pageHomeBodyBottom,
+          style: TextStyle (
+            fontFamily: context.fonts.archivo,
+            fontWeight: FontWeight.w500,
+            fontSize: 16,
+            color: context.colors.states
+          )
         )
       )
 

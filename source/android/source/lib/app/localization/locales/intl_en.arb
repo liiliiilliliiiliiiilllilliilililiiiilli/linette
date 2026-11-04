@@ -26,7 +26,7 @@
 	"pageHomeDrawerCenterNet": "Network parameters",
 	"pageHomeDrawerCenterAccout": "Account",
 	"pageHomeDrawerCenterWallet": "Wallet",
-	"pageHomeDrawerBottom": "Connect to VPN on app launch",
+	"pageHomeDrawerBottom": "Start the system on app launch",
 
 	"pageConnectionsAppBar": "Choose the server",
 	"pageConnectionsBodyLiner": "{num} online",

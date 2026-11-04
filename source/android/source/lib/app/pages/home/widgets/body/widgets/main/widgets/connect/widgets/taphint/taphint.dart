@@ -27,6 +27,7 @@ class TapHint extends HookWidget {
       initialValue: 0
     );
 
+
     final CurvedAnimation curvedAnimation = CurvedAnimation (
       parent: controller,
       curve: Curves.easeInOut
@@ -86,35 +87,39 @@ class TapHint extends HookWidget {
 
     return (
 
-      ScaleTransition (
-        scale: scaleAnimation,
-        child: FadeTransition (
-          opacity: opacityAnimation,
-          child: Row (
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: 8,
-            children: [
-              SvgPicture.asset (
-                context.icons.tap,
-                colorFilter: ColorFilter.mode (
-                  context.colors.tapHintIcon,
-                  BlendMode.srcIn
+      Container (
+        height: 23,
+        alignment: Alignment.center,
+        child: ScaleTransition (
+          scale: scaleAnimation,
+          child: FadeTransition (
+            opacity: opacityAnimation,
+            child: Row (
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              spacing: 8,
+              children: [
+                SvgPicture.asset (
+                  context.icons.tap,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.tapHintIcon,
+                    BlendMode.srcIn
+                  ),
+                  width: 17,
+                  height: 17
                 ),
-                width: 17,
-                height: 17
-              ),
-              Text (
-                context.texts.pageHomeBodyCenterTapToConnect,
-                style: TextStyle (
-                  fontFamily: context.fonts.archivo,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 17.5,
-                  color: context.colors.tapHintText,
-                  height: 1
+                Text (
+                  context.texts.pageHomeBodyCenterTapToConnect,
+                  style: TextStyle (
+                    fontFamily: context.fonts.archivo,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 17.5,
+                    color: context.colors.tapHintText,
+                    height: 1
+                  )
                 )
-              )
-            ]
+              ]
+            )
           )
         )
       )

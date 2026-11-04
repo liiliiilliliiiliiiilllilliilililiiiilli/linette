@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 import 'models/shape/shape.dart';
 
 
@@ -44,7 +44,7 @@ class AppBarButton extends HookWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: AnimatorPresser (
+        child: PresserAnimator (
           isPressed: isPressed,
           child: AnimatedContainer (
             duration: const Duration (

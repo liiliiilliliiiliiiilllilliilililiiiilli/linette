@@ -18,14 +18,18 @@ class Main extends StatelessWidget {
 
     return (
 
-      Text (
-        context.texts.pageWelcomeBodyCenter,
-        textAlign: TextAlign.center,
-        style: TextStyle (
-          fontFamily: context.fonts.archivo,
-          fontWeight: FontWeight.w500,
-          fontSize: 18,
-          color: context.colors.title
+      Container (
+        height: 136,
+        alignment: Alignment.center,
+        child: Text (
+          context.texts.pageWelcomeBodyCenter,
+          textAlign: TextAlign.center,
+          style: TextStyle (
+            fontFamily: context.fonts.archivo,
+            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            color: context.colors.title
+          )
         )
       )
 

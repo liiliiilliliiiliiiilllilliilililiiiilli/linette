@@ -74,8 +74,11 @@ class LanguageWindow extends HookConsumerWidget {
             child: Material (
               type: MaterialType.transparency,
               child: Padding (
-                padding: const EdgeInsets.fromLTRB (0, 10, 0, 10),
-                  child: Column (
+                padding: const EdgeInsets.symmetric (
+                  horizontal: 0,
+                  vertical: 10
+                ),
+                child: Column (
                   spacing: 22,
                   children: languages.map ((language) =>
 

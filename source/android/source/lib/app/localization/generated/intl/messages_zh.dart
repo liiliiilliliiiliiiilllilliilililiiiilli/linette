@@ -54,9 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pageHomeBodyTop": MessageLookupByLibrary.simpleMessage("连接未受保护"),
     "pageHomeBottom_1": MessageLookupByLibrary.simpleMessage("了解更多"),
     "pageHomeBottom_2": MessageLookupByLibrary.simpleMessage(" 关于为绕过限制而创建的服务。"),
-    "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage(
-      "启动应用程序时连接VPN",
-    ),
+    "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage("应用启动时启动系统"),
     "pageHomeDrawerCenterAccout": MessageLookupByLibrary.simpleMessage("帐户"),
     "pageHomeDrawerCenterArsenal": MessageLookupByLibrary.simpleMessage("兵工厂"),
     "pageHomeDrawerCenterFeedback": MessageLookupByLibrary.simpleMessage("反馈"),

@@ -6,7 +6,7 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
@@ -86,7 +86,10 @@ class Bottom extends HookWidget {
         child: Container (
           height: 80,
           alignment: Alignment.bottomLeft,
-          padding: const EdgeInsets.fromLTRB (20, 15, 20, 15),
+          padding: const EdgeInsets.symmetric (
+            horizontal: 20,
+            vertical: 15
+          ),
           decoration: BoxDecoration (
             color: context.colors.appBarBack,
             border: Border (
@@ -96,7 +99,7 @@ class Bottom extends HookWidget {
               )
             )
           ),
-          child: AnimatorPresser (
+          child: PresserAnimator (
             isPressed: isPressed,
             scaleRate: 0.97,
             child: Row (

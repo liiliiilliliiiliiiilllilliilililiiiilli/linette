@@ -9,7 +9,7 @@ import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 import 'package:linette/app/windows/hint/hint.dart';
 
 
@@ -104,7 +104,10 @@ class Bottom extends HookConsumerWidget {
             child: Container (
               width: double.infinity,
               height: 80,
-              padding: const EdgeInsets.fromLTRB (25, 16, 25, 16),
+              padding: const EdgeInsets.symmetric (
+                horizontal: 25,
+                vertical: 16
+              ),
               decoration: BoxDecoration (
                 border: Border (
                   top: BorderSide (
@@ -114,7 +117,7 @@ class Bottom extends HookConsumerWidget {
                 ),
                 color: context.colors.bottomBarBack
               ),
-              child: AnimatorPresser (
+              child: PresserAnimator (
                 isPressed: isPressed,
                 scaleRate: 0.975,
                 child: AnimatedContainer (

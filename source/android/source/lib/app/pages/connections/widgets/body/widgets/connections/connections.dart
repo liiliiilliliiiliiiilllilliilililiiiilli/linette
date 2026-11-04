@@ -22,7 +22,10 @@ class Connections extends StatelessWidget {
     return (
 
       Container (
-        padding: const EdgeInsets.fromLTRB (5, 0, 5, 0),
+        padding: const EdgeInsets.symmetric (
+          horizontal: 5,
+          vertical: 0
+        ),
         child: Column (
           spacing: 11,
           children: connections.map ((connection) =>

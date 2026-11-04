@@ -22,11 +22,11 @@ class Connect extends StatelessWidget {
         children: [
           ConnectionButton (),
           SizedBox (
-            height: 20
+            height: 18
           ),
           TapHint (),
           SizedBox (
-            height: 28
+            height: 26
           ),
           ChooseConnectionButton ()
         ]

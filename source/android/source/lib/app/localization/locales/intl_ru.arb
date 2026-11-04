@@ -26,7 +26,7 @@
 	"pageHomeDrawerCenterNet": "Параметры сети",
 	"pageHomeDrawerCenterAccout": "Аккаунт",
 	"pageHomeDrawerCenterWallet": "Кошелек",
-	"pageHomeDrawerBottom": "Подключение к VPN при запуске приложения",
+	"pageHomeDrawerBottom": "Включение системы при запуске приложения",
 
 	"pageConnectionsAppBar": "Выберите сервер",
 	"pageConnectionsBodyLiner": "{num} онлайн",

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 
 
-class AnimatorPresser extends StatelessWidget {
+class PresserAnimator extends StatelessWidget {
 
   final double scaleRate;
   final double opacityRate;
@@ -13,7 +13,7 @@ class AnimatorPresser extends StatelessWidget {
   final Widget child;
 
 
-  const AnimatorPresser ({
+  const PresserAnimator ({
     super.key,
     this.scaleRate = 0.96,
     this.opacityRate = 0.66,

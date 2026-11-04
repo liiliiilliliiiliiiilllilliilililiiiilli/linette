@@ -6,7 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
@@ -43,7 +43,7 @@ class BottomComponent extends HookConsumerWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: AnimatorPresser (
+        child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.98,
           child: Container (

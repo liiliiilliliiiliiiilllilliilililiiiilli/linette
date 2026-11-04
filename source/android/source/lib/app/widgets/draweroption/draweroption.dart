@@ -9,7 +9,7 @@ import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
@@ -59,13 +59,13 @@ class DrawerOption extends HookConsumerWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: AnimatorPresser (
+        child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.97,
           child: Container (
-            padding: const EdgeInsets.only (
-              top: 10,
-              bottom: 10
+            height: 45.75,
+            padding: const EdgeInsets.symmetric (
+              vertical: 10
             ),
             child: Row (
               children: [

@@ -8,7 +8,7 @@ import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
@@ -33,47 +33,51 @@ class ChooseConnectionButton extends HookWidget {
 
     return (
 
-      Presser (
-        isPressed: isPressed,
-        onPress: onPress,
-        child: AnimatorPresser (
+      Container (
+        height: 29,
+        alignment: Alignment.center,
+        child: Presser (
           isPressed: isPressed,
-          child: Container (
-            padding: const EdgeInsets.all (5),
-            child: Row (
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              spacing: 8,
-              children: [
-                SvgPicture.asset (
-                  context.icons.location,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.buttonChooseConnectionIconLeft,
-                    BlendMode.srcIn
+          onPress: onPress,
+          child: PresserAnimator (
+            isPressed: isPressed,
+            child: Container (
+              padding: const EdgeInsets.all (5),
+              child: Row (
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                spacing: 8,
+                children: [
+                  SvgPicture.asset (
+                    context.icons.location,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.buttonChooseConnectionIconLeft,
+                      BlendMode.srcIn
+                    ),
+                    width: 17,
+                    height: 17
                   ),
-                  width: 17,
-                  height: 17
-                ),
-                Text (
-                  context.texts.pageHomeBodyCenterGoNetherlands,
-                  style: TextStyle (
-                    fontFamily: context.fonts.archivo,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 17.5,
-                    color: context.colors.buttonChooseConnectionText,
-                    height: 1
+                  Text (
+                    context.texts.pageHomeBodyCenterGoNetherlands,
+                    style: TextStyle (
+                      fontFamily: context.fonts.archivo,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 17.5,
+                      color: context.colors.buttonChooseConnectionText,
+                      height: 1
+                    )
+                  ),
+                  SvgPicture.asset (
+                    context.icons.arrow,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.buttonChooseConnectionIconRight,
+                      BlendMode.srcIn
+                    ),
+                    width: 15,
+                    height: 15
                   )
-                ),
-                SvgPicture.asset (
-                  context.icons.arrow,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.buttonChooseConnectionIconRight,
-                    BlendMode.srcIn
-                  ),
-                  width: 15,
-                  height: 15
-                )
-              ]
+                ]
+              )
             )
           )
         )

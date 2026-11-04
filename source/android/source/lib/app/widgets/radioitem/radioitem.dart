@@ -5,7 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
@@ -52,7 +52,7 @@ class RadioItem extends HookWidget {
         child: Presser (
           isPressed: isPressed,
           onPress: onPress,
-          child: AnimatorPresser (
+          child: PresserAnimator (
             scaleRate: 0.9675,
             isPressed: isPressed,
             child: Row (

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 import 'widgets/country/country.dart';
 import 'widgets/choicestatus/choicestatus.dart';
 import 'widgets/availabilitystatus/availabilitystatus.dart';
@@ -38,7 +38,7 @@ class Connection extends HookWidget {
       Presser (
         isPressed: isPressed,
         onPress: model.onPress,
-        child: AnimatorPresser (
+        child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.975,
           child: Container (

@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
       " о сервисе, который создан для обхода ограничений.",
     ),
     "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage(
-      "Подключение к VPN при запуске приложения",
+      "Включение системы при запуске приложения",
     ),
     "pageHomeDrawerCenterAccout": MessageLookupByLibrary.simpleMessage(
       "Аккаунт",

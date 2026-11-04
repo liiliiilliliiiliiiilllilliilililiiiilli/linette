@@ -5,7 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 
 
@@ -45,7 +45,7 @@ class ConnectionButton extends HookWidget {
     return (
 
       Center (
-        child: AnimatorPresser (
+        child: PresserAnimator (
           isPressed: isPressed,
           child: Opacity (
             opacity: 0.9,

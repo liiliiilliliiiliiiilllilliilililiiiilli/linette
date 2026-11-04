@@ -7,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'package:linette/app/widgets/animatorpresser/animatorpresser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
@@ -96,7 +96,7 @@ class ButtonComponent extends HookWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: AnimatorPresser (
+        child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.97,
           child: Row (
@@ -118,6 +118,8 @@ class ButtonComponent extends HookWidget {
                 )
               ],
               Container (
+                height: 40,
+                alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric (
                   horizontal: 16.5,
                   vertical: 7.5

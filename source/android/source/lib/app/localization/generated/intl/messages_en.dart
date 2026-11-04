@@ -61,7 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
       " about the service, created to pass the restrictions.",
     ),
     "pageHomeDrawerBottom": MessageLookupByLibrary.simpleMessage(
-      "Connect to VPN on app launch",
+      "Start the system on app launch",
     ),
     "pageHomeDrawerCenterAccout": MessageLookupByLibrary.simpleMessage(
       "Account",

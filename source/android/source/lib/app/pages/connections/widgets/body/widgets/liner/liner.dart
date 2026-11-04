@@ -33,18 +33,21 @@ class Liner extends StatelessWidget {
           Transform.translate (
             offset: const Offset (38, -2),
             child: Container (
+              height: 38,
               color: context.colors.back,
-              padding: const EdgeInsets.only (
-                left: 8,
-                right: 8
+              padding: const EdgeInsets.symmetric (
+                horizontal: 8
               ),
-              child: Text (
-                context.texts.pageConnectionsBodyLiner (onlineNum),
-                style: TextStyle (
-                  fontFamily: context.fonts.archivo,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 25,
-                  color: context.colors.lineText
+              child: Center (
+                widthFactor: 1,
+                child: Text (
+                  context.texts.pageConnectionsBodyLiner (onlineNum),
+                  style: TextStyle (
+                    fontFamily: context.fonts.archivo,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 25,
+                    color: context.colors.lineText
+                  )
                 )
               )
             )
