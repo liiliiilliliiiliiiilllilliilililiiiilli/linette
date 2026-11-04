@@ -38,51 +38,57 @@ class TitleComponent extends HookWidget {
     return (
 
       IntrinsicWidth (
-        child: Column (
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ShaderMask (
-              blendMode: BlendMode.srcIn,
-              shaderCallback: (bounds) {
+        child: Transform.translate (
+          offset: const Offset (0, -2.75 / 1.5 + 0.25),
+          child: Column (
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ShaderMask (
+                blendMode: BlendMode.srcIn,
+                shaderCallback: (bounds) {
 
-                return (
+                  return (
 
-                  LinearGradient(
-                    begin: const Alignment (1.0, 0.0),
-                    end: const Alignment (-1.0, 0.0),
-                    stops: [
-                      (transformValue - glowWidth).clamp (0.0, 1.0),
-                      transformValue.clamp (0.0, 1.0),
-                      (transformValue + glowWidth).clamp (0.0, 1.0)
-                    ],
-                    colors: [
-                      context.colors.title,
-                      context.colors.titleShadow,
-                      context.colors.title
-                    ]
-                  ).createShader(bounds)
+                    LinearGradient(
+                      begin: const Alignment (1.0, 0.0),
+                      end: const Alignment (-1.0, 0.0),
+                      stops: [
+                        (transformValue - glowWidth).clamp (0.0, 1.0),
+                        transformValue.clamp (0.0, 1.0),
+                        (transformValue + glowWidth).clamp (0.0, 1.0)
+                      ],
+                      colors: [
+                        context.colors.title,
+                        context.colors.titleShadow,
+                        context.colors.title
+                      ]
+                    ).createShader(bounds)
 
-                );
+                  );
 
-              },
-              child: Text (
-                context.texts.pageHomeAppBar,
-                style: TextStyle (
-                  fontFamily: context.fonts.fredoka,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 25,
-                  color: context.colors.title
+                },
+                child: Text (
+                  context.texts.pageHomeAppBar,
+                  style: TextStyle (
+                    fontFamily: context.fonts.fredoka,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 25,
+                    color: context.colors.title
+                  )
+                )
+              ),
+              Transform.translate (
+                offset: const Offset (0, -0.5),
+                child: Container (
+                  height: 2.75,
+                  decoration: BoxDecoration (
+                    borderRadius: BorderRadius.circular (100),
+                    color: context.colors.prime
+                  )
                 )
               )
-            ),
-            Container (
-              height: 2.75,
-              decoration: BoxDecoration (
-                borderRadius: BorderRadius.circular (100),
-                color: context.colors.prime
-              )
-            )
-          ]
+            ]
+          )
         )
       )
 
