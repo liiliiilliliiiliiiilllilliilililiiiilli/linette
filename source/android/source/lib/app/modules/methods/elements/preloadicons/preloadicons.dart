@@ -1,4 +1,4 @@
-// Methods module - Preload icons element
+// Methods module - Preload icons
 
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -10,7 +10,7 @@ class PreloadIconsElement {
 
   static Future <void> preloadIcons (List <String> icons) async {
 
-    // Пауза сплэш-экрана:
+    // Задержание сплэш-экрана:
 
     WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized ();
 

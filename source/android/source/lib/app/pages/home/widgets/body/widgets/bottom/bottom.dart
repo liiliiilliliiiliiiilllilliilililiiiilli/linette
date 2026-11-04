@@ -26,9 +26,9 @@ class Bottom extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void onPress () async {
+    Future <void> onPress () async {
 
-      context.methods.openWindow (
+      await context.methods.openWindow (
         context: context,
         ref: ref,
         window: const HintWindow ()
@@ -39,7 +39,7 @@ class Bottom extends HookConsumerWidget {
     bool isInDeadZone (double localY) {
 
       const double componentHeight = 80;
-      const double deadZoneHeight = 9.25;
+      const double deadZoneHeight = 9.5;
 
 
       final bool isInDeadZone = localY > (componentHeight - deadZoneHeight);

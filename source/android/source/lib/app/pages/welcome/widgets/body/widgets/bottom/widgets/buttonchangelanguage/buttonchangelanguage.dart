@@ -19,9 +19,9 @@ class ButtonChangeLanguage extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    void onPress () async {
+    Future <void> onPress () async {
 
-      context.methods.openWindow (
+      await context.methods.openWindow (
         context: context,
         ref: ref,
         window: const LanguageWindow ()

@@ -1,4 +1,4 @@
-// Methods module - Open link element
+// Methods module - Open link
 
 import 'package:url_launcher/url_launcher.dart';
 

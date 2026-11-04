@@ -19,9 +19,9 @@ class AppMethods {
 
   }
 
-  Future <void> openWindow ({required BuildContext context, required WidgetRef ref, required Widget window, void Function ()? callback}) {
+  Future <void> openWindow ({required BuildContext context, required WidgetRef ref, required Widget window, void Function ()? callback}) async {
 
-    return OpenWindowElement.openWindow (
+    return await OpenWindowElement.openWindow (
       context: context,
       ref: ref,
       window: window,

@@ -29,12 +29,60 @@ class Bottom extends HookWidget {
 
     }
 
+    bool isInDeadZone (double localY) {
+
+      const double componentHeight = 80;
+      const double deadZoneHeight = 9.5;
+
+
+      final bool isInDeadZone = localY > (componentHeight - deadZoneHeight);
+
+
+      return isInDeadZone;
+
+    }
+
+    void onTapDown (TapDownDetails details) {
+
+      if (!isInDeadZone (details.localPosition.dy)) {
+
+        isPressed.value = true;
+
+      }
+
+    }
+
+    void onTapUp (TapUpDetails details) {
+
+      isPressed.value = false;
+
+      if (!isInDeadZone (details.localPosition.dy)) {
+
+        onPress ();
+
+      }
+
+    }
+
+    void onPanDown (DragDownDetails details) {
+
+      if (!isInDeadZone (details.localPosition.dy)) {
+
+        isPressed.value = true;
+
+      }
+
+    }
+
 
     return (
 
       Presser (
         isPressed: isPressed,
         onPress: onPress,
+        onTapDown: onTapDown,
+        onTapUp: onTapUp,
+        onPanDown: onPanDown,
         child: Container (
           height: 80,
           alignment: Alignment.bottomLeft,
