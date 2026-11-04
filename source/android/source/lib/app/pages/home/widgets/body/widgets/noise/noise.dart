@@ -1,5 +1,6 @@
 // Home page - Body - Noise
 
+import 'dart:typed_data';
 import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/scheduler.dart';
@@ -42,6 +43,18 @@ class Noise extends HookWidget {
     final TickerProvider vsync = useSingleTickerProvider ();
     final ValueNotifier <double> timeNotifier = useValueNotifier (0.0);
 
+    final Offset spaceOffset = useMemoized (() {
+
+      final random = Random ();
+
+
+      return Offset (
+        random.nextDouble () * 10000,  // Случайный сдвиг по x
+        random.nextDouble () * 10000  // Случайный сдвиг по y
+      );
+
+    });
+
 
     useEffect (() {
 
@@ -75,6 +88,7 @@ class Noise extends HookWidget {
                   size: Size.infinite,
                   painter: _NoisePainter (
                     timeNotifier: timeNotifier,
+                    spaceOffset: spaceOffset,  // Передаем случайное смещение
                     primaryColor: primaryColor,
                     secondaryColor: secondaryColor,
                     scale: scale,
@@ -132,12 +146,14 @@ class Noise extends HookWidget {
 class _NoisePainter extends CustomPainter {
 
   final ValueNotifier <double> timeNotifier;
+  final Offset spaceOffset;
   final Color primaryColor;
   final Color secondaryColor;
   final double scale;
   final double sharpness;
   final int resolution;
   final double speed;
+
 
   late final List <Color> _palette = List.generate (256, (i) {
 
@@ -152,6 +168,7 @@ class _NoisePainter extends CustomPainter {
 
   _NoisePainter ({
     required this.timeNotifier,
+    required this.spaceOffset,
     required this.primaryColor,
     required this.secondaryColor,
     required this.scale,
@@ -177,17 +194,20 @@ class _NoisePainter extends CustomPainter {
     final double stepX = scale;
     final double stepY = scale * aspectRatio;
 
-    final Paint paint = Paint ();
+    final Paint paint = Paint()..style = PaintingStyle.fill;
 
     for (int y = 0; y < resolution; y++) {
 
+      final double ny = (y * stepY) + spaceOffset.dy;
+
+      final double top = y * cellHeight - 1;
+      final double height = cellHeight + 2;
+
       for (int x = 0; x < resolution; x++) {
 
-        final double nx = x * stepX;
-        final double ny = y * stepY;
-        final double nz = time;
+        final double nx = (x * stepX) + spaceOffset.dx;
 
-        final double noise = _Noise.noise3D (nx, ny, nz);
+        final double noise = _Noise.noise3D (nx, ny, time);
         final int colorIndex = (noise * 255).clamp(0, 255).round();
 
         paint.color = _palette [colorIndex];
@@ -195,9 +215,9 @@ class _NoisePainter extends CustomPainter {
         canvas.drawRect (
           Rect.fromLTWH (
             x * cellWidth - 1,
-            y * cellHeight - 1,
+            top,
             cellWidth + 2,
-            cellHeight + 2
+            height
           ),
           paint
         );
@@ -211,9 +231,8 @@ class _NoisePainter extends CustomPainter {
 
   @override bool shouldRepaint (covariant _NoisePainter oldDelegate) {
 
-    return
-
-      oldDelegate.timeNotifier != timeNotifier ||
+    return oldDelegate.timeNotifier != timeNotifier ||
+      oldDelegate.spaceOffset != spaceOffset ||
       oldDelegate.primaryColor != primaryColor ||
       oldDelegate.secondaryColor != secondaryColor ||
       oldDelegate.scale != scale ||
@@ -229,15 +248,10 @@ class _NoisePainter extends CustomPainter {
 
 class _Noise {
 
-  static const List <int> permutation = [
-    151, 160, 137, 91, 90, 15, 131, 13, 201, 95, 96, 53, 194, 233, 7, 225, 140, 36, 103, 30, 69, 142, 8, 99, 37, 240, 21, 10, 23, 190, 6, 148, 247, 120, 234, 75, 0, 26, 197, 62, 94, 252, 219, 203, 117, 35, 11, 32, 57, 177, 33, 88, 237, 149, 56, 87, 174, 20, 125, 136, 171, 168, 68, 175, 74, 165, 71, 134, 139, 48, 27, 166, 77, 146, 158, 231, 83, 111, 229, 122, 60, 211, 133, 230, 220, 105, 92, 41, 55, 46, 245, 40, 244, 102, 143, 54, 65, 25, 63, 161, 1, 216, 80, 73, 209, 76, 132, 187, 208, 89, 18, 169, 200, 196, 135, 130, 116, 188, 159, 86, 164, 100, 109, 198, 173, 186, 3, 64, 52, 217, 226, 250, 124, 123, 5, 202, 38, 147, 118, 126, 255, 82, 85, 212, 207, 206, 59, 227, 47, 16, 58, 17, 182, 189, 28, 42, 223, 183, 170, 213, 119, 248, 152, 2, 44, 154, 163, 70, 221, 153, 101, 155, 167, 43, 172, 9, 129, 22, 39, 253, 19, 98, 108, 110, 79, 113, 224, 232, 178, 185, 112, 104, 218, 246, 97, 228, 251, 34, 242, 193, 238, 210, 144, 12, 191, 179, 162, 241, 81, 51, 145, 235, 249, 14, 239, 107, 49, 192, 214, 31, 181, 199, 106, 157, 184, 84, 204, 176, 115, 121, 50, 45, 127, 4, 150, 254, 138, 236, 205, 93, 222, 114, 67, 29, 24, 72, 243, 141, 128, 195, 78, 66, 215, 61, 156, 180
-  ];
+  static const List <int> permutation = [151, 160, 137, 91, 90, 15, 131, 13, 201, 95, 96, 53, 194, 233, 7, 225, 140, 36, 103, 30, 69, 142, 8, 99, 37, 240, 21, 10, 23, 190, 6, 148, 247, 120, 234, 75, 0, 26, 197, 62, 94, 252, 219, 203, 117, 35, 11, 32, 57, 177, 33, 88, 237, 149, 56, 87, 174, 20, 125, 136, 171, 168, 68, 175, 74, 165, 71, 134, 139, 48, 27, 166, 77, 146, 158, 231, 83, 111, 229, 122, 60, 211, 133, 230, 220, 105, 92, 41, 55, 46, 245, 40, 244, 102, 143, 54, 65, 25, 63, 161, 1, 216, 80, 73, 209, 76, 132, 187, 208, 89, 18, 169, 200, 196, 135, 130, 116, 188, 159, 86, 164, 100, 109, 198, 173, 186, 3, 64, 52, 217, 226, 250, 124, 123, 5, 202, 38, 147, 118, 126, 255, 82, 85, 212, 207, 206, 59, 227, 47, 16, 58, 17, 182, 189, 28, 42, 223, 183, 170, 213, 119, 248, 152, 2, 44, 154, 163, 70, 221, 153, 101, 155, 167, 43, 172, 9, 129, 22, 39, 253, 19, 98, 108, 110, 79, 113, 224, 232, 178, 185, 112, 104, 218, 246, 97, 228, 251, 34, 242, 193, 238, 210, 144, 12, 191, 179, 162, 241, 81, 51, 145, 235, 249, 14, 239, 107, 49, 192, 214, 31, 181, 199, 106, 157, 184, 84, 204, 176, 115, 121, 50, 45, 127, 4, 150, 254, 138, 236, 205, 93, 222, 114, 67, 29, 24, 72, 243, 141, 128, 195, 78, 66, 215, 61, 156, 180];
 
-  static final List <int> p = List.generate (512, (i) {
+  static final Uint16List p = Uint16List.fromList (List.generate (512, (i) => permutation [i % 256]));
 
-    return permutation [i % 256];
-
-  });
 
   static double fade (double t) {
 
@@ -264,26 +278,38 @@ class _Noise {
 
   static double noise3D (double x, double y, double z) {
 
-    final int xi = x.floor () & 255;
-    final int yi = y.floor () & 255;
-    final int zi = z.floor () & 255;
+    final int xFloor = x.floor ();
+    final int yFloor = y.floor ();
+    final int zFloor = z.floor ();
 
-    final double xf = x - x.floor ();
-    final double yf = y - y.floor ();
-    final double zf = z - z.floor ();
+    final int xi = xFloor & 255;
+    final int yi = yFloor & 255;
+    final int zi = zFloor & 255;
+
+    final double xf = x - xFloor;
+    final double yf = y - yFloor;
+    final double zf = z - zFloor;
 
     final double u = fade (xf);
     final double v = fade (yf);
     final double w = fade (zf);
 
-    final int aaa = p [p [p [xi] + yi] + zi];
-    final int aba = p [p [p [xi] + yi + 1] + zi];
-    final int aab = p [p [p [xi] + yi] + zi + 1];
-    final int abb = p [p [p [xi] + yi + 1] + zi + 1];
-    final int baa = p [p [p [xi + 1] + yi] + zi];
-    final int bba = p [p [p [xi + 1] + yi + 1] + zi];
-    final int bab = p [p [p [xi + 1] + yi] + zi + 1];
-    final int bbb = p [p [p [xi + 1] + yi + 1] + zi + 1];
+    final int pXi = p [xi];
+    final int pXi1 = p [xi + 1];
+
+    final int pXiy = p [pXi + yi];
+    final int pXiy1 = p [pXi + yi + 1];
+    final int pXi1y = p [pXi1 + yi];
+    final int pXi1y1 = p [pXi1 + yi + 1];
+
+    final int aaa = p [pXiy + zi];
+    final int aba = p [pXiy1 + zi];
+    final int aab = p [pXiy + zi + 1];
+    final int abb = p [pXiy1 + zi + 1];
+    final int baa = p [pXi1y + zi];
+    final int bba = p [pXi1y1 + zi];
+    final int bab = p [pXi1y + zi + 1];
+    final int bbb = p [pXi1y1 + zi + 1];
 
     final double x1 = lerp (grad (aaa, xf, yf, zf), grad (baa, xf - 1, yf, zf), u);
     final double x2 = lerp (grad (aba, xf, yf - 1, zf), grad (bba, xf - 1, yf - 1, zf), u);
