@@ -69,17 +69,18 @@ class LanguageWindow extends HookConsumerWidget {
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
-              top: 5
+              top: 5,
+              bottom: 2.5
             ),
             child: Material (
               type: MaterialType.transparency,
               child: Padding (
                 padding: const EdgeInsets.symmetric (
                   horizontal: 0,
-                  vertical: 10
+                  vertical: 10 - 4
                 ),
                 child: Column (
-                  spacing: 22,
+                  spacing: 22 - 4 * 2,
                   children: languages.map ((language) =>
 
                     switch (language) {

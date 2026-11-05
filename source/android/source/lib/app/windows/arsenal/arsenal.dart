@@ -76,7 +76,8 @@ class ArsenalWindow extends HookWidget {
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
-              top: 10
+              top: 10,
+              bottom: 2.5
             ),
             child: Text.rich (
               TextSpan (

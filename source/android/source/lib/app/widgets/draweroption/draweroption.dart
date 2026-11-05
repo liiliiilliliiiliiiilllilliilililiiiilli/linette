@@ -59,59 +59,64 @@ class DrawerOption extends HookConsumerWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: PresserAnimator (
-          isPressed: isPressed,
-          scaleRate: 0.97,
-          child: Container (
-            height: 45.75,
-            padding: const EdgeInsets.symmetric (
-              vertical: 10
-            ),
-            child: Row (
-              children: [
-                SvgPicture.asset (
-                  iconLeft,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.drawerOptionIconLeft,
-                    BlendMode.srcIn
-                  ),
-                  height: 19
-                ),
-                const SizedBox (
-                  width: 12
-                ),
-                Text (
-                  text,
-                  style: TextStyle (
-                    fontFamily: context.fonts.archivo,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17.5,
-                    color: context.colors.drawerOptionText
-                  )
-                ),
-                Flexible (
-                  child: Container ()
-                ),
-                textRight == null ?
+        child: Padding (
+          padding: const EdgeInsets.symmetric (
+            horizontal: 8
+          ),
+          child: PresserAnimator (
+            isPressed: isPressed,
+            scaleRate: 0.97,
+            child: Container (
+              height: 45.75,
+              padding: const EdgeInsets.symmetric (
+                vertical: 10
+              ),
+              child: Row (
+                children: [
                   SvgPicture.asset (
-                    context.icons.arrow,
+                    iconLeft,
                     colorFilter: ColorFilter.mode (
-                      context.colors.drawerOptionIconRight,
+                      context.colors.drawerOptionIconLeft,
                       BlendMode.srcIn
                     ),
-                    height: 14
-                  )
-                :
+                    height: 19
+                  ),
+                  const SizedBox (
+                    width: 12
+                  ),
                   Text (
-                    textRight!,
+                    text,
                     style: TextStyle (
                       fontFamily: context.fonts.archivo,
                       fontWeight: FontWeight.w500,
                       fontSize: 17.5,
-                      color: context.colors.drawerOptionTextValue
+                      color: context.colors.drawerOptionText
                     )
-                  )
-              ]
+                  ),
+                  Flexible (
+                    child: Container ()
+                  ),
+                  textRight == null ?
+                    SvgPicture.asset (
+                      context.icons.arrow,
+                      colorFilter: ColorFilter.mode (
+                        context.colors.drawerOptionIconRight,
+                        BlendMode.srcIn
+                      ),
+                      height: 14
+                    )
+                  :
+                    Text (
+                      textRight!,
+                      style: TextStyle (
+                        fontFamily: context.fonts.archivo,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 17.5,
+                        color: context.colors.drawerOptionTextValue
+                      )
+                    )
+                ]
+              )
             )
           )
         )

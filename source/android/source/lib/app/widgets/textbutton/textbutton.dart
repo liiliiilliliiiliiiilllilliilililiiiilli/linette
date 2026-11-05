@@ -47,50 +47,53 @@ class TextButtonComponent extends HookWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: PresserAnimator (
-          isPressed: isPressed,
-          scaleRate: 0.97,
-          child: Row (
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: 8,
-            children: [
-              if (iconLeft != null) ... [
-                SvgPicture.asset (
-                  iconLeft!,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.textButton,
-                    BlendMode.srcIn
-                  ),
-                  width: iconLeftWidth,
-                  height: iconLeftHeight
-                )
-              ],
-              Container (
-                height: 25,
-                alignment: Alignment.center,
-                child: Text (
-                  text,
-                  style: TextStyle (
-                    fontFamily: context.fonts.archivo,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: context.colors.textButton
+        child: Padding (
+          padding: const EdgeInsets.all (8),
+          child: PresserAnimator (
+            isPressed: isPressed,
+            scaleRate: 0.97,
+            child: Row (
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              spacing: 8,
+              children: [
+                if (iconLeft != null) ... [
+                  SvgPicture.asset (
+                    iconLeft!,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.textButton,
+                      BlendMode.srcIn
+                    ),
+                    width: iconLeftWidth,
+                    height: iconLeftHeight
                   )
-                )
-              ),
-              if (iconRight != null) ... [
-                SvgPicture.asset (
-                  iconRight!,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.textButton,
-                    BlendMode.srcIn
-                  ),
-                  width: iconRightWidth,
-                  height: iconRightHeight
-                )
+                ],
+                Container (
+                  height: 25,
+                  alignment: Alignment.center,
+                  child: Text (
+                    text,
+                    style: TextStyle (
+                      fontFamily: context.fonts.archivo,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: context.colors.textButton
+                    )
+                  )
+                ),
+                if (iconRight != null) ... [
+                  SvgPicture.asset (
+                    iconRight!,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.textButton,
+                      BlendMode.srcIn
+                    ),
+                    width: iconRightWidth,
+                    height: iconRightHeight
+                  )
+                ]
               ]
-            ]
+            )
           )
         )
       )

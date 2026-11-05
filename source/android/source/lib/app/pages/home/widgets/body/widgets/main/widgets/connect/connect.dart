@@ -19,15 +19,10 @@ class Connect extends StatelessWidget {
     return (
 
       const Column (
+        spacing: 18,
         children: [
           ConnectionButton (),
-          SizedBox (
-            height: 18
-          ),
           TapHint (),
-          SizedBox (
-            height: 26
-          ),
           ChooseConnectionButton ()
         ]
       )

@@ -26,7 +26,7 @@ class Main extends StatelessWidget {
       Expanded (
         child: Container (
           padding: const EdgeInsets.symmetric (
-            horizontal: 20,
+            horizontal: 20 - 8,
             vertical: 12
           ),
           decoration: BoxDecoration (

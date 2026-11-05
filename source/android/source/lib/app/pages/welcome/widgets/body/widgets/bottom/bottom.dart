@@ -18,7 +18,7 @@ class Bottom extends StatelessWidget {
     return (
 
       const Column (
-        spacing: 24,
+        spacing: 24 - 8 * 2,
         children: [
           ButtonGo (),
           ButtonChangeLanguage ()

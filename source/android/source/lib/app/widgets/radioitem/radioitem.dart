@@ -47,63 +47,66 @@ class RadioItem extends HookWidget {
       Container (
         color: context.colors.transparent,
         padding: const EdgeInsets.symmetric (
-          horizontal: 10
+          horizontal: 10 - 4
         ),
         child: Presser (
           isPressed: isPressed,
           onPress: onPress,
-          child: PresserAnimator (
-            scaleRate: 0.9675,
-            isPressed: isPressed,
-            child: Row (
-              spacing: 15,
-              children: [
-                Container (
-                  decoration: BoxDecoration (
-                    shape: BoxShape.circle,
-                    color: context.colors.radioButtonBack,
-                    border: Border.all (
-                      width: 1.5,
-                      color: colorOutsides
-                    )
-                  ),
-                  child: Container (
-                    padding: const EdgeInsets.all (2.5),
-                    child: Container (
-                      width: 11,
-                      height: 11,
-                      decoration: BoxDecoration (
-                        shape: BoxShape.circle,
-                        color: colorInsides
-                      )
-                    )
-                  )
-                ),
-                Column (
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: 5,
-                  children: [
-                    Text (
-                      title,
-                      style: TextStyle (
-                        fontFamily: context.fonts.archivo,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                        color: context.colors.windowMainText
+          child: Padding (
+            padding: const EdgeInsets.all (4),
+            child: PresserAnimator (
+              scaleRate: 0.9675,
+              isPressed: isPressed,
+              child: Row (
+                spacing: 15,
+                children: [
+                  Container (
+                    decoration: BoxDecoration (
+                      shape: BoxShape.circle,
+                      color: context.colors.radioButtonBack,
+                      border: Border.all (
+                        width: 1.5,
+                        color: colorOutsides
                       )
                     ),
-                    Text (
-                      subtitle,
-                      style: TextStyle (
-                        fontFamily: context.fonts.archivo,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                        color: context.colors.windowMainText
+                    child: Container (
+                      padding: const EdgeInsets.all (2.5),
+                      child: Container (
+                        width: 11,
+                        height: 11,
+                        decoration: BoxDecoration (
+                          shape: BoxShape.circle,
+                          color: colorInsides
+                        )
                       )
                     )
-                  ]
-                )
-              ]
+                  ),
+                  Column (
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: 5,
+                    children: [
+                      Text (
+                        title,
+                        style: TextStyle (
+                          fontFamily: context.fonts.archivo,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                          color: context.colors.windowMainText
+                        )
+                      ),
+                      Text (
+                        subtitle,
+                        style: TextStyle (
+                          fontFamily: context.fonts.archivo,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          color: context.colors.windowMainText
+                        )
+                      )
+                    ]
+                  )
+                ]
+              )
             )
           )
         )

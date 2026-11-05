@@ -96,63 +96,66 @@ class ButtonComponent extends HookWidget {
       Presser (
         isPressed: isPressed,
         onPress: onPress,
-        child: PresserAnimator (
-          isPressed: isPressed,
-          scaleRate: 0.97,
-          child: Row (
-            mainAxisSize: MainAxisSize.min,
-            spacing: 8,
-            children: [
-              if (icon != null) ... [
-                SlideTransition (
-                  position: slideAnimation,
-                  child: SvgPicture.asset (
-                    icon!,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.transparent,
-                      BlendMode.srcIn
-                    ),
-                    width: iconWidth,
-                    height: iconHeight
+        child: Padding (
+          padding: const EdgeInsets.all (8),
+          child: PresserAnimator (
+            isPressed: isPressed,
+            scaleRate: 0.97,
+            child: Row (
+              mainAxisSize: MainAxisSize.min,
+              spacing: 8,
+              children: [
+                if (icon != null) ... [
+                  SlideTransition (
+                    position: slideAnimation,
+                    child: SvgPicture.asset (
+                      icon!,
+                      colorFilter: ColorFilter.mode (
+                        context.colors.transparent,
+                        BlendMode.srcIn
+                      ),
+                      width: iconWidth,
+                      height: iconHeight
+                    )
                   )
-                )
-              ],
-              Container (
-                height: 40,
-                alignment: Alignment.center,
-                padding: const EdgeInsets.symmetric (
-                  horizontal: 16.5,
-                  vertical: 7.5
+                ],
+                Container (
+                  height: 40,
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.symmetric (
+                    horizontal: 16.5,
+                    vertical: 7.5
+                  ),
+                  decoration: BoxDecoration (
+                    borderRadius: BorderRadius.circular (10),
+                    color: context.colors.button
+                  ),
+                  child: Text (
+                    text,
+                    style: TextStyle (
+                      fontFamily: context.fonts.archivo,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: context.colors.buttonText
+                    )
+                  )
                 ),
-                decoration: BoxDecoration (
-                  borderRadius: BorderRadius.circular (10),
-                  color: context.colors.button
-                ),
-                child: Text (
-                  text,
-                  style: TextStyle (
-                    fontFamily: context.fonts.archivo,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: context.colors.buttonText
+                if (icon != null) ... [
+                  SlideTransition (
+                    position: slideAnimation,
+                    child: SvgPicture.asset (
+                      icon!,
+                      colorFilter: ColorFilter.mode (
+                        context.colors.button,
+                        BlendMode.srcIn
+                      ),
+                      width: iconWidth,
+                      height: iconHeight
+                    )
                   )
-                )
-              ),
-              if (icon != null) ... [
-                SlideTransition (
-                  position: slideAnimation,
-                  child: SvgPicture.asset (
-                    icon!,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.button,
-                      BlendMode.srcIn
-                    ),
-                    width: iconWidth,
-                    height: iconHeight
-                  )
-                )
+                ]
               ]
-            ]
+            )
           )
         )
       )

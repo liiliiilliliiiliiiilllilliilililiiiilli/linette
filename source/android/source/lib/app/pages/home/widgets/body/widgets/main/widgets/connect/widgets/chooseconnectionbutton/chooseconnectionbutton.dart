@@ -34,7 +34,7 @@ class ChooseConnectionButton extends HookWidget {
     return (
 
       Container (
-        height: 29,
+        height: 29 + 8 * 2,
         alignment: Alignment.center,
         child: Presser (
           isPressed: isPressed,
@@ -42,7 +42,7 @@ class ChooseConnectionButton extends HookWidget {
           child: PresserAnimator (
             isPressed: isPressed,
             child: Container (
-              padding: const EdgeInsets.all (5),
+              padding: const EdgeInsets.all (8),
               child: Row (
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,

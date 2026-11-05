@@ -40,14 +40,18 @@ class RightButton extends HookConsumerWidget {
 
     return (
 
-      AppBarButton (
-        onPress: onPress,
-        shape: ShapeModel.circle,
-        icon: SvgPicture.asset (
-          themeIcon,
-          colorFilter: ColorFilter.mode (
-            context.colors.appBarButtonIcon,
-            BlendMode.srcIn
+      SizedBox (
+        width: 56,
+        height: 56,
+        child: AppBarButton (
+          onPress: onPress,
+          shape: ShapeModel.circle,
+          icon: SvgPicture.asset (
+            themeIcon,
+            colorFilter: ColorFilter.mode (
+              context.colors.appBarButtonIcon,
+              BlendMode.srcIn
+            )
           )
         )
       )
