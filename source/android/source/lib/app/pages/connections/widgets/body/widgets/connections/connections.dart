@@ -1,14 +1,13 @@
-// Connections page - Body - Connections list
+// Connections page - Body - Connections
 
 import 'package:flutter/material.dart';
 import 'widgets/connection/connection.dart';
-import 'widgets/connection/models/connection/connection.dart';
 
 
 
 class Connections extends StatelessWidget {
 
-  final List <ConnectionModel> connections;
+  final List <Connection> connections;
 
 
   const Connections ({
@@ -21,18 +20,13 @@ class Connections extends StatelessWidget {
 
     return (
 
-      Container (
+      Padding (
         padding: const EdgeInsets.symmetric (
-          horizontal: 5,
-          vertical: 0
+          horizontal: 5
         ),
         child: Column (
           spacing: 11,
-          children: connections.map ((connection) =>
-            Connection (
-              model: connection
-            )
-          ).toList ()
+          children: connections
         )
       )
 

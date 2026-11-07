@@ -1,4 +1,4 @@
-// Connections page - Body - Connections list - Connection - Country
+// Connections page - Body - Connections - Connection - Country
 
 import 'package:flutter/material.dart';
 import 'widgets/flag/flag.dart';
@@ -24,12 +24,10 @@ class Country extends StatelessWidget {
     return (
 
       Row (
+        spacing: 16,
         children: [
           Flag (
             flag: flag
-          ),
-          const SizedBox (
-            width: 16
           ),
           Name (
             name: name

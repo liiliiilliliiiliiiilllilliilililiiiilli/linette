@@ -63,41 +63,41 @@ class ConnectionButton extends HookWidget {
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow (
-                          color: context.colors.buttonConnectShadow,
-                          offset: offset,
                           blurRadius: blurRadius,
-                          spreadRadius: spreadRadius
+                          spreadRadius: spreadRadius,
+                          offset: offset,
+                          color: context.colors.buttonConnectShadow
                         )
                       ]
                     )
                   ),
                   AnimatedContainer (
-                    duration: const Duration (
-                      milliseconds: 80
-                    ),
                     decoration: const BoxDecoration (
                       shape: BoxShape.circle
                     ),
+                    duration: const Duration (
+                      milliseconds: 80
+                    ),
                     child: ClipOval (
                       child: Presser (
-                        isPressed: isPressed,
                         onPress: onPress,
+                        isPressed: isPressed,
                         child: Container (
                           padding: const EdgeInsets.all (32),
                           decoration: BoxDecoration (
+                            shape: BoxShape.circle,
                             border: Border.all (
                               width: 4,
                               color: context.colors.buttonConnectBorder
                             ),
-                            shape: BoxShape.circle,
-                            color: context.colors.prime
+                            color: context.colors.buttonConnectBack
                           ),
-                          child: Container (
+                          child: Padding (
                             padding: const EdgeInsets.all (1.75),
                             child: SvgPicture.asset (
+                              context.icons.olive,
                               width: 256,
                               height: 256,
-                              context.icons.olive,
                               colorFilter: ColorFilter.mode (
                                 context.colors.buttonConnectIcon,
                                 BlendMode.srcIn

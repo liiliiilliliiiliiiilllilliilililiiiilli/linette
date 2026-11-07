@@ -11,18 +11,18 @@ import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 class RadioItem extends HookWidget {
 
-  final String value;
-  final bool isChosen;
   final void Function () onPress;
+  final bool isChosen;
+  final String value;
   final String title;
   final String subtitle;
 
 
   const RadioItem ({
     super.key,
-    required this.value,
-    required this.isChosen,
     required this.onPress,
+    required this.isChosen,
+    required this.value,
     required this.title,
     required this.subtitle
   });
@@ -44,32 +44,31 @@ class RadioItem extends HookWidget {
 
     return (
 
-      Container (
-        color: context.colors.transparent,
+      Padding (
         padding: const EdgeInsets.symmetric (
           horizontal: 10 - 4
         ),
         child: Presser (
-          isPressed: isPressed,
           onPress: onPress,
+          isPressed: isPressed,
           child: Padding (
             padding: const EdgeInsets.all (4),
             child: PresserAnimator (
-              scaleRate: 0.9675,
               isPressed: isPressed,
+              scaleRate: 0.9675,
               child: Row (
                 spacing: 15,
                 children: [
                   Container (
                     decoration: BoxDecoration (
                       shape: BoxShape.circle,
-                      color: context.colors.radioButtonBack,
                       border: Border.all (
                         width: 1.5,
                         color: colorOutsides
-                      )
+                      ),
+                      color: context.colors.radioButtonBack
                     ),
-                    child: Container (
+                    child: Padding (
                       padding: const EdgeInsets.all (2.5),
                       child: Container (
                         width: 11,

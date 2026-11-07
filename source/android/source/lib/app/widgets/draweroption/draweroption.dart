@@ -45,8 +45,8 @@ class DrawerOption extends HookConsumerWidget {
     Future <void> onPress () async {
 
       await context.methods.openWindow (
-        context: context,
-        ref: ref,
+        context,
+        ref,
         window: window,
         callback: onPressCallback
       );
@@ -57,8 +57,8 @@ class DrawerOption extends HookConsumerWidget {
     return (
 
       Presser (
-        isPressed: isPressed,
         onPress: onPress,
+        isPressed: isPressed,
         child: Padding (
           padding: const EdgeInsets.symmetric (
             horizontal: 8
@@ -75,11 +75,12 @@ class DrawerOption extends HookConsumerWidget {
                 children: [
                   SvgPicture.asset (
                     iconLeft,
+                    width: 19,
+                    height: 19,
                     colorFilter: ColorFilter.mode (
                       context.colors.drawerOptionIconLeft,
                       BlendMode.srcIn
-                    ),
-                    height: 19
+                    )
                   ),
                   const SizedBox (
                     width: 12
@@ -99,11 +100,12 @@ class DrawerOption extends HookConsumerWidget {
                   textRight == null ?
                     SvgPicture.asset (
                       context.icons.arrow,
+                      width: 14,
+                      height: 14,
                       colorFilter: ColorFilter.mode (
                         context.colors.drawerOptionIconRight,
                         BlendMode.srcIn
-                      ),
-                      height: 14
+                      )
                     )
                   :
                     Text (

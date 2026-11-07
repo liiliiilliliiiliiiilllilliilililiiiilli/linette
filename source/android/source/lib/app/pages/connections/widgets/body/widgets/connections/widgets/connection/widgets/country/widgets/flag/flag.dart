@@ -1,4 +1,4 @@
-// Connections page - Body - Connections list - Connection - Country - Flag
+// Connections page - Body - Connections - Connection - Country - Flag
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

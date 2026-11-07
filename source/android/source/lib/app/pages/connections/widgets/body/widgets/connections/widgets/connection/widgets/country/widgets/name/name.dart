@@ -1,4 +1,4 @@
-// Connections page - Body - Connections list - Connection - Country - Name
+// Connections page - Body - Connections - Connection - Country - Name
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

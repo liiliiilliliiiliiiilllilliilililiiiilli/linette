@@ -2,13 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:linette/app/providers/welcome/welcome.dart';
-import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
-import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/pages/home/home.dart';
 import 'package:linette/app/widgets/button/button.dart';
+import 'package:linette/app/widgets/button/models/icon/icon.dart';
 
 
 
@@ -21,83 +20,13 @@ class ButtonGo extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final WelcomeNotifier welcomeNotifier = ref.watch (welcomeProvider.notifier);
-
-    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
-
-
     void onPress () async {
 
-      await welcomeNotifier.completeWelcome ();
-
-
-      actionsFreezeNotifier.freeze ();
-
-
-      if (context.mounted) {
-
-        await Navigator.pushReplacement (
-          context,
-          PageRouteBuilder (
-            pageBuilder: (context, animation, secondaryAnimation) => const HomePage (),
-            transitionDuration: const Duration (milliseconds: 750),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
-
-              return (
-
-                AnimatedBuilder (
-                  animation: animation,
-                  builder: (context, _) {
-
-                    final double value = animation.value;
-
-                    if (value < 0.5) {
-
-                      final double progress = value * 2;
-                      final double curveValue = Curves.easeInOut.transform (progress);
-
-                      return (
-
-                        Opacity (
-                          opacity: curveValue,
-                          child: Container (
-                            color: context.colors.appBarBack
-                          )
-                        )
-
-                      );
-
-                    }
-
-                    else {
-
-                      final double progress = (value - 0.5) * 2;
-                      final double curveValue = Curves.easeInOut.transform (progress);
-
-                      return (
-
-                        Container (
-                          color: context.colors.appBarBack,
-                          child: Opacity (
-                            opacity: curveValue,
-                            child: child
-                          )
-                        )
-
-                      );
-
-                    }
-
-                  }
-                )
-
-              );
-
-            }
-          )
-        );
-
-      }
+      context.methods.transit (
+        context,
+        ref,
+        page: const HomePage ()
+      );
 
     }
 
@@ -105,10 +34,12 @@ class ButtonGo extends ConsumerWidget {
     return (
 
       ButtonComponent (
-        text: context.texts.pageWelcomeBodyBottomGo,
         onPress: onPress,
-        icon: context.icons.arrow,
-        iconSize: 14
+        text: context.texts.pageWelcomeBodyBottomGo,
+        icon: ButtonIcon (
+          context.icons.arrow,
+          size: 14
+        )
       )
 
     );

@@ -32,7 +32,7 @@ class Top extends HookWidget {
     final double animationValue = useAnimation (animationController);
 
 
-    final double transformValue = (common * (1.0 - animationValue) * 2.5 * speed / periodicity) - 0.5;
+    final double transformValue = (common * (1 - animationValue) * 2.5 * speed / periodicity) - 0.5;
 
 
     return (
@@ -51,7 +51,7 @@ class Top extends HookWidget {
                   text: context.texts.pageWelcomeBodyTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
-                    color: context.colors.prime
+                    color: context.colors.titleElement
                   )
                 ),
                 WidgetSpan (
@@ -63,12 +63,12 @@ class Top extends HookWidget {
                       return (
 
                         LinearGradient(
-                          begin: const Alignment (1.0, 0.0),
-                          end: const Alignment (-1.0, 0.0),
+                          begin: const Alignment (1, 0),
+                          end: const Alignment (-1, 0),
                           stops: [
-                            (transformValue - glowWidth).clamp (0.0, 1.0),
-                            transformValue.clamp (0.0, 1.0),
-                            (transformValue + glowWidth).clamp (0.0, 1.0)
+                            (transformValue - glowWidth).clamp (0, 1),
+                            transformValue.clamp (0, 1),
+                            (transformValue + glowWidth).clamp (0, 1)
                           ],
                           colors: [
                             context.colors.title,
@@ -95,15 +95,15 @@ class Top extends HookWidget {
                   text: context.texts.pageWelcomeBodyTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
-                    color: context.colors.prime
+                    color: context.colors.titleElement
                   )
                 )
               ]
             )
           ),
           Container (
-            height: 31,
             alignment: Alignment.center,
+            height: 31,
             child: Text (
               context.texts.pageWelcomeBodyTopSubtitle,
               style: TextStyle (

@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 class Presser extends StatelessWidget {
 
-  final ValueNotifier <bool> isPressed;
   final void Function () onPress;
+  final ValueNotifier <bool> isPressed;
   final void Function (TapDownDetails details)? onTapDown;
   final void Function (TapUpDetails details)? onTapUp;
   final void Function ()? onTapCancel;
@@ -19,8 +19,8 @@ class Presser extends StatelessWidget {
 
   const Presser ({
     super.key,
-    required this.isPressed,
     required this.onPress,
+    required this.isPressed,
     this.onTapDown,
     this.onTapUp,
     this.onTapCancel,

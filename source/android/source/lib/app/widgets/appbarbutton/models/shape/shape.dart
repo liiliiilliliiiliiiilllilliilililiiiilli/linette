@@ -1,6 +1,6 @@
 // App bar button global widget - Shape model
 
-enum ShapeModel {
+enum AppBarButtonShape {
 
   circle,
   square

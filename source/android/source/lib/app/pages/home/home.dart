@@ -34,13 +34,15 @@ class HomePage extends ConsumerWidget {
 
       AbsorbPointer (
         absorbing: actionsFreezeState,
-        child: Scaffold (
-          appBar: const AppBarComponent (),
-          body: const BodyComponent (),
-          drawer: const DrawerComponent (),
-          drawerEnableOpenDragGesture: false,
-          onDrawerChanged: onDrawerChanged,
-          backgroundColor: context.colors.appBarBack
+        child: ClipRect (
+          child: Scaffold (
+            appBar: const AppBarComponent (),
+            body: const BodyComponent (),
+            drawer: const DrawerComponent (),
+            onDrawerChanged: onDrawerChanged,
+            drawerEnableOpenDragGesture: false,
+            backgroundColor: context.colors.backPrime
+          )
         )
       )
 

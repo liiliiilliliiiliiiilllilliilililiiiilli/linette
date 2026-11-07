@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
+import 'models/icon/icon.dart';
 import 'models/shape/shape.dart';
 
 
@@ -12,8 +14,8 @@ import 'models/shape/shape.dart';
 class AppBarButton extends HookWidget {
 
   final void Function () onPress;
-  final ShapeModel shape;
-  final Widget icon;
+  final AppBarButtonShape shape;
+  final AppBarButtonIcon icon;
 
 
   const AppBarButton ({
@@ -34,37 +36,55 @@ class AppBarButton extends HookWidget {
       : 0;
 
 
-    final double borderRadius = shape == ShapeModel.circle
+    final double borderRadius = shape == AppBarButtonShape.circle
       ? 100
       : 10;
 
 
     return (
 
-      Presser (
-        isPressed: isPressed,
-        onPress: onPress,
-        child: PresserAnimator (
+      SizedBox (
+        width: 56,
+        height: 56,
+        child: Presser (
+          onPress: onPress,
           isPressed: isPressed,
-          child: AnimatedContainer (
-            duration: const Duration (
-              milliseconds: 80
-            ),
-            transform: Matrix4.translationValues (0, translationYValue, 0),
-            child: Center (
-              child: Container (
-                width: 38,
-                height: 38,
-                padding: const EdgeInsets.all (7.5),
-                decoration: BoxDecoration (
-                  color: context.colors.appBarButtonBack,
-                  border: Border.all (
-                    width: 3,
-                    color: context.colors.appBarButtonBorder
+          child: PresserAnimator (
+            isPressed: isPressed,
+            child: AnimatedContainer (
+              transform: Matrix4.translationValues (0, translationYValue, 0),
+              duration: const Duration (
+                milliseconds: 80
+              ),
+              child: Center (
+                child: Container (
+                  width: 38,
+                  height: 38,
+                  padding: const EdgeInsets.all (7.5),
+                  decoration: BoxDecoration (
+                    border: Border.all (
+                      width: 3,
+                      color: context.colors.appBarButtonBorder
+                    ),
+                    borderRadius: BorderRadius.all (Radius.circular (borderRadius)),
+                    color: context.colors.appBarButtonBack,
                   ),
-                  borderRadius: BorderRadius.all (Radius.circular (borderRadius))
-                ),
-                child: icon
+                  child: Transform.translate (
+                    offset: icon.offset ?? const Offset (0, 0),
+                    child: Transform.rotate (
+                      angle: icon.angle ?? 0,
+                      child: SvgPicture.asset (
+                        icon.asset,
+                        width: icon.size,
+                        height: icon.size,
+                        colorFilter: ColorFilter.mode (
+                          context.colors.appBarButtonIcon,
+                          BlendMode.srcIn
+                        )
+                      )
+                    )
+                  )
+                )
               )
             )
           )

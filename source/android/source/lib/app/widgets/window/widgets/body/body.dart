@@ -20,7 +20,7 @@ class BodyComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final Container main = Container (
+    final Padding main = Padding (
       padding: const EdgeInsets.symmetric (
         horizontal: 20 - 4
       ),
@@ -28,10 +28,10 @@ class BodyComponent extends StatelessWidget {
         children: [
           child,
           Positioned (
+            height: 15,
             top: 0,
             left: 0,
             right: 0,
-            height: 15,
             child: IgnorePointer (
               child: Container (
                 decoration: BoxDecoration (

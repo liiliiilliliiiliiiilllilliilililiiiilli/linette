@@ -19,15 +19,15 @@ class Status extends StatelessWidget {
     return (
 
       Container (
-        height: 40,
         alignment: Alignment.center,
+        height: 40,
         child: Text (
           context.texts.pageHomeBodyTop,
           style: TextStyle (
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 26,
-            color: context.colors.status
+            color: context.colors.textStatus
           )
         )
       )

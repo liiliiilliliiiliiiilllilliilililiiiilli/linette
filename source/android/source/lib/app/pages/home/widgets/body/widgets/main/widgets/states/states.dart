@@ -19,15 +19,15 @@ class States extends StatelessWidget {
     return (
 
       Container (
-        height: 25,
         alignment: Alignment.center,
+        height: 25,
         child: Text (
           context.texts.pageHomeBodyBottom,
           style: TextStyle (
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,
             fontSize: 16,
-            color: context.colors.states
+            color: context.colors.textStates
           )
         )
       )

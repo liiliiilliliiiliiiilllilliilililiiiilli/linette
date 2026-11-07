@@ -32,7 +32,7 @@ class TitleComponent extends HookWidget {
     final double animationValue = useAnimation (animationController);
 
 
-    final double transformValue = (common * (1.0 - animationValue) * 2.5 * speed / periodicity) - 0.5;
+    final double transformValue = (common * (1 - animationValue) * 2.5 * speed / periodicity) - 0.5;
 
 
     return (
@@ -50,12 +50,12 @@ class TitleComponent extends HookWidget {
                   return (
 
                     LinearGradient(
-                      begin: const Alignment (1.0, 0.0),
-                      end: const Alignment (-1.0, 0.0),
+                      begin: const Alignment (1, 0),
+                      end: const Alignment (-1, 0),
                       stops: [
-                        (transformValue - glowWidth).clamp (0.0, 1.0),
-                        transformValue.clamp (0.0, 1.0),
-                        (transformValue + glowWidth).clamp (0.0, 1.0)
+                        (transformValue - glowWidth).clamp (0, 1),
+                        transformValue.clamp (0, 1),
+                        (transformValue + glowWidth).clamp (0, 1)
                       ],
                       colors: [
                         context.colors.title,
@@ -83,7 +83,7 @@ class TitleComponent extends HookWidget {
                   height: 2.75,
                   decoration: BoxDecoration (
                     borderRadius: BorderRadius.circular (100),
-                    color: context.colors.prime
+                    color: context.colors.titleElement
                   )
                 )
               )

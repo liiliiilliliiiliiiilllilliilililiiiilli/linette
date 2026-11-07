@@ -19,8 +19,8 @@ class Main extends StatelessWidget {
     return (
 
       Container (
-        height: 136,
         alignment: Alignment.center,
+        height: 136,
         child: Text (
           context.texts.pageWelcomeBodyCenter,
           textAlign: TextAlign.center,

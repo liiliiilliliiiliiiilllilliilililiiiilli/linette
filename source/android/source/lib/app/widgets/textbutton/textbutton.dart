@@ -7,27 +7,22 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
+import 'models/icons/icons.dart';
 
 
 
 class TextButtonComponent extends HookWidget {
 
-  final String? iconLeft;
-  final double? iconLeftSize;
-  final String text;
-  final String? iconRight;
-  final double? iconRightSize;
   final void Function () onPress;
+  final String text;
+  final TextButtonIcons? icons;
 
 
   const TextButtonComponent ({
     super.key,
-    this.iconLeft,
-    this.iconLeftSize,
+    required this.onPress,
     required this.text,
-    this.iconRight,
-    this.iconRightSize,
-    required this.onPress
+    this.icons
   });
 
 
@@ -36,41 +31,42 @@ class TextButtonComponent extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final double iconLeftWidth = iconLeftSize ?? 20;
-    final double iconLeftHeight = iconLeftSize ?? 20;
-    final double iconRightWidth = iconRightSize ?? 20;
-    final double iconRightHeight = iconRightSize ?? 20;
-
-
     return (
 
       Presser (
-        isPressed: isPressed,
         onPress: onPress,
+        isPressed: isPressed,
         child: Padding (
           padding: const EdgeInsets.all (8),
           child: PresserAnimator (
             isPressed: isPressed,
             scaleRate: 0.97,
             child: Row (
-              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               spacing: 8,
               children: [
-                if (iconLeft != null) ... [
-                  SvgPicture.asset (
-                    iconLeft!,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.textButton,
-                      BlendMode.srcIn
-                    ),
-                    width: iconLeftWidth,
-                    height: iconLeftHeight
-                  )
+                if (icons case final icons?)
+                  if (icons.left case final iconsLeft?) ... [
+                    Transform.translate (
+                      offset: iconsLeft.offset ?? const Offset (0, 0),
+                      child: Transform.rotate (
+                        angle: iconsLeft.angle ?? 0,
+                        child: SvgPicture.asset (
+                          iconsLeft.asset,
+                          width: iconsLeft.size,
+                          height: iconsLeft.size,
+                          colorFilter: ColorFilter.mode (
+                            context.colors.textButton,
+                            BlendMode.srcIn
+                          )
+                        )
+                      )
+                    )
                 ],
                 Container (
-                  height: 25,
                   alignment: Alignment.center,
+                  height: 25,
                   child: Text (
                     text,
                     style: TextStyle (
@@ -81,16 +77,23 @@ class TextButtonComponent extends HookWidget {
                     )
                   )
                 ),
-                if (iconRight != null) ... [
-                  SvgPicture.asset (
-                    iconRight!,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.textButton,
-                      BlendMode.srcIn
-                    ),
-                    width: iconRightWidth,
-                    height: iconRightHeight
-                  )
+                if (icons case final icons?)
+                  if (icons.right case final iconsRight?) ... [
+                    Transform.translate (
+                      offset: iconsRight.offset ?? const Offset (0, 0),
+                      child: Transform.rotate (
+                        angle: iconsRight.angle ?? 0,
+                        child: SvgPicture.asset (
+                          iconsRight.asset,
+                          width: iconsRight.size,
+                          height: iconsRight.size,
+                          colorFilter: ColorFilter.mode (
+                            context.colors.textButton,
+                            BlendMode.srcIn
+                          )
+                        )
+                      )
+                    )
                 ]
               ]
             )

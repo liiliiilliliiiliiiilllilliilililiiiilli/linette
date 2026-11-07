@@ -18,13 +18,13 @@ class Main extends StatelessWidget {
 
     return (
 
-      Expanded (
-        child: Container (
-          padding: const EdgeInsets.only (
+      const Expanded (
+        child: Padding (
+          padding: EdgeInsets.only (
             top: 28,
             bottom: 15
           ),
-          child: const Column (
+          child: Column (
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Status (),

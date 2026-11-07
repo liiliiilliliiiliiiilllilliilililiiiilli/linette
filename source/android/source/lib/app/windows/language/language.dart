@@ -76,7 +76,6 @@ class LanguageWindow extends HookConsumerWidget {
               type: MaterialType.transparency,
               child: Padding (
                 padding: const EdgeInsets.symmetric (
-                  horizontal: 0,
                   vertical: 10 - 4
                 ),
                 child: Column (
@@ -92,9 +91,9 @@ class LanguageWindow extends HookConsumerWidget {
                       }
 
                         => RadioItem (
-                          value: code,
-                          isChosen: code == selectedLocale.value,
                           onPress: () => onPress (language),
+                          isChosen: code == selectedLocale.value,
+                          value: code,
                           title: title,
                           subtitle: subtitle
                         ),

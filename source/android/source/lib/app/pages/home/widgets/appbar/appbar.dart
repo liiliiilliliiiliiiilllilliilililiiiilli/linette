@@ -52,38 +52,35 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget {
       SliderComponent (
         onSwipeLeft: onSwipeLeft,
         onSwipeRight: onSwipeRight,
-        child: Container (
-          color: context.colors.transparent,
-          child: PreferredSize (
-            preferredSize: const Size.fromHeight (kToolbarHeight + 10),
-            child: Padding (
-              padding: const EdgeInsets.only (
-                top: 5
+        child: PreferredSize (
+          preferredSize: const Size.fromHeight (kToolbarHeight + 10),
+          child: Padding (
+            padding: const EdgeInsets.only (
+              top: 5
+            ),
+            child: AppBar (
+              leading: const Padding (
+                padding: EdgeInsets.only (
+                  left: 16
+                ),
+                child: LeftButton ()
               ),
-              child: AppBar (
-                leading: const Padding (
-                  padding: EdgeInsetsGeometry.only (
-                    left: 16
-                  ),
-                  child: LeftButton ()
-                ),
-                automaticallyImplyLeading: false,
-                leadingWidth: 56 + 16,
-                title: const TitleComponent (),
-                centerTitle: true,
-                actions: const [
-                  RightButton ()
-                ],
-                actionsPadding: const EdgeInsetsGeometry.only (
-                  right: 8 + 16
-                ),
-                backgroundColor: context.colors.appBarBack,
-                bottom: PreferredSize (
-                  preferredSize: const Size.fromHeight (2),
-                  child: Container (
-                    height: 2,
-                    color: context.colors.appBarBorder
-                  )
+              automaticallyImplyLeading: false,
+              leadingWidth: 56 + 16,
+              title: const TitleComponent (),
+              centerTitle: true,
+              actions: const [
+                RightButton ()
+              ],
+              actionsPadding: const EdgeInsets.only (
+                right: 16
+              ),
+              backgroundColor: context.colors.appBarBack,
+              bottom: PreferredSize (
+                preferredSize: const Size.fromHeight (2),
+                child: Container (
+                  height: 2,
+                  color: context.colors.appBarBorder
                 )
               )
             )

@@ -41,30 +41,27 @@ class BodyComponent extends HookWidget {
       SliderComponent (
         onSwipeLeft: onSwipeLeft,
         onSwipeRight: onSwipeRight,
-        child: Container (
-          color: context.colors.transparent,
-          child: Stack (
-            children: [
-              Noise (
-                backgroundColor: context.colors.noiseBackground,
-                primaryColor: context.colors.noisePrimary,
-                secondaryColor: context.colors.noiseSecondary,
-                scale: 0.03 * 0.75,
-                speed: 0.2 * 8 * 0.33,
-                sharpness: 2.0,
-                blurSigma: 40.0,
-                resolution: 50,
-                topDarkness: 0.8,
-                topDarknessHeight: 0.375
-              ),
-              const Column (
-                children: [
-                  Main (),
-                  Bottom ()
-                ]
-              )
-            ]
-          )
+        child: Stack (
+          children: [
+            Noise (
+              scale: 0.03 * 0.75,
+              speed: 0.2 * 8 * 0.33,
+              sharpness: 2,
+              blurSigma: 40,
+              resolution: 50,
+              topDarkness: 0.8,
+              topDarknessHeight: 0.375,
+              primaryColor: context.colors.noisePrimary,
+              secondaryColor: context.colors.noiseSecondary,
+              backgroundColor: context.colors.noiseBack
+            ),
+            const Column (
+              children: [
+                Main (),
+                Bottom ()
+              ]
+            )
+          ]
         )
       )
 

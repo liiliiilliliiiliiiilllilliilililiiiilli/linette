@@ -20,19 +20,19 @@ class Top extends StatelessWidget {
 
       Container (
         alignment: Alignment.bottomLeft,
+        height: 34 + 56 + 10 - 0.5,
         padding: const EdgeInsets.only (
           left: 30,
           bottom: 20
         ),
-        height: 34 + 56 + 10 - 0.5,
         decoration: BoxDecoration (
-          color: context.colors.appBarBack,
           border: Border (
             bottom: BorderSide (
               width: 2,
-              color: context.colors.appBarBorder
+              color: context.colors.drawerTopBarBorder
             )
-          )
+          ),
+          color: context.colors.drawerTopBarBack
         ),
         child: Text (
           context.texts.pageHomeDrawerTop,
@@ -40,7 +40,7 @@ class Top extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,
             fontSize: 25,
-            color: context.colors.title
+            color: context.colors.drawerTopBarText
           )
         )
       )

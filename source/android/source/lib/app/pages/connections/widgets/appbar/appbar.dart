@@ -40,31 +40,28 @@ class AppBarComponent extends HookWidget implements PreferredSizeWidget  {
 
       SliderComponent (
         onSwipeLeft: onSwipeLeft,
-        child: Container (
-          color: context.colors.transparent,
-          child: PreferredSize (
-            preferredSize: const Size.fromHeight (kToolbarHeight + 10),
-            child: Padding (
-              padding: const EdgeInsets.only (
-                top: 5
-              ),
-              child: AppBar (
-                leading: const Padding (
-                  padding: EdgeInsetsGeometry.only (
-                    left: 16
-                  ),
-                  child: LeftButton ()
+        child: PreferredSize (
+          preferredSize: const Size.fromHeight (kToolbarHeight + 10),
+          child: Padding (
+            padding: const EdgeInsets.only (
+              top: 5
+            ),
+            child: AppBar (
+              leading: const Padding (
+                padding: EdgeInsets.only (
+                  left: 16
                 ),
-                automaticallyImplyLeading: false,
-                leadingWidth: 56 + 16,
-                title: const TitleComponent (),
-                backgroundColor: context.colors.appBarBack,
-                bottom: PreferredSize (
-                  preferredSize: const Size.fromHeight (2),
-                  child: Container (
-                    height: 2,
-                    color: context.colors.appBarBorder
-                  )
+                child: LeftButton ()
+              ),
+              automaticallyImplyLeading: false,
+              leadingWidth: 56 + 16,
+              title: const TitleComponent (),
+              backgroundColor: context.colors.appBarBack,
+              bottom: PreferredSize (
+                preferredSize: const Size.fromHeight (2),
+                child: Container (
+                  height: 2,
+                  color: context.colors.appBarBorder
                 )
               )
             )

@@ -25,10 +25,12 @@ class ConnectionsPage extends ConsumerWidget {
 
       AbsorbPointer (
         absorbing: actionsFreezeState,
-        child: Scaffold (
-          appBar: const AppBarComponent (),
-          body: const BodyComponent (),
-          backgroundColor: context.colors.appBarBack
+        child: ClipRect (
+          child: Scaffold (
+            appBar: const AppBarComponent (),
+            body: const BodyComponent (),
+            backgroundColor: context.colors.backPrime
+          )
         )
       )
 

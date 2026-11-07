@@ -8,33 +8,28 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
+import 'models/icon/icon.dart';
 
 
 
 class ButtonComponent extends HookWidget {
 
+  final void Function () onPress;
   final String text;
-  final String? icon;
-  final double? iconSize;
-  final Function () onPress;
+  final ButtonIcon? icon;
 
 
   const ButtonComponent ({
     super.key,
+    required this.onPress,
     required this.text,
-    this.icon,
-    this.iconSize,
-    required this.onPress
+    this.icon
   });
 
 
   @override Widget build (BuildContext context) {
 
     final ValueNotifier <bool> isPressed = useState (false);
-
-
-    final double iconWidth = iconSize ?? 12.5;
-    final double iconHeight = iconSize ?? 12.5;
 
 
     final AnimationController controller = useAnimationController (
@@ -94,8 +89,8 @@ class ButtonComponent extends HookWidget {
     return (
 
       Presser (
-        isPressed: isPressed,
         onPress: onPress,
+        isPressed: isPressed,
         child: Padding (
           padding: const EdgeInsets.all (8),
           child: PresserAnimator (
@@ -105,23 +100,32 @@ class ButtonComponent extends HookWidget {
               mainAxisSize: MainAxisSize.min,
               spacing: 8,
               children: [
-                if (icon != null) ... [
-                  SlideTransition (
-                    position: slideAnimation,
-                    child: SvgPicture.asset (
-                      icon!,
-                      colorFilter: ColorFilter.mode (
-                        context.colors.transparent,
-                        BlendMode.srcIn
-                      ),
-                      width: iconWidth,
-                      height: iconHeight
+                if (icon case final icon?) ... [
+                  Opacity (
+                    opacity: 0,
+                    child: SlideTransition (
+                      position: slideAnimation,
+                      child: Transform.translate (
+                        offset: icon.offset ?? const Offset (0, 0),
+                        child: Transform.rotate (
+                          angle: icon.angle ?? 0,
+                          child: SvgPicture.asset (
+                            icon.asset,
+                            width: icon.size,
+                            height: icon.size,
+                            colorFilter: ColorFilter.mode (
+                              context.colors.button,
+                              BlendMode.srcIn
+                            )
+                          )
+                        )
+                      )
                     )
                   )
                 ],
                 Container (
-                  height: 40,
                   alignment: Alignment.center,
+                  height: 40,
                   padding: const EdgeInsets.symmetric (
                     horizontal: 16.5,
                     vertical: 7.5
@@ -140,17 +144,23 @@ class ButtonComponent extends HookWidget {
                     )
                   )
                 ),
-                if (icon != null) ... [
+                if (icon case final icon?) ... [
                   SlideTransition (
                     position: slideAnimation,
-                    child: SvgPicture.asset (
-                      icon!,
-                      colorFilter: ColorFilter.mode (
-                        context.colors.button,
-                        BlendMode.srcIn
-                      ),
-                      width: iconWidth,
-                      height: iconHeight
+                    child: Transform.translate (
+                      offset: icon.offset ?? const Offset (0, 0),
+                      child: Transform.rotate (
+                        angle: icon.angle ?? 0,
+                        child: SvgPicture.asset (
+                          icon.asset,
+                          width: icon.size,
+                          height: icon.size,
+                          colorFilter: ColorFilter.mode (
+                            context.colors.button,
+                            BlendMode.srcIn
+                          )
+                        )
+                      )
                     )
                   )
                 ]

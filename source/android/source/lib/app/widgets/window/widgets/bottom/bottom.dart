@@ -41,8 +41,8 @@ class BottomComponent extends HookConsumerWidget {
     return (
 
       Presser (
-        isPressed: isPressed,
         onPress: onPress,
+        isPressed: isPressed,
         child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.98,

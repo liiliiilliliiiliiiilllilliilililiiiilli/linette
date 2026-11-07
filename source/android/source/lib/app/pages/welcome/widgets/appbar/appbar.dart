@@ -28,23 +28,20 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
 
     return (
 
-      Container (
-        color: context.colors.transparent,
-        child: PreferredSize (
-          preferredSize: const Size.fromHeight (kToolbarHeight + 10),
-          child: Padding (
-            padding: const EdgeInsets.only (
-              top: 5
+      PreferredSize (
+        preferredSize: const Size.fromHeight (kToolbarHeight + 10),
+        child: Padding (
+          padding: const EdgeInsets.only (
+            top: 5
+          ),
+          child: AppBar (
+            actions: const [
+              RightButton ()
+            ],
+            actionsPadding: const EdgeInsets.only (
+              right: 16
             ),
-            child: AppBar (
-              actions: const [
-                RightButton ()
-              ],
-              actionsPadding: const EdgeInsetsGeometry.only (
-                right: 8 + 16
-              ),
-              backgroundColor: context.colors.appBarBack
-            )
+            backgroundColor: context.colors.appBarBack
           )
         )
       )

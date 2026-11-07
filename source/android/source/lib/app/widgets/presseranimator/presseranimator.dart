@@ -6,19 +6,19 @@ import 'package:flutter/material.dart';
 
 class PresserAnimator extends StatelessWidget {
 
+  final ValueNotifier <bool> isPressed;
   final double scaleRate;
   final double opacityRate;
   final int duration;
-  final ValueNotifier <bool> isPressed;
   final Widget child;
 
 
   const PresserAnimator ({
     super.key,
+    required this.isPressed,
     this.scaleRate = 0.96,
     this.opacityRate = 0.66,
     this.duration = 80,
-    required this.isPressed,
     required this.child
   });
 
@@ -37,15 +37,15 @@ class PresserAnimator extends StatelessWidget {
     return (
 
       AnimatedOpacity (
+        opacity: opacity,
         duration: Duration (
           milliseconds: duration
         ),
-        opacity: opacity,
         child: AnimatedScale (
+          scale: scale,
           duration: Duration (
             milliseconds: duration
           ),
-          scale: scale,
           child: child
         )
       )

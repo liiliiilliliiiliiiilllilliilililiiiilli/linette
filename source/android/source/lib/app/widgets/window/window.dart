@@ -38,10 +38,10 @@ class Window extends StatelessWidget {
             decoration: BoxDecoration (
               boxShadow: [
                 BoxShadow (
-                  color: context.colors.windowShadow,
-                  offset: const Offset (0, 10),
                   blurRadius: 12,
-                  spreadRadius: 5
+                  spreadRadius: 5,
+                  offset: const Offset (0, 10),
+                  color: context.colors.windowShadow
                 )
               ]
             ),
@@ -55,9 +55,9 @@ class Window extends StatelessWidget {
                   width: width,
                   color: context.colors.windowMainBack,
                   child: Column (
-                    mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       TopComponent (
                         title: title

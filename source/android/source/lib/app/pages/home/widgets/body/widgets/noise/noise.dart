@@ -11,9 +11,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 class Noise extends HookWidget {
 
-  final Color backgroundColor;
-  final Color primaryColor;
-  final Color secondaryColor;
   final double scale;
   final double speed;
   final double sharpness;
@@ -21,27 +18,30 @@ class Noise extends HookWidget {
   final int resolution;
   final double topDarkness;
   final double topDarknessHeight;
+  final Color primaryColor;
+  final Color secondaryColor;
+  final Color backgroundColor;
 
 
   const Noise ({
     super.key,
-    required this.backgroundColor,
-    required this.primaryColor,
-    required this.secondaryColor,
     required this.scale,
     required this.speed,
     required this.sharpness,
     required this.blurSigma,
     required this.resolution,
     required this.topDarkness,
-    required this.topDarknessHeight
+    required this.topDarknessHeight,
+    required this.primaryColor,
+    required this.secondaryColor,
+    required this.backgroundColor
   });
 
 
   @override Widget build (BuildContext context) {
 
     final TickerProvider vsync = useSingleTickerProvider ();
-    final ValueNotifier <double> timeNotifier = useValueNotifier (0.0);
+    final ValueNotifier <double> timeNotifier = useValueNotifier (0);
 
     final Offset spaceOffset = useMemoized (() {
 
@@ -60,7 +60,7 @@ class Noise extends HookWidget {
 
       final Ticker ticker = vsync.createTicker ((elapsed) {
 
-        timeNotifier.value = elapsed.inMilliseconds / 1000.0;
+        timeNotifier.value = elapsed.inMilliseconds / 1000;
 
       });
 
@@ -100,7 +100,7 @@ class Noise extends HookWidget {
               )
             ),
 
-            if (topDarkness > 0.0)  // Затемнение сверху
+            if (topDarkness > 0)  // Затемнение сверху
 
               Positioned.fill (
                 child: IgnorePointer (
@@ -110,7 +110,7 @@ class Noise extends HookWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         stops: [
-                          0.0,
+                          0,
                           topDarknessHeight * 0.5,
                           topDarknessHeight
                         ],
@@ -122,7 +122,7 @@ class Noise extends HookWidget {
                             alpha: topDarkness * 0.6
                           ),
                           backgroundColor.withValues (
-                            alpha: 0.0
+                            alpha: 0
                           )
                         ]
                       )
@@ -157,7 +157,7 @@ class _NoisePainter extends CustomPainter {
 
   late final List <Color> _palette = List.generate (256, (i) {
 
-    final double t = i / 255.0;
+    final double t = i / 255;
     final double sharpT = pow(t, sharpness).toDouble();
 
 

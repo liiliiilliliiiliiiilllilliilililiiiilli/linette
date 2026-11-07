@@ -6,6 +6,7 @@ import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/textbutton/textbutton.dart';
+import 'package:linette/app/widgets/textbutton/models/icons/icons.dart';
 import 'package:linette/app/windows/language/language.dart';
 
 
@@ -22,8 +23,8 @@ class ButtonChangeLanguage extends ConsumerWidget {
     Future <void> onPress () async {
 
       await context.methods.openWindow (
-        context: context,
-        ref: ref,
+        context,
+        ref,
         window: const LanguageWindow ()
       );
 
@@ -33,9 +34,13 @@ class ButtonChangeLanguage extends ConsumerWidget {
     return (
 
       TextButtonComponent (
-        iconLeft: context.icons.language,
+        onPress: onPress,
         text: context.texts.pageWelcomeBodyBottomChangeLanguage,
-        onPress: onPress
+        icons: TextButtonIcons (
+          left: TextButtonIcon (
+            context.icons.language
+          )
+        )
       )
 
     );

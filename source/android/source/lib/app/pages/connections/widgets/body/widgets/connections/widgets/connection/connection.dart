@@ -1,4 +1,4 @@
-// Connections page - Body - Connections list - Connection
+// Connections page - Body - Connections - Connection
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -8,18 +8,25 @@ import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 import 'widgets/country/country.dart';
 import 'widgets/choicestatus/choicestatus.dart';
 import 'widgets/availabilitystatus/availabilitystatus.dart';
-import 'models/connection/connection.dart';
 
 
 
 class Connection extends HookWidget {
 
-  final ConnectionModel model;
+  final void Function () onPress;
+  final String flag;
+  final String name;
+  final bool isChosen;
+  final bool isAvailable;
 
 
   const Connection ({
     super.key,
-    required this.model
+    required this.onPress,
+    required this.flag,
+    required this.name,
+    required this.isChosen,
+    required this.isAvailable
   });
 
 
@@ -28,7 +35,7 @@ class Connection extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final Color colorBorder = model.isChosen
+    final Color colorBorder = isChosen
       ? context.colors.blockBorder
       : context.colors.block;
 
@@ -36,8 +43,8 @@ class Connection extends HookWidget {
     return (
 
       Presser (
+        onPress: onPress,
         isPressed: isPressed,
-        onPress: model.onPress,
         child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.975,
@@ -55,14 +62,14 @@ class Connection extends HookWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Country (
-                  flag: model.flag,
-                  name: model.name
+                  flag: flag,
+                  name: name
                 ),
                 ChoiceStatus (
-                  isChosen: model.isChosen
+                  isChosen: isChosen
                 ),
                 AvailabilityStatus (
-                  isAvailable: model.isAvailable
+                  isAvailable: isAvailable
                 )
               ]
             )

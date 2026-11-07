@@ -2,11 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/providers/theme/theme.dart';
-import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
+import 'package:linette/app/widgets/appbarbutton/models/icon/icon.dart';
 import 'package:linette/app/widgets/appbarbutton/models/shape/shape.dart';
 
 
@@ -40,19 +39,11 @@ class RightButton extends HookConsumerWidget {
 
     return (
 
-      SizedBox (
-        width: 56,
-        height: 56,
-        child: AppBarButton (
-          onPress: onPress,
-          shape: ShapeModel.circle,
-          icon: SvgPicture.asset (
-            themeIcon,
-            colorFilter: ColorFilter.mode (
-              context.colors.appBarButtonIcon,
-              BlendMode.srcIn
-            )
-          )
+      AppBarButton (
+        onPress: onPress,
+        shape: AppBarButtonShape.circle,
+        icon: AppBarButtonIcon (
+          themeIcon
         )
       )
 

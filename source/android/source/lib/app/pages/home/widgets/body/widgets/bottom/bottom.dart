@@ -29,8 +29,8 @@ class Bottom extends HookConsumerWidget {
     Future <void> onPress () async {
 
       await context.methods.openWindow (
-        context: context,
-        ref: ref,
+        context,
+        ref,
         window: const HintWindow ()
       );
 
@@ -90,8 +90,8 @@ class Bottom extends HookConsumerWidget {
     return (
 
       Presser (
-        isPressed: isPressed,
         onPress: onPress,
+        isPressed: isPressed,
         onTapDown: onTapDown,
         onTapUp: onTapUp,
         onPanDown: onPanDown,
@@ -121,10 +121,10 @@ class Bottom extends HookConsumerWidget {
                 isPressed: isPressed,
                 scaleRate: 0.975,
                 child: AnimatedContainer (
+                  transform: Matrix4.translationValues (0, translationYValue, 0),
                   duration: const Duration (
                     milliseconds: 80
                   ),
-                  transform: Matrix4.translationValues (0, translationYValue, 0),
                   child: Center (
                     child: Text.rich (
                       maxLines: 2,

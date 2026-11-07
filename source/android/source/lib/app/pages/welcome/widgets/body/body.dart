@@ -18,18 +18,18 @@ class BodyComponent extends StatelessWidget {
 
     return (
 
-      Stack (
+      const Stack (
         children: [
           Positioned (
-            left: 0,
             top: -1.5 * (kToolbarHeight + 10),
+            left: 0,
             right: 0,
             bottom: 0,
-            child: Container (
-              padding: const EdgeInsets.symmetric (
+            child: Padding (
+              padding: EdgeInsets.symmetric (
                 vertical: 75
               ),
-              child: const Column (
+              child: Column (
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

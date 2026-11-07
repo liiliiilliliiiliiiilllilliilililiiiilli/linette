@@ -1,21 +1,22 @@
-// Connections page - Body - Liner
+// Liner global widget
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
-import 'package:linette/app/modules/texts/texts.dart';
 
 
 
 class Liner extends StatelessWidget {
 
-  final int onlineNum;
+  final String text;
 
 
-  const Liner ({
-    super.key,
-    required this.onlineNum
-  });
+  const Liner (
+    this.text,
+    {
+      super.key
+    }
+  );
 
 
   @override Widget build (BuildContext context) {
@@ -26,22 +27,22 @@ class Liner extends StatelessWidget {
         alignment: Alignment.centerLeft,
         children: [
           Container (
+            width: double.infinity,
             height: 2,
-            color: context.colors.line,
-            width: double.infinity
+            color: context.colors.line
           ),
           Transform.translate (
             offset: const Offset (38, -2),
             child: Container (
               height: 38,
-              color: context.colors.back,
               padding: const EdgeInsets.symmetric (
                 horizontal: 8
               ),
+              color: context.colors.back,
               child: Center (
                 widthFactor: 1,
                 child: Text (
-                  context.texts.pageConnectionsBodyLiner (onlineNum),
+                  text,
                   style: TextStyle (
                     fontFamily: context.fonts.archivo,
                     fontWeight: FontWeight.w700,

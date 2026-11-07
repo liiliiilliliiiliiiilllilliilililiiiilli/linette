@@ -9,7 +9,7 @@ import 'package:linette/app/modules/colors/colors.dart';
 
 class OpenWindowElement {
 
-  static Future <void> openWindow ({required BuildContext context, required WidgetRef ref, required Widget window, void Function ()? callback}) async {
+  static Future <void> openWindow (BuildContext context, WidgetRef ref, {required Widget window, void Function ()? callback}) async {
 
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
 

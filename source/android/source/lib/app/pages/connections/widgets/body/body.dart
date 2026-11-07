@@ -6,9 +6,9 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/slider/slider.dart';
-import 'widgets/liner/liner.dart';
+import 'package:linette/app/widgets/liner/liner.dart';
+import 'package:linette/app/pages/connections/widgets/body/widgets/connections/widgets/connection/connection.dart';
 import 'widgets/connections/connections.dart';
-import 'widgets/connections/widgets/connection/models/connection/connection.dart';
 
 
 
@@ -41,45 +41,42 @@ class BodyComponent extends HookWidget {
       SliderComponent (
         onSwipeLeft: onSwipeLeft,
         child: Container (
-          color: context.colors.transparent,
-          child: Container (
-            color: context.colors.back,
-            padding: const EdgeInsets.only (
-              top: 30
-            ),
-            child: Column (
-              spacing: 16,
-              children: [
-                const Liner (
-                  onlineNum: 3
-                ),
-                Connections (
-                  connections: [
-                    ConnectionModel (
-                      flag: context.icons.flagNetherlands,
-                      name: textNetherlands,
-                      isChosen: chosen.value == textNetherlands,
-                      isAvailable: false,
-                      onPress: () => {chosen.value = textNetherlands}
-                    ),
-                    ConnectionModel (
-                      flag: context.icons.flagFinland,
-                      name: textFinland,
-                      isChosen: chosen.value == textFinland,
-                      isAvailable: false,
-                      onPress: () => {chosen.value = textFinland}
-                    ),
-                    ConnectionModel (
-                      flag: context.icons.flagGermany,
-                      name: textGermany,
-                      isChosen: chosen.value == textGermany,
-                      isAvailable: false,
-                      onPress: () => {chosen.value = textGermany}
-                    )
-                  ]
-                )
-              ]
-            )
+          padding: const EdgeInsets.only (
+            top: 30
+          ),
+          color: context.colors.back,
+          child: Column (
+            spacing: 16,
+            children: [
+              Liner (
+                context.texts.pageConnectionsBodyLiner (3)
+              ),
+              Connections (
+                connections: [
+                  Connection (
+                    onPress: () => {chosen.value = textNetherlands},
+                    flag: context.icons.flagNetherlands,
+                    name: textNetherlands,
+                    isChosen: chosen.value == textNetherlands,
+                    isAvailable: false
+                  ),
+                  Connection (
+                    onPress: () => {chosen.value = textFinland},
+                    flag: context.icons.flagFinland,
+                    name: textFinland,
+                    isChosen: chosen.value == textFinland,
+                    isAvailable: false
+                  ),
+                  Connection (
+                    onPress: () => {chosen.value = textGermany},
+                    flag: context.icons.flagGermany,
+                    name: textGermany,
+                    isChosen: chosen.value == textGermany,
+                    isAvailable: false
+                  )
+                ]
+              )
+            ]
           )
         )
       )

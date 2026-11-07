@@ -88,25 +88,25 @@ class TapHint extends HookWidget {
     return (
 
       Container (
-        height: 23,
         alignment: Alignment.center,
+        height: 23,
         child: ScaleTransition (
           scale: scaleAnimation,
           child: FadeTransition (
             opacity: opacityAnimation,
             child: Row (
-              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               spacing: 8,
               children: [
                 SvgPicture.asset (
                   context.icons.tap,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.tapHintIcon,
-                    BlendMode.srcIn
-                  ),
                   width: 17,
-                  height: 17
+                  height: 17,
+                  colorFilter: ColorFilter.mode (
+                    context.colors.tapHint,
+                    BlendMode.srcIn
+                  )
                 ),
                 Text (
                   context.texts.pageHomeBodyCenterTapToConnect,
@@ -114,8 +114,8 @@ class TapHint extends HookWidget {
                     fontFamily: context.fonts.archivo,
                     fontWeight: FontWeight.w500,
                     fontSize: 17.5,
-                    color: context.colors.tapHintText,
-                    height: 1
+                    height: 1,
+                    color: context.colors.tapHint
                   )
                 )
               ]

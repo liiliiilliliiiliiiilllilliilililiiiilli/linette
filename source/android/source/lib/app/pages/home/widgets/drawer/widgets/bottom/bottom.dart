@@ -78,26 +78,26 @@ class Bottom extends HookWidget {
     return (
 
       Presser (
-        isPressed: isPressed,
         onPress: onPress,
+        isPressed: isPressed,
         onTapDown: onTapDown,
         onTapUp: onTapUp,
         onPanDown: onPanDown,
         child: Container (
-          height: 80,
           alignment: Alignment.bottomLeft,
+          height: 80,
           padding: const EdgeInsets.symmetric (
             horizontal: 20,
             vertical: 15
           ),
           decoration: BoxDecoration (
-            color: context.colors.appBarBack,
             border: Border (
               top: BorderSide (
                 width: 2,
-                color: context.colors.appBarBorder
+                color: context.colors.drawerBottomBarBorder
               )
-            )
+            ),
+            color: context.colors.drawerBottomBarBack
           ),
           child: PresserAnimator (
             isPressed: isPressed,
@@ -114,7 +114,7 @@ class Bottom extends HookWidget {
                       fontFamily: context.fonts.archivo,
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
-                      color: context.colors.drawerBottomText
+                      color: context.colors.drawerBottomBarText
                     )
                   )
                 ),

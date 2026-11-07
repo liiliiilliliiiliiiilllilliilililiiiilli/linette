@@ -1,4 +1,4 @@
-// Connections page - Body - Connections list - Connection - Availability status
+// Connections page - Body - Connections - Connection - Availability status
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

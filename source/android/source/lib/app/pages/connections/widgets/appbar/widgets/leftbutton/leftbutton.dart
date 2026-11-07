@@ -3,11 +3,10 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
-import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
+import 'package:linette/app/widgets/appbarbutton/models/icon/icon.dart';
 import 'package:linette/app/widgets/appbarbutton/models/shape/shape.dart';
 
 
@@ -37,19 +36,11 @@ class LeftButton extends ConsumerWidget {
 
       AppBarButton (
         onPress: onPress,
-        shape: ShapeModel.circle,
-        icon: Transform.translate (
+        shape: AppBarButtonShape.circle,
+        icon: AppBarButtonIcon (
+          context.icons.arrow,
           offset: const Offset (-1, 0),
-          child: Transform.rotate (
-            angle: 180 * math.pi / 180,
-            child: SvgPicture.asset (
-              context.icons.arrow,
-              colorFilter: ColorFilter.mode (
-                context.colors.appBarButtonIcon,
-                BlendMode.srcIn
-              )
-            )
-          )
+          angle: 180 * math.pi / 180
         )
       )
 

@@ -34,28 +34,28 @@ class ChooseConnectionButton extends HookWidget {
     return (
 
       Container (
-        height: 29 + 8 * 2,
         alignment: Alignment.center,
+        height: 29 + 8 * 2,
         child: Presser (
-          isPressed: isPressed,
           onPress: onPress,
+          isPressed: isPressed,
           child: PresserAnimator (
             isPressed: isPressed,
-            child: Container (
+            child: Padding (
               padding: const EdgeInsets.all (8),
               child: Row (
-                mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 spacing: 8,
                 children: [
                   SvgPicture.asset (
                     context.icons.location,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.buttonChooseConnectionIconLeft,
-                      BlendMode.srcIn
-                    ),
                     width: 17,
-                    height: 17
+                    height: 17,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.buttonChooseConnection,
+                      BlendMode.srcIn
+                    )
                   ),
                   Text (
                     context.texts.pageHomeBodyCenterGoNetherlands,
@@ -63,18 +63,18 @@ class ChooseConnectionButton extends HookWidget {
                       fontFamily: context.fonts.archivo,
                       fontWeight: FontWeight.w600,
                       fontSize: 17.5,
-                      color: context.colors.buttonChooseConnectionText,
-                      height: 1
+                      height: 1,
+                      color: context.colors.buttonChooseConnection
                     )
                   ),
                   SvgPicture.asset (
                     context.icons.arrow,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.buttonChooseConnectionIconRight,
-                      BlendMode.srcIn
-                    ),
                     width: 15,
-                    height: 15
+                    height: 15,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.buttonChooseConnection,
+                      BlendMode.srcIn
+                    )
                   )
                 ]
               )
