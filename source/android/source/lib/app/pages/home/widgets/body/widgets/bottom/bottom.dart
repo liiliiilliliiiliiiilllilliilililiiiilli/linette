@@ -128,12 +128,12 @@ class Bottom extends HookConsumerWidget {
                   child: Center (
                     child: Text.rich (
                       maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
                       TextSpan (
                         style: TextStyle (
                           fontFamily: context.fonts.archivo,
                           fontWeight: FontWeight.w400,
-                          fontSize: 15.75
+                          fontSize: 15.75,
+                          overflow: TextOverflow.ellipsis
                         ),
                         children: [
                           TextSpan (

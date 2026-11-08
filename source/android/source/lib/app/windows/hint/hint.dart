@@ -21,7 +21,7 @@ class HintWindow extends StatelessWidget {
       Window (
         width: 340,
         isExpanded: true,
-        title: context.texts.windowHintTop,
+        title: context.texts.windowHintTitle,
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
@@ -29,9 +29,8 @@ class HintWindow extends StatelessWidget {
               bottom: 2.5
             ),
             child: Text (
-              context.texts.windowHintCenter,
+              context.texts.windowHintBody,
               style: TextStyle (
-                fontFamily: 'Fedoka',
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
                 color: context.colors.windowMainText
@@ -39,7 +38,7 @@ class HintWindow extends StatelessWidget {
             )
           )
         ),
-        action: context.texts.windowHintBottom
+        action: context.texts.windowHintAction
       )
 
     );

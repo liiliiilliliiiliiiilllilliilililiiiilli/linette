@@ -38,9 +38,8 @@ class TopComponent extends StatelessWidget {
         child: Text (
           title,
           style: TextStyle (
-            fontFamily: 'Fedoka',
             fontWeight: FontWeight.w600,
-            fontSize: 16.5,
+            fontSize: 15.5,
             color: context.colors.windowTopText
           )
         )

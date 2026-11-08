@@ -98,52 +98,176 @@ class MessageLookup extends MessageLookupByLibrary {
       " Linette ",
     ),
     "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "windowAccountBottom": MessageLookupByLibrary.simpleMessage("Done"),
-    "windowAccountTop": MessageLookupByLibrary.simpleMessage("Account"),
-    "windowArsenalBottom": MessageLookupByLibrary.simpleMessage("Done"),
-    "windowArsenalTop": MessageLookupByLibrary.simpleMessage("App\'s arsenal"),
-    "windowFeedbackBottom": MessageLookupByLibrary.simpleMessage("Ok"),
-    "windowFeedbackCenter_1": MessageLookupByLibrary.simpleMessage(
+    "windowAccountAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowAccountTitle": MessageLookupByLibrary.simpleMessage("Account"),
+    "windowArsenalAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
+      "App\'s arsenal",
+    ),
+    "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("Ok"),
+    "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage(
       "Service news are being published on the ",
     ),
-    "windowFeedbackCenter_2": MessageLookupByLibrary.simpleMessage(
+    "windowFeedbackBody_2": MessageLookupByLibrary.simpleMessage(
       "official Telegram channel",
     ),
-    "windowFeedbackCenter_2_Link": MessageLookupByLibrary.simpleMessage(
+    "windowFeedbackBody_2_Link": MessageLookupByLibrary.simpleMessage(
       "https://t.me/LinetteTelegramChannel",
     ),
-    "windowFeedbackCenter_3": MessageLookupByLibrary.simpleMessage("."),
-    "windowFeedbackTop": MessageLookupByLibrary.simpleMessage("Feedback"),
-    "windowHintBottom": MessageLookupByLibrary.simpleMessage("Ok"),
-    "windowHintCenter": MessageLookupByLibrary.simpleMessage(
+    "windowFeedbackBody_3": MessageLookupByLibrary.simpleMessage("."),
+    "windowFeedbackTitle": MessageLookupByLibrary.simpleMessage("Feedback"),
+    "windowHintAction": MessageLookupByLibrary.simpleMessage("Ok"),
+    "windowHintBody": MessageLookupByLibrary.simpleMessage(
       "If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.",
     ),
-    "windowHintTop": MessageLookupByLibrary.simpleMessage(
+    "windowHintTitle": MessageLookupByLibrary.simpleMessage(
       "Which purpose does this app have?",
     ),
-    "windowLanguageBottom": MessageLookupByLibrary.simpleMessage("Done"),
-    "windowLanguageCenterChinese": MessageLookupByLibrary.simpleMessage(
+    "windowLanguageAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowLanguageBodyChinese": MessageLookupByLibrary.simpleMessage(
       "Chinese",
     ),
-    "windowLanguageCenterChineseNative": MessageLookupByLibrary.simpleMessage(
+    "windowLanguageBodyChineseNative": MessageLookupByLibrary.simpleMessage(
       "中文",
     ),
-    "windowLanguageCenterEnglish": MessageLookupByLibrary.simpleMessage(
+    "windowLanguageBodyEnglish": MessageLookupByLibrary.simpleMessage(
       "English",
     ),
-    "windowLanguageCenterEnglishNative": MessageLookupByLibrary.simpleMessage(
+    "windowLanguageBodyEnglishNative": MessageLookupByLibrary.simpleMessage(
       "English",
     ),
-    "windowLanguageCenterRussian": MessageLookupByLibrary.simpleMessage(
+    "windowLanguageBodyRussian": MessageLookupByLibrary.simpleMessage(
       "Russian",
     ),
-    "windowLanguageCenterRussianNative": MessageLookupByLibrary.simpleMessage(
+    "windowLanguageBodyRussianNative": MessageLookupByLibrary.simpleMessage(
       "Русский",
     ),
-    "windowLanguageTop": MessageLookupByLibrary.simpleMessage("App language"),
-    "windowNetBottom": MessageLookupByLibrary.simpleMessage("Ok"),
-    "windowNetTop": MessageLookupByLibrary.simpleMessage("Network parameters"),
-    "windowWalletBottom": MessageLookupByLibrary.simpleMessage("Done"),
-    "windowWalletTop": MessageLookupByLibrary.simpleMessage("Wallet"),
+    "windowLanguageTitle": MessageLookupByLibrary.simpleMessage("App language"),
+    "windowNetAction": MessageLookupByLibrary.simpleMessage("Ok"),
+    "windowNetBodyParametersBlock_1_Parameter_1_Stata":
+        MessageLookupByLibrary.simpleMessage("Active connection:"),
+    "windowNetBodyParametersBlock_1_Parameter_1_Value":
+        MessageLookupByLibrary.simpleMessage("WiFi"),
+    "windowNetBodyParametersBlock_1_Parameter_2_Stata":
+        MessageLookupByLibrary.simpleMessage("Mobile network:"),
+    "windowNetBodyParametersBlock_1_Parameter_2_Value":
+        MessageLookupByLibrary.simpleMessage("4G"),
+    "windowNetBodyParametersBlock_1_Parameter_3_Stata":
+        MessageLookupByLibrary.simpleMessage("Telecom operator:"),
+    "windowNetBodyParametersBlock_1_Parameter_3_Value":
+        MessageLookupByLibrary.simpleMessage("Megafon"),
+    "windowNetBodyParametersBlock_1_Parameter_4_Stata":
+        MessageLookupByLibrary.simpleMessage("Internet access:"),
+    "windowNetBodyParametersBlock_1_Parameter_4_Value":
+        MessageLookupByLibrary.simpleMessage("Available"),
+    "windowNetBodyParametersBlock_1_Title":
+        MessageLookupByLibrary.simpleMessage("Connection status"),
+    "windowNetBodyParametersBlock_2_Parameter_1_Stata":
+        MessageLookupByLibrary.simpleMessage("SSID:"),
+    "windowNetBodyParametersBlock_2_Parameter_1_Value":
+        MessageLookupByLibrary.simpleMessage("TP-Link_S25"),
+    "windowNetBodyParametersBlock_2_Parameter_2_Stata":
+        MessageLookupByLibrary.simpleMessage("BSSID:"),
+    "windowNetBodyParametersBlock_2_Parameter_2_Value":
+        MessageLookupByLibrary.simpleMessage("98:BD:80:84:D5:D2"),
+    "windowNetBodyParametersBlock_2_Parameter_3_Stata":
+        MessageLookupByLibrary.simpleMessage("Frequency range:"),
+    "windowNetBodyParametersBlock_2_Parameter_3_Value":
+        MessageLookupByLibrary.simpleMessage("2.4 GHz"),
+    "windowNetBodyParametersBlock_2_Parameter_4_Stata":
+        MessageLookupByLibrary.simpleMessage("Network channel number:"),
+    "windowNetBodyParametersBlock_2_Parameter_4_Value":
+        MessageLookupByLibrary.simpleMessage("21"),
+    "windowNetBodyParametersBlock_2_Parameter_5_Stata":
+        MessageLookupByLibrary.simpleMessage("RSSI:"),
+    "windowNetBodyParametersBlock_2_Parameter_5_Value":
+        MessageLookupByLibrary.simpleMessage("95%"),
+    "windowNetBodyParametersBlock_2_Parameter_6_Stata":
+        MessageLookupByLibrary.simpleMessage("Connection speed:"),
+    "windowNetBodyParametersBlock_2_Parameter_6_Value":
+        MessageLookupByLibrary.simpleMessage("150 Mbps"),
+    "windowNetBodyParametersBlock_2_Title":
+        MessageLookupByLibrary.simpleMessage("Wi-Fi network settings"),
+    "windowNetBodyParametersBlock_3_Parameter_1_Stata":
+        MessageLookupByLibrary.simpleMessage("Local IPv4 address:"),
+    "windowNetBodyParametersBlock_3_Parameter_1_Value":
+        MessageLookupByLibrary.simpleMessage("192.168.1.45"),
+    "windowNetBodyParametersBlock_3_Parameter_2_Stata":
+        MessageLookupByLibrary.simpleMessage("Local IPv6 address:"),
+    "windowNetBodyParametersBlock_3_Parameter_2_Value":
+        MessageLookupByLibrary.simpleMessage("-"),
+    "windowNetBodyParametersBlock_3_Parameter_3_Stata":
+        MessageLookupByLibrary.simpleMessage("External IP address:"),
+    "windowNetBodyParametersBlock_3_Parameter_3_Value":
+        MessageLookupByLibrary.simpleMessage("43.38.6.38"),
+    "windowNetBodyParametersBlock_3_Parameter_4_Stata":
+        MessageLookupByLibrary.simpleMessage("Subnet mask:"),
+    "windowNetBodyParametersBlock_3_Parameter_4_Value":
+        MessageLookupByLibrary.simpleMessage("255.255.255.0"),
+    "windowNetBodyParametersBlock_3_Parameter_5_Stata":
+        MessageLookupByLibrary.simpleMessage("Default gateway:"),
+    "windowNetBodyParametersBlock_3_Parameter_5_Value":
+        MessageLookupByLibrary.simpleMessage("192.168.1.1"),
+    "windowNetBodyParametersBlock_3_Parameter_6_Stata":
+        MessageLookupByLibrary.simpleMessage("Communication interface:"),
+    "windowNetBodyParametersBlock_3_Parameter_6_Value":
+        MessageLookupByLibrary.simpleMessage("wlan0"),
+    "windowNetBodyParametersBlock_3_Title":
+        MessageLookupByLibrary.simpleMessage("IP addressing and routing"),
+    "windowNetBodyParametersBlock_4_Parameter_1_Stata":
+        MessageLookupByLibrary.simpleMessage("DNS servers:"),
+    "windowNetBodyParametersBlock_4_Parameter_1_Value":
+        MessageLookupByLibrary.simpleMessage("8.8.8.8, 1.1.1.1"),
+    "windowNetBodyParametersBlock_4_Parameter_2_Stata":
+        MessageLookupByLibrary.simpleMessage("Private DNS Status:"),
+    "windowNetBodyParametersBlock_4_Parameter_2_Value":
+        MessageLookupByLibrary.simpleMessage("DoH is enabled"),
+    "windowNetBodyParametersBlock_4_Parameter_3_Stata":
+        MessageLookupByLibrary.simpleMessage("DNS Provider:"),
+    "windowNetBodyParametersBlock_4_Parameter_3_Value":
+        MessageLookupByLibrary.simpleMessage("Google DNS"),
+    "windowNetBodyParametersBlock_4_Title":
+        MessageLookupByLibrary.simpleMessage("Domain Name System"),
+    "windowNetBodyParametersBlock_5_Parameter_1_Stata":
+        MessageLookupByLibrary.simpleMessage("VPN connection status:"),
+    "windowNetBodyParametersBlock_5_Parameter_1_Value":
+        MessageLookupByLibrary.simpleMessage("Active"),
+    "windowNetBodyParametersBlock_5_Parameter_2_Stata":
+        MessageLookupByLibrary.simpleMessage("VPN interface name:"),
+    "windowNetBodyParametersBlock_5_Parameter_2_Value":
+        MessageLookupByLibrary.simpleMessage("tun0"),
+    "windowNetBodyParametersBlock_5_Parameter_3_Stata":
+        MessageLookupByLibrary.simpleMessage("System proxy:"),
+    "windowNetBodyParametersBlock_5_Parameter_3_Value":
+        MessageLookupByLibrary.simpleMessage("-"),
+    "windowNetBodyParametersBlock_5_Parameter_4_Stata":
+        MessageLookupByLibrary.simpleMessage("Location:"),
+    "windowNetBodyParametersBlock_5_Parameter_4_Value":
+        MessageLookupByLibrary.simpleMessage("Russia, Moscow"),
+    "windowNetBodyParametersBlock_5_Parameter_5_Stata":
+        MessageLookupByLibrary.simpleMessage("IP address type:"),
+    "windowNetBodyParametersBlock_5_Parameter_5_Value":
+        MessageLookupByLibrary.simpleMessage("VPN"),
+    "windowNetBodyParametersBlock_5_Title":
+        MessageLookupByLibrary.simpleMessage("Bypass and Restriction Control"),
+    "windowNetBodyParametersBlock_6_Parameter_1_Stata":
+        MessageLookupByLibrary.simpleMessage("Ping:"),
+    "windowNetBodyParametersBlock_6_Parameter_1_Value":
+        MessageLookupByLibrary.simpleMessage("10ms"),
+    "windowNetBodyParametersBlock_6_Parameter_2_Stata":
+        MessageLookupByLibrary.simpleMessage("Packet loss:"),
+    "windowNetBodyParametersBlock_6_Parameter_2_Value":
+        MessageLookupByLibrary.simpleMessage("5%"),
+    "windowNetBodyParametersBlock_6_Parameter_3_Stata":
+        MessageLookupByLibrary.simpleMessage("MTU:"),
+    "windowNetBodyParametersBlock_6_Parameter_3_Value":
+        MessageLookupByLibrary.simpleMessage("1500"),
+    "windowNetBodyParametersBlock_6_Title":
+        MessageLookupByLibrary.simpleMessage("Network quality metrics"),
+    "windowNetTitle": MessageLookupByLibrary.simpleMessage(
+      "Network parameters",
+    ),
+    "windowWalletAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowWalletTitle": MessageLookupByLibrary.simpleMessage("Wallet"),
   };
 }

@@ -56,9 +56,8 @@ class BottomComponent extends HookConsumerWidget {
             child: Text (
               action,
               style: TextStyle (
-                fontFamily: 'Fedoka',
                 fontWeight: FontWeight.w400,
-                fontSize: 16.5,
+                fontSize: 15.5,
                 color: context.colors.windowBottomText
               )
             )

@@ -39,7 +39,7 @@ class AccoutWindow extends HookWidget {
 
       isPressed.value = false;
 
-      context.methods.openLink (context.texts.windowFeedbackCenter_2_Link);
+      context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
 
     }
 
@@ -72,7 +72,7 @@ class AccoutWindow extends HookWidget {
 
       Window (
         width: 340,
-        title: context.texts.windowAccountTop,
+        title: context.texts.windowAccountTitle,
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
@@ -82,26 +82,25 @@ class AccoutWindow extends HookWidget {
             child: Text.rich (
               TextSpan (
                 style: const TextStyle (
-                  fontFamily: 'Fedoka',
                   fontWeight: FontWeight.w400,
                   fontSize: 16
                 ),
                 children: [
                   TextSpan (
-                    text: context.texts.windowFeedbackCenter_1,
+                    text: context.texts.windowFeedbackBody_1,
                     style: TextStyle (
                       color: context.colors.windowMainText
                     )
                   ),
                   TextSpan (
-                    text: context.texts.windowFeedbackCenter_2,
+                    text: context.texts.windowFeedbackBody_2,
                     style: TextStyle (
                       color: linkColor,
                     ),
                     recognizer: gestureRecognizer
                   ),
                   TextSpan (
-                    text: context.texts.windowFeedbackCenter_3,
+                    text: context.texts.windowFeedbackBody_3,
                     style: TextStyle (
                       color: context.colors.windowMainText
                     )
@@ -111,7 +110,7 @@ class AccoutWindow extends HookWidget {
             )
           )
         ),
-        action: context.texts.windowAccountBottom
+        action: context.texts.windowAccountAction
       )
 
     );

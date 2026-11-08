@@ -1,12 +1,12 @@
 // Net window
 
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'widgets/parametersblock/parametersblock.dart';
+import 'widgets/parametersblock/widgets/title/title.dart';
+import 'widgets/parametersblock/widgets/parameter/parameter.dart';
 
 
 
@@ -19,99 +19,183 @@ class NetWindow extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final ValueNotifier <bool> isPressed = useState (false);
-
-
-    final TapGestureRecognizer gestureRecognizer = useMemoized (() {
-
-      return TapGestureRecognizer ();
-
-    }, []);
-
-
-    void onTapDown (TapDownDetails details) {
-
-      isPressed.value = true;
-
-    }
-
-    void onTapUp (TapUpDetails details) {
-
-      isPressed.value = false;
-
-      context.methods.openLink (context.texts.windowFeedbackCenter_2_Link);
-
-    }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-
-    gestureRecognizer
-      ..onTapDown = onTapDown
-      ..onTapUp = onTapUp
-      ..onTapCancel = onTapCancel;
-
-
-    useEffect (() {
-
-      return gestureRecognizer.dispose;
-
-    }, [gestureRecognizer]);
-
-
-    final Color linkColor = isPressed.value
-      ? context.colors.linkPressed
-      : context.colors.link;
-
-
     return (
 
       Window (
         width: 340,
-        title: context.texts.windowNetTop,
+        isExpanded: true,
+        title: context.texts.windowNetTitle,
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
               top: 10,
               bottom: 2.5
             ),
-            child: Text.rich (
-              TextSpan (
-                style: const TextStyle (
-                  fontFamily: 'Fedoka',
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16
-                ),
+            child: DefaultTextStyle (
+              style: const TextStyle (
+                fontSize: 15.5
+              ),
+              child: Column (
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 8 * 3,
                 children: [
-                  TextSpan (
-                    text: context.texts.windowFeedbackCenter_1,
-                    style: TextStyle (
-                      color: context.colors.windowMainText
-                    )
-                  ),
-                  TextSpan (
-                    text: context.texts.windowFeedbackCenter_2,
-                    style: TextStyle (
-                      color: linkColor,
+                  ParametersBlock (
+                    title: TitleComponent (
+                      context.texts.windowNetBodyParametersBlock_1_Title
                     ),
-                    recognizer: gestureRecognizer
+                    parameters: [
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_1_Parameter_2_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_1_Parameter_2_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_1_Parameter_3_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_1_Parameter_3_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_1_Parameter_4_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_1_Parameter_4_Value
+                      )
+                    ]
                   ),
-                  TextSpan (
-                    text: context.texts.windowFeedbackCenter_3,
-                    style: TextStyle (
-                      color: context.colors.windowMainText
-                    )
+                  ParametersBlock (
+                    darkened: false,
+                    title: TitleComponent (
+                      context.texts.windowNetBodyParametersBlock_2_Title
+                    ),
+                    parameters: [
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_2_Parameter_2_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_2_Parameter_2_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_2_Parameter_3_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_2_Parameter_3_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_2_Parameter_4_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_2_Parameter_4_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_2_Parameter_5_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_2_Parameter_5_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_2_Parameter_6_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_2_Parameter_6_Value
+                      )
+                    ]
+                  ),
+                  ParametersBlock (
+                    title: TitleComponent (
+                      context.texts.windowNetBodyParametersBlock_3_Title
+                    ),
+                    parameters: [
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_3_Parameter_2_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_3_Parameter_2_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_3_Parameter_3_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_3_Parameter_3_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_3_Parameter_4_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_3_Parameter_4_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_3_Parameter_5_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_3_Parameter_5_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_3_Parameter_6_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_3_Parameter_6_Value
+                      )
+                    ]
+                  ),
+                  ParametersBlock (
+                    title: TitleComponent (
+                      context.texts.windowNetBodyParametersBlock_4_Title
+                    ),
+                    parameters: [
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_4_Parameter_2_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_4_Parameter_2_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_4_Parameter_3_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_4_Parameter_3_Value
+                      )
+                    ]
+                  ),
+                  ParametersBlock (
+                    title: TitleComponent (
+                      context.texts.windowNetBodyParametersBlock_5_Title
+                    ),
+                    parameters: [
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_5_Parameter_2_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_5_Parameter_2_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_5_Parameter_3_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_5_Parameter_3_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_5_Parameter_4_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_5_Parameter_4_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_5_Parameter_5_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_5_Parameter_5_Value
+                      )
+                    ]
+                  ),
+                  ParametersBlock (
+                    title: TitleComponent (
+                      context.texts.windowNetBodyParametersBlock_6_Title
+                    ),
+                    parameters: [
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_6_Parameter_2_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_6_Parameter_2_Value
+                      ),
+                      ParameterComponent (
+                        stata: context.texts.windowNetBodyParametersBlock_6_Parameter_3_Stata,
+                        value: context.texts.windowNetBodyParametersBlock_6_Parameter_3_Value
+                      )
+                    ]
                   )
                 ]
               )
             )
           )
         ),
-        action: context.texts.windowNetBottom
+        action: context.texts.windowNetAction
       )
 
     );

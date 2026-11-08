@@ -23,10 +23,10 @@ class LanguageOption extends ConsumerWidget {
 
 
     final String textCurrentLanguage = localeState == 'ru'
-      ? context.texts.windowLanguageCenterRussian
+      ? context.texts.windowLanguageBodyRussian
       : localeState == 'en'
-        ? context.texts.windowLanguageCenterEnglish
-        : context.texts.windowLanguageCenterChinese;
+        ? context.texts.windowLanguageBodyEnglish
+        : context.texts.windowLanguageBodyChinese;
 
 
     return (

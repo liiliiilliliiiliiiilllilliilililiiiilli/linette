@@ -351,228 +351,828 @@ class T {
   }
 
   /// `Which purpose does this app have?`
-  String get windowHintTop {
+  String get windowHintTitle {
     return Intl.message(
       'Which purpose does this app have?',
-      name: 'windowHintTop',
+      name: 'windowHintTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.`
-  String get windowHintCenter {
+  String get windowHintBody {
     return Intl.message(
       'If you are facing issues accessing remote resources or want to keep your personal data confidential on an insecure network, one solution might be a reliable VPN connection.\n\nVPN (Virtual Private Network) is an inter-network communication technology for creating secure virtual communication channels. Encrypted traffic data is protected by cryptographic methods so that if an attacker intercepts it, decrypting it would take millions and millions of years.\n\nBesides VPN, there are many other ways to protect yourself online, such as network proxies or changing your IP address. Almost all of them share the working principles of VPN and also have a range of separate communication protocols designed for better performance in specific scenarios (corporate, personal solutions, or other specialized areas).\n\nDespite their broad capabilities, such technologies are based on simple mathematical principles and are not complicated to implement. If you wish, you can deploy your own VPN server or set up a private proxy – this is the best way to maintain control and privacy over your data.\n\nLinette is the same kind of network provider that you could become for yourself if you thoroughly study cybersecurity and the basics of programming.\n\nRemember: no one can physically perceive information, but anyone can bring to life any idea based on that information.',
-      name: 'windowHintCenter',
+      name: 'windowHintBody',
       desc: '',
       args: [],
     );
   }
 
   /// `Ok`
-  String get windowHintBottom {
-    return Intl.message('Ok', name: 'windowHintBottom', desc: '', args: []);
+  String get windowHintAction {
+    return Intl.message('Ok', name: 'windowHintAction', desc: '', args: []);
   }
 
   /// `App language`
-  String get windowLanguageTop {
+  String get windowLanguageTitle {
     return Intl.message(
       'App language',
-      name: 'windowLanguageTop',
+      name: 'windowLanguageTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Russian`
-  String get windowLanguageCenterRussian {
+  String get windowLanguageBodyRussian {
     return Intl.message(
       'Russian',
-      name: 'windowLanguageCenterRussian',
+      name: 'windowLanguageBodyRussian',
       desc: '',
       args: [],
     );
   }
 
   /// `English`
-  String get windowLanguageCenterEnglish {
+  String get windowLanguageBodyEnglish {
     return Intl.message(
       'English',
-      name: 'windowLanguageCenterEnglish',
+      name: 'windowLanguageBodyEnglish',
       desc: '',
       args: [],
     );
   }
 
   /// `Chinese`
-  String get windowLanguageCenterChinese {
+  String get windowLanguageBodyChinese {
     return Intl.message(
       'Chinese',
-      name: 'windowLanguageCenterChinese',
+      name: 'windowLanguageBodyChinese',
       desc: '',
       args: [],
     );
   }
 
   /// `Русский`
-  String get windowLanguageCenterRussianNative {
+  String get windowLanguageBodyRussianNative {
     return Intl.message(
       'Русский',
-      name: 'windowLanguageCenterRussianNative',
+      name: 'windowLanguageBodyRussianNative',
       desc: '',
       args: [],
     );
   }
 
   /// `English`
-  String get windowLanguageCenterEnglishNative {
+  String get windowLanguageBodyEnglishNative {
     return Intl.message(
       'English',
-      name: 'windowLanguageCenterEnglishNative',
+      name: 'windowLanguageBodyEnglishNative',
       desc: '',
       args: [],
     );
   }
 
   /// `中文`
-  String get windowLanguageCenterChineseNative {
+  String get windowLanguageBodyChineseNative {
     return Intl.message(
       '中文',
-      name: 'windowLanguageCenterChineseNative',
+      name: 'windowLanguageBodyChineseNative',
       desc: '',
       args: [],
     );
   }
 
   /// `Done`
-  String get windowLanguageBottom {
+  String get windowLanguageAction {
     return Intl.message(
       'Done',
-      name: 'windowLanguageBottom',
+      name: 'windowLanguageAction',
       desc: '',
       args: [],
     );
   }
 
   /// `Feedback`
-  String get windowFeedbackTop {
+  String get windowFeedbackTitle {
     return Intl.message(
       'Feedback',
-      name: 'windowFeedbackTop',
+      name: 'windowFeedbackTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Service news are being published on the `
-  String get windowFeedbackCenter_1 {
+  String get windowFeedbackBody_1 {
     return Intl.message(
       'Service news are being published on the ',
-      name: 'windowFeedbackCenter_1',
+      name: 'windowFeedbackBody_1',
       desc: '',
       args: [],
     );
   }
 
   /// `official Telegram channel`
-  String get windowFeedbackCenter_2 {
+  String get windowFeedbackBody_2 {
     return Intl.message(
       'official Telegram channel',
-      name: 'windowFeedbackCenter_2',
+      name: 'windowFeedbackBody_2',
       desc: '',
       args: [],
     );
   }
 
   /// `https://t.me/LinetteTelegramChannel`
-  String get windowFeedbackCenter_2_Link {
+  String get windowFeedbackBody_2_Link {
     return Intl.message(
       'https://t.me/LinetteTelegramChannel',
-      name: 'windowFeedbackCenter_2_Link',
+      name: 'windowFeedbackBody_2_Link',
       desc: '',
       args: [],
     );
   }
 
   /// `.`
-  String get windowFeedbackCenter_3 {
-    return Intl.message(
-      '.',
-      name: 'windowFeedbackCenter_3',
-      desc: '',
-      args: [],
-    );
+  String get windowFeedbackBody_3 {
+    return Intl.message('.', name: 'windowFeedbackBody_3', desc: '', args: []);
   }
 
   /// `Ok`
-  String get windowFeedbackBottom {
-    return Intl.message('Ok', name: 'windowFeedbackBottom', desc: '', args: []);
+  String get windowFeedbackAction {
+    return Intl.message('Ok', name: 'windowFeedbackAction', desc: '', args: []);
   }
 
   /// `App's arsenal`
-  String get windowArsenalTop {
+  String get windowArsenalTitle {
     return Intl.message(
       'App\'s arsenal',
-      name: 'windowArsenalTop',
+      name: 'windowArsenalTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Done`
-  String get windowArsenalBottom {
+  String get windowArsenalAction {
     return Intl.message(
       'Done',
-      name: 'windowArsenalBottom',
+      name: 'windowArsenalAction',
       desc: '',
       args: [],
     );
   }
 
   /// `Network parameters`
-  String get windowNetTop {
+  String get windowNetTitle {
     return Intl.message(
       'Network parameters',
-      name: 'windowNetTop',
+      name: 'windowNetTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connection status`
+  String get windowNetBodyParametersBlock_1_Title {
+    return Intl.message(
+      'Connection status',
+      name: 'windowNetBodyParametersBlock_1_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active connection:`
+  String get windowNetBodyParametersBlock_1_Parameter_1_Stata {
+    return Intl.message(
+      'Active connection:',
+      name: 'windowNetBodyParametersBlock_1_Parameter_1_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `WiFi`
+  String get windowNetBodyParametersBlock_1_Parameter_1_Value {
+    return Intl.message(
+      'WiFi',
+      name: 'windowNetBodyParametersBlock_1_Parameter_1_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile network:`
+  String get windowNetBodyParametersBlock_1_Parameter_2_Stata {
+    return Intl.message(
+      'Mobile network:',
+      name: 'windowNetBodyParametersBlock_1_Parameter_2_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `4G`
+  String get windowNetBodyParametersBlock_1_Parameter_2_Value {
+    return Intl.message(
+      '4G',
+      name: 'windowNetBodyParametersBlock_1_Parameter_2_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Telecom operator:`
+  String get windowNetBodyParametersBlock_1_Parameter_3_Stata {
+    return Intl.message(
+      'Telecom operator:',
+      name: 'windowNetBodyParametersBlock_1_Parameter_3_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Megafon`
+  String get windowNetBodyParametersBlock_1_Parameter_3_Value {
+    return Intl.message(
+      'Megafon',
+      name: 'windowNetBodyParametersBlock_1_Parameter_3_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internet access:`
+  String get windowNetBodyParametersBlock_1_Parameter_4_Stata {
+    return Intl.message(
+      'Internet access:',
+      name: 'windowNetBodyParametersBlock_1_Parameter_4_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available`
+  String get windowNetBodyParametersBlock_1_Parameter_4_Value {
+    return Intl.message(
+      'Available',
+      name: 'windowNetBodyParametersBlock_1_Parameter_4_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wi-Fi network settings`
+  String get windowNetBodyParametersBlock_2_Title {
+    return Intl.message(
+      'Wi-Fi network settings',
+      name: 'windowNetBodyParametersBlock_2_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SSID:`
+  String get windowNetBodyParametersBlock_2_Parameter_1_Stata {
+    return Intl.message(
+      'SSID:',
+      name: 'windowNetBodyParametersBlock_2_Parameter_1_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TP-Link_S25`
+  String get windowNetBodyParametersBlock_2_Parameter_1_Value {
+    return Intl.message(
+      'TP-Link_S25',
+      name: 'windowNetBodyParametersBlock_2_Parameter_1_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `BSSID:`
+  String get windowNetBodyParametersBlock_2_Parameter_2_Stata {
+    return Intl.message(
+      'BSSID:',
+      name: 'windowNetBodyParametersBlock_2_Parameter_2_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `98:BD:80:84:D5:D2`
+  String get windowNetBodyParametersBlock_2_Parameter_2_Value {
+    return Intl.message(
+      '98:BD:80:84:D5:D2',
+      name: 'windowNetBodyParametersBlock_2_Parameter_2_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Frequency range:`
+  String get windowNetBodyParametersBlock_2_Parameter_3_Stata {
+    return Intl.message(
+      'Frequency range:',
+      name: 'windowNetBodyParametersBlock_2_Parameter_3_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2.4 GHz`
+  String get windowNetBodyParametersBlock_2_Parameter_3_Value {
+    return Intl.message(
+      '2.4 GHz',
+      name: 'windowNetBodyParametersBlock_2_Parameter_3_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network channel number:`
+  String get windowNetBodyParametersBlock_2_Parameter_4_Stata {
+    return Intl.message(
+      'Network channel number:',
+      name: 'windowNetBodyParametersBlock_2_Parameter_4_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `21`
+  String get windowNetBodyParametersBlock_2_Parameter_4_Value {
+    return Intl.message(
+      '21',
+      name: 'windowNetBodyParametersBlock_2_Parameter_4_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `RSSI:`
+  String get windowNetBodyParametersBlock_2_Parameter_5_Stata {
+    return Intl.message(
+      'RSSI:',
+      name: 'windowNetBodyParametersBlock_2_Parameter_5_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `95%`
+  String get windowNetBodyParametersBlock_2_Parameter_5_Value {
+    return Intl.message(
+      '95%',
+      name: 'windowNetBodyParametersBlock_2_Parameter_5_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connection speed:`
+  String get windowNetBodyParametersBlock_2_Parameter_6_Stata {
+    return Intl.message(
+      'Connection speed:',
+      name: 'windowNetBodyParametersBlock_2_Parameter_6_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `150 Mbps`
+  String get windowNetBodyParametersBlock_2_Parameter_6_Value {
+    return Intl.message(
+      '150 Mbps',
+      name: 'windowNetBodyParametersBlock_2_Parameter_6_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `IP addressing and routing`
+  String get windowNetBodyParametersBlock_3_Title {
+    return Intl.message(
+      'IP addressing and routing',
+      name: 'windowNetBodyParametersBlock_3_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local IPv4 address:`
+  String get windowNetBodyParametersBlock_3_Parameter_1_Stata {
+    return Intl.message(
+      'Local IPv4 address:',
+      name: 'windowNetBodyParametersBlock_3_Parameter_1_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `192.168.1.45`
+  String get windowNetBodyParametersBlock_3_Parameter_1_Value {
+    return Intl.message(
+      '192.168.1.45',
+      name: 'windowNetBodyParametersBlock_3_Parameter_1_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local IPv6 address:`
+  String get windowNetBodyParametersBlock_3_Parameter_2_Stata {
+    return Intl.message(
+      'Local IPv6 address:',
+      name: 'windowNetBodyParametersBlock_3_Parameter_2_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-`
+  String get windowNetBodyParametersBlock_3_Parameter_2_Value {
+    return Intl.message(
+      '-',
+      name: 'windowNetBodyParametersBlock_3_Parameter_2_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `External IP address:`
+  String get windowNetBodyParametersBlock_3_Parameter_3_Stata {
+    return Intl.message(
+      'External IP address:',
+      name: 'windowNetBodyParametersBlock_3_Parameter_3_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `43.38.6.38`
+  String get windowNetBodyParametersBlock_3_Parameter_3_Value {
+    return Intl.message(
+      '43.38.6.38',
+      name: 'windowNetBodyParametersBlock_3_Parameter_3_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subnet mask:`
+  String get windowNetBodyParametersBlock_3_Parameter_4_Stata {
+    return Intl.message(
+      'Subnet mask:',
+      name: 'windowNetBodyParametersBlock_3_Parameter_4_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `255.255.255.0`
+  String get windowNetBodyParametersBlock_3_Parameter_4_Value {
+    return Intl.message(
+      '255.255.255.0',
+      name: 'windowNetBodyParametersBlock_3_Parameter_4_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Default gateway:`
+  String get windowNetBodyParametersBlock_3_Parameter_5_Stata {
+    return Intl.message(
+      'Default gateway:',
+      name: 'windowNetBodyParametersBlock_3_Parameter_5_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `192.168.1.1`
+  String get windowNetBodyParametersBlock_3_Parameter_5_Value {
+    return Intl.message(
+      '192.168.1.1',
+      name: 'windowNetBodyParametersBlock_3_Parameter_5_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Communication interface:`
+  String get windowNetBodyParametersBlock_3_Parameter_6_Stata {
+    return Intl.message(
+      'Communication interface:',
+      name: 'windowNetBodyParametersBlock_3_Parameter_6_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `wlan0`
+  String get windowNetBodyParametersBlock_3_Parameter_6_Value {
+    return Intl.message(
+      'wlan0',
+      name: 'windowNetBodyParametersBlock_3_Parameter_6_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domain Name System`
+  String get windowNetBodyParametersBlock_4_Title {
+    return Intl.message(
+      'Domain Name System',
+      name: 'windowNetBodyParametersBlock_4_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `DNS servers:`
+  String get windowNetBodyParametersBlock_4_Parameter_1_Stata {
+    return Intl.message(
+      'DNS servers:',
+      name: 'windowNetBodyParametersBlock_4_Parameter_1_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `8.8.8.8, 1.1.1.1`
+  String get windowNetBodyParametersBlock_4_Parameter_1_Value {
+    return Intl.message(
+      '8.8.8.8, 1.1.1.1',
+      name: 'windowNetBodyParametersBlock_4_Parameter_1_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Private DNS Status:`
+  String get windowNetBodyParametersBlock_4_Parameter_2_Stata {
+    return Intl.message(
+      'Private DNS Status:',
+      name: 'windowNetBodyParametersBlock_4_Parameter_2_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `DoH is enabled`
+  String get windowNetBodyParametersBlock_4_Parameter_2_Value {
+    return Intl.message(
+      'DoH is enabled',
+      name: 'windowNetBodyParametersBlock_4_Parameter_2_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `DNS Provider:`
+  String get windowNetBodyParametersBlock_4_Parameter_3_Stata {
+    return Intl.message(
+      'DNS Provider:',
+      name: 'windowNetBodyParametersBlock_4_Parameter_3_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google DNS`
+  String get windowNetBodyParametersBlock_4_Parameter_3_Value {
+    return Intl.message(
+      'Google DNS',
+      name: 'windowNetBodyParametersBlock_4_Parameter_3_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bypass and Restriction Control`
+  String get windowNetBodyParametersBlock_5_Title {
+    return Intl.message(
+      'Bypass and Restriction Control',
+      name: 'windowNetBodyParametersBlock_5_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VPN connection status:`
+  String get windowNetBodyParametersBlock_5_Parameter_1_Stata {
+    return Intl.message(
+      'VPN connection status:',
+      name: 'windowNetBodyParametersBlock_5_Parameter_1_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active`
+  String get windowNetBodyParametersBlock_5_Parameter_1_Value {
+    return Intl.message(
+      'Active',
+      name: 'windowNetBodyParametersBlock_5_Parameter_1_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VPN interface name:`
+  String get windowNetBodyParametersBlock_5_Parameter_2_Stata {
+    return Intl.message(
+      'VPN interface name:',
+      name: 'windowNetBodyParametersBlock_5_Parameter_2_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `tun0`
+  String get windowNetBodyParametersBlock_5_Parameter_2_Value {
+    return Intl.message(
+      'tun0',
+      name: 'windowNetBodyParametersBlock_5_Parameter_2_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `System proxy:`
+  String get windowNetBodyParametersBlock_5_Parameter_3_Stata {
+    return Intl.message(
+      'System proxy:',
+      name: 'windowNetBodyParametersBlock_5_Parameter_3_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-`
+  String get windowNetBodyParametersBlock_5_Parameter_3_Value {
+    return Intl.message(
+      '-',
+      name: 'windowNetBodyParametersBlock_5_Parameter_3_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location:`
+  String get windowNetBodyParametersBlock_5_Parameter_4_Stata {
+    return Intl.message(
+      'Location:',
+      name: 'windowNetBodyParametersBlock_5_Parameter_4_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Russia, Moscow`
+  String get windowNetBodyParametersBlock_5_Parameter_4_Value {
+    return Intl.message(
+      'Russia, Moscow',
+      name: 'windowNetBodyParametersBlock_5_Parameter_4_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `IP address type:`
+  String get windowNetBodyParametersBlock_5_Parameter_5_Stata {
+    return Intl.message(
+      'IP address type:',
+      name: 'windowNetBodyParametersBlock_5_Parameter_5_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VPN`
+  String get windowNetBodyParametersBlock_5_Parameter_5_Value {
+    return Intl.message(
+      'VPN',
+      name: 'windowNetBodyParametersBlock_5_Parameter_5_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network quality metrics`
+  String get windowNetBodyParametersBlock_6_Title {
+    return Intl.message(
+      'Network quality metrics',
+      name: 'windowNetBodyParametersBlock_6_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ping:`
+  String get windowNetBodyParametersBlock_6_Parameter_1_Stata {
+    return Intl.message(
+      'Ping:',
+      name: 'windowNetBodyParametersBlock_6_Parameter_1_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10ms`
+  String get windowNetBodyParametersBlock_6_Parameter_1_Value {
+    return Intl.message(
+      '10ms',
+      name: 'windowNetBodyParametersBlock_6_Parameter_1_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Packet loss:`
+  String get windowNetBodyParametersBlock_6_Parameter_2_Stata {
+    return Intl.message(
+      'Packet loss:',
+      name: 'windowNetBodyParametersBlock_6_Parameter_2_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5%`
+  String get windowNetBodyParametersBlock_6_Parameter_2_Value {
+    return Intl.message(
+      '5%',
+      name: 'windowNetBodyParametersBlock_6_Parameter_2_Value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `MTU:`
+  String get windowNetBodyParametersBlock_6_Parameter_3_Stata {
+    return Intl.message(
+      'MTU:',
+      name: 'windowNetBodyParametersBlock_6_Parameter_3_Stata',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1500`
+  String get windowNetBodyParametersBlock_6_Parameter_3_Value {
+    return Intl.message(
+      '1500',
+      name: 'windowNetBodyParametersBlock_6_Parameter_3_Value',
       desc: '',
       args: [],
     );
   }
 
   /// `Ok`
-  String get windowNetBottom {
-    return Intl.message('Ok', name: 'windowNetBottom', desc: '', args: []);
+  String get windowNetAction {
+    return Intl.message('Ok', name: 'windowNetAction', desc: '', args: []);
   }
 
   /// `Account`
-  String get windowAccountTop {
+  String get windowAccountTitle {
     return Intl.message(
       'Account',
-      name: 'windowAccountTop',
+      name: 'windowAccountTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Done`
-  String get windowAccountBottom {
+  String get windowAccountAction {
     return Intl.message(
       'Done',
-      name: 'windowAccountBottom',
+      name: 'windowAccountAction',
       desc: '',
       args: [],
     );
   }
 
   /// `Wallet`
-  String get windowWalletTop {
-    return Intl.message('Wallet', name: 'windowWalletTop', desc: '', args: []);
+  String get windowWalletTitle {
+    return Intl.message(
+      'Wallet',
+      name: 'windowWalletTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Done`
-  String get windowWalletBottom {
-    return Intl.message('Done', name: 'windowWalletBottom', desc: '', args: []);
+  String get windowWalletAction {
+    return Intl.message('Done', name: 'windowWalletAction', desc: '', args: []);
   }
 }
 

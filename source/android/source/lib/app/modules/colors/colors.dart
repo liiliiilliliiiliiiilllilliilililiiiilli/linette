@@ -117,7 +117,10 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color windowBarrier;
   final Color windowBottomText;
   final Color windowMainBack;
+  final Color windowMainStata;
+  final Color windowMainStataValue;
   final Color windowMainText;
+  final Color windowMainTitle;
   final Color windowSeparator;
   final Color windowShadow;
   final Color windowTopBack;
@@ -186,7 +189,10 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.windowBarrier,
     required this.windowBottomText,
     required this.windowMainBack,
+    required this.windowMainStata,
+    required this.windowMainStataValue,
     required this.windowMainText,
+    required this.windowMainTitle,
     required this.windowSeparator,
     required this.windowShadow,
     required this.windowTopBack,
@@ -256,7 +262,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBarrier: AppPalette.transparent_2_grey_1,
     windowBottomText: AppPalette.green_6,
     windowMainBack: AppPalette.grey_6,
+    windowMainStata: AppPalette.grey,
+    windowMainStataValue: AppPalette.grey,
     windowMainText: AppPalette.cream,
+    windowMainTitle: AppPalette.cream,
     windowSeparator: AppPalette.grey_4,
     windowShadow: AppPalette.transparent_1_grey_1,
     windowTopBack: AppPalette.grey_8,
@@ -325,7 +334,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBarrier: AppPalette.transparent_2_grey_1,
     windowBottomText: AppPalette.black,
     windowMainBack: AppPalette.cream,
+    windowMainStata: AppPalette.grey_11,
+    windowMainStataValue: AppPalette.grey_11,
     windowMainText: AppPalette.black,
+    windowMainTitle: AppPalette.black,
     windowSeparator: AppPalette.grey_13,
     windowShadow: AppPalette.transparent_1_grey_1,
     windowTopBack: AppPalette.grey_14,
@@ -395,7 +407,10 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? windowBarrier,
     Color? windowBottomText,
     Color? windowMainBack,
+    Color? windowMainStata,
+    Color? windowMainStataValue,
     Color? windowMainText,
+    Color? windowMainTitle,
     Color? windowSeparator,
     Color? windowShadow,
     Color? windowTopBack,
@@ -466,7 +481,10 @@ class AppColors extends ThemeExtension <AppColors> {
         windowBarrier: windowBarrier ?? this.windowBarrier,
         windowBottomText: windowBottomText ?? this.windowBottomText,
         windowMainBack: windowMainBack ?? this.windowMainBack,
+        windowMainStata: windowMainStata ?? this.windowMainStata,
+        windowMainStataValue: windowMainStataValue ?? this.windowMainStataValue,
         windowMainText: windowMainText ?? this.windowMainText,
+        windowMainTitle: windowMainTitle ?? this.windowMainTitle,
         windowSeparator: windowSeparator ?? this.windowSeparator,
         windowShadow: windowShadow ?? this.windowShadow,
         windowTopBack: windowTopBack ?? this.windowTopBack,
@@ -550,7 +568,10 @@ class AppColors extends ThemeExtension <AppColors> {
         windowBarrier: Color.lerp (windowBarrier, other.windowBarrier, t) ?? windowBarrier,
         windowBottomText: Color.lerp (windowBottomText, other.windowBottomText, t) ?? windowBottomText,
         windowMainBack: Color.lerp (windowMainBack, other.windowMainBack, t) ?? windowMainBack,
+        windowMainStata: Color.lerp (windowMainStata, other.windowMainStata, t) ?? windowMainStata,
+        windowMainStataValue: Color.lerp (windowMainStataValue, other.windowMainStataValue, t) ?? windowMainStataValue,
         windowMainText: Color.lerp (windowMainText, other.windowMainText, t) ?? windowMainText,
+        windowMainTitle: Color.lerp (windowMainTitle, other.windowMainTitle, t) ?? windowMainTitle,
         windowSeparator: Color.lerp (windowSeparator, other.windowSeparator, t) ?? windowSeparator,
         windowShadow: Color.lerp (windowShadow, other.windowShadow, t) ?? windowShadow,
         windowTopBack: Color.lerp (windowTopBack, other.windowTopBack, t) ?? windowTopBack,

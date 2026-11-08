@@ -29,18 +29,18 @@ class LanguageWindow extends HookConsumerWidget {
     final List <Map <String, String>> languages = [
       {
         'code': 'ru',
-        'title': context.texts.windowLanguageCenterRussian,
-        'subtitle': context.texts.windowLanguageCenterRussianNative
+        'title': context.texts.windowLanguageBodyRussian,
+        'subtitle': context.texts.windowLanguageBodyRussianNative
       },
       {
         'code': 'en',
-        'title': context.texts.windowLanguageCenterEnglish,
-        'subtitle': context.texts.windowLanguageCenterEnglishNative
+        'title': context.texts.windowLanguageBodyEnglish,
+        'subtitle': context.texts.windowLanguageBodyEnglishNative
       },
       {
         'code': 'zh',
-        'title': context.texts.windowLanguageCenterChinese,
-        'subtitle': context.texts.windowLanguageCenterChineseNative
+        'title': context.texts.windowLanguageBodyChinese,
+        'subtitle': context.texts.windowLanguageBodyChineseNative
       }
     ];
 
@@ -65,7 +65,7 @@ class LanguageWindow extends HookConsumerWidget {
 
       Window (
         width: 300,
-        title: context.texts.windowLanguageTop,
+        title: context.texts.windowLanguageTitle,
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
@@ -108,7 +108,7 @@ class LanguageWindow extends HookConsumerWidget {
             )
           )
         ),
-        action: context.texts.windowLanguageBottom
+        action: context.texts.windowLanguageAction
       )
 
     );
