@@ -1,7 +1,6 @@
 // Home page - Body
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/slider/slider.dart';
 import 'widgets/noise/noise.dart';
@@ -10,7 +9,7 @@ import 'widgets/bottom/bottom.dart';
 
 
 
-class BodyComponent extends HookWidget {
+class BodyComponent extends StatelessWidget {
 
   const BodyComponent ({
     super.key

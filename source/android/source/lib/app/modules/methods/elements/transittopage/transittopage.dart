@@ -1,4 +1,4 @@
-// Methods module - Transit
+// Methods module - Transit to page
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -8,9 +8,9 @@ import 'package:linette/app/modules/colors/colors.dart';
 
 
 
-class TransitElement {
+class TransitToPageElement {
 
-  static Future <void> transit (BuildContext context, WidgetRef ref, {required Widget page}) async {
+  static Future <void> transitToPage (BuildContext context, WidgetRef ref, {required Widget page}) async {
 
     final WelcomeNotifier welcomeNotifier = ref.read (welcomeProvider.notifier);
 

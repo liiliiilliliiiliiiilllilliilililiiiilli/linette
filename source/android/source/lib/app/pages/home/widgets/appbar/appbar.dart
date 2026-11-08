@@ -1,7 +1,6 @@
 // Home page - App bar
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/slider/slider.dart';
 import 'widgets/leftbutton/leftbutton.dart';
@@ -10,7 +9,7 @@ import 'widgets/rightbutton/rightbutton.dart';
 
 
 
-class AppBarComponent extends HookWidget implements PreferredSizeWidget {
+class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
 
   const AppBarComponent ({
     super.key

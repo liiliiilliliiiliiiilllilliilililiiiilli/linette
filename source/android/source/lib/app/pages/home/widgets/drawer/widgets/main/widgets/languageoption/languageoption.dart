@@ -10,7 +10,7 @@ import 'package:linette/app/windows/language/language.dart';
 
 
 
-class LanguageOption extends HookConsumerWidget {
+class LanguageOption extends ConsumerWidget {
 
   const LanguageOption ({
     super.key

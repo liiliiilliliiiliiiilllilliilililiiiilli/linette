@@ -20,9 +20,9 @@ class ButtonGo extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    void onPress () async {
+    Future <void> onPress () async {
 
-      context.methods.transit (
+      await context.methods.transitToPage (
         context,
         ref,
         page: const HomePage ()

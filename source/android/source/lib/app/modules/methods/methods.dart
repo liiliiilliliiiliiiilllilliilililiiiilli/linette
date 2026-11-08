@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'elements/openlink/openlink.dart';
 import 'elements/openwindow/openwindow.dart';
 import 'elements/preloadicons/preloadicons.dart';
-import 'elements/transit/transit.dart';
+import 'elements/transittopage/transittopage.dart';
 
 
 
@@ -37,9 +37,9 @@ class AppMethods {
 
   }
 
-  Future <void> transit (BuildContext context, WidgetRef ref, {required Widget page}) {
+  Future <void> transitToPage (BuildContext context, WidgetRef ref, {required Widget page}) async {
 
-    return TransitElement.transit (
+    return await TransitToPageElement.transitToPage (
       context,
       ref,
       page: page

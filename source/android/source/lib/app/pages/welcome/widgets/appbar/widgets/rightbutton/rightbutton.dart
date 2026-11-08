@@ -10,7 +10,7 @@ import 'package:linette/app/widgets/appbarbutton/models/shape/shape.dart';
 
 
 
-class RightButton extends HookConsumerWidget {
+class RightButton extends ConsumerWidget {
 
   const RightButton ({
     super.key
