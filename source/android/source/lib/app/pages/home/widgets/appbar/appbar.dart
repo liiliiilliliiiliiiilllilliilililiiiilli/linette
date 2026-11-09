@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/widgets/slider/slider.dart';
+import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/widgets/swiper/swiper.dart';
 import 'widgets/leftbutton/leftbutton.dart';
 import 'widgets/title/title.dart';
 import 'widgets/rightbutton/rightbutton.dart';
@@ -31,15 +32,15 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
 
     void onSwipeLeft () {
 
-      Scaffold.of(context).openDrawer();
+      context.methods.openDrawer (context);
 
     }
 
     void onSwipeRight () {
 
-      if ((ModalRoute.of(context)?.isCurrent ?? true) && !(Scaffold.of(context).isDrawerOpen)) {  // Если текущий экран активен (т.е. поверх него ничего нет) и если не открыто боковое меню
+      if (context.methods.isCurrentPageActive (context) && !context.methods.isDrawerOpened (context)) {
 
-        Navigator.pushNamed (context, '/connections');
+        context.methods.navigateTo (context, '/connections');
 
       }
 
@@ -48,7 +49,7 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
 
     return (
 
-      SliderComponent (
+      SwiperComponent (
         onSwipeLeft: onSwipeLeft,
         onSwipeRight: onSwipeRight,
         child: PreferredSize (

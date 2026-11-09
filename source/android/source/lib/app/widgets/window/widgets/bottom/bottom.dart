@@ -5,6 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
@@ -33,7 +34,7 @@ class BottomComponent extends HookConsumerWidget {
 
       actionsFreezeNotifier.freeze ();
 
-      Navigator.pop (context);
+      context.methods.navigateBack (context);
 
     }
 

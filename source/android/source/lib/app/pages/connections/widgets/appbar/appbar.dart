@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/widgets/slider/slider.dart';
+import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/widgets/swiper/swiper.dart';
 import 'widgets/leftbutton/leftbutton.dart';
 import 'widgets/title/title.dart';
 
@@ -30,14 +31,14 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget  {
 
     void onSwipeLeft () {
 
-      Navigator.pop (context);
+      context.methods.navigateBack (context);
 
     }
 
 
     return (
 
-      SliderComponent (
+      SwiperComponent (
         onSwipeLeft: onSwipeLeft,
         child: PreferredSize (
           preferredSize: const Size.fromHeight (kToolbarHeight + 10),

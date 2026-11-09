@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
 import 'package:linette/app/widgets/appbarbutton/models/icon/icon.dart';
 import 'package:linette/app/widgets/appbarbutton/models/shape/shape.dart';
@@ -26,7 +27,7 @@ class LeftButton extends ConsumerWidget {
 
       actionsFreezeNotifier.freeze ();
 
-      Scaffold.of(context).openDrawer();
+      context.methods.openDrawer (context);
 
     }
 

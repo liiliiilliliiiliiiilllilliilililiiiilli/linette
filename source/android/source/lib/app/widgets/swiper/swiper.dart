@@ -1,18 +1,19 @@
-// Slider global widget
+// Swiper global widget
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 
 
 
-class SliderComponent extends HookWidget {
+class SwiperComponent extends HookWidget {
 
   final void Function ()? onSwipeLeft;
   final void Function ()? onSwipeRight;
   final Widget child;
 
 
-  const SliderComponent ({
+  const SwiperComponent ({
     super.key,
     this.onSwipeLeft,
     this.onSwipeRight,
@@ -26,7 +27,7 @@ class SliderComponent extends HookWidget {
 
     const double safeZone = 38;
 
-    final double screenWidth = MediaQuery.of(context).size.width;
+    final double screenWidth = context.methods.getScreenWidth (context);
 
 
     void onHorizontalDragStart (DragStartDetails details) {

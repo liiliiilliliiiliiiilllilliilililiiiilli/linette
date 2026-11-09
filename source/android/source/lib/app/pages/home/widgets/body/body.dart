@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/widgets/slider/slider.dart';
+import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/widgets/swiper/swiper.dart';
 import 'widgets/noise/noise.dart';
 import 'widgets/main/main.dart';
 import 'widgets/bottom/bottom.dart';
@@ -20,15 +21,15 @@ class BodyComponent extends StatelessWidget {
 
     void onSwipeLeft () {
 
-      Scaffold.of(context).openDrawer();
+      context.methods.openDrawer (context);
 
     }
 
     void onSwipeRight () {
 
-      if ((ModalRoute.of(context)?.isCurrent ?? true) && !(Scaffold.of(context).isDrawerOpen)) {  // Если текущий экран активен (т.е. поверх него ничего нет) и если не открыто боковое меню
+      if (context.methods.isCurrentPageActive (context) && !context.methods.isDrawerOpened (context)) {
 
-        Navigator.pushNamed (context, '/connections');
+        context.methods.navigateTo (context, '/connections');
 
       }
 
@@ -37,7 +38,7 @@ class BodyComponent extends StatelessWidget {
 
     return (
 
-      SliderComponent (
+      SwiperComponent (
         onSwipeLeft: onSwipeLeft,
         onSwipeRight: onSwipeRight,
         child: Stack (

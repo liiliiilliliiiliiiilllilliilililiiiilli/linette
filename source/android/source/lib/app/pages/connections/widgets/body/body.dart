@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/slider/slider.dart';
+import 'package:linette/app/widgets/swiper/swiper.dart';
 import 'package:linette/app/widgets/liner/liner.dart';
-import 'package:linette/app/pages/connections/widgets/body/widgets/connections/widgets/connection/connection.dart';
 import 'widgets/connections/connections.dart';
+import 'widgets/connections/widgets/connection/connection.dart';
 
 
 
@@ -31,14 +32,14 @@ class BodyComponent extends HookWidget {
 
     void onSwipeLeft () {
 
-      Navigator.pop (context);
+      context.methods.navigateBack (context);
 
     }
 
 
     return (
 
-      SliderComponent (
+      SwiperComponent (
         onSwipeLeft: onSwipeLeft,
         child: Container (
           padding: const EdgeInsets.only (

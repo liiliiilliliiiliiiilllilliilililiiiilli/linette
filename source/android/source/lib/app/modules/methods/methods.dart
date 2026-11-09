@@ -2,6 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'elements/closedrawer/closedrawer.dart';
+import 'elements/getscreenwidth/getscreenwidth.dart';
+import 'elements/iscurrentpageactive/iscurrentpageactive.dart';
+import 'elements/isdraweropened/isdraweropened.dart';
+import 'elements/navigateback/navigateback.dart';
+import 'elements/navigateto/navigateto.dart';
+import 'elements/opendrawer/opendrawer.dart';
 import 'elements/openlink/openlink.dart';
 import 'elements/openwindow/openwindow.dart';
 import 'elements/preloadicons/preloadicons.dart';
@@ -14,9 +21,51 @@ class AppMethods {
   const AppMethods ();
 
 
-  Future <void> openLink (String link) {
+  void closeDrawer (BuildContext context) {
 
-    return OpenLinkElement.openLink (link);
+    return CloseDrawerElement.closeDrawer (context);
+
+  }
+
+  double getScreenWidth (BuildContext context) {
+
+    return GetScreenWidthElement.getScreenWidth (context);
+
+  }
+
+  bool isCurrentPageActive (BuildContext context) {
+
+    return IsCurrentPageActiveElement.isCurrentPageActive (context);
+
+  }
+
+  bool isDrawerOpened (BuildContext context) {
+
+    return IsDrawerOpenedElement.isDrawerOpened (context);
+
+  }
+
+  void navigateBack (BuildContext context) {
+
+    return NavigateBackElement.navigateBack (context);
+
+  }
+
+  void navigateTo (BuildContext context, String destination) {
+
+    return NavigateToElement.navigateTo (context, destination);
+
+  }
+
+  void openDrawer (BuildContext context) {
+
+    return OpenDrawerElement.openDrawer (context);
+
+  }
+
+  Future <void> openLink (String link) async {
+
+    return await OpenLinkElement.openLink (link);
 
   }
 
@@ -31,9 +80,9 @@ class AppMethods {
 
   }
 
-  Future <void> preloadIcons (List <String> icons) {
+  Future <void> preloadIcons (List <String> icons) async {
 
-    return PreloadIconsElement.preloadIcons (icons);
+    return await PreloadIconsElement.preloadIcons (icons);
 
   }
 

@@ -37,7 +37,7 @@ class DrawerOption extends HookConsumerWidget {
 
     void onPressCallback () {
 
-      Navigator.pop (context);
+      context.methods.navigateBack (context);
 
     }
 

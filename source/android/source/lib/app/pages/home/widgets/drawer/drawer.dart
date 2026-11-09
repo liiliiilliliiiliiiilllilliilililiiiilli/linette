@@ -1,6 +1,7 @@
 // Home page - Drawer
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'widgets/top/top.dart';
 import 'widgets/main/main.dart';
 import 'widgets/bottom/bottom.dart';
@@ -20,7 +21,7 @@ class DrawerComponent extends Drawer {
 
       if (!didPop) {
 
-        Scaffold.of(context).closeDrawer();
+        context.methods.closeDrawer (context);
 
       }
 
