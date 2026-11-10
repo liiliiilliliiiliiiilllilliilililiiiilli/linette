@@ -1,6 +1,8 @@
 {
 	"@@locale": "zh",
 
+	"appTitle": "Linette",
+
 	"pageWelcomeBodyTopTitle": " Linette ",
 	"pageWelcomeBodyTopTitleDot": "•",
 	"pageWelcomeBodyTopSubtitle": "拯救世界的计划",

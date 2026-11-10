@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/pages/connections/connections.dart';
 import 'package:linette/app/widgets/swiper/swiper.dart';
 import 'widgets/noise/noise.dart';
 import 'widgets/main/main.dart';
@@ -29,7 +30,7 @@ class BodyComponent extends StatelessWidget {
 
       if (context.methods.isCurrentPageActive (context) && !context.methods.isDrawerOpened (context)) {
 
-        context.methods.navigateTo (context, '/connections');
+        context.methods.navigateTo (context, ConnectionsPage.address);
 
       }
 

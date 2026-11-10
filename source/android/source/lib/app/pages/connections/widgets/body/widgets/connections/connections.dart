@@ -10,9 +10,9 @@ class Connections extends StatelessWidget {
   final List <Connection> connections;
 
 
-  const Connections ({
-    super.key,
-    required this.connections
+  const Connections (
+    this.connections, {
+    super.key
   });
 
 

@@ -11,11 +11,9 @@ class TitleComponent extends StatelessWidget {
 
 
   const TitleComponent (
-    this.text,
-    {
-      super.key
-    }
-  );
+    this.text, {
+    super.key
+  });
 
 
   @override Widget build (BuildContext context) {

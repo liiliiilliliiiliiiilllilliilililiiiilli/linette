@@ -35,11 +35,11 @@ class ArsenalWindow extends HookWidget {
 
     }
 
-    void onTapUp (TapUpDetails details) {
+    Future <void> onTapUp (TapUpDetails details) async {
 
       isPressed.value = false;
 
-      context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
+      await context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
 
     }
 

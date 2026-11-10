@@ -1,7 +1,6 @@
 // Net window
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 import 'widgets/parametersblock/parametersblock.dart';
@@ -10,7 +9,7 @@ import 'widgets/parametersblock/widgets/parameter/parameter.dart';
 
 
 
-class NetWindow extends HookWidget {
+class NetWindow extends StatelessWidget {
 
   const NetWindow ({
     super.key
@@ -40,9 +39,7 @@ class NetWindow extends HookWidget {
                 spacing: 8 * 3,
                 children: [
                   ParametersBlock (
-                    title: TitleComponent (
-                      context.texts.windowNetBodyParametersBlock_1_Title
-                    ),
+                    title: TitleComponent (context.texts.windowNetBodyParametersBlock_1_Title),
                     parameters: [
                       ParameterComponent (
                         stata: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Stata,
@@ -63,10 +60,7 @@ class NetWindow extends HookWidget {
                     ]
                   ),
                   ParametersBlock (
-                    darkened: false,
-                    title: TitleComponent (
-                      context.texts.windowNetBodyParametersBlock_2_Title
-                    ),
+                    title: TitleComponent (context.texts.windowNetBodyParametersBlock_2_Title),
                     parameters: [
                       ParameterComponent (
                         stata: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Stata,
@@ -95,9 +89,7 @@ class NetWindow extends HookWidget {
                     ]
                   ),
                   ParametersBlock (
-                    title: TitleComponent (
-                      context.texts.windowNetBodyParametersBlock_3_Title
-                    ),
+                    title: TitleComponent (context.texts.windowNetBodyParametersBlock_3_Title),
                     parameters: [
                       ParameterComponent (
                         stata: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Stata,
@@ -126,9 +118,7 @@ class NetWindow extends HookWidget {
                     ]
                   ),
                   ParametersBlock (
-                    title: TitleComponent (
-                      context.texts.windowNetBodyParametersBlock_4_Title
-                    ),
+                    title: TitleComponent (context.texts.windowNetBodyParametersBlock_4_Title),
                     parameters: [
                       ParameterComponent (
                         stata: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Stata,
@@ -145,9 +135,7 @@ class NetWindow extends HookWidget {
                     ]
                   ),
                   ParametersBlock (
-                    title: TitleComponent (
-                      context.texts.windowNetBodyParametersBlock_5_Title
-                    ),
+                    title: TitleComponent (context.texts.windowNetBodyParametersBlock_5_Title),
                     parameters: [
                       ParameterComponent (
                         stata: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Stata,
@@ -172,9 +160,7 @@ class NetWindow extends HookWidget {
                     ]
                   ),
                   ParametersBlock (
-                    title: TitleComponent (
-                      context.texts.windowNetBodyParametersBlock_6_Title
-                    ),
+                    title: TitleComponent (context.texts.windowNetBodyParametersBlock_6_Title),
                     parameters: [
                       ParameterComponent (
                         stata: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Stata,

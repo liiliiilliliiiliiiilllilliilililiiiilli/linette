@@ -55,6 +55,11 @@ class T {
     return Localizations.of<T>(context, T);
   }
 
+  /// `Linette`
+  String get appTitle {
+    return Intl.message('Linette', name: 'appTitle', desc: '', args: []);
+  }
+
   /// ` Linette `
   String get pageWelcomeBodyTopTitle {
     return Intl.message(

@@ -10,7 +10,7 @@ import 'package:linette/app/modules/colors/colors.dart';
 
 class TransitToPageElement {
 
-  static Future <void> transitToPage (BuildContext context, WidgetRef ref, {required Widget page}) async {
+  static Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page) async {
 
     final WelcomeNotifier welcomeNotifier = ref.read (welcomeProvider.notifier);
 

@@ -13,7 +13,6 @@ class RadioItem extends HookWidget {
 
   final void Function () onPress;
   final bool isChosen;
-  final String value;
   final String title;
   final String subtitle;
 
@@ -22,7 +21,6 @@ class RadioItem extends HookWidget {
     super.key,
     required this.onPress,
     required this.isChosen,
-    required this.value,
     required this.title,
     required this.subtitle
   });

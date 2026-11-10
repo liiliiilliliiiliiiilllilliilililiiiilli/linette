@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/pages/connections/connections.dart';
 import 'package:linette/app/widgets/swiper/swiper.dart';
 import 'widgets/leftbutton/leftbutton.dart';
 import 'widgets/title/title.dart';
@@ -40,7 +41,7 @@ class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
 
       if (context.methods.isCurrentPageActive (context) && !context.methods.isDrawerOpened (context)) {
 
-        context.methods.navigateTo (context, '/connections');
+        context.methods.navigateTo (context, ConnectionsPage.address);
 
       }
 

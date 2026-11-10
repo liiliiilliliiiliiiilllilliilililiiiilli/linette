@@ -9,14 +9,14 @@ import 'package:linette/app/modules/fonts/fonts.dart';
 class Liner extends StatelessWidget {
 
   final String text;
+  final Color colorBack;
 
 
   const Liner (
-    this.text,
-    {
-      super.key
-    }
-  );
+    this.text, {
+    super.key,
+    required this.colorBack
+  });
 
 
   @override Widget build (BuildContext context) {
@@ -38,7 +38,7 @@ class Liner extends StatelessWidget {
               padding: const EdgeInsets.symmetric (
                 horizontal: 8
               ),
-              color: context.colors.back,
+              color: colorBack,
               child: Center (
                 widthFactor: 1,
                 child: Text (

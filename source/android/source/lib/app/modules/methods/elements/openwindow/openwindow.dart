@@ -11,7 +11,7 @@ class OpenWindowElement {
 
   static Future <void> openWindow (BuildContext context, WidgetRef ref, {required Widget window, void Function ()? callback}) async {
 
-    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
+    final ActionsFreezeNotifier actionsFreezeNotifier = ref.read (actionsFreezeProvider.notifier);
 
 
     actionsFreezeNotifier.freeze ();

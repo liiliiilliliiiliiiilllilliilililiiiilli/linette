@@ -11,9 +11,9 @@ class Flag extends StatelessWidget {
   final String flag;
 
 
-  const Flag ({
-    super.key,
-    required this.flag
+  const Flag (
+    this.flag, {
+    super.key
   });
 
 

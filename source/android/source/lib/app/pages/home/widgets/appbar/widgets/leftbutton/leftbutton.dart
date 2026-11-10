@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
@@ -20,12 +19,9 @@ class LeftButton extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
-
-
     void onPress () {
 
-      actionsFreezeNotifier.freeze ();
+      context.methods.freeze (ref);
 
       context.methods.openDrawer (context);
 
@@ -37,9 +33,7 @@ class LeftButton extends ConsumerWidget {
       AppBarButton (
         onPress: onPress,
         shape: AppBarButtonShape.square,
-        icon: AppBarButtonIcon (
-          context.icons.menu
-        )
+        icon: AppBarButtonIcon (context.icons.menu)
       )
 
     );

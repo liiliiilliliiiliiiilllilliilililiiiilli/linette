@@ -1,5 +1,6 @@
 // App bar button global widget
 
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -36,7 +37,7 @@ class AppBarButton extends HookWidget {
       : 0;
 
 
-    final double borderRadius = shape == AppBarButtonShape.circle
+    final double borderRadius = (shape == AppBarButtonShape.circle)
       ? 100
       : 10;
 
@@ -70,9 +71,9 @@ class AppBarButton extends HookWidget {
                     color: context.colors.appBarButtonBack,
                   ),
                   child: Transform.translate (
-                    offset: icon.offset ?? const Offset (0, 0),
+                    offset: icon.offset,
                     child: Transform.rotate (
-                      angle: icon.angle ?? 0,
+                      angle: icon.angle * math.pi / 180,
                       child: SvgPicture.asset (
                         icon.asset,
                         width: icon.size,

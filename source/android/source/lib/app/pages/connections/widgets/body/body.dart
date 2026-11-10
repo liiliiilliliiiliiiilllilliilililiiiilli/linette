@@ -50,33 +50,32 @@ class BodyComponent extends HookWidget {
             spacing: 16,
             children: [
               Liner (
-                context.texts.pageConnectionsBodyLiner (3)
+                context.texts.pageConnectionsBodyLiner (3),
+                colorBack: context.colors.back
               ),
-              Connections (
-                connections: [
-                  Connection (
-                    onPress: () => {chosen.value = textNetherlands},
-                    flag: context.icons.flagNetherlands,
-                    name: textNetherlands,
-                    isChosen: chosen.value == textNetherlands,
-                    isAvailable: false
-                  ),
-                  Connection (
-                    onPress: () => {chosen.value = textFinland},
-                    flag: context.icons.flagFinland,
-                    name: textFinland,
-                    isChosen: chosen.value == textFinland,
-                    isAvailable: false
-                  ),
-                  Connection (
-                    onPress: () => {chosen.value = textGermany},
-                    flag: context.icons.flagGermany,
-                    name: textGermany,
-                    isChosen: chosen.value == textGermany,
-                    isAvailable: false
-                  )
-                ]
-              )
+              Connections ([
+                Connection (
+                  onPress: () => {chosen.value = textNetherlands},
+                  flag: context.icons.flagNetherlands,
+                  name: textNetherlands,
+                  isChosen: (chosen.value == textNetherlands),
+                  isAvailable: false
+                ),
+                Connection (
+                  onPress: () => {chosen.value = textFinland},
+                  flag: context.icons.flagFinland,
+                  name: textFinland,
+                  isChosen: (chosen.value == textFinland),
+                  isAvailable: false
+                ),
+                Connection (
+                  onPress: () => {chosen.value = textGermany},
+                  flag: context.icons.flagGermany,
+                  name: textGermany,
+                  isChosen: (chosen.value == textGermany),
+                  isAvailable: false
+                )
+              ])
             ]
           )
         )

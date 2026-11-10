@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/theme/theme.dart';
 import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
 import 'package:linette/app/widgets/appbarbutton/models/icon/icon.dart';
 import 'package:linette/app/widgets/appbarbutton/models/shape/shape.dart';
@@ -20,19 +21,18 @@ class RightButton extends ConsumerWidget {
   @override Widget build (BuildContext context, WidgetRef ref) {
 
     final AppThemeOption themeState = ref.watch (themeProvider);
-    final ThemeNotifier themeNotifier = ref.watch (themeProvider.notifier);
 
 
     void onPress () {
 
-      themeState == AppThemeOption.darkGreen
-        ? themeNotifier.changeState (AppThemeOption.lightGreen)
-        : themeNotifier.changeState (AppThemeOption.darkGreen);
+      (themeState == AppThemeOption.darkGreen)
+        ? context.methods.changeTheme (ref, AppThemeOption.lightGreen)
+        : context.methods.changeTheme (ref, AppThemeOption.darkGreen);
 
     }
 
 
-    final String themeIcon = themeState == AppThemeOption.darkGreen
+    final String themeIcon = (themeState == AppThemeOption.darkGreen)
       ? context.icons.moon
       : context.icons.sun;
 
@@ -42,9 +42,7 @@ class RightButton extends ConsumerWidget {
       AppBarButton (
         onPress: onPress,
         shape: AppBarButtonShape.circle,
-        icon: AppBarButtonIcon (
-          themeIcon
-        )
+        icon: AppBarButtonIcon (themeIcon)
       )
 
     );

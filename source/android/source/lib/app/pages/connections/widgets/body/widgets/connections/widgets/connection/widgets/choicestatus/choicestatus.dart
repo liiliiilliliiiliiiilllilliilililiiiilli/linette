@@ -12,9 +12,9 @@ class ChoiceStatus extends StatelessWidget {
   final bool isChosen;
 
 
-  const ChoiceStatus ({
-    super.key,
-    required this.isChosen
+  const ChoiceStatus (
+    this.isChosen, {
+    super.key
   });
 
 

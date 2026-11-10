@@ -1,9 +1,7 @@
 // Connections page - App bar - Left button
 
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/widgets/appbarbutton/appbarbutton.dart';
@@ -21,12 +19,9 @@ class LeftButton extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
-
-
     void onPress () {
 
-      actionsFreezeNotifier.freeze ();
+      context.methods.freeze (ref);
 
       context.methods.navigateBack (context);
 
@@ -41,7 +36,7 @@ class LeftButton extends ConsumerWidget {
         icon: AppBarButtonIcon (
           context.icons.arrow,
           offset: const Offset (-1, 0),
-          angle: 180 * math.pi / 180
+          angle: 180
         )
       )
 

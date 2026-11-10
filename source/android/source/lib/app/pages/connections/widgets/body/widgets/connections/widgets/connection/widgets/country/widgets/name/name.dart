@@ -11,9 +11,9 @@ class Name extends StatelessWidget {
   final String name;
 
 
-  const Name ({
-    super.key,
-    required this.name
+  const Name (
+    this.name, {
+    super.key
   });
 
 

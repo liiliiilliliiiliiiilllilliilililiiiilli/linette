@@ -41,7 +41,6 @@ class DrawerOption extends HookConsumerWidget {
 
     }
 
-
     Future <void> onPress () async {
 
       await context.methods.openWindow (
@@ -97,7 +96,18 @@ class DrawerOption extends HookConsumerWidget {
                   Flexible (
                     child: Container ()
                   ),
-                  textRight == null ?
+                  if (textRight case final textRight?) ... [
+                    Text (
+                      textRight,
+                      style: TextStyle (
+                        fontFamily: context.fonts.archivo,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 17.5,
+                        color: context.colors.drawerOptionTextValue
+                      )
+                    )
+                  ]
+                  else ... [
                     SvgPicture.asset (
                       context.icons.arrow,
                       width: 14,
@@ -107,16 +117,7 @@ class DrawerOption extends HookConsumerWidget {
                         BlendMode.srcIn
                       )
                     )
-                  :
-                    Text (
-                      textRight!,
-                      style: TextStyle (
-                        fontFamily: context.fonts.archivo,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17.5,
-                        color: context.colors.drawerOptionTextValue
-                      )
-                    )
+                  ]
                 ]
               )
             )

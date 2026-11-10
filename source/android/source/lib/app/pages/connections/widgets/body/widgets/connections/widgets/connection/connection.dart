@@ -65,12 +65,8 @@ class Connection extends HookWidget {
                   flag: flag,
                   name: name
                 ),
-                ChoiceStatus (
-                  isChosen: isChosen
-                ),
-                AvailabilityStatus (
-                  isAvailable: isAvailable
-                )
+                ChoiceStatus (isChosen),
+                AvailabilityStatus (isAvailable)
               ]
             )
           )

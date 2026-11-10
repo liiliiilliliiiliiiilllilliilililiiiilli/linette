@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/widgets/freezer/freezer.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 import 'widgets/drawer/drawer.dart';
@@ -12,6 +13,9 @@ import 'widgets/drawer/drawer.dart';
 
 class HomePage extends ConsumerWidget {
 
+  static const String address = '/home';
+
+
   const HomePage ({
     super.key
   });
@@ -19,21 +23,16 @@ class HomePage extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final bool actionsFreezeState = ref.watch (actionsFreezeProvider);
-    final ActionsFreezeNotifier actionsFreezeNotifier = ref.watch (actionsFreezeProvider.notifier);
-
-
     void onDrawerChanged (bool isOpened) {
 
-      actionsFreezeNotifier.freeze ();
+      context.methods.freeze (ref);
 
     }
 
 
     return (
 
-      AbsorbPointer (
-        absorbing: actionsFreezeState,
+      Freezer (
         child: ClipRect (
           child: Scaffold (
             appBar: const AppBarComponent (),

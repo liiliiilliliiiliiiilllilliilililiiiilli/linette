@@ -1,16 +1,16 @@
 // Language window
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/providers/locale/locale.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 import 'package:linette/app/widgets/radioitem/radioitem.dart';
 
 
 
-class LanguageWindow extends HookConsumerWidget {
+class LanguageWindow extends ConsumerWidget {
 
   const LanguageWindow ({
     super.key
@@ -20,10 +20,6 @@ class LanguageWindow extends HookConsumerWidget {
   @override Widget build (BuildContext context, WidgetRef ref) {
 
     final String localeState = ref.watch (localeProvider);
-    final LocaleNotifier localeNotifier = ref.watch (localeProvider.notifier);
-
-
-    final ValueNotifier <String> selectedLocale = useState (localeState);
 
 
     final List <Map <String, String>> languages = [
@@ -52,9 +48,7 @@ class LanguageWindow extends HookConsumerWidget {
 
       if (code != null && code.isNotEmpty) {
 
-        selectedLocale.value = code;
-
-        localeNotifier.changeState (code);
+        context.methods.changeLanguage (ref, code);
 
       }
 
@@ -92,8 +86,7 @@ class LanguageWindow extends HookConsumerWidget {
 
                         => RadioItem (
                           onPress: () => onPress (language),
-                          isChosen: code == selectedLocale.value,
-                          value: code,
+                          isChosen: (code == localeState),
                           title: title,
                           subtitle: subtitle
                         ),

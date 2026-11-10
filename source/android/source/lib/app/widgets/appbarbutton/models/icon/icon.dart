@@ -8,17 +8,15 @@ class AppBarButtonIcon {
 
   final String asset;
   final double size;
-  final Offset? offset;
-  final double? angle;
+  final Offset offset;
+  final double angle;
 
 
   const AppBarButtonIcon (
-    this.asset,
-    {
-      this.size = 12.5,
-      this.offset,
-      this.angle
-    }
-  );
+    this.asset, {
+    this.size = 12.5,
+    this.offset = const Offset (0, 0),
+    this.angle = 0
+  });
 
 }

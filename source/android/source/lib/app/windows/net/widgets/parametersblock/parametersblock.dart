@@ -23,7 +23,7 @@ class ParametersBlock extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    Column main () {
+    Widget main () {
 
       return (
 
@@ -47,16 +47,14 @@ class ParametersBlock extends StatelessWidget {
 
     return (
 
-      darkened ?
-
+      (darkened) ? (
         Opacity (
           opacity: 0.25,
           child: main ()
         )
-
-      :
-
+      ) : (
         main ()
+      )
 
     );
 

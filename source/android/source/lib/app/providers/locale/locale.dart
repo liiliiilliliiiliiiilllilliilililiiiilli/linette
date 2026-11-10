@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
+import 'package:linette/app/localizations/generated/l10n.dart';
 
 
 
@@ -34,7 +34,7 @@ class LocaleNotifier extends Notifier <String> {
 
     if (systemLocale != null) {
 
-      final bool isSupported = T.delegate.supportedLocales.any ((locale) => locale.languageCode == systemLocale.languageCode);
+      final bool isSupported = T.delegate.supportedLocales.any ((locale) => (locale.languageCode == systemLocale.languageCode));
 
       if (isSupported) {
 

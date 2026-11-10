@@ -1,4 +1,4 @@
-// Root component
+// Root widget
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -6,9 +6,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:linette/app/providers/welcome/welcome.dart';
 import 'package:linette/app/providers/theme/theme.dart';
 import 'package:linette/app/providers/locale/locale.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
+import 'package:linette/app/localizations/generated/l10n.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/pages/welcome/welcome.dart';
 import 'package:linette/app/pages/home/home.dart';
 import 'package:linette/app/pages/connections/connections.dart';
@@ -35,20 +36,18 @@ class App extends ConsumerWidget {
     final Widget appStartPage;
 
 
-    // Параметры:
-
-    const String title = 'Linette';
+    // Установка страниц:
 
     final Map <String, Widget Function (BuildContext)> routes = {
-      '/welcome': (context) => const WelcomePage (),
-      '/home': (context) => const HomePage (),
-      '/connections': (context) => const ConnectionsPage ()
+      WelcomePage.address: (context) => const WelcomePage (),
+      HomePage.address: (context) => const HomePage (),
+      ConnectionsPage.address: (context) => const ConnectionsPage ()
     };
 
 
     // Определение глобальных обьектов в зависимости от глобальных состояний:
 
-    switch (themeState) {  // Цвета, иконки, цветной системный акцент от состояния темы
+    switch (themeState) {  // Цвета, иконки, цветовой системный акцент от состояния темы
 
       case AppThemeOption.darkGreen:
 
@@ -112,7 +111,7 @@ class App extends ConsumerWidget {
 
       MaterialApp (
         debugShowCheckedModeBanner: false,
-        title: title,
+        onGenerateTitle: (context) => context.texts.appTitle,
         theme: ThemeData (
           pageTransitionsTheme: PageTransitionsTheme (
             builders: {

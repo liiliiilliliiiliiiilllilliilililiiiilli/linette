@@ -1,6 +1,8 @@
 {
 	"@@locale": "en",
 
+	"appTitle": "Linette",
+
 	"pageWelcomeBodyTopTitle": " Linette ",
 	"pageWelcomeBodyTopTitleDot": "•",
 	"pageWelcomeBodyTopSubtitle": "Plan to save the world",

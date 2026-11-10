@@ -26,12 +26,8 @@ class Country extends StatelessWidget {
       Row (
         spacing: 16,
         children: [
-          Flag (
-            flag: flag
-          ),
-          Name (
-            name: name
-          )
+          Flag (flag),
+          Name (name)
         ]
       )
 

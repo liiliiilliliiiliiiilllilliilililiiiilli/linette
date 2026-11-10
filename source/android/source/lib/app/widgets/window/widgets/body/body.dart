@@ -20,49 +20,55 @@ class BodyComponent extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final Padding main = Padding (
-      padding: const EdgeInsets.symmetric (
-        horizontal: 20 - 4
-      ),
-      child: Stack (
-        children: [
-          child,
-          Positioned (
-            height: 15,
-            top: 0,
-            left: 0,
-            right: 0,
-            child: IgnorePointer (
-              child: Container (
-                decoration: BoxDecoration (
-                  gradient: LinearGradient (
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      context.colors.windowMainBack,
-                      context.colors.windowMainBack.withAlpha (0)
-                    ]
+    Widget main () {
+
+      return (
+
+        Padding (
+          padding: const EdgeInsets.symmetric (
+            horizontal: 20 - 4
+          ),
+          child: Stack (
+            children: [
+              child,
+              Positioned (
+                height: 15,
+                top: 0,
+                left: 0,
+                right: 0,
+                child: IgnorePointer (
+                  child: Container (
+                    decoration: BoxDecoration (
+                      gradient: LinearGradient (
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          context.colors.windowMainBack,
+                          context.colors.windowMainBack.withAlpha (0)
+                        ]
+                      )
+                    )
                   )
                 )
               )
-            )
+            ]
           )
-        ]
-      )
-    );
+        )
+
+      );
+
+    }
 
 
     return (
 
-      isExpanded ?
-
+      (isExpanded) ? (
         Expanded (
-          child: main
+          child: main ()
         )
-
-      :
-
-        main
+      ) : (
+        main ()
+      )
 
     );
 

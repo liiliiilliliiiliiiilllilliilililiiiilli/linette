@@ -1,7 +1,7 @@
 // Home page - Body - Noise
 
 import 'dart:typed_data';
-import 'dart:math';
+import 'dart:math' as math;
 import 'dart:ui';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/material.dart';
@@ -45,12 +45,12 @@ class Noise extends HookWidget {
 
     final Offset spaceOffset = useMemoized (() {
 
-      final random = Random ();
+      final random = math.Random ();
 
 
       return Offset (
-        random.nextDouble () * 10000,  // Случайный сдвиг по x
-        random.nextDouble () * 10000  // Случайный сдвиг по y
+        random.nextDouble () * 10000,
+        random.nextDouble () * 10000
       );
 
     });
@@ -88,7 +88,7 @@ class Noise extends HookWidget {
                   size: Size.infinite,
                   painter: _NoisePainter (
                     timeNotifier: timeNotifier,
-                    spaceOffset: spaceOffset,  // Передаем случайное смещение
+                    spaceOffset: spaceOffset,
                     primaryColor: primaryColor,
                     secondaryColor: secondaryColor,
                     scale: scale,
@@ -99,9 +99,7 @@ class Noise extends HookWidget {
                 )
               )
             ),
-
-            if (topDarkness > 0)  // Затемнение сверху
-
+            if (topDarkness > 0) ... [  // Затемнение сверху
               Positioned.fill (
                 child: IgnorePointer (
                   child: Container (
@@ -130,7 +128,7 @@ class Noise extends HookWidget {
                   )
                 )
               )
-
+            ]
           ]
         )
       )
@@ -158,7 +156,7 @@ class _NoisePainter extends CustomPainter {
   late final List <Color> _palette = List.generate (256, (i) {
 
     final double t = i / 255;
-    final double sharpT = pow(t, sharpness).toDouble();
+    final double sharpT = math.pow(t, sharpness).toDouble();
 
 
     return Color.lerp (secondaryColor, primaryColor, sharpT)!;
@@ -185,6 +183,7 @@ class _NoisePainter extends CustomPainter {
       return;
 
     }
+
 
     final double time = timeNotifier.value * speed;
     final double cellWidth = size.width / resolution;
@@ -231,14 +230,18 @@ class _NoisePainter extends CustomPainter {
 
   @override bool shouldRepaint (covariant _NoisePainter oldDelegate) {
 
-    return oldDelegate.timeNotifier != timeNotifier ||
-      oldDelegate.spaceOffset != spaceOffset ||
-      oldDelegate.primaryColor != primaryColor ||
-      oldDelegate.secondaryColor != secondaryColor ||
-      oldDelegate.scale != scale ||
-      oldDelegate.sharpness != sharpness ||
-      oldDelegate.resolution != resolution ||
-      oldDelegate.speed != speed;
+    return
+
+      (
+        (oldDelegate.timeNotifier != timeNotifier) ||
+        (oldDelegate.spaceOffset != spaceOffset) ||
+        (oldDelegate.primaryColor != primaryColor) ||
+        (oldDelegate.secondaryColor != secondaryColor) ||
+        (oldDelegate.scale != scale) ||
+        (oldDelegate.sharpness != sharpness) ||
+        (oldDelegate.resolution != resolution) ||
+        (oldDelegate.speed != speed)
+      );
 
   }
 

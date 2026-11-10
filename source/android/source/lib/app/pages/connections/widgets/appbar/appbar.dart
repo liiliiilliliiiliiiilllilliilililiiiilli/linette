@@ -9,7 +9,7 @@ import 'widgets/title/title.dart';
 
 
 
-class AppBarComponent extends StatelessWidget implements PreferredSizeWidget  {
+class AppBarComponent extends StatelessWidget implements PreferredSizeWidget {
 
   const AppBarComponent ({
     super.key

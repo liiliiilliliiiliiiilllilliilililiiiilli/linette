@@ -9,14 +9,14 @@ import 'package:linette/app/app.dart';
 
 void main () async {
 
-  // Предзагрузка графики:
-
-  WidgetsFlutterBinding.ensureInitialized ();
+  const methods = AppMethods ();
 
 
-  // Предзагрузка иконок:
+  // Предзагрузка графики и иконок:
 
-  await const AppMethods().preloadIcons([
+  methods.preloadGraphics ();
+
+  await methods.preloadIcons ([
     'assets/images/icons/common/arrow.svg',
     'assets/images/icons/common/flag_finland.svg',
     'assets/images/icons/common/flag_germany.svg',

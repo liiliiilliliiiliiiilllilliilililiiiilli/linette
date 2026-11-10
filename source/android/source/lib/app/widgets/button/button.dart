@@ -106,9 +106,9 @@ class ButtonComponent extends HookWidget {
                     child: SlideTransition (
                       position: slideAnimation,
                       child: Transform.translate (
-                        offset: icon.offset ?? const Offset (0, 0),
+                        offset: icon.offset,
                         child: Transform.rotate (
-                          angle: icon.angle ?? 0,
+                          angle: icon.angle,
                           child: SvgPicture.asset (
                             icon.asset,
                             width: icon.size,
@@ -148,9 +148,9 @@ class ButtonComponent extends HookWidget {
                   SlideTransition (
                     position: slideAnimation,
                     child: Transform.translate (
-                      offset: icon.offset ?? const Offset (0, 0),
+                      offset: icon.offset,
                       child: Transform.rotate (
-                        angle: icon.angle ?? 0,
+                        angle: icon.angle,
                         child: SvgPicture.asset (
                           icon.asset,
                           width: icon.size,

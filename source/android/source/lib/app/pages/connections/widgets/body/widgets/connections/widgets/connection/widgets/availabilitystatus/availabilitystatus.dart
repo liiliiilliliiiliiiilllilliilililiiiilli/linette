@@ -10,9 +10,9 @@ class AvailabilityStatus extends StatelessWidget {
   final bool isAvailable;
 
 
-  const AvailabilityStatus ({
-    super.key,
-    required this.isAvailable
+  const AvailabilityStatus (
+    this.isAvailable, {
+    super.key
   });
 
 

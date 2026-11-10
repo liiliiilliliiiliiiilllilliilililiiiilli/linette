@@ -10,9 +10,9 @@ class TopComponent extends StatelessWidget {
   final String title;
 
 
-  const TopComponent ({
-    super.key,
-    required this.title
+  const TopComponent (
+    this.title, {
+    super.key
   });
 
 

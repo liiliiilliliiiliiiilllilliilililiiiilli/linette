@@ -2,7 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/providers/theme/theme.dart';
+import 'elements/changelanguage/changelanguage.dart';
+import 'elements/changetheme/changetheme.dart';
 import 'elements/closedrawer/closedrawer.dart';
+import 'elements/freeze/freeze.dart';
 import 'elements/getscreenwidth/getscreenwidth.dart';
 import 'elements/iscurrentpageactive/iscurrentpageactive.dart';
 import 'elements/isdraweropened/isdraweropened.dart';
@@ -11,6 +15,7 @@ import 'elements/navigateto/navigateto.dart';
 import 'elements/opendrawer/opendrawer.dart';
 import 'elements/openlink/openlink.dart';
 import 'elements/openwindow/openwindow.dart';
+import 'elements/preloadgraphics/preloadgraphics.dart';
 import 'elements/preloadicons/preloadicons.dart';
 import 'elements/transittopage/transittopage.dart';
 
@@ -21,9 +26,27 @@ class AppMethods {
   const AppMethods ();
 
 
+  void changeLanguage (WidgetRef ref, String code) {
+
+    return ChangeLanguageElement.changeLanguage (ref, code);
+
+  }
+
+  void changeTheme (WidgetRef ref, AppThemeOption theme) {
+
+    return ChangeThemeElement.changeTheme (ref, theme);
+
+  }
+
   void closeDrawer (BuildContext context) {
 
     return CloseDrawerElement.closeDrawer (context);
+
+  }
+
+  void freeze (WidgetRef ref) {
+
+    return FreezeElement.freeze (ref);
 
   }
 
@@ -80,19 +103,21 @@ class AppMethods {
 
   }
 
+  void preloadGraphics () {
+
+    return PreloadGraphicsElement.preloadGraphics ();
+
+  }
+
   Future <void> preloadIcons (List <String> icons) async {
 
     return await PreloadIconsElement.preloadIcons (icons);
 
   }
 
-  Future <void> transitToPage (BuildContext context, WidgetRef ref, {required Widget page}) async {
+  Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page) async {
 
-    return await TransitToPageElement.transitToPage (
-      context,
-      ref,
-      page: page
-    );
+    return await TransitToPageElement.transitToPage (context, ref, page);
 
   }
 

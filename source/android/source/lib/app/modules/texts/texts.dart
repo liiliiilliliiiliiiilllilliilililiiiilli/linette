@@ -1,7 +1,7 @@
 // Texts module
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/localization/generated/l10n.dart';
+import 'package:linette/app/localizations/generated/l10n.dart';
 
 
 

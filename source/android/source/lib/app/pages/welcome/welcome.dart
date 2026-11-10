@@ -1,30 +1,28 @@
 // Welcome page
 
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/widgets/freezer/freezer.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 
 
 
-class WelcomePage extends ConsumerWidget {
+class WelcomePage extends StatelessWidget {
+
+  static const String address = '/welcome';
+
 
   const WelcomePage ({
     super.key
   });
 
 
-  @override Widget build (BuildContext context, WidgetRef ref) {
-
-    final bool actionsFreezeState = ref.watch (actionsFreezeProvider);
-
+  @override Widget build (BuildContext context) {
 
     return (
 
-      AbsorbPointer (
-        absorbing: actionsFreezeState,
+      Freezer (
         child: ClipRect (
           child: Scaffold (
             appBar: const AppBarComponent (),

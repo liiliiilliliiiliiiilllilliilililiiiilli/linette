@@ -46,12 +46,12 @@ class TextButtonComponent extends HookWidget {
               mainAxisSize: MainAxisSize.min,
               spacing: 8,
               children: [
-                if (icons case final icons?)
+                if (icons case final icons?) ... [
                   if (icons.left case final iconsLeft?) ... [
                     Transform.translate (
-                      offset: iconsLeft.offset ?? const Offset (0, 0),
+                      offset: iconsLeft.offset,
                       child: Transform.rotate (
-                        angle: iconsLeft.angle ?? 0,
+                        angle: iconsLeft.angle,
                         child: SvgPicture.asset (
                           iconsLeft.asset,
                           width: iconsLeft.size,
@@ -63,6 +63,7 @@ class TextButtonComponent extends HookWidget {
                         )
                       )
                     )
+                  ]
                 ],
                 Container (
                   alignment: Alignment.center,
@@ -77,12 +78,12 @@ class TextButtonComponent extends HookWidget {
                     )
                   )
                 ),
-                if (icons case final icons?)
+                if (icons case final icons?) ... [
                   if (icons.right case final iconsRight?) ... [
                     Transform.translate (
-                      offset: iconsRight.offset ?? const Offset (0, 0),
+                      offset: iconsRight.offset,
                       child: Transform.rotate (
-                        angle: iconsRight.angle ?? 0,
+                        angle: iconsRight.angle,
                         child: SvgPicture.asset (
                           iconsRight.asset,
                           width: iconsRight.size,
@@ -94,6 +95,7 @@ class TextButtonComponent extends HookWidget {
                         )
                       )
                     )
+                  ]
                 ]
               ]
             )

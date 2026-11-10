@@ -1,4 +1,4 @@
-// Animator presser global widget
+// Presser animator global widget
 
 import 'package:flutter/material.dart';
 

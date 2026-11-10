@@ -8,6 +8,7 @@ import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/pages/connections/connections.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
@@ -27,7 +28,7 @@ class ChooseConnectionButton extends HookWidget {
 
     void onPress () {
 
-      context.methods.navigateTo (context, '/connections');
+      context.methods.navigateTo (context, ConnectionsPage.address);
 
     }
 

@@ -37,9 +37,7 @@ class ButtonChangeLanguage extends ConsumerWidget {
         onPress: onPress,
         text: context.texts.pageWelcomeBodyBottomChangeLanguage,
         icons: TextButtonIcons (
-          left: TextButtonIcon (
-            context.icons.language
-          )
+          left: TextButtonIcon (context.icons.language)
         )
       )
 
