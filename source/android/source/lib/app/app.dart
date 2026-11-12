@@ -127,12 +127,12 @@ class App extends ConsumerWidget {
           ]
         ),
         localizationsDelegates: const [
-          T.delegate,
+          Texts.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate
         ],
-        supportedLocales: T.delegate.supportedLocales,
+        supportedLocales: Texts.delegate.supportedLocales,
         locale: Locale (localeState),
         routes: routes,
         home: appStartPage,

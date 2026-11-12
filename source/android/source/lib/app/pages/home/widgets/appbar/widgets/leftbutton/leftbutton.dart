@@ -33,7 +33,7 @@ class LeftButton extends ConsumerWidget {
       AppBarButton (
         onPress: onPress,
         shape: AppBarButtonShape.square,
-        icon: AppBarButtonIcon (context.icons.menu)
+        icon: AppBarButtonIcon (context.icons.buttonAppBarMenu)
       )
 
     );

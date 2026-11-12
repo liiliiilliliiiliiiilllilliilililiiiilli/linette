@@ -95,7 +95,7 @@ class ConnectionButton extends HookWidget {
                           child: Padding (
                             padding: const EdgeInsets.all (1.75),
                             child: SvgPicture.asset (
-                              context.icons.olive,
+                              context.icons.buttonConnect,
                               width: 256,
                               height: 256,
                               colorFilter: ColorFilter.mode (

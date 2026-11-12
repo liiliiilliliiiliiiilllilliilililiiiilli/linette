@@ -20,7 +20,7 @@ class WalletOption extends StatelessWidget {
     return (
 
       DrawerOption (
-        iconLeft: context.icons.wallet,
+        iconLeft: context.icons.drawerOptionLeftWallet,
         text: context.texts.pageHomeDrawerCenterWallet,
         window: const WalletWindow ()
       )

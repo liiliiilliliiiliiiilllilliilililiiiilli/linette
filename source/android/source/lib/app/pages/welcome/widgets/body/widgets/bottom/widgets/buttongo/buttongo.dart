@@ -33,7 +33,7 @@ class ButtonGo extends ConsumerWidget {
         onPress: onPress,
         text: context.texts.pageWelcomeBodyBottomGo,
         icon: ButtonIcon (
-          context.icons.arrow,
+          context.icons.buttonGo,
           size: 14
         )
       )

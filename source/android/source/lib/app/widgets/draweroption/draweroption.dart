@@ -109,7 +109,7 @@ class DrawerOption extends HookConsumerWidget {
                   ]
                   else ... [
                     SvgPicture.asset (
-                      context.icons.arrow,
+                      context.icons.drawerOptionRight,
                       width: 14,
                       height: 14,
                       colorFilter: ColorFilter.mode (

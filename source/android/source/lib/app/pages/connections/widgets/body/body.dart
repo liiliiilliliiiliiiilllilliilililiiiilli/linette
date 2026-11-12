@@ -56,21 +56,21 @@ class BodyComponent extends HookWidget {
               Connections ([
                 Connection (
                   onPress: () => {chosen.value = textNetherlands},
-                  flag: context.icons.flagNetherlands,
+                  flag: context.icons.connectionNetherlands,
                   name: textNetherlands,
                   isChosen: (chosen.value == textNetherlands),
                   isAvailable: false
                 ),
                 Connection (
                   onPress: () => {chosen.value = textFinland},
-                  flag: context.icons.flagFinland,
+                  flag: context.icons.connectionFinland,
                   name: textFinland,
                   isChosen: (chosen.value == textFinland),
                   isAvailable: false
                 ),
                 Connection (
                   onPress: () => {chosen.value = textGermany},
-                  flag: context.icons.flagGermany,
+                  flag: context.icons.connectionGermany,
                   name: textGermany,
                   isChosen: (chosen.value == textGermany),
                   isAvailable: false

@@ -20,7 +20,7 @@ class AccoutOption extends StatelessWidget {
     return (
 
       DrawerOption (
-        iconLeft: context.icons.user,
+        iconLeft: context.icons.drawerOptionLeftAccount,
         text: context.texts.pageHomeDrawerCenterAccout,
         window: const AccoutWindow ()
       )

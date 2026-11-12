@@ -75,4 +75,4 @@ flutter_intl:
   arb_dir: lib/app/localizations/locales
   output_dir: lib/app/localizations/generated
   template-arb-file: intl_en.arb
-  class_name: T
+  class_name: Texts

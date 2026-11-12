@@ -7,6 +7,6 @@ import 'package:linette/app/localizations/generated/l10n.dart';
 
 extension AppTextsExtension on BuildContext {
 
-  T get texts => T.of (this);
+  Texts get texts => Texts.of (this);
 
 }

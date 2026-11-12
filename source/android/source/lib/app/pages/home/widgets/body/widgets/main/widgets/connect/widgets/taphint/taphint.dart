@@ -100,7 +100,7 @@ class TapHint extends HookWidget {
               spacing: 8,
               children: [
                 SvgPicture.asset (
-                  context.icons.tap,
+                  context.icons.hintTap,
                   width: 17,
                   height: 17,
                   colorFilter: ColorFilter.mode (

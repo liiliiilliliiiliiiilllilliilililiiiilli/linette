@@ -51,7 +51,7 @@ class ChooseConnectionButton extends HookWidget {
                 spacing: 8,
                 children: [
                   SvgPicture.asset (
-                    context.icons.location,
+                    context.icons.buttonChooseConnectionLeft,
                     width: 17,
                     height: 17,
                     colorFilter: ColorFilter.mode (
@@ -70,7 +70,7 @@ class ChooseConnectionButton extends HookWidget {
                     )
                   ),
                   SvgPicture.asset (
-                    context.icons.arrow,
+                    context.icons.buttonChooseConnectionRight,
                     width: 15,
                     height: 15,
                     colorFilter: ColorFilter.mode (

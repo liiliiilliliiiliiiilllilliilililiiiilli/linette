@@ -20,7 +20,7 @@ class FeedbackOption extends StatelessWidget {
     return (
 
       DrawerOption (
-        iconLeft: context.icons.info,
+        iconLeft: context.icons.drawerOptionLeftFeedback,
         text: context.texts.pageHomeDrawerCenterFeedback,
         window: const FeedbackWindow ()
       )

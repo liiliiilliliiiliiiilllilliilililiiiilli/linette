@@ -75,6 +75,11 @@ class Bottom extends HookWidget {
     }
 
 
+    final double translationYValue = isPressed.value
+      ? -1
+      : 0;
+
+
     return (
 
       Presser (
@@ -88,7 +93,7 @@ class Bottom extends HookWidget {
           height: 80,
           padding: const EdgeInsets.symmetric (
             horizontal: 20,
-            vertical: 15
+            vertical: 16
           ),
           decoration: BoxDecoration (
             border: Border (
@@ -101,33 +106,39 @@ class Bottom extends HookWidget {
           ),
           child: PresserAnimator (
             isPressed: isPressed,
-            scaleRate: 0.97,
-            child: Row (
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded (
-                  child: Text (
-                    context.texts.pageHomeDrawerBottom,
-                    softWrap: true,
-                    style: TextStyle (
-                      fontFamily: context.fonts.archivo,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      color: context.colors.drawerBottomBarText
+            scaleRate: 0.975,
+            child: AnimatedContainer (
+              transform: Matrix4.translationValues (0, translationYValue, 0),
+              duration: const Duration (
+                milliseconds: 80
+              ),
+              child: Row (
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded (
+                    child: Text (
+                      context.texts.pageHomeDrawerBottom,
+                      softWrap: true,
+                      style: TextStyle (
+                        fontFamily: context.fonts.archivo,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15.75,
+                        color: context.colors.drawerBottomBarText
+                      )
+                    )
+                  ),
+                  IgnorePointer (
+                    ignoring: true,
+                    child: Checkbox (
+                      value: isChecked.value,
+                      onChanged: (context) => {},
+                      checkColor: context.colors.check,
+                      activeColor: context.colors.checkBack
                     )
                   )
-                ),
-                IgnorePointer (
-                  ignoring: true,
-                  child: Checkbox (
-                    value: isChecked.value,
-                    onChanged: (context) => {},
-                    checkColor: context.colors.check,
-                    activeColor: context.colors.checkBack
-                  )
-                )
-              ]
+                ]
+              )
             )
           )
         )

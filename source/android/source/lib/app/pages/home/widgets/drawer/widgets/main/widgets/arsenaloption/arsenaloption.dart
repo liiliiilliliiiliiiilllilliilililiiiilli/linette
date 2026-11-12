@@ -20,7 +20,7 @@ class ArsenalOption extends StatelessWidget {
     return (
 
       DrawerOption (
-        iconLeft: context.icons.magicwand,
+        iconLeft: context.icons.drawerOptionLeftArsenal,
         text: context.texts.pageHomeDrawerCenterArsenal,
         window: const ArsenalWindow ()
       )

@@ -32,17 +32,12 @@ class RightButton extends ConsumerWidget {
     }
 
 
-    final String themeIcon = (themeState == AppThemeOption.darkGreen)
-      ? context.icons.moon
-      : context.icons.sun;
-
-
     return (
 
       AppBarButton (
         onPress: onPress,
         shape: AppBarButtonShape.circle,
-        icon: AppBarButtonIcon (themeIcon)
+        icon: AppBarButtonIcon (context.icons.buttonAppBarTheme)
       )
 
     );

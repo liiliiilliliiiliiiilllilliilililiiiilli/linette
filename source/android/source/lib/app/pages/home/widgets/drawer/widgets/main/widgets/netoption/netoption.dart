@@ -20,7 +20,7 @@ class NetOption extends StatelessWidget {
     return (
 
       DrawerOption (
-        iconLeft: context.icons.net,
+        iconLeft: context.icons.drawerOptionLeftNet,
         text: context.texts.pageHomeDrawerCenterNet,
         window: const NetWindow ()
       )

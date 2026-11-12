@@ -34,7 +34,7 @@ class LeftButton extends ConsumerWidget {
         onPress: onPress,
         shape: AppBarButtonShape.circle,
         icon: AppBarButtonIcon (
-          context.icons.arrow,
+          context.icons.buttonAppBarBack,
           offset: const Offset (-1, 0),
           angle: 180
         )

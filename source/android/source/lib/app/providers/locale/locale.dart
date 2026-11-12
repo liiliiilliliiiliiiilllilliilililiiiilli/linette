@@ -34,7 +34,7 @@ class LocaleNotifier extends Notifier <String> {
 
     if (systemLocale != null) {
 
-      final bool isSupported = T.delegate.supportedLocales.any ((locale) => (locale.languageCode == systemLocale.languageCode));
+      final bool isSupported = Texts.delegate.supportedLocales.any ((locale) => (locale.languageCode == systemLocale.languageCode));
 
       if (isSupported) {
 
@@ -61,7 +61,7 @@ class LocaleNotifier extends Notifier <String> {
 
       final String systemLocale = getSystemLocale ();
 
-      await T.load (Locale (systemLocale));
+      await Texts.load (Locale (systemLocale));
 
       state = systemLocale;
 
@@ -69,7 +69,7 @@ class LocaleNotifier extends Notifier <String> {
 
     } else {
 
-      await T.load (Locale (appLocale));
+      await Texts.load (Locale (appLocale));
 
       state = appLocale;
 
@@ -80,7 +80,7 @@ class LocaleNotifier extends Notifier <String> {
 
   Future <void> changeState (String locale) async {
 
-    await T.load (Locale (locale));
+    await Texts.load (Locale (locale));
 
     state = locale;
 

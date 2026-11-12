@@ -32,7 +32,7 @@ class LanguageOption extends ConsumerWidget {
     return (
 
       DrawerOption (
-        iconLeft: context.icons.language,
+        iconLeft: context.icons.drawerOptionLeftLanguage,
         text: context.texts.pageHomeDrawerCenterLanguage,
         textRight: textCurrentLanguage,
         window: const LanguageWindow ()
