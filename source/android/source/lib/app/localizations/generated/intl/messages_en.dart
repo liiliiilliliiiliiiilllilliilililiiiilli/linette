@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(num) => "${num} online";
 
+  static String m1(num) => "${num} users";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
@@ -99,8 +101,42 @@ class MessageLookup extends MessageLookupByLibrary {
       " Linette ",
     ),
     "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "windowAccountAction": MessageLookupByLibrary.simpleMessage("Done"),
-    "windowAccountTitle": MessageLookupByLibrary.simpleMessage("Account"),
+    "windowAccountEnteredAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowAccountEnteredBodyActionsDeleteAccount":
+        MessageLookupByLibrary.simpleMessage("Delete account"),
+    "windowAccountEnteredBodyActionsExit": MessageLookupByLibrary.simpleMessage(
+      "Exit",
+    ),
+    "windowAccountEnteredBodyActionsPublishedConnections":
+        MessageLookupByLibrary.simpleMessage("Published connections"),
+    "windowAccountEnteredBodyActionsSavedConnections":
+        MessageLookupByLibrary.simpleMessage("Saved connections"),
+    "windowAccountEnteredBodyUserName": MessageLookupByLibrary.simpleMessage(
+      "@nyan_cat",
+    ),
+    "windowAccountEnteredBodyUserUsersNum": m1,
+    "windowAccountEnteredTitle": MessageLookupByLibrary.simpleMessage(
+      "Account",
+    ),
+    "windowAccountNotEnteredAction": MessageLookupByLibrary.simpleMessage(
+      "Next",
+    ),
+    "windowAccountNotEnteredBodyHint_1": MessageLookupByLibrary.simpleMessage(
+      "Or",
+    ),
+    "windowAccountNotEnteredBodyHint_2": MessageLookupByLibrary.simpleMessage(
+      "Login via Google",
+    ),
+    "windowAccountNotEnteredBodyTextFieldLogin":
+        MessageLookupByLibrary.simpleMessage("Login"),
+    "windowAccountNotEnteredBodyTextFieldPassword":
+        MessageLookupByLibrary.simpleMessage("Password"),
+    "windowAccountNotEnteredBodyTitle": MessageLookupByLibrary.simpleMessage(
+      "Login / Register",
+    ),
+    "windowAccountNotEnteredTitle": MessageLookupByLibrary.simpleMessage(
+      "Account",
+    ),
     "windowArsenalAction": MessageLookupByLibrary.simpleMessage("Done"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
       "App\'s arsenal",

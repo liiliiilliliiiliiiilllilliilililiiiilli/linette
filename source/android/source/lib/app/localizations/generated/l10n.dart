@@ -1146,20 +1146,150 @@ class Texts {
   }
 
   /// `Account`
-  String get windowAccountTitle {
+  String get windowAccountNotEnteredTitle {
     return Intl.message(
       'Account',
-      name: 'windowAccountTitle',
+      name: 'windowAccountNotEnteredTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login / Register`
+  String get windowAccountNotEnteredBodyTitle {
+    return Intl.message(
+      'Login / Register',
+      name: 'windowAccountNotEnteredBodyTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get windowAccountNotEnteredBodyTextFieldLogin {
+    return Intl.message(
+      'Login',
+      name: 'windowAccountNotEnteredBodyTextFieldLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get windowAccountNotEnteredBodyTextFieldPassword {
+    return Intl.message(
+      'Password',
+      name: 'windowAccountNotEnteredBodyTextFieldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get windowAccountNotEnteredBodyHint_1 {
+    return Intl.message(
+      'Or',
+      name: 'windowAccountNotEnteredBodyHint_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login via Google`
+  String get windowAccountNotEnteredBodyHint_2 {
+    return Intl.message(
+      'Login via Google',
+      name: 'windowAccountNotEnteredBodyHint_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get windowAccountNotEnteredAction {
+    return Intl.message(
+      'Next',
+      name: 'windowAccountNotEnteredAction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get windowAccountEnteredTitle {
+    return Intl.message(
+      'Account',
+      name: 'windowAccountEnteredTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `@nyan_cat`
+  String get windowAccountEnteredBodyUserName {
+    return Intl.message(
+      '@nyan_cat',
+      name: 'windowAccountEnteredBodyUserName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{num} users`
+  String windowAccountEnteredBodyUserUsersNum(int num) {
+    return Intl.message(
+      '$num users',
+      name: 'windowAccountEnteredBodyUserUsersNum',
+      desc: '',
+      args: [num],
+    );
+  }
+
+  /// `Saved connections`
+  String get windowAccountEnteredBodyActionsSavedConnections {
+    return Intl.message(
+      'Saved connections',
+      name: 'windowAccountEnteredBodyActionsSavedConnections',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Published connections`
+  String get windowAccountEnteredBodyActionsPublishedConnections {
+    return Intl.message(
+      'Published connections',
+      name: 'windowAccountEnteredBodyActionsPublishedConnections',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exit`
+  String get windowAccountEnteredBodyActionsExit {
+    return Intl.message(
+      'Exit',
+      name: 'windowAccountEnteredBodyActionsExit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete account`
+  String get windowAccountEnteredBodyActionsDeleteAccount {
+    return Intl.message(
+      'Delete account',
+      name: 'windowAccountEnteredBodyActionsDeleteAccount',
       desc: '',
       args: [],
     );
   }
 
   /// `Done`
-  String get windowAccountAction {
+  String get windowAccountEnteredAction {
     return Intl.message(
       'Done',
-      name: 'windowAccountAction',
+      name: 'windowAccountEnteredAction',
       desc: '',
       args: [],
     );

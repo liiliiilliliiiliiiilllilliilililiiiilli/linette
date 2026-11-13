@@ -130,8 +130,29 @@
 	"windowNetBodyParametersBlock_6_Parameter_3_Value": "1500",
 	"windowNetAction": "确定",
 
-	"windowAccountTitle": "帐户",
-	"windowAccountAction": "完成",
+	"windowAccountNotEnteredTitle": "帐户",
+	"windowAccountNotEnteredBodyTitle": "登录/注册",
+	"windowAccountNotEnteredBodyTextFieldLogin": "登录",
+	"windowAccountNotEnteredBodyTextFieldPassword": "密码",
+	"windowAccountNotEnteredBodyHint_1": "或者",
+	"windowAccountNotEnteredBodyHint_2": "通过 Google 登录",
+	"windowAccountNotEnteredAction": "下一个",
+
+	"windowAccountEnteredTitle": "帐户",
+	"windowAccountEnteredBodyUserName": "@nyan_cat",
+	"windowAccountEnteredBodyUserUsersNum": "{num} 位用户",
+	"@windowAccountEnteredBodyUserUsersNum": {
+		"placeholders": {
+			"num": {
+				"type": "int"
+			}
+		}
+	},
+	"windowAccountEnteredBodyActionsSavedConnections": "已保存的连接",
+	"windowAccountEnteredBodyActionsPublishedConnections": "已发布的连接",
+	"windowAccountEnteredBodyActionsExit": "出口",
+	"windowAccountEnteredBodyActionsDeleteAccount": "删除帐户",
+	"windowAccountEnteredAction": "准备好",
 
 	"windowWalletTitle": "钱包",
 	"windowWalletAction": "完成"

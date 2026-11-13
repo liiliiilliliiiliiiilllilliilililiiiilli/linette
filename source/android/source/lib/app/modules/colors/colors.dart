@@ -94,6 +94,8 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color line;
   final Color lineText;
   final Color link;
+  final Color linkLocal;
+  final Color linkLocalPressed;
   final Color linkPressed;
   final Color noiseBack;
   final Color noisePrimary;
@@ -109,6 +111,11 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color textButton;
   final Color textChoiceStatus;
   final Color textCountryName;
+  final Color textFieldBack;
+  final Color textFieldBorder;
+  final Color textFieldCursor;
+  final Color textFieldHint;
+  final Color textFieldText;
   final Color textStates;
   final Color textStatus;
   final Color title;
@@ -116,10 +123,12 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color titleShadow;
   final Color windowBarrier;
   final Color windowBottomText;
+  final Color windowBottomTextNotActive;
   final Color windowMainBack;
   final Color windowMainStata;
   final Color windowMainStataValue;
   final Color windowMainText;
+  final Color windowMainTextAuxiliary;
   final Color windowMainTitle;
   final Color windowSeparator;
   final Color windowShadow;
@@ -166,6 +175,8 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.line,
     required this.lineText,
     required this.link,
+    required this.linkLocal,
+    required this.linkLocalPressed,
     required this.linkPressed,
     required this.noiseBack,
     required this.noisePrimary,
@@ -181,6 +192,11 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.textButton,
     required this.textChoiceStatus,
     required this.textCountryName,
+    required this.textFieldBack,
+    required this.textFieldBorder,
+    required this.textFieldCursor,
+    required this.textFieldHint,
+    required this.textFieldText,
     required this.textStates,
     required this.textStatus,
     required this.title,
@@ -188,10 +204,12 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.titleShadow,
     required this.windowBarrier,
     required this.windowBottomText,
+    required this.windowBottomTextNotActive,
     required this.windowMainBack,
     required this.windowMainStata,
     required this.windowMainStataValue,
     required this.windowMainText,
+    required this.windowMainTextAuxiliary,
     required this.windowMainTitle,
     required this.windowSeparator,
     required this.windowShadow,
@@ -239,6 +257,8 @@ class AppColors extends ThemeExtension <AppColors> {
     line: AppColorsPalette.green_2,
     lineText: AppColorsPalette.cream,
     link: AppColorsPalette.blue_3,
+    linkLocal: AppColorsPalette.green_6,
+    linkLocalPressed: AppColorsPalette.green_6,
     linkPressed: AppColorsPalette.blue_2,
     noiseBack: AppColorsPalette.black,
     noisePrimary: AppColorsPalette.green_4,
@@ -254,6 +274,11 @@ class AppColors extends ThemeExtension <AppColors> {
     textButton: AppColorsPalette.green_6,
     textChoiceStatus: AppColorsPalette.grey_12,
     textCountryName: AppColorsPalette.cream,
+    textFieldBack: AppColorsPalette.black,
+    textFieldBorder: AppColorsPalette.grey_9,
+    textFieldCursor: AppColorsPalette.green_6,
+    textFieldHint: AppColorsPalette.grey,
+    textFieldText: AppColorsPalette.cream,
     textStates: AppColorsPalette.grey,
     textStatus: AppColorsPalette.cream,
     title: AppColorsPalette.cream,
@@ -261,10 +286,12 @@ class AppColors extends ThemeExtension <AppColors> {
     titleShadow: AppColorsPalette.transparent_4_grey_1,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
     windowBottomText: AppColorsPalette.green_6,
+    windowBottomTextNotActive: AppColorsPalette.grey_11,
     windowMainBack: AppColorsPalette.grey_6,
     windowMainStata: AppColorsPalette.grey,
     windowMainStataValue: AppColorsPalette.grey,
     windowMainText: AppColorsPalette.cream,
+    windowMainTextAuxiliary: AppColorsPalette.grey,
     windowMainTitle: AppColorsPalette.cream,
     windowSeparator: AppColorsPalette.grey_4,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
@@ -311,6 +338,8 @@ class AppColors extends ThemeExtension <AppColors> {
     line: AppColorsPalette.grey_13,
     lineText: AppColorsPalette.black,
     link: AppColorsPalette.blue,
+    linkLocal: AppColorsPalette.green_6,
+    linkLocalPressed: AppColorsPalette.green_6,
     linkPressed: AppColorsPalette.blue_1,
     noiseBack: AppColorsPalette.green_7,
     noisePrimary: AppColorsPalette.green_1,
@@ -326,6 +355,11 @@ class AppColors extends ThemeExtension <AppColors> {
     textButton: AppColorsPalette.black,
     textChoiceStatus: AppColorsPalette.grey_12,
     textCountryName: AppColorsPalette.black,
+    textFieldBack: AppColorsPalette.grey_14,
+    textFieldBorder: AppColorsPalette.grey_13,
+    textFieldCursor: AppColorsPalette.green_6,
+    textFieldHint: AppColorsPalette.grey_11,
+    textFieldText: AppColorsPalette.black,
     textStates: AppColorsPalette.black,
     textStatus: AppColorsPalette.black,
     title: AppColorsPalette.black,
@@ -333,10 +367,12 @@ class AppColors extends ThemeExtension <AppColors> {
     titleShadow: AppColorsPalette.transparent_4_grey_1,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
     windowBottomText: AppColorsPalette.black,
+    windowBottomTextNotActive: AppColorsPalette.grey,
     windowMainBack: AppColorsPalette.cream,
     windowMainStata: AppColorsPalette.grey_11,
     windowMainStataValue: AppColorsPalette.grey_11,
     windowMainText: AppColorsPalette.black,
+    windowMainTextAuxiliary: AppColorsPalette.black,
     windowMainTitle: AppColorsPalette.black,
     windowSeparator: AppColorsPalette.grey_13,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
@@ -384,6 +420,8 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? line,
     Color? lineText,
     Color? link,
+    Color? linkLocal,
+    Color? linkLocalPressed,
     Color? linkPressed,
     Color? noiseBack,
     Color? noisePrimary,
@@ -399,6 +437,11 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? textButton,
     Color? textChoiceStatus,
     Color? textCountryName,
+    Color? textFieldBack,
+    Color? textFieldBorder,
+    Color? textFieldCursor,
+    Color? textFieldHint,
+    Color? textFieldText,
     Color? textStates,
     Color? textStatus,
     Color? title,
@@ -406,10 +449,12 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? titleShadow,
     Color? windowBarrier,
     Color? windowBottomText,
+    Color? windowBottomTextNotActive,
     Color? windowMainBack,
     Color? windowMainStata,
     Color? windowMainStataValue,
     Color? windowMainText,
+    Color? windowMainTextAuxiliary,
     Color? windowMainTitle,
     Color? windowSeparator,
     Color? windowShadow,
@@ -458,6 +503,8 @@ class AppColors extends ThemeExtension <AppColors> {
         line: line ?? this.line,
         lineText: lineText ?? this.lineText,
         link: link ?? this.link,
+        linkLocal: linkLocal ?? this.linkLocal,
+        linkLocalPressed: linkLocalPressed ?? this.linkLocalPressed,
         linkPressed: linkPressed ?? this.linkPressed,
         noiseBack: noiseBack ?? this.noiseBack,
         noisePrimary: noisePrimary ?? this.noisePrimary,
@@ -473,6 +520,11 @@ class AppColors extends ThemeExtension <AppColors> {
         textButton: textButton ?? this.textButton,
         textChoiceStatus: textChoiceStatus ?? this.textChoiceStatus,
         textCountryName: textCountryName ?? this.textCountryName,
+        textFieldBack: textFieldBack ?? this.textFieldBack,
+        textFieldBorder: textFieldBorder ?? this.textFieldBorder,
+        textFieldCursor: textFieldCursor ?? this.textFieldCursor,
+        textFieldHint: textFieldHint ?? this.textFieldHint,
+        textFieldText: textFieldText ?? this.textFieldText,
         textStates: textStates ?? this.textStates,
         textStatus: textStatus ?? this.textStatus,
         title: title ?? this.title,
@@ -480,10 +532,12 @@ class AppColors extends ThemeExtension <AppColors> {
         titleShadow: titleShadow ?? this.titleShadow,
         windowBarrier: windowBarrier ?? this.windowBarrier,
         windowBottomText: windowBottomText ?? this.windowBottomText,
+        windowBottomTextNotActive: windowBottomTextNotActive ?? this.windowBottomTextNotActive,
         windowMainBack: windowMainBack ?? this.windowMainBack,
         windowMainStata: windowMainStata ?? this.windowMainStata,
         windowMainStataValue: windowMainStataValue ?? this.windowMainStataValue,
         windowMainText: windowMainText ?? this.windowMainText,
+        windowMainTextAuxiliary: windowMainTextAuxiliary ?? this.windowMainTextAuxiliary,
         windowMainTitle: windowMainTitle ?? this.windowMainTitle,
         windowSeparator: windowSeparator ?? this.windowSeparator,
         windowShadow: windowShadow ?? this.windowShadow,
@@ -545,6 +599,8 @@ class AppColors extends ThemeExtension <AppColors> {
         line: Color.lerp (line, other.line, t) ?? line,
         lineText: Color.lerp (lineText, other.lineText, t) ?? lineText,
         link: Color.lerp (link, other.link, t) ?? link,
+        linkLocal: Color.lerp (linkLocal, other.linkLocal, t) ?? linkLocal,
+        linkLocalPressed: Color.lerp (linkLocalPressed, other.linkLocalPressed, t) ?? linkLocalPressed,
         linkPressed: Color.lerp (linkPressed, other.linkPressed, t) ?? linkPressed,
         noiseBack: Color.lerp (noiseBack, other.noiseBack, t) ?? noiseBack,
         noisePrimary: Color.lerp (noisePrimary, other.noisePrimary, t) ?? noisePrimary,
@@ -560,6 +616,11 @@ class AppColors extends ThemeExtension <AppColors> {
         textButton: Color.lerp (textButton, other.textButton, t) ?? textButton,
         textChoiceStatus: Color.lerp (textChoiceStatus, other.textChoiceStatus, t) ?? textChoiceStatus,
         textCountryName: Color.lerp (textCountryName, other.textCountryName, t) ?? textCountryName,
+        textFieldBack: Color.lerp (textFieldBack, other.textFieldBack, t) ?? textFieldBack,
+        textFieldBorder: Color.lerp (textFieldBorder, other.textFieldBorder, t) ?? textFieldBorder,
+        textFieldCursor: Color.lerp (textFieldCursor, other.textFieldCursor, t) ?? textFieldCursor,
+        textFieldHint: Color.lerp (textFieldHint, other.textFieldHint, t) ?? textFieldHint,
+        textFieldText: Color.lerp (textFieldText, other.textFieldText, t) ?? textFieldText,
         textStates: Color.lerp (textStates, other.textStates, t) ?? textStates,
         textStatus: Color.lerp (textStatus, other.textStatus, t) ?? textStatus,
         title: Color.lerp (title, other.title, t) ?? title,
@@ -567,10 +628,12 @@ class AppColors extends ThemeExtension <AppColors> {
         titleShadow: Color.lerp (titleShadow, other.titleShadow, t) ?? titleShadow,
         windowBarrier: Color.lerp (windowBarrier, other.windowBarrier, t) ?? windowBarrier,
         windowBottomText: Color.lerp (windowBottomText, other.windowBottomText, t) ?? windowBottomText,
+        windowBottomTextNotActive: Color.lerp (windowBottomTextNotActive, other.windowBottomTextNotActive, t) ?? windowBottomTextNotActive,
         windowMainBack: Color.lerp (windowMainBack, other.windowMainBack, t) ?? windowMainBack,
         windowMainStata: Color.lerp (windowMainStata, other.windowMainStata, t) ?? windowMainStata,
         windowMainStataValue: Color.lerp (windowMainStataValue, other.windowMainStataValue, t) ?? windowMainStataValue,
         windowMainText: Color.lerp (windowMainText, other.windowMainText, t) ?? windowMainText,
+        windowMainTextAuxiliary: Color.lerp (windowMainTextAuxiliary, other.windowMainTextAuxiliary, t) ?? windowMainTextAuxiliary,
         windowMainTitle: Color.lerp (windowMainTitle, other.windowMainTitle, t) ?? windowMainTitle,
         windowSeparator: Color.lerp (windowSeparator, other.windowSeparator, t) ?? windowSeparator,
         windowShadow: Color.lerp (windowShadow, other.windowShadow, t) ?? windowShadow,

@@ -130,8 +130,29 @@
 	"windowNetBodyParametersBlock_6_Parameter_3_Value": "1500",
 	"windowNetAction": "Ок",
 
-	"windowAccountTitle": "Аккаунт",
-	"windowAccountAction": "Готово",
+	"windowAccountNotEnteredTitle": "Аккаунт",
+	"windowAccountNotEnteredBodyTitle": "Вход / Регистрация",
+	"windowAccountNotEnteredBodyTextFieldLogin": "Логин",
+	"windowAccountNotEnteredBodyTextFieldPassword": "Пароль",
+	"windowAccountNotEnteredBodyHint_1": "Или",
+	"windowAccountNotEnteredBodyHint_2": "Вход через Google",
+	"windowAccountNotEnteredAction": "Далее",
+
+	"windowAccountEnteredTitle": "Аккаунт",
+	"windowAccountEnteredBodyUserName": "@nyan_cat",
+	"windowAccountEnteredBodyUserUsersNum": "{num} пользователей",
+	"@windowAccountEnteredBodyUserUsersNum": {
+		"placeholders": {
+			"num": {
+				"type": "int"
+			}
+		}
+	},
+	"windowAccountEnteredBodyActionsSavedConnections": "Сохраненные подключения",
+	"windowAccountEnteredBodyActionsPublishedConnections": "Опубликованные подключения",
+	"windowAccountEnteredBodyActionsExit": "Выйти",
+	"windowAccountEnteredBodyActionsDeleteAccount": "Удалить аккаунт",
+	"windowAccountEnteredAction": "Готово",
 
 	"windowWalletTitle": "Кошелек",
 	"windowWalletAction": "Готово"

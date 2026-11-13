@@ -13,11 +13,13 @@ import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 class BottomComponent extends HookConsumerWidget {
 
   final String action;
+  final ValueNotifier <bool>? activity;
 
 
-  const BottomComponent (
-    this.action, {
-    super.key
+  const BottomComponent ({
+    super.key,
+    required this.action,
+    this.activity
   });
 
 
@@ -35,27 +37,62 @@ class BottomComponent extends HookConsumerWidget {
     }
 
 
+    final bool ignoring;
+
+    if (activity case final activity?) {
+
+      ignoring = !activity.value;
+
+    }
+
+    else {
+
+      ignoring = false;
+
+    }
+
+
+    final Color color;
+
+    if (activity case final activity?) {
+
+      color = activity.value
+        ? context.colors.windowBottomText
+        : context.colors.windowBottomTextNotActive;
+
+    }
+
+    else {
+
+      color = context.colors.windowBottomText;
+
+    }
+
+
     return (
 
-      Presser (
-        onPress: onPress,
-        isPressed: isPressed,
-        child: PresserAnimator (
+      IgnorePointer (
+        ignoring: ignoring,
+        child: Presser (
+          onPress: onPress,
           isPressed: isPressed,
-          scaleRate: 0.98,
-          child: Container (
-            alignment: Alignment.centerRight,
-            padding: const EdgeInsets.only (
-              top: 12,
-              right: 4 + 32,
-              bottom: 12 + 4
-            ),
-            child: Text (
-              action,
-              style: TextStyle (
-                fontWeight: FontWeight.w400,
-                fontSize: 15.5,
-                color: context.colors.windowBottomText
+          child: PresserAnimator (
+            isPressed: isPressed,
+            scaleRate: 0.98,
+            child: Container (
+              alignment: Alignment.centerRight,
+              padding: const EdgeInsets.only (
+                top: 12,
+                right: 4 + 32,
+                bottom: 12 + 4
+              ),
+              child: Text (
+                action,
+                style: TextStyle (
+                  fontWeight: FontWeight.w400,
+                  fontSize: 15.5,
+                  color: color
+                )
               )
             )
           )

@@ -14,13 +14,14 @@ void main () async {
 
   // Предзагрузка графики и иконок:
 
-  methods.preloadGraphics ();
+  await methods.preloadGraphics ();
 
   await methods.preloadIcons ([
     'assets/images/icons/common/arrow.svg',
     'assets/images/icons/common/flag_finland.svg',
     'assets/images/icons/common/flag_germany.svg',
     'assets/images/icons/common/flag_netherlands.svg',
+    'assets/images/icons/common/go.svg',
     'assets/images/icons/common/info.svg',
     'assets/images/icons/common/language.svg',
     'assets/images/icons/common/location.svg',

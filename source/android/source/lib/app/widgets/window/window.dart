@@ -15,6 +15,7 @@ class Window extends StatelessWidget {
   final String title;
   final Widget body;
   final String action;
+  final ValueNotifier <bool>? actionActivity;
 
 
   const Window ({
@@ -23,7 +24,8 @@ class Window extends StatelessWidget {
     this.isExpanded = false,
     required this.title,
     required this.body,
-    required this.action
+    required this.action,
+    this.actionActivity
   });
 
 
@@ -63,9 +65,11 @@ class Window extends StatelessWidget {
                       BodyComponent (
                         isExpanded: isExpanded,
                         child: body
+                      ),
+                      BottomComponent (
+                        action: action,
+                        activity: actionActivity
                       )
-                      ,
-                      BottomComponent (action)
                     ]
                   )
                 )

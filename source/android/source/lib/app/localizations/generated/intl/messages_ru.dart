@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(num) => "${num} онлайн";
 
+  static String m1(num) => "${num} пользователей";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
@@ -99,8 +101,44 @@ class MessageLookup extends MessageLookupByLibrary {
       " Linette ",
     ),
     "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "windowAccountAction": MessageLookupByLibrary.simpleMessage("Готово"),
-    "windowAccountTitle": MessageLookupByLibrary.simpleMessage("Аккаунт"),
+    "windowAccountEnteredAction": MessageLookupByLibrary.simpleMessage(
+      "Готово",
+    ),
+    "windowAccountEnteredBodyActionsDeleteAccount":
+        MessageLookupByLibrary.simpleMessage("Удалить аккаунт"),
+    "windowAccountEnteredBodyActionsExit": MessageLookupByLibrary.simpleMessage(
+      "Выйти",
+    ),
+    "windowAccountEnteredBodyActionsPublishedConnections":
+        MessageLookupByLibrary.simpleMessage("Опубликованные подключения"),
+    "windowAccountEnteredBodyActionsSavedConnections":
+        MessageLookupByLibrary.simpleMessage("Сохраненные подключения"),
+    "windowAccountEnteredBodyUserName": MessageLookupByLibrary.simpleMessage(
+      "@nyan_cat",
+    ),
+    "windowAccountEnteredBodyUserUsersNum": m1,
+    "windowAccountEnteredTitle": MessageLookupByLibrary.simpleMessage(
+      "Аккаунт",
+    ),
+    "windowAccountNotEnteredAction": MessageLookupByLibrary.simpleMessage(
+      "Далее",
+    ),
+    "windowAccountNotEnteredBodyHint_1": MessageLookupByLibrary.simpleMessage(
+      "Или",
+    ),
+    "windowAccountNotEnteredBodyHint_2": MessageLookupByLibrary.simpleMessage(
+      "Вход через Google",
+    ),
+    "windowAccountNotEnteredBodyTextFieldLogin":
+        MessageLookupByLibrary.simpleMessage("Логин"),
+    "windowAccountNotEnteredBodyTextFieldPassword":
+        MessageLookupByLibrary.simpleMessage("Пароль"),
+    "windowAccountNotEnteredBodyTitle": MessageLookupByLibrary.simpleMessage(
+      "Вход / Регистрация",
+    ),
+    "windowAccountNotEnteredTitle": MessageLookupByLibrary.simpleMessage(
+      "Аккаунт",
+    ),
     "windowArsenalAction": MessageLookupByLibrary.simpleMessage("Готово"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
       "Арсенал приложения",

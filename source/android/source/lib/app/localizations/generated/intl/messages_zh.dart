@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(num) => "${num} 在线";
 
+  static String m1(num) => "${num} 位用户";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
@@ -77,8 +79,38 @@ class MessageLookup extends MessageLookupByLibrary {
       " Linette ",
     ),
     "pageWelcomeBodyTopTitleDot": MessageLookupByLibrary.simpleMessage("•"),
-    "windowAccountAction": MessageLookupByLibrary.simpleMessage("完成"),
-    "windowAccountTitle": MessageLookupByLibrary.simpleMessage("帐户"),
+    "windowAccountEnteredAction": MessageLookupByLibrary.simpleMessage("准备好"),
+    "windowAccountEnteredBodyActionsDeleteAccount":
+        MessageLookupByLibrary.simpleMessage("删除帐户"),
+    "windowAccountEnteredBodyActionsExit": MessageLookupByLibrary.simpleMessage(
+      "出口",
+    ),
+    "windowAccountEnteredBodyActionsPublishedConnections":
+        MessageLookupByLibrary.simpleMessage("已发布的连接"),
+    "windowAccountEnteredBodyActionsSavedConnections":
+        MessageLookupByLibrary.simpleMessage("已保存的连接"),
+    "windowAccountEnteredBodyUserName": MessageLookupByLibrary.simpleMessage(
+      "@nyan_cat",
+    ),
+    "windowAccountEnteredBodyUserUsersNum": m1,
+    "windowAccountEnteredTitle": MessageLookupByLibrary.simpleMessage("帐户"),
+    "windowAccountNotEnteredAction": MessageLookupByLibrary.simpleMessage(
+      "下一个",
+    ),
+    "windowAccountNotEnteredBodyHint_1": MessageLookupByLibrary.simpleMessage(
+      "或者",
+    ),
+    "windowAccountNotEnteredBodyHint_2": MessageLookupByLibrary.simpleMessage(
+      "通过 Google 登录",
+    ),
+    "windowAccountNotEnteredBodyTextFieldLogin":
+        MessageLookupByLibrary.simpleMessage("登录"),
+    "windowAccountNotEnteredBodyTextFieldPassword":
+        MessageLookupByLibrary.simpleMessage("密码"),
+    "windowAccountNotEnteredBodyTitle": MessageLookupByLibrary.simpleMessage(
+      "登录/注册",
+    ),
+    "windowAccountNotEnteredTitle": MessageLookupByLibrary.simpleMessage("帐户"),
     "windowArsenalAction": MessageLookupByLibrary.simpleMessage("完成"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("确定"),

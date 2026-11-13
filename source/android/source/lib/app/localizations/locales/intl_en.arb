@@ -130,8 +130,29 @@
 	"windowNetBodyParametersBlock_6_Parameter_3_Value": "1500",
 	"windowNetAction": "Ok",
 
-	"windowAccountTitle": "Account",
-	"windowAccountAction": "Done",
+	"windowAccountNotEnteredTitle": "Account",
+	"windowAccountNotEnteredBodyTitle": "Login / Register",
+	"windowAccountNotEnteredBodyTextFieldLogin": "Login",
+	"windowAccountNotEnteredBodyTextFieldPassword": "Password",
+	"windowAccountNotEnteredBodyHint_1": "Or",
+	"windowAccountNotEnteredBodyHint_2": "Login via Google",
+	"windowAccountNotEnteredAction": "Next",
+
+	"windowAccountEnteredTitle": "Account",
+	"windowAccountEnteredBodyUserName": "@nyan_cat",
+	"windowAccountEnteredBodyUserUsersNum": "{num} users",
+	"@windowAccountEnteredBodyUserUsersNum": {
+		"placeholders": {
+			"num": {
+				"type": "int"
+			}
+		}
+	},
+	"windowAccountEnteredBodyActionsSavedConnections": "Saved connections",
+	"windowAccountEnteredBodyActionsPublishedConnections": "Published connections",
+	"windowAccountEnteredBodyActionsExit": "Exit",
+	"windowAccountEnteredBodyActionsDeleteAccount": "Delete account",
+	"windowAccountEnteredAction": "Done",
 
 	"windowWalletTitle": "Wallet",
 	"windowWalletAction": "Done"

@@ -13,6 +13,7 @@ class AppIconsPalette {
   static const String flagFinland = 'assets/images/icons/common/flag_finland.svg';
   static const String flagGermany = 'assets/images/icons/common/flag_germany.svg';
   static const String flagNetherlands = 'assets/images/icons/common/flag_netherlands.svg';
+  static const String go = 'assets/images/icons/common/go.svg';
   static const String info = 'assets/images/icons/common/info.svg';
   static const String language = 'assets/images/icons/common/language.svg';
   static const String location = 'assets/images/icons/common/location.svg';
@@ -51,6 +52,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
   final String drawerOptionLeftWallet;
   final String drawerOptionRight;
   final String hintTap;
+  final String linkEnter;
 
 
   const AppIcons ({
@@ -72,7 +74,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     required this.drawerOptionLeftNet,
     required this.drawerOptionLeftWallet,
     required this.drawerOptionRight,
-    required this.hintTap
+    required this.hintTap,
+    required this.linkEnter
   });
 
 
@@ -95,7 +98,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftNet: AppIconsPalette.net,
     drawerOptionLeftWallet: AppIconsPalette.wallet,
     drawerOptionRight: AppIconsPalette.arrow,
-    hintTap: AppIconsPalette.tap
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
   );
 
   static const AppIcons lightGreen = AppIcons (
@@ -117,7 +121,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftNet: AppIconsPalette.net,
     drawerOptionLeftWallet: AppIconsPalette.wallet,
     drawerOptionRight: AppIconsPalette.arrow,
-    hintTap: AppIconsPalette.tap
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
   );
 
 
@@ -140,7 +145,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     String? drawerOptionLeftNet,
     String? drawerOptionLeftWallet,
     String? drawerOptionRight,
-    String? hintTap
+    String? hintTap,
+    String? linkEnter
   }) {
 
     return (
@@ -164,7 +170,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
         drawerOptionLeftNet: drawerOptionLeftNet ?? this.drawerOptionLeftNet,
         drawerOptionLeftWallet: drawerOptionLeftWallet ?? this.drawerOptionLeftWallet,
         drawerOptionRight: drawerOptionRight ?? this.drawerOptionRight,
-        hintTap: hintTap ?? this.hintTap
+        hintTap: hintTap ?? this.hintTap,
+        linkEnter: linkEnter ?? this.linkEnter
       )
 
     );

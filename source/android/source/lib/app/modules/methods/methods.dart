@@ -103,9 +103,9 @@ class AppMethods {
 
   }
 
-  void preloadGraphics () {
+  Future <void> preloadGraphics () async {
 
-    return PreloadGraphicsElement.preloadGraphics ();
+    PreloadGraphicsElement.preloadGraphics ();
 
   }
 

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class PreloadGraphicsElement {
 
-  static void preloadGraphics () {
+  static Future <void> preloadGraphics () async {
 
     WidgetsFlutterBinding.ensureInitialized ();
 
