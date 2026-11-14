@@ -39,9 +39,7 @@ class AppColorsPalette {
   static const Color grey_12 = Color (0xff8b8b8b);
   static const Color grey_13 = Color (0xffcdcdcd);
   static const Color grey_14 = Color (0xfffafafa);
-  static const Color blue_1 = Color (0xff1e3c6d);
-  static const Color blue_2 = Color (0xff70769b);
-  static const Color blue_3 = Color (0xff9da6d9);
+  static const Color blue_1 = Color (0xff9da6d9);
   static const Color green_1 = Color (0xff12361b);
   static const Color green_2 = Color (0xff1b1c1b);
   static const Color green_3 = Color (0xff394335);
@@ -94,9 +92,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color line;
   final Color lineText;
   final Color link;
-  final Color linkLocal;
-  final Color linkLocalPressed;
-  final Color linkPressed;
+  final Color linkInternal;
   final Color noiseBack;
   final Color noisePrimary;
   final Color noiseSecondary;
@@ -175,9 +171,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.line,
     required this.lineText,
     required this.link,
-    required this.linkLocal,
-    required this.linkLocalPressed,
-    required this.linkPressed,
+    required this.linkInternal,
     required this.noiseBack,
     required this.noisePrimary,
     required this.noiseSecondary,
@@ -256,10 +250,8 @@ class AppColors extends ThemeExtension <AppColors> {
     drawerTopBarText: AppColorsPalette.cream,
     line: AppColorsPalette.green_2,
     lineText: AppColorsPalette.cream,
-    link: AppColorsPalette.blue_3,
-    linkLocal: AppColorsPalette.green_6,
-    linkLocalPressed: AppColorsPalette.green_6,
-    linkPressed: AppColorsPalette.blue_2,
+    link: AppColorsPalette.blue_1,
+    linkInternal: AppColorsPalette.green_6,
     noiseBack: AppColorsPalette.black,
     noisePrimary: AppColorsPalette.green_4,
     noiseSecondary: AppColorsPalette.black,
@@ -338,9 +330,7 @@ class AppColors extends ThemeExtension <AppColors> {
     line: AppColorsPalette.grey_13,
     lineText: AppColorsPalette.black,
     link: AppColorsPalette.blue,
-    linkLocal: AppColorsPalette.green_6,
-    linkLocalPressed: AppColorsPalette.green_6,
-    linkPressed: AppColorsPalette.blue_1,
+    linkInternal: AppColorsPalette.green_6,
     noiseBack: AppColorsPalette.green_7,
     noisePrimary: AppColorsPalette.green_1,
     noiseSecondary: AppColorsPalette.green_7,
@@ -420,9 +410,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? line,
     Color? lineText,
     Color? link,
-    Color? linkLocal,
-    Color? linkLocalPressed,
-    Color? linkPressed,
+    Color? linkInternal,
     Color? noiseBack,
     Color? noisePrimary,
     Color? noiseSecondary,
@@ -503,9 +491,7 @@ class AppColors extends ThemeExtension <AppColors> {
         line: line ?? this.line,
         lineText: lineText ?? this.lineText,
         link: link ?? this.link,
-        linkLocal: linkLocal ?? this.linkLocal,
-        linkLocalPressed: linkLocalPressed ?? this.linkLocalPressed,
-        linkPressed: linkPressed ?? this.linkPressed,
+        linkInternal: linkInternal ?? this.linkInternal,
         noiseBack: noiseBack ?? this.noiseBack,
         noisePrimary: noisePrimary ?? this.noisePrimary,
         noiseSecondary: noiseSecondary ?? this.noiseSecondary,
@@ -599,9 +585,7 @@ class AppColors extends ThemeExtension <AppColors> {
         line: Color.lerp (line, other.line, t) ?? line,
         lineText: Color.lerp (lineText, other.lineText, t) ?? lineText,
         link: Color.lerp (link, other.link, t) ?? link,
-        linkLocal: Color.lerp (linkLocal, other.linkLocal, t) ?? linkLocal,
-        linkLocalPressed: Color.lerp (linkLocalPressed, other.linkLocalPressed, t) ?? linkLocalPressed,
-        linkPressed: Color.lerp (linkPressed, other.linkPressed, t) ?? linkPressed,
+        linkInternal: Color.lerp (linkInternal, other.linkInternal, t) ?? linkInternal,
         noiseBack: Color.lerp (noiseBack, other.noiseBack, t) ?? noiseBack,
         noisePrimary: Color.lerp (noisePrimary, other.noisePrimary, t) ?? noisePrimary,
         noiseSecondary: Color.lerp (noiseSecondary, other.noiseSecondary, t) ?? noiseSecondary,

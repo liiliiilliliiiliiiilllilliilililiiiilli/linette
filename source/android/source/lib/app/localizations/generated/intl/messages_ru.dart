@@ -127,7 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Или",
     ),
     "windowAccountNotEnteredBodyHint_2": MessageLookupByLibrary.simpleMessage(
-      "Вход через Google",
+      "Войти через Google",
     ),
     "windowAccountNotEnteredBodyTextFieldLogin":
         MessageLookupByLibrary.simpleMessage("Логин"),

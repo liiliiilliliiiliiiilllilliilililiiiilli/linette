@@ -135,7 +135,7 @@
 	"windowAccountNotEnteredBodyTextFieldLogin": "登录",
 	"windowAccountNotEnteredBodyTextFieldPassword": "密码",
 	"windowAccountNotEnteredBodyHint_1": "或者",
-	"windowAccountNotEnteredBodyHint_2": "通过 Google 登录",
+	"windowAccountNotEnteredBodyHint_2": "使用 Google 登录",
 	"windowAccountNotEnteredAction": "下一个",
 
 	"windowAccountEnteredTitle": "帐户",

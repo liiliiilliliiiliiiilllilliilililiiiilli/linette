@@ -25,13 +25,27 @@ class PresserAnimator extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    final double opacity = isPressed.value
-      ? opacityRate
-      : 1;
+    final double opacity;
+    final double scale;
 
-    final double scale = isPressed.value
-      ? scaleRate
-      : 1;
+
+    switch (isPressed.value) {
+
+      case true:
+
+        opacity = opacityRate;
+        scale = scaleRate;
+
+        break;
+
+      case false:
+
+        opacity = 1;
+        scale = 1;
+
+        break;
+
+    }
 
 
     return (

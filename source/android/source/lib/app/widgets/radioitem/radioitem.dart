@@ -31,13 +31,27 @@ class RadioItem extends HookWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    final Color colorInsides = isChosen
-      ? context.colors.radioButtonInsidesChosen
-      : context.colors.radioButtonInsidesNotChosen;
+    final Color colorInsides;
+    final Color colorOutsides;
 
-    final Color colorOutsides = isChosen
-      ? context.colors.radioButtonOutsidesChosen
-      : context.colors.radioButtonOutsidesNotChosen;
+
+    switch (isChosen) {
+
+      case true:
+
+        colorInsides = context.colors.radioButtonInsidesChosen;
+        colorOutsides = context.colors.radioButtonOutsidesChosen;
+
+        break;
+
+      case false:
+
+        colorInsides = context.colors.radioButtonInsidesNotChosen;
+        colorOutsides = context.colors.radioButtonOutsidesNotChosen;
+
+        break;
+
+    }
 
 
     return (

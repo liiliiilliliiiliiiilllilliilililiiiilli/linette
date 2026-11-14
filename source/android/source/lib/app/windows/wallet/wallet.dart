@@ -1,16 +1,16 @@
 // Wallet window
 
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/widgets/textlink/textlink.dart';
+import 'package:linette/app/widgets/textlink/models/type/type.dart';
 import 'package:linette/app/widgets/window/window.dart';
 
 
 
-class WalletWindow extends HookWidget {
+class WalletWindow extends StatelessWidget {
 
   const WalletWindow ({
     super.key
@@ -19,53 +19,11 @@ class WalletWindow extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final ValueNotifier <bool> isPressed = useState (false);
-
-
-    final TapGestureRecognizer gestureRecognizer = useMemoized (() {
-
-      return TapGestureRecognizer ();
-
-    }, []);
-
-
-    void onTapDown (TapDownDetails details) {
-
-      isPressed.value = true;
-
-    }
-
-    Future <void> onTapUp (TapUpDetails details) async {
-
-      isPressed.value = false;
+    Future <void> onPress () async {
 
       await context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
 
     }
-
-    void onTapCancel () {
-
-      isPressed.value = false;
-
-    }
-
-
-    gestureRecognizer
-      ..onTapDown = onTapDown
-      ..onTapUp = onTapUp
-      ..onTapCancel = onTapCancel;
-
-
-    useEffect (() {
-
-      return gestureRecognizer.dispose;
-
-    }, [gestureRecognizer]);
-
-
-    final Color linkColor = isPressed.value
-      ? context.colors.linkPressed
-      : context.colors.link;
 
 
     return (
@@ -92,12 +50,13 @@ class WalletWindow extends HookWidget {
                       color: context.colors.windowMainText
                     )
                   ),
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_2,
-                    style: TextStyle (
-                      color: linkColor,
-                    ),
-                    recognizer: gestureRecognizer
+                  WidgetSpan (
+                    alignment: PlaceholderAlignment.middle,
+                    child: TextLink (
+                      context.texts.windowFeedbackBody_2,
+                      type: TextLinkType.external,
+                      onPress: onPress
+                    )
                   ),
                   TextSpan (
                     text: context.texts.windowFeedbackBody_3,

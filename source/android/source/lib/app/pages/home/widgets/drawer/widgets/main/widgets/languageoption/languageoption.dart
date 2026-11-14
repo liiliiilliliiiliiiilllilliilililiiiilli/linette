@@ -22,11 +22,36 @@ class LanguageOption extends ConsumerWidget {
     final String localeState = ref.watch (localeProvider);
 
 
-    final String textCurrentLanguage = (localeState == 'ru')
-      ? context.texts.windowLanguageBodyRussian
-      : (localeState == 'en')
-        ? context.texts.windowLanguageBodyEnglish
-        : context.texts.windowLanguageBodyChinese;
+    final String textCurrentLanguage;
+
+
+    switch (localeState) {
+
+      case 'ru':
+
+        textCurrentLanguage = context.texts.windowLanguageBodyRussian;
+
+        break;
+
+      case 'en':
+
+        textCurrentLanguage = context.texts.windowLanguageBodyEnglish;
+
+        break;
+
+      case 'zh':
+
+        textCurrentLanguage = context.texts.windowLanguageBodyChinese;
+
+        break;
+
+      default:
+
+        textCurrentLanguage = context.texts.windowLanguageBodyEnglish;
+
+        break;
+
+    }
 
 
     return (

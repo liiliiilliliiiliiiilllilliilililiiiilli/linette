@@ -29,17 +29,30 @@ class ConnectionButton extends HookWidget {
     }
 
 
-    final Offset offset = isPressed.value
-      ? const Offset (0, 5 * 0.825)
-      : const Offset (0, 5);
+    final Offset offset;
+    final double blurRadius;
+    final double spreadRadius;
 
-    final double blurRadius = isPressed.value
-      ? 8 * 0.825
-      : 8;
 
-    final double spreadRadius = isPressed.value
-      ? 2.5 * 0.825
-      : 2.5;
+    switch (isPressed.value) {
+
+      case true:
+
+        offset = const Offset (0, 5 * 0.825);
+        blurRadius = 8 * 0.825;
+        spreadRadius = 2.5 * 0.825;
+
+        break;
+
+      case false:
+
+        offset = const Offset (0, 5);
+        blurRadius = 8;
+        spreadRadius = 2.5;
+
+        break;
+
+    }
 
 
     return (

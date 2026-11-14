@@ -101,7 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "或者",
     ),
     "windowAccountNotEnteredBodyHint_2": MessageLookupByLibrary.simpleMessage(
-      "通过 Google 登录",
+      "使用 Google 登录",
     ),
     "windowAccountNotEnteredBodyTextFieldLogin":
         MessageLookupByLibrary.simpleMessage("登录"),

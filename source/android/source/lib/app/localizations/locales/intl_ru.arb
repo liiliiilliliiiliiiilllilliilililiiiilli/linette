@@ -135,7 +135,7 @@
 	"windowAccountNotEnteredBodyTextFieldLogin": "Логин",
 	"windowAccountNotEnteredBodyTextFieldPassword": "Пароль",
 	"windowAccountNotEnteredBodyHint_1": "Или",
-	"windowAccountNotEnteredBodyHint_2": "Вход через Google",
+	"windowAccountNotEnteredBodyHint_2": "Войти через Google",
 	"windowAccountNotEnteredAction": "Далее",
 
 	"windowAccountEnteredTitle": "Аккаунт",
