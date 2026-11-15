@@ -5,27 +5,18 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 
 
-final welcomeProvider = NotifierProvider <WelcomeNotifier, bool?> (WelcomeNotifier.new);
+final AsyncNotifierProvider <WelcomeNotifier, bool> welcomeProvider = AsyncNotifierProvider (WelcomeNotifier.new);
 
 
 
-class WelcomeNotifier extends Notifier <bool?> {
+class WelcomeNotifier extends AsyncNotifier <bool> {
 
-  @override bool? build () {
+  @override Future <bool> build () async {
 
-    initState ();
-
-
-    return null;
-
-  }
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance ();
 
 
-  static Future <bool> getWelcomeStatus () async {
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance ();
-
-    final bool status = preferences.getBool ('welcomed') ?? false;
+    final bool status = sharedPreferences.getBool ('welcomed') ?? false;
 
 
     return status;
@@ -33,29 +24,14 @@ class WelcomeNotifier extends Notifier <bool?> {
   }
 
 
-  static Future <void> saveWelcomeStatus (bool status) async {
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance ();
-
-    await preferences.setBool ('welcomed', status);
-
-  }
-
-
-  Future <void> initState () async {
-
-    final bool status = await getWelcomeStatus ();
-
-    state = status;
-
-  }
-
-
   Future <void> completeWelcome () async {
 
-    state = true;
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance ();
 
-    await saveWelcomeStatus (true);
+
+    await sharedPreferences.setBool ('welcomed', true);
+
+    state = const AsyncValue.data (true);
 
   }
 

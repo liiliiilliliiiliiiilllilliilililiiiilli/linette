@@ -5,28 +5,21 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 
 
-final actionsFreezeProvider = NotifierProvider <ActionsFreezeNotifier, bool> (ActionsFreezeNotifier.new);
+final AsyncNotifierProvider <ActionsFreezeNotifier, bool> actionsFreezeProvider = AsyncNotifierProvider (ActionsFreezeNotifier.new);
 
 
 
-class ActionsFreezeNotifier extends Notifier <bool> {
+class ActionsFreezeNotifier extends AsyncNotifier <bool> {
 
   Timer? timer;
 
 
-  @override bool build () {
+  @override Future <bool> build () async {
 
-    initState ();
+    state = const AsyncValue.data (false);
 
 
     return false;
-
-  }
-
-
-  Future <void> initState () async {
-
-    state = false;
 
   }
 
@@ -35,11 +28,12 @@ class ActionsFreezeNotifier extends Notifier <bool> {
 
     timer?.cancel ();  // Сбрасывание предыдущего таймера, если он присутствовал
 
-    state = true;
+
+    state = const AsyncValue.data (true);
 
     timer = Timer (Duration (milliseconds: duration), () {
 
-      state = false;
+      state = const AsyncValue.data (false);
 
     });
 

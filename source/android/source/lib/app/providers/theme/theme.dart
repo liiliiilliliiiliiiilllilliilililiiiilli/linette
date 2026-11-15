@@ -15,68 +15,22 @@ enum AppThemeOption {
 
 
 
-const AppThemeOption defaultTheme = AppThemeOption.darkGreen;
+const AppThemeOption themeDefault = AppThemeOption.darkGreen;
 
 
 
-final themeProvider = NotifierProvider <ThemeNotifier, AppThemeOption> (ThemeNotifier.new);
+final AsyncNotifierProvider <ThemeNotifier, AppThemeOption> themeProvider = AsyncNotifierProvider (ThemeNotifier.new);
 
 
 
-class ThemeNotifier extends Notifier <AppThemeOption> {
+class ThemeNotifier extends AsyncNotifier <AppThemeOption> {
 
-  @override AppThemeOption build () {
+  @override Future <AppThemeOption> build () async {
 
-    initState ();
-
-
-    return defaultTheme;
-
-  }
+    final AppThemeOption theme = await getSavedTheme () ?? getSystemTheme ();
 
 
-  static Future <AppThemeOption?> getSavedTheme () async {
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance ();
-
-    final String? savedTheme = preferences.getString ('app_theme');
-
-
-    switch (savedTheme) {
-
-      case 'darkGreen':
-
-        return AppThemeOption.darkGreen;
-
-      case 'lightGreen':
-
-        return AppThemeOption.lightGreen;
-
-      default:
-
-        return null;
-
-    }
-
-  }
-
-
-  static Future <void> saveTheme (AppThemeOption theme) async {
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance ();
-
-
-    switch (theme) {
-
-      case AppThemeOption.darkGreen:
-
-        await preferences.setString ('app_theme', 'darkGreen');
-
-      case AppThemeOption.lightGreen:
-
-        await preferences.setString ('app_theme', 'lightGreen');
-
-    }
+    return theme;
 
   }
 
@@ -93,35 +47,38 @@ class ThemeNotifier extends Notifier <AppThemeOption> {
   }
 
 
-  Future <void> initState () async {
+  static Future <AppThemeOption?> getSavedTheme () async {
 
-    final AppThemeOption? savedTheme = await getSavedTheme ();
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance ();
 
 
-    if (savedTheme != null) {
+    final String? savedTheme = sharedPreferences.getString ('theme');
 
-      state = savedTheme;
 
-    }
+    for (final AppThemeOption option in AppThemeOption.values) {
 
-    else {
+      if (savedTheme == option.name) {
 
-      final AppThemeOption systemTheme = getSystemTheme ();
+        return option;
 
-      state = systemTheme;
-
-      await saveTheme (systemTheme);
+      }
 
     }
+
+
+    return null;
 
   }
 
 
   Future <void> changeState (AppThemeOption theme) async {
 
-    state = theme;
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance ();
 
-    await saveTheme (theme);
+
+    await sharedPreferences.setString ('theme', theme.name);
+
+    state = AsyncValue.data (theme);
 
   }
 

@@ -22,7 +22,12 @@ class ButtonGo extends ConsumerWidget {
 
     Future <void> onPress () async {
 
-      await context.methods.transitToPage (context, ref, const HomePage ());
+      await context.methods.transitToPage (
+        context,
+        ref,
+        const HomePage (),
+        shouldCompleteWelcome: true
+      );
 
     }
 

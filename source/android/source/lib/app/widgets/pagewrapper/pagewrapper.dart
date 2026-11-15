@@ -1,4 +1,4 @@
-// Freezer global widget
+// Page wrapper global widget
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -6,12 +6,12 @@ import 'package:linette/app/providers/actionsfreeze/actionsfreeze.dart';
 
 
 
-class Freezer extends ConsumerWidget {
+class PageWrapper extends ConsumerWidget {
 
   final Widget child;
 
 
-  const Freezer ({
+  const PageWrapper ({
     super.key,
     required this.child
   });
@@ -19,14 +19,16 @@ class Freezer extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final bool actionsFreezeState = ref.watch (actionsFreezeProvider);
+    final bool? actionsFreezeState = ref.watch(actionsFreezeProvider).valueOrNull;
 
 
     return (
 
       AbsorbPointer (
-        absorbing: actionsFreezeState,
-        child: child
+        absorbing: actionsFreezeState ?? false,
+        child: ClipRect (
+          child: child
+        )
       )
 
     );

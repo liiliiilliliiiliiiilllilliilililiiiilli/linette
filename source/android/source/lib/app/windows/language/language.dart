@@ -19,7 +19,7 @@ class LanguageWindow extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final String localeState = ref.watch (localeProvider);
+    final String? localeState = ref.watch(localeProvider).valueOrNull;
 
 
     final List <Map <String, String>> languages = [

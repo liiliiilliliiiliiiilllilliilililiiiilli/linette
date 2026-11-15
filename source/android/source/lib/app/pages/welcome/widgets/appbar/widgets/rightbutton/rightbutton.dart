@@ -20,7 +20,7 @@ class RightButton extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final AppThemeOption themeState = ref.watch (themeProvider);
+    final AppThemeOption? themeState = ref.watch(themeProvider).valueOrNull;
 
 
     void onPress () {

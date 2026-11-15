@@ -10,14 +10,23 @@ import 'package:linette/app/modules/colors/colors.dart';
 
 class TransitToPageElement {
 
-  static Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page) async {
-
-    final WelcomeNotifier welcomeNotifier = ref.read (welcomeProvider.notifier);
+  static Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page, {bool shouldCompleteWelcome = false}) async {
 
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.read (actionsFreezeProvider.notifier);
 
 
-    await welcomeNotifier.completeWelcome ();
+    if (shouldCompleteWelcome) {
+
+      final WelcomeNotifier welcomeNotifier = ref.read (welcomeProvider.notifier);
+
+
+      Future.delayed (const Duration (milliseconds: 750), () async {
+
+        await welcomeNotifier.completeWelcome ();
+
+      });
+
+    }
 
 
     actionsFreezeNotifier.freeze ();

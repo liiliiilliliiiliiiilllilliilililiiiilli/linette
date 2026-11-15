@@ -6,8 +6,10 @@ import 'package:linette/app/providers/theme/theme.dart';
 import 'elements/changelanguage/changelanguage.dart';
 import 'elements/changetheme/changetheme.dart';
 import 'elements/closedrawer/closedrawer.dart';
+import 'elements/closesplashscreen/closesplashscreen.dart';
 import 'elements/freeze/freeze.dart';
 import 'elements/getscreenwidth/getscreenwidth.dart';
+import 'elements/holdsplashscreen/holdsplashscreen.dart';
 import 'elements/iscurrentpageactive/iscurrentpageactive.dart';
 import 'elements/isdraweropened/isdraweropened.dart';
 import 'elements/navigateback/navigateback.dart';
@@ -28,31 +30,43 @@ class AppMethods {
 
   void changeLanguage (WidgetRef ref, String code) {
 
-    return ChangeLanguageElement.changeLanguage (ref, code);
+    ChangeLanguageElement.changeLanguage (ref, code);
 
   }
 
   void changeTheme (WidgetRef ref, AppThemeOption theme) {
 
-    return ChangeThemeElement.changeTheme (ref, theme);
+    ChangeThemeElement.changeTheme (ref, theme);
 
   }
 
   void closeDrawer (BuildContext context) {
 
-    return CloseDrawerElement.closeDrawer (context);
+    CloseDrawerElement.closeDrawer (context);
+
+  }
+
+  Future <void> closeSplashScreen () async {
+
+    await CloseSplashScreenElement.closeSplashScreen ();
 
   }
 
   void freeze (WidgetRef ref) {
 
-    return FreezeElement.freeze (ref);
+    FreezeElement.freeze (ref);
 
   }
 
   double getScreenWidth (BuildContext context) {
 
     return GetScreenWidthElement.getScreenWidth (context);
+
+  }
+
+  Future <void> holdSplashScreen () async {
+
+    await HoldSplashScreenElement.holdSplashScreen ();
 
   }
 
@@ -70,31 +84,31 @@ class AppMethods {
 
   void navigateBack (BuildContext context) {
 
-    return NavigateBackElement.navigateBack (context);
+    NavigateBackElement.navigateBack (context);
 
   }
 
   void navigateTo (BuildContext context, String destination) {
 
-    return NavigateToElement.navigateTo (context, destination);
+    NavigateToElement.navigateTo (context, destination);
 
   }
 
   void openDrawer (BuildContext context) {
 
-    return OpenDrawerElement.openDrawer (context);
+    OpenDrawerElement.openDrawer (context);
 
   }
 
   Future <void> openLink (String link) async {
 
-    return await OpenLinkElement.openLink (link);
+    await OpenLinkElement.openLink (link);
 
   }
 
   Future <void> openWindow (BuildContext context, WidgetRef ref, {required Widget window, void Function ()? callback}) async {
 
-    return await OpenWindowElement.openWindow (
+    await OpenWindowElement.openWindow (
       context,
       ref,
       window: window,
@@ -105,19 +119,24 @@ class AppMethods {
 
   Future <void> preloadGraphics () async {
 
-    PreloadGraphicsElement.preloadGraphics ();
+    await PreloadGraphicsElement.preloadGraphics ();
 
   }
 
   Future <void> preloadIcons (List <String> icons) async {
 
-    return await PreloadIconsElement.preloadIcons (icons);
+    await PreloadIconsElement.preloadIcons (icons);
 
   }
 
-  Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page) async {
+  Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page, {bool shouldCompleteWelcome = false}) async {
 
-    return await TransitToPageElement.transitToPage (context, ref, page);
+    await TransitToPageElement.transitToPage (
+      context,
+      ref,
+      page,
+      shouldCompleteWelcome: shouldCompleteWelcome
+    );
 
   }
 

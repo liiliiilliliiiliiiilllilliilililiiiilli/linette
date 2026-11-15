@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
-import 'package:linette/app/widgets/freezer/freezer.dart';
+import 'package:linette/app/widgets/pagewrapper/pagewrapper.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 import 'widgets/drawer/drawer.dart';
@@ -32,16 +32,14 @@ class HomePage extends ConsumerWidget {
 
     return (
 
-      Freezer (
-        child: ClipRect (
-          child: Scaffold (
-            appBar: const AppBarComponent (),
-            body: const BodyComponent (),
-            drawer: const DrawerComponent (),
-            onDrawerChanged: onDrawerChanged,
-            drawerEnableOpenDragGesture: false,
-            backgroundColor: context.colors.backPrime
-          )
+      PageWrapper (
+        child: Scaffold (
+          appBar: const AppBarComponent (),
+          body: const BodyComponent (),
+          drawer: const DrawerComponent (),
+          onDrawerChanged: onDrawerChanged,
+          drawerEnableOpenDragGesture: false,
+          backgroundColor: context.colors.backPrime
         )
       )
 

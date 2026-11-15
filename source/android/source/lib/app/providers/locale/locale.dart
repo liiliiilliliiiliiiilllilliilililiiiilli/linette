@@ -7,27 +7,32 @@ import 'package:linette/app/localizations/generated/l10n.dart';
 
 
 
-const String defaultLocale = 'en';
+const String localeDefault = 'en';
 
 
 
-final localeProvider = NotifierProvider <LocaleNotifier, String> (LocaleNotifier.new);
+final AsyncNotifierProvider <LocaleNotifier, String> localeProvider = AsyncNotifierProvider (LocaleNotifier.new);
 
 
 
-class LocaleNotifier extends Notifier <String> {
+class LocaleNotifier extends AsyncNotifier <String> {
 
-  @override String build () {
+  @override Future <String> build () async {
 
-    initState ();
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance ();
 
 
-    return defaultLocale;
+    final String locale = sharedPreferences.getString ('locale') ?? getSystemLocale () ?? localeDefault;
+
+    await Texts.load (Locale (locale));
+
+
+    return locale;
 
   }
 
 
-  static String getSystemLocale () {
+  static String? getSystemLocale () {
 
     final Locale? systemLocale = WidgetsBinding.instance.platformDispatcher.locales.firstOrNull;
 
@@ -45,48 +50,21 @@ class LocaleNotifier extends Notifier <String> {
     }
 
 
-    return 'en';
-
-  }
-
-
-  Future <void> initState () async {
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance ();
-
-    final String? appLocale = preferences.getString ('app_locale');
-
-
-    if (appLocale == null) {
-
-      final String systemLocale = getSystemLocale ();
-
-      await Texts.load (Locale (systemLocale));
-
-      state = systemLocale;
-
-      await preferences.setString ('app_locale', systemLocale);
-
-    } else {
-
-      await Texts.load (Locale (appLocale));
-
-      state = appLocale;
-
-    }
+    return null;
 
   }
 
 
   Future <void> changeState (String locale) async {
 
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance ();
+
+
+    await sharedPreferences.setString ('locale', locale);
+
     await Texts.load (Locale (locale));
 
-    state = locale;
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance ();
-
-    await preferences.setString ('app_locale', locale);
+    state = AsyncValue.data (locale);
 
   }
 

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/widgets/freezer/freezer.dart';
+import 'package:linette/app/widgets/pagewrapper/pagewrapper.dart';
 import 'widgets/appbar/appbar.dart';
 import 'widgets/body/body.dart';
 
@@ -22,13 +22,11 @@ class ConnectionsPage extends StatelessWidget {
 
     return (
 
-      Freezer (
-        child: ClipRect (
-          child: Scaffold (
-            appBar: const AppBarComponent (),
-            body: const BodyComponent (),
-            backgroundColor: context.colors.backPrime
-          )
+      PageWrapper (
+        child: Scaffold (
+          appBar: const AppBarComponent (),
+          body: const BodyComponent (),
+          backgroundColor: context.colors.backPrime
         )
       )
 

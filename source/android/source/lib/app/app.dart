@@ -9,6 +9,7 @@ import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/localizations/generated/l10n.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/pages/welcome/welcome.dart';
 import 'package:linette/app/pages/home/home.dart';
@@ -26,9 +27,19 @@ class App extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final String localeState = ref.watch (localeProvider);
-    final AppThemeOption themeState = ref.watch (themeProvider);
-    final bool? welcomeState = ref.read (welcomeProvider);
+    final String? localeState = ref.watch(localeProvider).valueOrNull;
+    final AppThemeOption? themeState = ref.watch(themeProvider).valueOrNull;
+    final bool? welcomeState = ref.watch(welcomeProvider).valueOrNull;
+
+
+    // Отображение компонента-заглушки, пока все глобальные состояния не инициализируются:
+
+    if (localeState == null || themeState == null || welcomeState == null) {
+
+      return const SizedBox.shrink ();
+
+    }
+
 
     final AppColors appColors;
     final AppIcons appIcons;
@@ -69,14 +80,6 @@ class App extends ConsumerWidget {
 
     switch (welcomeState) {  // Начальная страница от состояния приветствия
 
-      case null:
-
-        appStartPage = Scaffold (
-          backgroundColor: appColors.backPrime
-        );
-
-        break;
-
       case false:
 
         appStartPage = const WelcomePage ();
@@ -105,6 +108,11 @@ class App extends ConsumerWidget {
       );
 
     }
+
+
+    // Закрытие сплэш-экрана после прогрузки всех ресурсов приложения:
+
+    context.methods.closeSplashScreen ();
 
 
     return (
