@@ -10,20 +10,30 @@ class AppIconsPalette {
 
 
   static const String arrow = 'assets/images/icons/common/arrow.svg';
+  static const String bat = 'assets/images/icons/common/bat.svg';
+  static const String candy = 'assets/images/icons/common/candy.svg';
   static const String flagFinland = 'assets/images/icons/common/flag_finland.svg';
   static const String flagGermany = 'assets/images/icons/common/flag_germany.svg';
   static const String flagNetherlands = 'assets/images/icons/common/flag_netherlands.svg';
+  static const String ghost = 'assets/images/icons/common/ghost.svg';
   static const String go = 'assets/images/icons/common/go.svg';
+  static const String hat = 'assets/images/icons/common/hat.svg';
   static const String info = 'assets/images/icons/common/info.svg';
   static const String language = 'assets/images/icons/common/language.svg';
+  static const String letter = 'assets/images/icons/common/letter.svg';
   static const String location = 'assets/images/icons/common/location.svg';
   static const String magicwand = 'assets/images/icons/common/magicwand.svg';
   static const String menu = 'assets/images/icons/common/menu.svg';
   static const String moon = 'assets/images/icons/common/moon.svg';
   static const String net = 'assets/images/icons/common/net.svg';
   static const String olive = 'assets/images/icons/common/olive.svg';
+  static const String pumpkin = 'assets/images/icons/common/pumpkin.svg';
+  static const String snowflake = 'assets/images/icons/common/snowflake.svg';
+  static const String sock = 'assets/images/icons/common/sock.svg';
+  static const String stars = 'assets/images/icons/common/stars.svg';
   static const String sun = 'assets/images/icons/common/sun.svg';
   static const String tap = 'assets/images/icons/common/tap.svg';
+  static const String treetoy = 'assets/images/icons/common/treetoy.svg';
   static const String user = 'assets/images/icons/common/user.svg';
   static const String wallet = 'assets/images/icons/common/wallet.svg';
 
@@ -79,7 +89,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
   });
 
 
-  static const AppIcons darkGreen = AppIcons (
+  static const AppIcons darkGreenRegular = AppIcons (
     buttonAppBarBack: AppIconsPalette.arrow,
     buttonAppBarMenu: AppIconsPalette.menu,
     buttonAppBarTheme: AppIconsPalette.moon,
@@ -102,7 +112,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.go
   );
 
-  static const AppIcons lightGreen = AppIcons (
+  static const AppIcons lightGreenRegular = AppIcons (
     buttonAppBarBack: AppIconsPalette.arrow,
     buttonAppBarMenu: AppIconsPalette.menu,
     buttonAppBarTheme: AppIconsPalette.sun,
@@ -120,6 +130,98 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftLanguage: AppIconsPalette.language,
     drawerOptionLeftNet: AppIconsPalette.net,
     drawerOptionLeftWallet: AppIconsPalette.wallet,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons darkGreenNewYear = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.moon,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.hat,
+    drawerOptionLeftArsenal: AppIconsPalette.treetoy,
+    drawerOptionLeftFeedback: AppIconsPalette.letter,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.snowflake,
+    drawerOptionLeftWallet: AppIconsPalette.sock,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons lightGreenNewYear = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.sun,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.hat,
+    drawerOptionLeftArsenal: AppIconsPalette.treetoy,
+    drawerOptionLeftFeedback: AppIconsPalette.letter,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.snowflake,
+    drawerOptionLeftWallet: AppIconsPalette.sock,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons darkGreenHalloween = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.moon,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.bat,
+    drawerOptionLeftArsenal: AppIconsPalette.stars,
+    drawerOptionLeftFeedback: AppIconsPalette.ghost,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.pumpkin,
+    drawerOptionLeftWallet: AppIconsPalette.candy,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons lightGreenHalloween = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.sun,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.bat,
+    drawerOptionLeftArsenal: AppIconsPalette.stars,
+    drawerOptionLeftFeedback: AppIconsPalette.ghost,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.pumpkin,
+    drawerOptionLeftWallet: AppIconsPalette.candy,
     drawerOptionRight: AppIconsPalette.arrow,
     hintTap: AppIconsPalette.tap,
     linkEnter: AppIconsPalette.go

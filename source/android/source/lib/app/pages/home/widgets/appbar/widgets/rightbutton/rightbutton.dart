@@ -25,9 +25,51 @@ class RightButton extends ConsumerWidget {
 
     void onPress () {
 
-      (themeState == AppThemeOption.darkGreen)
-        ? context.methods.changeTheme (ref, AppThemeOption.lightGreen)
-        : context.methods.changeTheme (ref, AppThemeOption.darkGreen);
+      switch (themeState) {
+
+        case AppThemeOption.darkGreenRegular:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+        case AppThemeOption.lightGreenRegular:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
+
+          break;
+
+        case AppThemeOption.darkGreenNewYear:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+        case AppThemeOption.lightGreenNewYear:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
+
+          break;
+
+        case AppThemeOption.darkGreenHalloween:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+        case AppThemeOption.lightGreenHalloween:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
+
+          break;
+
+        default:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+      }
 
     }
 

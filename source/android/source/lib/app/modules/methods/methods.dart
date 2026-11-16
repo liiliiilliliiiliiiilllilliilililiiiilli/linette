@@ -34,7 +34,7 @@ class AppMethods {
 
   }
 
-  void changeTheme (WidgetRef ref, AppThemeOption theme) {
+  void changeTheme (WidgetRef ref, AppThemeBaseOption theme) {
 
     ChangeThemeElement.changeTheme (ref, theme);
 

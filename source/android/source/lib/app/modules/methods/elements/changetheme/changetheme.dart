@@ -7,7 +7,7 @@ import 'package:linette/app/providers/theme/theme.dart';
 
 class ChangeThemeElement {
 
-  static void changeTheme (WidgetRef ref, AppThemeOption theme) {
+  static void changeTheme (WidgetRef ref, AppThemeBaseOption theme) {
 
     final ThemeNotifier themeNotifier = ref.read (themeProvider.notifier);
 

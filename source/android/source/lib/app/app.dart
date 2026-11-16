@@ -32,19 +32,13 @@ class App extends ConsumerWidget {
     final bool? welcomeState = ref.watch(welcomeProvider).valueOrNull;
 
 
-    // Отображение компонента-заглушки, пока все глобальные состояния не инициализируются:
+    // Отсутствие продолжения, пока все глобальные состояния не инициализируются:
 
     if (localeState == null || themeState == null || welcomeState == null) {
 
       return const SizedBox.shrink ();
 
     }
-
-
-    final AppColors appColors;
-    final AppIcons appIcons;
-    final Brightness appBrightness;
-    final Widget appStartPage;
 
 
     // Установка страниц:
@@ -58,25 +52,64 @@ class App extends ConsumerWidget {
 
     // Определение глобальных обьектов в зависимости от глобальных состояний:
 
+    final AppColors appColors;
+    final AppIcons appIcons;
+    final Brightness appBrightness;
+    final Widget appStartPage;
+
+
     switch (themeState) {  // Цвета, иконки, цветовой системный акцент от состояния темы
 
-      case AppThemeOption.darkGreen:
+      case AppThemeOption.darkGreenRegular:
 
         appColors = AppColors.darkGreen;
-        appIcons = AppIcons.darkGreen;
+        appIcons = AppIcons.darkGreenRegular;
         appBrightness = Brightness.dark;
 
         break;
 
-      case AppThemeOption.lightGreen:
+      case AppThemeOption.lightGreenRegular:
 
         appColors = AppColors.lightGreen;
-        appIcons = AppIcons.lightGreen;
+        appIcons = AppIcons.lightGreenRegular;
+        appBrightness = Brightness.light;
+
+        break;
+
+      case AppThemeOption.darkGreenNewYear:
+
+        appColors = AppColors.darkGreen;
+        appIcons = AppIcons.darkGreenNewYear;
+        appBrightness = Brightness.dark;
+
+        break;
+
+      case AppThemeOption.lightGreenNewYear:
+
+        appColors = AppColors.lightGreen;
+        appIcons = AppIcons.lightGreenNewYear;
+        appBrightness = Brightness.light;
+
+        break;
+
+      case AppThemeOption.darkGreenHalloween:
+
+        appColors = AppColors.darkGreen;
+        appIcons = AppIcons.darkGreenHalloween;
+        appBrightness = Brightness.dark;
+
+        break;
+
+      case AppThemeOption.lightGreenHalloween:
+
+        appColors = AppColors.lightGreen;
+        appIcons = AppIcons.lightGreenHalloween;
         appBrightness = Brightness.light;
 
         break;
 
     }
+
 
     switch (welcomeState) {  // Начальная страница от состояния приветствия
 
