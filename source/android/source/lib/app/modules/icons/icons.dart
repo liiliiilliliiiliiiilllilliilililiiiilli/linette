@@ -11,14 +11,24 @@ class AppIconsPalette {
 
   static const String arrow = 'assets/images/icons/common/arrow.svg';
   static const String bat = 'assets/images/icons/common/bat.svg';
+  static const String bunny = 'assets/images/icons/common/bunny.svg';
+  static const String butterfly = 'assets/images/icons/common/butterfly.svg';
   static const String candy = 'assets/images/icons/common/candy.svg';
+  static const String cottoncandy = 'assets/images/icons/common/cottoncandy.svg';
+  static const String cupcake = 'assets/images/icons/common/cupcake.svg';
+  static const String egg = 'assets/images/icons/common/egg.svg';
   static const String flagFinland = 'assets/images/icons/common/flag_finland.svg';
   static const String flagGermany = 'assets/images/icons/common/flag_germany.svg';
   static const String flagNetherlands = 'assets/images/icons/common/flag_netherlands.svg';
+  static const String flower = 'assets/images/icons/common/flower.svg';
   static const String ghost = 'assets/images/icons/common/ghost.svg';
+  static const String gift = 'assets/images/icons/common/gift.svg';
   static const String go = 'assets/images/icons/common/go.svg';
   static const String hat = 'assets/images/icons/common/hat.svg';
+  static const String heart = 'assets/images/icons/common/heart.svg';
+  static const String hotairbaloon = 'assets/images/icons/common/hotairbaloon.svg';
   static const String info = 'assets/images/icons/common/info.svg';
+  static const String key = 'assets/images/icons/common/key.svg';
   static const String language = 'assets/images/icons/common/language.svg';
   static const String letter = 'assets/images/icons/common/letter.svg';
   static const String location = 'assets/images/icons/common/location.svg';
@@ -29,7 +39,7 @@ class AppIconsPalette {
   static const String olive = 'assets/images/icons/common/olive.svg';
   static const String pumpkin = 'assets/images/icons/common/pumpkin.svg';
   static const String snowflake = 'assets/images/icons/common/snowflake.svg';
-  static const String sock = 'assets/images/icons/common/sock.svg';
+  static const String snowglobe = 'assets/images/icons/common/snowglobe.svg';
   static const String stars = 'assets/images/icons/common/stars.svg';
   static const String sun = 'assets/images/icons/common/sun.svg';
   static const String tap = 'assets/images/icons/common/tap.svg';
@@ -135,6 +145,52 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.go
   );
 
+  static const AppIcons darkGreenHalloween = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.moon,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.ghost,
+    drawerOptionLeftArsenal: AppIconsPalette.stars,
+    drawerOptionLeftFeedback: AppIconsPalette.bat,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.pumpkin,
+    drawerOptionLeftWallet: AppIconsPalette.candy,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons lightGreenHalloween = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.sun,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.ghost,
+    drawerOptionLeftArsenal: AppIconsPalette.stars,
+    drawerOptionLeftFeedback: AppIconsPalette.bat,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.pumpkin,
+    drawerOptionLeftWallet: AppIconsPalette.candy,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
   static const AppIcons darkGreenNewYear = AppIcons (
     buttonAppBarBack: AppIconsPalette.arrow,
     buttonAppBarMenu: AppIconsPalette.menu,
@@ -152,7 +208,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftFeedback: AppIconsPalette.letter,
     drawerOptionLeftLanguage: AppIconsPalette.language,
     drawerOptionLeftNet: AppIconsPalette.snowflake,
-    drawerOptionLeftWallet: AppIconsPalette.sock,
+    drawerOptionLeftWallet: AppIconsPalette.snowglobe,
     drawerOptionRight: AppIconsPalette.arrow,
     hintTap: AppIconsPalette.tap,
     linkEnter: AppIconsPalette.go
@@ -175,13 +231,13 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftFeedback: AppIconsPalette.letter,
     drawerOptionLeftLanguage: AppIconsPalette.language,
     drawerOptionLeftNet: AppIconsPalette.snowflake,
-    drawerOptionLeftWallet: AppIconsPalette.sock,
+    drawerOptionLeftWallet: AppIconsPalette.snowglobe,
     drawerOptionRight: AppIconsPalette.arrow,
     hintTap: AppIconsPalette.tap,
     linkEnter: AppIconsPalette.go
   );
 
-  static const AppIcons darkGreenHalloween = AppIcons (
+  static const AppIcons darkGreenValentine = AppIcons (
     buttonAppBarBack: AppIconsPalette.arrow,
     buttonAppBarMenu: AppIconsPalette.menu,
     buttonAppBarTheme: AppIconsPalette.moon,
@@ -193,18 +249,18 @@ class AppIcons extends ThemeExtension <AppIcons> {
     connectionFinland: AppIconsPalette.flagFinland,
     connectionGermany: AppIconsPalette.flagGermany,
     connectionNetherlands: AppIconsPalette.flagNetherlands,
-    drawerOptionLeftAccount: AppIconsPalette.bat,
-    drawerOptionLeftArsenal: AppIconsPalette.stars,
-    drawerOptionLeftFeedback: AppIconsPalette.ghost,
+    drawerOptionLeftAccount: AppIconsPalette.key,
+    drawerOptionLeftArsenal: AppIconsPalette.cottoncandy,
+    drawerOptionLeftFeedback: AppIconsPalette.heart,
     drawerOptionLeftLanguage: AppIconsPalette.language,
-    drawerOptionLeftNet: AppIconsPalette.pumpkin,
-    drawerOptionLeftWallet: AppIconsPalette.candy,
+    drawerOptionLeftNet: AppIconsPalette.hotairbaloon,
+    drawerOptionLeftWallet: AppIconsPalette.gift,
     drawerOptionRight: AppIconsPalette.arrow,
     hintTap: AppIconsPalette.tap,
     linkEnter: AppIconsPalette.go
   );
 
-  static const AppIcons lightGreenHalloween = AppIcons (
+  static const AppIcons lightGreenValentine = AppIcons (
     buttonAppBarBack: AppIconsPalette.arrow,
     buttonAppBarMenu: AppIconsPalette.menu,
     buttonAppBarTheme: AppIconsPalette.sun,
@@ -216,12 +272,58 @@ class AppIcons extends ThemeExtension <AppIcons> {
     connectionFinland: AppIconsPalette.flagFinland,
     connectionGermany: AppIconsPalette.flagGermany,
     connectionNetherlands: AppIconsPalette.flagNetherlands,
-    drawerOptionLeftAccount: AppIconsPalette.bat,
-    drawerOptionLeftArsenal: AppIconsPalette.stars,
-    drawerOptionLeftFeedback: AppIconsPalette.ghost,
+    drawerOptionLeftAccount: AppIconsPalette.key,
+    drawerOptionLeftArsenal: AppIconsPalette.cottoncandy,
+    drawerOptionLeftFeedback: AppIconsPalette.heart,
     drawerOptionLeftLanguage: AppIconsPalette.language,
-    drawerOptionLeftNet: AppIconsPalette.pumpkin,
-    drawerOptionLeftWallet: AppIconsPalette.candy,
+    drawerOptionLeftNet: AppIconsPalette.hotairbaloon,
+    drawerOptionLeftWallet: AppIconsPalette.gift,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons darkGreenEaster = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.moon,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.egg,
+    drawerOptionLeftArsenal: AppIconsPalette.butterfly,
+    drawerOptionLeftFeedback: AppIconsPalette.bunny,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.flower,
+    drawerOptionLeftWallet: AppIconsPalette.cupcake,
+    drawerOptionRight: AppIconsPalette.arrow,
+    hintTap: AppIconsPalette.tap,
+    linkEnter: AppIconsPalette.go
+  );
+
+  static const AppIcons lightGreenEaster = AppIcons (
+    buttonAppBarBack: AppIconsPalette.arrow,
+    buttonAppBarMenu: AppIconsPalette.menu,
+    buttonAppBarTheme: AppIconsPalette.sun,
+    buttonChangeLanguage: AppIconsPalette.language,
+    buttonChooseConnectionLeft: AppIconsPalette.location,
+    buttonChooseConnectionRight: AppIconsPalette.arrow,
+    buttonConnect: AppIconsPalette.olive,
+    buttonGo: AppIconsPalette.arrow,
+    connectionFinland: AppIconsPalette.flagFinland,
+    connectionGermany: AppIconsPalette.flagGermany,
+    connectionNetherlands: AppIconsPalette.flagNetherlands,
+    drawerOptionLeftAccount: AppIconsPalette.egg,
+    drawerOptionLeftArsenal: AppIconsPalette.butterfly,
+    drawerOptionLeftFeedback: AppIconsPalette.bunny,
+    drawerOptionLeftLanguage: AppIconsPalette.language,
+    drawerOptionLeftNet: AppIconsPalette.flower,
+    drawerOptionLeftWallet: AppIconsPalette.cupcake,
     drawerOptionRight: AppIconsPalette.arrow,
     hintTap: AppIconsPalette.tap,
     linkEnter: AppIconsPalette.go

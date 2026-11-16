@@ -76,6 +76,22 @@ class App extends ConsumerWidget {
 
         break;
 
+      case AppThemeOption.darkGreenHalloween:
+
+        appColors = AppColors.darkGreen;
+        appIcons = AppIcons.darkGreenHalloween;
+        appBrightness = Brightness.dark;
+
+        break;
+
+      case AppThemeOption.lightGreenHalloween:
+
+        appColors = AppColors.lightGreen;
+        appIcons = AppIcons.lightGreenHalloween;
+        appBrightness = Brightness.light;
+
+        break;
+
       case AppThemeOption.darkGreenNewYear:
 
         appColors = AppColors.darkGreen;
@@ -92,18 +108,34 @@ class App extends ConsumerWidget {
 
         break;
 
-      case AppThemeOption.darkGreenHalloween:
+      case AppThemeOption.darkGreenValentine:
 
         appColors = AppColors.darkGreen;
-        appIcons = AppIcons.darkGreenHalloween;
+        appIcons = AppIcons.darkGreenValentine;
         appBrightness = Brightness.dark;
 
         break;
 
-      case AppThemeOption.lightGreenHalloween:
+      case AppThemeOption.lightGreenValentine:
 
         appColors = AppColors.lightGreen;
-        appIcons = AppIcons.lightGreenHalloween;
+        appIcons = AppIcons.lightGreenValentine;
+        appBrightness = Brightness.light;
+
+        break;
+
+      case AppThemeOption.darkGreenEaster:
+
+        appColors = AppColors.darkGreen;
+        appIcons = AppIcons.darkGreenEaster;
+        appBrightness = Brightness.dark;
+
+        break;
+
+      case AppThemeOption.lightGreenEaster:
+
+        appColors = AppColors.lightGreen;
+        appIcons = AppIcons.lightGreenEaster;
         appBrightness = Brightness.light;
 
         break;

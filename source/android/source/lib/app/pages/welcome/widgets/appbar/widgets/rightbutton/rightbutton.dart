@@ -39,18 +39,6 @@ class RightButton extends ConsumerWidget {
 
           break;
 
-        case AppThemeOption.darkGreenNewYear:
-
-          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
-
-          break;
-
-        case AppThemeOption.lightGreenNewYear:
-
-          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
-
-          break;
-
         case AppThemeOption.darkGreenHalloween:
 
           context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
@@ -63,9 +51,47 @@ class RightButton extends ConsumerWidget {
 
           break;
 
-        default:
+        case AppThemeOption.darkGreenNewYear:
 
           context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+        case AppThemeOption.lightGreenNewYear:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
+
+          break;
+
+
+        case AppThemeOption.darkGreenValentine:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+        case AppThemeOption.lightGreenValentine:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
+
+          break;
+
+
+        case AppThemeOption.darkGreenEaster:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.lightGreen);
+
+          break;
+
+        case AppThemeOption.lightGreenEaster:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
+
+          break;
+
+        default:
+
+          context.methods.changeTheme (ref, AppThemeBaseOption.darkGreen);
 
           break;
 
