@@ -30,7 +30,6 @@ class Data extends StatelessWidget {
               Text (
                 context.texts.windowAccountEnteredBodyUserName,
                 style: TextStyle (
-                  // fontFamily: context.fonts.archivo,
                   fontWeight: FontWeight.w500,
                   fontSize: 15.5,
                   color: context.colors.windowAccountBodyUserNameText
@@ -50,7 +49,6 @@ class Data extends StatelessWidget {
           Text (
             context.texts.windowAccountEnteredBodyUserUsersNum (127),
             style: TextStyle (
-              // fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w500,
               fontSize: 15.5,
               color: context.colors.windowAccountBodyUserSubscribers
