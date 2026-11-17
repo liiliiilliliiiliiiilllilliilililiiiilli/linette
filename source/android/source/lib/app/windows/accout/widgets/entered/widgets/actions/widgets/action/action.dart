@@ -64,8 +64,8 @@ class ActionComponent extends HookWidget {
               ),
               SvgPicture.asset (
                 context.icons.windowBodyAction,
-                width: 15.5,
-                height: 15.5,
+                width: 12.5,
+                height: 12.5,
                 colorFilter: ColorFilter.mode (
                   color,
                   BlendMode.srcIn

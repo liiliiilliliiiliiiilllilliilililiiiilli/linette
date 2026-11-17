@@ -1305,6 +1305,176 @@ class Texts {
     );
   }
 
+  /// `Balance`
+  String get windowWalletBalanceTitle {
+    return Intl.message(
+      'Balance',
+      name: 'windowWalletBalanceTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `💵 150₽`
+  String get windowWalletBalanceTableTopLeftAmount {
+    return Intl.message(
+      '💵 150₽',
+      name: 'windowWalletBalanceTableTopLeftAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Funds`
+  String get windowWalletBalanceTableTopLeftDescription {
+    return Intl.message(
+      'Funds',
+      name: 'windowWalletBalanceTableTopLeftDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `📢 3`
+  String get windowWalletBalanceTableTopRightAmount {
+    return Intl.message(
+      '📢 3',
+      name: 'windowWalletBalanceTableTopRightAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ads`
+  String get windowWalletBalanceTableTopRightDescription {
+    return Intl.message(
+      'Ads',
+      name: 'windowWalletBalanceTableTopRightDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `⏳ ~3 days`
+  String get windowWalletBalanceTableBottomAmount {
+    return Intl.message(
+      '⏳ ~3 days',
+      name: 'windowWalletBalanceTableBottomAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Usage time`
+  String get windowWalletBalanceTableBottomDescription {
+    return Intl.message(
+      'Usage time',
+      name: 'windowWalletBalanceTableBottomDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accumulate ads`
+  String get windowWalletBalanceActionAccumulate {
+    return Intl.message(
+      'Accumulate ads',
+      name: 'windowWalletBalanceActionAccumulate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Top up`
+  String get windowWalletBalanceActionTopUp {
+    return Intl.message(
+      'Top up',
+      name: 'windowWalletBalanceActionTopUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income`
+  String get windowWalletIncomeTitle {
+    return Intl.message(
+      'Income',
+      name: 'windowWalletIncomeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `💵 7558₽`
+  String get windowWalletIncomeTableTopLeftAmount {
+    return Intl.message(
+      '💵 7558₽',
+      name: 'windowWalletIncomeTableTopLeftAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accumulated`
+  String get windowWalletIncomeTableTopLeftDescription {
+    return Intl.message(
+      'Accumulated',
+      name: 'windowWalletIncomeTableTopLeftDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `💵 ~109₽`
+  String get windowWalletIncomeTableTopRightAmount {
+    return Intl.message(
+      '💵 ~109₽',
+      name: 'windowWalletIncomeTableTopRightAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Per day`
+  String get windowWalletIncomeTableTopRightDescription {
+    return Intl.message(
+      'Per day',
+      name: 'windowWalletIncomeTableTopRightDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get windowWalletIncomeTableBottomAmount {
+    return Intl.message(
+      '',
+      name: 'windowWalletIncomeTableBottomAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get windowWalletIncomeTableBottomDescription {
+    return Intl.message(
+      '',
+      name: 'windowWalletIncomeTableBottomDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Withdraw`
+  String get windowWalletIncomeActionWithdraw {
+    return Intl.message(
+      'Withdraw',
+      name: 'windowWalletIncomeActionWithdraw',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Done`
   String get windowWalletAction {
     return Intl.message('Done', name: 'windowWalletAction', desc: '', args: []);

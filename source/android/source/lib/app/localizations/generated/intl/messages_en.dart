@@ -305,6 +305,42 @@ class MessageLookup extends MessageLookupByLibrary {
       "Network parameters",
     ),
     "windowWalletAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowWalletBalanceActionAccumulate": MessageLookupByLibrary.simpleMessage(
+      "Accumulate ads",
+    ),
+    "windowWalletBalanceActionTopUp": MessageLookupByLibrary.simpleMessage(
+      "Top up",
+    ),
+    "windowWalletBalanceTableBottomAmount":
+        MessageLookupByLibrary.simpleMessage("⏳ ~3 days"),
+    "windowWalletBalanceTableBottomDescription":
+        MessageLookupByLibrary.simpleMessage("Usage time"),
+    "windowWalletBalanceTableTopLeftAmount":
+        MessageLookupByLibrary.simpleMessage("💵 150₽"),
+    "windowWalletBalanceTableTopLeftDescription":
+        MessageLookupByLibrary.simpleMessage("Funds"),
+    "windowWalletBalanceTableTopRightAmount":
+        MessageLookupByLibrary.simpleMessage("📢 3"),
+    "windowWalletBalanceTableTopRightDescription":
+        MessageLookupByLibrary.simpleMessage("Ads"),
+    "windowWalletBalanceTitle": MessageLookupByLibrary.simpleMessage("Balance"),
+    "windowWalletIncomeActionWithdraw": MessageLookupByLibrary.simpleMessage(
+      "Withdraw",
+    ),
+    "windowWalletIncomeTableBottomAmount": MessageLookupByLibrary.simpleMessage(
+      "",
+    ),
+    "windowWalletIncomeTableBottomDescription":
+        MessageLookupByLibrary.simpleMessage(""),
+    "windowWalletIncomeTableTopLeftAmount":
+        MessageLookupByLibrary.simpleMessage("💵 7558₽"),
+    "windowWalletIncomeTableTopLeftDescription":
+        MessageLookupByLibrary.simpleMessage("Accumulated"),
+    "windowWalletIncomeTableTopRightAmount":
+        MessageLookupByLibrary.simpleMessage("💵 ~109₽"),
+    "windowWalletIncomeTableTopRightDescription":
+        MessageLookupByLibrary.simpleMessage("Per day"),
+    "windowWalletIncomeTitle": MessageLookupByLibrary.simpleMessage("Income"),
     "windowWalletTitle": MessageLookupByLibrary.simpleMessage("Wallet"),
   };
 }

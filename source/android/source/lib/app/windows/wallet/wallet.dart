@@ -1,12 +1,14 @@
 // Wallet window
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/textlink/textlink.dart';
-import 'package:linette/app/widgets/textlink/models/type/type.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'widgets/action/action.dart';
+import 'widgets/action/models/character/character.dart';
+import 'widgets/separator/separator.dart';
+import 'widgets/table/table.dart';
+import 'widgets/table/widgets/stata/stata.dart';
+import 'widgets/title/title.dart';
 
 
 
@@ -19,53 +21,68 @@ class WalletWindow extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    Future <void> onPress () async {
-
-      await context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
-
-    }
-
-
     return (
 
       Window (
         width: 340,
+        isExpanded: true,
         title: context.texts.windowWalletTitle,
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
-              top: 10,
-              bottom: 2.5
+              top: 10 * 1.5,
+              left: 2.5 * 1.5,
+              right: 2.5 * 1.5,
+              bottom: 10 * 1.5
             ),
-            child: Text.rich (
-              TextSpan (
-                style: const TextStyle (
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16
-                ),
-                children: [
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_1,
-                    style: TextStyle (
-                      color: context.colors.windowMainText
-                    )
+            child: Column (
+              spacing: 24,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TitleComponent (context.texts.windowWalletBalanceTitle),
+                TableComponent (
+                  topLeft: TableStata (
+                    amount: context.texts.windowWalletBalanceTableTopLeftAmount,
+                    description: context.texts.windowWalletBalanceTableTopLeftDescription
                   ),
-                  WidgetSpan (
-                    alignment: PlaceholderAlignment.middle,
-                    child: TextLink (
-                      context.texts.windowFeedbackBody_2,
-                      type: TextLinkType.external,
-                      onPress: onPress
-                    )
+                  topRight: TableStata (
+                    amount: context.texts.windowWalletBalanceTableTopRightAmount,
+                    description: context.texts.windowWalletBalanceTableTopRightDescription
                   ),
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_3,
-                    style: TextStyle (
-                      color: context.colors.windowMainText
-                    )
+                  bottom: TableStata (
+                    amount: context.texts.windowWalletBalanceTableBottomAmount,
+                    description: context.texts.windowWalletBalanceTableBottomDescription
                   )
-                ]
-              )
+                ),
+                ActionComponent (
+                  context.texts.windowWalletBalanceActionAccumulate,
+                  character: ActionCharacter.regular
+                ),
+                ActionComponent (
+                  context.texts.windowWalletBalanceActionTopUp,
+                  character: ActionCharacter.regular
+                ),
+                const Separator (),
+                TitleComponent (context.texts.windowWalletIncomeTitle),
+                TableComponent (
+                  topLeft: TableStata (
+                    amount: context.texts.windowWalletIncomeTableTopLeftAmount,
+                    description: context.texts.windowWalletIncomeTableTopLeftDescription
+                  ),
+                  topRight: TableStata (
+                    amount: context.texts.windowWalletIncomeTableTopRightAmount,
+                    description: context.texts.windowWalletIncomeTableTopRightDescription
+                  ),
+                  bottom: TableStata (
+                    amount: context.texts.windowWalletIncomeTableBottomAmount,
+                    description: context.texts.windowWalletIncomeTableBottomDescription
+                  )
+                ),
+                ActionComponent (
+                  context.texts.windowWalletIncomeActionWithdraw,
+                  character: ActionCharacter.regular
+                )
+              ]
             )
           )
         ),

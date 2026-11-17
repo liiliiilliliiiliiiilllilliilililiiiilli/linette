@@ -21,7 +21,10 @@ class Separator extends StatelessWidget {
         margin: const EdgeInsets.symmetric (
           horizontal: 2.5 + 8
         ),
-        color: context.colors.line
+        decoration: BoxDecoration (
+          borderRadius: BorderRadius.circular (100),
+          color: context.colors.line
+        )
       )
 
     );

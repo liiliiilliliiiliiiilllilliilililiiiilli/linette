@@ -155,5 +155,22 @@
 	"windowAccountEnteredAction": "准备好",
 
 	"windowWalletTitle": "钱包",
+	"windowWalletBalanceTitle": "余额",
+	"windowWalletBalanceTableTopLeftAmount": "💵 150₽",
+	"windowWalletBalanceTableTopLeftDescription": "资金",
+	"windowWalletBalanceTableTopRightAmount": "📢 3",
+	"windowWalletBalanceTableTopRightDescription": "广告",
+	"windowWalletBalanceTableBottomAmount": "⏳ ~3天",
+	"windowWalletBalanceTableBottomDescription": "可用时长",
+	"windowWalletBalanceActionAccumulate": "累积广告",
+	"windowWalletBalanceActionTopUp": "充值",
+	"windowWalletIncomeTitle": "收益",
+	"windowWalletIncomeTableTopLeftAmount": "💵 7558₽",
+	"windowWalletIncomeTableTopLeftDescription": "累计收益",
+	"windowWalletIncomeTableTopRightAmount": "💵 ~109₽",
+	"windowWalletIncomeTableTopRightDescription": "每日",
+	"windowWalletIncomeTableBottomAmount": "",
+	"windowWalletIncomeTableBottomDescription": "",
+	"windowWalletIncomeActionWithdraw": "提现",
 	"windowWalletAction": "完成"
 }

@@ -265,6 +265,42 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("网络质量指标"),
     "windowNetTitle": MessageLookupByLibrary.simpleMessage("网络参数"),
     "windowWalletAction": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowWalletBalanceActionAccumulate": MessageLookupByLibrary.simpleMessage(
+      "累积广告",
+    ),
+    "windowWalletBalanceActionTopUp": MessageLookupByLibrary.simpleMessage(
+      "充值",
+    ),
+    "windowWalletBalanceTableBottomAmount":
+        MessageLookupByLibrary.simpleMessage("⏳ ~3天"),
+    "windowWalletBalanceTableBottomDescription":
+        MessageLookupByLibrary.simpleMessage("可用时长"),
+    "windowWalletBalanceTableTopLeftAmount":
+        MessageLookupByLibrary.simpleMessage("💵 150₽"),
+    "windowWalletBalanceTableTopLeftDescription":
+        MessageLookupByLibrary.simpleMessage("资金"),
+    "windowWalletBalanceTableTopRightAmount":
+        MessageLookupByLibrary.simpleMessage("📢 3"),
+    "windowWalletBalanceTableTopRightDescription":
+        MessageLookupByLibrary.simpleMessage("广告"),
+    "windowWalletBalanceTitle": MessageLookupByLibrary.simpleMessage("余额"),
+    "windowWalletIncomeActionWithdraw": MessageLookupByLibrary.simpleMessage(
+      "提现",
+    ),
+    "windowWalletIncomeTableBottomAmount": MessageLookupByLibrary.simpleMessage(
+      "",
+    ),
+    "windowWalletIncomeTableBottomDescription":
+        MessageLookupByLibrary.simpleMessage(""),
+    "windowWalletIncomeTableTopLeftAmount":
+        MessageLookupByLibrary.simpleMessage("💵 7558₽"),
+    "windowWalletIncomeTableTopLeftDescription":
+        MessageLookupByLibrary.simpleMessage("累计收益"),
+    "windowWalletIncomeTableTopRightAmount":
+        MessageLookupByLibrary.simpleMessage("💵 ~109₽"),
+    "windowWalletIncomeTableTopRightDescription":
+        MessageLookupByLibrary.simpleMessage("每日"),
+    "windowWalletIncomeTitle": MessageLookupByLibrary.simpleMessage("收益"),
     "windowWalletTitle": MessageLookupByLibrary.simpleMessage("钱包"),
   };
 }

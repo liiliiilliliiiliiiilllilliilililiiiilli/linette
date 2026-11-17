@@ -29,7 +29,7 @@ class AvailabilityStatus extends StatelessWidget {
         width: 8,
         height: 8,
         decoration: BoxDecoration (
-          borderRadius: BorderRadius.circular (1000),
+          shape: BoxShape.circle,
           color: color
         )
       )

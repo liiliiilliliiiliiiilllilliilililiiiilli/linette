@@ -137,6 +137,10 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color windowMainTitle;
   final Color windowSeparator;
   final Color windowShadow;
+  final Color windowTableBorder;
+  final Color windowTableSeparator;
+  final Color windowTableStataAmount;
+  final Color windowTableStataDescription;
   final Color windowTopBack;
   final Color windowTopText;
 
@@ -223,6 +227,10 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.windowMainTitle,
     required this.windowSeparator,
     required this.windowShadow,
+    required this.windowTableBorder,
+    required this.windowTableSeparator,
+    required this.windowTableStataAmount,
+    required this.windowTableStataDescription,
     required this.windowTopBack,
     required this.windowTopText
   });
@@ -310,6 +318,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowMainTitle: AppColorsPalette.cream,
     windowSeparator: AppColorsPalette.grey_9,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
+    windowTableBorder: AppColorsPalette.grey_10,
+    windowTableSeparator: AppColorsPalette.grey_10,
+    windowTableStataAmount: AppColorsPalette.cream,
+    windowTableStataDescription: AppColorsPalette.grey,
     windowTopBack: AppColorsPalette.grey_8,
     windowTopText: AppColorsPalette.cream
   );
@@ -396,6 +408,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowMainTitle: AppColorsPalette.black,
     windowSeparator: AppColorsPalette.grey_14,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
+    windowTableBorder: AppColorsPalette.grey_10,
+    windowTableSeparator: AppColorsPalette.grey_10,
+    windowTableStataAmount: AppColorsPalette.black,
+    windowTableStataDescription: AppColorsPalette.grey,
     windowTopBack: AppColorsPalette.grey_15,
     windowTopText: AppColorsPalette.black
   );
@@ -483,6 +499,10 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? windowMainTitle,
     Color? windowSeparator,
     Color? windowShadow,
+    Color? windowTableBorder,
+    Color? windowTableSeparator,
+    Color? windowTableStataAmount,
+    Color? windowTableStataDescription,
     Color? windowTopBack,
     Color? windowTopText
   }) {
@@ -571,6 +591,10 @@ class AppColors extends ThemeExtension <AppColors> {
         windowMainTitle: windowMainTitle ?? this.windowMainTitle,
         windowSeparator: windowSeparator ?? this.windowSeparator,
         windowShadow: windowShadow ?? this.windowShadow,
+        windowTableBorder: windowTableBorder ?? this.windowTableBorder,
+        windowTableSeparator: windowTableSeparator ?? this.windowTableSeparator,
+        windowTableStataAmount: windowTableStataAmount ?? this.windowTableStataAmount,
+        windowTableStataDescription: windowTableStataDescription ?? this.windowTableStataDescription,
         windowTopBack: windowTopBack ?? this.windowTopBack,
         windowTopText: windowTopText ?? this.windowTopText
       )
@@ -672,6 +696,10 @@ class AppColors extends ThemeExtension <AppColors> {
         windowMainTitle: Color.lerp (windowMainTitle, other.windowMainTitle, t) ?? windowMainTitle,
         windowSeparator: Color.lerp (windowSeparator, other.windowSeparator, t) ?? windowSeparator,
         windowShadow: Color.lerp (windowShadow, other.windowShadow, t) ?? windowShadow,
+        windowTableBorder: Color.lerp (windowTableBorder, other.windowTableBorder, t) ?? windowTableBorder,
+        windowTableSeparator: Color.lerp (windowTableSeparator, other.windowTableSeparator, t) ?? windowTableSeparator,
+        windowTableStataAmount: Color.lerp (windowTableStataAmount, other.windowTableStataAmount, t) ?? windowTableStataAmount,
+        windowTableStataDescription: Color.lerp (windowTableStataDescription, other.windowTableStataDescription, t) ?? windowTableStataDescription,
         windowTopBack: Color.lerp (windowTopBack, other.windowTopBack, t) ?? windowTopBack,
         windowTopText: Color.lerp (windowTopText, other.windowTopText, t) ?? windowTopText
       )

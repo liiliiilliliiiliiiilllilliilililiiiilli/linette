@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 

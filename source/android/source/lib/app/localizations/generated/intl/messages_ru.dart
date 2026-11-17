@@ -309,6 +309,42 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("Метрики качества сети"),
     "windowNetTitle": MessageLookupByLibrary.simpleMessage("Параметры сети"),
     "windowWalletAction": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowWalletBalanceActionAccumulate": MessageLookupByLibrary.simpleMessage(
+      "Накопить рекламу",
+    ),
+    "windowWalletBalanceActionTopUp": MessageLookupByLibrary.simpleMessage(
+      "Пополнить счет",
+    ),
+    "windowWalletBalanceTableBottomAmount":
+        MessageLookupByLibrary.simpleMessage("⏳ ~3 дня"),
+    "windowWalletBalanceTableBottomDescription":
+        MessageLookupByLibrary.simpleMessage("Время использования"),
+    "windowWalletBalanceTableTopLeftAmount":
+        MessageLookupByLibrary.simpleMessage("💵 150₽"),
+    "windowWalletBalanceTableTopLeftDescription":
+        MessageLookupByLibrary.simpleMessage("Средства"),
+    "windowWalletBalanceTableTopRightAmount":
+        MessageLookupByLibrary.simpleMessage("📢 3"),
+    "windowWalletBalanceTableTopRightDescription":
+        MessageLookupByLibrary.simpleMessage("Реклама"),
+    "windowWalletBalanceTitle": MessageLookupByLibrary.simpleMessage("Баланс"),
+    "windowWalletIncomeActionWithdraw": MessageLookupByLibrary.simpleMessage(
+      "Вывести средства",
+    ),
+    "windowWalletIncomeTableBottomAmount": MessageLookupByLibrary.simpleMessage(
+      "",
+    ),
+    "windowWalletIncomeTableBottomDescription":
+        MessageLookupByLibrary.simpleMessage(""),
+    "windowWalletIncomeTableTopLeftAmount":
+        MessageLookupByLibrary.simpleMessage("💵 7558₽"),
+    "windowWalletIncomeTableTopLeftDescription":
+        MessageLookupByLibrary.simpleMessage("Накоплено"),
+    "windowWalletIncomeTableTopRightAmount":
+        MessageLookupByLibrary.simpleMessage("💵 ~109₽"),
+    "windowWalletIncomeTableTopRightDescription":
+        MessageLookupByLibrary.simpleMessage("В день"),
+    "windowWalletIncomeTitle": MessageLookupByLibrary.simpleMessage("Доход"),
     "windowWalletTitle": MessageLookupByLibrary.simpleMessage("Кошелек"),
   };
 }

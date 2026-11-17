@@ -18,7 +18,10 @@ class Separator extends StatelessWidget {
 
       Container (
         height: 2,
-        color: context.colors.windowSeparator
+        decoration: BoxDecoration (
+          borderRadius: BorderRadius.circular (100),
+          color: context.colors.windowSeparator
+        )
       )
 
     );

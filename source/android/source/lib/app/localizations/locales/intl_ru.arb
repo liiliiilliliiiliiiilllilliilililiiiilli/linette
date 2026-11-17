@@ -155,5 +155,22 @@
 	"windowAccountEnteredAction": "Готово",
 
 	"windowWalletTitle": "Кошелек",
+	"windowWalletBalanceTitle": "Баланс",
+	"windowWalletBalanceTableTopLeftAmount": "💵 150₽",
+	"windowWalletBalanceTableTopLeftDescription": "Средства",
+	"windowWalletBalanceTableTopRightAmount": "📢 3",
+	"windowWalletBalanceTableTopRightDescription": "Реклама",
+	"windowWalletBalanceTableBottomAmount": "⏳ ~3 дня",
+	"windowWalletBalanceTableBottomDescription": "Время использования",
+	"windowWalletBalanceActionAccumulate": "Накопить рекламу",
+	"windowWalletBalanceActionTopUp": "Пополнить счет",
+	"windowWalletIncomeTitle": "Доход",
+	"windowWalletIncomeTableTopLeftAmount": "💵 7558₽",
+	"windowWalletIncomeTableTopLeftDescription": "Накоплено",
+	"windowWalletIncomeTableTopRightAmount": "💵 ~109₽",
+	"windowWalletIncomeTableTopRightDescription": "В день",
+	"windowWalletIncomeTableBottomAmount": "",
+	"windowWalletIncomeTableBottomDescription": "",
+	"windowWalletIncomeActionWithdraw": "Вывести средства",
 	"windowWalletAction": "Готово"
 }

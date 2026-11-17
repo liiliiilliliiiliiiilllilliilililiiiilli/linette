@@ -155,5 +155,22 @@
 	"windowAccountEnteredAction": "Done",
 
 	"windowWalletTitle": "Wallet",
+	"windowWalletBalanceTitle": "Balance",
+	"windowWalletBalanceTableTopLeftAmount": "💵 150₽",
+	"windowWalletBalanceTableTopLeftDescription": "Funds",
+	"windowWalletBalanceTableTopRightAmount": "📢 3",
+	"windowWalletBalanceTableTopRightDescription": "Ads",
+	"windowWalletBalanceTableBottomAmount": "⏳ ~3 days",
+	"windowWalletBalanceTableBottomDescription": "Usage time",
+	"windowWalletBalanceActionAccumulate": "Accumulate ads",
+	"windowWalletBalanceActionTopUp": "Top up",
+	"windowWalletIncomeTitle": "Income",
+	"windowWalletIncomeTableTopLeftAmount": "💵 7558₽",
+	"windowWalletIncomeTableTopLeftDescription": "Accumulated",
+	"windowWalletIncomeTableTopRightAmount": "💵 ~109₽",
+	"windowWalletIncomeTableTopRightDescription": "Per day",
+	"windowWalletIncomeTableBottomAmount": "",
+	"windowWalletIncomeTableBottomDescription": "",
+	"windowWalletIncomeActionWithdraw": "Withdraw",
 	"windowWalletAction": "Done"
 }
