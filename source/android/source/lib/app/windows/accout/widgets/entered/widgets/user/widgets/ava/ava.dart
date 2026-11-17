@@ -1,6 +1,8 @@
 // Accout window - Entered - User - Ava
 
 import 'package:flutter/material.dart';
+import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/icons/icons.dart';
 
 
 
@@ -15,7 +17,21 @@ class Ava extends StatelessWidget {
 
     return (
 
-      Container ()
+      Container (
+        width: 50,
+        height: 50,
+        padding: const EdgeInsets.all (2.5),
+        decoration: BoxDecoration (
+          shape: BoxShape.circle,
+          border: Border.all (
+            width: 2,
+            color: context.colors.windowAccountBodyUserAvaBorder
+          )
+        ),
+        child: ClipOval (
+          child: Image.asset (context.icons.windowBodyAccountNameAva)
+        )
+      )
 
     );
 

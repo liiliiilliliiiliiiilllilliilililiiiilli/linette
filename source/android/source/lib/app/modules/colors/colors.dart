@@ -37,8 +37,9 @@ class AppColorsPalette {
   static const Color grey_10 = Color (0xff303030);
   static const Color grey_11 = Color (0xff404040);
   static const Color grey_12 = Color (0xff8b8b8b);
-  static const Color grey_13 = Color (0xffcdcdcd);
-  static const Color grey_14 = Color (0xfffafafa);
+  static const Color grey_13 = Color (0xffbfbfbf);
+  static const Color grey_14 = Color (0xffcdcdcd);
+  static const Color grey_15 = Color (0xfffafafa);
   static const Color blue_1 = Color (0xff9da6d9);
   static const Color green_1 = Color (0xff12361b);
   static const Color green_2 = Color (0xff1b1c1b);
@@ -47,6 +48,7 @@ class AppColorsPalette {
   static const Color green_5 = Color (0xff687262);
   static const Color green_6 = Color (0xff8b9e80);
   static const Color green_7 = Color (0xffd8e0d7);
+  static const Color red_1 = Color (0xffcb393c);
 
 }
 
@@ -117,7 +119,14 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color title;
   final Color titleElement;
   final Color titleShadow;
+  final Color windowAccountBodyUserAvaBorder;
+  final Color windowAccountBodyUserNameIcon;
+  final Color windowAccountBodyUserNameText;
+  final Color windowAccountBodyUserSubscribers;
+  final Color windowBarSeparator;
   final Color windowBarrier;
+  final Color windowBodyActionCritical;
+  final Color windowBodyActionRegular;
   final Color windowBottomText;
   final Color windowBottomTextNotActive;
   final Color windowMainBack;
@@ -196,7 +205,14 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.title,
     required this.titleElement,
     required this.titleShadow,
+    required this.windowAccountBodyUserAvaBorder,
+    required this.windowAccountBodyUserNameIcon,
+    required this.windowAccountBodyUserNameText,
+    required this.windowAccountBodyUserSubscribers,
+    required this.windowBarSeparator,
     required this.windowBarrier,
+    required this.windowBodyActionCritical,
+    required this.windowBodyActionRegular,
     required this.windowBottomText,
     required this.windowBottomTextNotActive,
     required this.windowMainBack,
@@ -276,7 +292,14 @@ class AppColors extends ThemeExtension <AppColors> {
     title: AppColorsPalette.cream,
     titleElement: AppColorsPalette.green_6,
     titleShadow: AppColorsPalette.transparent_4_grey_1,
+    windowAccountBodyUserAvaBorder: AppColorsPalette.grey_10,
+    windowAccountBodyUserNameIcon: AppColorsPalette.grey_13,
+    windowAccountBodyUserNameText: AppColorsPalette.cream,
+    windowAccountBodyUserSubscribers: AppColorsPalette.grey,
+    windowBarSeparator: AppColorsPalette.grey_4,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
+    windowBodyActionCritical: AppColorsPalette.red_1,
+    windowBodyActionRegular: AppColorsPalette.green_6,
     windowBottomText: AppColorsPalette.green_6,
     windowBottomTextNotActive: AppColorsPalette.grey_11,
     windowMainBack: AppColorsPalette.grey_6,
@@ -285,24 +308,24 @@ class AppColors extends ThemeExtension <AppColors> {
     windowMainText: AppColorsPalette.cream,
     windowMainTextAuxiliary: AppColorsPalette.grey,
     windowMainTitle: AppColorsPalette.cream,
-    windowSeparator: AppColorsPalette.grey_4,
+    windowSeparator: AppColorsPalette.grey_9,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
     windowTopBack: AppColorsPalette.grey_8,
     windowTopText: AppColorsPalette.cream
   );
 
   static const AppColors lightGreen = AppColors (
-    appBarBack: AppColorsPalette.grey_14,
-    appBarBorder: AppColorsPalette.grey_13,
+    appBarBack: AppColorsPalette.grey_15,
+    appBarBorder: AppColorsPalette.grey_14,
     appBarButtonBack: AppColorsPalette.white,
-    appBarButtonBorder: AppColorsPalette.grey_13,
+    appBarButtonBorder: AppColorsPalette.grey_14,
     appBarButtonIcon: AppColorsPalette.grey_11,
     back: AppColorsPalette.cream,
-    backPrime: AppColorsPalette.grey_14,
+    backPrime: AppColorsPalette.grey_15,
     block: AppColorsPalette.white,
-    blockBorder: AppColorsPalette.grey_13,
+    blockBorder: AppColorsPalette.grey_14,
     bottomBarBack: AppColorsPalette.transparent_2_grey_4,
-    bottomBarBorder: AppColorsPalette.grey_13,
+    bottomBarBorder: AppColorsPalette.grey_14,
     bottomBarText: AppColorsPalette.black,
     bottomBarTextPrime: AppColorsPalette.green_4,
     button: AppColorsPalette.black,
@@ -315,19 +338,19 @@ class AppColors extends ThemeExtension <AppColors> {
     check: AppColorsPalette.cream,
     checkBack: AppColorsPalette.green_6,
     circleBack: AppColorsPalette.cream,
-    circleBorder: AppColorsPalette.grey_13,
+    circleBorder: AppColorsPalette.grey_14,
     drawerBack: AppColorsPalette.cream,
-    drawerBottomBarBack: AppColorsPalette.grey_14,
-    drawerBottomBarBorder: AppColorsPalette.grey_13,
+    drawerBottomBarBack: AppColorsPalette.grey_15,
+    drawerBottomBarBorder: AppColorsPalette.grey_14,
     drawerBottomBarText: AppColorsPalette.black,
     drawerOptionIconLeft: AppColorsPalette.black,
     drawerOptionIconRight: AppColorsPalette.black,
     drawerOptionText: AppColorsPalette.black,
     drawerOptionTextValue: AppColorsPalette.black,
-    drawerTopBarBack: AppColorsPalette.grey_14,
-    drawerTopBarBorder: AppColorsPalette.grey_13,
+    drawerTopBarBack: AppColorsPalette.grey_15,
+    drawerTopBarBorder: AppColorsPalette.grey_14,
     drawerTopBarText: AppColorsPalette.black,
-    line: AppColorsPalette.grey_13,
+    line: AppColorsPalette.grey_14,
     lineText: AppColorsPalette.black,
     link: AppColorsPalette.blue,
     linkInternal: AppColorsPalette.green_6,
@@ -345,8 +368,8 @@ class AppColors extends ThemeExtension <AppColors> {
     textButton: AppColorsPalette.black,
     textChoiceStatus: AppColorsPalette.grey_12,
     textCountryName: AppColorsPalette.black,
-    textFieldBack: AppColorsPalette.grey_14,
-    textFieldBorder: AppColorsPalette.grey_13,
+    textFieldBack: AppColorsPalette.grey_15,
+    textFieldBorder: AppColorsPalette.grey_14,
     textFieldCursor: AppColorsPalette.green_6,
     textFieldHint: AppColorsPalette.grey_11,
     textFieldText: AppColorsPalette.black,
@@ -355,7 +378,14 @@ class AppColors extends ThemeExtension <AppColors> {
     title: AppColorsPalette.black,
     titleElement: AppColorsPalette.green_6,
     titleShadow: AppColorsPalette.transparent_4_grey_1,
+    windowAccountBodyUserAvaBorder: AppColorsPalette.grey_10,
+    windowAccountBodyUserNameIcon: AppColorsPalette.grey_13,
+    windowAccountBodyUserNameText: AppColorsPalette.cream,
+    windowAccountBodyUserSubscribers: AppColorsPalette.grey,
+    windowBarSeparator: AppColorsPalette.grey_14,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
+    windowBodyActionCritical: AppColorsPalette.red_1,
+    windowBodyActionRegular: AppColorsPalette.green_6,
     windowBottomText: AppColorsPalette.black,
     windowBottomTextNotActive: AppColorsPalette.grey,
     windowMainBack: AppColorsPalette.cream,
@@ -364,9 +394,9 @@ class AppColors extends ThemeExtension <AppColors> {
     windowMainText: AppColorsPalette.black,
     windowMainTextAuxiliary: AppColorsPalette.black,
     windowMainTitle: AppColorsPalette.black,
-    windowSeparator: AppColorsPalette.grey_13,
+    windowSeparator: AppColorsPalette.grey_9,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
-    windowTopBack: AppColorsPalette.grey_14,
+    windowTopBack: AppColorsPalette.grey_15,
     windowTopText: AppColorsPalette.black
   );
 
@@ -435,7 +465,14 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? title,
     Color? titleElement,
     Color? titleShadow,
+    Color? windowAccountBodyUserAvaBorder,
+    Color? windowAccountBodyUserNameIcon,
+    Color? windowAccountBodyUserNameText,
+    Color? windowAccountBodyUserSubscribers,
+    Color? windowBarSeparator,
     Color? windowBarrier,
+    Color? windowBodyActionCritical,
+    Color? windowBodyActionRegular,
     Color? windowBottomText,
     Color? windowBottomTextNotActive,
     Color? windowMainBack,
@@ -516,7 +553,14 @@ class AppColors extends ThemeExtension <AppColors> {
         title: title ?? this.title,
         titleElement: titleElement ?? this.titleElement,
         titleShadow: titleShadow ?? this.titleShadow,
+        windowAccountBodyUserAvaBorder: windowAccountBodyUserAvaBorder ?? this.windowAccountBodyUserAvaBorder,
+        windowAccountBodyUserNameIcon: windowAccountBodyUserNameIcon ?? this.windowAccountBodyUserNameIcon,
+        windowAccountBodyUserNameText: windowAccountBodyUserNameText ?? this.windowAccountBodyUserNameText,
+        windowAccountBodyUserSubscribers: windowAccountBodyUserSubscribers ?? this.windowAccountBodyUserSubscribers,
+        windowBarSeparator: windowBarSeparator ?? this.windowBarSeparator,
         windowBarrier: windowBarrier ?? this.windowBarrier,
+        windowBodyActionCritical: windowBodyActionCritical ?? this.windowBodyActionCritical,
+        windowBodyActionRegular: windowBodyActionRegular ?? this.windowBodyActionRegular,
         windowBottomText: windowBottomText ?? this.windowBottomText,
         windowBottomTextNotActive: windowBottomTextNotActive ?? this.windowBottomTextNotActive,
         windowMainBack: windowMainBack ?? this.windowMainBack,
@@ -610,7 +654,14 @@ class AppColors extends ThemeExtension <AppColors> {
         title: Color.lerp (title, other.title, t) ?? title,
         titleElement: Color.lerp (titleElement, other.titleElement, t) ?? titleElement,
         titleShadow: Color.lerp (titleShadow, other.titleShadow, t) ?? titleShadow,
+        windowAccountBodyUserAvaBorder: Color.lerp (windowAccountBodyUserAvaBorder, other.windowAccountBodyUserAvaBorder, t) ?? windowAccountBodyUserAvaBorder,
+        windowAccountBodyUserNameIcon: Color.lerp (windowAccountBodyUserNameIcon, other.windowAccountBodyUserNameIcon, t) ?? windowAccountBodyUserNameIcon,
+        windowAccountBodyUserNameText: Color.lerp (windowAccountBodyUserNameText, other.windowAccountBodyUserNameText, t) ?? windowAccountBodyUserNameText,
+        windowAccountBodyUserSubscribers: Color.lerp (windowAccountBodyUserSubscribers, other.windowAccountBodyUserSubscribers, t) ?? windowAccountBodyUserSubscribers,
+        windowBarSeparator: Color.lerp (windowBarSeparator, other.windowBarSeparator, t) ?? windowBarSeparator,
         windowBarrier: Color.lerp (windowBarrier, other.windowBarrier, t) ?? windowBarrier,
+        windowBodyActionCritical: Color.lerp (windowBodyActionCritical, other.windowBodyActionCritical, t) ?? windowBodyActionCritical,
+        windowBodyActionRegular: Color.lerp (windowBodyActionRegular, other.windowBodyActionRegular, t) ?? windowBodyActionRegular,
         windowBottomText: Color.lerp (windowBottomText, other.windowBottomText, t) ?? windowBottomText,
         windowBottomTextNotActive: Color.lerp (windowBottomTextNotActive, other.windowBottomTextNotActive, t) ?? windowBottomTextNotActive,
         windowMainBack: Color.lerp (windowMainBack, other.windowMainBack, t) ?? windowMainBack,

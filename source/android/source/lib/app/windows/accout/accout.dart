@@ -20,7 +20,7 @@ class AccoutWindow extends HookWidget {
 
     final ValueNotifier <bool> actionActivity = useState (false);
 
-    const bool didEnter = true;
+    const bool didEnter = false;
 
 
     return (

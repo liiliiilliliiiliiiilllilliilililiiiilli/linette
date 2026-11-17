@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'widgets/line/line.dart';
+import 'widgets/separator/separator.dart';
 import 'widgets/action/action.dart';
+import 'widgets/action/models/character/character.dart';
 
 
 
@@ -19,12 +20,25 @@ class ActionsComponent extends StatelessWidget {
     return (
 
       Column (
+        spacing: 8 * 3,
         children: [
-          ActionComponent (context.texts.windowAccountEnteredBodyActionsSavedConnections),
-          ActionComponent (context.texts.windowAccountEnteredBodyActionsPublishedConnections),
-          Line (),
-          ActionComponent (context.texts.windowAccountEnteredBodyActionsExit),
-          ActionComponent (context.texts.windowAccountEnteredBodyActionsDeleteAccount)
+          ActionComponent (
+            context.texts.windowAccountEnteredBodyActionsSavedConnections,
+            character: ActionCharacter.regular
+          ),
+          ActionComponent (
+            context.texts.windowAccountEnteredBodyActionsPublishedConnections,
+            character: ActionCharacter.regular
+          ),
+          const Separator (),
+          ActionComponent (
+            context.texts.windowAccountEnteredBodyActionsExit,
+            character: ActionCharacter.critical
+          ),
+          ActionComponent (
+            context.texts.windowAccountEnteredBodyActionsDeleteAccount,
+            character: ActionCharacter.critical
+          )
         ]
       )
 

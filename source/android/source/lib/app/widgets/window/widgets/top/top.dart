@@ -30,7 +30,7 @@ class TopComponent extends StatelessWidget {
           border: Border (
             bottom: BorderSide (
               width: 2,
-              color: context.colors.windowSeparator
+              color: context.colors.windowBarSeparator
             )
           ),
           color: context.colors.windowTopBack

@@ -55,7 +55,7 @@ class TapHint extends HookWidget {
     }, [controller]);
 
 
-    useEffect (() {  // Анимация начинается с серидины
+    useEffect (() {  // Анимация начинается с середины
 
       Timer? initialTimer;
       Timer? periodicTimer;

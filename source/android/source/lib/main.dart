@@ -51,6 +51,7 @@ void main () async {
     'assets/images/icons/common/net.svg',
     'assets/images/icons/common/netherlands_flag.svg',
     'assets/images/icons/common/olive_branch.svg',
+    'assets/images/icons/common/pencil.svg',
     'assets/images/icons/common/pumpkin.svg',
     'assets/images/icons/common/snow_globe.svg',
     'assets/images/icons/common/snowflake.svg',

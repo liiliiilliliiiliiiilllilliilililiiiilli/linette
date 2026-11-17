@@ -18,6 +18,7 @@ class Entered extends StatelessWidget {
     return (
 
       const Column (
+        spacing: 8 * 3,
         children: [
           User (),
           ActionsComponent ()

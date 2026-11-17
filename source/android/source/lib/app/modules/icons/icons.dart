@@ -13,6 +13,7 @@ class AppIconsPalette {
   static const String bunny = 'assets/images/icons/common/bunny.svg';
   static const String butterfly = 'assets/images/icons/common/butterfly.svg';
   static const String candy = 'assets/images/icons/common/candy.svg';
+  static const String cat = 'assets/images/icons/common/cat.png';
   static const String christmasHat = 'assets/images/icons/common/christmas_hat.svg';
   static const String christmasTreeToy = 'assets/images/icons/common/christmas_tree_toy.svg';
   static const String cottonCandy = 'assets/images/icons/common/cotton_candy.svg';
@@ -38,6 +39,7 @@ class AppIconsPalette {
   static const String net = 'assets/images/icons/common/net.svg';
   static const String netherlandsFlag = 'assets/images/icons/common/netherlands_flag.svg';
   static const String oliveBranch = 'assets/images/icons/common/olive_branch.svg';
+  static const String pencil = 'assets/images/icons/common/pencil.svg';
   static const String pumpkin = 'assets/images/icons/common/pumpkin.svg';
   static const String snowGlobe = 'assets/images/icons/common/snow_globe.svg';
   static const String snowflake = 'assets/images/icons/common/snowflake.svg';
@@ -73,6 +75,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
   final String drawerOptionRight;
   final String hintTap;
   final String linkEnter;
+  final String windowBodyAccountNameAva;
+  final String windowBodyAccountNameEdit;
+  final String windowBodyAction;
 
 
   const AppIcons ({
@@ -95,7 +100,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     required this.drawerOptionLeftWallet,
     required this.drawerOptionRight,
     required this.hintTap,
-    required this.linkEnter
+    required this.linkEnter,
+    required this.windowBodyAccountNameAva,
+    required this.windowBodyAccountNameEdit,
+    required this.windowBodyAction
   });
 
 
@@ -119,7 +127,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.wallet,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenRegular = AppIcons (
@@ -142,7 +153,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.wallet,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenHalloween = AppIcons (
@@ -165,7 +179,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.candy,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenHalloween = AppIcons (
@@ -188,7 +205,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.candy,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenNewYear = AppIcons (
@@ -211,7 +231,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.snowGlobe,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenNewYear = AppIcons (
@@ -234,7 +257,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.snowGlobe,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenValentine = AppIcons (
@@ -257,7 +283,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.gift,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenValentine = AppIcons (
@@ -280,7 +309,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.gift,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenEaster = AppIcons (
@@ -303,7 +335,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.cupcake,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenEaster = AppIcons (
@@ -326,7 +361,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     drawerOptionLeftWallet: AppIconsPalette.cupcake,
     drawerOptionRight: AppIconsPalette.navigateArrow,
     hintTap: AppIconsPalette.tap,
-    linkEnter: AppIconsPalette.goArrow
+    linkEnter: AppIconsPalette.goArrow,
+    windowBodyAccountNameAva: AppIconsPalette.cat,
+    windowBodyAccountNameEdit: AppIconsPalette.pencil,
+    windowBodyAction: AppIconsPalette.navigateArrow
   );
 
 
@@ -350,7 +388,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
     String? drawerOptionLeftWallet,
     String? drawerOptionRight,
     String? hintTap,
-    String? linkEnter
+    String? linkEnter,
+    String? windowBodyAccountNameAva,
+    String? windowBodyAccountNameEdit,
+    String? windowBodyAction
   }) {
 
     return (
@@ -375,7 +416,10 @@ class AppIcons extends ThemeExtension <AppIcons> {
         drawerOptionLeftWallet: drawerOptionLeftWallet ?? this.drawerOptionLeftWallet,
         drawerOptionRight: drawerOptionRight ?? this.drawerOptionRight,
         hintTap: hintTap ?? this.hintTap,
-        linkEnter: linkEnter ?? this.linkEnter
+        linkEnter: linkEnter ?? this.linkEnter,
+        windowBodyAccountNameAva: windowBodyAccountNameAva ?? this.windowBodyAccountNameAva,
+        windowBodyAccountNameEdit: windowBodyAccountNameEdit ?? this.windowBodyAccountNameEdit,
+        windowBodyAction: windowBodyAction ?? this.windowBodyAction
       )
 
     );
