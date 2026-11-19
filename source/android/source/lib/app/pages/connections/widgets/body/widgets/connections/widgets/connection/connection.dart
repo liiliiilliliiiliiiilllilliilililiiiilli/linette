@@ -37,7 +37,7 @@ class Connection extends HookWidget {
 
     final Color colorBorder = isChosen
       ? context.colors.blockBorder
-      : context.colors.block;
+      : context.colors.blockBack;
 
 
     return (
@@ -56,7 +56,7 @@ class Connection extends HookWidget {
                 color: colorBorder
               ),
               borderRadius: BorderRadius.circular (16),
-              color: context.colors.block
+              color: context.colors.blockBack
             ),
             child: Row (
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

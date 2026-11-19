@@ -26,7 +26,7 @@ class TitleComponent extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 25,
-            color: context.colors.title
+            color: context.colors.appBarTitleText
           )
         )
       )

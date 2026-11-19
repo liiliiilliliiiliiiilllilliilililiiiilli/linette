@@ -26,7 +26,7 @@ class Separator extends StatelessWidget {
           height: 2,
           decoration: BoxDecoration (
             borderRadius: BorderRadius.circular (100),
-            color: context.colors.windowTableSeparator
+            color: context.colors.windowBodyTableSeparator
           )
         )
       ) : (
@@ -34,7 +34,7 @@ class Separator extends StatelessWidget {
           width: 2,
           decoration: BoxDecoration (
             borderRadius: BorderRadius.circular (100),
-            color: context.colors.windowTableSeparator
+            color: context.colors.windowBodyTableSeparator
           )
         )
       )

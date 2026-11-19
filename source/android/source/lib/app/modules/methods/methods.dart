@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 export 'extensions/changelanguage/changelanguage.dart';
 export 'extensions/changetheme/changetheme.dart';
 export 'extensions/closedrawer/closedrawer.dart';
-export 'extensions/closesplashscreen/closesplashscreen.dart';
 export 'extensions/freeze/freeze.dart';
 export 'extensions/getscreenwidth/getscreenwidth.dart';
 export 'extensions/holdsplashscreen/holdsplashscreen.dart';
@@ -18,6 +17,7 @@ export 'extensions/openlink/openlink.dart';
 export 'extensions/openwindow/openwindow.dart';
 export 'extensions/preloadgraphics/preloadgraphics.dart';
 export 'extensions/preloadicons/preloadicons.dart';
+export 'extensions/releasesplashscreen/releasesplashscreen.dart';
 export 'extensions/transittopage/transittopage.dart';
 
 

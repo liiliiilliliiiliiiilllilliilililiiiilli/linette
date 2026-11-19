@@ -22,9 +22,9 @@ class BodyComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final String textNetherlands = context.texts.pageConnectionsBodyListConnectionCountryNetherlands;
-    final String textFinland = context.texts.pageConnectionsBodyListConnectionCountryFinland;
-    final String textGermany = context.texts.pageConnectionsBodyListConnectionCountryGermany;
+    final String textNetherlands = context.texts.pageConnectionsBodyConnectionsCountryNetherlands;
+    final String textFinland = context.texts.pageConnectionsBodyConnectionsCountryFinland;
+    final String textGermany = context.texts.pageConnectionsBodyConnectionsCountryGermany;
 
 
     final ValueNotifier <String> chosen = useState (textNetherlands);
@@ -45,13 +45,13 @@ class BodyComponent extends HookWidget {
           padding: const EdgeInsets.only (
             top: 30
           ),
-          color: context.colors.back,
+          color: context.colors.bodyBack,
           child: Column (
             spacing: 16,
             children: [
               Liner (
                 context.texts.pageConnectionsBodyLiner (3),
-                colorBack: context.colors.back
+                colorBack: context.colors.bodyBack
               ),
               Connections ([
                 Connection (

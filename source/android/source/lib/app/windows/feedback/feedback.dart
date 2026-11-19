@@ -47,7 +47,7 @@ class FeedbackWindow extends StatelessWidget {
                   TextSpan (
                     text: context.texts.windowFeedbackBody_1,
                     style: TextStyle (
-                      color: context.colors.windowMainText
+                      color: context.colors.windowBodyText
                     )
                   ),
                   WidgetSpan (
@@ -61,7 +61,7 @@ class FeedbackWindow extends StatelessWidget {
                   TextSpan (
                     text: context.texts.windowFeedbackBody_3,
                     style: TextStyle (
-                      color: context.colors.windowMainText
+                      color: context.colors.windowBodyText
                     )
                   )
                 ]

@@ -43,8 +43,8 @@ class BodyComponent extends StatelessWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          context.colors.windowMainBack,
-                          context.colors.windowMainBack.withAlpha (0)
+                          context.colors.windowBodyBack,
+                          context.colors.windowBodyBack.withAlpha (0)
                         ]
                       )
                     )

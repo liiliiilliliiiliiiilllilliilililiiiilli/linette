@@ -39,7 +39,7 @@ class HomePage extends ConsumerWidget {
           drawer: const DrawerComponent (),
           onDrawerChanged: onDrawerChanged,
           drawerEnableOpenDragGesture: false,
-          backgroundColor: context.colors.backPrime
+          backgroundColor: context.colors.bodyBackPrime
         )
       )
 

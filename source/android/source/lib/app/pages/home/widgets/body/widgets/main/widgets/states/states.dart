@@ -27,7 +27,7 @@ class States extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,
             fontSize: 16,
-            color: context.colors.textStates
+            color: context.colors.states
           )
         )
       )

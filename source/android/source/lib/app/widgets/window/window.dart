@@ -55,7 +55,7 @@ class Window extends StatelessWidget {
                 ),
                 child: Container (
                   width: width,
-                  color: context.colors.windowMainBack,
+                  color: context.colors.windowBodyBack,
                   child: Column (
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.stretch,

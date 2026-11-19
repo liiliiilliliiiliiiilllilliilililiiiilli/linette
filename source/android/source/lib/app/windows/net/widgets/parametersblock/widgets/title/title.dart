@@ -24,7 +24,7 @@ class TitleComponent extends StatelessWidget {
         text,
         style: TextStyle (
           fontWeight: FontWeight.w500,
-          color: context.colors.windowMainTitle
+          color: context.colors.windowBodyTitle
         )
       )
 

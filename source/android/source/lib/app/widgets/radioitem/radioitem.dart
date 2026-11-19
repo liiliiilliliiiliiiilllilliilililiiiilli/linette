@@ -102,7 +102,7 @@ class RadioItem extends HookWidget {
                           fontFamily: context.fonts.archivo,
                           fontWeight: FontWeight.w600,
                           fontSize: 15,
-                          color: context.colors.windowMainText
+                          color: context.colors.windowBodyText
                         )
                       ),
                       Text (
@@ -111,7 +111,7 @@ class RadioItem extends HookWidget {
                           fontFamily: context.fonts.archivo,
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
-                          color: context.colors.windowMainText
+                          color: context.colors.windowBodyText
                         )
                       )
                     ]

@@ -58,7 +58,7 @@ class BottomComponent extends HookConsumerWidget {
 
       color = activity.value
         ? context.colors.windowBottomText
-        : context.colors.windowBottomTextNotActive;
+        : context.colors.windowBottomTextDisabled;
 
     }
 

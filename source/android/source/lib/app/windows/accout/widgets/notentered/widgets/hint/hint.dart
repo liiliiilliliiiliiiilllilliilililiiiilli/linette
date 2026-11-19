@@ -39,7 +39,7 @@ class Hint extends StatelessWidget {
                 fontFamily: context.fonts.archivo,
                 fontWeight: FontWeight.w500,
                 fontSize: 15.5,
-                color: context.colors.windowMainTextAuxiliary
+                color: context.colors.windowBodyTextAuxiliary
               )
             ),
             Transform.translate (

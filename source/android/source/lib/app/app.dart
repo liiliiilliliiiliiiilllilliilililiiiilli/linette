@@ -32,7 +32,7 @@ class App extends ConsumerWidget {
     final bool? welcomeState = ref.watch(welcomeProvider).valueOrNull;
 
 
-    // Отсутствие продолжения, пока все глобальные состояния не инициализируются:
+    // Остановка, пока все глобальные состояния не инициализируются:
 
     if (localeState == null || themeState == null || welcomeState == null) {
 
@@ -58,7 +58,7 @@ class App extends ConsumerWidget {
     final Widget appStartPage;
 
 
-    switch (themeState) {  // Цвета, иконки, цветовой системный акцент от состояния темы
+    switch (themeState) {  // Цвета, иконки и цветовой системный акцент от состояния темы
 
       case AppThemeOption.darkGreenRegular:
 
@@ -175,9 +175,9 @@ class App extends ConsumerWidget {
     }
 
 
-    // Закрытие сплэш-экрана после прогрузки всех ресурсов приложения:
+    // Освобождение сплэш-экрана после прогрузки всех ресурсов приложения:
 
-    context.methods.closeSplashScreen ();
+    context.methods.releaseSplashScreen ();
 
 
     return (
@@ -189,7 +189,7 @@ class App extends ConsumerWidget {
           pageTransitionsTheme: PageTransitionsTheme (
             builders: {
               TargetPlatform.android: FadeForwardsPageTransitionsBuilder (
-                backgroundColor: appColors.back
+                backgroundColor: appColors.bodyBack
               )
             }
           ),

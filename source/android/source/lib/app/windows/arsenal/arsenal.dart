@@ -1,16 +1,16 @@
 // Arsenal window
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/methods/methods.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/textlink/textlink.dart';
-import 'package:linette/app/widgets/textlink/models/type/type.dart';
 import 'package:linette/app/widgets/window/window.dart';
+// import 'package:linette/app/windows/arsenal/widgets/content/content.dart';
+// import 'widgets/tabs/tabs.dart';
+// import 'models/position/position.dart';
 
 
 
-class ArsenalWindow extends StatelessWidget {
+class ArsenalWindow extends HookWidget {
 
   const ArsenalWindow ({
     super.key
@@ -19,17 +19,14 @@ class ArsenalWindow extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
-    Future <void> onPress () async {
-
-      await context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
-
-    }
+    // final ValueNotifier <ArsenalWindowPosition> position = useState (ArsenalWindowPosition.decentralization);
 
 
     return (
 
       Window (
         width: 340,
+        isExpanded: true,
         title: context.texts.windowArsenalTitle,
         body: SingleChildScrollView (
           child: Padding (
@@ -37,36 +34,17 @@ class ArsenalWindow extends StatelessWidget {
               top: 10,
               bottom: 2.5
             ),
-            child: Text.rich (
-              TextSpan (
-                style: const TextStyle (
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16
-                ),
-                children: [
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_1,
-                    style: TextStyle (
-                      color: context.colors.windowMainText
-                    )
-                  ),
-                  WidgetSpan (
-                    alignment: PlaceholderAlignment.middle,
-                    child: TextLink (
-                      context.texts.windowFeedbackBody_2,
-                      type: TextLinkType.external,
-                      onPress: onPress
-                    )
-                  ),
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_3,
-                    style: TextStyle (
-                      color: context.colors.windowMainText
-                    )
-                  )
-                ]
-              )
-            )
+            child: Container ()
+            // Column (
+            //   children: [
+            //     Tabs (
+            //       position: position
+            //     ),
+            //     Content (
+            //       position: position
+            //     )
+            //   ]
+            // )
           )
         ),
         action: context.texts.windowArsenalAction

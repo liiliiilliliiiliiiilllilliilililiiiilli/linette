@@ -29,7 +29,7 @@ class Name extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 16.5,
-            color: context.colors.textCountryName
+            color: context.colors.connectionCountryName
           )
         )
       )

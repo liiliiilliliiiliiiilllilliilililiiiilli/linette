@@ -9,19 +9,19 @@ import 'package:linette/app/app.dart';
 
 void main () async {
 
-  const AppMethods methods = AppMethods ();
+  const AppMethods appMethods = AppMethods ();
 
 
   // Задержка сплэш-экрана на время прогрузки всех ресурсов приложения:
 
-  await methods.holdSplashScreen ();
+  await appMethods.holdSplashScreen ();
 
 
   // Предзагрузка графики и иконок:
 
-  await methods.preloadGraphics ();
+  await appMethods.preloadGraphics ();
 
-  await methods.preloadIcons ([
+  await appMethods.preloadIcons ([
     'assets/images/icons/common/bat.svg',
     'assets/images/icons/common/bunny.svg',
     'assets/images/icons/common/butterfly.svg',

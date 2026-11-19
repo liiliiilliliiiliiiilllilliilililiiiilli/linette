@@ -25,7 +25,7 @@ class Ava extends StatelessWidget {
           shape: BoxShape.circle,
           border: Border.all (
             width: 2,
-            color: context.colors.windowAccountBodyUserAvaBorder
+            color: context.colors.windowBodyUserAvaBorder
           )
         ),
         child: ClipOval (

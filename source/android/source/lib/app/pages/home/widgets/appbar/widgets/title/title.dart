@@ -58,9 +58,9 @@ class TitleComponent extends HookWidget {
                         (transformValue + glowWidth).clamp (0, 1)
                       ],
                       colors: [
-                        context.colors.title,
-                        context.colors.titleShadow,
-                        context.colors.title
+                        context.colors.appBarTitleText,
+                        context.colors.appBarTitleShadow,
+                        context.colors.appBarTitleText
                       ]
                     ).createShader(bounds)
 
@@ -73,7 +73,7 @@ class TitleComponent extends HookWidget {
                     fontFamily: context.fonts.fredoka,
                     fontWeight: FontWeight.w600,
                     fontSize: 25,
-                    color: context.colors.title
+                    color: context.colors.appBarTitleText
                   )
                 )
               ),
@@ -83,7 +83,7 @@ class TitleComponent extends HookWidget {
                   height: 2.75,
                   decoration: BoxDecoration (
                     borderRadius: BorderRadius.circular (100),
-                    color: context.colors.titleElement
+                    color: context.colors.appBarTitleElement
                   )
                 )
               )

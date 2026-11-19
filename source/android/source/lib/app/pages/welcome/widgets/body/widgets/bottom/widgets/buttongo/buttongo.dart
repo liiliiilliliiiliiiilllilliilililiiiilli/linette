@@ -26,7 +26,7 @@ class ButtonGo extends ConsumerWidget {
         context,
         ref,
         const HomePage (),
-        shouldCompleteWelcome: true
+        isStartup: true
       );
 
     }

@@ -28,7 +28,7 @@ class Main extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,
             fontSize: 18,
-            color: context.colors.title
+            color: context.colors.bodyTitleText
           )
         )
       )

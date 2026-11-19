@@ -33,7 +33,7 @@ class HintWindow extends StatelessWidget {
               style: TextStyle (
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
-                color: context.colors.windowMainText
+                color: context.colors.windowBodyText
               )
             )
           )

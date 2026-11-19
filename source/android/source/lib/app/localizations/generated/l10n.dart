@@ -316,40 +316,40 @@ class Texts {
   }
 
   /// `Netherlands`
-  String get pageConnectionsBodyListConnectionCountryNetherlands {
+  String get pageConnectionsBodyConnectionsCountryNetherlands {
     return Intl.message(
       'Netherlands',
-      name: 'pageConnectionsBodyListConnectionCountryNetherlands',
+      name: 'pageConnectionsBodyConnectionsCountryNetherlands',
       desc: '',
       args: [],
     );
   }
 
   /// `Finland`
-  String get pageConnectionsBodyListConnectionCountryFinland {
+  String get pageConnectionsBodyConnectionsCountryFinland {
     return Intl.message(
       'Finland',
-      name: 'pageConnectionsBodyListConnectionCountryFinland',
+      name: 'pageConnectionsBodyConnectionsCountryFinland',
       desc: '',
       args: [],
     );
   }
 
   /// `Germany`
-  String get pageConnectionsBodyListConnectionCountryGermany {
+  String get pageConnectionsBodyConnectionsCountryGermany {
     return Intl.message(
       'Germany',
-      name: 'pageConnectionsBodyListConnectionCountryGermany',
+      name: 'pageConnectionsBodyConnectionsCountryGermany',
       desc: '',
       args: [],
     );
   }
 
   /// `Chosen`
-  String get pageConnectionsBodyListConnectionIsChosen {
+  String get pageConnectionsBodyConnectionsIsChosen {
     return Intl.message(
       'Chosen',
-      name: 'pageConnectionsBodyListConnectionIsChosen',
+      name: 'pageConnectionsBodyConnectionsIsChosen',
       desc: '',
       args: [],
     );
@@ -515,6 +515,236 @@ class Texts {
     return Intl.message(
       'App\'s arsenal',
       name: 'windowArsenalTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bypass`
+  String get windowArsenalBodyTabsBypassing {
+    return Intl.message(
+      'Bypass',
+      name: 'windowArsenalBodyTabsBypassing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Decentralization`
+  String get windowArsenalBodyTabsDecentralization {
+    return Intl.message(
+      'Decentralization',
+      name: 'windowArsenalBodyTabsDecentralization',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange`
+  String get windowArsenalBodyTabsExchange {
+    return Intl.message(
+      'Exchange',
+      name: 'windowArsenalBodyTabsExchange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Platform`
+  String get windowArsenalBodyTabsPlatform {
+    return Intl.message(
+      'Platform',
+      name: 'windowArsenalBodyTabsPlatform',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spam`
+  String get windowArsenalBodyTabsSpam {
+    return Intl.message(
+      'Spam',
+      name: 'windowArsenalBodyTabsSpam',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bypass`
+  String get windowArsenalBodySectionsBypassingTitle {
+    return Intl.message(
+      'Bypass',
+      name: 'windowArsenalBodySectionsBypassingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When using the platform, server connections are saved locally on your device. This storage can be exported and imported as a single file. You can also set up configurations manually by entering the target server details.\n\nThe bypass feature uses saved connections to circumvent network blocks. If no working configurations remain, you can fetch new ones from the platform.`
+  String get windowArsenalBodySectionsBypassingInstruction {
+    return Intl.message(
+      'When using the platform, server connections are saved locally on your device. This storage can be exported and imported as a single file. You can also set up configurations manually by entering the target server details.\n\nThe bypass feature uses saved connections to circumvent network blocks. If no working configurations remain, you can fetch new ones from the platform.',
+      name: 'windowArsenalBodySectionsBypassingInstruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View and edit saved connections`
+  String get windowArsenalBodySectionsBypassingAction_1 {
+    return Intl.message(
+      'View and edit saved connections',
+      name: 'windowArsenalBodySectionsBypassingAction_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Import connections`
+  String get windowArsenalBodySectionsBypassingAction_2 {
+    return Intl.message(
+      'Import connections',
+      name: 'windowArsenalBodySectionsBypassingAction_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Export connections`
+  String get windowArsenalBodySectionsBypassingAction_3 {
+    return Intl.message(
+      'Export connections',
+      name: 'windowArsenalBodySectionsBypassingAction_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Automatically remove low-quality connections`
+  String get windowArsenalBodySectionsBypassingAction_4 {
+    return Intl.message(
+      'Automatically remove low-quality connections',
+      name: 'windowArsenalBodySectionsBypassingAction_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connect to VPN on app launch`
+  String get windowArsenalBodySectionsBypassingAction_5 {
+    return Intl.message(
+      'Connect to VPN on app launch',
+      name: 'windowArsenalBodySectionsBypassingAction_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Decentralization`
+  String get windowArsenalBodySectionsDecentralizationTitle {
+    return Intl.message(
+      'Decentralization',
+      name: 'windowArsenalBodySectionsDecentralizationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Creates a decentralized mesh network in case there is no internet access at all. If you are connected to this network and a remote peer has access to the open internet, you can route your traffic through them, including downloading updates for the app.`
+  String get windowArsenalBodySectionsDecentralizationInstruction {
+    return Intl.message(
+      'Creates a decentralized mesh network in case there is no internet access at all. If you are connected to this network and a remote peer has access to the open internet, you can route your traffic through them, including downloading updates for the app.',
+      name: 'windowArsenalBodySectionsDecentralizationInstruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange`
+  String get windowArsenalBodySectionsExchangeTitle {
+    return Intl.message(
+      'Exchange',
+      name: 'windowArsenalBodySectionsExchangeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The app can connect to a distributed network to share and receive bypass data, updates, and coordination info. This helps during attacks on platform servers or when only a local intranet is available.`
+  String get windowArsenalBodySectionsExchangeInstruction {
+    return Intl.message(
+      'The app can connect to a distributed network to share and receive bypass data, updates, and coordination info. This helps during attacks on platform servers or when only a local intranet is available.',
+      name: 'windowArsenalBodySectionsExchangeInstruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Platform`
+  String get windowArsenalBodySectionsPlatformTitle {
+    return Intl.message(
+      'Platform',
+      name: 'windowArsenalBodySectionsPlatformTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Providers (developers) publish their own connections on the platform, either for free or for a fee (paid or ad-supported). Once you connect and configure the platform, new connections are saved to your device based on their uptime and the provider's rating.`
+  String get windowArsenalBodySectionsPlatformInstruction {
+    return Intl.message(
+      'Providers (developers) publish their own connections on the platform, either for free or for a fee (paid or ad-supported). Once you connect and configure the platform, new connections are saved to your device based on their uptime and the provider\'s rating.',
+      name: 'windowArsenalBodySectionsPlatformInstruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spam`
+  String get windowArsenalBodySectionsSpamTitle {
+    return Intl.message(
+      'Spam',
+      name: 'windowArsenalBodySectionsSpamTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Every device with Linette installed can act as a mail sender targeting internet censors (RKN, Yandex, etc.). Using the platform, exchange, and decentralization mechanisms, devices can coordinate to send emails simultaneously. This helps reach the authorities and push back against unfair restrictions, allowing millions of people to voice their opinions with a higher chance of success.\n\nYou can customize the email body by choosing between a collective template or your own text.`
+  String get windowArsenalBodySectionsSpamInstruction {
+    return Intl.message(
+      'Every device with Linette installed can act as a mail sender targeting internet censors (RKN, Yandex, etc.). Using the platform, exchange, and decentralization mechanisms, devices can coordinate to send emails simultaneously. This helps reach the authorities and push back against unfair restrictions, allowing millions of people to voice their opinions with a higher chance of success.\n\nYou can customize the email body by choosing between a collective template or your own text.',
+      name: 'windowArsenalBodySectionsSpamInstruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email type`
+  String get windowArsenalBodySectionsSpamAction_1 {
+    return Intl.message(
+      'Email type',
+      name: 'windowArsenalBodySectionsSpamAction_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email content`
+  String get windowArsenalBodySectionsSpamAction_2 {
+    return Intl.message(
+      'Email content',
+      name: 'windowArsenalBodySectionsSpamAction_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sending method`
+  String get windowArsenalBodySectionsSpamAction_3 {
+    return Intl.message(
+      'Sending method',
+      name: 'windowArsenalBodySectionsSpamAction_3',
       desc: '',
       args: [],
     );

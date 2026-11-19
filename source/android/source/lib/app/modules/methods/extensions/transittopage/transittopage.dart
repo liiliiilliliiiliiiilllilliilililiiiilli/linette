@@ -11,12 +11,12 @@ import 'package:linette/app/modules/methods/methods.dart';
 
 extension TransitToPageExtension on AppMethods {
 
-  Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page, {bool shouldCompleteWelcome = false}) async {
+  Future <void> transitToPage (BuildContext context, WidgetRef ref, Widget page, {bool isStartup = false}) async {
 
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.read (actionsFreezeProvider.notifier);
 
 
-    if (shouldCompleteWelcome) {
+    if (isStartup) {
 
       final WelcomeNotifier welcomeNotifier = ref.read (welcomeProvider.notifier);
 
@@ -60,7 +60,7 @@ extension TransitToPageExtension on AppMethods {
                       Opacity (
                         opacity: curveValue,
                         child: Container (
-                          color: context.colors.backPrime
+                          color: context.colors.bodyBackPrime
                         )
                       )
 
@@ -76,7 +76,7 @@ extension TransitToPageExtension on AppMethods {
                     return (
 
                       Container (
-                        color: context.colors.backPrime,
+                        color: context.colors.bodyBackPrime,
                         child: Opacity (
                           opacity: curveValue,
                           child: child

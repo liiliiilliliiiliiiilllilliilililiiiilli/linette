@@ -18,9 +18,9 @@ class AccoutWindow extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final ValueNotifier <bool> actionActivity = useState (false);
+    final ValueNotifier <bool> didEnter = useState (false);
 
-    const bool didEnter = false;
+    final ValueNotifier <bool> actionActivity = useState (false);
 
 
     return (
@@ -28,18 +28,18 @@ class AccoutWindow extends HookWidget {
       Window (
         width: 340,
         title: context.texts.windowAccountNotEnteredTitle,
-        body: const SingleChildScrollView (
+        body: SingleChildScrollView (
           child: Padding (
-            padding: EdgeInsets.only (
+            padding: const EdgeInsets.only (
               top: 10 * 1.5,
               left: 2.5 * 1.5,
               right: 2.5 * 1.5,
               bottom: 10 * 1.5
             ),
-            child: (didEnter) ? (
-              NotEntered ()
+            child: (didEnter.value) ? (
+              const NotEntered ()
             ) : (
-              Entered ()
+              const Entered ()
             )
           )
         ),

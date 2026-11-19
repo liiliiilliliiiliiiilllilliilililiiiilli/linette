@@ -27,7 +27,7 @@ class Status extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 26,
-            color: context.colors.textStatus
+            color: context.colors.status
           )
         )
       )

@@ -31,7 +31,7 @@ class TableStata extends StatelessWidget {
               fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w600,
               fontSize: 19,
-              color: context.colors.windowTableStataAmount
+              color: context.colors.windowBodyTableStataValue
             )
           ),
           Text (
@@ -40,7 +40,7 @@ class TableStata extends StatelessWidget {
               fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w500,
               fontSize: 12,
-              color: context.colors.windowTableStataDescription
+              color: context.colors.windowBodyTableStataName
             )
           )
         ]

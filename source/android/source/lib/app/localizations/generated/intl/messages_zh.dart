@@ -28,15 +28,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage("选择服务器"),
-    "pageConnectionsBodyLiner": m0,
-    "pageConnectionsBodyListConnectionCountryFinland":
+    "pageConnectionsBodyConnectionsCountryFinland":
         MessageLookupByLibrary.simpleMessage("芬兰"),
-    "pageConnectionsBodyListConnectionCountryGermany":
+    "pageConnectionsBodyConnectionsCountryGermany":
         MessageLookupByLibrary.simpleMessage("德国"),
-    "pageConnectionsBodyListConnectionCountryNetherlands":
+    "pageConnectionsBodyConnectionsCountryNetherlands":
         MessageLookupByLibrary.simpleMessage("荷兰"),
-    "pageConnectionsBodyListConnectionIsChosen":
+    "pageConnectionsBodyConnectionsIsChosen":
         MessageLookupByLibrary.simpleMessage("已选"),
+    "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("无连接"),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
@@ -112,6 +112,63 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "windowAccountNotEnteredTitle": MessageLookupByLibrary.simpleMessage("帐户"),
     "windowArsenalAction": MessageLookupByLibrary.simpleMessage("完成"),
+    "windowArsenalBodySectionsBypassingAction_1":
+        MessageLookupByLibrary.simpleMessage("查看和编辑已保存的连接"),
+    "windowArsenalBodySectionsBypassingAction_2":
+        MessageLookupByLibrary.simpleMessage("导入连接"),
+    "windowArsenalBodySectionsBypassingAction_3":
+        MessageLookupByLibrary.simpleMessage("导出连接"),
+    "windowArsenalBodySectionsBypassingAction_4":
+        MessageLookupByLibrary.simpleMessage("自动删除低质量连接"),
+    "windowArsenalBodySectionsBypassingAction_5":
+        MessageLookupByLibrary.simpleMessage("启动应用时自动连接 VPN"),
+    "windowArsenalBodySectionsBypassingInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "使用平台时，服务器连接信息会保存在设备的本地存储中。该存储可以导出或导入为单个文件。您也可以通过输入目标服务器信息手动添加配置。\n\n绕过功能会利用已保存的连接来突破网络封锁。如果没有可用的配置，您可以从平台获取新的连接。",
+        ),
+    "windowArsenalBodySectionsBypassingTitle":
+        MessageLookupByLibrary.simpleMessage("绕过"),
+    "windowArsenalBodySectionsDecentralizationInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "在完全断网的情况下创建去中心化网络。如果您已接入此网络，且网络中的某个远程节点可以访问自由互联网，您就可以通过该节点中转流量，包括更新应用数据。",
+        ),
+    "windowArsenalBodySectionsDecentralizationTitle":
+        MessageLookupByLibrary.simpleMessage("去中心化"),
+    "windowArsenalBodySectionsExchangeInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "应用可以连接到分布式网络，以分享和接收绕过数据、更新及协调信息。这在平台服务器遭受攻击或仅能访问区域内网时非常有用。",
+        ),
+    "windowArsenalBodySectionsExchangeTitle":
+        MessageLookupByLibrary.simpleMessage("数据交换"),
+    "windowArsenalBodySectionsPlatformInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "服务商（开发者）在平台上发布自己的连接——免费或收费（付费或含广告）。连接并配置平台后，系统会根据连接可用性和服务商评分，将新连接保存到您的设备中。",
+        ),
+    "windowArsenalBodySectionsPlatformTitle":
+        MessageLookupByLibrary.simpleMessage("平台"),
+    "windowArsenalBodySectionsSpamAction_1":
+        MessageLookupByLibrary.simpleMessage("邮件类型"),
+    "windowArsenalBodySectionsSpamAction_2":
+        MessageLookupByLibrary.simpleMessage("邮件内容"),
+    "windowArsenalBodySectionsSpamAction_3":
+        MessageLookupByLibrary.simpleMessage("发送方式"),
+    "windowArsenalBodySectionsSpamInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "每台安装了 Linette 的设备都可以向网络审查机构（如 RKN、Yandex 等）发送邮件。借助平台、数据交换和去中心化机制，各设备可以协同工作并同步发送邮件（发起群发行动）。这有助于向当局传达诉求，促使取消不公正的限制措施，让数百万民众更有机会成功表达自己的意愿。\n\n邮件内容可自由更改——既可以使用集体模板，也可以自定义内容。",
+        ),
+    "windowArsenalBodySectionsSpamTitle": MessageLookupByLibrary.simpleMessage(
+      "邮件群发",
+    ),
+    "windowArsenalBodyTabsBypassing": MessageLookupByLibrary.simpleMessage(
+      "绕过",
+    ),
+    "windowArsenalBodyTabsDecentralization":
+        MessageLookupByLibrary.simpleMessage("去中心化"),
+    "windowArsenalBodyTabsExchange": MessageLookupByLibrary.simpleMessage(
+      "数据交换",
+    ),
+    "windowArsenalBodyTabsPlatform": MessageLookupByLibrary.simpleMessage("平台"),
+    "windowArsenalBodyTabsSpam": MessageLookupByLibrary.simpleMessage("邮件群发"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("确定"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage("服务新闻发布在 "),

@@ -30,15 +30,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Choose the server",
     ),
-    "pageConnectionsBodyLiner": m0,
-    "pageConnectionsBodyListConnectionCountryFinland":
+    "pageConnectionsBodyConnectionsCountryFinland":
         MessageLookupByLibrary.simpleMessage("Finland"),
-    "pageConnectionsBodyListConnectionCountryGermany":
+    "pageConnectionsBodyConnectionsCountryGermany":
         MessageLookupByLibrary.simpleMessage("Germany"),
-    "pageConnectionsBodyListConnectionCountryNetherlands":
+    "pageConnectionsBodyConnectionsCountryNetherlands":
         MessageLookupByLibrary.simpleMessage("Netherlands"),
-    "pageConnectionsBodyListConnectionIsChosen":
+    "pageConnectionsBodyConnectionsIsChosen":
         MessageLookupByLibrary.simpleMessage("Chosen"),
+    "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("No connection"),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
@@ -138,6 +138,67 @@ class MessageLookup extends MessageLookupByLibrary {
       "Account",
     ),
     "windowArsenalAction": MessageLookupByLibrary.simpleMessage("Done"),
+    "windowArsenalBodySectionsBypassingAction_1":
+        MessageLookupByLibrary.simpleMessage("View and edit saved connections"),
+    "windowArsenalBodySectionsBypassingAction_2":
+        MessageLookupByLibrary.simpleMessage("Import connections"),
+    "windowArsenalBodySectionsBypassingAction_3":
+        MessageLookupByLibrary.simpleMessage("Export connections"),
+    "windowArsenalBodySectionsBypassingAction_4":
+        MessageLookupByLibrary.simpleMessage(
+          "Automatically remove low-quality connections",
+        ),
+    "windowArsenalBodySectionsBypassingAction_5":
+        MessageLookupByLibrary.simpleMessage("Connect to VPN on app launch"),
+    "windowArsenalBodySectionsBypassingInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "When using the platform, server connections are saved locally on your device. This storage can be exported and imported as a single file. You can also set up configurations manually by entering the target server details.\n\nThe bypass feature uses saved connections to circumvent network blocks. If no working configurations remain, you can fetch new ones from the platform.",
+        ),
+    "windowArsenalBodySectionsBypassingTitle":
+        MessageLookupByLibrary.simpleMessage("Bypass"),
+    "windowArsenalBodySectionsDecentralizationInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Creates a decentralized mesh network in case there is no internet access at all. If you are connected to this network and a remote peer has access to the open internet, you can route your traffic through them, including downloading updates for the app.",
+        ),
+    "windowArsenalBodySectionsDecentralizationTitle":
+        MessageLookupByLibrary.simpleMessage("Decentralization"),
+    "windowArsenalBodySectionsExchangeInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "The app can connect to a distributed network to share and receive bypass data, updates, and coordination info. This helps during attacks on platform servers or when only a local intranet is available.",
+        ),
+    "windowArsenalBodySectionsExchangeTitle":
+        MessageLookupByLibrary.simpleMessage("Exchange"),
+    "windowArsenalBodySectionsPlatformInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Providers (developers) publish their own connections on the platform, either for free or for a fee (paid or ad-supported). Once you connect and configure the platform, new connections are saved to your device based on their uptime and the provider\'s rating.",
+        ),
+    "windowArsenalBodySectionsPlatformTitle":
+        MessageLookupByLibrary.simpleMessage("Platform"),
+    "windowArsenalBodySectionsSpamAction_1":
+        MessageLookupByLibrary.simpleMessage("Email type"),
+    "windowArsenalBodySectionsSpamAction_2":
+        MessageLookupByLibrary.simpleMessage("Email content"),
+    "windowArsenalBodySectionsSpamAction_3":
+        MessageLookupByLibrary.simpleMessage("Sending method"),
+    "windowArsenalBodySectionsSpamInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Every device with Linette installed can act as a mail sender targeting internet censors (RKN, Yandex, etc.). Using the platform, exchange, and decentralization mechanisms, devices can coordinate to send emails simultaneously. This helps reach the authorities and push back against unfair restrictions, allowing millions of people to voice their opinions with a higher chance of success.\n\nYou can customize the email body by choosing between a collective template or your own text.",
+        ),
+    "windowArsenalBodySectionsSpamTitle": MessageLookupByLibrary.simpleMessage(
+      "Spam",
+    ),
+    "windowArsenalBodyTabsBypassing": MessageLookupByLibrary.simpleMessage(
+      "Bypass",
+    ),
+    "windowArsenalBodyTabsDecentralization":
+        MessageLookupByLibrary.simpleMessage("Decentralization"),
+    "windowArsenalBodyTabsExchange": MessageLookupByLibrary.simpleMessage(
+      "Exchange",
+    ),
+    "windowArsenalBodyTabsPlatform": MessageLookupByLibrary.simpleMessage(
+      "Platform",
+    ),
+    "windowArsenalBodyTabsSpam": MessageLookupByLibrary.simpleMessage("Spam"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
       "App\'s arsenal",
     ),

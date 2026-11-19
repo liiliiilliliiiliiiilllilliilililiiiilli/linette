@@ -31,7 +31,7 @@ class Data extends StatelessWidget {
                 style: TextStyle (
                   fontWeight: FontWeight.w500,
                   fontSize: 15.5,
-                  color: context.colors.windowAccountBodyUserNameText
+                  color: context.colors.windowBodyUserNameText
                 )
               ),
               SvgPicture.asset (
@@ -39,7 +39,7 @@ class Data extends StatelessWidget {
                 width: 12.5,
                 height: 12.5,
                 colorFilter: ColorFilter.mode (
-                  context.colors.windowAccountBodyUserNameIcon,
+                  context.colors.windowBodyUserNameIcon,
                   BlendMode.srcIn
                 )
               )
@@ -50,7 +50,7 @@ class Data extends StatelessWidget {
             style: TextStyle (
               fontWeight: FontWeight.w500,
               fontSize: 15.5,
-              color: context.colors.windowAccountBodyUserSubscribers
+              color: context.colors.windowBodyUserSubscribers
             )
           )
         ]

@@ -114,7 +114,7 @@ class ButtonComponent extends HookWidget {
                             width: icon.size,
                             height: icon.size,
                             colorFilter: ColorFilter.mode (
-                              context.colors.button,
+                              context.colors.buttonBack,
                               BlendMode.srcIn
                             )
                           )
@@ -132,7 +132,7 @@ class ButtonComponent extends HookWidget {
                   ),
                   decoration: BoxDecoration (
                     borderRadius: BorderRadius.circular (10),
-                    color: context.colors.button
+                    color: context.colors.buttonBack
                   ),
                   child: Text (
                     text,
@@ -156,7 +156,7 @@ class ButtonComponent extends HookWidget {
                           width: icon.size,
                           height: icon.size,
                           colorFilter: ColorFilter.mode (
-                            context.colors.button,
+                            context.colors.buttonBack,
                             BlendMode.srcIn
                           )
                         )

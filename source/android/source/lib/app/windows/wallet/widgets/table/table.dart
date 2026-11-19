@@ -32,7 +32,7 @@ class TableComponent extends StatelessWidget {
         decoration: BoxDecoration (
           border: Border.all (
             width: 2,
-            color: context.colors.windowTableBorder,
+            color: context.colors.windowBodyTableBorder,
           ),
           borderRadius: BorderRadius.circular (24)
         ),

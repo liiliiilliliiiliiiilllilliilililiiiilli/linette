@@ -59,7 +59,7 @@ class TextLink extends HookWidget {
         fontFamily = null;
         fontWeight = FontWeight.w400;
         fontSize = 16;
-        color = context.colors.link;
+        color = context.colors.linkExternal;
 
         break;
 

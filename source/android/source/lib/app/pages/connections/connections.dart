@@ -26,7 +26,7 @@ class ConnectionsPage extends StatelessWidget {
         child: Scaffold (
           appBar: const AppBarComponent (),
           body: const BodyComponent (),
-          backgroundColor: context.colors.backPrime
+          backgroundColor: context.colors.bodyBackPrime
         )
       )
 

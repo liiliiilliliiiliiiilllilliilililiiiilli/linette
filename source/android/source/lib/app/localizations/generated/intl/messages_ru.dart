@@ -30,15 +30,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Выберите сервер",
     ),
-    "pageConnectionsBodyLiner": m0,
-    "pageConnectionsBodyListConnectionCountryFinland":
+    "pageConnectionsBodyConnectionsCountryFinland":
         MessageLookupByLibrary.simpleMessage("Финляндия"),
-    "pageConnectionsBodyListConnectionCountryGermany":
+    "pageConnectionsBodyConnectionsCountryGermany":
         MessageLookupByLibrary.simpleMessage("Германия"),
-    "pageConnectionsBodyListConnectionCountryNetherlands":
+    "pageConnectionsBodyConnectionsCountryNetherlands":
         MessageLookupByLibrary.simpleMessage("Нидерланды"),
-    "pageConnectionsBodyListConnectionIsChosen":
+    "pageConnectionsBodyConnectionsIsChosen":
         MessageLookupByLibrary.simpleMessage("Выбран"),
+    "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
     "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage(
       "Нет подключения",
@@ -140,6 +140,71 @@ class MessageLookup extends MessageLookupByLibrary {
       "Аккаунт",
     ),
     "windowArsenalAction": MessageLookupByLibrary.simpleMessage("Готово"),
+    "windowArsenalBodySectionsBypassingAction_1":
+        MessageLookupByLibrary.simpleMessage(
+          "Просмотреть и редактировать сохраненные подключения",
+        ),
+    "windowArsenalBodySectionsBypassingAction_2":
+        MessageLookupByLibrary.simpleMessage("Импортировать подключения"),
+    "windowArsenalBodySectionsBypassingAction_3":
+        MessageLookupByLibrary.simpleMessage("Экспортировать подключения"),
+    "windowArsenalBodySectionsBypassingAction_4":
+        MessageLookupByLibrary.simpleMessage(
+          "Автоматически удалять некачественные подключения",
+        ),
+    "windowArsenalBodySectionsBypassingAction_5":
+        MessageLookupByLibrary.simpleMessage(
+          "Подключение к VPN при запуске приложения",
+        ),
+    "windowArsenalBodySectionsBypassingInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "При использовании платформы подключения к серверам сохраняются на устройстве в локальном хранилище. Хранилище можно экспортировать и импортировать единым файлом. Также конфигурации можно устанавливать вручную путем ввода данных целевых серверов.\n\nФункция обхода использует накопленные подключения, чтобы устранять сетевые блокировки. Если не остается рабочих конфигураций, их можно брать из платформы.",
+        ),
+    "windowArsenalBodySectionsBypassingTitle":
+        MessageLookupByLibrary.simpleMessage("Обход"),
+    "windowArsenalBodySectionsDecentralizationInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Создание децентрализованной интернет-сети на случай, если интернета вообще нет. Если Вы подключены к децентрализованной сети и у кого-то из ее отдаленных членов есть выход в свободный интернет, Вы сможете выйти в него через данного посредника, в том числе обновив данные для приложения.",
+        ),
+    "windowArsenalBodySectionsDecentralizationTitle":
+        MessageLookupByLibrary.simpleMessage("Децентрализация"),
+    "windowArsenalBodySectionsExchangeInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Приложение может подключаться к распределенной сети, чтобы делиться и получать данные для обходов, обновлений и координации. Это помогает при атаках на сервера платформы или если доступна только внутрирегиональная сеть.",
+        ),
+    "windowArsenalBodySectionsExchangeTitle":
+        MessageLookupByLibrary.simpleMessage("Обмен"),
+    "windowArsenalBodySectionsPlatformInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Провайдеры (разработчики) публикуют на платформе собственные подключения - свободно или за плату (деньги или реклама). При подключении и настройке платформы на устройстве сохраняются новые подключения, согласно их работоспособности и рейтингу провайдера.",
+        ),
+    "windowArsenalBodySectionsPlatformTitle":
+        MessageLookupByLibrary.simpleMessage("Платформа"),
+    "windowArsenalBodySectionsSpamAction_1":
+        MessageLookupByLibrary.simpleMessage("Тип письма"),
+    "windowArsenalBodySectionsSpamAction_2":
+        MessageLookupByLibrary.simpleMessage("Содержание письма"),
+    "windowArsenalBodySectionsSpamAction_3":
+        MessageLookupByLibrary.simpleMessage("Способ отправки"),
+    "windowArsenalBodySectionsSpamInstruction":
+        MessageLookupByLibrary.simpleMessage(
+          "Каждое устройство, на котором установлен Linette, может выступать в роли спаммера на почты блокираторов интернета (РКН, Яндекс и др.). Благодаря механизмам платформы, обмена и децентрализации устройства могут координироваться и отправлять письма (делать спам-атаки) синхронно. Так можно достучаться до государства и добиться отмены несправедливых мер. Так миллионы людей могут выразить свое мнение с большей вероятностью на успех.\n\nСодержание письма можно менять - оно может быть коллективным или собственным.",
+        ),
+    "windowArsenalBodySectionsSpamTitle": MessageLookupByLibrary.simpleMessage(
+      "Спам",
+    ),
+    "windowArsenalBodyTabsBypassing": MessageLookupByLibrary.simpleMessage(
+      "Обход",
+    ),
+    "windowArsenalBodyTabsDecentralization":
+        MessageLookupByLibrary.simpleMessage("Децентрализация"),
+    "windowArsenalBodyTabsExchange": MessageLookupByLibrary.simpleMessage(
+      "Обмен",
+    ),
+    "windowArsenalBodyTabsPlatform": MessageLookupByLibrary.simpleMessage(
+      "Платформа",
+    ),
+    "windowArsenalBodyTabsSpam": MessageLookupByLibrary.simpleMessage("Спам"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
       "Арсенал приложения",
     ),

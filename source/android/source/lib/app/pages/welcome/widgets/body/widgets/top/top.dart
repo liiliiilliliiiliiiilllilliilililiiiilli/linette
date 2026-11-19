@@ -51,7 +51,7 @@ class Top extends HookWidget {
                   text: context.texts.pageWelcomeBodyTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
-                    color: context.colors.titleElement
+                    color: context.colors.bodyTitleElement
                   )
                 ),
                 WidgetSpan (
@@ -71,9 +71,9 @@ class Top extends HookWidget {
                             (transformValue + glowWidth).clamp (0, 1)
                           ],
                           colors: [
-                            context.colors.title,
-                            context.colors.titleShadow,
-                            context.colors.title
+                            context.colors.bodyTitleText,
+                            context.colors.bodyTitleShadow,
+                            context.colors.bodyTitleText
                           ]
                         ).createShader(bounds)
 
@@ -86,7 +86,7 @@ class Top extends HookWidget {
                         fontFamily: context.fonts.fredoka,
                         fontWeight: FontWeight.w600,
                         fontSize: 41,
-                        color: context.colors.title
+                        color: context.colors.bodyTitleText
                       )
                     )
                   )
@@ -95,7 +95,7 @@ class Top extends HookWidget {
                   text: context.texts.pageWelcomeBodyTopTitleDot,
                   style: TextStyle (
                     fontWeight: FontWeight.w500,
-                    color: context.colors.titleElement
+                    color: context.colors.bodyTitleElement
                   )
                 )
               ]
@@ -110,7 +110,7 @@ class Top extends HookWidget {
                 fontFamily: context.fonts.archivo,
                 fontWeight: FontWeight.w500,
                 fontSize: 20,
-                color: context.colors.title
+                color: context.colors.bodyTitleText
               )
             )
           )

@@ -24,7 +24,7 @@ class TitleComponent extends StatelessWidget {
           fontFamily: context.fonts.archivo,
           fontWeight: FontWeight.w600,
           fontSize: 17,
-          color: context.colors.windowMainTitle
+          color: context.colors.windowBodyTitle
         )
       )
 

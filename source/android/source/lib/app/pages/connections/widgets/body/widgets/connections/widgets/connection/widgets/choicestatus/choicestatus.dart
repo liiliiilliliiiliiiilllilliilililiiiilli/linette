@@ -21,7 +21,7 @@ class ChoiceStatus extends StatelessWidget {
   @override Widget build (BuildContext context) {
 
     final String text = isChosen
-      ? context.texts.pageConnectionsBodyListConnectionIsChosen
+      ? context.texts.pageConnectionsBodyConnectionsIsChosen
       : '';
 
 
@@ -35,7 +35,7 @@ class ChoiceStatus extends StatelessWidget {
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 16.5,
-            color: context.colors.textChoiceStatus
+            color: context.colors.connectionChoiceStatus
           )
         )
       )
