@@ -24,7 +24,7 @@ class Instruction extends StatelessWidget {
         text,
         style: TextStyle (
           fontWeight: FontWeight.w400,
-          fontSize: 16,
+          fontSize: 15.5,
           color: context.colors.windowBodyText
         )
       )

@@ -149,7 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
           "Automatically remove low-quality connections",
         ),
     "windowArsenalBodySectionsBypassingAction_5":
-        MessageLookupByLibrary.simpleMessage("Connect to VPN on app launch"),
+        MessageLookupByLibrary.simpleMessage("Start the system on app launch"),
     "windowArsenalBodySectionsBypassingInstruction":
         MessageLookupByLibrary.simpleMessage(
           "When using the platform, server connections are saved locally on your device. This storage can be exported and imported as a single file. You can also set up configurations manually by entering the target server details.\n\nThe bypass feature uses saved connections to circumvent network blocks. If no working configurations remain, you can fetch new ones from the platform.",

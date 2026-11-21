@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
-// import 'package:linette/app/windows/arsenal/widgets/content/content.dart';
 // import 'widgets/tabs/tabs.dart';
-// import 'models/position/position.dart';
+import 'widgets/content/content.dart';
+import 'models/position/position.dart';
 
 
 
@@ -19,7 +19,7 @@ class ArsenalWindow extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    // final ValueNotifier <ArsenalWindowPosition> position = useState (ArsenalWindowPosition.decentralization);
+    final ValueNotifier <ArsenalWindowPosition> position = useState (ArsenalWindowPosition.bypassing);
 
 
     return (
@@ -31,20 +31,21 @@ class ArsenalWindow extends HookWidget {
         body: SingleChildScrollView (
           child: Padding (
             padding: const EdgeInsets.only (
-              top: 10,
-              bottom: 2.5
+              top: 10 * 1,
+              left: 2.5 * 1.5,
+              right: 2.5 * 1.5,
+              bottom: 10 * 1.5
             ),
-            child: Container ()
-            // Column (
-            //   children: [
-            //     Tabs (
-            //       position: position
-            //     ),
-            //     Content (
-            //       position: position
-            //     )
-            //   ]
-            // )
+            child: Column (
+              children: [
+                // Tabs (
+                //   position: position
+                // ),
+                Content (
+                  position: position
+                )
+              ]
+            )
           )
         ),
         action: context.texts.windowArsenalAction

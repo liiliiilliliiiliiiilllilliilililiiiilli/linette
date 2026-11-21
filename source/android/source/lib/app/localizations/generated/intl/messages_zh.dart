@@ -121,7 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "windowArsenalBodySectionsBypassingAction_4":
         MessageLookupByLibrary.simpleMessage("自动删除低质量连接"),
     "windowArsenalBodySectionsBypassingAction_5":
-        MessageLookupByLibrary.simpleMessage("启动应用时自动连接 VPN"),
+        MessageLookupByLibrary.simpleMessage("应用启动时启动系统"),
     "windowArsenalBodySectionsBypassingInstruction":
         MessageLookupByLibrary.simpleMessage(
           "使用平台时，服务器连接信息会保存在设备的本地存储中。该存储可以导出或导入为单个文件。您也可以通过输入目标服务器信息手动添加配置。\n\n绕过功能会利用已保存的连接来突破网络封锁。如果没有可用的配置，您可以从平台获取新的连接。",

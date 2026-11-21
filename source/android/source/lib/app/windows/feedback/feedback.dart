@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/textlink/textlink.dart';
-import 'package:linette/app/widgets/textlink/models/type/type.dart';
+import 'package:linette/app/widgets/link/link.dart';
+import 'package:linette/app/widgets/link/models/type/type.dart';
 import 'package:linette/app/widgets/window/window.dart';
 
 
@@ -52,9 +52,9 @@ class FeedbackWindow extends StatelessWidget {
                   ),
                   WidgetSpan (
                     alignment: PlaceholderAlignment.middle,
-                    child: TextLink (
+                    child: Link (
                       context.texts.windowFeedbackBody_2,
-                      type: TextLinkType.external,
+                      type: LinkType.external,
                       onPress: onPress
                     )
                   ),

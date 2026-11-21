@@ -14,9 +14,9 @@ class AppColorsPalette {
   static const Color black = Color (0xff000000);
   static const Color grey = Color (0xff808080);
   static const Color white = Color (0xffffffff);
-  static const Color blue = Color (0xff0645AD);
-  static const Color green = Color (0xff4caf50);
   static const Color red = Color (0xfff44336);
+  static const Color green = Color (0xff4caf50);
+  static const Color blue = Color (0xff0645AD);
   static const Color transparent_1_grey_1 = Color (0x40000000);
   static const Color transparent_1_grey_3 = Color (0x40808080);
   static const Color transparent_2_grey_1 = Color (0x80000000);
@@ -34,13 +34,14 @@ class AppColorsPalette {
   static const Color grey_7 = Color (0xff171717);
   static const Color grey_8 = Color (0xff1a1a1a);
   static const Color grey_9 = Color (0xff202020);
-  static const Color grey_10 = Color (0xff303030);
-  static const Color grey_11 = Color (0xff404040);
-  static const Color grey_12 = Color (0xff8b8b8b);
-  static const Color grey_13 = Color (0xffbfbfbf);
-  static const Color grey_14 = Color (0xffcdcdcd);
-  static const Color grey_15 = Color (0xfffafafa);
-  static const Color blue_1 = Color (0xff9da6d9);
+  static const Color grey_10 = Color (0xff292929);
+  static const Color grey_11 = Color (0xff303030);
+  static const Color grey_12 = Color (0xff404040);
+  static const Color grey_13 = Color (0xff8b8b8b);
+  static const Color grey_14 = Color (0xffbfbfbf);
+  static const Color grey_15 = Color (0xffcdcdcd);
+  static const Color grey_16 = Color (0xfffafafa);
+  static const Color red_1 = Color (0xffcb393c);
   static const Color green_1 = Color (0xff12361b);
   static const Color green_2 = Color (0xff1b1c1b);
   static const Color green_3 = Color (0xff394335);
@@ -48,7 +49,7 @@ class AppColorsPalette {
   static const Color green_5 = Color (0xff687262);
   static const Color green_6 = Color (0xff8b9e80);
   static const Color green_7 = Color (0xffd8e0d7);
-  static const Color red_1 = Color (0xffcb393c);
+  static const Color blue_1 = Color (0xff9da6d9);
 
 }
 
@@ -115,6 +116,12 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color standartRed;
   final Color states;
   final Color status;
+  final Color switchBackActive;
+  final Color switchBackNotActive;
+  final Color switchBorderActive;
+  final Color switchBorderNotActive;
+  final Color switchTrackActive;
+  final Color switchTrackNotActive;
   final Color tapHint;
   final Color textButton;
   final Color textFieldBack;
@@ -214,6 +221,12 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.standartRed,
     required this.states,
     required this.status,
+    required this.switchBackActive,
+    required this.switchBackNotActive,
+    required this.switchBorderActive,
+    required this.switchBorderNotActive,
+    required this.switchTrackActive,
+    required this.switchTrackNotActive,
     required this.tapHint,
     required this.textButton,
     required this.textFieldBack,
@@ -272,7 +285,7 @@ class AppColors extends ThemeExtension <AppColors> {
     bodyTitleText: AppColorsPalette.cream,
     bottomBarBack: AppColorsPalette.transparent_2_grey_3,
     bottomBarBorder: AppColorsPalette.black,
-    bottomBarText: AppColorsPalette.grey_12,
+    bottomBarText: AppColorsPalette.grey_13,
     bottomBarTextPrime: AppColorsPalette.green_6,
     buttonBack: AppColorsPalette.green_6,
     buttonChooseConnection: AppColorsPalette.green_6,
@@ -284,8 +297,8 @@ class AppColors extends ThemeExtension <AppColors> {
     checkFill: AppColorsPalette.green_6,
     checkVote: AppColorsPalette.grey_3,
     circleBack: AppColorsPalette.black,
-    circleBorder: AppColorsPalette.grey_10,
-    connectionChoiceStatus: AppColorsPalette.grey_12,
+    circleBorder: AppColorsPalette.grey_11,
+    connectionChoiceStatus: AppColorsPalette.grey_13,
     connectionCountryName: AppColorsPalette.cream,
     drawerBack: AppColorsPalette.grey_3,
     drawerBottomBarBack: AppColorsPalette.grey_2,
@@ -314,6 +327,12 @@ class AppColors extends ThemeExtension <AppColors> {
     standartRed: AppColorsPalette.red,
     states: AppColorsPalette.grey,
     status: AppColorsPalette.cream,
+    switchBackActive: AppColorsPalette.green_6,
+    switchBackNotActive: AppColorsPalette.grey_10,
+    switchBorderActive: AppColorsPalette.green_6,
+    switchBorderNotActive: AppColorsPalette.grey_10,
+    switchTrackActive: AppColorsPalette.cream,
+    switchTrackNotActive: AppColorsPalette.cream,
     tapHint: AppColorsPalette.green_5,
     textButton: AppColorsPalette.green_6,
     textFieldBack: AppColorsPalette.black,
@@ -334,19 +353,19 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyTabNotChosenBack: AppColorsPalette.black,
     windowBodyTabNotChosenBorder: AppColorsPalette.black,
     windowBodyTabNotChosenText: AppColorsPalette.black,
-    windowBodyTableBorder: AppColorsPalette.grey_10,
-    windowBodyTableSeparator: AppColorsPalette.grey_10,
+    windowBodyTableBorder: AppColorsPalette.grey_11,
+    windowBodyTableSeparator: AppColorsPalette.grey_11,
     windowBodyTableStataName: AppColorsPalette.grey,
     windowBodyTableStataValue: AppColorsPalette.cream,
     windowBodyText: AppColorsPalette.cream,
     windowBodyTextAuxiliary: AppColorsPalette.grey,
     windowBodyTitle: AppColorsPalette.cream,
-    windowBodyUserAvaBorder: AppColorsPalette.grey_10,
-    windowBodyUserNameIcon: AppColorsPalette.grey_13,
+    windowBodyUserAvaBorder: AppColorsPalette.grey_11,
+    windowBodyUserNameIcon: AppColorsPalette.grey_14,
     windowBodyUserNameText: AppColorsPalette.cream,
     windowBodyUserSubscribers: AppColorsPalette.grey,
     windowBottomText: AppColorsPalette.green_6,
-    windowBottomTextDisabled: AppColorsPalette.grey_11,
+    windowBottomTextDisabled: AppColorsPalette.grey_12,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
     windowTopBack: AppColorsPalette.grey_8,
     windowTopBorderBottom: AppColorsPalette.grey_4,
@@ -354,23 +373,23 @@ class AppColors extends ThemeExtension <AppColors> {
   );
 
   static const AppColors lightGreen = AppColors (
-    appBarBack: AppColorsPalette.grey_15,
-    appBarBorder: AppColorsPalette.grey_14,
+    appBarBack: AppColorsPalette.grey_16,
+    appBarBorder: AppColorsPalette.grey_15,
     appBarButtonBack: AppColorsPalette.white,
-    appBarButtonBorder: AppColorsPalette.grey_14,
-    appBarButtonIcon: AppColorsPalette.grey_11,
+    appBarButtonBorder: AppColorsPalette.grey_15,
+    appBarButtonIcon: AppColorsPalette.grey_12,
     appBarTitleElement: AppColorsPalette.green_6,
     appBarTitleShadow: AppColorsPalette.transparent_4_grey_1,
     appBarTitleText: AppColorsPalette.black,
     blockBack: AppColorsPalette.white,
-    blockBorder: AppColorsPalette.grey_14,
+    blockBorder: AppColorsPalette.grey_15,
     bodyBack: AppColorsPalette.cream,
-    bodyBackPrime: AppColorsPalette.grey_15,
+    bodyBackPrime: AppColorsPalette.grey_16,
     bodyTitleElement: AppColorsPalette.green_6,
     bodyTitleShadow: AppColorsPalette.transparent_4_grey_1,
     bodyTitleText: AppColorsPalette.black,
     bottomBarBack: AppColorsPalette.transparent_2_grey_4,
-    bottomBarBorder: AppColorsPalette.grey_14,
+    bottomBarBorder: AppColorsPalette.grey_15,
     bottomBarText: AppColorsPalette.black,
     bottomBarTextPrime: AppColorsPalette.green_4,
     buttonBack: AppColorsPalette.black,
@@ -383,21 +402,21 @@ class AppColors extends ThemeExtension <AppColors> {
     checkFill: AppColorsPalette.green_6,
     checkVote: AppColorsPalette.cream,
     circleBack: AppColorsPalette.cream,
-    circleBorder: AppColorsPalette.grey_14,
-    connectionChoiceStatus: AppColorsPalette.grey_12,
+    circleBorder: AppColorsPalette.grey_15,
+    connectionChoiceStatus: AppColorsPalette.grey_13,
     connectionCountryName: AppColorsPalette.black,
     drawerBack: AppColorsPalette.cream,
-    drawerBottomBarBack: AppColorsPalette.grey_15,
-    drawerBottomBarBorder: AppColorsPalette.grey_14,
+    drawerBottomBarBack: AppColorsPalette.grey_16,
+    drawerBottomBarBorder: AppColorsPalette.grey_15,
     drawerBottomBarText: AppColorsPalette.black,
     drawerOptionIconLeft: AppColorsPalette.black,
     drawerOptionIconRight: AppColorsPalette.black,
     drawerOptionText: AppColorsPalette.black,
     drawerOptionTextValue: AppColorsPalette.black,
-    drawerTopBarBack: AppColorsPalette.grey_15,
-    drawerTopBarBorder: AppColorsPalette.grey_14,
+    drawerTopBarBack: AppColorsPalette.grey_16,
+    drawerTopBarBorder: AppColorsPalette.grey_15,
     drawerTopBarText: AppColorsPalette.black,
-    line: AppColorsPalette.grey_14,
+    line: AppColorsPalette.grey_15,
     lineText: AppColorsPalette.black,
     linkExternal: AppColorsPalette.blue,
     linkInternal: AppColorsPalette.green_6,
@@ -413,28 +432,34 @@ class AppColors extends ThemeExtension <AppColors> {
     standartRed: AppColorsPalette.red,
     states: AppColorsPalette.black,
     status: AppColorsPalette.black,
+    switchBackActive: AppColorsPalette.green_6,
+    switchBackNotActive: AppColorsPalette.white,
+    switchBorderActive: AppColorsPalette.green_6,
+    switchBorderNotActive: AppColorsPalette.black,
+    switchTrackActive: AppColorsPalette.cream,
+    switchTrackNotActive: AppColorsPalette.black,
     tapHint: AppColorsPalette.black,
     textButton: AppColorsPalette.black,
-    textFieldBack: AppColorsPalette.grey_15,
-    textFieldBorder: AppColorsPalette.grey_14,
+    textFieldBack: AppColorsPalette.grey_16,
+    textFieldBorder: AppColorsPalette.grey_15,
     textFieldCursor: AppColorsPalette.green_6,
-    textFieldHint: AppColorsPalette.grey_11,
+    textFieldHint: AppColorsPalette.grey_12,
     textFieldText: AppColorsPalette.black,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
     windowBodyActionCritical: AppColorsPalette.red_1,
     windowBodyActionRegular: AppColorsPalette.black,
     windowBodyBack: AppColorsPalette.cream,
-    windowBodySeparator: AppColorsPalette.grey_14,
-    windowBodyStataName: AppColorsPalette.grey_11,
-    windowBodyStataValue: AppColorsPalette.grey_11,
+    windowBodySeparator: AppColorsPalette.grey_15,
+    windowBodyStataName: AppColorsPalette.grey_12,
+    windowBodyStataValue: AppColorsPalette.grey_12,
     windowBodyTabChosenBack: AppColorsPalette.black,
     windowBodyTabChosenBorder: AppColorsPalette.black,
     windowBodyTabChosenText: AppColorsPalette.black,
     windowBodyTabNotChosenBack: AppColorsPalette.black,
     windowBodyTabNotChosenBorder: AppColorsPalette.black,
     windowBodyTabNotChosenText: AppColorsPalette.black,
-    windowBodyTableBorder: AppColorsPalette.grey_10,
-    windowBodyTableSeparator: AppColorsPalette.grey_10,
+    windowBodyTableBorder: AppColorsPalette.grey_11,
+    windowBodyTableSeparator: AppColorsPalette.grey_11,
     windowBodyTableStataName: AppColorsPalette.grey,
     windowBodyTableStataValue: AppColorsPalette.black,
     windowBodyText: AppColorsPalette.black,
@@ -447,8 +472,8 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBottomText: AppColorsPalette.black,
     windowBottomTextDisabled: AppColorsPalette.grey,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
-    windowTopBack: AppColorsPalette.grey_15,
-    windowTopBorderBottom: AppColorsPalette.grey_14,
+    windowTopBack: AppColorsPalette.grey_16,
+    windowTopBorderBottom: AppColorsPalette.grey_15,
     windowTopText: AppColorsPalette.black
   );
 
@@ -513,6 +538,12 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? standartRed,
     Color? states,
     Color? status,
+    Color? switchBackActive,
+    Color? switchBackNotActive,
+    Color? switchBorderActive,
+    Color? switchBorderNotActive,
+    Color? switchTrackActive,
+    Color? switchTrackNotActive,
     Color? tapHint,
     Color? textButton,
     Color? textFieldBack,
@@ -614,6 +645,12 @@ class AppColors extends ThemeExtension <AppColors> {
         standartRed: standartRed ?? this.standartRed,
         states: states ?? this.states,
         status: status ?? this.status,
+        switchBackActive: switchBackActive ?? this.switchBackActive,
+        switchBackNotActive: switchBackNotActive ?? this.switchBackNotActive,
+        switchBorderActive: switchBorderActive ?? this.switchBorderActive,
+        switchBorderNotActive: switchBorderNotActive ?? this.switchBorderNotActive,
+        switchTrackActive: switchTrackActive ?? this.switchTrackActive,
+        switchTrackNotActive: switchTrackNotActive ?? this.switchTrackNotActive,
         tapHint: tapHint ?? this.tapHint,
         textButton: textButton ?? this.textButton,
         textFieldBack: textFieldBack ?? this.textFieldBack,
@@ -728,6 +765,12 @@ class AppColors extends ThemeExtension <AppColors> {
         standartRed: Color.lerp (standartRed, other.standartRed, t) ?? standartRed,
         states: Color.lerp (states, other.states, t) ?? states,
         status: Color.lerp (status, other.status, t) ?? status,
+        switchBackActive: Color.lerp (switchBackActive, other.switchBackActive, t) ?? switchBackActive,
+        switchBackNotActive: Color.lerp (switchBackNotActive, other.switchBackNotActive, t) ?? switchBackNotActive,
+        switchBorderActive: Color.lerp (switchBorderActive, other.switchBorderActive, t) ?? switchBorderActive,
+        switchBorderNotActive: Color.lerp (switchBorderNotActive, other.switchBorderNotActive, t) ?? switchBorderNotActive,
+        switchTrackActive: Color.lerp (switchTrackActive, other.switchTrackActive, t) ?? switchTrackActive,
+        switchTrackNotActive: Color.lerp (switchTrackNotActive, other.switchTrackNotActive, t) ?? switchTrackNotActive,
         tapHint: Color.lerp (tapHint, other.tapHint, t) ?? tapHint,
         textButton: Color.lerp (textButton, other.textButton, t) ?? textButton,
         textFieldBack: Color.lerp (textFieldBack, other.textFieldBack, t) ?? textFieldBack,

@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
-import 'package:linette/app/modules/icons/icons.dart';
-import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
+import 'widgets/transitionitem/transitionitem.dart';
+import 'widgets/linkitem/linkitem.dart';
+import 'widgets/choiceitem/choiceitem.dart';
+import 'widgets/switcheritem/switcheritem.dart';
 import 'models/type/type.dart';
 
 
@@ -28,114 +28,59 @@ class ActionComponent extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
+
+    final ValueNotifier <bool> value = useState (false);
 
 
     void onPress () {
 
-
-
-    }
-
-
-    Widget transitionOption () {
-
-      return (
-
-        SvgPicture.asset (
-          context.icons.buttonConnect,
-          width: 256,
-          height: 256,
-          colorFilter: ColorFilter.mode (
-            context.colors.buttonConnectIcon,
-            BlendMode.srcIn
-          )
-        )
-
-      );
+      value.value = !value.value;
 
     }
 
-    Widget linkOption () {
 
-      return (
-
-        SvgPicture.asset (
-          context.icons.buttonConnect,
-          width: 256,
-          height: 256,
-          colorFilter: ColorFilter.mode (
-            context.colors.buttonConnectIcon,
-            BlendMode.srcIn
-          )
-        )
-
-      );
-
-    }
-
-    Widget choiceOption () {
-
-      return (
-
-        Row (
-          children: [
-            Text (
-              context.texts.pageHomeBodyCenterGoNetherlands,
-              style: TextStyle (
-                fontFamily: context.fonts.archivo,
-                fontWeight: FontWeight.w600,
-                fontSize: 17.5,
-                height: 1,
-                color: context.colors.buttonChooseConnection
-              )
-            ),
-            SvgPicture.asset (
-              context.icons.buttonConnect,
-              width: 256,
-              height: 256,
-              colorFilter: ColorFilter.mode (
-                context.colors.buttonConnectIcon,
-                BlendMode.srcIn
-              )
-            )
-          ]
-        )
-
-      );
-
-    }
-
-    Widget switcherOption () {
-
-      final ValueNotifier <bool> state = useState (false);
+    final Widget rightItem;
 
 
-      void onChanged (bool change) {
+    switch (type) {
 
-        state.value = !state.value;
+      case ActionType.transition: {
+
+        rightItem = const TransitionItem ();
+
+        break;
 
       }
 
+      case ActionType.link: {
 
-      return (
+        rightItem = const LinkItem ();
 
-        Switch (
-          value: state.value,
-          onChanged: onChanged
-        )
+        break;
 
-      );
+      }
 
-    }
+      case ActionType.choice: {
 
+        rightItem = const ChoiceItem ('Коллективное');
 
-    final Widget rightItem = switch (type) {
+        break;
 
-      ActionType.transition => transitionOption (),
-      ActionType.link => linkOption (),
-      ActionType.choice => choiceOption (),
-      ActionType.switcher => switcherOption ()
+      }
+
+      case ActionType.switcher: {
+
+        rightItem = IgnorePointer (
+          child: SwitcherItem (
+            value: value,
+            onChanged: (bool change) {}
+          )
+        );
+
+        break;
+
+      }
 
     };
 
@@ -150,14 +95,16 @@ class ActionComponent extends HookWidget {
           scaleRate: 0.9775,
           child: Row (
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            spacing: 8,
             children: [
-              Text (
-                text,
-                style: TextStyle (
-                  fontFamily: context.fonts.archivo,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15.5,
-                  color: context.colors.windowBodyActionRegular
+              Expanded (
+                child: Text (
+                  text,
+                  style: TextStyle (
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15.5,
+                    color: context.colors.windowBodyActionRegular
+                  )
                 )
               ),
               rightItem

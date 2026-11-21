@@ -76,7 +76,7 @@
 	"windowArsenalBodySectionsBypassingAction_2": "导入连接",
 	"windowArsenalBodySectionsBypassingAction_3": "导出连接",
 	"windowArsenalBodySectionsBypassingAction_4": "自动删除低质量连接",
-	"windowArsenalBodySectionsBypassingAction_5": "启动应用时自动连接 VPN",
+	"windowArsenalBodySectionsBypassingAction_5": "应用启动时启动系统",
 	"windowArsenalBodySectionsDecentralizationTitle": "去中心化",
 	"windowArsenalBodySectionsDecentralizationInstruction": "在完全断网的情况下创建去中心化网络。如果您已接入此网络，且网络中的某个远程节点可以访问自由互联网，您就可以通过该节点中转流量，包括更新应用数据。",
 	"windowArsenalBodySectionsExchangeTitle": "数据交换",

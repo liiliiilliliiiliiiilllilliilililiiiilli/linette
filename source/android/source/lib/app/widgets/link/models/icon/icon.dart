@@ -1,10 +1,10 @@
-// Text link global widget - Icon model
+// Link global widget - Icon model
 
 import 'package:flutter/widgets.dart';
 
 
 
-class TextLinkIcon {
+class LinkIcon {
 
   final String asset;
   final double size;
@@ -12,7 +12,7 @@ class TextLinkIcon {
   final double angle;
 
 
-  const TextLinkIcon (
+  const LinkIcon (
     this.asset, {
     this.size = 15.5,
     this.offset = const Offset (0, 0),

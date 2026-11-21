@@ -76,7 +76,7 @@
 	"windowArsenalBodySectionsBypassingAction_2": "Import connections",
 	"windowArsenalBodySectionsBypassingAction_3": "Export connections",
 	"windowArsenalBodySectionsBypassingAction_4": "Automatically remove low-quality connections",
-	"windowArsenalBodySectionsBypassingAction_5": "Connect to VPN on app launch",
+	"windowArsenalBodySectionsBypassingAction_5": "Start the system on app launch",
 	"windowArsenalBodySectionsDecentralizationTitle": "Decentralization",
 	"windowArsenalBodySectionsDecentralizationInstruction": "Creates a decentralized mesh network in case there is no internet access at all. If you are connected to this network and a remote peer has access to the open internet, you can route your traffic through them, including downloading updates for the app.",
 	"windowArsenalBodySectionsExchangeTitle": "Exchange",

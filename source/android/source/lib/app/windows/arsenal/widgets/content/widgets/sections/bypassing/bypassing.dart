@@ -22,6 +22,7 @@ class Bypassing extends StatelessWidget {
     return (
 
       Column (
+        spacing: 8 * 1.5,
         children: [
           TitleComponent (
             context.texts.windowArsenalBodySectionsBypassingTitle,
@@ -29,25 +30,30 @@ class Bypassing extends StatelessWidget {
           ),
           Instruction (context.texts.windowArsenalBodySectionsBypassingInstruction),
           const Separator (),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsBypassingAction_1,
-            type: ActionType.transition
-          ),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsBypassingAction_2,
-            type: ActionType.link
-          ),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsBypassingAction_3,
-            type: ActionType.link
-          ),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsBypassingAction_4,
-            type: ActionType.switcher
-          ),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsBypassingAction_5,
-            type: ActionType.switcher
+          Column (
+            spacing: 8 * 2.75,
+            children: [
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsBypassingAction_1,
+                type: ActionType.transition
+              ),
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsBypassingAction_2,
+                type: ActionType.link
+              ),
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsBypassingAction_3,
+                type: ActionType.link
+              ),
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsBypassingAction_4,
+                type: ActionType.switcher
+              ),
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsBypassingAction_5,
+                type: ActionType.switcher
+              )
+            ]
           )
         ]
       )

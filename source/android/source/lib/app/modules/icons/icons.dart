@@ -46,6 +46,7 @@ class AppIconsPalette {
   static const String stars = 'assets/images/icons/common/stars.svg';
   static const String sun = 'assets/images/icons/common/sun.svg';
   static const String tap = 'assets/images/icons/common/tap.svg';
+  static const String unwrapTriangle = 'assets/images/icons/common/unwrap_triangle.svg';
   static const String user = 'assets/images/icons/common/user.svg';
   static const String wallet = 'assets/images/icons/common/wallet.svg';
 
@@ -77,7 +78,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
   final String linkEnter;
   final String windowBodyAccountNameAva;
   final String windowBodyAccountNameEdit;
-  final String windowBodyAction;
+  final String windowBodyActionChoice;
+  final String windowBodyActionLink;
+  final String windowBodyActionTransition;
 
 
   const AppIcons ({
@@ -103,7 +106,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     required this.linkEnter,
     required this.windowBodyAccountNameAva,
     required this.windowBodyAccountNameEdit,
-    required this.windowBodyAction
+    required this.windowBodyActionChoice,
+    required this.windowBodyActionLink,
+    required this.windowBodyActionTransition
   });
 
 
@@ -130,7 +135,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenRegular = AppIcons (
@@ -156,7 +163,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenHalloween = AppIcons (
@@ -182,7 +191,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenHalloween = AppIcons (
@@ -208,7 +219,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenNewYear = AppIcons (
@@ -234,7 +247,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenNewYear = AppIcons (
@@ -260,7 +275,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenValentine = AppIcons (
@@ -286,7 +303,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenValentine = AppIcons (
@@ -312,7 +331,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons darkGreenEaster = AppIcons (
@@ -338,7 +359,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
   static const AppIcons lightGreenEaster = AppIcons (
@@ -364,7 +387,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     linkEnter: AppIconsPalette.goArrow,
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
-    windowBodyAction: AppIconsPalette.navigateArrow
+    windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionLink: AppIconsPalette.goArrow,
+    windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
 
 
@@ -391,7 +416,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
     String? linkEnter,
     String? windowBodyAccountNameAva,
     String? windowBodyAccountNameEdit,
-    String? windowBodyAction
+    String? windowBodyActionChoice,
+    String? windowBodyActionLink,
+    String? windowBodyActionTransition
   }) {
 
     return (
@@ -419,7 +446,9 @@ class AppIcons extends ThemeExtension <AppIcons> {
         linkEnter: linkEnter ?? this.linkEnter,
         windowBodyAccountNameAva: windowBodyAccountNameAva ?? this.windowBodyAccountNameAva,
         windowBodyAccountNameEdit: windowBodyAccountNameEdit ?? this.windowBodyAccountNameEdit,
-        windowBodyAction: windowBodyAction ?? this.windowBodyAction
+        windowBodyActionChoice: windowBodyActionChoice ?? this.windowBodyActionChoice,
+        windowBodyActionLink: windowBodyActionLink ?? this.windowBodyActionLink,
+        windowBodyActionTransition: windowBodyActionTransition ?? this.windowBodyActionTransition
       )
 
     );

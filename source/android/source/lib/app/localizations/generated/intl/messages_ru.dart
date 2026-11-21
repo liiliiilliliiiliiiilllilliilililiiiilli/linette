@@ -154,7 +154,7 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
     "windowArsenalBodySectionsBypassingAction_5":
         MessageLookupByLibrary.simpleMessage(
-          "Подключение к VPN при запуске приложения",
+          "Включение системы при запуске приложения",
         ),
     "windowArsenalBodySectionsBypassingInstruction":
         MessageLookupByLibrary.simpleMessage(

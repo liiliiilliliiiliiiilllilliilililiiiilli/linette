@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
+import 'package:linette/app/widgets/switch/switch.dart';
 
 
 
@@ -35,17 +35,17 @@ class TitleComponent extends HookWidget {
     return (
 
       Row (
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text (
             text,
             style: TextStyle (
-              fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w600,
               fontSize: 17,
               color: context.colors.windowBodyTitle
             )
           ),
-          Switch (
+          SwitchComponent (
             value: state.value,
             onChanged: onChanged
           )

@@ -1,9 +1,8 @@
-// Arsenal window - Content - Action - Choices - Choice
+// Arsenal window - Content - Action - Choice item - Choices - Choice
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 
 
@@ -44,8 +43,7 @@ class Choice extends StatelessWidget {
           Text (
             text,
             style: TextStyle (
-              fontFamily: context.fonts.archivo,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
               fontSize: 17.5,
               height: 1,
               color: context.colors.buttonChooseConnection

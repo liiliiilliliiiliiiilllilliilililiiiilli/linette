@@ -34,13 +34,16 @@ class Top extends StatelessWidget {
           ),
           color: context.colors.drawerTopBarBack
         ),
-        child: Text (
-          context.texts.pageHomeDrawerTop,
-          style: TextStyle (
-            fontFamily: context.fonts.archivo,
-            fontWeight: FontWeight.w500,
-            fontSize: 25,
-            color: context.colors.drawerTopBarText
+        child: Transform.translate (
+          offset: const Offset (0, 2.5),
+          child: Text (
+            context.texts.pageHomeDrawerTop,
+            style: TextStyle (
+              fontFamily: context.fonts.archivo,
+              fontWeight: FontWeight.w500,
+              fontSize: 25,
+              color: context.colors.drawerTopBarText
+            )
           )
         )
       )

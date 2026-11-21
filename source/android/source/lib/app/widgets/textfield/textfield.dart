@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
 
 
 
@@ -46,7 +45,6 @@ class TextFieldComponent extends HookWidget {
           onChanged: onChanged,
           obscureText: obscureText.value,
           style: TextStyle (
-            fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,
             fontSize: 14,
             height: 1,
@@ -60,7 +58,6 @@ class TextFieldComponent extends HookWidget {
             ),
             hintText: hint,
             hintStyle: TextStyle (
-              fontFamily: context.fonts.archivo,
               fontWeight: FontWeight.w500,
               fontSize: 14,
               height: 1,

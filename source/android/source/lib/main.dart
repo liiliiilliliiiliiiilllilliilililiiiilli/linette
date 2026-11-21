@@ -58,6 +58,7 @@ void main () async {
     'assets/images/icons/common/stars.svg',
     'assets/images/icons/common/sun.svg',
     'assets/images/icons/common/tap.svg',
+    'assets/images/icons/common/unwrap_triangle.svg',
     'assets/images/icons/common/user.svg',
     'assets/images/icons/common/wallet.svg'
   ]);

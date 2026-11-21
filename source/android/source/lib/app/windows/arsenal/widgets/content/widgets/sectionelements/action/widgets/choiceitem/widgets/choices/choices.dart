@@ -1,4 +1,4 @@
-// Arsenal window - Content - Action - Choices
+// Arsenal window - Content - Action - Choice item - Choices
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
@@ -22,7 +22,7 @@ class Choices extends StatelessWidget {
 
     return (
 
-      Container (
+      DecoratedBox (
         decoration: BoxDecoration (
           color: context.colors.bodyBackPrime
         ),

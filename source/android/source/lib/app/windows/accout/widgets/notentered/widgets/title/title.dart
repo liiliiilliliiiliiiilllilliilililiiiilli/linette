@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 
 
@@ -21,7 +20,6 @@ class TitleComponent extends StatelessWidget {
       Text (
         context.texts.windowAccountNotEnteredBodyTitle,
         style: TextStyle (
-          fontFamily: context.fonts.archivo,
           fontWeight: FontWeight.w600,
           fontSize: 17,
           color: context.colors.windowBodyTitle

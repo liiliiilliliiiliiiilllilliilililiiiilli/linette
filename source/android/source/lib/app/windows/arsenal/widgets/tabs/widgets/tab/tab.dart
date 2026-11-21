@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
 
 
 
@@ -67,7 +66,6 @@ class TabComponent extends StatelessWidget {
         child: Text (
           text,
           style: TextStyle (
-            fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,
             fontSize: 17,
             color: colorText

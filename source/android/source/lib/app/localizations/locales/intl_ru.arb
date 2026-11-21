@@ -76,7 +76,7 @@
 	"windowArsenalBodySectionsBypassingAction_2": "Импортировать подключения",
 	"windowArsenalBodySectionsBypassingAction_3": "Экспортировать подключения",
 	"windowArsenalBodySectionsBypassingAction_4": "Автоматически удалять некачественные подключения",
-	"windowArsenalBodySectionsBypassingAction_5": "Подключение к VPN при запуске приложения",
+	"windowArsenalBodySectionsBypassingAction_5": "Включение системы при запуске приложения",
 	"windowArsenalBodySectionsDecentralizationTitle": "Децентрализация",
 	"windowArsenalBodySectionsDecentralizationInstruction": "Создание децентрализованной интернет-сети на случай, если интернета вообще нет. Если Вы подключены к децентрализованной сети и у кого-то из ее отдаленных членов есть выход в свободный интернет, Вы сможете выйти в него через данного посредника, в том числе обновив данные для приложения.",
 	"windowArsenalBodySectionsExchangeTitle": "Обмен",

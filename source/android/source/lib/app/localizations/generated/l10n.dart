@@ -630,10 +630,10 @@ class Texts {
     );
   }
 
-  /// `Connect to VPN on app launch`
+  /// `Start the system on app launch`
   String get windowArsenalBodySectionsBypassingAction_5 {
     return Intl.message(
-      'Connect to VPN on app launch',
+      'Start the system on app launch',
       name: 'windowArsenalBodySectionsBypassingAction_5',
       desc: '',
       args: [],
