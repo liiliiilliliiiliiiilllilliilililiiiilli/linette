@@ -23,18 +23,16 @@ class HintWindow extends StatelessWidget {
         isExpanded: true,
         title: context.texts.windowHintTitle,
         body: SingleChildScrollView (
-          child: Padding (
-            padding: const EdgeInsets.only (
-              top: 10,
-              bottom: 2.5
-            ),
-            child: Text (
-              context.texts.windowHintBody,
-              style: TextStyle (
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                color: context.colors.windowBodyText
-              )
+          padding: const EdgeInsets.only (
+            top: 10,
+            bottom: 2.5
+          ),
+          child: Text (
+            context.texts.windowHintBody,
+            style: TextStyle (
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: context.colors.windowBodyText
             )
           )
         ),

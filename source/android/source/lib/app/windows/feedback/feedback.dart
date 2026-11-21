@@ -32,40 +32,38 @@ class FeedbackWindow extends StatelessWidget {
         width: 340,
         title: context.texts.windowFeedbackTitle,
         body: SingleChildScrollView (
-          child: Padding (
-            padding: const EdgeInsets.only (
-              top: 10,
-              bottom: 2.5
-            ),
-            child: Text.rich (
-              TextSpan (
-                style: const TextStyle (
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16
-                ),
-                children: [
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_1,
-                    style: TextStyle (
-                      color: context.colors.windowBodyText
-                    )
-                  ),
-                  WidgetSpan (
-                    alignment: PlaceholderAlignment.middle,
-                    child: Link (
-                      context.texts.windowFeedbackBody_2,
-                      type: LinkType.external,
-                      onPress: onPress
-                    )
-                  ),
-                  TextSpan (
-                    text: context.texts.windowFeedbackBody_3,
-                    style: TextStyle (
-                      color: context.colors.windowBodyText
-                    )
+          padding: const EdgeInsets.only (
+            top: 10,
+            bottom: 2.5
+          ),
+          child: Text.rich (
+            TextSpan (
+              style: const TextStyle (
+                fontWeight: FontWeight.w400,
+                fontSize: 16
+              ),
+              children: [
+                TextSpan (
+                  text: context.texts.windowFeedbackBody_1,
+                  style: TextStyle (
+                    color: context.colors.windowBodyText
                   )
-                ]
-              )
+                ),
+                WidgetSpan (
+                  alignment: PlaceholderAlignment.middle,
+                  child: Link (
+                    context.texts.windowFeedbackBody_2,
+                    type: LinkType.external,
+                    onPress: onPress
+                  )
+                ),
+                TextSpan (
+                  text: context.texts.windowFeedbackBody_3,
+                  style: TextStyle (
+                    color: context.colors.windowBodyText
+                  )
+                )
+              ]
             )
           )
         ),

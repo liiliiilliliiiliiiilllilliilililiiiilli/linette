@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
-// import 'widgets/tabs/tabs.dart';
+import 'widgets/tabs/tabs.dart';
 import 'widgets/content/content.dart';
 import 'models/position/position.dart';
 
@@ -29,25 +29,28 @@ class ArsenalWindow extends HookWidget {
         isExpanded: true,
         title: context.texts.windowArsenalTitle,
         body: SingleChildScrollView (
-          child: Padding (
-            padding: const EdgeInsets.only (
-              top: 10 * 1,
-              left: 2.5 * 1.5,
-              right: 2.5 * 1.5,
-              bottom: 10 * 1.5
-            ),
-            child: Column (
-              children: [
-                // Tabs (
-                //   position: position
-                // ),
-                Content (
+          padding: const EdgeInsets.only (
+            top: 10 * 1.5,
+            bottom: 10 * 1.5
+          ),
+          child: Column (
+            spacing: 8 * 2,
+            children: [
+              Tabs (
+                position: position
+              ),
+              Padding (
+                padding: const EdgeInsets.symmetric (
+                  horizontal: 20 - 4 - 2 + 2.5 * 1.5
+                ),
+                child: Content (
                   position: position
                 )
-              ]
-            )
+              )
+            ]
           )
         ),
+        bodyCustomPadding: true,
         action: context.texts.windowArsenalAction
       )
 

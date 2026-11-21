@@ -61,42 +61,40 @@ class LanguageWindow extends ConsumerWidget {
         width: 300,
         title: context.texts.windowLanguageTitle,
         body: SingleChildScrollView (
-          child: Padding (
-            padding: const EdgeInsets.only (
-              top: 5,
-              bottom: 2.5
-            ),
-            child: Material (
-              type: MaterialType.transparency,
-              child: Padding (
-                padding: const EdgeInsets.symmetric (
-                  vertical: 10 - 4
-                ),
-                child: Column (
-                  spacing: 22 - 4 * 2,
-                  children: languages.map ((language) =>
+          padding: const EdgeInsets.only (
+            top: 5,
+            bottom: 2.5
+          ),
+          child: Material (
+            type: MaterialType.transparency,
+            child: Padding (
+              padding: const EdgeInsets.symmetric (
+                vertical: 10 - 4
+              ),
+              child: Column (
+                spacing: 22 - 4 * 2,
+                children: languages.map ((language) =>
 
-                    switch (language) {
+                  switch (language) {
 
-                      {
-                        'code': String code,
-                        'title': String title,
-                        'subtitle': String subtitle
-                      }
-
-                        => RadioItem (
-                          onPress: () => onPress (language),
-                          isChosen: (code == localeState),
-                          title: title,
-                          subtitle: subtitle
-                        ),
-
-                      _ => Container ()
-
+                    {
+                      'code': String code,
+                      'title': String title,
+                      'subtitle': String subtitle
                     }
 
-                  ).toList ()
-                )
+                      => RadioItem (
+                        onPress: () => onPress (language),
+                        isChosen: (code == localeState),
+                        title: title,
+                        subtitle: subtitle
+                      ),
+
+                    _ => Container ()
+
+                  }
+
+                ).toList ()
               )
             )
           )

@@ -1,24 +1,32 @@
 // Arsenal window - Tabs - Tab
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/widgets/presser/presser.dart';
+import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 
 
 
-class TabComponent extends StatelessWidget {
+class TabComponent extends HookWidget {
 
   final String text;
   final bool isChosen;
+  final Function () onPress;
 
 
   const TabComponent (
     this.text, {
     super.key,
-    required this.isChosen
+    required this.isChosen,
+    required this.onPress
   });
 
 
   @override Widget build (BuildContext context) {
+
+    final ValueNotifier <bool> isPressed = useState (false);
+
 
     final Color colorBorder;
     final Color colorBack;
@@ -48,27 +56,33 @@ class TabComponent extends StatelessWidget {
 
     return (
 
-      Container (
-        decoration: BoxDecoration (
-          border: Border (
-            top: BorderSide (
-              width: 2,
-              color: colorBorder
+      Presser (
+        onPress: onPress,
+        isPressed: isPressed,
+        child: PresserAnimator (
+          isPressed: isPressed,
+          scaleRate: 0.965,
+          child: Container (
+            padding: const EdgeInsets.symmetric (
+              horizontal: 12,
+              vertical: 4
+            ),
+            decoration: BoxDecoration (
+              border: Border.all (
+                width: 2,
+                color: colorBorder
+              ),
+              borderRadius: BorderRadius.circular (10),
+              color: colorBack
+            ),
+            child: Text (
+              text,
+              style: TextStyle (
+                fontWeight: FontWeight.w500,
+                fontSize: 15.5,
+                color: colorText
+              )
             )
-          ),
-          borderRadius: BorderRadius.circular (25),
-          color: colorBack
-        ),
-        padding: const EdgeInsets.symmetric (
-          horizontal: 16,
-          vertical: 8
-        ),
-        child: Text (
-          text,
-          style: TextStyle (
-            fontWeight: FontWeight.w600,
-            fontSize: 17,
-            color: colorText
           )
         )
       )

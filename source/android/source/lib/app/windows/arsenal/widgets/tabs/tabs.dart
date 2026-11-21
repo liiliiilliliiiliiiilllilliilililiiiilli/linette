@@ -22,30 +22,41 @@ class Tabs extends StatelessWidget {
 
     return (
 
-      Row (
-        spacing: 8,
-        children: [
-          TabComponent (
-            context.texts.windowArsenalBodyTabsBypassing,
-            isChosen: (position.value == ArsenalWindowPosition.bypassing)
-          ),
-          TabComponent (
-            context.texts.windowArsenalBodyTabsPlatform,
-            isChosen: (position.value == ArsenalWindowPosition.platform)
-          ),
-          TabComponent (
-            context.texts.windowArsenalBodyTabsExchange,
-            isChosen: (position.value == ArsenalWindowPosition.exchange)
-          ),
-          TabComponent (
-            context.texts.windowArsenalBodyTabsDecentralization,
-            isChosen: (position.value == ArsenalWindowPosition.decentralization)
-          ),
-          TabComponent (
-            context.texts.windowArsenalBodyTabsSpam,
-            isChosen: (position.value == ArsenalWindowPosition.spam)
-          )
-        ]
+      SingleChildScrollView (
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric (
+          horizontal: 20 - 4 - 2 + 2.5 * 1.5
+        ),
+        child: Row (
+          spacing: 8,
+          children: [
+            TabComponent (
+              context.texts.windowArsenalBodyTabsBypassing,
+              isChosen: (position.value == ArsenalWindowPosition.bypassing),
+              onPress: () => {position.value = ArsenalWindowPosition.bypassing}
+            ),
+            TabComponent (
+              context.texts.windowArsenalBodyTabsPlatform,
+              isChosen: (position.value == ArsenalWindowPosition.platform),
+              onPress: () => {position.value = ArsenalWindowPosition.platform}
+            ),
+            TabComponent (
+              context.texts.windowArsenalBodyTabsExchange,
+              isChosen: (position.value == ArsenalWindowPosition.exchange),
+              onPress: () => {position.value = ArsenalWindowPosition.exchange}
+            ),
+            TabComponent (
+              context.texts.windowArsenalBodyTabsDecentralization,
+              isChosen: (position.value == ArsenalWindowPosition.decentralization),
+              onPress: () => {position.value = ArsenalWindowPosition.decentralization}
+            ),
+            TabComponent (
+              context.texts.windowArsenalBodyTabsSpam,
+              isChosen: (position.value == ArsenalWindowPosition.spam),
+              onPress: () => {position.value = ArsenalWindowPosition.spam}
+            )
+          ]
+        )
       )
 
     );

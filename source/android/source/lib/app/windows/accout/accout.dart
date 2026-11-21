@@ -29,18 +29,16 @@ class AccoutWindow extends HookWidget {
         width: 340,
         title: context.texts.windowAccountNotEnteredTitle,
         body: SingleChildScrollView (
-          child: Padding (
-            padding: const EdgeInsets.only (
-              top: 10 * 1.5,
-              left: 2.5 * 1.5,
-              right: 2.5 * 1.5,
-              bottom: 10 * 1.5
-            ),
-            child: (didEnter.value) ? (
-              const NotEntered ()
-            ) : (
-              const Entered ()
-            )
+          padding: const EdgeInsets.only (
+            top: 10 * 1.5,
+            left: 2.5 * 1.5,
+            right: 2.5 * 1.5,
+            bottom: 10 * 1.5
+          ),
+          child: (didEnter.value) ? (
+            const NotEntered ()
+          ) : (
+            const Entered ()
           )
         ),
         action: context.texts.windowAccountNotEnteredAction,

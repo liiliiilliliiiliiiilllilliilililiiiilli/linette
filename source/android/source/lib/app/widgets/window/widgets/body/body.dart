@@ -8,12 +8,14 @@ import 'package:linette/app/modules/colors/colors.dart';
 class BodyComponent extends StatelessWidget {
 
   final bool isExpanded;
+  final bool customPadding;
   final Widget child;
 
 
   const BodyComponent ({
     super.key,
     required this.isExpanded,
+    required this.customPadding,
     required this.child
   });
 
@@ -25,8 +27,8 @@ class BodyComponent extends StatelessWidget {
       return (
 
         Padding (
-          padding: const EdgeInsets.symmetric (
-            horizontal: 20 - 4
+          padding: EdgeInsets.symmetric (
+            horizontal: customPadding ? 2 : 20 - 4
           ),
           child: Stack (
             children: [

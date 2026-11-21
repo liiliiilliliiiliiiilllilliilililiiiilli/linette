@@ -14,6 +14,7 @@ class Window extends StatelessWidget {
   final bool isExpanded;
   final String title;
   final Widget body;
+  final bool? bodyCustomPadding;
   final String action;
   final ValueNotifier <bool>? actionActivity;
 
@@ -24,6 +25,7 @@ class Window extends StatelessWidget {
     this.isExpanded = false,
     required this.title,
     required this.body,
+    this.bodyCustomPadding,
     required this.action,
     this.actionActivity
   });
@@ -64,6 +66,7 @@ class Window extends StatelessWidget {
                       TopComponent (title),
                       BodyComponent (
                         isExpanded: isExpanded,
+                        customPadding: bodyCustomPadding ?? false,
                         child: body
                       ),
                       BottomComponent (

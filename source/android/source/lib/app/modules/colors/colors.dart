@@ -48,7 +48,8 @@ class AppColorsPalette {
   static const Color green_4 = Color (0xff567560);
   static const Color green_5 = Color (0xff687262);
   static const Color green_6 = Color (0xff8b9e80);
-  static const Color green_7 = Color (0xffd8e0d7);
+  static const Color green_7 = Color (0xffa8bf9b);
+  static const Color green_8 = Color (0xffd8e0d7);
   static const Color blue_1 = Color (0xff9da6d9);
 
 }
@@ -348,11 +349,11 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyStataName: AppColorsPalette.grey,
     windowBodyStataValue: AppColorsPalette.grey,
     windowBodyTabChosenBack: AppColorsPalette.black,
-    windowBodyTabChosenBorder: AppColorsPalette.black,
-    windowBodyTabChosenText: AppColorsPalette.black,
+    windowBodyTabChosenBorder: AppColorsPalette.green_3,
+    windowBodyTabChosenText: AppColorsPalette.green_7,
     windowBodyTabNotChosenBack: AppColorsPalette.black,
-    windowBodyTabNotChosenBorder: AppColorsPalette.black,
-    windowBodyTabNotChosenText: AppColorsPalette.black,
+    windowBodyTabNotChosenBorder: AppColorsPalette.grey_9,
+    windowBodyTabNotChosenText: AppColorsPalette.cream,
     windowBodyTableBorder: AppColorsPalette.grey_11,
     windowBodyTableSeparator: AppColorsPalette.grey_11,
     windowBodyTableStataName: AppColorsPalette.grey,
@@ -420,9 +421,9 @@ class AppColors extends ThemeExtension <AppColors> {
     lineText: AppColorsPalette.black,
     linkExternal: AppColorsPalette.blue,
     linkInternal: AppColorsPalette.green_6,
-    noiseBack: AppColorsPalette.green_7,
+    noiseBack: AppColorsPalette.green_8,
     noisePrimary: AppColorsPalette.green_1,
-    noiseSecondary: AppColorsPalette.green_7,
+    noiseSecondary: AppColorsPalette.green_8,
     radioButtonBack: AppColorsPalette.white,
     radioButtonInsidesChosen: AppColorsPalette.green_6,
     radioButtonInsidesNotChosen: AppColorsPalette.white,
@@ -452,10 +453,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodySeparator: AppColorsPalette.grey_15,
     windowBodyStataName: AppColorsPalette.grey_12,
     windowBodyStataValue: AppColorsPalette.grey_12,
-    windowBodyTabChosenBack: AppColorsPalette.black,
-    windowBodyTabChosenBorder: AppColorsPalette.black,
+    windowBodyTabChosenBack: AppColorsPalette.green_8,
+    windowBodyTabChosenBorder: AppColorsPalette.green_6,
     windowBodyTabChosenText: AppColorsPalette.black,
-    windowBodyTabNotChosenBack: AppColorsPalette.black,
+    windowBodyTabNotChosenBack: AppColorsPalette.white,
     windowBodyTabNotChosenBorder: AppColorsPalette.black,
     windowBodyTabNotChosenText: AppColorsPalette.black,
     windowBodyTableBorder: AppColorsPalette.grey_11,
