@@ -16,12 +16,14 @@ import 'models/type/type.dart';
 class ActionComponent extends HookWidget {
 
   final String text;
+  final String? textValue;
   final ActionType type;
 
 
   const ActionComponent (
     this.text, {
     super.key,
+    this.textValue,
     required this.type
   });
 
@@ -63,7 +65,7 @@ class ActionComponent extends HookWidget {
 
       case ActionType.choice: {
 
-        rightItem = const ChoiceItem ('Коллективное');
+        rightItem = ChoiceItem (textValue ?? '');
 
         break;
 

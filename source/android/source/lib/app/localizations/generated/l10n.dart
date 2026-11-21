@@ -721,30 +721,60 @@ class Texts {
   }
 
   /// `Email type`
-  String get windowArsenalBodySectionsSpamAction_1 {
+  String get windowArsenalBodySectionsSpamAction_1_1 {
     return Intl.message(
       'Email type',
-      name: 'windowArsenalBodySectionsSpamAction_1',
+      name: 'windowArsenalBodySectionsSpamAction_1_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collective`
+  String get windowArsenalBodySectionsSpamAction_1_2 {
+    return Intl.message(
+      'Collective',
+      name: 'windowArsenalBodySectionsSpamAction_1_2',
       desc: '',
       args: [],
     );
   }
 
   /// `Email content`
-  String get windowArsenalBodySectionsSpamAction_2 {
+  String get windowArsenalBodySectionsSpamAction_2_1 {
     return Intl.message(
       'Email content',
-      name: 'windowArsenalBodySectionsSpamAction_2',
+      name: 'windowArsenalBodySectionsSpamAction_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Letter 1`
+  String get windowArsenalBodySectionsSpamAction_2_2 {
+    return Intl.message(
+      'Letter 1',
+      name: 'windowArsenalBodySectionsSpamAction_2_2',
       desc: '',
       args: [],
     );
   }
 
   /// `Sending method`
-  String get windowArsenalBodySectionsSpamAction_3 {
+  String get windowArsenalBodySectionsSpamAction_3_1 {
     return Intl.message(
       'Sending method',
-      name: 'windowArsenalBodySectionsSpamAction_3',
+      name: 'windowArsenalBodySectionsSpamAction_3_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Synchronously`
+  String get windowArsenalBodySectionsSpamAction_3_2 {
+    return Intl.message(
+      'Synchronously',
+      name: 'windowArsenalBodySectionsSpamAction_3_2',
       desc: '',
       args: [],
     );

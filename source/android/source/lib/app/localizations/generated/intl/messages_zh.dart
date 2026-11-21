@@ -146,12 +146,18 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
     "windowArsenalBodySectionsPlatformTitle":
         MessageLookupByLibrary.simpleMessage("平台"),
-    "windowArsenalBodySectionsSpamAction_1":
+    "windowArsenalBodySectionsSpamAction_1_1":
         MessageLookupByLibrary.simpleMessage("邮件类型"),
-    "windowArsenalBodySectionsSpamAction_2":
+    "windowArsenalBodySectionsSpamAction_1_2":
+        MessageLookupByLibrary.simpleMessage("集体"),
+    "windowArsenalBodySectionsSpamAction_2_1":
         MessageLookupByLibrary.simpleMessage("邮件内容"),
-    "windowArsenalBodySectionsSpamAction_3":
+    "windowArsenalBodySectionsSpamAction_2_2":
+        MessageLookupByLibrary.simpleMessage("信件 1"),
+    "windowArsenalBodySectionsSpamAction_3_1":
         MessageLookupByLibrary.simpleMessage("发送方式"),
+    "windowArsenalBodySectionsSpamAction_3_2":
+        MessageLookupByLibrary.simpleMessage("同步"),
     "windowArsenalBodySectionsSpamInstruction":
         MessageLookupByLibrary.simpleMessage(
           "每台安装了 Linette 的设备都可以向网络审查机构（如 RKN、Yandex 等）发送邮件。借助平台、数据交换和去中心化机制，各设备可以协同工作并同步发送邮件（发起群发行动）。这有助于向当局传达诉求，促使取消不公正的限制措施，让数百万民众更有机会成功表达自己的意愿。\n\n邮件内容可自由更改——既可以使用集体模板，也可以自定义内容。",

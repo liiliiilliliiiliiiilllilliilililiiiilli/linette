@@ -174,12 +174,18 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
     "windowArsenalBodySectionsPlatformTitle":
         MessageLookupByLibrary.simpleMessage("Platform"),
-    "windowArsenalBodySectionsSpamAction_1":
+    "windowArsenalBodySectionsSpamAction_1_1":
         MessageLookupByLibrary.simpleMessage("Email type"),
-    "windowArsenalBodySectionsSpamAction_2":
+    "windowArsenalBodySectionsSpamAction_1_2":
+        MessageLookupByLibrary.simpleMessage("Collective"),
+    "windowArsenalBodySectionsSpamAction_2_1":
         MessageLookupByLibrary.simpleMessage("Email content"),
-    "windowArsenalBodySectionsSpamAction_3":
+    "windowArsenalBodySectionsSpamAction_2_2":
+        MessageLookupByLibrary.simpleMessage("Letter 1"),
+    "windowArsenalBodySectionsSpamAction_3_1":
         MessageLookupByLibrary.simpleMessage("Sending method"),
+    "windowArsenalBodySectionsSpamAction_3_2":
+        MessageLookupByLibrary.simpleMessage("Synchronously"),
     "windowArsenalBodySectionsSpamInstruction":
         MessageLookupByLibrary.simpleMessage(
           "Every device with Linette installed can act as a mail sender targeting internet censors (RKN, Yandex, etc.). Using the platform, exchange, and decentralization mechanisms, devices can coordinate to send emails simultaneously. This helps reach the authorities and push back against unfair restrictions, allowing millions of people to voice their opinions with a higher chance of success.\n\nYou can customize the email body by choosing between a collective template or your own text.",

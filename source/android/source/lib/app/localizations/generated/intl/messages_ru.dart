@@ -180,12 +180,18 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
     "windowArsenalBodySectionsPlatformTitle":
         MessageLookupByLibrary.simpleMessage("Платформа"),
-    "windowArsenalBodySectionsSpamAction_1":
+    "windowArsenalBodySectionsSpamAction_1_1":
         MessageLookupByLibrary.simpleMessage("Тип письма"),
-    "windowArsenalBodySectionsSpamAction_2":
+    "windowArsenalBodySectionsSpamAction_1_2":
+        MessageLookupByLibrary.simpleMessage("Коллективное"),
+    "windowArsenalBodySectionsSpamAction_2_1":
         MessageLookupByLibrary.simpleMessage("Содержание письма"),
-    "windowArsenalBodySectionsSpamAction_3":
+    "windowArsenalBodySectionsSpamAction_2_2":
+        MessageLookupByLibrary.simpleMessage("Письмо 1"),
+    "windowArsenalBodySectionsSpamAction_3_1":
         MessageLookupByLibrary.simpleMessage("Способ отправки"),
+    "windowArsenalBodySectionsSpamAction_3_2":
+        MessageLookupByLibrary.simpleMessage("Синхронно"),
     "windowArsenalBodySectionsSpamInstruction":
         MessageLookupByLibrary.simpleMessage(
           "Каждое устройство, на котором установлен Linette, может выступать в роли спаммера на почты блокираторов интернета (РКН, Яндекс и др.). Благодаря механизмам платформы, обмена и децентрализации устройства могут координироваться и отправлять письма (делать спам-атаки) синхронно. Так можно достучаться до государства и добиться отмены несправедливых мер. Так миллионы людей могут выразить свое мнение с большей вероятностью на успех.\n\nСодержание письма можно менять - оно может быть коллективным или собственным.",

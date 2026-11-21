@@ -22,6 +22,7 @@ class Spam extends StatelessWidget {
     return (
 
       Column (
+        spacing: 8 * 1.5,
         children: [
           TitleComponent (
             context.texts.windowArsenalBodySectionsSpamTitle,
@@ -29,17 +30,25 @@ class Spam extends StatelessWidget {
           ),
           Instruction (context.texts.windowArsenalBodySectionsSpamInstruction),
           const Separator (),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsSpamAction_1,
-            type: ActionType.transition
-          ),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsSpamAction_2,
-            type: ActionType.link
-          ),
-          ActionComponent (
-            context.texts.windowArsenalBodySectionsSpamAction_3,
-            type: ActionType.link
+          Column (
+            spacing: 8 * 2.75,
+            children: [
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsSpamAction_1_1,
+                textValue: context.texts.windowArsenalBodySectionsSpamAction_1_2,
+                type: ActionType.choice
+              ),
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsSpamAction_2_1,
+                textValue: context.texts.windowArsenalBodySectionsSpamAction_2_2,
+                type: ActionType.choice
+              ),
+              ActionComponent (
+                context.texts.windowArsenalBodySectionsSpamAction_3_1,
+                textValue: context.texts.windowArsenalBodySectionsSpamAction_3_2,
+                type: ActionType.choice
+              )
+            ]
           )
         ]
       )

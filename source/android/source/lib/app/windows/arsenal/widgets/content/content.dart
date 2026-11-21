@@ -25,9 +25,9 @@ class Content extends StatelessWidget {
 
     final Widget section = switch (position.value) {
       ArsenalWindowPosition.bypassing => const Bypassing (),
-      ArsenalWindowPosition.platform => const Decentralization (),
+      ArsenalWindowPosition.platform => const Platform (),
       ArsenalWindowPosition.exchange => const Exchange (),
-      ArsenalWindowPosition.decentralization => const Platform (),
+      ArsenalWindowPosition.decentralization => const Decentralization (),
       ArsenalWindowPosition.spam => const Spam ()
     };
 
