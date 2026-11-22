@@ -1,4 +1,4 @@
-// Arsenal window - Content - Separator
+// Arsenal window - Content - Separator section element
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

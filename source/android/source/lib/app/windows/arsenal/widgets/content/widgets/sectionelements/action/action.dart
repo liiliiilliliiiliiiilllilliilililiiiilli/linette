@@ -1,90 +1,31 @@
-// Arsenal window - Content - Action
+// Arsenal window - Content - Action section element
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
-import 'widgets/transitionitem/transitionitem.dart';
-import 'widgets/linkitem/linkitem.dart';
-import 'widgets/choiceitem/choiceitem.dart';
-import 'widgets/switcheritem/switcheritem.dart';
-import 'models/type/type.dart';
 
 
 
 class ActionComponent extends HookWidget {
 
   final String text;
-  final String? textValue;
-  final ActionType type;
+  final Function () onPress;
+  final Widget activity;
 
 
   const ActionComponent (
     this.text, {
     super.key,
-    this.textValue,
-    required this.type
+    required this.onPress,
+    required this.activity
   });
 
 
   @override Widget build (BuildContext context) {
 
     final ValueNotifier <bool> isPressed = useState (false);
-
-    final ValueNotifier <bool> value = useState (false);
-
-
-    void onPress () {
-
-      value.value = !value.value;
-
-    }
-
-
-    final Widget rightItem;
-
-
-    switch (type) {
-
-      case ActionType.transition: {
-
-        rightItem = const TransitionItem ();
-
-        break;
-
-      }
-
-      case ActionType.link: {
-
-        rightItem = const LinkItem ();
-
-        break;
-
-      }
-
-      case ActionType.choice: {
-
-        rightItem = ChoiceItem (textValue ?? '');
-
-        break;
-
-      }
-
-      case ActionType.switcher: {
-
-        rightItem = IgnorePointer (
-          child: SwitcherItem (
-            value: value,
-            onChanged: (bool change) {}
-          )
-        );
-
-        break;
-
-      }
-
-    };
 
 
     return (
@@ -109,7 +50,7 @@ class ActionComponent extends HookWidget {
                   )
                 )
               ),
-              rightItem
+              activity
             ]
           )
         )

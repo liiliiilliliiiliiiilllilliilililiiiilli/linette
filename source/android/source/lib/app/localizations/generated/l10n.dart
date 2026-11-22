@@ -731,10 +731,20 @@ class Texts {
   }
 
   /// `Collective`
-  String get windowArsenalBodySectionsSpamAction_1_2 {
+  String get windowArsenalBodySectionsSpamAction_1_2_1 {
     return Intl.message(
       'Collective',
-      name: 'windowArsenalBodySectionsSpamAction_1_2',
+      name: 'windowArsenalBodySectionsSpamAction_1_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Individual`
+  String get windowArsenalBodySectionsSpamAction_1_2_2 {
+    return Intl.message(
+      'Individual',
+      name: 'windowArsenalBodySectionsSpamAction_1_2_2',
       desc: '',
       args: [],
     );
@@ -751,10 +761,20 @@ class Texts {
   }
 
   /// `Letter 1`
-  String get windowArsenalBodySectionsSpamAction_2_2 {
+  String get windowArsenalBodySectionsSpamAction_2_2_1 {
     return Intl.message(
       'Letter 1',
-      name: 'windowArsenalBodySectionsSpamAction_2_2',
+      name: 'windowArsenalBodySectionsSpamAction_2_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Letter 2`
+  String get windowArsenalBodySectionsSpamAction_2_2_2 {
+    return Intl.message(
+      'Letter 2',
+      name: 'windowArsenalBodySectionsSpamAction_2_2_2',
       desc: '',
       args: [],
     );
@@ -771,10 +791,20 @@ class Texts {
   }
 
   /// `Synchronously`
-  String get windowArsenalBodySectionsSpamAction_3_2 {
+  String get windowArsenalBodySectionsSpamAction_3_2_1 {
     return Intl.message(
       'Synchronously',
-      name: 'windowArsenalBodySectionsSpamAction_3_2',
+      name: 'windowArsenalBodySectionsSpamAction_3_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Randomly`
+  String get windowArsenalBodySectionsSpamAction_3_2_2 {
+    return Intl.message(
+      'Randomly',
+      name: 'windowArsenalBodySectionsSpamAction_3_2_2',
       desc: '',
       args: [],
     );

@@ -1,4 +1,4 @@
-// Arsenal window - Content - Action - Choice item - Choices - Separator
+// Arsenal window - Content - Action section element - Choice activity - Separator
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
@@ -20,7 +20,7 @@ class Separator extends StatelessWidget {
         height: 2,
         decoration: BoxDecoration (
           borderRadius: BorderRadius.circular (100),
-          color: context.colors.windowBodySeparator
+          color: context.colors.windowBodyActionChoiceActivitySeparator
         )
       )
 

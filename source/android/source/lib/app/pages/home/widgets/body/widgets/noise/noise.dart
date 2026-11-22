@@ -195,14 +195,14 @@ class _NoisePainter extends CustomPainter {
 
     final Paint paint = Paint()..style = PaintingStyle.fill;
 
-    for (int y = 0; y < resolution; y++) {
+    for (int y = 0; y < resolution; y ++) {
 
       final double ny = (y * stepY) + spaceOffset.dy;
 
       final double top = y * cellHeight - 1;
       final double height = cellHeight + 2;
 
-      for (int x = 0; x < resolution; x++) {
+      for (int x = 0; x < resolution; x ++) {
 
         final double nx = (x * stepX) + spaceOffset.dx;
 

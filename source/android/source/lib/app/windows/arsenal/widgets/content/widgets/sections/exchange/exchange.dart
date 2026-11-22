@@ -1,4 +1,4 @@
-// Arsenal window - Exchange content
+// Arsenal window - Content - Exchange section
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';

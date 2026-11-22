@@ -1,4 +1,4 @@
-// Arsenal window - Content - Instruction
+// Arsenal window - Content - Instruction section element
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

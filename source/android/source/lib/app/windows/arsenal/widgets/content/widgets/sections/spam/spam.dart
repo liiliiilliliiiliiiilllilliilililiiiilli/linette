@@ -1,16 +1,19 @@
-// Arsenal window - Spam content
+// Arsenal window - Content - Spam section
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/action/models/type/type.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/title/title.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/instruction/instruction.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/separator/separator.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/action/action.dart';
+
+import '../../sectionelements/title/title.dart';
+import '../../sectionelements/instruction/instruction.dart';
+import '../../sectionelements/separator/separator.dart';
+import '../../sectionelements/action/action.dart';
+import '../../sectionelements/action/widgets/choiceactivity/choiceactivity.dart';
+import '../../sectionelements/action/widgets/choiceactivity/widgets/menu/widgets/choice/choice.dart';
 
 
 
-class Spam extends StatelessWidget {
+class Spam extends HookWidget {
 
   const Spam ({
     super.key
@@ -18,6 +21,57 @@ class Spam extends StatelessWidget {
 
 
   @override Widget build (BuildContext context) {
+
+    final OverlayPortalController action_1_PortalController = useMemoized (() => OverlayPortalController ());
+    final OverlayPortalController action_2_PortalController = useMemoized (() => OverlayPortalController ());
+    final OverlayPortalController action_3_PortalController = useMemoized (() => OverlayPortalController ());
+
+
+    final List <String> action_1_Options = [
+      context.texts.windowArsenalBodySectionsSpamAction_1_2_1,
+      context.texts.windowArsenalBodySectionsSpamAction_1_2_2
+    ];
+
+    final List <String> action_2_Options = [
+      context.texts.windowArsenalBodySectionsSpamAction_2_2_1,
+      context.texts.windowArsenalBodySectionsSpamAction_2_2_2
+    ];
+
+    final List <String> action_3_Options = [
+      context.texts.windowArsenalBodySectionsSpamAction_3_2_1,
+      context.texts.windowArsenalBodySectionsSpamAction_3_2_2
+    ];
+
+
+    final ValueNotifier <int> action_1_SelectedOption = useState (0);
+    final ValueNotifier <int> action_2_SelectedOption = useState (0);
+    final ValueNotifier <int> action_3_SelectedOption = useState (0);
+
+
+    void action_1_OnPress () async {
+
+      await Future.delayed (const Duration (milliseconds: 80));
+
+      action_1_PortalController.show ();
+
+    }
+
+    void action_2_OnPress () async {
+
+      await Future.delayed (const Duration (milliseconds: 80));
+
+      action_2_PortalController.show ();
+
+    }
+
+    void action_3_OnPress () async {
+
+      await Future.delayed (const Duration (milliseconds: 80));
+
+      action_3_PortalController.show ();
+
+    }
+
 
     return (
 
@@ -35,18 +89,66 @@ class Spam extends StatelessWidget {
             children: [
               ActionComponent (
                 context.texts.windowArsenalBodySectionsSpamAction_1_1,
-                textValue: context.texts.windowArsenalBodySectionsSpamAction_1_2,
-                type: ActionType.choice
+                onPress: action_1_OnPress,
+                activity: ChoiceActivity (
+                  action_1_Options [action_1_SelectedOption.value],
+                  controller: action_1_PortalController,
+                  choices: [
+                    for (int index = 0; index < action_1_Options.length; index ++) ... [
+                      Choice (
+                        action_1_Options [index],
+                        onPress: () async {
+                          await Future.delayed (const Duration (milliseconds: 80));
+                          action_1_SelectedOption.value = index;
+                          action_1_PortalController.hide ();
+                        },
+                        isChosen: (index == action_1_SelectedOption.value)
+                      )
+                    ]
+                  ]
+                )
               ),
               ActionComponent (
                 context.texts.windowArsenalBodySectionsSpamAction_2_1,
-                textValue: context.texts.windowArsenalBodySectionsSpamAction_2_2,
-                type: ActionType.choice
+                onPress: action_2_OnPress,
+                activity: ChoiceActivity (
+                  action_2_Options [action_2_SelectedOption.value],
+                  controller: action_2_PortalController,
+                  choices: [
+                    for (int index = 0; index < action_2_Options.length; index ++) ... [
+                      Choice (
+                        action_2_Options [index],
+                        onPress: () async {
+                          await Future.delayed (const Duration (milliseconds: 80));
+                          action_2_SelectedOption.value = index;
+                          action_2_PortalController.hide ();
+                        },
+                        isChosen: (index == action_2_SelectedOption.value)
+                      )
+                    ]
+                  ]
+                )
               ),
               ActionComponent (
                 context.texts.windowArsenalBodySectionsSpamAction_3_1,
-                textValue: context.texts.windowArsenalBodySectionsSpamAction_3_2,
-                type: ActionType.choice
+                onPress: action_3_OnPress,
+                activity: ChoiceActivity (
+                  action_3_Options [action_3_SelectedOption.value],
+                  controller: action_3_PortalController,
+                  choices: [
+                    for (int index = 0; index < action_3_Options.length; index ++) ... [
+                      Choice (
+                        action_3_Options [index],
+                        onPress: () async {
+                          await Future.delayed (const Duration (milliseconds: 80));
+                          action_3_SelectedOption.value = index;
+                          action_3_PortalController.hide ();
+                        },
+                        isChosen: (index == action_3_SelectedOption.value)
+                      )
+                    ]
+                  ]
+                )
               )
             ]
           )

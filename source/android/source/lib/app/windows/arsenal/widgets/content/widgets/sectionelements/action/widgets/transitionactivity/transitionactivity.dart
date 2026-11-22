@@ -1,4 +1,4 @@
-// Arsenal window - Content - Action - Link item
+// Arsenal window - Content - Action section element - Transition activity
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,9 +7,9 @@ import 'package:linette/app/modules/icons/icons.dart';
 
 
 
-class LinkItem extends StatelessWidget {
+class TransitionActivity extends StatelessWidget {
 
-  const LinkItem ({
+  const TransitionActivity ({
     super.key
   });
 
@@ -19,7 +19,7 @@ class LinkItem extends StatelessWidget {
     return (
 
       SvgPicture.asset (
-        context.icons.windowBodyActionLink,
+        context.icons.windowBodyActionTransition,
         width: 14.25,
         height: 14.25,
         colorFilter: ColorFilter.mode (

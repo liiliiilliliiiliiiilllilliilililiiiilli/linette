@@ -1,4 +1,4 @@
-// Arsenal window - Decentralization content
+// Arsenal window - Content - Decentralization section
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';

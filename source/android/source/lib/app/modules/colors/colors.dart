@@ -105,6 +105,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color lineText;
   final Color linkExternal;
   final Color linkInternal;
+  final Color menuBarrier;
   final Color noiseBack;
   final Color noisePrimary;
   final Color noiseSecondary;
@@ -131,6 +132,11 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color textFieldHint;
   final Color textFieldText;
   final Color windowBarrier;
+  final Color windowBodyActionChoiceActivityBack;
+  final Color windowBodyActionChoiceActivityBorder;
+  final Color windowBodyActionChoiceActivitySeparator;
+  final Color windowBodyActionChoiceActivityTextChosen;
+  final Color windowBodyActionChoiceActivityTextNotChosen;
   final Color windowBodyActionCritical;
   final Color windowBodyActionRegular;
   final Color windowBodyBack;
@@ -210,6 +216,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.lineText,
     required this.linkExternal,
     required this.linkInternal,
+    required this.menuBarrier,
     required this.noiseBack,
     required this.noisePrimary,
     required this.noiseSecondary,
@@ -236,6 +243,11 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.textFieldHint,
     required this.textFieldText,
     required this.windowBarrier,
+    required this.windowBodyActionChoiceActivityBack,
+    required this.windowBodyActionChoiceActivityBorder,
+    required this.windowBodyActionChoiceActivitySeparator,
+    required this.windowBodyActionChoiceActivityTextChosen,
+    required this.windowBodyActionChoiceActivityTextNotChosen,
     required this.windowBodyActionCritical,
     required this.windowBodyActionRegular,
     required this.windowBodyBack,
@@ -316,6 +328,7 @@ class AppColors extends ThemeExtension <AppColors> {
     lineText: AppColorsPalette.cream,
     linkExternal: AppColorsPalette.blue_1,
     linkInternal: AppColorsPalette.green_6,
+    menuBarrier: AppColorsPalette.transparent_1_grey_1,
     noiseBack: AppColorsPalette.black,
     noisePrimary: AppColorsPalette.green_4,
     noiseSecondary: AppColorsPalette.black,
@@ -342,6 +355,11 @@ class AppColors extends ThemeExtension <AppColors> {
     textFieldHint: AppColorsPalette.grey,
     textFieldText: AppColorsPalette.cream,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
+    windowBodyActionChoiceActivityBack: AppColorsPalette.grey_9,
+    windowBodyActionChoiceActivityBorder: AppColorsPalette.black,
+    windowBodyActionChoiceActivitySeparator: AppColorsPalette.grey_11,
+    windowBodyActionChoiceActivityTextChosen: AppColorsPalette.green_6,
+    windowBodyActionChoiceActivityTextNotChosen: AppColorsPalette.grey,
     windowBodyActionCritical: AppColorsPalette.red_1,
     windowBodyActionRegular: AppColorsPalette.green_6,
     windowBodyBack: AppColorsPalette.grey_6,
@@ -421,6 +439,7 @@ class AppColors extends ThemeExtension <AppColors> {
     lineText: AppColorsPalette.black,
     linkExternal: AppColorsPalette.blue,
     linkInternal: AppColorsPalette.green_6,
+    menuBarrier: AppColorsPalette.transparent_1_grey_1,
     noiseBack: AppColorsPalette.green_8,
     noisePrimary: AppColorsPalette.green_1,
     noiseSecondary: AppColorsPalette.green_8,
@@ -447,6 +466,11 @@ class AppColors extends ThemeExtension <AppColors> {
     textFieldHint: AppColorsPalette.grey_12,
     textFieldText: AppColorsPalette.black,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
+    windowBodyActionChoiceActivityBack: AppColorsPalette.white,
+    windowBodyActionChoiceActivityBorder: AppColorsPalette.black,
+    windowBodyActionChoiceActivitySeparator: AppColorsPalette.grey_15,
+    windowBodyActionChoiceActivityTextChosen: AppColorsPalette.black,
+    windowBodyActionChoiceActivityTextNotChosen: AppColorsPalette.black,
     windowBodyActionCritical: AppColorsPalette.red_1,
     windowBodyActionRegular: AppColorsPalette.black,
     windowBodyBack: AppColorsPalette.cream,
@@ -527,6 +551,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? lineText,
     Color? linkExternal,
     Color? linkInternal,
+    Color? menuBarrier,
     Color? noiseBack,
     Color? noisePrimary,
     Color? noiseSecondary,
@@ -553,6 +578,11 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? textFieldHint,
     Color? textFieldText,
     Color? windowBarrier,
+    Color? windowBodyActionChoiceActivityBack,
+    Color? windowBodyActionChoiceActivityBorder,
+    Color? windowBodyActionChoiceActivitySeparator,
+    Color? windowBodyActionChoiceActivityTextChosen,
+    Color? windowBodyActionChoiceActivityTextNotChosen,
     Color? windowBodyActionCritical,
     Color? windowBodyActionRegular,
     Color? windowBodyBack,
@@ -634,6 +664,7 @@ class AppColors extends ThemeExtension <AppColors> {
         lineText: lineText ?? this.lineText,
         linkExternal: linkExternal ?? this.linkExternal,
         linkInternal: linkInternal ?? this.linkInternal,
+        menuBarrier: menuBarrier ?? this.menuBarrier,
         noiseBack: noiseBack ?? this.noiseBack,
         noisePrimary: noisePrimary ?? this.noisePrimary,
         noiseSecondary: noiseSecondary ?? this.noiseSecondary,
@@ -660,6 +691,11 @@ class AppColors extends ThemeExtension <AppColors> {
         textFieldHint: textFieldHint ?? this.textFieldHint,
         textFieldText: textFieldText ?? this.textFieldText,
         windowBarrier: windowBarrier ?? this.windowBarrier,
+        windowBodyActionChoiceActivityBack: windowBodyActionChoiceActivityBack ?? this.windowBodyActionChoiceActivityBack,
+        windowBodyActionChoiceActivityBorder: windowBodyActionChoiceActivityBorder ?? this.windowBodyActionChoiceActivityBorder,
+        windowBodyActionChoiceActivitySeparator: windowBodyActionChoiceActivitySeparator ?? this.windowBodyActionChoiceActivitySeparator,
+        windowBodyActionChoiceActivityTextChosen: windowBodyActionChoiceActivityTextChosen ?? this.windowBodyActionChoiceActivityTextChosen,
+        windowBodyActionChoiceActivityTextNotChosen: windowBodyActionChoiceActivityTextNotChosen ?? this.windowBodyActionChoiceActivityTextNotChosen,
         windowBodyActionCritical: windowBodyActionCritical ?? this.windowBodyActionCritical,
         windowBodyActionRegular: windowBodyActionRegular ?? this.windowBodyActionRegular,
         windowBodyBack: windowBodyBack ?? this.windowBodyBack,
@@ -754,6 +790,7 @@ class AppColors extends ThemeExtension <AppColors> {
         lineText: Color.lerp (lineText, other.lineText, t) ?? lineText,
         linkExternal: Color.lerp (linkExternal, other.linkExternal, t) ?? linkExternal,
         linkInternal: Color.lerp (linkInternal, other.linkInternal, t) ?? linkInternal,
+        menuBarrier: Color.lerp (menuBarrier, other.menuBarrier, t) ?? menuBarrier,
         noiseBack: Color.lerp (noiseBack, other.noiseBack, t) ?? noiseBack,
         noisePrimary: Color.lerp (noisePrimary, other.noisePrimary, t) ?? noisePrimary,
         noiseSecondary: Color.lerp (noiseSecondary, other.noiseSecondary, t) ?? noiseSecondary,
@@ -780,6 +817,11 @@ class AppColors extends ThemeExtension <AppColors> {
         textFieldHint: Color.lerp (textFieldHint, other.textFieldHint, t) ?? textFieldHint,
         textFieldText: Color.lerp (textFieldText, other.textFieldText, t) ?? textFieldText,
         windowBarrier: Color.lerp (windowBarrier, other.windowBarrier, t) ?? windowBarrier,
+        windowBodyActionChoiceActivityBack: Color.lerp (windowBodyActionChoiceActivityBack, other.windowBodyActionChoiceActivityBack, t) ?? windowBodyActionChoiceActivityBack,
+        windowBodyActionChoiceActivityBorder: Color.lerp (windowBodyActionChoiceActivityBorder, other.windowBodyActionChoiceActivityBorder, t) ?? windowBodyActionChoiceActivityBorder,
+        windowBodyActionChoiceActivitySeparator: Color.lerp (windowBodyActionChoiceActivitySeparator, other.windowBodyActionChoiceActivitySeparator, t) ?? windowBodyActionChoiceActivitySeparator,
+        windowBodyActionChoiceActivityTextChosen: Color.lerp (windowBodyActionChoiceActivityTextChosen, other.windowBodyActionChoiceActivityTextChosen, t) ?? windowBodyActionChoiceActivityTextChosen,
+        windowBodyActionChoiceActivityTextNotChosen: Color.lerp (windowBodyActionChoiceActivityTextNotChosen, other.windowBodyActionChoiceActivityTextNotChosen, t) ?? windowBodyActionChoiceActivityTextNotChosen,
         windowBodyActionCritical: Color.lerp (windowBodyActionCritical, other.windowBodyActionCritical, t) ?? windowBodyActionCritical,
         windowBodyActionRegular: Color.lerp (windowBodyActionRegular, other.windowBodyActionRegular, t) ?? windowBodyActionRegular,
         windowBodyBack: Color.lerp (windowBodyBack, other.windowBodyBack, t) ?? windowBodyBack,

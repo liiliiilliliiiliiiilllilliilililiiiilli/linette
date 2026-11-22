@@ -18,7 +18,7 @@ class User extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final isPressed = useState (false);
+    final ValueNotifier <bool> isPressed = useState (false);
 
 
     void onPress () {

@@ -16,8 +16,8 @@ class Content extends StatelessWidget {
 
 
   const Content ({
-    required this.position,
-    super.key
+    super.key,
+    required this.position
   });
 
 

@@ -1,4 +1,4 @@
-// Arsenal window - Content - Title
+// Arsenal window - Content - Title section element
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';

@@ -1,4 +1,4 @@
-// Arsenal window - Platform content
+// Arsenal window - Content - Platform section
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';

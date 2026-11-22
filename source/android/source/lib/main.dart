@@ -26,6 +26,7 @@ void main () async {
     'assets/images/icons/common/bunny.svg',
     'assets/images/icons/common/butterfly.svg',
     'assets/images/icons/common/candy.svg',
+    'assets/images/icons/common/check_mark.svg',
     'assets/images/icons/common/christmas_hat.svg',
     'assets/images/icons/common/christmas_tree_toy.svg',
     'assets/images/icons/common/cotton_candy.svg',

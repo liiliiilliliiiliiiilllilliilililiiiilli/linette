@@ -50,7 +50,7 @@ class ArsenalWindow extends HookWidget {
             ]
           )
         ),
-        bodyCustomPadding: true,
+        bodyIsCustomPadding: true,
         action: context.texts.windowArsenalAction
       )
 

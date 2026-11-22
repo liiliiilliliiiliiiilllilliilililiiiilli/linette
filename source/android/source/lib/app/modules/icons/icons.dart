@@ -14,6 +14,7 @@ class AppIconsPalette {
   static const String butterfly = 'assets/images/icons/common/butterfly.svg';
   static const String candy = 'assets/images/icons/common/candy.svg';
   static const String cat = 'assets/images/icons/common/cat.png';
+  static const String checkMark = 'assets/images/icons/common/check_mark.svg';
   static const String christmasHat = 'assets/images/icons/common/christmas_hat.svg';
   static const String christmasTreeToy = 'assets/images/icons/common/christmas_tree_toy.svg';
   static const String cottonCandy = 'assets/images/icons/common/cotton_candy.svg';
@@ -79,6 +80,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
   final String windowBodyAccountNameAva;
   final String windowBodyAccountNameEdit;
   final String windowBodyActionChoice;
+  final String windowBodyActionChoiceVariant;
   final String windowBodyActionLink;
   final String windowBodyActionTransition;
 
@@ -107,6 +109,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     required this.windowBodyAccountNameAva,
     required this.windowBodyAccountNameEdit,
     required this.windowBodyActionChoice,
+    required this.windowBodyActionChoiceVariant,
     required this.windowBodyActionLink,
     required this.windowBodyActionTransition
   });
@@ -136,6 +139,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -164,6 +168,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -192,6 +197,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -220,6 +226,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -248,6 +255,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -276,6 +284,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -304,6 +313,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -332,6 +342,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -360,6 +371,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -388,6 +400,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyAccountNameAva: AppIconsPalette.cat,
     windowBodyAccountNameEdit: AppIconsPalette.pencil,
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
+    windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
     windowBodyActionTransition: AppIconsPalette.navigateArrow
   );
@@ -417,6 +430,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
     String? windowBodyAccountNameAva,
     String? windowBodyAccountNameEdit,
     String? windowBodyActionChoice,
+    String? windowBodyActionChoiceVariant,
     String? windowBodyActionLink,
     String? windowBodyActionTransition
   }) {
@@ -447,6 +461,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
         windowBodyAccountNameAva: windowBodyAccountNameAva ?? this.windowBodyAccountNameAva,
         windowBodyAccountNameEdit: windowBodyAccountNameEdit ?? this.windowBodyAccountNameEdit,
         windowBodyActionChoice: windowBodyActionChoice ?? this.windowBodyActionChoice,
+        windowBodyActionChoiceVariant: windowBodyActionChoiceVariant ?? this.windowBodyActionChoiceVariant,
         windowBodyActionLink: windowBodyActionLink ?? this.windowBodyActionLink,
         windowBodyActionTransition: windowBodyActionTransition ?? this.windowBodyActionTransition
       )
