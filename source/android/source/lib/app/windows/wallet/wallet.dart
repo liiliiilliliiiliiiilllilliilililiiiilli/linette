@@ -6,12 +6,12 @@ import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
 import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
+import 'widgets/title/title.dart';
+import 'widgets/table/table.dart';
+import 'widgets/table/widgets/stata/stata.dart';
 import 'widgets/action/action.dart';
 import 'widgets/action/models/character/character.dart';
 import 'widgets/separator/separator.dart';
-import 'widgets/table/table.dart';
-import 'widgets/table/widgets/stata/stata.dart';
-import 'widgets/title/title.dart';
 
 
 

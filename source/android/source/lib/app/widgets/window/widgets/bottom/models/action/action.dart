@@ -1,4 +1,4 @@
-// Window global widget - Bottom - Action
+// Window global widget - Bottom - Action model
 
 class ActionModel {
 

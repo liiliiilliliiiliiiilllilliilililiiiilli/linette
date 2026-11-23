@@ -154,8 +154,8 @@ class ThemeNotifier extends AsyncNotifier <AppThemeOption> {
 
       final DateTime easterDate = getEasterDate ();
 
-      final start = DateTime(easterDate.year, easterDate.month, easterDate.day).subtract(const Duration (days: 4));
-      final end = DateTime(easterDate.year, easterDate.month, easterDate.day).add(const Duration (days: 2, hours: 23, minutes: 59));
+      final DateTime start = DateTime(easterDate.year, easterDate.month, easterDate.day).subtract(const Duration (days: 4));
+      final DateTime end = DateTime(easterDate.year, easterDate.month, easterDate.day).add(const Duration (days: 2, hours: 23, minutes: 59));
 
       isEasterDate = current.isAfter(start) && current.isBefore(end);
 

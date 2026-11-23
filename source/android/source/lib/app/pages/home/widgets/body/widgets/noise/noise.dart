@@ -3,8 +3,8 @@
 import 'dart:typed_data';
 import 'dart:math' as math;
 import 'dart:ui';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 
@@ -45,7 +45,7 @@ class Noise extends HookWidget {
 
     final Offset spaceOffset = useMemoized (() {
 
-      final random = math.Random ();
+      final math.Random random = math.Random ();
 
 
       return Offset (

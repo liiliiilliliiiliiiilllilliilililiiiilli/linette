@@ -1,4 +1,4 @@
-// Arsenal window - Content - Action section element - Choice activity - Separator
+// Arsenal window - Content - Action section element - Choice activity - Menu - Separator
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

@@ -1,12 +1,13 @@
 // Arsenal window - Content
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/windows/arsenal/models/position/position.dart';
 import 'widgets/sections/bypassing/bypassing.dart';
-import 'widgets/sections/decentralization/decentralization.dart';
-import 'widgets/sections/exchange/exchange.dart';
 import 'widgets/sections/platform/platform.dart';
+import 'widgets/sections/exchange/exchange.dart';
+import 'widgets/sections/decentralization/decentralization.dart';
 import 'widgets/sections/spam/spam.dart';
+
+import '../../models/position/position.dart';
 
 
 

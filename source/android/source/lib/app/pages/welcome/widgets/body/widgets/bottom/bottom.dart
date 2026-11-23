@@ -1,8 +1,8 @@
 // Welcome page - Body - Bottom
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/pages/welcome/widgets/body/widgets/bottom/widgets/buttongo/buttongo.dart';
-import 'package:linette/app/pages/welcome/widgets/body/widgets/bottom/widgets/buttonchangelanguage/buttonchangelanguage.dart';
+import 'widgets/buttongo/buttongo.dart';
+import 'widgets/buttonchangelanguage/buttonchangelanguage.dart';
 
 
 

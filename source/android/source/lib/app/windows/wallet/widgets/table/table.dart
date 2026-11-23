@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'widgets/stata/stata.dart';
 import 'widgets/separator/separator.dart';
 import 'widgets/separator/model/type/type.dart';
-import 'widgets/stata/stata.dart';
 
 
 

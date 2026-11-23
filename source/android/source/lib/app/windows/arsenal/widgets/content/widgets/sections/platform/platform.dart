@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/title/title.dart';
-import 'package:linette/app/windows/arsenal/widgets/content/widgets/sectionelements/instruction/instruction.dart';
+
+import '../../sectionelements/title/title.dart';
+import '../../sectionelements/instruction/instruction.dart';
 
 
 

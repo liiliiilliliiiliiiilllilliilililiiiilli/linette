@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'widgets/separator/separator.dart';
 import 'widgets/action/action.dart';
 import 'widgets/action/models/character/character.dart';
+import 'widgets/separator/separator.dart';
 
 
 

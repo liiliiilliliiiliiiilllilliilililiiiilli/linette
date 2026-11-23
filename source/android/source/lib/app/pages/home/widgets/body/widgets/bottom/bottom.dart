@@ -8,9 +8,9 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/fonts/fonts.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/windows/hint/hint.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
-import 'package:linette/app/windows/hint/hint.dart';
 
 
 

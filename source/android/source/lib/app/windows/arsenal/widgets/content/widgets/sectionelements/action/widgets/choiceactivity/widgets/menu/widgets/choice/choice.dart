@@ -1,4 +1,4 @@
-// Arsenal window - Content - Action section element - Choice activity - Choice
+// Arsenal window - Content - Action section element - Choice activity - Menu - Choice
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -46,7 +46,7 @@ class Choice extends HookWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             spacing: 8,
             children: [
-              isChosen ? (
+              (isChosen) ? (
                 SvgPicture.asset (
                   context.icons.windowBodyActionChoiceVariant,
                   width: 12.5,

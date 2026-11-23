@@ -5,9 +5,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/windows/language/language.dart';
 import 'package:linette/app/widgets/textbutton/textbutton.dart';
 import 'package:linette/app/widgets/textbutton/models/icons/icons.dart';
-import 'package:linette/app/windows/language/language.dart';
 
 
 

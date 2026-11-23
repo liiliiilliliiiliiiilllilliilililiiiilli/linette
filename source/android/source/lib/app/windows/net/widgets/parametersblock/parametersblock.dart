@@ -1,8 +1,8 @@
 // Net window - Parameters block
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/windows/net/widgets/parametersblock/widgets/title/title.dart';
-import 'package:linette/app/windows/net/widgets/parametersblock/widgets/parameter/parameter.dart';
+import 'widgets/title/title.dart';
+import 'widgets/parameter/parameter.dart';
 
 
 

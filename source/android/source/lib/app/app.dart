@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:linette/app/providers/welcome/welcome.dart';
-import 'package:linette/app/providers/theme/theme.dart';
-import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/localizations/generated/l10n.dart';
+import 'package:linette/app/providers/locale/locale.dart';
+import 'package:linette/app/providers/theme/theme.dart';
+import 'package:linette/app/providers/welcome/welcome.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';

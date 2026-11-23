@@ -24,11 +24,16 @@ class BodyComponent extends StatelessWidget {
 
     Widget main () {
 
+      final double paddingHorizontal = customPadding
+        ? 2
+        : 20 - 4;
+
+
       return (
 
         Padding (
           padding: EdgeInsets.symmetric (
-            horizontal: customPadding ? 2 : 20 - 4
+            horizontal: paddingHorizontal
           ),
           child: Stack (
             children: [

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
-import 'widgets/data/data.dart';
 import 'widgets/ava/ava.dart';
+import 'widgets/data/data.dart';
 
 
 

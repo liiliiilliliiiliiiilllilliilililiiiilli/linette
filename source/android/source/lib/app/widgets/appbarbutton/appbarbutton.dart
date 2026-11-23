@@ -7,8 +7,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
-import 'models/icon/icon.dart';
 import 'models/shape/shape.dart';
+import 'models/icon/icon.dart';
 
 
 
