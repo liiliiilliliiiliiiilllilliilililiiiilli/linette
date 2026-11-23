@@ -46,12 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("已选"),
     "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
-    "pageHomeBodyBottomConnected": MessageLookupByLibrary.simpleMessage(
-      "7 个对等节点  |  4 个连接  |  27 分钟后收到垃圾邮件",
-    ),
-    "pageHomeBodyBottomNotConnected": MessageLookupByLibrary.simpleMessage(
-      "无连接",
-    ),
+    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("无连接"),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
       "芬兰  |  tropic_rain",
     ),

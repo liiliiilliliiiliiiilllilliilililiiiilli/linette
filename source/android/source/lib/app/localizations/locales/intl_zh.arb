@@ -17,8 +17,7 @@
 	"pageHomeBodyCenterGoNetherlands": "荷兰  |  tropic_rain",
 	"pageHomeBodyCenterGoFinland": "芬兰  |  tropic_rain",
 	"pageHomeBodyCenterGoGermany": "德国  |  tropic_rain",
-	"pageHomeBodyBottomNotConnected": "无连接",
-	"pageHomeBodyBottomConnected": "7 个对等节点  |  4 个连接  |  27 分钟后收到垃圾邮件",
+	"pageHomeBodyBottom": "无连接",
 	"pageHomeBottom_1": "了解更多",
 	"pageHomeBottom_2": " 关于为绕过限制而创建的服务。",
 

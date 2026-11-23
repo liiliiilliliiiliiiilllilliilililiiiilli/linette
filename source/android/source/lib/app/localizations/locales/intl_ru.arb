@@ -17,8 +17,7 @@
 	"pageHomeBodyCenterGoNetherlands": "Нидерланды  |  tropic_rain",
 	"pageHomeBodyCenterGoFinland": "Финляндия  |  tropic_rain",
 	"pageHomeBodyCenterGoGermany": "Германия  |  tropic_rain",
-	"pageHomeBodyBottomNotConnected": "Нет подключения",
-	"pageHomeBodyBottomConnected": "7 пиров  |  4 связи  |  Спам через 27 минут",
+	"pageHomeBodyBottom": "Нет подключения",
     "pageHomeBottom_1": "Подробнее",
 	"pageHomeBottom_2": " о сервисе, который создан для обхода ограничений.",
 

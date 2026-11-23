@@ -50,10 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("Выбран"),
     "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
-    "pageHomeBodyBottomConnected": MessageLookupByLibrary.simpleMessage(
-      "7 пиров  |  4 связи  |  Спам через 27 минут",
-    ),
-    "pageHomeBodyBottomNotConnected": MessageLookupByLibrary.simpleMessage(
+    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage(
       "Нет подключения",
     ),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(

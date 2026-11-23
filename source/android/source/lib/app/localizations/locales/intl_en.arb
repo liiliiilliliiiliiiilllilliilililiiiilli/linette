@@ -17,8 +17,7 @@
 	"pageHomeBodyCenterGoNetherlands": "Netherlands  |  tropic_rain",
 	"pageHomeBodyCenterGoFinland": "Finland  |  tropic_rain",
 	"pageHomeBodyCenterGoGermany": "Germany  |  tropic_rain",
-	"pageHomeBodyBottomNotConnected": "No connection",
-	"pageHomeBodyBottomConnected": "7 peers  |  4 connections  |  Spam in 27 minutes",
+	"pageHomeBodyBottom": "No connection",
     "pageHomeBottom_1": "Read more",
 	"pageHomeBottom_2": " about the service, created to pass the restrictions.",
 

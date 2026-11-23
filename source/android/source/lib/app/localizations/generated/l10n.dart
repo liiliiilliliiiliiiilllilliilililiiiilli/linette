@@ -186,20 +186,10 @@ class Texts {
   }
 
   /// `No connection`
-  String get pageHomeBodyBottomNotConnected {
+  String get pageHomeBodyBottom {
     return Intl.message(
       'No connection',
-      name: 'pageHomeBodyBottomNotConnected',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `7 peers  |  4 connections  |  Spam in 27 minutes`
-  String get pageHomeBodyBottomConnected {
-    return Intl.message(
-      '7 peers  |  4 connections  |  Spam in 27 minutes',
-      name: 'pageHomeBodyBottomConnected',
+      name: 'pageHomeBodyBottom',
       desc: '',
       args: [],
     );

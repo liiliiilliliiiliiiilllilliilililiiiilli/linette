@@ -1,13 +1,13 @@
 // Home page - Body - Main - States
 
 import 'package:flutter/material.dart';
-import 'package:linette/app/modules/colors/colors.dart';
-import 'package:linette/app/modules/fonts/fonts.dart';
-import 'package:linette/app/modules/texts/texts.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'widgets/controller/controller.dart';
+import 'widgets/info/info.dart';
 
 
 
-class States extends StatelessWidget {
+class States extends HookWidget {
 
   const States ({
     super.key
@@ -16,21 +16,15 @@ class States extends StatelessWidget {
 
   @override Widget build (BuildContext context) {
 
+    final ValueNotifier <bool> isActive = useState (true);
+
+
     return (
 
-      Container (
-        alignment: Alignment.center,
-        height: 25,
-        child: Text (
-          // context.texts.pageHomeBodyBottomNotConnected,
-          context.texts.pageHomeBodyBottomConnected,
-          style: TextStyle (
-            fontFamily: context.fonts.archivo,
-            fontWeight: FontWeight.w500,
-            fontSize: 16,
-            color: context.colors.states
-          )
-        )
+      (isActive.value) ? (
+        const Controller ()
+      ) : (
+        const Info ()
       )
 
     );
