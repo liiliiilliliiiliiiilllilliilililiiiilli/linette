@@ -1,20 +1,32 @@
 // Hint window
 
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/colors/colors.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 
 
 
-class HintWindow extends StatelessWidget {
+class HintWindow extends ConsumerWidget {
 
   const HintWindow ({
     super.key
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    void actionRightOnPress () {
+
+      context.methods.freeze (ref);
+
+      context.methods.navigateBack (context);
+
+    }
+
 
     return (
 
@@ -36,7 +48,11 @@ class HintWindow extends StatelessWidget {
             )
           )
         ),
-        action: context.texts.windowHintAction
+        actionRight: ActionModel (
+          context.texts.windowHintAction,
+          onPress: actionRightOnPress,
+          color: ActionColorModel.green
+        )
       )
 
     );

@@ -2,24 +2,36 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 import 'widgets/tabs/tabs.dart';
 import 'widgets/content/content.dart';
 import 'models/position/position.dart';
 
 
 
-class ArsenalWindow extends HookWidget {
+class ArsenalWindow extends HookConsumerWidget {
 
   const ArsenalWindow ({
     super.key
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
 
     final ValueNotifier <ArsenalWindowPosition> position = useState (ArsenalWindowPosition.bypassing);
+
+
+    void actionRightOnPress () {
+
+      context.methods.freeze (ref);
+
+      context.methods.navigateBack (context);
+
+    }
 
 
     return (
@@ -51,7 +63,11 @@ class ArsenalWindow extends HookWidget {
           )
         ),
         bodyIsCustomPadding: true,
-        action: context.texts.windowArsenalAction
+        actionRight: ActionModel (
+          context.texts.windowArsenalAction,
+          onPress: actionRightOnPress,
+          color: ActionColorModel.green
+        )
       )
 
     );

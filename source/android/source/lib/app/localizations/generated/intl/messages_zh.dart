@@ -182,6 +182,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "windowArsenalBodyTabsPlatform": MessageLookupByLibrary.simpleMessage("平台"),
     "windowArsenalBodyTabsSpam": MessageLookupByLibrary.simpleMessage("邮件群发"),
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage("应用程序的武器库"),
+    "windowConfirmationAccountDeletion_1_ActionLeft":
+        MessageLookupByLibrary.simpleMessage("取消"),
+    "windowConfirmationAccountDeletion_1_ActionRight":
+        MessageLookupByLibrary.simpleMessage("删除 (1/2)"),
+    "windowConfirmationAccountDeletion_1_Body":
+        MessageLookupByLibrary.simpleMessage(
+          "账号及其所有数据（包括资金账户）将被永久删除。所有设备上的登录状态都将失效。",
+        ),
+    "windowConfirmationAccountDeletion_1_Title":
+        MessageLookupByLibrary.simpleMessage("请确认"),
+    "windowConfirmationAccountDeletion_2_ActionLeft":
+        MessageLookupByLibrary.simpleMessage("取消"),
+    "windowConfirmationAccountDeletion_2_ActionRight":
+        MessageLookupByLibrary.simpleMessage("确认删除"),
+    "windowConfirmationAccountDeletion_2_Body":
+        MessageLookupByLibrary.simpleMessage("您确定要永久删除您的账号吗？"),
+    "windowConfirmationAccountDeletion_2_Title":
+        MessageLookupByLibrary.simpleMessage("请确认"),
+    "windowConfirmationAccountExitActionLeft":
+        MessageLookupByLibrary.simpleMessage("取消"),
+    "windowConfirmationAccountExitActionRight":
+        MessageLookupByLibrary.simpleMessage("退出登录"),
+    "windowConfirmationAccountExitBody": MessageLookupByLibrary.simpleMessage(
+      "即将退出当前账号。登录信息仍会保留在此设备上。",
+    ),
+    "windowConfirmationAccountExitTitle": MessageLookupByLibrary.simpleMessage(
+      "请确认",
+    ),
+    "windowConfirmationConnectionsDelitionActionLeft":
+        MessageLookupByLibrary.simpleMessage("取消"),
+    "windowConfirmationConnectionsDelitionActionRight":
+        MessageLookupByLibrary.simpleMessage("删除"),
+    "windowConfirmationConnectionsDelitionBody":
+        MessageLookupByLibrary.simpleMessage("将从存储中删除多个连接（14个）。"),
+    "windowConfirmationConnectionsDelitionTitle":
+        MessageLookupByLibrary.simpleMessage("请确认"),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("确定"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage("服务新闻发布在 "),
     "windowFeedbackBody_2": MessageLookupByLibrary.simpleMessage(

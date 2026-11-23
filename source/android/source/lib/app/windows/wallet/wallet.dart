@@ -1,8 +1,11 @@
 // Wallet window
 
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 import 'widgets/action/action.dart';
 import 'widgets/action/models/character/character.dart';
 import 'widgets/separator/separator.dart';
@@ -12,14 +15,23 @@ import 'widgets/title/title.dart';
 
 
 
-class WalletWindow extends StatelessWidget {
+class WalletWindow extends ConsumerWidget {
 
   const WalletWindow ({
     super.key
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    void actionRightOnPress () {
+
+      context.methods.freeze (ref);
+
+      context.methods.navigateBack (context);
+
+    }
+
 
     return (
 
@@ -84,7 +96,11 @@ class WalletWindow extends StatelessWidget {
             ]
           )
         ),
-        action: context.texts.windowWalletAction
+        actionRight: ActionModel (
+          context.texts.windowWalletAction,
+          onPress: actionRightOnPress,
+          color: ActionColorModel.green
+        )
       )
 
     );

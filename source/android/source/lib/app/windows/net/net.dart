@@ -1,22 +1,34 @@
 // Net window
 
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 import 'widgets/parametersblock/parametersblock.dart';
 import 'widgets/parametersblock/widgets/title/title.dart';
 import 'widgets/parametersblock/widgets/parameter/parameter.dart';
 
 
 
-class NetWindow extends StatelessWidget {
+class NetWindow extends ConsumerWidget {
 
   const NetWindow ({
     super.key
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
+
+    void actionRightOnPress () {
+
+      context.methods.freeze (ref);
+
+      context.methods.navigateBack (context);
+
+    }
+
 
     return (
 
@@ -179,7 +191,11 @@ class NetWindow extends StatelessWidget {
             )
           )
         ),
-        action: context.texts.windowNetAction
+        actionRight: ActionModel (
+          context.texts.windowNetAction,
+          onPress: actionRightOnPress,
+          color: ActionColorModel.green
+        )
       )
 
     );

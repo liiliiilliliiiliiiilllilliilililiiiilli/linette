@@ -160,8 +160,10 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color windowBodyUserNameIcon;
   final Color windowBodyUserNameText;
   final Color windowBodyUserSubscribers;
-  final Color windowBottomText;
   final Color windowBottomTextDisabled;
+  final Color windowBottomTextGreen;
+  final Color windowBottomTextGrey;
+  final Color windowBottomTextRed;
   final Color windowShadow;
   final Color windowTopBack;
   final Color windowTopBorderBottom;
@@ -271,8 +273,10 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.windowBodyUserNameIcon,
     required this.windowBodyUserNameText,
     required this.windowBodyUserSubscribers,
-    required this.windowBottomText,
     required this.windowBottomTextDisabled,
+    required this.windowBottomTextGreen,
+    required this.windowBottomTextGrey,
+    required this.windowBottomTextRed,
     required this.windowShadow,
     required this.windowTopBack,
     required this.windowTopBorderBottom,
@@ -383,8 +387,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyUserNameIcon: AppColorsPalette.grey_14,
     windowBodyUserNameText: AppColorsPalette.cream,
     windowBodyUserSubscribers: AppColorsPalette.grey,
-    windowBottomText: AppColorsPalette.green_6,
     windowBottomTextDisabled: AppColorsPalette.grey_12,
+    windowBottomTextGreen: AppColorsPalette.green_6,
+    windowBottomTextGrey: AppColorsPalette.grey_14,
+    windowBottomTextRed: AppColorsPalette.red_1,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
     windowTopBack: AppColorsPalette.grey_8,
     windowTopBorderBottom: AppColorsPalette.grey_4,
@@ -494,8 +500,10 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyUserNameIcon: AppColorsPalette.black,
     windowBodyUserNameText: AppColorsPalette.black,
     windowBodyUserSubscribers: AppColorsPalette.grey,
-    windowBottomText: AppColorsPalette.black,
     windowBottomTextDisabled: AppColorsPalette.grey,
+    windowBottomTextGreen: AppColorsPalette.black,
+    windowBottomTextGrey: AppColorsPalette.black,
+    windowBottomTextRed: AppColorsPalette.red_1,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
     windowTopBack: AppColorsPalette.grey_16,
     windowTopBorderBottom: AppColorsPalette.grey_15,
@@ -606,8 +614,10 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? windowBodyUserNameIcon,
     Color? windowBodyUserNameText,
     Color? windowBodyUserSubscribers,
-    Color? windowBottomText,
     Color? windowBottomTextDisabled,
+    Color? windowBottomTextGreen,
+    Color? windowBottomTextGrey,
+    Color? windowBottomTextRed,
     Color? windowShadow,
     Color? windowTopBack,
     Color? windowTopBorderBottom,
@@ -719,8 +729,10 @@ class AppColors extends ThemeExtension <AppColors> {
         windowBodyUserNameIcon: windowBodyUserNameIcon ?? this.windowBodyUserNameIcon,
         windowBodyUserNameText: windowBodyUserNameText ?? this.windowBodyUserNameText,
         windowBodyUserSubscribers: windowBodyUserSubscribers ?? this.windowBodyUserSubscribers,
-        windowBottomText: windowBottomText ?? this.windowBottomText,
         windowBottomTextDisabled: windowBottomTextDisabled ?? this.windowBottomTextDisabled,
+        windowBottomTextGreen: windowBottomTextGreen ?? this.windowBottomTextGreen,
+        windowBottomTextGrey: windowBottomTextGrey ?? this.windowBottomTextGrey,
+        windowBottomTextRed: windowBottomTextRed ?? this.windowBottomTextRed,
         windowShadow: windowShadow ?? this.windowShadow,
         windowTopBack: windowTopBack ?? this.windowTopBack,
         windowTopBorderBottom: windowTopBorderBottom ?? this.windowTopBorderBottom,
@@ -845,8 +857,10 @@ class AppColors extends ThemeExtension <AppColors> {
         windowBodyUserNameIcon: Color.lerp (windowBodyUserNameIcon, other.windowBodyUserNameIcon, t) ?? windowBodyUserNameIcon,
         windowBodyUserNameText: Color.lerp (windowBodyUserNameText, other.windowBodyUserNameText, t) ?? windowBodyUserNameText,
         windowBodyUserSubscribers: Color.lerp (windowBodyUserSubscribers, other.windowBodyUserSubscribers, t) ?? windowBodyUserSubscribers,
-        windowBottomText: Color.lerp (windowBottomText, other.windowBottomText, t) ?? windowBottomText,
         windowBottomTextDisabled: Color.lerp (windowBottomTextDisabled, other.windowBottomTextDisabled, t) ?? windowBottomTextDisabled,
+        windowBottomTextGreen: Color.lerp (windowBottomTextGreen, other.windowBottomTextGreen, t) ?? windowBottomTextGreen,
+        windowBottomTextGrey: Color.lerp (windowBottomTextGrey, other.windowBottomTextGrey, t) ?? windowBottomTextGrey,
+        windowBottomTextRed: Color.lerp (windowBottomTextRed, other.windowBottomTextRed, t) ?? windowBottomTextRed,
         windowShadow: Color.lerp (windowShadow, other.windowShadow, t) ?? windowShadow,
         windowTopBack: Color.lerp (windowTopBack, other.windowTopBack, t) ?? windowTopBack,
         windowTopBorderBottom: Color.lerp (windowTopBorderBottom, other.windowTopBorderBottom, t) ?? windowTopBorderBottom,

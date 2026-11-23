@@ -214,6 +214,46 @@ class MessageLookup extends MessageLookupByLibrary {
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
       "App\'s arsenal",
     ),
+    "windowConfirmationAccountDeletion_1_ActionLeft":
+        MessageLookupByLibrary.simpleMessage("Cancel"),
+    "windowConfirmationAccountDeletion_1_ActionRight":
+        MessageLookupByLibrary.simpleMessage("Delete (1/2)"),
+    "windowConfirmationAccountDeletion_1_Body":
+        MessageLookupByLibrary.simpleMessage(
+          "Your account and all its data, including financial accounts, will be permanently deleted. Logins on all devices will become invalid.",
+        ),
+    "windowConfirmationAccountDeletion_1_Title":
+        MessageLookupByLibrary.simpleMessage("Confirm"),
+    "windowConfirmationAccountDeletion_2_ActionLeft":
+        MessageLookupByLibrary.simpleMessage("Cancel"),
+    "windowConfirmationAccountDeletion_2_ActionRight":
+        MessageLookupByLibrary.simpleMessage("Yes, delete"),
+    "windowConfirmationAccountDeletion_2_Body":
+        MessageLookupByLibrary.simpleMessage(
+          "Are you sure you want to permanently delete your account?",
+        ),
+    "windowConfirmationAccountDeletion_2_Title":
+        MessageLookupByLibrary.simpleMessage("Confirm"),
+    "windowConfirmationAccountExitActionLeft":
+        MessageLookupByLibrary.simpleMessage("Cancel"),
+    "windowConfirmationAccountExitActionRight":
+        MessageLookupByLibrary.simpleMessage("Log out"),
+    "windowConfirmationAccountExitBody": MessageLookupByLibrary.simpleMessage(
+      "You will be logged out of your profile. Your login will remain saved on this device.",
+    ),
+    "windowConfirmationAccountExitTitle": MessageLookupByLibrary.simpleMessage(
+      "Confirm",
+    ),
+    "windowConfirmationConnectionsDelitionActionLeft":
+        MessageLookupByLibrary.simpleMessage("Cancel"),
+    "windowConfirmationConnectionsDelitionActionRight":
+        MessageLookupByLibrary.simpleMessage("Delete"),
+    "windowConfirmationConnectionsDelitionBody":
+        MessageLookupByLibrary.simpleMessage(
+          "Multiple connections (14) will be deleted from storage.",
+        ),
+    "windowConfirmationConnectionsDelitionTitle":
+        MessageLookupByLibrary.simpleMessage("Confirm"),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("Ok"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage(
       "Service news are being published on the ",

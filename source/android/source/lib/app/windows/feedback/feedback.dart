@@ -1,27 +1,38 @@
 // Feedback window
 
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/link/link.dart';
 import 'package:linette/app/widgets/link/models/type/type.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 
 
 
-class FeedbackWindow extends StatelessWidget {
+class FeedbackWindow extends ConsumerWidget {
 
   const FeedbackWindow ({
     super.key
   });
 
 
-  @override Widget build (BuildContext context) {
+  @override Widget build (BuildContext context, WidgetRef ref) {
 
     Future <void> onPress () async {
 
       await context.methods.openLink (context.texts.windowFeedbackBody_2_Link);
+
+    }
+
+
+    void actionRightOnPress () {
+
+      context.methods.freeze (ref);
+
+      context.methods.navigateBack (context);
 
     }
 
@@ -67,7 +78,11 @@ class FeedbackWindow extends StatelessWidget {
             )
           )
         ),
-        action: context.texts.windowFeedbackAction
+        actionRight: ActionModel (
+          context.texts.windowFeedbackAction,
+          onPress: actionRightOnPress,
+          color: ActionColorModel.green
+        )
       )
 
     );

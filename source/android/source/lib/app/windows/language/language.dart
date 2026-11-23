@@ -6,6 +6,7 @@ import 'package:linette/app/providers/locale/locale.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 import 'package:linette/app/widgets/radioitem/radioitem.dart';
 
 
@@ -55,6 +56,15 @@ class LanguageWindow extends ConsumerWidget {
     }
 
 
+    void actionRightOnPress () {
+
+      context.methods.freeze (ref);
+
+      context.methods.navigateBack (context);
+
+    }
+
+
     return (
 
       Window (
@@ -99,7 +109,11 @@ class LanguageWindow extends ConsumerWidget {
             )
           )
         ),
-        action: context.texts.windowLanguageAction
+        actionRight: ActionModel (
+          context.texts.windowLanguageAction,
+          onPress: actionRightOnPress,
+          color: ActionColorModel.green
+        )
       )
 
     );

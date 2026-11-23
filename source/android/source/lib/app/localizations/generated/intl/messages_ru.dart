@@ -220,6 +220,46 @@ class MessageLookup extends MessageLookupByLibrary {
     "windowArsenalTitle": MessageLookupByLibrary.simpleMessage(
       "Арсенал приложения",
     ),
+    "windowConfirmationAccountDeletion_1_ActionLeft":
+        MessageLookupByLibrary.simpleMessage("Отмена"),
+    "windowConfirmationAccountDeletion_1_ActionRight":
+        MessageLookupByLibrary.simpleMessage("Удалить (1/2)"),
+    "windowConfirmationAccountDeletion_1_Body":
+        MessageLookupByLibrary.simpleMessage(
+          "Будет безвозвратно удален аккаунт со всеми данными, включая денежные счета. Логины на всех устройствах станут недействительны.",
+        ),
+    "windowConfirmationAccountDeletion_1_Title":
+        MessageLookupByLibrary.simpleMessage("Подтвердите"),
+    "windowConfirmationAccountDeletion_2_ActionLeft":
+        MessageLookupByLibrary.simpleMessage("Отмена"),
+    "windowConfirmationAccountDeletion_2_ActionRight":
+        MessageLookupByLibrary.simpleMessage("Да, удалить"),
+    "windowConfirmationAccountDeletion_2_Body":
+        MessageLookupByLibrary.simpleMessage(
+          "Вы действительно хотите навсегда удалить свой аккаунт?",
+        ),
+    "windowConfirmationAccountDeletion_2_Title":
+        MessageLookupByLibrary.simpleMessage("Подтвердите"),
+    "windowConfirmationAccountExitActionLeft":
+        MessageLookupByLibrary.simpleMessage("Отмена"),
+    "windowConfirmationAccountExitActionRight":
+        MessageLookupByLibrary.simpleMessage("Выйти"),
+    "windowConfirmationAccountExitBody": MessageLookupByLibrary.simpleMessage(
+      "Будет произведен выход из профиля. Логин на устройстве сохранится.",
+    ),
+    "windowConfirmationAccountExitTitle": MessageLookupByLibrary.simpleMessage(
+      "Подтвердите",
+    ),
+    "windowConfirmationConnectionsDelitionActionLeft":
+        MessageLookupByLibrary.simpleMessage("Отмена"),
+    "windowConfirmationConnectionsDelitionActionRight":
+        MessageLookupByLibrary.simpleMessage("Удалить"),
+    "windowConfirmationConnectionsDelitionBody":
+        MessageLookupByLibrary.simpleMessage(
+          "Из хранилища будет удалено множество подключений (14).",
+        ),
+    "windowConfirmationConnectionsDelitionTitle":
+        MessageLookupByLibrary.simpleMessage("Подтвердите"),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("Ок"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage(
       "Новости сервиса публикуются в ",

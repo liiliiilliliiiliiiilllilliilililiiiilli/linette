@@ -380,6 +380,166 @@ class Texts {
     return Intl.message('Ok', name: 'windowHintAction', desc: '', args: []);
   }
 
+  /// `Confirm`
+  String get windowConfirmationConnectionsDelitionTitle {
+    return Intl.message(
+      'Confirm',
+      name: 'windowConfirmationConnectionsDelitionTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Multiple connections (14) will be deleted from storage.`
+  String get windowConfirmationConnectionsDelitionBody {
+    return Intl.message(
+      'Multiple connections (14) will be deleted from storage.',
+      name: 'windowConfirmationConnectionsDelitionBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get windowConfirmationConnectionsDelitionActionLeft {
+    return Intl.message(
+      'Cancel',
+      name: 'windowConfirmationConnectionsDelitionActionLeft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get windowConfirmationConnectionsDelitionActionRight {
+    return Intl.message(
+      'Delete',
+      name: 'windowConfirmationConnectionsDelitionActionRight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get windowConfirmationAccountExitTitle {
+    return Intl.message(
+      'Confirm',
+      name: 'windowConfirmationAccountExitTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You will be logged out of your profile. Your login will remain saved on this device.`
+  String get windowConfirmationAccountExitBody {
+    return Intl.message(
+      'You will be logged out of your profile. Your login will remain saved on this device.',
+      name: 'windowConfirmationAccountExitBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get windowConfirmationAccountExitActionLeft {
+    return Intl.message(
+      'Cancel',
+      name: 'windowConfirmationAccountExitActionLeft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log out`
+  String get windowConfirmationAccountExitActionRight {
+    return Intl.message(
+      'Log out',
+      name: 'windowConfirmationAccountExitActionRight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get windowConfirmationAccountDeletion_1_Title {
+    return Intl.message(
+      'Confirm',
+      name: 'windowConfirmationAccountDeletion_1_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your account and all its data, including financial accounts, will be permanently deleted. Logins on all devices will become invalid.`
+  String get windowConfirmationAccountDeletion_1_Body {
+    return Intl.message(
+      'Your account and all its data, including financial accounts, will be permanently deleted. Logins on all devices will become invalid.',
+      name: 'windowConfirmationAccountDeletion_1_Body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get windowConfirmationAccountDeletion_1_ActionLeft {
+    return Intl.message(
+      'Cancel',
+      name: 'windowConfirmationAccountDeletion_1_ActionLeft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete (1/2)`
+  String get windowConfirmationAccountDeletion_1_ActionRight {
+    return Intl.message(
+      'Delete (1/2)',
+      name: 'windowConfirmationAccountDeletion_1_ActionRight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get windowConfirmationAccountDeletion_2_Title {
+    return Intl.message(
+      'Confirm',
+      name: 'windowConfirmationAccountDeletion_2_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to permanently delete your account?`
+  String get windowConfirmationAccountDeletion_2_Body {
+    return Intl.message(
+      'Are you sure you want to permanently delete your account?',
+      name: 'windowConfirmationAccountDeletion_2_Body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get windowConfirmationAccountDeletion_2_ActionLeft {
+    return Intl.message(
+      'Cancel',
+      name: 'windowConfirmationAccountDeletion_2_ActionLeft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes, delete`
+  String get windowConfirmationAccountDeletion_2_ActionRight {
+    return Intl.message(
+      'Yes, delete',
+      name: 'windowConfirmationAccountDeletion_2_ActionRight',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `App language`
   String get windowLanguageTitle {
     return Intl.message(

@@ -5,6 +5,7 @@ import 'package:linette/app/modules/colors/colors.dart';
 import 'widgets/top/top.dart';
 import 'widgets/body/body.dart';
 import 'widgets/bottom/bottom.dart';
+import 'widgets/bottom/models/action/action.dart';
 
 
 
@@ -15,8 +16,9 @@ class Window extends StatelessWidget {
   final String title;
   final Widget body;
   final bool bodyIsCustomPadding;
-  final String action;
-  final ValueNotifier <bool>? actionActivity;
+  final ActionModel? actionLeft;
+  final ActionModel actionRight;
+  final ValueNotifier <bool>? actionIsActive;
 
 
   const Window ({
@@ -26,8 +28,9 @@ class Window extends StatelessWidget {
     required this.title,
     required this.body,
     this.bodyIsCustomPadding = false,
-    required this.action,
-    this.actionActivity
+    this.actionLeft,
+    required this.actionRight,
+    this.actionIsActive
   });
 
 
@@ -70,8 +73,9 @@ class Window extends StatelessWidget {
                         child: body
                       ),
                       BottomComponent (
-                        action: action,
-                        activity: actionActivity
+                        actionLeft: actionLeft,
+                        actionRight: actionRight,
+                        activity: actionIsActive
                       )
                     ]
                   )
