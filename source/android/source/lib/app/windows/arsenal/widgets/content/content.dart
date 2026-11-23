@@ -1,12 +1,11 @@
 // Arsenal window - Content
 
 import 'package:flutter/material.dart';
-import 'widgets/sections/bypassing/bypassing.dart';
-import 'widgets/sections/platform/platform.dart';
-import 'widgets/sections/exchange/exchange.dart';
-import 'widgets/sections/decentralization/decentralization.dart';
-import 'widgets/sections/spam/spam.dart';
-
+import 'widgets/bypassing/bypassing.dart';
+import 'widgets/platform/platform.dart';
+import 'widgets/exchange/exchange.dart';
+import 'widgets/decentralization/decentralization.dart';
+import 'widgets/spam/spam.dart';
 import '../../models/position/position.dart';
 
 

@@ -5,13 +5,14 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/widgets/window/window.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/title/title.dart';
+import 'package:linette/app/windows/wallet/widgets/table/table.dart';
+import 'package:linette/app/windows/wallet/widgets/table/widgets/stata/stata.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/action/action.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/action/widgets/transitionactivity/transitionactivity.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/action/models/character/character.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/separator/separator.dart';
 import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
-import 'widgets/title/title.dart';
-import 'widgets/table/table.dart';
-import 'widgets/table/widgets/stata/stata.dart';
-import 'widgets/action/action.dart';
-import 'widgets/action/models/character/character.dart';
-import 'widgets/separator/separator.dart';
 
 
 
@@ -67,11 +68,15 @@ class WalletWindow extends ConsumerWidget {
               ),
               ActionComponent (
                 context.texts.windowWalletBalanceActionAccumulate,
-                character: ActionCharacter.regular
+                onPress: () {},
+                character: ActionCharacter.regular,
+                activity: const TransitionActivity ()
               ),
               ActionComponent (
                 context.texts.windowWalletBalanceActionTopUp,
-                character: ActionCharacter.regular
+                onPress: () {},
+                character: ActionCharacter.regular,
+                activity: const TransitionActivity ()
               ),
               const Separator (),
               TitleComponent (context.texts.windowWalletIncomeTitle),
@@ -91,7 +96,9 @@ class WalletWindow extends ConsumerWidget {
               ),
               ActionComponent (
                 context.texts.windowWalletIncomeActionWithdraw,
-                character: ActionCharacter.regular
+                onPress: () {},
+                character: ActionCharacter.regular,
+                activity: const TransitionActivity ()
               )
             ]
           )

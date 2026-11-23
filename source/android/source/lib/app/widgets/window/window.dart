@@ -69,7 +69,7 @@ class Window extends StatelessWidget {
                       TopComponent (title),
                       BodyComponent (
                         isExpanded: isExpanded,
-                        customPadding: bodyIsCustomPadding,
+                        isCustomPadding: bodyIsCustomPadding,
                         child: body
                       ),
                       BottomComponent (

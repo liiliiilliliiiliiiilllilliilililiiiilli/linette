@@ -16,7 +16,7 @@ class AppColorsPalette {
   static const Color white = Color (0xffffffff);
   static const Color red = Color (0xfff44336);
   static const Color green = Color (0xff4caf50);
-  static const Color blue = Color (0xff0645AD);
+  static const Color blue = Color (0xff0645ad);
   static const Color transparent_1_grey_1 = Color (0x40000000);
   static const Color transparent_1_grey_3 = Color (0x40808080);
   static const Color transparent_2_grey_1 = Color (0x80000000);
@@ -24,7 +24,7 @@ class AppColorsPalette {
   static const Color transparent_2_grey_4 = Color (0x80ffffff);
   static const Color transparent_3_grey_1 = Color (0x94000000);
   static const Color transparent_4_grey_1 = Color (0xc4808080);
-  static const Color transparent_4_green_1 = Color (0x808b9e80);
+  static const Color transparent_4_green_2 = Color (0x808b9e80);
   static const Color grey_1 = Color (0xff010101);
   static const Color grey_2 = Color (0xff070707);
   static const Color grey_3 = Color (0xff0b0b0b);
@@ -41,16 +41,26 @@ class AppColorsPalette {
   static const Color grey_14 = Color (0xffbfbfbf);
   static const Color grey_15 = Color (0xffcdcdcd);
   static const Color grey_16 = Color (0xfffafafa);
-  static const Color red_1 = Color (0xffcb393c);
-  static const Color green_1 = Color (0xff12361b);
-  static const Color green_2 = Color (0xff1b1c1b);
-  static const Color green_3 = Color (0xff394335);
-  static const Color green_4 = Color (0xff567560);
-  static const Color green_5 = Color (0xff687262);
-  static const Color green_6 = Color (0xff8b9e80);
-  static const Color green_7 = Color (0xffa8bf9b);
-  static const Color green_8 = Color (0xffd8e0d7);
-  static const Color blue_1 = Color (0xff9da6d9);
+  static const Color red_1 = Color (0xff110303);
+  static const Color red_2 = Color (0xffe57373);
+  static const Color red_3 = Color (0xffcb393c);
+  static const Color yellow_1 = Color (0xff130f01);
+  static const Color yellow_2 = Color (0xfff4c430);
+  static const Color green_1 = Color (0xff060e07);
+  static const Color green_2 = Color (0xff12361b);
+  static const Color green_3 = Color (0xff1b1c1b);
+  static const Color green_4 = Color (0xff394335);
+  static const Color green_5 = Color (0xff567560);
+  static const Color green_6 = Color (0xff66bb6a);
+  static const Color green_7 = Color (0xff687262);
+  static const Color green_8 = Color (0xff8b9e80);
+  static const Color green_9 = Color (0xffa8bf9b);
+  static const Color green_10 = Color (0xffd8e0d7);
+  static const Color blue_1 = Color (0xff030912);
+  static const Color blue_2 = Color (0xff5a92e5);
+  static const Color blue_3 = Color (0xff9da6d9);
+  static const Color purple_1 = Color (0xff080410);
+  static const Color purple_2 = Color (0xffa385de);
 
 }
 
@@ -90,6 +100,29 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color circleBorder;
   final Color connectionChoiceStatus;
   final Color connectionCountryName;
+  final Color controllerBack;
+  final Color controllerBorder;
+  final Color controllerIndicatorBypassingActiveBack;
+  final Color controllerIndicatorBypassingBorder;
+  final Color controllerIndicatorBypassingNotActiveBack;
+  final Color controllerIndicatorDecentralizationActiveBack;
+  final Color controllerIndicatorDecentralizationBorder;
+  final Color controllerIndicatorDecentralizationNotActiveBack;
+  final Color controllerIndicatorExchangeActiveBack;
+  final Color controllerIndicatorExchangeBorder;
+  final Color controllerIndicatorExchangeNotActiveBack;
+  final Color controllerIndicatorPlatformActiveBack;
+  final Color controllerIndicatorPlatformBorder;
+  final Color controllerIndicatorPlatformNotActiveBack;
+  final Color controllerIndicatorSpamActiveBack;
+  final Color controllerIndicatorSpamBorder;
+  final Color controllerIndicatorSpamNotActiveBack;
+  final Color controllerMenuActionIcon;
+  final Color controllerMenuActionSeparator;
+  final Color controllerMenuActionText;
+  final Color controllerMenuBack;
+  final Color controllerMenuHint;
+  final Color controllerMenuShadow;
   final Color drawerBack;
   final Color drawerBottomBarBack;
   final Color drawerBottomBarBorder;
@@ -203,6 +236,29 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.circleBorder,
     required this.connectionChoiceStatus,
     required this.connectionCountryName,
+    required this.controllerBack,
+    required this.controllerBorder,
+    required this.controllerIndicatorBypassingActiveBack,
+    required this.controllerIndicatorBypassingBorder,
+    required this.controllerIndicatorBypassingNotActiveBack,
+    required this.controllerIndicatorDecentralizationActiveBack,
+    required this.controllerIndicatorDecentralizationBorder,
+    required this.controllerIndicatorDecentralizationNotActiveBack,
+    required this.controllerIndicatorExchangeActiveBack,
+    required this.controllerIndicatorExchangeBorder,
+    required this.controllerIndicatorExchangeNotActiveBack,
+    required this.controllerIndicatorPlatformActiveBack,
+    required this.controllerIndicatorPlatformBorder,
+    required this.controllerIndicatorPlatformNotActiveBack,
+    required this.controllerIndicatorSpamActiveBack,
+    required this.controllerIndicatorSpamBorder,
+    required this.controllerIndicatorSpamNotActiveBack,
+    required this.controllerMenuActionIcon,
+    required this.controllerMenuActionSeparator,
+    required this.controllerMenuActionText,
+    required this.controllerMenuBack,
+    required this.controllerMenuHint,
+    required this.controllerMenuShadow,
     required this.drawerBack,
     required this.drawerBottomBarBack,
     required this.drawerBottomBarBorder,
@@ -290,33 +346,56 @@ class AppColors extends ThemeExtension <AppColors> {
     appBarButtonBack: AppColorsPalette.black,
     appBarButtonBorder: AppColorsPalette.grey_9,
     appBarButtonIcon: AppColorsPalette.grey,
-    appBarTitleElement: AppColorsPalette.green_6,
+    appBarTitleElement: AppColorsPalette.green_8,
     appBarTitleShadow: AppColorsPalette.transparent_4_grey_1,
     appBarTitleText: AppColorsPalette.cream,
     blockBack: AppColorsPalette.grey_5,
-    blockBorder: AppColorsPalette.green_3,
+    blockBorder: AppColorsPalette.green_4,
     bodyBack: AppColorsPalette.black,
     bodyBackPrime: AppColorsPalette.grey_2,
-    bodyTitleElement: AppColorsPalette.green_6,
+    bodyTitleElement: AppColorsPalette.green_8,
     bodyTitleShadow: AppColorsPalette.transparent_4_grey_1,
     bodyTitleText: AppColorsPalette.cream,
     bottomBarBack: AppColorsPalette.transparent_2_grey_3,
     bottomBarBorder: AppColorsPalette.black,
     bottomBarText: AppColorsPalette.grey_13,
-    bottomBarTextPrime: AppColorsPalette.green_6,
-    buttonBack: AppColorsPalette.green_6,
-    buttonChooseConnection: AppColorsPalette.green_6,
-    buttonConnectBack: AppColorsPalette.green_6,
+    bottomBarTextPrime: AppColorsPalette.green_8,
+    buttonBack: AppColorsPalette.green_8,
+    buttonChooseConnection: AppColorsPalette.green_8,
+    buttonConnectBack: AppColorsPalette.green_8,
     buttonConnectBorder: AppColorsPalette.black,
     buttonConnectIcon: AppColorsPalette.grey_1,
     buttonConnectShadow: AppColorsPalette.transparent_3_grey_1,
     buttonText: AppColorsPalette.black,
-    checkFill: AppColorsPalette.green_6,
+    checkFill: AppColorsPalette.green_8,
     checkVote: AppColorsPalette.grey_3,
     circleBack: AppColorsPalette.black,
     circleBorder: AppColorsPalette.grey_11,
     connectionChoiceStatus: AppColorsPalette.grey_13,
     connectionCountryName: AppColorsPalette.cream,
+    controllerBack: AppColorsPalette.grey_7,
+    controllerBorder: AppColorsPalette.black,
+    controllerIndicatorBypassingActiveBack: AppColorsPalette.blue_2,
+    controllerIndicatorBypassingBorder: AppColorsPalette.blue_1,
+    controllerIndicatorBypassingNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorDecentralizationActiveBack: AppColorsPalette.green_6,
+    controllerIndicatorDecentralizationBorder: AppColorsPalette.green_1,
+    controllerIndicatorDecentralizationNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorExchangeActiveBack: AppColorsPalette.purple_2,
+    controllerIndicatorExchangeBorder: AppColorsPalette.purple_1,
+    controllerIndicatorExchangeNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorPlatformActiveBack: AppColorsPalette.yellow_2,
+    controllerIndicatorPlatformBorder: AppColorsPalette.yellow_1,
+    controllerIndicatorPlatformNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorSpamActiveBack: AppColorsPalette.red_2,
+    controllerIndicatorSpamBorder: AppColorsPalette.red_1,
+    controllerIndicatorSpamNotActiveBack: AppColorsPalette.black,
+    controllerMenuActionIcon: AppColorsPalette.grey,
+    controllerMenuActionSeparator: AppColorsPalette.grey_12,
+    controllerMenuActionText: AppColorsPalette.cream,
+    controllerMenuBack: AppColorsPalette.grey_6,
+    controllerMenuHint: AppColorsPalette.grey,
+    controllerMenuShadow: AppColorsPalette.transparent_1_grey_1,
     drawerBack: AppColorsPalette.grey_3,
     drawerBottomBarBack: AppColorsPalette.grey_2,
     drawerBottomBarBorder: AppColorsPalette.grey_7,
@@ -328,51 +407,51 @@ class AppColors extends ThemeExtension <AppColors> {
     drawerTopBarBack: AppColorsPalette.grey_2,
     drawerTopBarBorder: AppColorsPalette.grey_7,
     drawerTopBarText: AppColorsPalette.cream,
-    line: AppColorsPalette.green_2,
+    line: AppColorsPalette.green_3,
     lineText: AppColorsPalette.cream,
-    linkExternal: AppColorsPalette.blue_1,
-    linkInternal: AppColorsPalette.green_6,
+    linkExternal: AppColorsPalette.blue_3,
+    linkInternal: AppColorsPalette.green_8,
     menuBarrier: AppColorsPalette.transparent_1_grey_1,
     noiseBack: AppColorsPalette.black,
-    noisePrimary: AppColorsPalette.green_4,
+    noisePrimary: AppColorsPalette.green_5,
     noiseSecondary: AppColorsPalette.black,
     radioButtonBack: AppColorsPalette.black,
-    radioButtonInsidesChosen: AppColorsPalette.green_6,
+    radioButtonInsidesChosen: AppColorsPalette.green_8,
     radioButtonInsidesNotChosen: AppColorsPalette.black,
-    radioButtonOutsidesChosen: AppColorsPalette.transparent_4_green_1,
+    radioButtonOutsidesChosen: AppColorsPalette.transparent_4_green_2,
     radioButtonOutsidesNotChosen: AppColorsPalette.transparent_1_grey_3,
     standartGreen: AppColorsPalette.green,
     standartRed: AppColorsPalette.red,
     states: AppColorsPalette.grey,
     status: AppColorsPalette.cream,
-    switchBackActive: AppColorsPalette.green_6,
+    switchBackActive: AppColorsPalette.green_8,
     switchBackNotActive: AppColorsPalette.grey_10,
-    switchBorderActive: AppColorsPalette.green_6,
+    switchBorderActive: AppColorsPalette.green_8,
     switchBorderNotActive: AppColorsPalette.grey_10,
     switchTrackActive: AppColorsPalette.cream,
     switchTrackNotActive: AppColorsPalette.cream,
-    tapHint: AppColorsPalette.green_5,
-    textButton: AppColorsPalette.green_6,
+    tapHint: AppColorsPalette.green_7,
+    textButton: AppColorsPalette.green_8,
     textFieldBack: AppColorsPalette.black,
     textFieldBorder: AppColorsPalette.grey_9,
-    textFieldCursor: AppColorsPalette.green_6,
+    textFieldCursor: AppColorsPalette.green_8,
     textFieldHint: AppColorsPalette.grey,
     textFieldText: AppColorsPalette.cream,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
     windowBodyActionChoiceActivityBack: AppColorsPalette.grey_9,
     windowBodyActionChoiceActivityBorder: AppColorsPalette.black,
     windowBodyActionChoiceActivitySeparator: AppColorsPalette.grey_11,
-    windowBodyActionChoiceActivityTextChosen: AppColorsPalette.green_6,
+    windowBodyActionChoiceActivityTextChosen: AppColorsPalette.green_8,
     windowBodyActionChoiceActivityTextNotChosen: AppColorsPalette.grey,
-    windowBodyActionCritical: AppColorsPalette.red_1,
-    windowBodyActionRegular: AppColorsPalette.green_6,
+    windowBodyActionCritical: AppColorsPalette.red_3,
+    windowBodyActionRegular: AppColorsPalette.green_8,
     windowBodyBack: AppColorsPalette.grey_6,
     windowBodySeparator: AppColorsPalette.grey_9,
     windowBodyStataName: AppColorsPalette.grey,
     windowBodyStataValue: AppColorsPalette.grey,
     windowBodyTabChosenBack: AppColorsPalette.black,
-    windowBodyTabChosenBorder: AppColorsPalette.green_3,
-    windowBodyTabChosenText: AppColorsPalette.green_7,
+    windowBodyTabChosenBorder: AppColorsPalette.green_4,
+    windowBodyTabChosenText: AppColorsPalette.green_9,
     windowBodyTabNotChosenBack: AppColorsPalette.black,
     windowBodyTabNotChosenBorder: AppColorsPalette.grey_9,
     windowBodyTabNotChosenText: AppColorsPalette.cream,
@@ -388,9 +467,9 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyUserNameText: AppColorsPalette.cream,
     windowBodyUserSubscribers: AppColorsPalette.grey,
     windowBottomTextDisabled: AppColorsPalette.grey_12,
-    windowBottomTextGreen: AppColorsPalette.green_6,
+    windowBottomTextGreen: AppColorsPalette.green_8,
     windowBottomTextGrey: AppColorsPalette.grey_14,
-    windowBottomTextRed: AppColorsPalette.red_1,
+    windowBottomTextRed: AppColorsPalette.red_3,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
     windowTopBack: AppColorsPalette.grey_8,
     windowTopBorderBottom: AppColorsPalette.grey_4,
@@ -403,33 +482,56 @@ class AppColors extends ThemeExtension <AppColors> {
     appBarButtonBack: AppColorsPalette.white,
     appBarButtonBorder: AppColorsPalette.grey_15,
     appBarButtonIcon: AppColorsPalette.grey_12,
-    appBarTitleElement: AppColorsPalette.green_6,
+    appBarTitleElement: AppColorsPalette.green_8,
     appBarTitleShadow: AppColorsPalette.transparent_4_grey_1,
     appBarTitleText: AppColorsPalette.black,
     blockBack: AppColorsPalette.white,
     blockBorder: AppColorsPalette.grey_15,
     bodyBack: AppColorsPalette.cream,
     bodyBackPrime: AppColorsPalette.grey_16,
-    bodyTitleElement: AppColorsPalette.green_6,
+    bodyTitleElement: AppColorsPalette.green_8,
     bodyTitleShadow: AppColorsPalette.transparent_4_grey_1,
     bodyTitleText: AppColorsPalette.black,
     bottomBarBack: AppColorsPalette.transparent_2_grey_4,
     bottomBarBorder: AppColorsPalette.grey_15,
     bottomBarText: AppColorsPalette.black,
-    bottomBarTextPrime: AppColorsPalette.green_4,
+    bottomBarTextPrime: AppColorsPalette.green_5,
     buttonBack: AppColorsPalette.black,
     buttonChooseConnection: AppColorsPalette.black,
-    buttonConnectBack: AppColorsPalette.green_6,
+    buttonConnectBack: AppColorsPalette.green_8,
     buttonConnectBorder: AppColorsPalette.black,
     buttonConnectIcon: AppColorsPalette.grey_1,
     buttonConnectShadow: AppColorsPalette.transparent_3_grey_1,
     buttonText: AppColorsPalette.cream,
-    checkFill: AppColorsPalette.green_6,
+    checkFill: AppColorsPalette.green_8,
     checkVote: AppColorsPalette.cream,
     circleBack: AppColorsPalette.cream,
     circleBorder: AppColorsPalette.grey_15,
     connectionChoiceStatus: AppColorsPalette.grey_13,
     connectionCountryName: AppColorsPalette.black,
+    controllerBack: AppColorsPalette.grey_7,
+    controllerBorder: AppColorsPalette.black,
+    controllerIndicatorBypassingActiveBack: AppColorsPalette.blue_2,
+    controllerIndicatorBypassingBorder: AppColorsPalette.blue_1,
+    controllerIndicatorBypassingNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorDecentralizationActiveBack: AppColorsPalette.green_6,
+    controllerIndicatorDecentralizationBorder: AppColorsPalette.green_1,
+    controllerIndicatorDecentralizationNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorExchangeActiveBack: AppColorsPalette.purple_2,
+    controllerIndicatorExchangeBorder: AppColorsPalette.purple_1,
+    controllerIndicatorExchangeNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorPlatformActiveBack: AppColorsPalette.yellow_2,
+    controllerIndicatorPlatformBorder: AppColorsPalette.yellow_1,
+    controllerIndicatorPlatformNotActiveBack: AppColorsPalette.black,
+    controllerIndicatorSpamActiveBack: AppColorsPalette.red_2,
+    controllerIndicatorSpamBorder: AppColorsPalette.red_1,
+    controllerIndicatorSpamNotActiveBack: AppColorsPalette.black,
+    controllerMenuActionIcon: AppColorsPalette.grey,
+    controllerMenuActionSeparator: AppColorsPalette.grey_12,
+    controllerMenuActionText: AppColorsPalette.cream,
+    controllerMenuBack: AppColorsPalette.grey_6,
+    controllerMenuHint: AppColorsPalette.grey,
+    controllerMenuShadow: AppColorsPalette.transparent_1_grey_1,
     drawerBack: AppColorsPalette.cream,
     drawerBottomBarBack: AppColorsPalette.grey_16,
     drawerBottomBarBorder: AppColorsPalette.grey_15,
@@ -444,23 +546,23 @@ class AppColors extends ThemeExtension <AppColors> {
     line: AppColorsPalette.grey_15,
     lineText: AppColorsPalette.black,
     linkExternal: AppColorsPalette.blue,
-    linkInternal: AppColorsPalette.green_6,
+    linkInternal: AppColorsPalette.green_8,
     menuBarrier: AppColorsPalette.transparent_1_grey_1,
-    noiseBack: AppColorsPalette.green_8,
-    noisePrimary: AppColorsPalette.green_1,
-    noiseSecondary: AppColorsPalette.green_8,
+    noiseBack: AppColorsPalette.green_10,
+    noisePrimary: AppColorsPalette.green_2,
+    noiseSecondary: AppColorsPalette.green_10,
     radioButtonBack: AppColorsPalette.white,
-    radioButtonInsidesChosen: AppColorsPalette.green_6,
+    radioButtonInsidesChosen: AppColorsPalette.green_8,
     radioButtonInsidesNotChosen: AppColorsPalette.white,
-    radioButtonOutsidesChosen: AppColorsPalette.transparent_4_green_1,
+    radioButtonOutsidesChosen: AppColorsPalette.transparent_4_green_2,
     radioButtonOutsidesNotChosen: AppColorsPalette.transparent_1_grey_3,
     standartGreen: AppColorsPalette.green,
     standartRed: AppColorsPalette.red,
     states: AppColorsPalette.black,
     status: AppColorsPalette.black,
-    switchBackActive: AppColorsPalette.green_6,
+    switchBackActive: AppColorsPalette.green_8,
     switchBackNotActive: AppColorsPalette.white,
-    switchBorderActive: AppColorsPalette.green_6,
+    switchBorderActive: AppColorsPalette.green_8,
     switchBorderNotActive: AppColorsPalette.black,
     switchTrackActive: AppColorsPalette.cream,
     switchTrackNotActive: AppColorsPalette.black,
@@ -468,7 +570,7 @@ class AppColors extends ThemeExtension <AppColors> {
     textButton: AppColorsPalette.black,
     textFieldBack: AppColorsPalette.grey_16,
     textFieldBorder: AppColorsPalette.grey_15,
-    textFieldCursor: AppColorsPalette.green_6,
+    textFieldCursor: AppColorsPalette.green_8,
     textFieldHint: AppColorsPalette.grey_12,
     textFieldText: AppColorsPalette.black,
     windowBarrier: AppColorsPalette.transparent_2_grey_1,
@@ -477,14 +579,14 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyActionChoiceActivitySeparator: AppColorsPalette.grey_15,
     windowBodyActionChoiceActivityTextChosen: AppColorsPalette.black,
     windowBodyActionChoiceActivityTextNotChosen: AppColorsPalette.black,
-    windowBodyActionCritical: AppColorsPalette.red_1,
+    windowBodyActionCritical: AppColorsPalette.red_3,
     windowBodyActionRegular: AppColorsPalette.black,
     windowBodyBack: AppColorsPalette.cream,
     windowBodySeparator: AppColorsPalette.grey_15,
     windowBodyStataName: AppColorsPalette.grey_12,
     windowBodyStataValue: AppColorsPalette.grey_12,
-    windowBodyTabChosenBack: AppColorsPalette.green_8,
-    windowBodyTabChosenBorder: AppColorsPalette.green_6,
+    windowBodyTabChosenBack: AppColorsPalette.green_10,
+    windowBodyTabChosenBorder: AppColorsPalette.green_8,
     windowBodyTabChosenText: AppColorsPalette.black,
     windowBodyTabNotChosenBack: AppColorsPalette.white,
     windowBodyTabNotChosenBorder: AppColorsPalette.black,
@@ -503,7 +605,7 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBottomTextDisabled: AppColorsPalette.grey,
     windowBottomTextGreen: AppColorsPalette.black,
     windowBottomTextGrey: AppColorsPalette.black,
-    windowBottomTextRed: AppColorsPalette.red_1,
+    windowBottomTextRed: AppColorsPalette.red_3,
     windowShadow: AppColorsPalette.transparent_1_grey_1,
     windowTopBack: AppColorsPalette.grey_16,
     windowTopBorderBottom: AppColorsPalette.grey_15,
@@ -544,6 +646,29 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? circleBorder,
     Color? connectionChoiceStatus,
     Color? connectionCountryName,
+    Color? controllerBack,
+    Color? controllerBorder,
+    Color? controllerIndicatorBypassingActiveBack,
+    Color? controllerIndicatorBypassingBorder,
+    Color? controllerIndicatorBypassingNotActiveBack,
+    Color? controllerIndicatorDecentralizationActiveBack,
+    Color? controllerIndicatorDecentralizationBorder,
+    Color? controllerIndicatorDecentralizationNotActiveBack,
+    Color? controllerIndicatorExchangeActiveBack,
+    Color? controllerIndicatorExchangeBorder,
+    Color? controllerIndicatorExchangeNotActiveBack,
+    Color? controllerIndicatorPlatformActiveBack,
+    Color? controllerIndicatorPlatformBorder,
+    Color? controllerIndicatorPlatformNotActiveBack,
+    Color? controllerIndicatorSpamActiveBack,
+    Color? controllerIndicatorSpamBorder,
+    Color? controllerIndicatorSpamNotActiveBack,
+    Color? controllerMenuActionIcon,
+    Color? controllerMenuActionSeparator,
+    Color? controllerMenuActionText,
+    Color? controllerMenuBack,
+    Color? controllerMenuHint,
+    Color? controllerMenuShadow,
     Color? drawerBack,
     Color? drawerBottomBarBack,
     Color? drawerBottomBarBorder,
@@ -659,6 +784,29 @@ class AppColors extends ThemeExtension <AppColors> {
         circleBorder: circleBorder ?? this.circleBorder,
         connectionChoiceStatus: connectionChoiceStatus ?? this.connectionChoiceStatus,
         connectionCountryName: connectionCountryName ?? this.connectionCountryName,
+        controllerBack: controllerBack ?? this.controllerBack,
+        controllerBorder: controllerBorder ?? this.controllerBorder,
+        controllerIndicatorBypassingActiveBack: controllerIndicatorBypassingActiveBack ?? this.controllerIndicatorBypassingActiveBack,
+        controllerIndicatorBypassingBorder: controllerIndicatorBypassingBorder ?? this.controllerIndicatorBypassingBorder,
+        controllerIndicatorBypassingNotActiveBack: controllerIndicatorBypassingNotActiveBack ?? this.controllerIndicatorBypassingNotActiveBack,
+        controllerIndicatorDecentralizationActiveBack: controllerIndicatorDecentralizationActiveBack ?? this.controllerIndicatorDecentralizationActiveBack,
+        controllerIndicatorDecentralizationBorder: controllerIndicatorDecentralizationBorder ?? this.controllerIndicatorDecentralizationBorder,
+        controllerIndicatorDecentralizationNotActiveBack: controllerIndicatorDecentralizationNotActiveBack ?? this.controllerIndicatorDecentralizationNotActiveBack,
+        controllerIndicatorExchangeActiveBack: controllerIndicatorExchangeActiveBack ?? this.controllerIndicatorExchangeActiveBack,
+        controllerIndicatorExchangeBorder: controllerIndicatorExchangeBorder ?? this.controllerIndicatorExchangeBorder,
+        controllerIndicatorExchangeNotActiveBack: controllerIndicatorExchangeNotActiveBack ?? this.controllerIndicatorExchangeNotActiveBack,
+        controllerIndicatorPlatformActiveBack: controllerIndicatorPlatformActiveBack ?? this.controllerIndicatorPlatformActiveBack,
+        controllerIndicatorPlatformBorder: controllerIndicatorPlatformBorder ?? this.controllerIndicatorPlatformBorder,
+        controllerIndicatorPlatformNotActiveBack: controllerIndicatorPlatformNotActiveBack ?? this.controllerIndicatorPlatformNotActiveBack,
+        controllerIndicatorSpamActiveBack: controllerIndicatorSpamActiveBack ?? this.controllerIndicatorSpamActiveBack,
+        controllerIndicatorSpamBorder: controllerIndicatorSpamBorder ?? this.controllerIndicatorSpamBorder,
+        controllerIndicatorSpamNotActiveBack: controllerIndicatorSpamNotActiveBack ?? this.controllerIndicatorSpamNotActiveBack,
+        controllerMenuActionIcon: controllerMenuActionIcon ?? this.controllerMenuActionIcon,
+        controllerMenuActionSeparator: controllerMenuActionSeparator ?? this.controllerMenuActionSeparator,
+        controllerMenuActionText: controllerMenuActionText ?? this.controllerMenuActionText,
+        controllerMenuBack: controllerMenuBack ?? this.controllerMenuBack,
+        controllerMenuHint: controllerMenuHint ?? this.controllerMenuHint,
+        controllerMenuShadow: controllerMenuShadow ?? this.controllerMenuShadow,
         drawerBack: drawerBack ?? this.drawerBack,
         drawerBottomBarBack: drawerBottomBarBack ?? this.drawerBottomBarBack,
         drawerBottomBarBorder: drawerBottomBarBorder ?? this.drawerBottomBarBorder,
@@ -787,6 +935,29 @@ class AppColors extends ThemeExtension <AppColors> {
         circleBorder: Color.lerp (circleBorder, other.circleBorder, t) ?? circleBorder,
         connectionChoiceStatus: Color.lerp (connectionChoiceStatus, other.connectionChoiceStatus, t) ?? connectionChoiceStatus,
         connectionCountryName: Color.lerp (connectionCountryName, other.connectionCountryName, t) ?? connectionCountryName,
+        controllerBack: Color.lerp (controllerBack, other.controllerBack, t) ?? controllerBack,
+        controllerBorder: Color.lerp (controllerBorder, other.controllerBorder, t) ?? controllerBorder,
+        controllerIndicatorBypassingActiveBack: Color.lerp (controllerIndicatorBypassingActiveBack, other.controllerIndicatorBypassingActiveBack, t) ?? controllerIndicatorBypassingActiveBack,
+        controllerIndicatorBypassingBorder: Color.lerp (controllerIndicatorBypassingBorder, other.controllerIndicatorBypassingBorder, t) ?? controllerIndicatorBypassingBorder,
+        controllerIndicatorBypassingNotActiveBack: Color.lerp (controllerIndicatorBypassingNotActiveBack, other.controllerIndicatorBypassingNotActiveBack, t) ?? controllerIndicatorBypassingNotActiveBack,
+        controllerIndicatorDecentralizationActiveBack: Color.lerp (controllerIndicatorDecentralizationActiveBack, other.controllerIndicatorDecentralizationActiveBack, t) ?? controllerIndicatorDecentralizationActiveBack,
+        controllerIndicatorDecentralizationBorder: Color.lerp (controllerIndicatorDecentralizationBorder, other.controllerIndicatorDecentralizationBorder, t) ?? controllerIndicatorDecentralizationBorder,
+        controllerIndicatorDecentralizationNotActiveBack: Color.lerp (controllerIndicatorDecentralizationNotActiveBack, other.controllerIndicatorDecentralizationNotActiveBack, t) ?? controllerIndicatorDecentralizationNotActiveBack,
+        controllerIndicatorExchangeActiveBack: Color.lerp (controllerIndicatorExchangeActiveBack, other.controllerIndicatorExchangeActiveBack, t) ?? controllerIndicatorExchangeActiveBack,
+        controllerIndicatorExchangeBorder: Color.lerp (controllerIndicatorExchangeBorder, other.controllerIndicatorExchangeBorder, t) ?? controllerIndicatorExchangeBorder,
+        controllerIndicatorExchangeNotActiveBack: Color.lerp (controllerIndicatorExchangeNotActiveBack, other.controllerIndicatorExchangeNotActiveBack, t) ?? controllerIndicatorExchangeNotActiveBack,
+        controllerIndicatorPlatformActiveBack: Color.lerp (controllerIndicatorPlatformActiveBack, other.controllerIndicatorPlatformActiveBack, t) ?? controllerIndicatorPlatformActiveBack,
+        controllerIndicatorPlatformBorder: Color.lerp (controllerIndicatorPlatformBorder, other.controllerIndicatorPlatformBorder, t) ?? controllerIndicatorPlatformBorder,
+        controllerIndicatorPlatformNotActiveBack: Color.lerp (controllerIndicatorPlatformNotActiveBack, other.controllerIndicatorPlatformNotActiveBack, t) ?? controllerIndicatorPlatformNotActiveBack,
+        controllerIndicatorSpamActiveBack: Color.lerp (controllerIndicatorSpamActiveBack, other.controllerIndicatorSpamActiveBack, t) ?? controllerIndicatorSpamActiveBack,
+        controllerIndicatorSpamBorder: Color.lerp (controllerIndicatorSpamBorder, other.controllerIndicatorSpamBorder, t) ?? controllerIndicatorSpamBorder,
+        controllerIndicatorSpamNotActiveBack: Color.lerp (controllerIndicatorSpamNotActiveBack, other.controllerIndicatorSpamNotActiveBack, t) ?? controllerIndicatorSpamNotActiveBack,
+        controllerMenuActionIcon: Color.lerp (controllerMenuActionIcon, other.controllerMenuActionIcon, t) ?? controllerMenuActionIcon,
+        controllerMenuActionSeparator: Color.lerp (controllerMenuActionSeparator, other.controllerMenuActionSeparator, t) ?? controllerMenuActionSeparator,
+        controllerMenuActionText: Color.lerp (controllerMenuActionText, other.controllerMenuActionText, t) ?? controllerMenuActionText,
+        controllerMenuBack: Color.lerp (controllerMenuBack, other.controllerMenuBack, t) ?? controllerMenuBack,
+        controllerMenuHint: Color.lerp (controllerMenuHint, other.controllerMenuHint, t) ?? controllerMenuHint,
+        controllerMenuShadow: Color.lerp (controllerMenuShadow, other.controllerMenuShadow, t) ?? controllerMenuShadow,
         drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
         drawerBottomBarBack: Color.lerp (drawerBottomBarBack, other.drawerBottomBarBack, t) ?? drawerBottomBarBack,
         drawerBottomBarBorder: Color.lerp (drawerBottomBarBorder, other.drawerBottomBarBorder, t) ?? drawerBottomBarBorder,

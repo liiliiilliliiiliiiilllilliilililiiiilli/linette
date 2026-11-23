@@ -27,6 +27,16 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
+    "controllerMenuAction_1": MessageLookupByLibrary.simpleMessage("Обход"),
+    "controllerMenuAction_2": MessageLookupByLibrary.simpleMessage("Платформа"),
+    "controllerMenuAction_3": MessageLookupByLibrary.simpleMessage("Обмен"),
+    "controllerMenuAction_4": MessageLookupByLibrary.simpleMessage(
+      "Децентрализация",
+    ),
+    "controllerMenuAction_5": MessageLookupByLibrary.simpleMessage("Спам"),
+    "controllerMenuHint": MessageLookupByLibrary.simpleMessage(
+      "Цветные индикаторы показывают активность режимов приложения.",
+    ),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Выберите сервер",
     ),
@@ -40,7 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("Выбран"),
     "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
-    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage(
+    "pageHomeBodyBottomConnected": MessageLookupByLibrary.simpleMessage(
+      "7 пиров  |  4 связи  |  Спам через 27 минут",
+    ),
+    "pageHomeBodyBottomNotConnected": MessageLookupByLibrary.simpleMessage(
       "Нет подключения",
     ),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
@@ -425,6 +438,72 @@ class MessageLookup extends MessageLookupByLibrary {
     "windowNetBodyParametersBlock_6_Title":
         MessageLookupByLibrary.simpleMessage("Метрики качества сети"),
     "windowNetTitle": MessageLookupByLibrary.simpleMessage("Параметры сети"),
+    "windowPublicationActionLeft": MessageLookupByLibrary.simpleMessage(
+      "Отмена",
+    ),
+    "windowPublicationActionRight": MessageLookupByLibrary.simpleMessage(
+      "Опубликовать",
+    ),
+    "windowPublicationBodyAction_1_1": MessageLookupByLibrary.simpleMessage(
+      "Импортировать подключения",
+    ),
+    "windowPublicationBodyAction_1_2": MessageLookupByLibrary.simpleMessage(
+      "Тип подключения",
+    ),
+    "windowPublicationBodyAction_1_2_1": MessageLookupByLibrary.simpleMessage(
+      "VPN | OpenVPN",
+    ),
+    "windowPublicationBodyAction_1_2_2": MessageLookupByLibrary.simpleMessage(
+      "VPN | VLESS",
+    ),
+    "windowPublicationBodyAction_1_3": MessageLookupByLibrary.simpleMessage(
+      "Регион",
+    ),
+    "windowPublicationBodyAction_1_3_1": MessageLookupByLibrary.simpleMessage(
+      "Нидерланды",
+    ),
+    "windowPublicationBodyAction_1_3_2": MessageLookupByLibrary.simpleMessage(
+      "Финляндия",
+    ),
+    "windowPublicationBodyAction_1_3_3": MessageLookupByLibrary.simpleMessage(
+      "Германия",
+    ),
+    "windowPublicationBodyAction_2_1": MessageLookupByLibrary.simpleMessage(
+      "Реклама",
+    ),
+    "windowPublicationBodyAction_2_1_1": MessageLookupByLibrary.simpleMessage(
+      "1 / день",
+    ),
+    "windowPublicationBodyAction_2_1_2": MessageLookupByLibrary.simpleMessage(
+      "2 / день",
+    ),
+    "windowPublicationBodyAction_2_1_3": MessageLookupByLibrary.simpleMessage(
+      "3 / день",
+    ),
+    "windowPublicationBodyAction_2_2": MessageLookupByLibrary.simpleMessage(
+      "Средства",
+    ),
+    "windowPublicationBodyAction_2_2_1": MessageLookupByLibrary.simpleMessage(
+      "10₽ / день",
+    ),
+    "windowPublicationBodyAction_2_2_2": MessageLookupByLibrary.simpleMessage(
+      "25₽ / день",
+    ),
+    "windowPublicationBodyAction_2_2_3": MessageLookupByLibrary.simpleMessage(
+      "50₽ / день",
+    ),
+    "windowPublicationBodyTextFieldHint": MessageLookupByLibrary.simpleMessage(
+      "Ключ",
+    ),
+    "windowPublicationBodyTitle_1": MessageLookupByLibrary.simpleMessage(
+      "Добавление",
+    ),
+    "windowPublicationBodyTitle_2": MessageLookupByLibrary.simpleMessage(
+      "Цена",
+    ),
+    "windowPublicationTitle": MessageLookupByLibrary.simpleMessage(
+      "Публикация",
+    ),
     "windowWalletAction": MessageLookupByLibrary.simpleMessage("Готово"),
     "windowWalletBalanceActionAccumulate": MessageLookupByLibrary.simpleMessage(
       "Накопить рекламу",

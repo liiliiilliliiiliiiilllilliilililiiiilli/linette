@@ -22,7 +22,8 @@ class States extends StatelessWidget {
         alignment: Alignment.center,
         height: 25,
         child: Text (
-          context.texts.pageHomeBodyBottom,
+          // context.texts.pageHomeBodyBottomNotConnected,
+          context.texts.pageHomeBodyBottomConnected,
           style: TextStyle (
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w500,

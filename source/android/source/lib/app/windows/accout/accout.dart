@@ -21,9 +21,9 @@ class AccoutWindow extends HookConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final ValueNotifier <bool> didEnter = useState (false);
+    final ValueNotifier <bool> didEnter = useState (true);
 
-    final ValueNotifier <bool> actionIsActive = useState (false);
+    final ValueNotifier <bool> actionIsActive = useState (true);
 
 
     void actionRightOnPress () {
@@ -52,14 +52,14 @@ class AccoutWindow extends HookConsumerWidget {
             right: 2.5 * 1.5,
             bottom: 10 * 1.5
           ),
-          child: (didEnter.value) ? (
+          child: (!didEnter.value) ? (
             const NotEntered ()
           ) : (
             const Entered ()
           )
         ),
         actionRight: ActionModel (
-          context.texts.windowAccountNotEnteredAction,
+          context.texts.windowAccountEnteredAction,
           onPress: actionRightOnPress,
           isDisabled: !actionIsActive.value,
           color: color

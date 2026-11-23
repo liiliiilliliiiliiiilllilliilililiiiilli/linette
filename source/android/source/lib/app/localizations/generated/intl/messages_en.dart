@@ -27,6 +27,16 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
+    "controllerMenuAction_1": MessageLookupByLibrary.simpleMessage("Bypass"),
+    "controllerMenuAction_2": MessageLookupByLibrary.simpleMessage("Platform"),
+    "controllerMenuAction_3": MessageLookupByLibrary.simpleMessage("Exchange"),
+    "controllerMenuAction_4": MessageLookupByLibrary.simpleMessage(
+      "Decentralization",
+    ),
+    "controllerMenuAction_5": MessageLookupByLibrary.simpleMessage("Spam"),
+    "controllerMenuHint": MessageLookupByLibrary.simpleMessage(
+      "Colored indicators show the activity of the app\'s modes.",
+    ),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Choose the server",
     ),
@@ -40,7 +50,12 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("Chosen"),
     "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
-    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("No connection"),
+    "pageHomeBodyBottomConnected": MessageLookupByLibrary.simpleMessage(
+      "7 peers  |  4 connections  |  Spam in 27 minutes",
+    ),
+    "pageHomeBodyBottomNotConnected": MessageLookupByLibrary.simpleMessage(
+      "No connection",
+    ),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
       "Finland  |  tropic_rain",
     ),
@@ -416,6 +431,72 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("Network quality metrics"),
     "windowNetTitle": MessageLookupByLibrary.simpleMessage(
       "Network parameters",
+    ),
+    "windowPublicationActionLeft": MessageLookupByLibrary.simpleMessage(
+      "Cancel",
+    ),
+    "windowPublicationActionRight": MessageLookupByLibrary.simpleMessage(
+      "Publish",
+    ),
+    "windowPublicationBodyAction_1_1": MessageLookupByLibrary.simpleMessage(
+      "Import connections",
+    ),
+    "windowPublicationBodyAction_1_2": MessageLookupByLibrary.simpleMessage(
+      "Connection type",
+    ),
+    "windowPublicationBodyAction_1_2_1": MessageLookupByLibrary.simpleMessage(
+      "VPN | OpenVPN",
+    ),
+    "windowPublicationBodyAction_1_2_2": MessageLookupByLibrary.simpleMessage(
+      "VPN | VLESS",
+    ),
+    "windowPublicationBodyAction_1_3": MessageLookupByLibrary.simpleMessage(
+      "Region",
+    ),
+    "windowPublicationBodyAction_1_3_1": MessageLookupByLibrary.simpleMessage(
+      "Netherlands",
+    ),
+    "windowPublicationBodyAction_1_3_2": MessageLookupByLibrary.simpleMessage(
+      "Finland",
+    ),
+    "windowPublicationBodyAction_1_3_3": MessageLookupByLibrary.simpleMessage(
+      "Germany",
+    ),
+    "windowPublicationBodyAction_2_1": MessageLookupByLibrary.simpleMessage(
+      "Ads",
+    ),
+    "windowPublicationBodyAction_2_1_1": MessageLookupByLibrary.simpleMessage(
+      "1 / day",
+    ),
+    "windowPublicationBodyAction_2_1_2": MessageLookupByLibrary.simpleMessage(
+      "2 / day",
+    ),
+    "windowPublicationBodyAction_2_1_3": MessageLookupByLibrary.simpleMessage(
+      "3 / day",
+    ),
+    "windowPublicationBodyAction_2_2": MessageLookupByLibrary.simpleMessage(
+      "Funds",
+    ),
+    "windowPublicationBodyAction_2_2_1": MessageLookupByLibrary.simpleMessage(
+      "10₽ / day",
+    ),
+    "windowPublicationBodyAction_2_2_2": MessageLookupByLibrary.simpleMessage(
+      "25₽ / day",
+    ),
+    "windowPublicationBodyAction_2_2_3": MessageLookupByLibrary.simpleMessage(
+      "50₽ / день",
+    ),
+    "windowPublicationBodyTextFieldHint": MessageLookupByLibrary.simpleMessage(
+      "Key",
+    ),
+    "windowPublicationBodyTitle_1": MessageLookupByLibrary.simpleMessage(
+      "Adding",
+    ),
+    "windowPublicationBodyTitle_2": MessageLookupByLibrary.simpleMessage(
+      "Price",
+    ),
+    "windowPublicationTitle": MessageLookupByLibrary.simpleMessage(
+      "Publication",
     ),
     "windowWalletAction": MessageLookupByLibrary.simpleMessage("Done"),
     "windowWalletBalanceActionAccumulate": MessageLookupByLibrary.simpleMessage(

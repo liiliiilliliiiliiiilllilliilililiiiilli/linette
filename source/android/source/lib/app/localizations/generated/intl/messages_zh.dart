@@ -27,6 +27,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
+    "controllerMenuAction_1": MessageLookupByLibrary.simpleMessage("绕过"),
+    "controllerMenuAction_2": MessageLookupByLibrary.simpleMessage("平台"),
+    "controllerMenuAction_3": MessageLookupByLibrary.simpleMessage("交换"),
+    "controllerMenuAction_4": MessageLookupByLibrary.simpleMessage("去中心化"),
+    "controllerMenuAction_5": MessageLookupByLibrary.simpleMessage("垃圾信息"),
+    "controllerMenuHint": MessageLookupByLibrary.simpleMessage(
+      "彩色指示器显示应用模式的运行状态。",
+    ),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage("选择服务器"),
     "pageConnectionsBodyConnectionsCountryFinland":
         MessageLookupByLibrary.simpleMessage("芬兰"),
@@ -38,7 +46,12 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("已选"),
     "pageConnectionsBodyLiner": m0,
     "pageHomeAppBar": MessageLookupByLibrary.simpleMessage("Linette"),
-    "pageHomeBodyBottom": MessageLookupByLibrary.simpleMessage("无连接"),
+    "pageHomeBodyBottomConnected": MessageLookupByLibrary.simpleMessage(
+      "7 个对等节点  |  4 个连接  |  27 分钟后收到垃圾邮件",
+    ),
+    "pageHomeBodyBottomNotConnected": MessageLookupByLibrary.simpleMessage(
+      "无连接",
+    ),
     "pageHomeBodyCenterGoFinland": MessageLookupByLibrary.simpleMessage(
       "芬兰  |  tropic_rain",
     ),
@@ -369,6 +382,62 @@ class MessageLookup extends MessageLookupByLibrary {
     "windowNetBodyParametersBlock_6_Title":
         MessageLookupByLibrary.simpleMessage("网络质量指标"),
     "windowNetTitle": MessageLookupByLibrary.simpleMessage("网络参数"),
+    "windowPublicationActionLeft": MessageLookupByLibrary.simpleMessage("取消"),
+    "windowPublicationActionRight": MessageLookupByLibrary.simpleMessage("发布"),
+    "windowPublicationBodyAction_1_1": MessageLookupByLibrary.simpleMessage(
+      "导入连接",
+    ),
+    "windowPublicationBodyAction_1_2": MessageLookupByLibrary.simpleMessage(
+      "连接类型",
+    ),
+    "windowPublicationBodyAction_1_2_1": MessageLookupByLibrary.simpleMessage(
+      "VPN | OpenVPN",
+    ),
+    "windowPublicationBodyAction_1_2_2": MessageLookupByLibrary.simpleMessage(
+      "VPN | VLESS",
+    ),
+    "windowPublicationBodyAction_1_3": MessageLookupByLibrary.simpleMessage(
+      "地区",
+    ),
+    "windowPublicationBodyAction_1_3_1": MessageLookupByLibrary.simpleMessage(
+      "荷兰",
+    ),
+    "windowPublicationBodyAction_1_3_2": MessageLookupByLibrary.simpleMessage(
+      "芬兰",
+    ),
+    "windowPublicationBodyAction_1_3_3": MessageLookupByLibrary.simpleMessage(
+      "德国",
+    ),
+    "windowPublicationBodyAction_2_1": MessageLookupByLibrary.simpleMessage(
+      "广告",
+    ),
+    "windowPublicationBodyAction_2_1_1": MessageLookupByLibrary.simpleMessage(
+      "1 次 / 天",
+    ),
+    "windowPublicationBodyAction_2_1_2": MessageLookupByLibrary.simpleMessage(
+      "2 次 / 天",
+    ),
+    "windowPublicationBodyAction_2_1_3": MessageLookupByLibrary.simpleMessage(
+      "3 次 / 天",
+    ),
+    "windowPublicationBodyAction_2_2": MessageLookupByLibrary.simpleMessage(
+      "费用",
+    ),
+    "windowPublicationBodyAction_2_2_1": MessageLookupByLibrary.simpleMessage(
+      "10₽ / 天",
+    ),
+    "windowPublicationBodyAction_2_2_2": MessageLookupByLibrary.simpleMessage(
+      "25₽ / 天",
+    ),
+    "windowPublicationBodyAction_2_2_3": MessageLookupByLibrary.simpleMessage(
+      "50₽ / 天",
+    ),
+    "windowPublicationBodyTextFieldHint": MessageLookupByLibrary.simpleMessage(
+      "密钥",
+    ),
+    "windowPublicationBodyTitle_1": MessageLookupByLibrary.simpleMessage("添加"),
+    "windowPublicationBodyTitle_2": MessageLookupByLibrary.simpleMessage("价格"),
+    "windowPublicationTitle": MessageLookupByLibrary.simpleMessage("发布"),
     "windowWalletAction": MessageLookupByLibrary.simpleMessage("完成"),
     "windowWalletBalanceActionAccumulate": MessageLookupByLibrary.simpleMessage(
       "累积广告",

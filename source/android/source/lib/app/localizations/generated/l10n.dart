@@ -186,10 +186,20 @@ class Texts {
   }
 
   /// `No connection`
-  String get pageHomeBodyBottom {
+  String get pageHomeBodyBottomNotConnected {
     return Intl.message(
       'No connection',
-      name: 'pageHomeBodyBottom',
+      name: 'pageHomeBodyBottomNotConnected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `7 peers  |  4 connections  |  Spam in 27 minutes`
+  String get pageHomeBodyBottomConnected {
+    return Intl.message(
+      '7 peers  |  4 connections  |  Spam in 27 minutes',
+      name: 'pageHomeBodyBottomConnected',
       desc: '',
       args: [],
     );
@@ -535,6 +545,286 @@ class Texts {
     return Intl.message(
       'Yes, delete',
       name: 'windowConfirmationAccountDeletion_2_ActionRight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Publication`
+  String get windowPublicationTitle {
+    return Intl.message(
+      'Publication',
+      name: 'windowPublicationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adding`
+  String get windowPublicationBodyTitle_1 {
+    return Intl.message(
+      'Adding',
+      name: 'windowPublicationBodyTitle_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Import connections`
+  String get windowPublicationBodyAction_1_1 {
+    return Intl.message(
+      'Import connections',
+      name: 'windowPublicationBodyAction_1_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connection type`
+  String get windowPublicationBodyAction_1_2 {
+    return Intl.message(
+      'Connection type',
+      name: 'windowPublicationBodyAction_1_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VPN | OpenVPN`
+  String get windowPublicationBodyAction_1_2_1 {
+    return Intl.message(
+      'VPN | OpenVPN',
+      name: 'windowPublicationBodyAction_1_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VPN | VLESS`
+  String get windowPublicationBodyAction_1_2_2 {
+    return Intl.message(
+      'VPN | VLESS',
+      name: 'windowPublicationBodyAction_1_2_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Region`
+  String get windowPublicationBodyAction_1_3 {
+    return Intl.message(
+      'Region',
+      name: 'windowPublicationBodyAction_1_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Netherlands`
+  String get windowPublicationBodyAction_1_3_1 {
+    return Intl.message(
+      'Netherlands',
+      name: 'windowPublicationBodyAction_1_3_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Finland`
+  String get windowPublicationBodyAction_1_3_2 {
+    return Intl.message(
+      'Finland',
+      name: 'windowPublicationBodyAction_1_3_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Germany`
+  String get windowPublicationBodyAction_1_3_3 {
+    return Intl.message(
+      'Germany',
+      name: 'windowPublicationBodyAction_1_3_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Key`
+  String get windowPublicationBodyTextFieldHint {
+    return Intl.message(
+      'Key',
+      name: 'windowPublicationBodyTextFieldHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get windowPublicationBodyTitle_2 {
+    return Intl.message(
+      'Price',
+      name: 'windowPublicationBodyTitle_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ads`
+  String get windowPublicationBodyAction_2_1 {
+    return Intl.message(
+      'Ads',
+      name: 'windowPublicationBodyAction_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 / day`
+  String get windowPublicationBodyAction_2_1_1 {
+    return Intl.message(
+      '1 / day',
+      name: 'windowPublicationBodyAction_2_1_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2 / day`
+  String get windowPublicationBodyAction_2_1_2 {
+    return Intl.message(
+      '2 / day',
+      name: 'windowPublicationBodyAction_2_1_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3 / day`
+  String get windowPublicationBodyAction_2_1_3 {
+    return Intl.message(
+      '3 / day',
+      name: 'windowPublicationBodyAction_2_1_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Funds`
+  String get windowPublicationBodyAction_2_2 {
+    return Intl.message(
+      'Funds',
+      name: 'windowPublicationBodyAction_2_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10₽ / day`
+  String get windowPublicationBodyAction_2_2_1 {
+    return Intl.message(
+      '10₽ / day',
+      name: 'windowPublicationBodyAction_2_2_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `25₽ / day`
+  String get windowPublicationBodyAction_2_2_2 {
+    return Intl.message(
+      '25₽ / day',
+      name: 'windowPublicationBodyAction_2_2_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `50₽ / день`
+  String get windowPublicationBodyAction_2_2_3 {
+    return Intl.message(
+      '50₽ / день',
+      name: 'windowPublicationBodyAction_2_2_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get windowPublicationActionLeft {
+    return Intl.message(
+      'Cancel',
+      name: 'windowPublicationActionLeft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Publish`
+  String get windowPublicationActionRight {
+    return Intl.message(
+      'Publish',
+      name: 'windowPublicationActionRight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bypass`
+  String get controllerMenuAction_1 {
+    return Intl.message(
+      'Bypass',
+      name: 'controllerMenuAction_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Platform`
+  String get controllerMenuAction_2 {
+    return Intl.message(
+      'Platform',
+      name: 'controllerMenuAction_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange`
+  String get controllerMenuAction_3 {
+    return Intl.message(
+      'Exchange',
+      name: 'controllerMenuAction_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Decentralization`
+  String get controllerMenuAction_4 {
+    return Intl.message(
+      'Decentralization',
+      name: 'controllerMenuAction_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spam`
+  String get controllerMenuAction_5 {
+    return Intl.message(
+      'Spam',
+      name: 'controllerMenuAction_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Colored indicators show the activity of the app's modes.`
+  String get controllerMenuHint {
+    return Intl.message(
+      'Colored indicators show the activity of the app\'s modes.',
+      name: 'controllerMenuHint',
       desc: '',
       args: [],
     );
