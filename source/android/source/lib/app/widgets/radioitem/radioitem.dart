@@ -55,66 +55,61 @@ class RadioItem extends HookWidget {
 
     return (
 
-      Padding (
-        padding: const EdgeInsets.symmetric (
-          horizontal: 10 - 4
-        ),
-        child: Presser (
-          onPress: onPress,
-          isPressed: isPressed,
-          child: Padding (
-            padding: const EdgeInsets.all (4),
-            child: PresserAnimator (
-              isPressed: isPressed,
-              scaleRate: 0.9675,
-              child: Row (
-                spacing: 15,
-                children: [
-                  Container (
-                    decoration: BoxDecoration (
-                      shape: BoxShape.circle,
-                      border: Border.all (
-                        width: 1.5,
-                        color: colorOutsides
-                      ),
-                      color: context.colors.radioButtonBack
+      Presser (
+        onPress: onPress,
+        isPressed: isPressed,
+        child: Padding (
+          padding: const EdgeInsets.all (4),
+          child: PresserAnimator (
+            isPressed: isPressed,
+            scaleRate: 0.9675,
+            child: Row (
+              spacing: 15,
+              children: [
+                Container (
+                  decoration: BoxDecoration (
+                    shape: BoxShape.circle,
+                    border: Border.all (
+                      width: 1.5,
+                      color: colorOutsides
                     ),
-                    child: Padding (
-                      padding: const EdgeInsets.all (2.5),
-                      child: Container (
-                        width: 11,
-                        height: 11,
-                        decoration: BoxDecoration (
-                          shape: BoxShape.circle,
-                          color: colorInsides
-                        )
+                    color: context.colors.radioButtonBack
+                  ),
+                  child: Padding (
+                    padding: const EdgeInsets.all (2.5),
+                    child: Container (
+                      width: 11,
+                      height: 11,
+                      decoration: BoxDecoration (
+                        shape: BoxShape.circle,
+                        color: colorInsides
                       )
                     )
-                  ),
-                  Column (
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: 5,
-                    children: [
-                      Text (
-                        title,
-                        style: TextStyle (
-                          fontWeight: FontWeight.w600,
-                          fontSize: 15,
-                          color: context.colors.windowBodyText
-                        )
-                      ),
-                      Text (
-                        subtitle,
-                        style: TextStyle (
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15,
-                          color: context.colors.windowBodyText
-                        )
-                      )
-                    ]
                   )
-                ]
-              )
+                ),
+                Column (
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 5,
+                  children: [
+                    Text (
+                      title,
+                      style: TextStyle (
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: context.colors.windowBodyText
+                      )
+                    ),
+                    Text (
+                      subtitle,
+                      style: TextStyle (
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: context.colors.windowBodyText
+                      )
+                    )
+                  ]
+                )
+              ]
             )
           )
         )

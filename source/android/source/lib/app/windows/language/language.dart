@@ -72,40 +72,33 @@ class LanguageWindow extends ConsumerWidget {
         title: context.texts.windowLanguageTitle,
         body: SingleChildScrollView (
           padding: const EdgeInsets.only (
-            top: 5,
-            bottom: 2.5
+            top: 14,
+            left: 20,
+            right: 20,
+            bottom: 14
           ),
           child: Material (
             type: MaterialType.transparency,
-            child: Padding (
-              padding: const EdgeInsets.symmetric (
-                vertical: 10 - 4
-              ),
-              child: Column (
-                spacing: 22 - 4 * 2,
-                children: languages.map ((language) =>
-
+            child: Column (
+              spacing: 22 - 4 * 2,
+              children: languages.map ((language) {
+                return (
                   switch (language) {
-
                     {
                       'code': String code,
                       'title': String title,
                       'subtitle': String subtitle
                     }
-
                       => RadioItem (
                         onPress: () => onPress (language),
                         isChosen: (code == localeState),
                         title: title,
                         subtitle: subtitle
                       ),
-
                     _ => Container ()
-
                   }
-
-                ).toList ()
-              )
+                );
+              }).toList ()
             )
           )
         ),

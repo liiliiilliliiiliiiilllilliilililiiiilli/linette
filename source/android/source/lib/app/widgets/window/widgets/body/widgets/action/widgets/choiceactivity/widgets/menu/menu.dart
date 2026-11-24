@@ -29,7 +29,9 @@ class Menu extends StatelessWidget {
       PopScope (
         canPop: false,
         onPopInvokedWithResult: (bool didPop, dynamic result) {
-          if (didPop) return;
+          if (didPop) {
+            return;
+          };
           controller.hide ();
         },
         child: Stack (

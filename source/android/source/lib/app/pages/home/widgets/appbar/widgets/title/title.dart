@@ -46,9 +46,7 @@ class TitleComponent extends HookWidget {
               ShaderMask (
                 blendMode: BlendMode.srcIn,
                 shaderCallback: (bounds) {
-
                   return (
-
                     LinearGradient(
                       begin: const Alignment (1, 0),
                       end: const Alignment (-1, 0),
@@ -63,9 +61,7 @@ class TitleComponent extends HookWidget {
                         context.colors.appBarTitleText
                       ]
                     ).createShader(bounds)
-
                   );
-
                 },
                 child: Text (
                   context.texts.pageHomeAppBar,

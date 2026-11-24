@@ -1,6 +1,7 @@
 // Root widget
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:linette/app/localizations/generated/l10n.dart';
@@ -18,7 +19,7 @@ import 'package:linette/app/widgets/multitouchblocker/multitouchblocker.dart';
 
 
 
-class App extends ConsumerWidget {
+class App extends HookConsumerWidget {
 
   const App ({
     super.key
@@ -32,7 +33,7 @@ class App extends ConsumerWidget {
     final bool? welcomeState = ref.watch(welcomeProvider).valueOrNull;
 
 
-    // Остановка, пока все глобальные состояния не инициализируются:
+    // Остановка, пока не инициализируются все глобальные состояния:
 
     if (localeState == null || themeState == null || welcomeState == null) {
 
@@ -160,24 +161,107 @@ class App extends ConsumerWidget {
     }
 
 
-    // Блокировка мультитача:
+    // Предзагрузка картинок, блокировка мультитача:
 
     Widget builder (BuildContext context, Widget? child) {
 
       return (
 
-        MultitouchBlocker (
-          child: child ?? const SizedBox ()
+        HookBuilder (
+          builder: (contextInner) {
+
+            useEffect (() {
+
+              Future <void> init () async {
+
+                final AppMethods methods = contextInner.methods;
+
+
+                try {
+
+                  await methods.preloadImages (contextInner, [
+                    'assets/images/icons/common/bat.svg',
+                    'assets/images/icons/common/bunny.svg',
+                    'assets/images/icons/common/butterfly.svg',
+                    'assets/images/icons/common/candy.svg',
+                    'assets/images/icons/common/cat.png',
+                    'assets/images/icons/common/check_mark.svg',
+                    'assets/images/icons/common/christmas_hat.svg',
+                    'assets/images/icons/common/christmas_tree_toy.svg',
+                    'assets/images/icons/common/cotton_candy.svg',
+                    'assets/images/icons/common/cupcake.svg',
+                    'assets/images/icons/common/egg.svg',
+                    'assets/images/icons/common/finland_flag.svg',
+                    'assets/images/icons/common/flower.svg',
+                    'assets/images/icons/common/germany_flag.svg',
+                    'assets/images/icons/common/ghost.svg',
+                    'assets/images/icons/common/gift.svg',
+                    'assets/images/icons/common/go_arrow.svg',
+                    'assets/images/icons/common/heart.svg',
+                    'assets/images/icons/common/heart_key.svg',
+                    'assets/images/icons/common/hot_air_baloon.svg',
+                    'assets/images/icons/common/info.svg',
+                    'assets/images/icons/common/language.svg',
+                    'assets/images/icons/common/letter.svg',
+                    'assets/images/icons/common/location.svg',
+                    'assets/images/icons/common/magic_wand.svg',
+                    'assets/images/icons/common/menu.svg',
+                    'assets/images/icons/common/moon.svg',
+                    'assets/images/icons/common/navigate_arrow.svg',
+                    'assets/images/icons/common/net.svg',
+                    'assets/images/icons/common/netherlands_flag.svg',
+                    'assets/images/icons/common/olive_branch.svg',
+                    'assets/images/icons/common/pencil.svg',
+                    'assets/images/icons/common/pumpkin.svg',
+                    'assets/images/icons/common/snow_globe.svg',
+                    'assets/images/icons/common/snowflake.svg',
+                    'assets/images/icons/common/stars.svg',
+                    'assets/images/icons/common/sun.svg',
+                    'assets/images/icons/common/tap.svg',
+                    'assets/images/icons/common/unwrap_triangle.svg',
+                    'assets/images/icons/common/user.svg',
+                    'assets/images/icons/common/wallet.svg'
+                  ]);
+
+                }
+
+                finally {
+
+                  if (contextInner.mounted) {
+
+                    // Освобождение сплэш-экрана после прогрузки всех ресурсов приложения:
+
+                    methods.releaseSplashScreen ();
+
+                  }
+
+                }
+
+              }
+
+
+              init ();
+
+
+              return null;
+
+            }, const []);
+
+
+            return (
+
+              MultitouchBlocker (
+                child: child ?? const SizedBox ()
+              )
+
+            );
+
+          }
         )
 
       );
 
     }
-
-
-    // Освобождение сплэш-экрана после прогрузки всех ресурсов приложения:
-
-    context.methods.releaseSplashScreen ();
 
 
     return (

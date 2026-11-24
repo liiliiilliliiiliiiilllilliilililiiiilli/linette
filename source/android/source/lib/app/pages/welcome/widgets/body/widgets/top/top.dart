@@ -59,9 +59,7 @@ class Top extends HookWidget {
                   child: ShaderMask (
                     blendMode: BlendMode.srcIn,
                     shaderCallback: (bounds) {
-
                       return (
-
                         LinearGradient(
                           begin: const Alignment (1, 0),
                           end: const Alignment (-1, 0),
@@ -76,9 +74,7 @@ class Top extends HookWidget {
                             context.colors.bodyTitleText
                           ]
                         ).createShader(bounds)
-
                       );
-
                     },
                     child: Text (
                       context.texts.pageWelcomeBodyTopTitle,

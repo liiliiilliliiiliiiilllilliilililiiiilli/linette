@@ -22,9 +22,9 @@ class TopComponent extends StatelessWidget {
 
       Container (
         padding: const EdgeInsets.only (
-          top: 12 + 2,
-          left: 4 + 16,
-          bottom: 12
+          top: 14,
+          left: 20,
+          bottom: 14 - 2
         ),
         decoration: BoxDecoration (
           border: Border (

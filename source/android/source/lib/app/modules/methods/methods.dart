@@ -15,8 +15,8 @@ export 'extensions/navigateto/navigateto.dart';
 export 'extensions/opendrawer/opendrawer.dart';
 export 'extensions/openlink/openlink.dart';
 export 'extensions/openwindow/openwindow.dart';
-export 'extensions/preloadgraphics/preloadgraphics.dart';
-export 'extensions/preloadicons/preloadicons.dart';
+export 'extensions/preloadframework/preloadframework.dart';
+export 'extensions/preloadimages/preloadimages.dart';
 export 'extensions/releasesplashscreen/releasesplashscreen.dart';
 export 'extensions/transittopage/transittopage.dart';
 

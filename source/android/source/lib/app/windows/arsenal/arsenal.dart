@@ -42,27 +42,29 @@ class ArsenalWindow extends HookConsumerWidget {
         title: context.texts.windowArsenalTitle,
         body: SingleChildScrollView (
           padding: const EdgeInsets.only (
-            top: 10 * 1.5,
-            bottom: 10 * 1.5
+            top: 14,
+            left: 2,
+            right: 2,
+            bottom: 14
           ),
           child: Column (
             spacing: 8 * 2,
             children: [
               Tabs (
-                position: position
-              ),
-              Padding (
+                position: position,
                 padding: const EdgeInsets.symmetric (
-                  horizontal: 20 - 4 - 2 + 2.5 * 1.5
-                ),
-                child: Content (
-                  position: position
+                  horizontal: 20 - 2
+                )
+              ),
+              Content (
+                position: position,
+                padding: const EdgeInsets.symmetric (
+                  horizontal: 20 - 2
                 )
               )
             ]
           )
         ),
-        bodyIsCustomPadding: true,
         actionRight: ActionModel (
           context.texts.windowArsenalAction,
           onPress: actionRightOnPress,

@@ -47,10 +47,10 @@ class AccoutWindow extends HookConsumerWidget {
         title: context.texts.windowAccountNotEnteredTitle,
         body: SingleChildScrollView (
           padding: const EdgeInsets.only (
-            top: 10 * 1.5,
-            left: 2.5 * 1.5,
-            right: 2.5 * 1.5,
-            bottom: 10 * 1.5
+            top: 14,
+            left: 20,
+            right: 20,
+            bottom: 14
           ),
           child: (!didEnter.value) ? (
             const NotEntered ()

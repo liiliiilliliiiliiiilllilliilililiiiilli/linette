@@ -65,7 +65,7 @@ class Connection extends HookWidget {
                   flag: flag,
                   name: name
                 ),
-                ChoiceStatus (isChosen),
+                if (isChosen) const ChoiceStatus (),
                 AvailabilityStatus (isAvailable)
               ]
             )

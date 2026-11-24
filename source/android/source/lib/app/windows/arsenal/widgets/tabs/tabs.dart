@@ -11,11 +11,13 @@ import 'widgets/tab/tab.dart';
 class Tabs extends StatelessWidget {
 
   final ValueNotifier <ArsenalWindowPosition> position;
+  final EdgeInsets padding;
 
 
   const Tabs ({
     super.key,
-    required this.position
+    required this.position,
+    required this.padding
   });
 
 
@@ -27,9 +29,7 @@ class Tabs extends StatelessWidget {
         children: [
           SingleChildScrollView (
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric (
-              horizontal: 20 - 4 - 2 + 2.5 * 1.5
-            ),
+            padding: padding,
             child: Row (
               spacing: 8,
               children: [
@@ -62,7 +62,7 @@ class Tabs extends StatelessWidget {
             )
           ),
           Positioned (
-            width: 15,
+            width: 14,
             top: 0,
             left: 0,
             bottom: 0,
@@ -82,7 +82,7 @@ class Tabs extends StatelessWidget {
             )
           ),
           Positioned (
-            width: 15,
+            width: 14,
             top: 0,
             right: 0,
             bottom: 0,

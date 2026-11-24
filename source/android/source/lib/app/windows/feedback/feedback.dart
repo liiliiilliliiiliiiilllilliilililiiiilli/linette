@@ -44,8 +44,10 @@ class FeedbackWindow extends ConsumerWidget {
         title: context.texts.windowFeedbackTitle,
         body: SingleChildScrollView (
           padding: const EdgeInsets.only (
-            top: 10,
-            bottom: 2.5
+            top: 14,
+            left: 20,
+            right: 20,
+            bottom: 14
           ),
           child: Text.rich (
             TextSpan (

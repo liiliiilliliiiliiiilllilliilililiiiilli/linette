@@ -46,7 +46,7 @@ class Choice extends HookWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             spacing: 8,
             children: [
-              (isChosen) ? (
+              if (isChosen) ... [
                 SvgPicture.asset (
                   context.icons.windowBodyActionChoiceVariant,
                   width: 12.5,
@@ -56,9 +56,7 @@ class Choice extends HookWidget {
                     BlendMode.srcIn
                   )
                 )
-              ) : (
-                Container ()
-              ),
+              ],
               Text (
                 text,
                 style: TextStyle (

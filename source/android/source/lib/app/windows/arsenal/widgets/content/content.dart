@@ -13,11 +13,13 @@ import '../../models/position/position.dart';
 class Content extends StatelessWidget {
 
   final ValueNotifier <ArsenalWindowPosition> position;
+  final EdgeInsets padding;
 
 
   const Content ({
     super.key,
-    required this.position
+    required this.position,
+    required this.padding
   });
 
 
@@ -34,7 +36,8 @@ class Content extends StatelessWidget {
 
     return (
 
-      Container (
+      Padding (
+        padding: padding,
         child: section
       )
 

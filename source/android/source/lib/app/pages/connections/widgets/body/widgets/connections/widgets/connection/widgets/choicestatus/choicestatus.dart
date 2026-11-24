@@ -9,28 +9,19 @@ import 'package:linette/app/modules/texts/texts.dart';
 
 class ChoiceStatus extends StatelessWidget {
 
-  final bool isChosen;
-
-
-  const ChoiceStatus (
-    this.isChosen, {
+  const ChoiceStatus ({
     super.key
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final String text = isChosen
-      ? context.texts.pageConnectionsBodyConnectionsIsChosen
-      : '';
-
-
     return (
 
       Transform.translate (
         offset: const Offset (0, -1),
         child: Text (
-          text,
+          context.texts.pageConnectionsBodyConnectionsIsChosen,
           style: TextStyle (
             fontFamily: context.fonts.archivo,
             fontWeight: FontWeight.w600,

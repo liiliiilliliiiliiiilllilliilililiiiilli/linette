@@ -42,12 +42,12 @@ class BottomComponent extends HookConsumerWidget {
     }
 
 
-    final Color actionLeftColor = (actionLeft != null) ? switch (actionLeft!.color) {
+    final Color? actionLeftColor = (actionLeft != null) ? switch (actionLeft!.color) {
       ActionColorModel.disabled => context.colors.windowBottomTextDisabled,
       ActionColorModel.grey => context.colors.windowBottomTextGrey,
       ActionColorModel.green => context.colors.windowBottomTextGreen,
       ActionColorModel.red => context.colors.windowBottomTextRed
-    } : context.colors.windowBottomTextGrey;
+    } : null;
 
 
     final Color actionRightColor = switch (actionRight.color) {
@@ -75,9 +75,9 @@ class BottomComponent extends HookConsumerWidget {
                     child: Container (
                       alignment: Alignment.centerLeft,
                       padding: const EdgeInsets.only (
-                        top: 12,
-                        left: 4 + 32,
-                        bottom: 12 + 4
+                        top: 14,
+                        left: 36,
+                        bottom: 14
                       ),
                       child: Text (
                         actionLeft!.text,
@@ -105,9 +105,9 @@ class BottomComponent extends HookConsumerWidget {
                     child: Container (
                       alignment: Alignment.centerRight,
                       padding: const EdgeInsets.only (
-                        top: 12,
-                        right: 4 + 32,
-                        bottom: 12 + 4
+                        top: 14,
+                        right: 36,
+                        bottom: 14
                       ),
                       child: Text (
                         actionRight.text,
@@ -137,9 +137,9 @@ class BottomComponent extends HookConsumerWidget {
               child: Container (
                 alignment: Alignment.centerRight,
                 padding: const EdgeInsets.only (
-                  top: 12,
-                  right: 4 + 32,
-                  bottom: 12 + 4
+                  top: 14,
+                  right: 36,
+                  bottom: 14
                 ),
                 child: Text (
                   actionRight.text,
