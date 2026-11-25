@@ -7,11 +7,11 @@ import 'package:linette/app/widgets/switch/switch.dart';
 
 class SwitchActivity extends StatelessWidget {
 
-  final ValueNotifier <bool> value;
+  final ValueNotifier <bool> state;
 
 
   const SwitchActivity (
-    this.value, {
+    this.state, {
     super.key
   });
 
@@ -24,7 +24,7 @@ class SwitchActivity extends StatelessWidget {
         child: Transform.translate (
           offset: const Offset (3.25, 0),
           child: SwitchComponent (
-            value: value.value,
+            value: state.value,
             onChanged: (cahnge) {}
           )
         )

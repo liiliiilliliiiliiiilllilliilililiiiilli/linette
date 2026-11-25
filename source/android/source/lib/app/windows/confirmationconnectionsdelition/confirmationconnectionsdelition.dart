@@ -42,11 +42,9 @@ class ConfirmationConnectionsDelitionWindow extends ConsumerWidget {
         width: 340,
         title: context.texts.windowConfirmationConnectionsDelitionTitle,
         body: SingleChildScrollView (
-          padding: const EdgeInsets.only (
-            top: 14,
-            left: 20,
-            right: 20,
-            bottom: 14
+          padding: const EdgeInsets.symmetric (
+            horizontal: 20,
+            vertical: 14
           ),
           child: Text (
             context.texts.windowConfirmationConnectionsDelitionBody,

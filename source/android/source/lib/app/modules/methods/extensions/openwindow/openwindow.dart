@@ -10,7 +10,7 @@ import 'package:linette/app/modules/methods/methods.dart';
 
 extension OpenWindowExtension on AppMethods {
 
-  Future <void> openWindow (BuildContext context, WidgetRef ref, {required Widget window, void Function ()? callback}) async {
+  Future <void> openWindow (BuildContext context, WidgetRef ref, {required Widget window, void Function ()? callbackBefore}) async {
 
     final ActionsFreezeNotifier actionsFreezeNotifier = ref.read (actionsFreezeProvider.notifier);
 
@@ -18,7 +18,7 @@ extension OpenWindowExtension on AppMethods {
     actionsFreezeNotifier.freeze ();
 
 
-    callback?.call ();
+    callbackBefore?.call ();
 
 
     await Future.delayed (const Duration (milliseconds: 150));

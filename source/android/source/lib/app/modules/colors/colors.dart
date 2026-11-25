@@ -122,12 +122,6 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color controllerIndicatorSpamActiveBack;
   final Color controllerIndicatorSpamBorder;
   final Color controllerIndicatorSpamNotActiveBack;
-  final Color controllerMenuActionIcon;
-  final Color controllerMenuActionSeparator;
-  final Color controllerMenuActionText;
-  final Color controllerMenuBack;
-  final Color controllerMenuHint;
-  final Color controllerMenuShadow;
   final Color drawerBack;
   final Color drawerBottomBarBack;
   final Color drawerBottomBarBorder;
@@ -193,6 +187,7 @@ class AppColors extends ThemeExtension <AppColors> {
   final Color windowBodyTableStataValue;
   final Color windowBodyText;
   final Color windowBodyTextAuxiliary;
+  final Color windowBodyTextIcon;
   final Color windowBodyTitle;
   final Color windowBodyUserAvaBorder;
   final Color windowBodyUserNameIcon;
@@ -258,12 +253,6 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.controllerIndicatorSpamActiveBack,
     required this.controllerIndicatorSpamBorder,
     required this.controllerIndicatorSpamNotActiveBack,
-    required this.controllerMenuActionIcon,
-    required this.controllerMenuActionSeparator,
-    required this.controllerMenuActionText,
-    required this.controllerMenuBack,
-    required this.controllerMenuHint,
-    required this.controllerMenuShadow,
     required this.drawerBack,
     required this.drawerBottomBarBack,
     required this.drawerBottomBarBorder,
@@ -329,6 +318,7 @@ class AppColors extends ThemeExtension <AppColors> {
     required this.windowBodyTableStataValue,
     required this.windowBodyText,
     required this.windowBodyTextAuxiliary,
+    required this.windowBodyTextIcon,
     required this.windowBodyTitle,
     required this.windowBodyUserAvaBorder,
     required this.windowBodyUserNameIcon,
@@ -395,12 +385,6 @@ class AppColors extends ThemeExtension <AppColors> {
     controllerIndicatorSpamActiveBack: AppColorsPalette.red_4,
     controllerIndicatorSpamBorder: AppColorsPalette.red_1,
     controllerIndicatorSpamNotActiveBack: AppColorsPalette.black,
-    controllerMenuActionIcon: AppColorsPalette.grey,
-    controllerMenuActionSeparator: AppColorsPalette.grey_12,
-    controllerMenuActionText: AppColorsPalette.cream,
-    controllerMenuBack: AppColorsPalette.grey_6,
-    controllerMenuHint: AppColorsPalette.grey,
-    controllerMenuShadow: AppColorsPalette.transparent_1_grey_1,
     drawerBack: AppColorsPalette.grey_3,
     drawerBottomBarBack: AppColorsPalette.grey_2,
     drawerBottomBarBorder: AppColorsPalette.grey_7,
@@ -466,6 +450,7 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyTableStataValue: AppColorsPalette.cream,
     windowBodyText: AppColorsPalette.cream,
     windowBodyTextAuxiliary: AppColorsPalette.grey,
+    windowBodyTextIcon: AppColorsPalette.grey,
     windowBodyTitle: AppColorsPalette.cream,
     windowBodyUserAvaBorder: AppColorsPalette.grey_11,
     windowBodyUserNameIcon: AppColorsPalette.grey_14,
@@ -531,12 +516,6 @@ class AppColors extends ThemeExtension <AppColors> {
     controllerIndicatorSpamActiveBack: AppColorsPalette.red_4,
     controllerIndicatorSpamBorder: AppColorsPalette.red_2,
     controllerIndicatorSpamNotActiveBack: AppColorsPalette.cream,
-    controllerMenuActionIcon: AppColorsPalette.grey,
-    controllerMenuActionSeparator: AppColorsPalette.grey_12,
-    controllerMenuActionText: AppColorsPalette.cream,
-    controllerMenuBack: AppColorsPalette.grey_6,
-    controllerMenuHint: AppColorsPalette.grey,
-    controllerMenuShadow: AppColorsPalette.transparent_1_grey_1,
     drawerBack: AppColorsPalette.cream,
     drawerBottomBarBack: AppColorsPalette.grey_16,
     drawerBottomBarBorder: AppColorsPalette.grey_15,
@@ -602,6 +581,7 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyTableStataValue: AppColorsPalette.black,
     windowBodyText: AppColorsPalette.black,
     windowBodyTextAuxiliary: AppColorsPalette.black,
+    windowBodyTextIcon: AppColorsPalette.grey,
     windowBodyTitle: AppColorsPalette.black,
     windowBodyUserAvaBorder: AppColorsPalette.black,
     windowBodyUserNameIcon: AppColorsPalette.black,
@@ -668,12 +648,6 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? controllerIndicatorSpamActiveBack,
     Color? controllerIndicatorSpamBorder,
     Color? controllerIndicatorSpamNotActiveBack,
-    Color? controllerMenuActionIcon,
-    Color? controllerMenuActionSeparator,
-    Color? controllerMenuActionText,
-    Color? controllerMenuBack,
-    Color? controllerMenuHint,
-    Color? controllerMenuShadow,
     Color? drawerBack,
     Color? drawerBottomBarBack,
     Color? drawerBottomBarBorder,
@@ -739,6 +713,7 @@ class AppColors extends ThemeExtension <AppColors> {
     Color? windowBodyTableStataValue,
     Color? windowBodyText,
     Color? windowBodyTextAuxiliary,
+    Color? windowBodyTextIcon,
     Color? windowBodyTitle,
     Color? windowBodyUserAvaBorder,
     Color? windowBodyUserNameIcon,
@@ -806,12 +781,6 @@ class AppColors extends ThemeExtension <AppColors> {
         controllerIndicatorSpamActiveBack: controllerIndicatorSpamActiveBack ?? this.controllerIndicatorSpamActiveBack,
         controllerIndicatorSpamBorder: controllerIndicatorSpamBorder ?? this.controllerIndicatorSpamBorder,
         controllerIndicatorSpamNotActiveBack: controllerIndicatorSpamNotActiveBack ?? this.controllerIndicatorSpamNotActiveBack,
-        controllerMenuActionIcon: controllerMenuActionIcon ?? this.controllerMenuActionIcon,
-        controllerMenuActionSeparator: controllerMenuActionSeparator ?? this.controllerMenuActionSeparator,
-        controllerMenuActionText: controllerMenuActionText ?? this.controllerMenuActionText,
-        controllerMenuBack: controllerMenuBack ?? this.controllerMenuBack,
-        controllerMenuHint: controllerMenuHint ?? this.controllerMenuHint,
-        controllerMenuShadow: controllerMenuShadow ?? this.controllerMenuShadow,
         drawerBack: drawerBack ?? this.drawerBack,
         drawerBottomBarBack: drawerBottomBarBack ?? this.drawerBottomBarBack,
         drawerBottomBarBorder: drawerBottomBarBorder ?? this.drawerBottomBarBorder,
@@ -877,6 +846,7 @@ class AppColors extends ThemeExtension <AppColors> {
         windowBodyTableStataValue: windowBodyTableStataValue ?? this.windowBodyTableStataValue,
         windowBodyText: windowBodyText ?? this.windowBodyText,
         windowBodyTextAuxiliary: windowBodyTextAuxiliary ?? this.windowBodyTextAuxiliary,
+        windowBodyTextIcon: windowBodyTextIcon ?? this.windowBodyTextIcon,
         windowBodyTitle: windowBodyTitle ?? this.windowBodyTitle,
         windowBodyUserAvaBorder: windowBodyUserAvaBorder ?? this.windowBodyUserAvaBorder,
         windowBodyUserNameIcon: windowBodyUserNameIcon ?? this.windowBodyUserNameIcon,
@@ -957,12 +927,6 @@ class AppColors extends ThemeExtension <AppColors> {
         controllerIndicatorSpamActiveBack: Color.lerp (controllerIndicatorSpamActiveBack, other.controllerIndicatorSpamActiveBack, t) ?? controllerIndicatorSpamActiveBack,
         controllerIndicatorSpamBorder: Color.lerp (controllerIndicatorSpamBorder, other.controllerIndicatorSpamBorder, t) ?? controllerIndicatorSpamBorder,
         controllerIndicatorSpamNotActiveBack: Color.lerp (controllerIndicatorSpamNotActiveBack, other.controllerIndicatorSpamNotActiveBack, t) ?? controllerIndicatorSpamNotActiveBack,
-        controllerMenuActionIcon: Color.lerp (controllerMenuActionIcon, other.controllerMenuActionIcon, t) ?? controllerMenuActionIcon,
-        controllerMenuActionSeparator: Color.lerp (controllerMenuActionSeparator, other.controllerMenuActionSeparator, t) ?? controllerMenuActionSeparator,
-        controllerMenuActionText: Color.lerp (controllerMenuActionText, other.controllerMenuActionText, t) ?? controllerMenuActionText,
-        controllerMenuBack: Color.lerp (controllerMenuBack, other.controllerMenuBack, t) ?? controllerMenuBack,
-        controllerMenuHint: Color.lerp (controllerMenuHint, other.controllerMenuHint, t) ?? controllerMenuHint,
-        controllerMenuShadow: Color.lerp (controllerMenuShadow, other.controllerMenuShadow, t) ?? controllerMenuShadow,
         drawerBack: Color.lerp (drawerBack, other.drawerBack, t) ?? drawerBack,
         drawerBottomBarBack: Color.lerp (drawerBottomBarBack, other.drawerBottomBarBack, t) ?? drawerBottomBarBack,
         drawerBottomBarBorder: Color.lerp (drawerBottomBarBorder, other.drawerBottomBarBorder, t) ?? drawerBottomBarBorder,
@@ -1028,6 +992,7 @@ class AppColors extends ThemeExtension <AppColors> {
         windowBodyTableStataValue: Color.lerp (windowBodyTableStataValue, other.windowBodyTableStataValue, t) ?? windowBodyTableStataValue,
         windowBodyText: Color.lerp (windowBodyText, other.windowBodyText, t) ?? windowBodyText,
         windowBodyTextAuxiliary: Color.lerp (windowBodyTextAuxiliary, other.windowBodyTextAuxiliary, t) ?? windowBodyTextAuxiliary,
+        windowBodyTextIcon: Color.lerp (windowBodyTextIcon, other.windowBodyTextIcon, t) ?? windowBodyTextIcon,
         windowBodyTitle: Color.lerp (windowBodyTitle, other.windowBodyTitle, t) ?? windowBodyTitle,
         windowBodyUserAvaBorder: Color.lerp (windowBodyUserAvaBorder, other.windowBodyUserAvaBorder, t) ?? windowBodyUserAvaBorder,
         windowBodyUserNameIcon: Color.lerp (windowBodyUserNameIcon, other.windowBodyUserNameIcon, t) ?? windowBodyUserNameIcon,

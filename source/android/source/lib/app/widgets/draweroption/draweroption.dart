@@ -35,7 +35,7 @@ class DrawerOption extends HookConsumerWidget {
     final ValueNotifier <bool> isPressed = useState (false);
 
 
-    void onPressCallback () {
+    void onPressCallbackBefore () {
 
       context.methods.navigateBack (context);
 
@@ -47,7 +47,7 @@ class DrawerOption extends HookConsumerWidget {
         context,
         ref,
         window: window,
-        callback: onPressCallback
+        callbackBefore: onPressCallbackBefore
       );
 
     }

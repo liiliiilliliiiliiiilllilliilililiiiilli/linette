@@ -27,16 +27,6 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
-    "controllerMenuAction_1": MessageLookupByLibrary.simpleMessage("Bypass"),
-    "controllerMenuAction_2": MessageLookupByLibrary.simpleMessage("Platform"),
-    "controllerMenuAction_3": MessageLookupByLibrary.simpleMessage("Exchange"),
-    "controllerMenuAction_4": MessageLookupByLibrary.simpleMessage(
-      "Decentralization",
-    ),
-    "controllerMenuAction_5": MessageLookupByLibrary.simpleMessage("Spam"),
-    "controllerMenuHint": MessageLookupByLibrary.simpleMessage(
-      "Colored indicators show the activity of the app\'s modes.",
-    ),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Choose the server",
     ),
@@ -264,6 +254,24 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
     "windowConfirmationConnectionsDelitionTitle":
         MessageLookupByLibrary.simpleMessage("Confirm"),
+    "windowControllerMenuController_1": MessageLookupByLibrary.simpleMessage(
+      "Bypassing",
+    ),
+    "windowControllerMenuController_2": MessageLookupByLibrary.simpleMessage(
+      "Platform",
+    ),
+    "windowControllerMenuController_3": MessageLookupByLibrary.simpleMessage(
+      "Exchange",
+    ),
+    "windowControllerMenuController_4": MessageLookupByLibrary.simpleMessage(
+      "Decentralization",
+    ),
+    "windowControllerMenuController_5": MessageLookupByLibrary.simpleMessage(
+      "Spam",
+    ),
+    "windowControllerMenuHint": MessageLookupByLibrary.simpleMessage(
+      "Colored indicators show the activity of app modes.",
+    ),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("Ok"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage(
       "Service news are being published on the ",

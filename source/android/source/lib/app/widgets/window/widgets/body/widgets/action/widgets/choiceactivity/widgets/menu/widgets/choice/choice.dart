@@ -13,7 +13,7 @@ import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 class Choice extends HookWidget {
 
   final String text;
-  final Function () onPress;
+  final void Function () onPress;
   final bool isChosen;
 
 

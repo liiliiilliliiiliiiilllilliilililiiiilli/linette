@@ -8,7 +8,7 @@ import 'package:linette/app/modules/colors/colors.dart';
 class SwitchComponent extends StatelessWidget {
 
   final bool value;
-  final Function (bool)? onChanged;
+  final void Function (bool)? onChanged;
 
 
   const SwitchComponent ({

@@ -79,7 +79,7 @@ class Spam extends HookWidget {
         children: [
           SwitcherTitle (
             context.texts.windowArsenalBodySectionsSpamTitle,
-            state: false
+            value: false
           ),
           Instruction (context.texts.windowArsenalBodySectionsSpamInstruction),
           const Padding (

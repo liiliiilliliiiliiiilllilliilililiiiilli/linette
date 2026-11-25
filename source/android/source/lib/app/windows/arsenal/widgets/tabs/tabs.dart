@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/windows/arsenal/models/position/position.dart';
-import 'widgets/tab/tab.dart';
+import 'package:linette/app/widgets/tab/tab.dart';
 
 
 

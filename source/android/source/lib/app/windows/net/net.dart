@@ -37,160 +37,153 @@ class NetWindow extends ConsumerWidget {
         isExpanded: true,
         title: context.texts.windowNetTitle,
         body: SingleChildScrollView (
-          padding: const EdgeInsets.only (
-            top: 14,
-            left: 20,
-            right: 20,
-            bottom: 14
+          padding: const EdgeInsets.symmetric (
+            horizontal: 20,
+            vertical: 14
           ),
-          child: DefaultTextStyle (
-            style: const TextStyle (
-              fontSize: 15.5
-            ),
-            child: Column (
-              crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 8 * 3,
-              children: [
-                ParametersBlock (
-                  title: TitleComponent (context.texts.windowNetBodyParametersBlock_1_Title),
-                  parameters: [
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_1_Parameter_2_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_1_Parameter_2_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_1_Parameter_3_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_1_Parameter_3_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_1_Parameter_4_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_1_Parameter_4_Value
-                    )
-                  ]
-                ),
-                ParametersBlock (
-                  title: TitleComponent (context.texts.windowNetBodyParametersBlock_2_Title),
-                  parameters: [
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_2_Parameter_2_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_2_Parameter_2_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_2_Parameter_3_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_2_Parameter_3_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_2_Parameter_4_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_2_Parameter_4_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_2_Parameter_5_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_2_Parameter_5_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_2_Parameter_6_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_2_Parameter_6_Value
-                    )
-                  ]
-                ),
-                ParametersBlock (
-                  title: TitleComponent (context.texts.windowNetBodyParametersBlock_3_Title),
-                  parameters: [
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_3_Parameter_2_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_3_Parameter_2_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_3_Parameter_3_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_3_Parameter_3_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_3_Parameter_4_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_3_Parameter_4_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_3_Parameter_5_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_3_Parameter_5_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_3_Parameter_6_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_3_Parameter_6_Value
-                    )
-                  ]
-                ),
-                ParametersBlock (
-                  title: TitleComponent (context.texts.windowNetBodyParametersBlock_4_Title),
-                  parameters: [
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_4_Parameter_2_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_4_Parameter_2_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_4_Parameter_3_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_4_Parameter_3_Value
-                    )
-                  ]
-                ),
-                ParametersBlock (
-                  title: TitleComponent (context.texts.windowNetBodyParametersBlock_5_Title),
-                  parameters: [
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_5_Parameter_2_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_5_Parameter_2_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_5_Parameter_3_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_5_Parameter_3_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_5_Parameter_4_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_5_Parameter_4_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_5_Parameter_5_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_5_Parameter_5_Value
-                    )
-                  ]
-                ),
-                ParametersBlock (
-                  title: TitleComponent (context.texts.windowNetBodyParametersBlock_6_Title),
-                  parameters: [
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_6_Parameter_2_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_6_Parameter_2_Value
-                    ),
-                    ParameterComponent (
-                      stata: context.texts.windowNetBodyParametersBlock_6_Parameter_3_Stata,
-                      value: context.texts.windowNetBodyParametersBlock_6_Parameter_3_Value
-                    )
-                  ]
-                )
-              ]
-            )
+          child: Column (
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 8 * 3,
+            children: [
+              ParametersBlock (
+                title: TitleComponent (context.texts.windowNetBodyParametersBlock_1_Title),
+                parameters: [
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_1_Parameter_1_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_1_Parameter_2_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_1_Parameter_2_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_1_Parameter_3_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_1_Parameter_3_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_1_Parameter_4_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_1_Parameter_4_Value
+                  )
+                ]
+              ),
+              ParametersBlock (
+                title: TitleComponent (context.texts.windowNetBodyParametersBlock_2_Title),
+                parameters: [
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_2_Parameter_1_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_2_Parameter_2_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_2_Parameter_2_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_2_Parameter_3_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_2_Parameter_3_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_2_Parameter_4_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_2_Parameter_4_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_2_Parameter_5_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_2_Parameter_5_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_2_Parameter_6_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_2_Parameter_6_Value
+                  )
+                ]
+              ),
+              ParametersBlock (
+                title: TitleComponent (context.texts.windowNetBodyParametersBlock_3_Title),
+                parameters: [
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_3_Parameter_1_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_3_Parameter_2_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_3_Parameter_2_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_3_Parameter_3_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_3_Parameter_3_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_3_Parameter_4_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_3_Parameter_4_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_3_Parameter_5_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_3_Parameter_5_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_3_Parameter_6_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_3_Parameter_6_Value
+                  )
+                ]
+              ),
+              ParametersBlock (
+                title: TitleComponent (context.texts.windowNetBodyParametersBlock_4_Title),
+                parameters: [
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_4_Parameter_1_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_4_Parameter_2_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_4_Parameter_2_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_4_Parameter_3_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_4_Parameter_3_Value
+                  )
+                ]
+              ),
+              ParametersBlock (
+                title: TitleComponent (context.texts.windowNetBodyParametersBlock_5_Title),
+                parameters: [
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_5_Parameter_1_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_5_Parameter_2_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_5_Parameter_2_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_5_Parameter_3_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_5_Parameter_3_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_5_Parameter_4_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_5_Parameter_4_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_5_Parameter_5_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_5_Parameter_5_Value
+                  )
+                ]
+              ),
+              ParametersBlock (
+                title: TitleComponent (context.texts.windowNetBodyParametersBlock_6_Title),
+                parameters: [
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_6_Parameter_1_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_6_Parameter_2_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_6_Parameter_2_Value
+                  ),
+                  ParameterComponent (
+                    stata: context.texts.windowNetBodyParametersBlock_6_Parameter_3_Stata,
+                    value: context.texts.windowNetBodyParametersBlock_6_Parameter_3_Value
+                  )
+                ]
+              )
+            ]
           )
         ),
         actionRight: ActionModel (

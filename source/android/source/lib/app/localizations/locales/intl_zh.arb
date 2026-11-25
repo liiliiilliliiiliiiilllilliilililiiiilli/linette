@@ -91,13 +91,6 @@
 	"windowPublicationActionLeft": "取消",
 	"windowPublicationActionRight": "发布",
 
-	"controllerMenuAction_1": "绕过",
-	"controllerMenuAction_2": "平台",
-	"controllerMenuAction_3": "交换",
-	"controllerMenuAction_4": "去中心化",
-	"controllerMenuAction_5": "垃圾信息",
-	"controllerMenuHint": "彩色指示器显示应用模式的运行状态。",
-
 	"windowLanguageTitle": "应用程序语言",
 	"windowLanguageBodyRussian": "俄语",
 	"windowLanguageBodyEnglish": "英语",
@@ -251,5 +244,12 @@
 	"windowWalletIncomeTableBottomAmount": "",
 	"windowWalletIncomeTableBottomDescription": "",
 	"windowWalletIncomeActionWithdraw": "提现",
-	"windowWalletAction": "完成"
+	"windowWalletAction": "完成",
+
+	"windowControllerMenuController_1": "绕过",
+	"windowControllerMenuController_2": "平台",
+	"windowControllerMenuController_3": "交换",
+	"windowControllerMenuController_4": "去中心化",
+	"windowControllerMenuController_5": "垃圾信息",
+	"windowControllerMenuHint": "彩色指示灯显示应用模式的运行状态。"
 }

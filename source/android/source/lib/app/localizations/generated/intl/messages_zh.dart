@@ -27,14 +27,6 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
-    "controllerMenuAction_1": MessageLookupByLibrary.simpleMessage("绕过"),
-    "controllerMenuAction_2": MessageLookupByLibrary.simpleMessage("平台"),
-    "controllerMenuAction_3": MessageLookupByLibrary.simpleMessage("交换"),
-    "controllerMenuAction_4": MessageLookupByLibrary.simpleMessage("去中心化"),
-    "controllerMenuAction_5": MessageLookupByLibrary.simpleMessage("垃圾信息"),
-    "controllerMenuHint": MessageLookupByLibrary.simpleMessage(
-      "彩色指示器显示应用模式的运行状态。",
-    ),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage("选择服务器"),
     "pageConnectionsBodyConnectionsCountryFinland":
         MessageLookupByLibrary.simpleMessage("芬兰"),
@@ -226,6 +218,24 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage("将从存储中删除多个连接（14个）。"),
     "windowConfirmationConnectionsDelitionTitle":
         MessageLookupByLibrary.simpleMessage("请确认"),
+    "windowControllerMenuController_1": MessageLookupByLibrary.simpleMessage(
+      "绕过",
+    ),
+    "windowControllerMenuController_2": MessageLookupByLibrary.simpleMessage(
+      "平台",
+    ),
+    "windowControllerMenuController_3": MessageLookupByLibrary.simpleMessage(
+      "交换",
+    ),
+    "windowControllerMenuController_4": MessageLookupByLibrary.simpleMessage(
+      "去中心化",
+    ),
+    "windowControllerMenuController_5": MessageLookupByLibrary.simpleMessage(
+      "垃圾信息",
+    ),
+    "windowControllerMenuHint": MessageLookupByLibrary.simpleMessage(
+      "彩色指示灯显示应用模式的运行状态。",
+    ),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("确定"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage("服务新闻发布在 "),
     "windowFeedbackBody_2": MessageLookupByLibrary.simpleMessage(

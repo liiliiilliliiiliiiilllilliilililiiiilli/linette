@@ -27,16 +27,6 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("Linette"),
-    "controllerMenuAction_1": MessageLookupByLibrary.simpleMessage("Обход"),
-    "controllerMenuAction_2": MessageLookupByLibrary.simpleMessage("Платформа"),
-    "controllerMenuAction_3": MessageLookupByLibrary.simpleMessage("Обмен"),
-    "controllerMenuAction_4": MessageLookupByLibrary.simpleMessage(
-      "Децентрализация",
-    ),
-    "controllerMenuAction_5": MessageLookupByLibrary.simpleMessage("Спам"),
-    "controllerMenuHint": MessageLookupByLibrary.simpleMessage(
-      "Цветные индикаторы показывают активность режимов приложения.",
-    ),
     "pageConnectionsAppBar": MessageLookupByLibrary.simpleMessage(
       "Выберите сервер",
     ),
@@ -270,6 +260,24 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
     "windowConfirmationConnectionsDelitionTitle":
         MessageLookupByLibrary.simpleMessage("Подтвердите"),
+    "windowControllerMenuController_1": MessageLookupByLibrary.simpleMessage(
+      "Обход",
+    ),
+    "windowControllerMenuController_2": MessageLookupByLibrary.simpleMessage(
+      "Платформа",
+    ),
+    "windowControllerMenuController_3": MessageLookupByLibrary.simpleMessage(
+      "Обмен",
+    ),
+    "windowControllerMenuController_4": MessageLookupByLibrary.simpleMessage(
+      "Децентрализация",
+    ),
+    "windowControllerMenuController_5": MessageLookupByLibrary.simpleMessage(
+      "Спам",
+    ),
+    "windowControllerMenuHint": MessageLookupByLibrary.simpleMessage(
+      "Цветные индикаторы показывают активность режимов приложения.",
+    ),
     "windowFeedbackAction": MessageLookupByLibrary.simpleMessage("Ок"),
     "windowFeedbackBody_1": MessageLookupByLibrary.simpleMessage(
       "Новости сервиса публикуются в ",

@@ -30,6 +30,7 @@ class ParameterComponent extends StatelessWidget {
               stata,
               style: TextStyle (
                 fontWeight: FontWeight.w400,
+                fontSize: 15.5,
                 color: context.colors.windowBodyStataName,
                 overflow: TextOverflow.ellipsis
               )
@@ -39,6 +40,7 @@ class ParameterComponent extends StatelessWidget {
             value,
             style: TextStyle (
               fontWeight: FontWeight.w500,
+              fontSize: 15.5,
               color: context.colors.windowBodyStataValue,
               overflow: TextOverflow.ellipsis
             )

@@ -42,11 +42,9 @@ class ConfirmationAccountDeletion_1_Window extends ConsumerWidget {
         width: 340,
         title: context.texts.windowConfirmationAccountDeletion_1_Title,
         body: SingleChildScrollView (
-          padding: const EdgeInsets.only (
-            top: 14,
-            left: 20,
-            right: 20,
-            bottom: 14
+          padding: const EdgeInsets.symmetric (
+            horizontal: 20,
+            vertical: 14
           ),
           child: Text (
             context.texts.windowConfirmationAccountDeletion_1_Body,

@@ -91,13 +91,6 @@
 	"windowPublicationActionLeft": "Отмена",
 	"windowPublicationActionRight": "Опубликовать",
 
-	"controllerMenuAction_1": "Обход",
-	"controllerMenuAction_2": "Платформа",
-	"controllerMenuAction_3": "Обмен",
-	"controllerMenuAction_4": "Децентрализация",
-	"controllerMenuAction_5": "Спам",
-	"controllerMenuHint": "Цветные индикаторы показывают активность режимов приложения.",
-
 	"windowLanguageTitle": "Язык приложения",
 	"windowLanguageBodyRussian": "Русский",
 	"windowLanguageBodyEnglish": "Английский",
@@ -251,5 +244,12 @@
 	"windowWalletIncomeTableBottomAmount": "",
 	"windowWalletIncomeTableBottomDescription": "",
 	"windowWalletIncomeActionWithdraw": "Вывести средства",
-	"windowWalletAction": "Готово"
+	"windowWalletAction": "Готово",
+
+	"windowControllerMenuController_1": "Обход",
+	"windowControllerMenuController_2": "Платформа",
+	"windowControllerMenuController_3": "Обмен",
+	"windowControllerMenuController_4": "Децентрализация",
+	"windowControllerMenuController_5": "Спам",
+	"windowControllerMenuHint": "Цветные индикаторы показывают активность режимов приложения."
 }

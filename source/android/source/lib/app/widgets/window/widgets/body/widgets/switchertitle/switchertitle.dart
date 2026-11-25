@@ -10,24 +10,24 @@ import 'package:linette/app/widgets/switch/switch.dart';
 class SwitcherTitle extends HookWidget {
 
   final String text;
-  final bool state;
+  final bool value;
 
 
   const SwitcherTitle (
     this.text, {
     super.key,
-    required this.state
+    required this.value
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final ValueNotifier <bool> state = useState (false);
+    final ValueNotifier <bool> switchState = useState (value);
 
 
-    void onChanged (bool change) {
+    void switchOnChanged (bool change) {
 
-      state.value = !state.value;
+      switchState.value = !switchState.value;
 
     }
 
@@ -46,8 +46,8 @@ class SwitcherTitle extends HookWidget {
             )
           ),
           SwitchComponent (
-            value: state.value,
-            onChanged: onChanged
+            value: switchState.value,
+            onChanged: switchOnChanged
           )
         ]
       )

@@ -760,66 +760,6 @@ class Texts {
     );
   }
 
-  /// `Bypass`
-  String get controllerMenuAction_1 {
-    return Intl.message(
-      'Bypass',
-      name: 'controllerMenuAction_1',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Platform`
-  String get controllerMenuAction_2 {
-    return Intl.message(
-      'Platform',
-      name: 'controllerMenuAction_2',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Exchange`
-  String get controllerMenuAction_3 {
-    return Intl.message(
-      'Exchange',
-      name: 'controllerMenuAction_3',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Decentralization`
-  String get controllerMenuAction_4 {
-    return Intl.message(
-      'Decentralization',
-      name: 'controllerMenuAction_4',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Spam`
-  String get controllerMenuAction_5 {
-    return Intl.message(
-      'Spam',
-      name: 'controllerMenuAction_5',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Colored indicators show the activity of the app's modes.`
-  String get controllerMenuHint {
-    return Intl.message(
-      'Colored indicators show the activity of the app\'s modes.',
-      name: 'controllerMenuHint',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `App language`
   String get windowLanguageTitle {
     return Intl.message(
@@ -2208,6 +2148,66 @@ class Texts {
   /// `Done`
   String get windowWalletAction {
     return Intl.message('Done', name: 'windowWalletAction', desc: '', args: []);
+  }
+
+  /// `Bypassing`
+  String get windowControllerMenuController_1 {
+    return Intl.message(
+      'Bypassing',
+      name: 'windowControllerMenuController_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Platform`
+  String get windowControllerMenuController_2 {
+    return Intl.message(
+      'Platform',
+      name: 'windowControllerMenuController_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange`
+  String get windowControllerMenuController_3 {
+    return Intl.message(
+      'Exchange',
+      name: 'windowControllerMenuController_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Decentralization`
+  String get windowControllerMenuController_4 {
+    return Intl.message(
+      'Decentralization',
+      name: 'windowControllerMenuController_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spam`
+  String get windowControllerMenuController_5 {
+    return Intl.message(
+      'Spam',
+      name: 'windowControllerMenuController_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Colored indicators show the activity of app modes.`
+  String get windowControllerMenuHint {
+    return Intl.message(
+      'Colored indicators show the activity of app modes.',
+      name: 'windowControllerMenuHint',
+      desc: '',
+      args: [],
+    );
   }
 }
 

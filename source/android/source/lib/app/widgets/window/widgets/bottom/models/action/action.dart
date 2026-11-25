@@ -3,7 +3,7 @@
 class ActionModel {
 
   final String text;
-  final Function () onPress;
+  final void Function () onPress;
   final bool isDisabled;
   final ActionColorModel color;
 

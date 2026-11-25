@@ -12,7 +12,7 @@ import 'models/character/character.dart';
 class ActionComponent extends HookWidget {
 
   final String text;
-  final Function () onPress;
+  final void Function () onPress;
   final ActionCharacter character;
   final Widget activity;
 

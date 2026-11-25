@@ -83,6 +83,7 @@ class AppIcons extends ThemeExtension <AppIcons> {
   final String windowBodyActionChoiceVariant;
   final String windowBodyActionLink;
   final String windowBodyActionTransition;
+  final String windowControllerMenuControllerLeft;
 
 
   const AppIcons ({
@@ -111,7 +112,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     required this.windowBodyActionChoice,
     required this.windowBodyActionChoiceVariant,
     required this.windowBodyActionLink,
-    required this.windowBodyActionTransition
+    required this.windowBodyActionTransition,
+    required this.windowControllerMenuControllerLeft
   });
 
 
@@ -141,7 +143,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons lightGreenRegular = AppIcons (
@@ -170,7 +173,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons darkGreenHalloween = AppIcons (
@@ -199,7 +203,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons lightGreenHalloween = AppIcons (
@@ -228,7 +233,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons darkGreenNewYear = AppIcons (
@@ -257,7 +263,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons lightGreenNewYear = AppIcons (
@@ -286,7 +293,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons darkGreenValentine = AppIcons (
@@ -315,7 +323,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons lightGreenValentine = AppIcons (
@@ -344,7 +353,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons darkGreenEaster = AppIcons (
@@ -373,7 +383,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
   static const AppIcons lightGreenEaster = AppIcons (
@@ -402,7 +413,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     windowBodyActionChoice: AppIconsPalette.unwrapTriangle,
     windowBodyActionChoiceVariant: AppIconsPalette.checkMark,
     windowBodyActionLink: AppIconsPalette.goArrow,
-    windowBodyActionTransition: AppIconsPalette.navigateArrow
+    windowBodyActionTransition: AppIconsPalette.navigateArrow,
+    windowControllerMenuControllerLeft: AppIconsPalette.info
   );
 
 
@@ -432,7 +444,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
     String? windowBodyActionChoice,
     String? windowBodyActionChoiceVariant,
     String? windowBodyActionLink,
-    String? windowBodyActionTransition
+    String? windowBodyActionTransition,
+    String? windowControllerMenuControllerLeft
   }) {
 
     return (
@@ -463,7 +476,8 @@ class AppIcons extends ThemeExtension <AppIcons> {
         windowBodyActionChoice: windowBodyActionChoice ?? this.windowBodyActionChoice,
         windowBodyActionChoiceVariant: windowBodyActionChoiceVariant ?? this.windowBodyActionChoiceVariant,
         windowBodyActionLink: windowBodyActionLink ?? this.windowBodyActionLink,
-        windowBodyActionTransition: windowBodyActionTransition ?? this.windowBodyActionTransition
+        windowBodyActionTransition: windowBodyActionTransition ?? this.windowBodyActionTransition,
+        windowControllerMenuControllerLeft: windowControllerMenuControllerLeft ?? this.windowControllerMenuControllerLeft
       )
 
     );

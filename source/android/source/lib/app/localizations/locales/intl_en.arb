@@ -91,13 +91,6 @@
 	"windowPublicationActionLeft": "Cancel",
 	"windowPublicationActionRight": "Publish",
 
-	"controllerMenuAction_1": "Bypass",
-	"controllerMenuAction_2": "Platform",
-	"controllerMenuAction_3": "Exchange",
-	"controllerMenuAction_4": "Decentralization",
-	"controllerMenuAction_5": "Spam",
-	"controllerMenuHint": "Colored indicators show the activity of the app's modes.",
-
 	"windowLanguageTitle": "App language",
 	"windowLanguageBodyRussian": "Russian",
 	"windowLanguageBodyEnglish": "English",
@@ -251,5 +244,12 @@
 	"windowWalletIncomeTableBottomAmount": "",
 	"windowWalletIncomeTableBottomDescription": "",
 	"windowWalletIncomeActionWithdraw": "Withdraw",
-	"windowWalletAction": "Done"
+	"windowWalletAction": "Done",
+
+	"windowControllerMenuController_1": "Bypassing",
+	"windowControllerMenuController_2": "Platform",
+	"windowControllerMenuController_3": "Exchange",
+	"windowControllerMenuController_4": "Decentralization",
+	"windowControllerMenuController_5": "Spam",
+	"windowControllerMenuHint": "Colored indicators show the activity of app modes."
 }

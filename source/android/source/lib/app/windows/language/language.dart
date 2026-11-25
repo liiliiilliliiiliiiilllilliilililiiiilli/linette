@@ -71,16 +71,14 @@ class LanguageWindow extends ConsumerWidget {
         width: 300,
         title: context.texts.windowLanguageTitle,
         body: SingleChildScrollView (
-          padding: const EdgeInsets.only (
-            top: 14,
-            left: 20,
-            right: 20,
-            bottom: 14
+          padding: const EdgeInsets.symmetric (
+            horizontal: 20,
+            vertical: 14
           ),
           child: Material (
             type: MaterialType.transparency,
             child: Column (
-              spacing: 22 - 4 * 2,
+              spacing: 14,
               children: languages.map ((language) {
                 return (
                   switch (language) {
