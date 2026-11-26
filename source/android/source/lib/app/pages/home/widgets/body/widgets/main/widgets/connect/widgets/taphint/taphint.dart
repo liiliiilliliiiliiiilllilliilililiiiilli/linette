@@ -63,7 +63,7 @@ class TapHint extends HookWidget {
 
       initialTimer = Timer (const Duration (milliseconds: 3600), () {
 
-        controller.forward ().then ((_) => controller.reverse ());
+        controller.forward().then((_) => controller.reverse ());
 
         periodicTimer = Timer.periodic (const Duration (milliseconds: 7200), (t) async {
 

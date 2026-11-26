@@ -10,7 +10,7 @@ import 'package:linette/app/modules/methods/methods.dart';
 
 extension OpenMenuExtension on AppMethods {
 
-  Future <void> openMenu (BuildContext context, WidgetRef ref, {required Widget menu, Offset offset = const Offset (0, 10), Alignment alignment = Alignment.center, Alignment targetAnchor = Alignment.bottomRight, Alignment followerAnchor = Alignment.topRight, double screenMargin = 12, void Function ()? callbackBefore}) async {
+  Future <void> openMenu (BuildContext context, WidgetRef ref, {required Widget menu, Alignment targetAnchor = Alignment.bottomRight, Alignment followerAnchor = Alignment.topRight, Alignment offsetStartPoint = Alignment.center, Offset offset = const Offset (0, 10), double screenMargin = 12, void Function ()? callbackBefore}) async {
 
     final RenderBox? renderBox = context.findRenderObject () as RenderBox?;
 
@@ -66,7 +66,7 @@ extension OpenMenuExtension on AppMethods {
             ),
             child: MenuTransition (
               animation: animation,
-              alignment: alignment,
+              offsetStartPoint: offsetStartPoint,
               child: menu
             )
           )
@@ -140,7 +140,7 @@ class MenuPositionDelegate extends SingleChildLayoutDelegate {
     final double maxY = (size.height - safePadding.bottom - screenMargin - childSize.height).clamp(minY, double.infinity);
 
 
-    // Базовый расчёт позиции:
+    // Базовый расчет позиции:
 
     Offset targetPoint = targetOffset + targetAnchor.alongSize (targetSize);
     Offset followerPoint = followerAnchor.alongSize (childSize);
@@ -164,7 +164,7 @@ class MenuPositionDelegate extends SingleChildLayoutDelegate {
       final Offset flippedPosition = flippedTargetPoint - flippedFollowerPoint + flippedOffset;
 
 
-      // Применяем перевёрнутую позицию только если она лучше вписывается в экран:
+      // Применение перевернутой позици только если она лучше вписывается в экран:
 
       final bool fitsAfterFlip = flippedPosition.dy >= minY && flippedPosition.dy <= maxY;
 
@@ -177,7 +177,7 @@ class MenuPositionDelegate extends SingleChildLayoutDelegate {
     }
 
 
-    // Финальное ограничение (clamp) в пределах безопасных границ экрана:
+    // Финальное ограничение в пределах безопасных границ экрана:
 
     final double clampedX = position.dx.clamp (minX, maxX);
     final double clampedY = position.dy.clamp (minY, maxY);
@@ -215,14 +215,14 @@ class MenuPositionDelegate extends SingleChildLayoutDelegate {
 class MenuTransition extends StatelessWidget {
 
   final Animation <double> animation;
-  final Alignment alignment;
+  final Alignment offsetStartPoint;
   final Widget child;
 
 
   const MenuTransition ({
     super.key,
     required this.animation,
-    required this.alignment,
+    required this.offsetStartPoint,
     required this.child
   });
 
@@ -263,7 +263,7 @@ class MenuTransition extends StatelessWidget {
       FadeTransition (
         opacity: fadeAnimation,
         child: ScaleTransition (
-          alignment: alignment,
+          alignment: offsetStartPoint,
           scale: scaleAnimation,
           child: child
         )

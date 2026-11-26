@@ -41,7 +41,7 @@ class ChoiceActivity extends HookConsumerWidget {
       menu: Menu (
         choices: choices
       ),
-      alignment: Alignment.topRight
+      offsetStartPoint: Alignment.topRight
     );
 
 

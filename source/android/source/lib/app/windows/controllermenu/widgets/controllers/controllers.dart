@@ -18,19 +18,18 @@ class Controllers extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    void navigateCallbackBefore () {
+    Future <void> navigate (Widget destination) async {
+
+      final BuildContext rootContext = Navigator.of (context, rootNavigator: true).context;
+
 
       context.methods.navigateBack (context);
 
-    }
 
-    Future <void> navigate (destination) async {
-
-      await context.methods.openWindow (
-        context,
+      await rootContext.methods.openWindow (
+        rootContext,
         ref,
-        window: destination,
-        callbackBefore: navigateCallbackBefore
+        window: destination
       );
 
     }

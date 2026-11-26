@@ -45,37 +45,38 @@ class Controller extends HookWidget {
       Row (
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded (child:
-          Presser (
-            onPress: onPress,
-            isPressed: isPressed,
-            child: PresserAnimator (
+          Expanded (
+            child: Presser (
+              onPress: onPress,
               isPressed: isPressed,
-              scaleRate: 0.975,
-              child: Row (
-                spacing: 12,
-                children: [
-                  SvgPicture.asset (
-                    context.icons.windowControllerMenuControllerLeft,
-                    width: 15.5,
-                    height: 15.5,
-                    colorFilter: ColorFilter.mode (
-                      context.colors.windowBodyTextIcon,
-                      BlendMode.srcIn
+              child: PresserAnimator (
+                isPressed: isPressed,
+                scaleRate: 0.975,
+                child: Row (
+                  spacing: 12,
+                  children: [
+                    SvgPicture.asset (
+                      context.icons.windowControllerMenuControllerLeft,
+                      width: 17,
+                      height: 17,
+                      colorFilter: ColorFilter.mode (
+                        context.colors.windowBodyTextIcon,
+                        BlendMode.srcIn
+                      )
+                    ),
+                    Text (
+                      text,
+                      style: TextStyle (
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15.5,
+                        color: context.colors.windowBodyText
+                      )
                     )
-                  ),
-                  Text (
-                    text,
-                    style: TextStyle (
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15.5,
-                      color: context.colors.windowBodyText
-                    )
-                  )
-                ]
+                  ]
+                )
               )
             )
-          )),
+          ),
           Row (
             spacing: 12,
             children: [

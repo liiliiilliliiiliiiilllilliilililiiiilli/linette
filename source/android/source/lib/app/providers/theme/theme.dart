@@ -129,7 +129,7 @@ class ThemeNotifier extends AsyncNotifier <AppThemeOption> {
         final int year = DateTime.now().year;
 
 
-        // Алгоритм Гаусса для юлианского календаря с переводом на григорианский:
+        // Алгоритм Гаусса для юлианского календаря с переводом на григорианский календарь:
 
         final int a = year % 4;
         final int b = year % 7;

@@ -27,10 +27,14 @@ class Controller extends HookConsumerWidget {
 
     Future <void> onPress () async {
 
-      await context.methods.openWindow (
+      await context.methods.openMenu (
         context,
         ref,
-        window: const ControllerMenuWindow ()
+        menu: const ControllerMenuWindow (),
+        targetAnchor: Alignment.topCenter,
+        followerAnchor: Alignment.bottomCenter,
+        offsetStartPoint: Alignment.bottomCenter,
+        offset: const Offset (0, -15)
       );
 
     }

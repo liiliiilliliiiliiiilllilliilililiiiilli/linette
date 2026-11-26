@@ -18,14 +18,12 @@ class MultitouchBlocker extends HookWidget {
 
   @override Widget build (BuildContext context) {
 
-    final ObjectRef <Set <int>> activePointers = useRef ({});  // Храним id активных пальцев на экране в useRef (без лишних перерисовок)
+    final ObjectRef <Set <int>> activePointers = useRef ({});
 
-    final ValueNotifier <bool> isAbsorbing = useState (false);  // Состояние, которое включает / выключает AbsorbPointer на весь экран
+    final ValueNotifier <bool> isAbsorbing = useState (false);
 
 
     void onPointerDown (PointerDownEvent event) {
-
-      // Если экран пустой, то регистрируем первый палец и блокируем мультитач:
 
       if (activePointers.value.isEmpty) {
 
@@ -43,7 +41,7 @@ class MultitouchBlocker extends HookWidget {
 
       if (activePointers.value.isEmpty) {
 
-        isAbsorbing.value = false;  // Разрешаем нажатия, если убраны все пальцы
+        isAbsorbing.value = false;
 
       }
 

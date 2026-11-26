@@ -25,7 +25,7 @@ class TitleComponent extends HookWidget {
 
 
     final AnimationController animationController = useAnimationController(
-      duration: Duration (seconds: (common * 4 / speed / periodicity).toInt ()),
+      duration: Duration (seconds: (common * 4 / speed / periodicity).toInt()),
       initialValue: 0.32
     )..repeat();
 
