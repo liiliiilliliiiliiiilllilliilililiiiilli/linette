@@ -230,18 +230,18 @@ class _NoisePainter extends CustomPainter {
 
   @override bool shouldRepaint (covariant _NoisePainter oldDelegate) {
 
-    return
+    return (
 
-      (
-        (oldDelegate.timeNotifier != timeNotifier) ||
-        (oldDelegate.spaceOffset != spaceOffset) ||
-        (oldDelegate.primaryColor != primaryColor) ||
-        (oldDelegate.secondaryColor != secondaryColor) ||
-        (oldDelegate.scale != scale) ||
-        (oldDelegate.sharpness != sharpness) ||
-        (oldDelegate.resolution != resolution) ||
-        (oldDelegate.speed != speed)
-      );
+      (oldDelegate.timeNotifier != timeNotifier) ||
+      (oldDelegate.spaceOffset != spaceOffset) ||
+      (oldDelegate.primaryColor != primaryColor) ||
+      (oldDelegate.secondaryColor != secondaryColor) ||
+      (oldDelegate.scale != scale) ||
+      (oldDelegate.sharpness != sharpness) ||
+      (oldDelegate.resolution != resolution) ||
+      (oldDelegate.speed != speed)
+
+    );
 
   }
 

@@ -14,6 +14,7 @@ export 'extensions/navigateback/navigateback.dart';
 export 'extensions/navigateto/navigateto.dart';
 export 'extensions/opendrawer/opendrawer.dart';
 export 'extensions/openlink/openlink.dart';
+export 'extensions/openmenu/openmenu.dart';
 export 'extensions/openwindow/openwindow.dart';
 export 'extensions/preloadframework/preloadframework.dart';
 export 'extensions/preloadimages/preloadimages.dart';
