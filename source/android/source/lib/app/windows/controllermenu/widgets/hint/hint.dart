@@ -19,9 +19,8 @@ class Hint extends StatelessWidget {
 
       Text (
         context.texts.windowControllerMenuHint,
-        textAlign: TextAlign.center,
         style: TextStyle (
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w400,
           fontSize: 15.5,
           color: context.colors.windowBodyTextAuxiliary
         )

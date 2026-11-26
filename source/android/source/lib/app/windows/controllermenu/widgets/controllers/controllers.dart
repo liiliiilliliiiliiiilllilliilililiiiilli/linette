@@ -39,17 +39,17 @@ class Controllers extends ConsumerWidget {
     return (
 
       Column (
-        spacing: 8,
+        spacing: 12,
         children: [
           Controller (
             context.texts.windowControllerMenuController_1,
             onPress: () {navigate (const ArsenalWindow ());},
-            value: false
+            value: true
           ),
           Controller (
             context.texts.windowControllerMenuController_2,
             onPress: () {navigate (const ArsenalWindow ());},
-            value: false
+            value: true
           ),
           Controller (
             context.texts.windowControllerMenuController_3,

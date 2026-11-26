@@ -53,7 +53,7 @@ class Controller extends HookWidget {
               isPressed: isPressed,
               scaleRate: 0.975,
               child: Row (
-                spacing: 8,
+                spacing: 12,
                 children: [
                   SvgPicture.asset (
                     context.icons.windowControllerMenuControllerLeft,
@@ -77,7 +77,7 @@ class Controller extends HookWidget {
             )
           )),
           Row (
-            spacing: 8,
+            spacing: 12,
             children: [
               Container (
                 width: 2,

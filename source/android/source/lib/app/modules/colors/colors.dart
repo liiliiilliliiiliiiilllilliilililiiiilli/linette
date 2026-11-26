@@ -581,7 +581,7 @@ class AppColors extends ThemeExtension <AppColors> {
     windowBodyTableStataValue: AppColorsPalette.black,
     windowBodyText: AppColorsPalette.black,
     windowBodyTextAuxiliary: AppColorsPalette.black,
-    windowBodyTextIcon: AppColorsPalette.grey,
+    windowBodyTextIcon: AppColorsPalette.black,
     windowBodyTitle: AppColorsPalette.black,
     windowBodyUserAvaBorder: AppColorsPalette.black,
     windowBodyUserNameIcon: AppColorsPalette.black,

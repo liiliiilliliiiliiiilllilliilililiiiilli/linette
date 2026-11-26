@@ -44,11 +44,11 @@ class ControllerMenuWindow extends StatelessWidget {
                   child: const Padding (
                     padding: EdgeInsets.symmetric (
                       horizontal: 16,
-                      vertical: 8
+                      vertical: 12
                     ),
                     child: Column (
                       mainAxisSize: MainAxisSize.min,
-                      spacing: 8,
+                      spacing: 12,
                       children: [
                         Controllers (),
                         Hint ()
