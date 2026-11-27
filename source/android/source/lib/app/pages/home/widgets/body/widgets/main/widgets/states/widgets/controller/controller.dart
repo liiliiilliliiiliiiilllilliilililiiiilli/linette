@@ -6,7 +6,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/methods/methods.dart';
-import 'package:linette/app/windows/controllermenu/controllermenu.dart';
+import 'package:linette/app/menus/controller/controller.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
 import 'package:linette/app/widgets/presseranimator/presseranimator.dart';
 import 'widgets/dot/dot.dart';

@@ -1,4 +1,4 @@
-// Window global widget - Body - Action - Choice activity - Menu
+// Choose menu
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
@@ -7,12 +7,12 @@ import 'widgets/separator/separator.dart';
 
 
 
-class Menu extends StatelessWidget {
+class Choose extends StatelessWidget {
 
   final List <Choice> choices;
 
 
-  const Menu ({
+  const Choose ({
     super.key,
     required this.choices
   });

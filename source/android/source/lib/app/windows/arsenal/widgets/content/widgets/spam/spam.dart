@@ -5,13 +5,13 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
+import 'package:linette/app/menus/choose/choose.dart';
+import 'package:linette/app/menus/choose/widgets/choice/choice.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/switchtitle/switchtitle.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/instruction/instruction.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/separator/separator.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/action/action.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/action/widgets/choiceactivity/choiceactivity.dart';
-import 'package:linette/app/widgets/window/widgets/body/widgets/action/widgets/choiceactivity/widgets/menu/menu.dart';
-import 'package:linette/app/widgets/window/widgets/body/widgets/action/widgets/choiceactivity/widgets/menu/widgets/choice/choice.dart';
 
 
 
@@ -91,7 +91,7 @@ class Spam extends HookConsumerWidget {
       await activityContext.methods.openMenu (
         activityContext,
         ref,
-        menu: Menu (
+        menu: Choose (
           choices: [
             for (int index = 0; index < options.length; index ++) ... [
               Choice (

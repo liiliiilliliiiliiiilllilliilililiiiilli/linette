@@ -7,9 +7,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/icons/icons.dart';
 import 'package:linette/app/modules/methods/methods.dart';
+import 'package:linette/app/menus/choose/choose.dart';
+import 'package:linette/app/menus/choose/widgets/choice/choice.dart';
 import 'package:linette/app/widgets/presser/presser.dart';
-import 'widgets/menu/menu.dart';
-import 'widgets/menu/widgets/choice/choice.dart';
 
 
 
@@ -38,7 +38,7 @@ class ChoiceActivity extends HookConsumerWidget {
     await context.methods.openMenu (
       context,
       ref,
-      menu: Menu (
+      menu: Choose (
         choices: choices
       ),
       offsetStartPoint: Alignment.topRight

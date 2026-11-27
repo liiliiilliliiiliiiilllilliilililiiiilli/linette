@@ -1,4 +1,4 @@
-// Window global widget - Body - Action - Choice activity - Menu - Separator
+// Choose menu - Separator
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';

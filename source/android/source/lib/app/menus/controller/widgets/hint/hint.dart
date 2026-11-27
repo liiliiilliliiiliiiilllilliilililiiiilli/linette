@@ -1,4 +1,4 @@
-// Controller menu window - Hint
+// Controller menu - Hint
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/colors/colors.dart';
