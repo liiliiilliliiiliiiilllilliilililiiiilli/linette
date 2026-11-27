@@ -51,7 +51,9 @@ class Menu extends StatelessWidget {
                 children: [
                   for (int index = 0; index < choices.length; index ++) ... [
                     choices [index],
-                    if (index < choices.length - 1) const Separator ()
+                    if (index < choices.length - 1) (
+                      const Separator ()
+                    )
                   ]
                 ]
               )

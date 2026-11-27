@@ -5,7 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/window/widgets/body/widgets/switchertitle/switchertitle.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/switchtitle/switchtitle.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/instruction/instruction.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/separator/separator.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/action/action.dart';
@@ -97,7 +97,7 @@ class Spam extends HookConsumerWidget {
               Choice (
                 options [index],
                 onPress: () => onPressChoice (selectedOption, index),
-                isChosen: (index == selectedOption.value)
+                isChosen: index == selectedOption.value
               )
             ]
           ]
@@ -113,7 +113,7 @@ class Spam extends HookConsumerWidget {
       Column (
         spacing: 8 * 1.5,
         children: [
-          SwitcherTitle (
+          SwitchTitle (
             context.texts.windowArsenalBodySectionsSpamTitle,
             value: false
           ),
@@ -138,7 +138,7 @@ class Spam extends HookConsumerWidget {
                       Choice (
                         action_1_Options [index],
                         onPress: () => onPressChoice (action_1_SelectedOption, index),
-                        isChosen: (index == action_1_SelectedOption.value)
+                        isChosen: index == action_1_SelectedOption.value
                       )
                     ]
                   ]
@@ -155,7 +155,7 @@ class Spam extends HookConsumerWidget {
                       Choice (
                         action_2_Options [index],
                         onPress: () => onPressChoice (action_2_SelectedOption, index),
-                        isChosen: (index == action_2_SelectedOption.value)
+                        isChosen: index == action_2_SelectedOption.value
                       )
                     ]
                   ]
@@ -172,7 +172,7 @@ class Spam extends HookConsumerWidget {
                       Choice (
                         action_3_Options [index],
                         onPress: () => onPressChoice (action_3_SelectedOption, index),
-                        isChosen: (index == action_3_SelectedOption.value)
+                        isChosen: index == action_3_SelectedOption.value
                       )
                     ]
                   ]

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/window/widgets/body/widgets/switchertitle/switchertitle.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/switchtitle/switchtitle.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/instruction/instruction.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/separator/separator.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/action/action.dart';
@@ -63,7 +63,7 @@ class Bypassing extends HookWidget {
       Column (
         spacing: 8 * 1.5,
         children: [
-          SwitcherTitle (
+          SwitchTitle (
             context.texts.windowArsenalBodySectionsBypassingTitle,
             value: false
           ),

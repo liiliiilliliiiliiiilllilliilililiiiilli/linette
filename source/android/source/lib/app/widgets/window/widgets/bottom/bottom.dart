@@ -42,19 +42,27 @@ class BottomComponent extends HookConsumerWidget {
     }
 
 
-    final Color? actionLeftColor = (actionLeft != null) ? switch (actionLeft!.color) {
-      ActionColorModel.disabled => context.colors.windowBottomTextDisabled,
-      ActionColorModel.grey => context.colors.windowBottomTextGrey,
-      ActionColorModel.green => context.colors.windowBottomTextGreen,
-      ActionColorModel.red => context.colors.windowBottomTextRed
-    } : null;
+    final Color? actionLeftColor = (actionLeft != null)
+
+      ? switch (actionLeft!.color) {
+
+        ActionColorModel.disabled => context.colors.windowBottomTextDisabled,
+        ActionColorModel.grey => context.colors.windowBottomTextGrey,
+        ActionColorModel.green => context.colors.windowBottomTextGreen,
+        ActionColorModel.red => context.colors.windowBottomTextRed
+
+      }
+
+      : null;
 
 
     final Color actionRightColor = switch (actionRight.color) {
+
       ActionColorModel.disabled => context.colors.windowBottomTextDisabled,
       ActionColorModel.grey => context.colors.windowBottomTextGrey,
       ActionColorModel.green => context.colors.windowBottomTextGreen,
       ActionColorModel.red => context.colors.windowBottomTextRed
+
     };
 
 

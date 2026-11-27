@@ -26,11 +26,13 @@ class Content extends StatelessWidget {
   @override Widget build (BuildContext context) {
 
     final Widget section = switch (position.value) {
+
       ArsenalWindowPosition.bypassing => const Bypassing (),
       ArsenalWindowPosition.platform => const Platform (),
       ArsenalWindowPosition.exchange => const Exchange (),
       ArsenalWindowPosition.decentralization => const Decentralization (),
       ArsenalWindowPosition.spam => const Spam ()
+
     };
 
 

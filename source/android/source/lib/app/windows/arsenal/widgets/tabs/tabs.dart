@@ -35,28 +35,28 @@ class Tabs extends StatelessWidget {
               children: [
                 TabComponent (
                   context.texts.windowArsenalBodyTabsBypassing,
-                  isChosen: (position.value == ArsenalWindowPosition.bypassing),
-                  onPress: () => {position.value = ArsenalWindowPosition.bypassing}
+                  isChosen: position.value == ArsenalWindowPosition.bypassing,
+                  onPress: () => position.value = ArsenalWindowPosition.bypassing
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsPlatform,
-                  isChosen: (position.value == ArsenalWindowPosition.platform),
-                  onPress: () => {position.value = ArsenalWindowPosition.platform}
+                  isChosen: position.value == ArsenalWindowPosition.platform,
+                  onPress: () => position.value = ArsenalWindowPosition.platform
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsExchange,
-                  isChosen: (position.value == ArsenalWindowPosition.exchange),
-                  onPress: () => {position.value = ArsenalWindowPosition.exchange}
+                  isChosen: position.value == ArsenalWindowPosition.exchange,
+                  onPress: () => position.value = ArsenalWindowPosition.exchange
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsDecentralization,
-                  isChosen: (position.value == ArsenalWindowPosition.decentralization),
-                  onPress: () => {position.value = ArsenalWindowPosition.decentralization}
+                  isChosen: position.value == ArsenalWindowPosition.decentralization,
+                  onPress: () => position.value = ArsenalWindowPosition.decentralization
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsSpam,
-                  isChosen: (position.value == ArsenalWindowPosition.spam),
-                  onPress: () => {position.value = ArsenalWindowPosition.spam}
+                  isChosen: position.value == ArsenalWindowPosition.spam,
+                  onPress: () => position.value = ArsenalWindowPosition.spam
                 )
               ]
             )

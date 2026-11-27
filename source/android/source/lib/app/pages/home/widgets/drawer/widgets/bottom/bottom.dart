@@ -132,7 +132,7 @@ class Bottom extends HookWidget {
                     ignoring: true,
                     child: Checkbox (
                       value: isChecked.value,
-                      onChanged: (context) => {},
+                      onChanged: (context) {},
                       checkColor: context.colors.checkVote,
                       activeColor: context.colors.checkFill
                     )

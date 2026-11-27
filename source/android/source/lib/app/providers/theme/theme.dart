@@ -226,7 +226,7 @@ class ThemeNotifier extends AsyncNotifier <AppThemeOption> {
       (AppThemeBaseOption.darkGreen, AppThemeSeasonOption.valentine) => AppThemeOption.darkGreenValentine,
       (AppThemeBaseOption.lightGreen, AppThemeSeasonOption.valentine) => AppThemeOption.lightGreenValentine,
       (AppThemeBaseOption.darkGreen, AppThemeSeasonOption.easter) => AppThemeOption.darkGreenEaster,
-      (AppThemeBaseOption.lightGreen, AppThemeSeasonOption.easter) => AppThemeOption.lightGreenEaster,
+      (AppThemeBaseOption.lightGreen, AppThemeSeasonOption.easter) => AppThemeOption.lightGreenEaster
 
     };
 

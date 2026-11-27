@@ -1,4 +1,4 @@
-// Window global widget - Body - Switcher title
+// Window global widget - Body - Switch title
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -7,13 +7,13 @@ import 'package:linette/app/widgets/switch/switch.dart';
 
 
 
-class SwitcherTitle extends HookWidget {
+class SwitchTitle extends HookWidget {
 
   final String text;
   final bool value;
 
 
-  const SwitcherTitle (
+  const SwitchTitle (
     this.text, {
     super.key,
     required this.value

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/widgets/window/widgets/body/widgets/switchertitle/switchertitle.dart';
+import 'package:linette/app/widgets/window/widgets/body/widgets/switchtitle/switchtitle.dart';
 import 'package:linette/app/widgets/window/widgets/body/widgets/instruction/instruction.dart';
 
 
@@ -21,7 +21,7 @@ class Decentralization extends StatelessWidget {
       Column (
         spacing: 8 * 1.5,
         children: [
-          SwitcherTitle (
+          SwitchTitle (
             context.texts.windowArsenalBodySectionsDecentralizationTitle,
             value: false
           ),
