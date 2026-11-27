@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:linette/app/modules/methods/methods.dart';
 import 'package:linette/app/modules/texts/texts.dart';
 import 'package:linette/app/windows/arsenal/arsenal.dart';
+import 'package:linette/app/windows/arsenal/models/tab/tab.dart';
 import 'widgets/controller/controller.dart';
 
 
@@ -18,18 +19,20 @@ class Controllers extends ConsumerWidget {
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    Future <void> navigate (Widget destination) async {
+    Future <void> switchToArsenalWindow (ArsenalWindowTab tab) async {
 
-      final BuildContext rootContext = Navigator.of (context, rootNavigator: true).context;
+      final BuildContext contextRoot = Navigator.of (context, rootNavigator: true).context;
 
 
       context.methods.navigateBack (context);
 
 
-      await rootContext.methods.openWindow (
-        rootContext,
+      await contextRoot.methods.openWindow (
+        contextRoot,
         ref,
-        window: destination
+        window: ArsenalWindow (
+          tab: tab
+        )
       );
 
     }
@@ -42,28 +45,28 @@ class Controllers extends ConsumerWidget {
         children: [
           Controller (
             context.texts.windowControllerMenuController_1,
-            onPress: () {navigate (const ArsenalWindow ());},
-            value: true
+            onPress: () => switchToArsenalWindow (ArsenalWindowTab.bypassing),
+            switchValue: true
           ),
           Controller (
             context.texts.windowControllerMenuController_2,
-            onPress: () {navigate (const ArsenalWindow ());},
-            value: true
+            onPress: () => switchToArsenalWindow (ArsenalWindowTab.platform),
+            switchValue: true
           ),
           Controller (
             context.texts.windowControllerMenuController_3,
-            onPress: () {navigate (const ArsenalWindow ());},
-            value: false
+            onPress: () => switchToArsenalWindow (ArsenalWindowTab.exchange),
+            switchValue: false
           ),
           Controller (
             context.texts.windowControllerMenuController_4,
-            onPress: () {navigate (const ArsenalWindow ());},
-            value: false
+            onPress: () => switchToArsenalWindow (ArsenalWindowTab.decentralization),
+            switchValue: false
           ),
           Controller (
             context.texts.windowControllerMenuController_5,
-            onPress: () {navigate (const ArsenalWindow ());},
-            value: false
+            onPress: () => switchToArsenalWindow (ArsenalWindowTab.spam),
+            switchValue: false
           )
         ]
       )

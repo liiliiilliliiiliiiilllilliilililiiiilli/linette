@@ -44,6 +44,7 @@ class TapHint extends HookWidget {
 
     }, [controller]);
 
+
     final Animation <double> opacityAnimation = useMemoized (() {
 
       return (

@@ -23,7 +23,7 @@ class Exchange extends StatelessWidget {
         children: [
           SwitchTitle (
             context.texts.windowArsenalBodySectionsExchangeTitle,
-            value: false
+            switchValue: false
           ),
           Instruction (context.texts.windowArsenalBodySectionsExchangeInstruction)
         ]

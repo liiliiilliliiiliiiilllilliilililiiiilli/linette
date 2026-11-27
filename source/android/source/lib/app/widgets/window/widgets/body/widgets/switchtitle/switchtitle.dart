@@ -10,19 +10,19 @@ import 'package:linette/app/widgets/switch/switch.dart';
 class SwitchTitle extends HookWidget {
 
   final String text;
-  final bool value;
+  final bool switchValue;
 
 
   const SwitchTitle (
     this.text, {
     super.key,
-    required this.value
+    required this.switchValue
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final ValueNotifier <bool> switchState = useState (value);
+    final ValueNotifier <bool> switchState = useState (switchValue);
 
 
     void switchOnChanged (bool change) {

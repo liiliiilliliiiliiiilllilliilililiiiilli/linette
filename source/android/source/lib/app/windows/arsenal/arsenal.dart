@@ -9,20 +9,24 @@ import 'package:linette/app/widgets/window/window.dart';
 import 'package:linette/app/widgets/window/widgets/bottom/models/action/action.dart';
 import 'widgets/tabs/tabs.dart';
 import 'widgets/content/content.dart';
-import 'models/position/position.dart';
+import 'models/tab/tab.dart';
 
 
 
 class ArsenalWindow extends HookConsumerWidget {
 
+  final ArsenalWindowTab tab;
+
+
   const ArsenalWindow ({
+    this.tab = ArsenalWindowTab.bypassing,
     super.key
   });
 
 
   @override Widget build (BuildContext context, WidgetRef ref) {
 
-    final ValueNotifier <ArsenalWindowPosition> position = useState (ArsenalWindowPosition.bypassing);
+    final ValueNotifier <ArsenalWindowTab> tabState = useState (tab);
 
 
     void actionRightOnPress () {
@@ -42,22 +46,22 @@ class ArsenalWindow extends HookConsumerWidget {
         title: context.texts.windowArsenalTitle,
         body: SingleChildScrollView (
           padding: const EdgeInsets.symmetric (
-            horizontal: 20 - 18,
+            horizontal: 2,
             vertical: 14
           ),
           child: Column (
             spacing: 8 * 2,
             children: [
               Tabs (
-                position: position,
+                tab: tabState,
                 padding: const EdgeInsets.symmetric (
-                  horizontal: 20 - 2
+                  horizontal: 18
                 )
               ),
               Content (
-                position: position,
+                tab: tabState,
                 padding: const EdgeInsets.symmetric (
-                  horizontal: 20 - 2
+                  horizontal: 18
                 )
               )
             ]

@@ -65,7 +65,7 @@ class Bypassing extends HookWidget {
         children: [
           SwitchTitle (
             context.texts.windowArsenalBodySectionsBypassingTitle,
-            value: false
+            switchValue: false
           ),
           Instruction (context.texts.windowArsenalBodySectionsBypassingInstruction),
           const Padding (

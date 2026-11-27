@@ -23,7 +23,7 @@ class Decentralization extends StatelessWidget {
         children: [
           SwitchTitle (
             context.texts.windowArsenalBodySectionsDecentralizationTitle,
-            value: false
+            switchValue: false
           ),
           Instruction (context.texts.windowArsenalBodySectionsDecentralizationInstruction)
         ]

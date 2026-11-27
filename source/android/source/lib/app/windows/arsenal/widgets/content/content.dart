@@ -6,32 +6,32 @@ import 'widgets/platform/platform.dart';
 import 'widgets/exchange/exchange.dart';
 import 'widgets/decentralization/decentralization.dart';
 import 'widgets/spam/spam.dart';
-import '../../models/position/position.dart';
+import '../../models/tab/tab.dart';
 
 
 
 class Content extends StatelessWidget {
 
-  final ValueNotifier <ArsenalWindowPosition> position;
+  final ValueNotifier <ArsenalWindowTab> tab;
   final EdgeInsets padding;
 
 
   const Content ({
     super.key,
-    required this.position,
+    required this.tab,
     required this.padding
   });
 
 
   @override Widget build (BuildContext context) {
 
-    final Widget section = switch (position.value) {
+    final Widget section = switch (tab.value) {
 
-      ArsenalWindowPosition.bypassing => const Bypassing (),
-      ArsenalWindowPosition.platform => const Platform (),
-      ArsenalWindowPosition.exchange => const Exchange (),
-      ArsenalWindowPosition.decentralization => const Decentralization (),
-      ArsenalWindowPosition.spam => const Spam ()
+      ArsenalWindowTab.bypassing => const Bypassing (),
+      ArsenalWindowTab.platform => const Platform (),
+      ArsenalWindowTab.exchange => const Exchange (),
+      ArsenalWindowTab.decentralization => const Decentralization (),
+      ArsenalWindowTab.spam => const Spam ()
 
     };
 

@@ -1,6 +1,6 @@
-// Arsenal window - Position model
+// Arsenal window - Tab model
 
-enum ArsenalWindowPosition {
+enum ArsenalWindowTab {
 
   bypassing,
   platform,

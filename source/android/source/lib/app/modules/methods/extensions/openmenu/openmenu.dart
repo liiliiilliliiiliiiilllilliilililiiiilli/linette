@@ -140,14 +140,14 @@ class MenuPositionDelegate extends SingleChildLayoutDelegate {
     final double maxY = (size.height - safePadding.bottom - screenMargin - childSize.height).clamp(minY, double.infinity);
 
 
-    // Базовый расчет позиции:
+    // Расчет позиции:
 
-    Offset targetPoint = targetOffset + targetAnchor.alongSize (targetSize);
-    Offset followerPoint = followerAnchor.alongSize (childSize);
+    final Offset targetPoint = targetOffset + targetAnchor.alongSize (targetSize);
+    final Offset followerPoint = followerAnchor.alongSize (childSize);
     Offset position = targetPoint - followerPoint + offset;
 
 
-    // Автоматический переворот по вертикали, если меню не помещается снизу (или сверху):
+    // Автоматический переворот по вертикали, если меню не помещается снизу / сверху:
 
     final bool overflowsBottom = position.dy > maxY;
     final bool overflowsTop = position.dy < minY;

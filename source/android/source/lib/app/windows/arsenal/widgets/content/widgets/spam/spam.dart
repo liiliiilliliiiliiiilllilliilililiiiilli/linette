@@ -115,7 +115,7 @@ class Spam extends HookConsumerWidget {
         children: [
           SwitchTitle (
             context.texts.windowArsenalBodySectionsSpamTitle,
-            value: false
+            switchValue: false
           ),
           Instruction (context.texts.windowArsenalBodySectionsSpamInstruction),
           const Padding (

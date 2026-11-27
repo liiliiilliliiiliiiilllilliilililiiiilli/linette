@@ -1,27 +1,85 @@
 // Arsenal window - Tabs
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:linette/app/modules/colors/colors.dart';
 import 'package:linette/app/modules/texts/texts.dart';
-import 'package:linette/app/windows/arsenal/models/position/position.dart';
+import 'package:linette/app/windows/arsenal/models/tab/tab.dart';
 import 'package:linette/app/widgets/tab/tab.dart';
 
 
 
-class Tabs extends StatelessWidget {
+class Tabs extends HookWidget {
 
-  final ValueNotifier <ArsenalWindowPosition> position;
+  final ValueNotifier <ArsenalWindowTab> tab;
   final EdgeInsets padding;
 
 
   const Tabs ({
     super.key,
-    required this.position,
+    required this.tab,
     required this.padding
   });
 
 
   @override Widget build (BuildContext context) {
+
+    final ArsenalWindowTab currentTab = useValueListenable (tab);
+
+
+    final ObjectRef <bool> isFirstBuild = useRef (true);
+
+
+    final Map <ArsenalWindowTab, GlobalKey <State <StatefulWidget>>> tabKeys = useMemoized (() => {
+
+      for (final item in ArsenalWindowTab.values) item: GlobalKey ()
+
+    }, const []);
+
+
+    void scrollToTab (ArsenalWindowTab target, {bool animate = true}) {
+
+      final BuildContext? targetContext = tabKeys[target]?.currentContext;
+
+
+      if (targetContext != null) {
+
+        final Duration duration = animate
+          ? const Duration (milliseconds: 250)
+          : Duration.zero;
+
+
+        Scrollable.ensureVisible (
+          targetContext,
+          duration: duration,
+          curve: Curves.easeOutCubic,
+          alignment: 0.5
+        );
+
+      }
+
+    }
+
+
+    useEffect (() {
+
+      final bool shouldAnimate = !isFirstBuild.value;
+
+
+      isFirstBuild.value = false;
+
+
+      WidgetsBinding.instance.addPostFrameCallback ((_) {
+
+        scrollToTab (currentTab, animate: shouldAnimate);
+
+      });
+
+
+      return null;
+
+    }, [currentTab]);
+
 
     return (
 
@@ -35,28 +93,33 @@ class Tabs extends StatelessWidget {
               children: [
                 TabComponent (
                   context.texts.windowArsenalBodyTabsBypassing,
-                  isChosen: position.value == ArsenalWindowPosition.bypassing,
-                  onPress: () => position.value = ArsenalWindowPosition.bypassing
+                  key: tabKeys [ArsenalWindowTab.bypassing],
+                  isChosen: tab.value == ArsenalWindowTab.bypassing,
+                  onPress: () => tab.value = ArsenalWindowTab.bypassing
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsPlatform,
-                  isChosen: position.value == ArsenalWindowPosition.platform,
-                  onPress: () => position.value = ArsenalWindowPosition.platform
+                  key: tabKeys [ArsenalWindowTab.platform],
+                  isChosen: tab.value == ArsenalWindowTab.platform,
+                  onPress: () => tab.value = ArsenalWindowTab.platform
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsExchange,
-                  isChosen: position.value == ArsenalWindowPosition.exchange,
-                  onPress: () => position.value = ArsenalWindowPosition.exchange
+                  key: tabKeys [ArsenalWindowTab.exchange],
+                  isChosen: tab.value == ArsenalWindowTab.exchange,
+                  onPress: () => tab.value = ArsenalWindowTab.exchange
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsDecentralization,
-                  isChosen: position.value == ArsenalWindowPosition.decentralization,
-                  onPress: () => position.value = ArsenalWindowPosition.decentralization
+                  key: tabKeys [ArsenalWindowTab.decentralization],
+                  isChosen: tab.value == ArsenalWindowTab.decentralization,
+                  onPress: () => tab.value = ArsenalWindowTab.decentralization
                 ),
                 TabComponent (
                   context.texts.windowArsenalBodyTabsSpam,
-                  isChosen: position.value == ArsenalWindowPosition.spam,
-                  onPress: () => position.value = ArsenalWindowPosition.spam
+                  key: tabKeys [ArsenalWindowTab.spam],
+                  isChosen: tab.value == ArsenalWindowTab.spam,
+                  onPress: () => tab.value = ArsenalWindowTab.spam
                 )
               ]
             )

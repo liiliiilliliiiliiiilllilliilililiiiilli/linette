@@ -23,7 +23,7 @@ class Platform extends StatelessWidget {
         children: [
           SwitchTitle (
             context.texts.windowArsenalBodySectionsPlatformTitle,
-            value: false
+            switchValue: false
           ),
           Instruction (context.texts.windowArsenalBodySectionsPlatformInstruction)
         ]

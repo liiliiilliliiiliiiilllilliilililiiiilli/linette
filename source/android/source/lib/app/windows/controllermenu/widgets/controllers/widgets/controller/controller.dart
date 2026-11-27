@@ -15,14 +15,14 @@ class Controller extends HookWidget {
 
   final String text;
   final void Function () onPress;
-  final bool value;
+  final bool switchValue;
 
 
   const Controller (
     this.text, {
     super.key,
     required this.onPress,
-    required this.value
+    required this.switchValue
   });
 
 
@@ -30,7 +30,7 @@ class Controller extends HookWidget {
 
     final ValueNotifier <bool> isPressed = useState (false);
 
-    final ValueNotifier <bool> switchState = useState (value);
+    final ValueNotifier <bool> switchState = useState (switchValue);
 
 
     void switchOnChanged (bool change) {
