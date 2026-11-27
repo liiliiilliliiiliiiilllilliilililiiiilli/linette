@@ -47,15 +47,15 @@ class ArsenalWindow extends HookConsumerWidget {
         body: SingleChildScrollView (
           padding: const EdgeInsets.symmetric (
             horizontal: 2,
-            vertical: 14
+            vertical: 14 - 4
           ),
           child: Column (
-            spacing: 8 * 2,
+            spacing: 8 * 2 - 4,
             children: [
               Tabs (
                 tab: tabState,
                 padding: const EdgeInsets.symmetric (
-                  horizontal: 18
+                  horizontal: 18 - 4
                 )
               ),
               Content (

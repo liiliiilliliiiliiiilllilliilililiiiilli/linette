@@ -52,27 +52,32 @@ class Controller extends HookWidget {
               child: PresserAnimator (
                 isPressed: isPressed,
                 scaleRate: 0.975,
-                child: Row (
-                  spacing: 12,
-                  children: [
-                    SvgPicture.asset (
-                      context.icons.windowControllerMenuControllerLeft,
-                      width: 17,
-                      height: 17,
-                      colorFilter: ColorFilter.mode (
-                        context.colors.windowBodyTextIcon,
-                        BlendMode.srcIn
+                child: Padding (
+                  padding: const EdgeInsets.symmetric (
+                    vertical: 8
+                  ),
+                  child: Row (
+                    spacing: 12,
+                    children: [
+                      SvgPicture.asset (
+                        context.icons.windowControllerMenuControllerLeft,
+                        width: 17,
+                        height: 17,
+                        colorFilter: ColorFilter.mode (
+                          context.colors.windowBodyTextIcon,
+                          BlendMode.srcIn
+                        )
+                      ),
+                      Text (
+                        text,
+                        style: TextStyle (
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15.5,
+                          color: context.colors.windowBodyText
+                        )
                       )
-                    ),
-                    Text (
-                      text,
-                      style: TextStyle (
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15.5,
-                        color: context.colors.windowBodyText
-                      )
-                    )
-                  ]
+                    ]
+                  )
                 )
               )
             )

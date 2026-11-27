@@ -38,7 +38,7 @@ class ChoiceActivity extends HookConsumerWidget {
     await context.methods.openMenu (
       context,
       ref,
-      menu: Choose (
+      menu: ChooseMenu (
         choices: choices
       ),
       offsetStartPoint: Alignment.topRight
@@ -60,29 +60,32 @@ class ChoiceActivity extends HookConsumerWidget {
       Presser (
         onPress: () => open (context, ref),
         isPressed: isPressed,
-        child: Row (
-          mainAxisSize: MainAxisSize.min,
-          spacing: 8,
-          children: [
-            Text (
-              text,
-              style: TextStyle (
-                fontWeight: FontWeight.w500,
-                fontSize: 15.5,
-                height: 1,
-                color: context.colors.windowBodyActionRegular
+        child: Padding (
+          padding: const EdgeInsets.all (3),
+          child: Row (
+            mainAxisSize: MainAxisSize.min,
+            spacing: 8,
+            children: [
+              Text (
+                text,
+                style: TextStyle (
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15.5,
+                  height: 1,
+                  color: context.colors.windowBodyActionRegular
+                )
+              ),
+              SvgPicture.asset (
+                context.icons.windowBodyActionChoice,
+                width: 8,
+                height: 8,
+                colorFilter: ColorFilter.mode (
+                  context.colors.windowBodyActionRegular,
+                  BlendMode.srcIn
+                )
               )
-            ),
-            SvgPicture.asset (
-              context.icons.windowBodyActionChoice,
-              width: 8,
-              height: 8,
-              colorFilter: ColorFilter.mode (
-                context.colors.windowBodyActionRegular,
-                BlendMode.srcIn
-              )
-            )
-          ]
+            ]
+          )
         )
       )
 

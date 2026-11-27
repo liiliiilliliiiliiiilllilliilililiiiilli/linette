@@ -9,7 +9,6 @@ class AppColorsPalette {
   const AppColorsPalette._ ();
 
 
-  static const Color transparent = Color (0x00000000);
   static const Color cream = Color (0xfff2f2f2);
   static const Color black = Color (0xff000000);
   static const Color grey = Color (0xff808080);

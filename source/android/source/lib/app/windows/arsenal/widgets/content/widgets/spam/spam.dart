@@ -91,7 +91,7 @@ class Spam extends HookConsumerWidget {
       await activityContext.methods.openMenu (
         activityContext,
         ref,
-        menu: Choose (
+        menu: ChooseMenu (
           choices: [
             for (int index = 0; index < options.length; index ++) ... [
               Choice (

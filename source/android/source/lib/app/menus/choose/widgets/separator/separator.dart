@@ -16,11 +16,16 @@ class Separator extends StatelessWidget {
 
     return (
 
-      Container (
-        height: 2,
-        decoration: BoxDecoration (
-          borderRadius: BorderRadius.circular (100),
-          color: context.colors.windowBodyActionChoiceActivitySeparator
+      Padding (
+        padding: const EdgeInsets.symmetric (
+          horizontal: 10
+        ),
+        child: Container (
+          height: 2,
+          decoration: BoxDecoration (
+            borderRadius: BorderRadius.circular (100),
+            color: context.colors.windowBodyActionChoiceActivitySeparator
+          )
         )
       )
 

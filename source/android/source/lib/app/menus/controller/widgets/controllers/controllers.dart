@@ -41,7 +41,7 @@ class Controllers extends ConsumerWidget {
     return (
 
       Column (
-        spacing: 12,
+        spacing: 8,
         children: [
           Controller (
             context.texts.windowControllerMenuController_1,

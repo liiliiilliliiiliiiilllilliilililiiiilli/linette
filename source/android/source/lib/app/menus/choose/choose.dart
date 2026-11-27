@@ -7,12 +7,12 @@ import 'widgets/separator/separator.dart';
 
 
 
-class Choose extends StatelessWidget {
+class ChooseMenu extends StatelessWidget {
 
   final List <Choice> choices;
 
 
-  const Choose ({
+  const ChooseMenu ({
     super.key,
     required this.choices
   });
@@ -42,12 +42,12 @@ class Choose extends StatelessWidget {
             ]
           ),
           child: Padding (
-            padding: const EdgeInsets.all (14),
+            padding: const EdgeInsets.all (14 - 10),
             child: IntrinsicWidth (
               child: Column (
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                spacing: 14,
+                spacing: 14 - 10,
                 children: [
                   for (int index = 0; index < choices.length; index ++) ... [
                     choices [index],

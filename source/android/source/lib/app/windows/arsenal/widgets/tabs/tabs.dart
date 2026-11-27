@@ -89,7 +89,6 @@ class Tabs extends HookWidget {
             scrollDirection: Axis.horizontal,
             padding: padding,
             child: Row (
-              spacing: 8,
               children: [
                 TabComponent (
                   context.texts.windowArsenalBodyTabsBypassing,

@@ -42,31 +42,34 @@ class Choice extends HookWidget {
         isPressed: isPressed,
         child: PresserAnimator (
           isPressed: isPressed,
-          child: Row (
-            mainAxisAlignment: MainAxisAlignment.end,
-            spacing: 8,
-            children: [
-              if (isChosen) ... [
-                SvgPicture.asset (
-                  context.icons.windowBodyActionChoiceVariant,
-                  width: 12.5,
-                  height: 12.5,
-                  colorFilter: ColorFilter.mode (
-                    context.colors.windowBodyActionChoiceActivityTextChosen,
-                    BlendMode.srcIn
+          child: Padding (
+            padding: const EdgeInsets.all (10),
+            child: Row (
+              mainAxisAlignment: MainAxisAlignment.end,
+              spacing: 8,
+              children: [
+                if (isChosen) ... [
+                  SvgPicture.asset (
+                    context.icons.windowBodyActionChoiceVariant,
+                    width: 12.5,
+                    height: 12.5,
+                    colorFilter: ColorFilter.mode (
+                      context.colors.windowBodyActionChoiceActivityTextChosen,
+                      BlendMode.srcIn
+                    )
+                  )
+                ],
+                Text (
+                  text,
+                  style: TextStyle (
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15.5,
+                    height: 1,
+                    color: color
                   )
                 )
-              ],
-              Text (
-                text,
-                style: TextStyle (
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15.5,
-                  height: 1,
-                  color: color
-                )
-              )
-            ]
+              ]
+            )
           )
         )
       )

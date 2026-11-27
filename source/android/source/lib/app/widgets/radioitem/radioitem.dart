@@ -58,11 +58,11 @@ class RadioItem extends HookWidget {
       Presser (
         onPress: onPress,
         isPressed: isPressed,
-        child: Padding (
-          padding: const EdgeInsets.all (4),
-          child: PresserAnimator (
-            isPressed: isPressed,
-            scaleRate: 0.9675,
+        child: PresserAnimator (
+          isPressed: isPressed,
+          scaleRate: 0.9675,
+          child: Padding (
+            padding: const EdgeInsets.all (8),
             child: Row (
               spacing: 15,
               children: [

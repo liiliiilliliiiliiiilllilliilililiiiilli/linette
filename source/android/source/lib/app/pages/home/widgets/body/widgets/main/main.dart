@@ -22,7 +22,7 @@ class Main extends StatelessWidget {
         child: Padding (
           padding: EdgeInsets.only (
             top: 28,
-            bottom: 15
+            bottom: 7
           ),
           child: Column (
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -30,7 +30,7 @@ class Controller extends HookConsumerWidget {
       await context.methods.openMenu (
         context,
         ref,
-        menu: const ControllerMenuWindow (),
+        menu: const ControllerMenu (),
         targetAnchor: Alignment.topCenter,
         followerAnchor: Alignment.bottomCenter,
         offsetStartPoint: Alignment.bottomCenter,
@@ -48,61 +48,64 @@ class Controller extends HookConsumerWidget {
         child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.9625,
-          child: ClipRRect (
-            borderRadius: BorderRadius.circular (100),
-            child: BackdropFilter (
-              filter: ImageFilter.blur (
-                sigmaX: 150,
-                sigmaY: 150
-              ),
-              child: IntrinsicWidth (
-                child: Container (
-                  alignment: Alignment.center,
-                  height: 25,
-                  padding: const EdgeInsets.all (4),
-                  decoration: BoxDecoration (
-                    border: Border.all (
-                      width: 2,
-                      color: context.colors.controllerBorder
+          child: Padding (
+            padding: const EdgeInsets.all (8),
+            child: ClipRRect (
+              borderRadius: BorderRadius.circular (100),
+              child: BackdropFilter (
+                filter: ImageFilter.blur (
+                  sigmaX: 150,
+                  sigmaY: 150
+                ),
+                child: IntrinsicWidth (
+                  child: Container (
+                    alignment: Alignment.center,
+                    height: 25,
+                    padding: const EdgeInsets.all (4),
+                    decoration: BoxDecoration (
+                      border: Border.all (
+                        width: 2,
+                        color: context.colors.controllerBorder
+                      ),
+                      borderRadius: BorderRadius.circular (100),
+                      color: context.colors.controllerBack
                     ),
-                    borderRadius: BorderRadius.circular (100),
-                    color: context.colors.controllerBack
-                  ),
-                  child: Row (
-                    mainAxisSize: MainAxisSize.min,
-                    spacing: 4,
-                    children: [
-                      Dot (
-                        isActive: true,
-                        colorBorder: context.colors.controllerIndicatorBypassingBorder,
-                        colorBackActive: context.colors.controllerIndicatorBypassingActiveBack,
-                        colorBackNotActive: context.colors.controllerIndicatorBypassingNotActiveBack
-                      ),
-                      Dot (
-                        isActive: true,
-                        colorBorder: context.colors.controllerIndicatorPlatformBorder,
-                        colorBackActive: context.colors.controllerIndicatorPlatformActiveBack,
-                        colorBackNotActive: context.colors.controllerIndicatorPlatformNotActiveBack
-                      ),
-                      Dot (
-                        isActive: true,
-                        colorBorder: context.colors.controllerIndicatorExchangeBorder,
-                        colorBackActive: context.colors.controllerIndicatorExchangeActiveBack,
-                        colorBackNotActive: context.colors.controllerIndicatorExchangeNotActiveBack
-                      ),
-                      Dot (
-                        isActive: true,
-                        colorBorder: context.colors.controllerIndicatorDecentralizationBorder,
-                        colorBackActive: context.colors.controllerIndicatorDecentralizationActiveBack,
-                        colorBackNotActive: context.colors.controllerIndicatorDecentralizationNotActiveBack
-                      ),
-                      Dot (
-                        isActive: true,
-                        colorBorder: context.colors.controllerIndicatorSpamBorder,
-                        colorBackActive: context.colors.controllerIndicatorSpamActiveBack,
-                        colorBackNotActive: context.colors.controllerIndicatorSpamNotActiveBack
-                      )
-                    ]
+                    child: Row (
+                      mainAxisSize: MainAxisSize.min,
+                      spacing: 4,
+                      children: [
+                        Dot (
+                          isActive: true,
+                          colorBorder: context.colors.controllerIndicatorBypassingBorder,
+                          colorBackActive: context.colors.controllerIndicatorBypassingActiveBack,
+                          colorBackNotActive: context.colors.controllerIndicatorBypassingNotActiveBack
+                        ),
+                        Dot (
+                          isActive: true,
+                          colorBorder: context.colors.controllerIndicatorPlatformBorder,
+                          colorBackActive: context.colors.controllerIndicatorPlatformActiveBack,
+                          colorBackNotActive: context.colors.controllerIndicatorPlatformNotActiveBack
+                        ),
+                        Dot (
+                          isActive: true,
+                          colorBorder: context.colors.controllerIndicatorExchangeBorder,
+                          colorBackActive: context.colors.controllerIndicatorExchangeActiveBack,
+                          colorBackNotActive: context.colors.controllerIndicatorExchangeNotActiveBack
+                        ),
+                        Dot (
+                          isActive: true,
+                          colorBorder: context.colors.controllerIndicatorDecentralizationBorder,
+                          colorBackActive: context.colors.controllerIndicatorDecentralizationActiveBack,
+                          colorBackNotActive: context.colors.controllerIndicatorDecentralizationNotActiveBack
+                        ),
+                        Dot (
+                          isActive: true,
+                          colorBorder: context.colors.controllerIndicatorSpamBorder,
+                          colorBackActive: context.colors.controllerIndicatorSpamActiveBack,
+                          colorBackNotActive: context.colors.controllerIndicatorSpamNotActiveBack
+                        )
+                      ]
+                    )
                   )
                 )
               )

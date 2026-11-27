@@ -62,25 +62,28 @@ class TabComponent extends HookWidget {
         child: PresserAnimator (
           isPressed: isPressed,
           scaleRate: 0.965,
-          child: Container (
-            padding: const EdgeInsets.symmetric (
-              horizontal: 12,
-              vertical: 4
-            ),
-            decoration: BoxDecoration (
-              border: Border.all (
-                width: 2,
-                color: colorBorder
+          child: Padding (
+            padding: const EdgeInsets.all (4),
+            child: Container (
+              padding: const EdgeInsets.symmetric (
+                horizontal: 12,
+                vertical: 4
               ),
-              borderRadius: BorderRadius.circular (10),
-              color: colorBack
-            ),
-            child: Text (
-              text,
-              style: TextStyle (
-                fontWeight: FontWeight.w500,
-                fontSize: 15.5,
-                color: colorText
+              decoration: BoxDecoration (
+                border: Border.all (
+                  width: 2,
+                  color: colorBorder
+                ),
+                borderRadius: BorderRadius.circular (10),
+                color: colorBack
+              ),
+              child: Text (
+                text,
+                style: TextStyle (
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15.5,
+                  color: colorText
+                )
               )
             )
           )

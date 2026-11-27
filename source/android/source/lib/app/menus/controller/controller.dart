@@ -7,9 +7,9 @@ import 'widgets/hint/hint.dart';
 
 
 
-class ControllerMenuWindow extends StatelessWidget {
+class ControllerMenu extends StatelessWidget {
 
-  const ControllerMenuWindow ({
+  const ControllerMenu ({
     super.key
   });
 
@@ -41,9 +41,11 @@ class ControllerMenuWindow extends StatelessWidget {
                 width: 300,
                 color: context.colors.windowBodyBack,
                 child: const Padding (
-                  padding: EdgeInsets.symmetric (
-                    horizontal: 16,
-                    vertical: 12
+                  padding: EdgeInsets.only (
+                    top: 8,
+                    left: 16,
+                    right: 16,
+                    bottom: 12
                   ),
                   child: Column (
                     mainAxisSize: MainAxisSize.min,
